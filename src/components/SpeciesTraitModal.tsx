@@ -1,6 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import { featureDescriptions } from '../utils/featureDescriptions';
+import { getFeatureDescription } from '../utils/featureDescriptions';
+import type { Edition } from '../types/dnd';
 
 interface SpeciesTraitModalProps {
   isOpen: boolean;
@@ -8,6 +9,8 @@ interface SpeciesTraitModalProps {
   traitName: string;
   speciesName: string;
   traitDescription?: string;
+  /** Rules edition of the character; selects the 2024 text of traits that changed. */
+  edition?: Edition;
   position?: { x: number; y: number } | null;
 }
 
@@ -17,6 +20,7 @@ const SpeciesTraitModal: React.FC<SpeciesTraitModalProps> = ({
   traitName,
   speciesName,
   traitDescription,
+  edition,
   position
 }) => {
   if (!isOpen) return null;
@@ -26,7 +30,7 @@ const SpeciesTraitModal: React.FC<SpeciesTraitModalProps> = ({
     if (traitDescription) return traitDescription;
 
     // Use centralized feature descriptions from JSON
-    const featureDesc = featureDescriptions[trait];
+    const featureDesc = getFeatureDescription(trait, edition);
     if (featureDesc) {
       return featureDesc.description;
     }

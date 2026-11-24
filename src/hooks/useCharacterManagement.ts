@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Character } from '../types/dnd';
 import { getAllCharacters, addCharacter, deleteCharacter, updateCharacter } from '../services/dbService';
+import { CHARACTERS_CHANGED } from '../services/firebase/events';
 import { refreshCharacterResources } from '../services/characterService';
 
 export function useCharacterManagement() {
@@ -62,6 +63,9 @@ export function useCharacterManagement() {
 
   useEffect(() => {
     loadCharacters();
+    const reload = () => { void loadCharacters(); };
+    window.addEventListener(CHARACTERS_CHANGED, reload);
+    return () => window.removeEventListener(CHARACTERS_CHANGED, reload);
   }, [loadCharacters]);
 
   // Memoize the returned object to prevent unnecessary re-renders

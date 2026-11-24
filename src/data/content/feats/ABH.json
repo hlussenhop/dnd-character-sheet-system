@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "bloodlust-2024",
+    "description": "You gain the following benefits.\nPowerful Recovery. When you roll a Hit Point Die to regain Hit Points, you can treat any roll of 1 or 2 as a 3.\nSanguine Feast. Once per turn when you hit a Bloodied creature that isn't a Construct or Undead with an attack roll, you can expend a Hit Point Die, roll it, and regain a number of Hit Points equal to the number rolled plus your Constitution modifier.\nYou can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+  },
+  {
+    "slug": "bomber-2024",
+    "description": "You gain the following benefits.\nFar Lobber. When you use the Attack action to throw a vial or flask, you can target an object or creature you can see within 40 feet of yourself.\nLong Shots. Attacking at long range doesn't impose Disadvantage on your attack rolls with Thrown weapons."
+  },
+  {
+    "slug": "boon-of-blazing-dawn-2024",
+    "description": "You gain the following benefits.\nBeloved of the Sun. You have Immunity to Radiant damage.\nBlazing Strike. When you hit a creature with a weapon attack, the damage can be Radiant or the weapon's normal damage type (your choice).\nBurst of Sunlight. Once per turn when you hit a creature with an attack that deals Radiant damage, you can emit Bright Light in a 30-foot radius from yourself and Dim Light for an additional 30 feet until the start of your next turn. This light is sunlight."
+  },
+  {
+    "slug": "boon-of-looming-shadows-2024",
+    "description": "You gain the following benefits.\nShadowy Stretch. When you take the Attack action, your reach for your Melee weapon attacks increases by 10 feet until the end of your turn.\nDancing Silhouette. You can take the Dodge action as a Bonus Action."
+  },
+  {
+    "slug": "boon-of-misty-escape-2024",
+    "description": "You gain the following benefits.\nGaseous Form. If you drop to 0 Hit Points but aren't killed outright, you can instead drop to 1 Hit Point and cast Gaseous Form without expending a spell slot (no action required). When you cast this spell this way, you can target only yourself, your Fly Speed is 20 feet, and you regain 10 Hit Points at the start of each of your turns for the spell's duration. The spell's spellcasting ability is the ability increased by this feat.\nOnce you use this benefit, you can't do so again until you finish a Long Rest."
+  },
+  {
+    "slug": "cloying-mists-2024",
+    "description": "You gain the following benefits.\nArise, Fog. You always have the Fog Cloud spell prepared. You can cast it without a spell slot, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.\nGrasping Mist. Whenever you cast Fog Cloud, nonmagical flames in the spell's Sphere are extinguished, and creatures other than you and your allies have their Speed reduced by 5 feet while in the spell's Sphere."
+  },
+  {
+    "slug": "delicious-pain-2024",
+    "description": "You gain the following benefits.\nToughened Flesh. Immediately after you take Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to gain Resistance to Bludgeoning, Piercing, and Slashing damage until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest."
+  },
+  {
+    "slug": "light-bringer-2024",
+    "description": "You gain the following benefits.\nSacred Magic. You learn the Light spell and can cast it without Material components. If you already know that cantrip, you learn a different Cleric cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.\nSolar Luminance. When you cast Light, you can have the light from the spell be sunlight. Once you use this benefit, you can't use it again until you finish a Long Rest.\nSun's Healing. As a Bonus Action while within sunlight, you can expend one of your Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll. Once you use this benefit, you can't use it again until you finish a Short or Long Rest."
+  },
+  {
+    "slug": "love-bites-2024",
+    "description": "You gain the following benefits.\nEndearing Pain. Immediately after you damage a creature with a Melee weapon or an Unarmed Strike, you can take a Bonus Action to give the target the Charmed condition until the start of your next turn or until you or your allies damage it. Once you use this benefit, you can't use it again until you finish a Short or Long Rest."
+  },
+  {
+    "slug": "putrefy-2024",
+    "description": "You gain the following benefits.\nNecrosis. When you make a damage roll that deals Necrotic damage, you can cause one creature taking that damage to have the Poisoned condition until the start of your next turn. Once you use this benefit, you can't use it again until you finish a Short or Long Rest."
+  },
+  {
+    "slug": "rebuke-2024",
+    "description": "You gain the following benefits.\nRadiant Strike. When you make a damage roll that deals Radiant damage, you can cause one Huge or smaller creature taking the damage to have the Prone condition. Once you use this benefit, you can't use it again until you finish a Short or Long Rest."
+  },
+  {
+    "slug": "tireless-reveler-2024",
+    "description": "When an ally you can see within 60 feet of yourself expends Heroic Inspiration, you can gain Heroic Inspiration if you lack it. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest."
+  },
+  {
+    "slug": "treacherous-allure-2024",
+    "description": "You gain the following benefits.\nEnchanting Presence. You always have the Charm Person spell prepared. You can cast it without a spell slot, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.\nInevitable Betrayal. You have Advantage on attack rolls against creatures with the Charmed condition."
+  },
+  {
+    "slug": "vampire-hunter-2024",
+    "description": "You gain the following benefits.\nAdroit Escape. You have Advantage on checks to escape from nonmagical restraints or the Grappled condition.\nVitality Ward. When you take Necrotic damage, you can take a Reaction to mitigate the damage. Roll a number of d6s equal to your Proficiency Bonus, and add them together. Reduce the Necrotic damage you take by this total. Once you use this benefit, you can't use it again until you finish a Short or Long Rest."
+  },
+  {
+    "slug": "vampire-touched-2024",
+    "description": "You gain the following benefits.\nVampire Magic. Choose one level 1 spell from the Enchantment or Illusion school of magic. You always have that spell and the Spider Climb spell prepared. You can cast each of these spells without expending a spell slot, but when you cast Spider Climb this way, you must target yourself, and you must finish a Long Rest before you can cast each spell in this way again. You can also cast either spell using spell slots you have of the appropriate level. Your spellcasting ability for the spells is the ability increased by this feat."
+  },
+  {
+    "slug": "vampires-plaything-2024",
+    "description": "You gain the following benefits.\nDecanting. When you finish a Long Rest, you can create one Potion of Healing or an Antitoxin, as long as you have an empty vial or flask. These liquids evaporate when you finish another Long Rest.\nTimely Retreat. You can take a Bonus Action to take the Dash action or the Disengage action. You can use this benefit a number of times equal to your Proficiency Bonus, and you recover all expended uses when you finish a Long Rest.\nVampiric Connection. The DM determines the fate of your former vampire master. While you and your former vampire master are on the same plane of existence, the vampire can communicate with you telepathically, and you can choose to allow the vampire to perceive through your senses."
+  }
+]

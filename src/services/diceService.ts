@@ -1,5 +1,5 @@
  
-// Dice roll types and utilities for NexusForge
+// Dice roll types and utilities for dnd character system
 
 export interface DiceRoll {
   id: string;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { X, Star, ChevronDown, ChevronUp, Edit2, Trash2, ExternalLink } from 'lucide-react';
 import { Monster, UserMonster } from '../../types/dnd';
 import { useMonsterContext } from '../../hooks';
-import { generateMonsterSlug } from '../../utils/monsterUtils';
+import { monsterShareSlug, monsterSourceLabel } from '../../utils/monsterUtils';
 
 interface MonsterStatBlockProps {
   monster: Monster | UserMonster;
@@ -42,11 +42,7 @@ export const MonsterStatBlock: React.FC<MonsterStatBlockProps> = ({ monster, onC
   const isCustom = 'isCustom' in monster && monster.isCustom;
 
   const getMonsterUrl = (): string => {
-    if (isCustom) {
-      return `${window.location.origin}/monster/custom-${monster.index}`;
-    } else {
-      return `${window.location.origin}/monster/${generateMonsterSlug(monster.name)}`;
-    }
+    return `${window.location.origin}/monster/${monsterShareSlug({ ...monster, isCustom })}`;
   };
 
   const handleOpenInNewTab = () => {
@@ -120,7 +116,9 @@ export const MonsterStatBlock: React.FC<MonsterStatBlockProps> = ({ monster, onC
                 </div>
                 <p className="text-xl text-theme-tertiary italic">
                   {monster.size} {monster.type}
-                  {monster.subtype && ` (${monster.subtype})`}, {monster.alignment}
+                  {monster.subtype && ` (${monster.subtype})`}
+                  {monster.alignment && `, ${monster.alignment}`}
+                  {monster.source && ` · ${monster.edition} ${monsterSourceLabel(monster.source)}`}
                 </p>
               </div>
               <div className="flex gap-2">

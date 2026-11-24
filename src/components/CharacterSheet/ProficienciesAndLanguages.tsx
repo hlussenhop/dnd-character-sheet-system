@@ -1,7 +1,7 @@
 import React from 'react';
 import { Shield, Sword, Hammer, Languages } from 'lucide-react';
 import { LANGUAGES } from '../../data/languages';
-import { loadClasses, BACKGROUNDS } from '../../services/dataService';
+import { loadClasses, getBackground } from '../../services/dataService';
 import { Character } from '../../types/dnd';
 
 interface ProficienciesAndLanguagesProps {
@@ -16,7 +16,7 @@ export const ProficienciesAndLanguages: React.FC<ProficienciesAndLanguagesProps>
     [character.classSlug, character.class]
   );
   const backgroundData = React.useMemo(
-    () => BACKGROUNDS.find(bg => bg.slug === character.background || bg.name === character.background),
+    () => getBackground(character.background),
     [character.background]
   );
 

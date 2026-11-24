@@ -6,6 +6,9 @@ import { formatModifier } from '../../utils/formatters';
 import { loadEquipment } from '../../services/dataService';
 import { HitDice } from './HitDice';
 import { DeathSaves } from './DeathSaves';
+import { calculateNaturalArmorClass } from '../../utils/speciesGrantUtils';
+import { sumMagicBonus } from '../../utils/magicItemInventory';
+import { useMagicItemIndex } from '../../hooks/useMagicItemIndex';
 
 interface CombatStatsPanelProps {
   character: Character;
@@ -30,6 +33,7 @@ export const CombatStatsPanel: React.FC<CombatStatsPanelProps> = ({
 }) => {
   const [initiativeRollType, setInitiativeRollType] = useState<RollType>('normal');
   const [tempHpInput, setTempHpInput] = useState('');
+  const magicIndex = useMagicItemIndex();
 
   const handleInitiativeRoll = (type: RollType = initiativeRollType) => {
     let roll;
@@ -67,6 +71,25 @@ export const CombatStatsPanel: React.FC<CombatStatsPanelProps> = ({
   const getSpeed = () => {
     return character.speed;
   };
+
+  const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+  // Movement modes, senses and defenses granted by the species
+  const speciesLines: Array<{ label: string; value: string }> = [];
+  const movement = Object.entries(character.movement ?? {}).filter(([, feet]) => feet);
+  if (movement.length) {
+    speciesLines.push({ label: 'Movement', value: movement.map(([kind, feet]) => `${capitalize(kind)} ${feet} ft`).join(', ') });
+  }
+  const senses = Object.entries(character.senses ?? {}).filter(([, feet]) => feet);
+  if (senses.length) {
+    speciesLines.push({ label: 'Senses', value: senses.map(([sense, feet]) => `${capitalize(sense)} ${feet} ft`).join(', ') });
+  }
+  if (character.damageResistances?.length) {
+    speciesLines.push({ label: 'Resistances', value: character.damageResistances.map(capitalize).join(', ') });
+  }
+  const immunities = [...(character.damageImmunities ?? []), ...(character.conditionImmunities ?? [])];
+  if (immunities.length) {
+    speciesLines.push({ label: 'Immune to', value: immunities.map(capitalize).join(', ') });
+  }
 
 
 
@@ -159,10 +182,37 @@ export const CombatStatsPanel: React.FC<CombatStatsPanelProps> = ({
       }
     }
 
+    // Natural armor (species trait): applies when it beats the armor above (or armor can't be worn)
+    const naturalAC = calculateNaturalArmorClass(character.naturalArmor, {
+      STR: character.abilities.STR.modifier,
+      DEX: dexMod,
+      CON: character.abilities.CON.modifier,
+      INT: character.abilities.INT.modifier,
+      WIS: character.abilities.WIS.modifier,
+      CHA: character.abilities.CHA.modifier,
+    });
+    if (naturalAC !== undefined && (character.naturalArmor?.noArmor || naturalAC > total)) {
+      parts.length = 0;
+      parts.push(`Natural Armor: ${naturalAC}`);
+      total = naturalAC;
+    }
+
     // Shield contribution (always +2, stacks with everything)
     if (equippedShield) {
       parts.push(`Shield: +2`);
       total += 2;
+    }
+
+    // Flat species bonus (Warforged Integrated Protection)
+    if (character.acBonus) {
+      parts.push(`Species: ${character.acBonus >= 0 ? '+' : ''}${character.acBonus}`);
+      total += character.acBonus;
+    }
+
+    const magicAc = sumMagicBonus(character, magicIndex, 'bonusAc');
+    if (magicAc) {
+      parts.push(`Magic items: ${magicAc >= 0 ? '+' : ''}${magicAc}`);
+      total += magicAc;
     }
 
     return [`${parts.join(', ')} = ${total} AC`];
@@ -249,6 +299,20 @@ export const CombatStatsPanel: React.FC<CombatStatsPanelProps> = ({
           <div className={`text-xl font-cinzel font-extrabold ${textPrimaryClass}`}>{getSpeed()} ft</div>
         </div>
       </div>
+
+      {speciesLines.length > 0 && (
+        <dl
+          className={`${bgClass} border ${borderClass} rounded-sm p-3 space-y-1 text-sm`}
+          data-testid="species-grants-summary"
+        >
+          {speciesLines.map(line => (
+            <div key={line.label} className="flex justify-between gap-3">
+              <dt className={`text-xs font-cinzel font-semibold ${textSecondaryClass} uppercase`}>{line.label}</dt>
+              <dd className={`${textPrimaryClass} text-right`}>{line.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
 
       {/* Middle Section - Hit Points */}
       <div className={`${bgClass} border ${borderClass} rounded-sm p-3 space-y-2`}>

@@ -63,10 +63,10 @@ export const StepHP: React.FC<StepHPProps> = ({
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-2xl font-bold text-accent-gold mb-2">
+        <h3 className="text-2xl font-bold text-accent-red mb-2">
           Increase Hit Points
         </h3>
-        <p className="text-[#992600]">
+        <p className="text-theme-secondary">
           Choose how you want to increase your HP. You can take the average (safer) or roll the dice (riskier).
         </p>
       </div>
@@ -76,25 +76,25 @@ export const StepHP: React.FC<StepHPProps> = ({
         onClick={handleSelectAverage}
         className={`w-full text-left p-6 rounded-lg border-2 transition-all ${
           hpMethod === 'average'
-            ? 'border-accent-gold bg-accent-gold bg-opacity-10'
-            : 'border-theme-border bg-theme-primary hover:border-accent-gold hover:border-opacity-50'
+            ? 'border-accent-red bg-theme-tertiary'
+            : 'border-theme-primary bg-theme-primary hover:border-accent-red'
         }`}
       >
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <h4 className="text-lg font-semibold text-accent-gold mb-2">
+            <h4 className="text-lg font-semibold text-accent-red mb-2">
               Take Average (Recommended)
             </h4>
-            <p className="text-theme-text mb-2">
-              Gain <span className="text-accent-gold font-bold text-xl">{averageHpGain} HP</span>
+            <p className="text-theme-primary mb-2">
+              Gain <span className="text-accent-red font-bold text-xl">{averageHpGain} HP</span>
             </p>
-            <p className="text-sm text-[#992600]">
+            <p className="text-sm text-theme-secondary">
               Formula: {Math.floor(parseInt(hitDie.substring(1)) / 2) + 1} (average of {hitDie})
               {conModifier !== 0 && ` + ${conModifier} (CON modifier)`}
             </p>
           </div>
           <div className={`flex-shrink-0 ml-4 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-            hpMethod === 'average' ? 'border-accent-gold bg-accent-gold' : 'border-theme-border'
+            hpMethod === 'average' ? 'border-accent-red bg-accent-red' : 'border-theme-primary'
           }`}>
             {hpMethod === 'average' && (
               <svg className="w-4 h-4 text-theme-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -108,40 +108,40 @@ export const StepHP: React.FC<StepHPProps> = ({
       {/* Option 2: Roll */}
       <div className={`w-full p-6 rounded-lg border-2 transition-all cursor-pointer ${
         hpMethod === 'roll'
-          ? 'border-accent-gold bg-accent-gold bg-opacity-10'
-          : 'border-theme-border bg-theme-primary hover:border-accent-gold hover:border-opacity-50'
+          ? 'border-accent-red bg-theme-tertiary'
+          : 'border-theme-primary bg-theme-primary hover:border-accent-red'
       }`} onClick={handleSelectRoll}>
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <h4 className="text-lg font-semibold text-accent-gold mb-2">
+            <h4 className="text-lg font-semibold text-accent-red mb-2">
               Roll for HP
             </h4>
             {rolledHP !== null ? (
               <>
-                <p className="text-theme-text mb-2">
-                  You rolled: <span className="text-accent-gold font-bold text-xl">{rolledHP} HP</span>
+                <p className="text-theme-primary mb-2">
+                  You rolled: <span className="text-accent-red font-bold text-xl">{rolledHP} HP</span>
                 </p>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     handleRollHP();
                   }}
-                  className="text-sm text-accent-gold hover:underline"
+                  className="text-sm text-accent-red hover:underline"
                 >
                   Roll again
                 </button>
               </>
             ) : (
-              <p className="text-theme-text mb-2">
+              <p className="text-theme-primary mb-2">
                 Roll 1{hitDie}{conModifier !== 0 && ` + ${conModifier}`} for your HP increase
               </p>
             )}
-            <p className="text-sm text-[#992600] mt-2">
+            <p className="text-sm text-theme-secondary mt-2">
               Possible range: {Math.max(1, 1 + conModifier)} - {Math.max(1, parseInt(hitDie.substring(1)) + conModifier)} HP
             </p>
           </div>
           <div className={`flex-shrink-0 ml-4 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-            hpMethod === 'roll' ? 'border-accent-gold bg-accent-gold' : 'border-theme-border'
+            hpMethod === 'roll' ? 'border-accent-red bg-accent-red' : 'border-theme-primary'
           }`}>
             {hpMethod === 'roll' && (
               <svg className="w-4 h-4 text-theme-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -156,13 +156,13 @@ export const StepHP: React.FC<StepHPProps> = ({
       <div className="bg-theme-primary border-2 rounded-lg p-4">
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-sm text-[#992600]">Current HP</p>
-            <p className="text-2xl font-bold text-theme-text">{character.maxHitPoints}</p>
+            <p className="text-sm text-theme-secondary">Current HP</p>
+            <p className="text-2xl font-bold text-theme-primary">{character.maxHitPoints}</p>
           </div>
-          <div className="text-accent-gold text-3xl">→</div>
+          <div className="text-accent-red text-3xl">→</div>
           <div>
-            <p className="text-sm text-[#992600]">New HP</p>
-            <p className="text-2xl font-bold text-accent-gold">
+            <p className="text-sm text-theme-secondary">New HP</p>
+            <p className="text-2xl font-bold text-accent-red">
               {character.maxHitPoints + (hpMethod === 'average' ? averageHpGain : (rolledHP || averageHpGain))}
             </p>
           </div>
@@ -173,14 +173,14 @@ export const StepHP: React.FC<StepHPProps> = ({
       <div className="flex justify-between pt-4">
         <button
           onClick={onPrev}
-          className="px-6 py-3 bg-theme-primary text-theme-text font-semibold rounded-lg hover:bg-opacity-80 transition-colors border border-theme-border"
+          className="px-6 py-3 bg-theme-primary text-theme-primary font-semibold rounded-lg hover:bg-opacity-80 transition-colors border border-theme-primary"
         >
           Back
         </button>
         <button
           onClick={handleNext}
           disabled={hpMethod === 'roll' && rolledHP === null}
-          className="px-6 py-3 bg-[#ffaa00] border bg-accent-gold text-theme-primary font-semibold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-6 py-3 bg-accent-red text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Continue
         </button>

@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { XCircle, ArrowLeft, Shuffle } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
-import { ALIGNMENTS_DATA, BACKGROUNDS, ALIGNMENTS, randomizeIdentity, randomizeSpecies, randomizeClassAndSkills, randomizeFightingStyle, randomizeSpells, randomizeAbilities, randomizeFeats, randomizeLanguages, randomizePersonality, randomizeStartingEquipment, randomizeBackgroundAbilityChoices } from '../../../services/dataService';
+import { ALIGNMENTS_DATA, BACKGROUNDS, ALIGNMENTS, getBackground, getFeatBySlug, randomizeIdentity } from '../../../services/dataService';
+import { randomBackgroundPatch, randomizeEntireCharacter } from '../../../utils/randomizeCreation';
 import { getToolDescription as getToolData } from '../../../services/toolService';
-import { generateName } from '../../../utils/nameGenerator';
 import skillsData from '../../../data/skills.json';
 
-import { BackgroundASIWidget, SmartNavigationButton } from '../components';
+import { BackgroundASIWidget, BackgroundPicks, FeatChoiceModal, SmartNavigationButton } from '../components';
+import { getFeatChoiceSections, getMissingFeatPicks } from '../../../utils/featGrantUtils';
+import { backgroundFeatSlug } from '../../../utils/backgroundUtils';
+import { useBackgroundFlavor, useToast } from '../../../hooks';
+import type { Feat } from '../../../types/dnd';
 import { useStepValidation } from '../hooks';
-import { useToast } from '../../../hooks';
 import Toast from '../../Toast';
 
 interface RandomizeButtonProps {
@@ -85,6 +88,7 @@ const ProficiencyModal: React.FC<ProficiencyModalProps> = ({ isOpen, onClose, ti
 
 export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, prevStep, getNextStepLabel }) => {
   const [showAlignmentInfo, setShowAlignmentInfo] = useState(true);
+  const [originFeatChoice, setOriginFeatChoice] = useState<Feat | null>(null);
   const [showBackgroundInfo, setShowBackgroundInfo] = useState(true);
   const [showDetailedDescription, setShowDetailedDescription] = useState(false);
   const [proficiencyModal, setProficiencyModal] = useState<{ isOpen: boolean; title: string; description: string; ability?: string }>({
@@ -96,13 +100,13 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
   const { toasts, showSuccess, removeToast } = useToast();
 
   const selectedAlignmentData = ALIGNMENTS_DATA.find(a => a.name === data.alignment);
-  const selectedBackground = BACKGROUNDS.find(bg => bg.slug === data.background);
-  const backgroundDescription = selectedBackground
-    ? selectedBackground.details
-      || selectedBackground.detailedDescription
-      || selectedBackground.description
-      || ''
-    : '';
+  const selectedBackground = getBackground(data.background);
+  const flavor = useBackgroundFlavor(selectedBackground);
+  const backgroundDescription = flavor?.description
+    || selectedBackground?.details
+    || selectedBackground?.detailedDescription
+    || selectedBackground?.description
+    || '';
   const isLongDescription = backgroundDescription.length > 220;
 
   // Validation hook
@@ -148,53 +152,19 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
         <div className='flex gap-2'>
           <RandomizeButton
             onClick={() => {
-              const identity = randomizeIdentity();
+              const identity = randomizeIdentity(undefined, data.edition);
               const backgroundSlug = identity.backgroundSlug || identity.background;
-              const backgroundASI = randomizeBackgroundAbilityChoices(backgroundSlug, data.edition);
-              updateData({ alignment: identity.alignment, background: backgroundSlug, backgroundAbilityChoices: backgroundASI });
+              updateData({
+                alignment: identity.alignment,
+                ...randomBackgroundPatch(backgroundSlug, data.edition),
+              });
             }}
             title="Randomize alignment and background"
           />
             <RandomizeAllButton
               onClick={() => {
-                // Randomize the entire character (preserve the selected level)
-                const level = data.level;
-                const species = randomizeSpecies();
-                const identity = randomizeIdentity(species);
-                const backgroundSlug = identity.backgroundSlug || identity.background;
-                const classAndSkills = randomizeClassAndSkills();
-                const fightingStyle = randomizeFightingStyle(classAndSkills.classSlug);
-                const spells = randomizeSpells(classAndSkills.classSlug, level);
-                const abilities = randomizeAbilities();
-                const feats = randomizeFeats();
-                const backgroundASI = randomizeBackgroundAbilityChoices(backgroundSlug, data.edition);
-                const equipment = randomizeStartingEquipment(classAndSkills.classSlug, backgroundSlug, data.edition);
-                const languages = randomizeLanguages(species, backgroundSlug, data.edition, abilities.abilities);
-                const personality = randomizePersonality();
-                const generatedName = generateName({
-                  race: species,
-                  classSlug: classAndSkills.classSlug
-                }).name;
-
-                updateData({
-                  alignment: identity.alignment,
-                  background: backgroundSlug,
-                  name: generatedName,
-                  speciesSlug: species,
-                  ...classAndSkills,
-                  selectedFightingStyle: fightingStyle,
-                  spellSelection: spells,
-                  ...abilities,
-                  backgroundAbilityChoices: backgroundASI,
-                  selectedFeats: feats,
-                  equipmentChoices: equipment.equipmentChoices,
-                  equipmentChoice: equipment.equipmentChoice,
-                  equipmentGold: equipment.equipmentGold,
-                  startingInventory: equipment.startingInventory,
-                  knownLanguages: languages,
-                  ...personality
-                });
-                showSuccess('Character fully randomized (background ASI, gear, languages, spells, and stats).');
+                updateData(randomizeEntireCharacter({ level: data.level, edition: data.edition }));
+                showSuccess('Character fully randomized. Required choices are filled in.');
               }}
             />
         </div>
@@ -252,15 +222,29 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
         <label className="block text-sm font-medium text-theme-tertiary mb-2">Background</label>
         <select
           value={data.background}
-          onChange={(e) => updateData({ background: e.target.value })}
+          onChange={(e) => updateData({
+            background: e.target.value,
+            backgroundSkills: [],
+            backgroundTools: [],
+            backgroundToolPackage: undefined,
+            backgroundFeat: undefined,
+            backgroundAbilityChoices: undefined,
+          })}
           className="w-full p-3 bg-theme-tertiary text-white rounded-lg focus:ring-red-500 focus:border-red-500"
         >
           <option value="">Select Background</option>
-           {BACKGROUNDS.filter(bg => bg.edition === data.edition).map(bg => (
+           {BACKGROUNDS.filter(bg => bg.edition === data.edition)
+             .slice()
+             .sort((a, b) => a.name.localeCompare(b.name))
+             .map(bg => (
             <option key={bg.slug} value={bg.slug}>{bg.name}</option>
           ))}
         </select>
       </div>
+
+      {selectedBackground && (
+        <BackgroundPicks background={selectedBackground} data={data} updateData={updateData} />
+      )}
 
       {/* 2024 Background Ability Score Selection */}
       {data.edition === '2024' && selectedBackground?.abilityScores && (
@@ -298,18 +282,41 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
           </div>
 
           {/* 2024 Origin Feat */}
-          {selectedBackground.edition === '2024' && selectedBackground.originFeat && (
-            <div className="border-t border-theme-primary pt-3">
-               <div className="flex items-center gap-2 mb-2">
-                 <h5 className="text-sm font-semibold text-yellow-200">Origin Feat: {selectedBackground.originFeat}</h5>
-               </div>
-              <p className="text-xs text-theme-tertiary">
-                This feat is granted at 1st level by your background.
-              </p>
-            </div>
-          )}
+          {(() => {
+            const featSlug = backgroundFeatSlug(selectedBackground, data);
+            if (!featSlug) return null;
+            const originFeat = getFeatBySlug(featSlug, selectedBackground.edition);
+            const needsPicks = originFeat && getFeatChoiceSections(originFeat).length > 0;
+            const missing = originFeat ? getMissingFeatPicks(originFeat, data.featChoices?.[originFeat.slug]) : [];
+            return (
+              <div className="border-t border-theme-primary pt-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <h5 className="text-sm font-semibold text-yellow-200">Feat: {originFeat?.name ?? featSlug}</h5>
+                  {needsPicks && (
+                    <button
+                      type="button"
+                      onClick={() => setOriginFeatChoice(originFeat)}
+                      className="text-xs px-2 py-0.5 rounded bg-accent-purple text-white hover:bg-accent-purple-light"
+                    >
+                      {missing.length ? 'Choose' : 'Change choices'}
+                    </button>
+                  )}
+                </div>
+                {originFeat && (
+                  <ul className="text-xs text-theme-tertiary list-disc list-inside mb-1">
+                    {originFeat.benefits.map((b, i) => <li key={i}>{b}</li>)}
+                  </ul>
+                )}
+                <p className="text-xs text-theme-tertiary">
+                  This feat is granted at 1st level by your background.
+                  {missing.length > 0 && ` Still to choose: ${missing.map(m => m.label.toLowerCase()).join(', ')}.`}
+                </p>
+              </div>
+            );
+          })()}
 
           {/* Skill Proficiencies */}
+          {selectedBackground.skill_proficiencies.length > 0 && (
           <div className="border-t border-theme-primary pt-3">
             <h5 className="text-sm font-semibold text-yellow-200 mb-2">Skill Proficiencies</h5>
             <div className="flex flex-wrap gap-2">
@@ -325,6 +332,7 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
                ))}
              </div>
           </div>
+          )}
 
           {/* Tool Proficiencies */}
           {selectedBackground.tool_proficiencies && selectedBackground.tool_proficiencies.length > 0 && (
@@ -360,6 +368,20 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
           )}
 
           {/* Equipment */}
+          {selectedBackground.equipment.length > 0 && (
+            <div className="border-t border-theme-primary pt-3">
+              <h5 className="text-sm font-semibold text-yellow-200 mb-2">Equipment</h5>
+              <ul className="text-xs text-theme-tertiary space-y-1">
+                {selectedBackground.equipment.map(item => (
+                  <li key={item} className="flex items-start">
+                    <span className="text-accent-yellow-light mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Equipment Options */}
           {selectedBackground.equipmentOptions && selectedBackground.equipmentOptions.length > 0 && (
             <div className="border-t border-theme-primary pt-3 space-y-3">
@@ -384,6 +406,25 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {flavor && flavor.personalityTraits.length > 0 && (
+            <div className="border-t border-theme-primary pt-3 space-y-2">
+              <h5 className="text-sm font-semibold text-yellow-200">Suggested characteristics</h5>
+              {([
+                ['Personality', flavor.personalityTraits],
+                ['Ideals', flavor.ideals],
+                ['Bonds', flavor.bonds],
+                ['Flaws', flavor.flaws],
+              ] as Array<[string, string[]]>).filter(([, items]) => items.length > 0).map(([label, items]) => (
+                <div key={label}>
+                  <div className="text-xs font-semibold text-theme-muted">{label}</div>
+                  <ul className="text-xs text-theme-tertiary list-disc list-inside">
+                    {items.map(item => <li key={item}>{item}</li>)}
+                  </ul>
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -426,6 +467,14 @@ export const Step1Details: React.FC<StepProps> = ({ data, updateData, nextStep, 
         ability={proficiencyModal.ability}
       />
 
+      <FeatChoiceModal
+        isOpen={!!originFeatChoice}
+        onClose={() => setOriginFeatChoice(null)}
+        feat={originFeatChoice}
+        onConfirm={(picks) => {
+          if (originFeatChoice) updateData({ featChoices: { ...(data.featChoices || {}), [originFeatChoice.slug]: picks } });
+        }}
+      />
     </div>
   );
 };

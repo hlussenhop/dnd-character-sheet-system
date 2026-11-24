@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronUp, ChevronDown, XCircle, Shuffle, ArrowLeft } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
-import { loadClasses, getClassCategories, BACKGROUNDS, getSubclassesByClass, randomizeClassAndSkills } from '../../../services/dataService';
+import { loadClasses, getClassCategories, getBackground, findSpeciesBySlug, getSubclassesByClass, randomizeClassAndSkills } from '../../../services/dataService';
+import { resolveSpeciesGrants } from '../../../utils/speciesGrantUtils';
+import { grantedBackgroundSkills } from '../../../utils/backgroundUtils';
 import { SkillName } from '../../../types/dnd';
 import { SelectionPoolWidget, BranchChoiceWidget, AutomaticWidget, ListSelectionWidget } from '../widgets';
 import { Level1Feature, SelectionPoolConfig, BranchChoiceConfig, ListSelectionConfig, AutomaticConfig } from '../../../types/widgets';
@@ -38,7 +40,11 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
 
   const allClasses = loadClasses(data.edition);
   const selectedClass = allClasses.find(c => c.slug === data.classSlug);
-  const availableSubclasses = getSubclassesByClass(data.classSlug);
+  const availableSubclasses = getSubclassesByClass(data.classSlug, data.edition);
+  const subclassLevel = availableSubclasses.reduce(
+    (soonest, subclass) => Math.min(soonest, subclass.subclassLevel ?? 3),
+    availableSubclasses[0]?.subclassLevel ?? 3,
+  );
 
   // Validation hook
   const { canProceed, missingItems, nextAction } = useStepValidation(3, data);
@@ -59,11 +65,11 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
     <div className='space-y-6'>
       <div className='flex justify-between items-center'>
         <h3 className='text-xl font-bold text-red-300'>
-          Select Class {data.level >= 3 ? '& Subclass ' : ''}(Hit Die and Starting Proficiencies)
+          Select Class {data.level >= subclassLevel ? '& Subclass ' : ''}(Hit Die and Starting Proficiencies)
         </h3>
         <RandomizeButton
           onClick={() => {
-            const classAndSkills = randomizeClassAndSkills();
+            const classAndSkills = randomizeClassAndSkills(data.edition);
             updateData({
               classSlug: classAndSkills.classSlug,
               selectedSkills: classAndSkills.selectedSkills,
@@ -195,8 +201,8 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
 
           {/* Background Skills (Auto-granted) */}
           {(() => {
-            const backgroundData = BACKGROUNDS.find(bg => bg.name === data.background);
-            const backgroundSkills = backgroundData?.skill_proficiencies || [];
+            const backgroundData = getBackground(data.background);
+            const backgroundSkills = grantedBackgroundSkills(backgroundData, data);
 
             if (backgroundSkills.length > 0) {
               return (
@@ -220,9 +226,22 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
           {/* Class Skill Selection */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {selectedClass.skill_proficiencies.map(skill => {
-              const backgroundData = BACKGROUNDS.find(bg => bg.name === data.background);
-              const backgroundSkills = backgroundData?.skill_proficiencies || [];
-              const isBackgroundSkill = backgroundSkills.includes(skill);
+              const backgroundData = getBackground(data.background);
+              const backgroundSkills = grantedBackgroundSkills(backgroundData, data);
+              // Skills already granted by the species (fixed grants and Step 2 picks) count like background skills
+              const speciesSkills: string[] = resolveSpeciesGrants(
+                findSpeciesBySlug(data.speciesSlug),
+                {
+                  edition: data.edition,
+                  level: data.level,
+                  variantSlug: data.selectedSpeciesVariant,
+                  lineage: data.selectedLineage,
+                  choices: data.speciesChoices,
+                  picks: data.speciesPicks,
+                  walkSpeed: 30,
+                },
+              ).skills;
+              const isBackgroundSkill = backgroundSkills.includes(skill) || speciesSkills.includes(skill);
               const isSelected = data.selectedSkills.includes(skill as SkillName);
                const canSelect = data.selectedSkills.length < totalSkillChoices;
 
@@ -404,6 +423,8 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
                 );
 
               case 'list_selection':
+                // Invocations are chosen on the class options step, which knows the full list and the level count.
+                if (feature.id === 'eldritch_invocations') return null;
                 return (
                   <ListSelectionWidget
                     key={feature.id}
@@ -446,13 +467,8 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
 
       {/* Subclass Selection */}
       {selectedClass && (() => {
-        const availableSubclasses = getSubclassesByClass(data.classSlug);
-
         if (availableSubclasses.length === 0) return null;
 
-        // Determine subclass level requirement based on class and edition
-        // 2014 Cleric gets Divine Domain at Level 1, 2024 Cleric at Level 3
-        const subclassLevel = (data.classSlug === 'cleric' && data.edition === '2014') ? 1 : 3;
         const hasSubclassUnlocked = data.level >= subclassLevel;
 
         return (
@@ -502,9 +518,9 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
                <div className="text-sm text-theme-muted p-4 bg-theme-secondary/50 rounded-lg border border-theme-primary">
                  <div className="flex items-center gap-2 mb-2">
                    <span className="text-accent-yellow-light">🔒</span>
-                   <p className="font-semibold text-accent-yellow-light">Subclass Selection Unlocked at Level 3</p>
+                   <p className="font-semibold text-accent-yellow-light">Subclass Selection Unlocked at Level {subclassLevel}</p>
                  </div>
-                 <p className="mb-3">Characters choose their subclass specialization at level 3. This character will need to select a subclass when they reach level 3.</p>
+                 <p className="mb-3">Characters choose their subclass specialization at level {subclassLevel}. This character will need to select a subclass when they reach level {subclassLevel}.</p>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {availableSubclasses.map((subclass, index) => (
                       <div key={`${subclass.slug}-${index}`} className="p-2 bg-theme-secondary/50 rounded border border-theme-secondary">
@@ -545,7 +561,7 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
           duplicateSkill={duplicateSkill}
           alreadySelectedSkills={[
             ...(data.selectedSkills || []),
-            ...(BACKGROUNDS.find(bg => bg.name === data.background)?.skill_proficiencies || []),
+            ...grantedBackgroundSkills(getBackground(data.background), data),
             ...(data.overflowSkills || [])
           ]}
           onSelectReplacement={(replacementSkill) => {

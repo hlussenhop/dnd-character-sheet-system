@@ -1,17 +1,63 @@
 import { CharacterCreationData, Character, AbilityName, SkillName } from '../types/dnd';
-import { getAllSpecies, loadClasses, BACKGROUNDS, PROFICIENCY_BONUSES, getModifier, SKILL_TO_ABILITY, ALL_SKILLS, getHitDieForClass } from '../services/dataService';
+import { findSpeciesBySlug, loadClasses, getBackground, getSubclass, PROFICIENCY_BONUSES, getModifier, SKILL_TO_ABILITY, ALL_SKILLS, getHitDieForClass, resolveFeatSlug } from '../services/dataService';
+import { backgroundFeatSlug, grantedBackgroundSkills, grantedBackgroundTools, toSkillName } from './backgroundUtils';
 import { migrateSpellSelectionToCharacter } from '../utils/spellUtils';
 import { addItemToInventoryByName } from '../utils/equipmentMatching';
 import { BASE_ARMOR_CLASS } from '../constants/combat';
 import { log } from './logger';
+import { clampAssignedScore, resolveSpeciesAbilityBonuses } from './speciesAbilityUtils';
+import { getEffectiveSpeciesTraits, getSelectedVariant } from './speciesVariantUtils';
+import { calculateNaturalArmorClass, mergeGrants, resolveSpeciesGrants, speciesMovement } from './speciesGrantUtils';
+import { getClassLanguages, getSpeciesLanguages, parseBackgroundLanguageChoices } from './languageUtils';
+import { subclassFeaturesUpToLevel } from './subclassCatalog';
+import { applyFeatAbilityIncreases, resolveFeatGrants } from './featGrantUtils';
+import { applyOptionalFeatureGrants, getOptionalFeature, resolveOptionalFeatureSlug } from './optionalFeatures';
+
+/**
+ * Every feat a new character has: picked feats, the 2024 Origin, species and Versatile feats,
+ * and feats taken in Ability Score Improvement slots. Slugs are resolved for the edition.
+ */
+export const collectCreationFeats = (data: CharacterCreationData, originFeat?: string): string[] => {
+  const feats = [...(data.selectedFeats || [])];
+  // A background feat applies in both editions (2024 Origin Feat, or a feat a 2014 background grants)
+  if (originFeat) feats.push(originFeat);
+  if (data.edition === '2024') {
+    if (data.humanOriginFeat) feats.push(data.humanOriginFeat);
+    if (data.speciesFeat) feats.push(data.speciesFeat);
+    if (data.speciesSlug === 'human-2024' && data.humanVersatileFeat) feats.push(data.humanVersatileFeat);
+  }
+  data.cumulativeASI?.forEach(asiChoice => {
+    if (asiChoice.type === 'feat' && asiChoice.featSlug) feats.push(asiChoice.featSlug);
+  });
+  return feats.map(slug => resolveFeatSlug(slug, data.edition));
+};
+
+/** Languages the wizard treats as automatic, plus the ones the player picked. */
+const knownLanguagesFor = (
+  data: CharacterCreationData,
+  speciesSlug: string,
+  classSlug: string,
+  backgroundLanguages: string[] | undefined,
+  grantLanguages: string[],
+): string[] => {
+  const known = new Set<string>(['Common']);
+  getSpeciesLanguages(speciesSlug).forEach(language => known.add(language));
+  getClassLanguages(classSlug).forEach(language => known.add(language));
+  if (backgroundLanguages) {
+    parseBackgroundLanguageChoices(backgroundLanguages).direct.forEach(language => known.add(language));
+  }
+  grantLanguages.forEach(language => known.add(language));
+  ;(data.knownLanguages ?? []).forEach(language => known.add(language));
+  return Array.from(known).sort();
+};
 
 /**
  * Calculate final character stats from character creation data
  */
 export const calculateCharacterStats = (data: CharacterCreationData): Character => {
-  const speciesData = getAllSpecies().find(s => s.slug === data.speciesSlug);
+  const speciesData = findSpeciesBySlug(data.speciesSlug);
   const classData = loadClasses().find(c => c.slug === data.classSlug);
-  const backgroundData = BACKGROUNDS.find(bg => bg.slug === data.background); // Fetch background data here
+  const backgroundData = getBackground(data.background);
 
   log.debug('Character creation data lookup', {
     species: speciesData ? { name: speciesData.name, slug: speciesData.slug } : null,
@@ -28,15 +74,20 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
     throw new Error("Incomplete creation data.");
   }
 
+  // Every feat the character starts with (picked, Origin, species and ASI-slot feats), as current slugs
+  const allFeats = collectCreationFeats(data, backgroundFeatSlug(backgroundData, data));
+
   const finalAbilities: Character['abilities'] = {} as Character['abilities'];
+  const rawScores = {} as Record<AbilityName, number>;
 
   // 1. Calculate Abilities with Bonuses
+  const speciesAbilityBonuses = resolveSpeciesAbilityBonuses(speciesData, data);
   (Object.keys(data.abilities) as AbilityName[]).forEach((ability) => {
     let rawScore = data.abilities[ability];
 
     if (data.edition === '2014') {
       // 2014: Apply Species Ability Bonuses
-      rawScore += (speciesData.ability_bonuses?.[ability] || 0);
+      rawScore += speciesAbilityBonuses[ability];
     } else if (data.edition === '2024') {
       // 2024: Apply Background Ability Bonuses
       // Fixed bonuses first
@@ -55,13 +106,43 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
       });
     }
 
-    const modifier = getModifier(rawScore);
-    finalAbilities[ability] = { score: rawScore, modifier };
+    rawScores[ability] = rawScore;
+  });
+
+  // Feat ability score increases (fixed ones, or the ability picked for the feat)
+  const scoresWithFeats = applyFeatAbilityIncreases(rawScores, allFeats, data.edition, data.featChoices);
+  (Object.keys(scoresWithFeats) as AbilityName[]).forEach((ability) => {
+    const score = clampAssignedScore(data.abilities[ability], scoresWithFeats[ability]);
+    finalAbilities[ability] = { score, modifier: getModifier(score) };
   });
 
 
   const level = data.level;
   const pb = PROFICIENCY_BONUSES[level - 1] || 2;
+
+  // Lineage effects (traits/speed overrides) and the species' mechanical grants
+  const lineageData = data.selectedLineage && 'lineages' in speciesData
+    ? (speciesData as { lineages?: Record<string, { traits?: Character['featuresAndTraits']['speciesTraits']; baseSpeed?: number }> }).lineages?.[data.selectedLineage]
+    : undefined;
+  const variantSpeed = getSelectedVariant(speciesData, data.selectedSpeciesVariant)?.speed;
+  const speciesSpeed = lineageData?.baseSpeed || variantSpeed || speciesData.speed || 30;
+  const speciesOnlyGrants = resolveSpeciesGrants(speciesData, {
+    edition: data.edition,
+    level,
+    variantSlug: data.selectedSpeciesVariant,
+    lineage: data.selectedLineage,
+    choices: data.speciesChoices,
+    picks: data.speciesPicks,
+    walkSpeed: speciesSpeed,
+  });
+  const featGrants = resolveFeatGrants(allFeats, {
+    edition: data.edition,
+    level,
+    walkSpeed: speciesSpeed,
+    featChoices: data.featChoices,
+  });
+  const speciesGrants = mergeGrants(speciesOnlyGrants, featGrants);
+  const effectiveSpeed = speciesSpeed + speciesGrants.speedBonus;
 
   // 2. Calculate Hit Points (Based on chosen method)
   let maxHitPoints: number;
@@ -99,19 +180,25 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
   }
 
 
-  // Add racial bonuses (like Dwarf toughness)
-  maxHitPoints += (speciesData.slug === 'dwarf' ? level : 0);
+  // Species and feat HP bonuses (Dwarven Toughness +1, Tough +2 per level)
+  maxHitPoints += speciesGrants.hpPerLevel * level;
 
   // 3. Calculate Skills (from selected skills + background skills + expertise)
-  const backgroundSkills = backgroundData?.skill_proficiencies || [];
-  const allProficientSkills = [...data.selectedSkills, ...backgroundSkills.map(s => s as SkillName)];
+  const backgroundSkills = grantedBackgroundSkills(backgroundData, data)
+    .map(toSkillName)
+    .filter((skill): skill is SkillName => skill !== undefined);
+  const allProficientSkills = [
+    ...data.selectedSkills,
+    ...backgroundSkills,
+    ...speciesGrants.skills,
+  ];
 
   const finalSkills: Character['skills'] = {} as Character['skills'];
   ALL_SKILLS.forEach((skillName) => {
     const ability = SKILL_TO_ABILITY[skillName];
     const modifier = finalAbilities[ability].modifier;
     const isProficient = allProficientSkills.includes(skillName);
-    const hasExpertise = data.expertiseSkills?.includes(skillName) || false;
+    const hasExpertise = data.expertiseSkills?.includes(skillName) || speciesGrants.expertise.includes(skillName);
 
     // Expertise applies 2x proficiency bonus
     let skillBonus = 0;
@@ -166,13 +253,19 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
 
   }
 
-  // Add background equipment
+  // Add background equipment. A trailing "15 gp" is pocket money, not an item.
+  let backgroundGold = 0;
   if (backgroundData?.equipment) {
     const backgroundEquipment = Array.isArray(backgroundData.equipment)
       ? backgroundData.equipment
       : [backgroundData.equipment];
     
     backgroundEquipment.forEach(itemName => {
+      const coins = /^(\d+) gp$/.exec(itemName.trim());
+      if (coins) {
+        backgroundGold += Number(coins[1]);
+        return;
+      }
       // Try to match the background equipment name to equipment database
       const results = addItemToInventoryByName(itemName, 1);
       
@@ -236,28 +329,43 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
       ) as Record<string, number>,
       level
     );
+    const granted = (getSubclass(data.subclassSlug)?.grantedSpells ?? [])
+      .filter(grant => grant.level <= level)
+      .flatMap(grant => grant.slugs);
+    if (spellcastingData && granted.length > 0) {
+      const merge = (current?: string[]) => [...new Set([...(current ?? []), ...granted])];
+      if (spellcastingData.spellbook) {
+        spellcastingData = {
+          ...spellcastingData,
+          spellbook: merge(spellcastingData.spellbook),
+          preparedSpells: merge(spellcastingData.preparedSpells),
+        };
+      } else if (spellcastingData.preparedSpells) {
+        spellcastingData = { ...spellcastingData, preparedSpells: merge(spellcastingData.preparedSpells) };
+      } else if (spellcastingData.spellsKnown) {
+        spellcastingData = { ...spellcastingData, spellsKnown: merge(spellcastingData.spellsKnown) };
+      }
+    }
   }
 
 
   // 5. Apply lineage effects (traits/spells/speed overrides)
-  const lineageData = data.selectedLineage && 'lineages' in speciesData
-    ? (speciesData as { lineages?: Record<string, { traits?: Character['featuresAndTraits']['speciesTraits']; baseSpeed?: number }> }).lineages?.[data.selectedLineage]
-    : undefined;
-
   const mergedTraits = [
-    ...(speciesData.species_traits || []),
+    ...getEffectiveSpeciesTraits(speciesData, data.selectedSpeciesVariant),
     ...(lineageData?.traits || []),
   ];
 
   // Future: apply lineage spells if we surface them in spell lists
 
-  const effectiveSpeed = lineageData?.baseSpeed || speciesData.speed || 30;
-
-  // 6. Calculate Armor Class (simple calculation)
-  const armorClass = BASE_ARMOR_CLASS + finalAbilities.DEX.modifier;
+  // 6. Calculate Armor Class (unarmored, or natural armor from a species trait when it is higher)
+  const abilityModifiers = Object.fromEntries(
+    (Object.keys(finalAbilities) as AbilityName[]).map(a => [a, finalAbilities[a].modifier]),
+  ) as Record<AbilityName, number>;
+  const naturalAC = calculateNaturalArmorClass(speciesGrants.naturalArmor, abilityModifiers);
+  const armorClass = Math.max(BASE_ARMOR_CLASS + finalAbilities.DEX.modifier, naturalAC ?? 0) + speciesGrants.acBonus;
 
   // 7. Calculate Initiative
-  const initiative = finalAbilities.DEX.modifier;
+  const initiative = finalAbilities.DEX.modifier + (speciesGrants.initiativeProficiency ? pb : 0) + speciesGrants.initiativeBonus;
 
   // 8. Load Features and Traits
   const featuresAndTraits: Character['featuresAndTraits'] = {
@@ -267,9 +375,9 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
     flaws: data.flaws || '',
     classFeatures: classData.class_features || [],
     speciesTraits: mergedTraits,
-    backgroundFeatures: backgroundData ? [{
-      name: backgroundData.feature || 'Background Feature',
-      description: backgroundData.feature_description || 'A feature from your background.'
+    backgroundFeatures: backgroundData?.feature ? [{
+      name: backgroundData.feature,
+      description: backgroundData.feature_description || '',
     }] : [],
     musicalInstrumentProficiencies: data.selectedMusicalInstruments || [],
   };
@@ -277,48 +385,24 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
 
   // 9. Calculate SRD Features (from the original implementation)
   const srdFeatures = {
-    classFeatures: [], // Would need to be populated from SRD data
-    subclassFeatures: [],
+    classFeatures: [],
+    subclassFeatures: subclassFeaturesUpToLevel(classData.slug, data.subclassSlug, level),
   };
 
 
+  const optionalFeatureSlugs = [...new Set(
+    [data.fightingStyle, data.selectedFightingStyle, ...(data.eldritchInvocations ?? []), ...(data.optionalFeatures ?? [])]
+      .filter((slug): slug is string => !!slug)
+      .map(slug => resolveOptionalFeatureSlug(slug, data.edition))
+      .filter(slug => getOptionalFeature(slug, data.edition)),
+  )];
+
   // 10. Create final character object
-  // Collect all feats (level 1 + cumulative ASI feats)
-  const allFeats = [...(data.selectedFeats || [])];
-  
-  // Add 2024 Background Origin Feat
-  if (data.edition === '2024' && backgroundData?.originFeat) {
-    allFeats.push(backgroundData.originFeat);
-  }
-
-   // Add 2024 Human Bonus Origin Feat
-   if (data.edition === '2024' && data.humanOriginFeat) {
-     allFeats.push(data.humanOriginFeat);
-   }
-
-  // Add 2024 Species Feat
-  if (data.edition === '2024' && data.speciesFeat) {
-    allFeats.push(data.speciesFeat);
-  }
-
-  // Add 2024 Human Versatile extra feat
-  if (data.edition === '2024' && data.speciesSlug === 'human-2024' && data.humanVersatileFeat) {
-    allFeats.push(data.humanVersatileFeat);
-  }
-
-  if (data.cumulativeASI) {
-    data.cumulativeASI.forEach(asiChoice => {
-      if (asiChoice.type === 'feat' && asiChoice.featSlug) {
-        allFeats.push(asiChoice.featSlug);
-      }
-    });
-  }
-
-
   const character: Character = {
     id: '', // Will be set when saving
     name: data.name,
     species: speciesData.name,
+    selectedSpeciesVariant: data.selectedSpeciesVariant,
     class: classData.name,
     classSlug: classData.slug,
     level,
@@ -337,15 +421,30 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
     },
 
     speed: effectiveSpeed,
+    movement: speciesMovement(speciesGrants.movement, speciesData),
+    senses: Object.keys(speciesGrants.senses).length ? speciesGrants.senses : undefined,
+    damageResistances: speciesGrants.resistances.length ? speciesGrants.resistances : undefined,
+    conditionImmunities: speciesGrants.conditionImmunities.length ? speciesGrants.conditionImmunities : undefined,
+    damageImmunities: speciesGrants.damageImmunities.length ? speciesGrants.damageImmunities : undefined,
+    savingThrowProficiencies: speciesGrants.savingThrows.length ? speciesGrants.savingThrows : undefined,
+    naturalArmor: speciesGrants.naturalArmor,
+    // Species only: level-up adds feat HP (Tough) from the feats themselves
+    hpPerLevelBonus: speciesOnlyGrants.hpPerLevel || undefined,
+    acBonus: speciesGrants.acBonus || undefined,
+    speciesChoices: data.speciesChoices && Object.keys(data.speciesChoices).length ? data.speciesChoices : undefined,
     initiative,
     abilities: finalAbilities,
     skills: finalSkills,
-    languages: data.knownLanguages,
+    languages: knownLanguagesFor(data, speciesData.slug, classData.slug, backgroundData?.languages, speciesGrants.languages),
     featuresAndTraits,
     proficiencies: {
-      armor: classData.proficiencies?.armor || [],
-      weapons: classData.proficiencies?.weapons || [],
-      tools: Array.from(new Set([...(classData.proficiencies?.tools || []), ...(backgroundData.tool_proficiencies || [])])),
+      armor: Array.from(new Set([...(classData.proficiencies?.armor || []), ...speciesGrants.armor])),
+      weapons: Array.from(new Set([...(classData.proficiencies?.weapons || []), ...speciesGrants.weapons])),
+      tools: Array.from(new Set([
+        ...(classData.proficiencies?.tools || []),
+        ...(backgroundData ? grantedBackgroundTools(backgroundData, data) : []),
+        ...speciesGrants.tools,
+      ])),
     },
      selectedFeats: allFeats,
      spellcasting: spellcastingData,
@@ -362,11 +461,13 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
      primalOrder: data.primalOrder,
      fightingStyle: data.fightingStyle,
      eldritchInvocations: data.eldritchInvocations,
-     originFeat: backgroundData?.originFeat, // 2024 Origin Feat reference
+     optionalFeatures: optionalFeatureSlugs.length ? optionalFeatureSlugs : undefined,
+     featChoices: data.featChoices,
+     originFeat: backgroundFeatSlug(backgroundData, data),
     currency: {
       cp: 0,
       sp: 0,
-      gp: 0,
+      gp: backgroundGold,
       pp: 0,
     },
 
@@ -379,6 +480,8 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
     updatedAt: new Date().toISOString(),
   };
 
+
+  if (optionalFeatureSlugs.length) applyOptionalFeatureGrants(character, optionalFeatureSlugs);
 
   return character;
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, ArrowRight, Shuffle, ChevronDown } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
 import { EquipmentPackage, TrinketData, EquipmentChoice } from '../../../types/dnd';
-import { loadClasses, BACKGROUNDS, EQUIPMENT_PACKAGES } from '../../../services/dataService';
+import { loadClasses, getBackground, EQUIPMENT_PACKAGES, randomizeStartingEquipment } from '../../../services/dataService';
 import { validateEquipmentChoices, getMissingEquipmentChoices } from '../../../utils/equipmentSelectionUtils';
 import trinketTable from '../../../data/trinketTable.json';
 import { QuickStartEquipment } from '../components/QuickStartEquipment';
@@ -216,8 +216,13 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
         </div>
         <RandomizeButton
           onClick={() => {
-            // Randomize equipment choices - this would need implementation
-
+            const equipment = randomizeStartingEquipment(data.classSlug, data.background, data.edition);
+            updateData({
+              equipmentChoices: equipment.equipmentChoices,
+              equipmentChoice: equipment.equipmentChoice,
+              equipmentGold: equipment.equipmentGold,
+              startingInventory: equipment.startingInventory,
+            });
           }}
           title="Randomize equipment choices"
         />
@@ -250,7 +255,7 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
                  Take the equipment provided by your background choice.
                </p>
                {(() => {
-                  const background = BACKGROUNDS.find(bg => bg.slug === data.background);
+                  const background = getBackground(data.background);
                  return background?.equipment ? (
                    <div className="space-y-1">
                      <div className="text-xs font-medium text-theme-muted uppercase">Equipment:</div>
@@ -379,7 +384,7 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
 
              if (data.equipmentChoice === 'background' && data.edition === '2024') {
                // Use only background equipment for 2024 background choice
-                const background = BACKGROUNDS.find(bg => bg.slug === data.background);
+                const background = getBackground(data.background);
                if (background?.equipment) {
                  startingInventory = background.equipment.map(itemName => {
                    // Try to find the equipment item by name
@@ -535,12 +540,12 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
 
       {/* Background Equipment Info */}
       {(() => {
-        const backgroundData = BACKGROUNDS.find(bg => bg.name === data.background);
+        const backgroundData = getBackground(data.background);
         if (backgroundData?.equipment) {
           return (
             <div className="p-3 bg-accent-green-darker/20 border border-accent-green-dark rounded-lg">
               <div className="text-xs font-semibold text-accent-green-light mb-2">
-                Background Equipment (Auto-granted from {data.background}):
+                Background Equipment (Auto-granted from {backgroundData.name}):
               </div>
               <div className="space-y-1">
                 {Array.isArray(backgroundData.equipment)

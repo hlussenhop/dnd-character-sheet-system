@@ -1,5 +1,5 @@
  
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { lazy, Suspense, useState, useEffect, useCallback, useMemo } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Plus, Trash2, BookOpen, Shield, Download, Upload, Settings } from 'lucide-react';
 // REFACTORED: Loader2 import removed - was unused
@@ -10,6 +10,7 @@ import NewCharacterModal from './components/NewCharacterModal';
 import ManualEntryScreen from './components/ManualEntryScreen';
 import PersonalityWizard from './components/PersonalityWizard';
 import { MonsterLibrary, MonsterStatBlock, CreateMonsterModal, EmbeddableMonsterPage, EmbeddableEncounterPage } from './components/MonsterLibrary';
+import { ItemLibrary } from './components/ItemLibrary/ItemLibrary';
 import { NPCLibrary } from './components/NPCLibrary';
 import { SpellbookManager } from './components/SpellbookManager/SpellbookManager';
 import { EncounterView } from './components/EncounterView';
@@ -31,10 +32,13 @@ import SettingsModal from './components/SettingsModal';
 import { CharacterEditModal } from './components/CharacterEditModal';
 import { RestingScreen } from './components/RestingScreen';
 import { generateUUID, DiceRoll } from './services/diceService';
-import { featureDescriptions } from './utils/featureDescriptions';
+import { getFeatureDescription } from './utils/featureDescriptions';
+import { subclassFeatureDescription } from './utils/subclassCatalog';
+import { findOptionalFeatureByName } from './utils/optionalFeatures';
 import { loadClasses, loadEquipment, loadFeatures, getSubclassesByClass, PROFICIENCY_BONUSES, getModifier, SPELL_SLOTS_BY_CLASS, AppSubclass } from './services/dataService';
 import { getAllCharacters, addCharacter, deleteCharacter, updateCharacter } from './services/dbService';
 import { resetResources } from './utils/resourceUtils';
+import { magicAcBonus } from './utils/magicItemInventory';
 import { APP_VERSION } from './version';
 // REFACTORED: Language utilities moved to languageUtils.ts for the wizard
 // Still used here in main App for character sheet display - can be removed once main app is refactored
@@ -43,6 +47,16 @@ import { Ability, Character, CharacterCreationData, Equipment, EquippedItem, Fea
 
 import { useDiceContext, useLayout } from './hooks';
 import { TabNavigation, TabId } from './components/TabNavigation';
+import { CHARACTERS_CHANGED } from './services/firebase/events';
+
+const AccountPanel = lazy(() => import('./components/AccountPanel').then(module => ({ default: module.AccountPanel })));
+const CloudGate = lazy(() => import('./components/CloudGate').then(module => ({ default: module.CloudGate })));
+
+const RequireAccount: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <Suspense fallback={<div className="min-h-screen bg-theme-primary" />}>
+    <CloudGate>{children}</CloudGate>
+  </Suspense>
+);
 
 
 
@@ -216,6 +230,14 @@ const App: React.FC = () => {
   const handleFeatureClick = useCallback((feature: string | Feature) => {
     const featureName = typeof feature === 'string' ? feature : feature.name;
 
+    const subclassText = selectedCharacter
+      ? subclassFeatureDescription(selectedCharacter.classSlug, selectedCharacter.subclass, featureName)
+      : undefined;
+    if (subclassText) {
+      setFeatureModal({ name: featureName, description: subclassText, source: 'Subclass' });
+      return;
+    }
+
     // Try to find the feature in SRD data first
     const allFeatures = loadFeatures();
     const srdFeature = allFeatures.find(f => f.name === featureName);
@@ -228,14 +250,17 @@ const App: React.FC = () => {
       });
     } else {
       // Fallback to manual descriptions
-      const featureDesc = featureDescriptions[featureName];
+      const featureDesc = getFeatureDescription(featureName, selectedCharacter?.edition);
+      const optional = findOptionalFeatureByName(featureName, selectedCharacter?.edition);
       if (featureDesc) {
         setFeatureModal({ name: featureName, ...featureDesc });
+      } else if (optional?.description) {
+        setFeatureModal({ name: featureName, description: optional.description, source: optional.source });
       } else {
         setFeatureModal({ name: featureName, description: 'No description available for this feature.' });
       }
     }
-  }, []);
+  }, [selectedCharacter]);
 
 
 
@@ -267,7 +292,7 @@ const App: React.FC = () => {
     }
   }, [latestRoll, overlayRoll?.id]);
 
-  // Load characters from IndexedDB
+  // Load characters from the signed-in account
   // Helper function to synchronize equipped items with inventory
   const syncEquippedItems = useCallback((character: Character): Character => {
     const equippedArmor = character.inventory?.find(item =>
@@ -297,7 +322,9 @@ const App: React.FC = () => {
   }, [syncEquippedItems]);
 
   useEffect(() => {
-    loadCharacters();
+    const reload = () => { void loadCharacters(); };
+    window.addEventListener(CHARACTERS_CHANGED, reload);
+    return () => window.removeEventListener(CHARACTERS_CHANGED, reload);
   }, [loadCharacters]);
 
   // Toggle character selection for export
@@ -399,6 +426,7 @@ const App: React.FC = () => {
   // Import characters from JSON
   const handleImportData = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
+    event.target.value = '';
     if (!file) return;
 
     const reader = new FileReader();
@@ -406,22 +434,21 @@ const App: React.FC = () => {
       try {
         const importedData = JSON.parse(e.target?.result as string) as Character[];
 
-        // Validate imported data
-        if (!Array.isArray(importedData)) {
+        if (!Array.isArray(importedData) || importedData.some(character => !character || typeof character !== 'object')) {
           throw new Error('Invalid data format');
         }
 
-        // Add each character
         for (const char of importedData) {
-          // Generate new ID to avoid conflicts
           const newChar = { ...char, id: generateUUID() };
           await addCharacter(newChar);
         }
 
         await loadCharacters();
-        setRollResult({ text: `Imported ${importedData.length} character(s)!`, value: null });
-      } catch {
-        setRollResult({ text: 'Error importing data. Check file format.', value: null });
+        setRollResult({ text: `Imported ${importedData.length} character(s) to your account.`, value: null });
+      } catch (error) {
+        await loadCharacters();
+        const detail = error instanceof Error ? error.message : 'Check file format.';
+        setRollResult({ text: `Error importing data. ${detail}`, value: null });
       }
     };
     reader.readAsText(file);
@@ -752,8 +779,10 @@ const App: React.FC = () => {
       const item = EQUIPMENT_DATABASE.find(eq => eq.slug === slug);
       return item?.armor_category === 'Shield';
     })) {
-      armorClass += 2;
+        armorClass += 2;
     }
+
+    armorClass += magicAcBonus(character);
 
     return armorClass;
   }, []);
@@ -1003,6 +1032,7 @@ const App: React.FC = () => {
   // Full-screen views (CharacterSheet or MonsterStatBlock)
   if (selectedCharacter) {
     return (
+      <RequireAccount>
       <div className="flex flex-col h-screen">
         <div className="flex-1 overflow-auto">
            <CharacterSheet
@@ -1068,11 +1098,13 @@ const App: React.FC = () => {
           />
         )}
       </div>
+      </RequireAccount>
     );
   }
 
   if (selectedMonster) {
     return (
+      <RequireAccount>
       <>
         <MonsterStatBlock
           monster={selectedMonster}
@@ -1096,6 +1128,7 @@ const App: React.FC = () => {
           </div>
         )}
       </>
+      </RequireAccount>
     );
   }
 
@@ -1104,6 +1137,7 @@ const App: React.FC = () => {
       <Route path="/monster/:monsterId" element={<EmbeddableMonsterPage />} />
       <Route path="/encounter/:encounterId" element={<EmbeddableEncounterPage />} />
       <Route path="*" element={
+        <RequireAccount>
         <div className="min-h-screen bg-theme-primary text-white font-sans">
       <div className="max-w-7xl mx-auto p-4 md:p-8">
         {/* Header and Controls */}
@@ -1148,6 +1182,9 @@ const App: React.FC = () => {
                   className="hidden"
                 />
               </label>
+              <Suspense fallback={null}>
+                <AccountPanel />
+              </Suspense>
               <button
                 onClick={() => setIsSettingsModalOpen(true)}
                 className="w-full md:w-auto px-4 py-3 bg-theme-quaternary hover:bg-theme-hover rounded-xl text-white font-bold shadow-theme-lg shadow-lg transition-all flex items-center justify-center"
@@ -1278,6 +1315,8 @@ const App: React.FC = () => {
               }}
             />
           )
+        ) : activeTab === 'items' ? (
+          <ItemLibrary />
         ) : activeTab === 'npcs' ? (
           <NPCLibrary />
         ) : (
@@ -1350,7 +1389,7 @@ const App: React.FC = () => {
         {subclassModalState.isOpen && (() => {
           const character = characters.find(c => c.id === subclassModalState.characterId);
           if (!character) return null;
-          const subclasses = getSubclassesByClass(subclassModalState.characterClass!);
+          const subclasses = getSubclassesByClass(subclassModalState.characterClass!, character.edition);
           return (
             <ChooseSubclassModal
               isOpen={subclassModalState.isOpen}
@@ -1416,6 +1455,7 @@ const App: React.FC = () => {
         </div>
       </div>
     </div>
+        </RequireAccount>
       } />
     </Routes>
   );

@@ -595,7 +595,7 @@ export const CharacterEditForm: React.FC<CharacterEditFormProps> = ({
                   }`}
                 >
                   <option value="">Select Species</option>
-                  {species.map(s => (
+                  {[...species].sort((a, b) => a.name.localeCompare(b.name)).map(s => (
                     <option key={s.slug} value={s.name}>{s.name}</option>
                   ))}
                 </select>

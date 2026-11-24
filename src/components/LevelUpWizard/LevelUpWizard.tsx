@@ -24,6 +24,7 @@ import { StepASIFeat } from './steps/StepASIFeat';
 import { StepSubclass } from './steps/StepSubclass';
 import { StepSpells } from './steps/StepSpells';
 import { StepFightingStyle } from './steps/StepFightingStyle';
+import { StepOptionalFeatures } from './steps/StepOptionalFeatures';
 import { StepFeatures } from './steps/StepFeatures';
 import { StepConfirm } from './steps/StepConfirm';
 
@@ -125,6 +126,9 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
         if (currentStep === 'fighting-style') {
           return <StepFightingStyle {...stepProps} />;
         }
+        if (currentStep === 'optional-features') {
+          return <StepOptionalFeatures {...stepProps} />;
+        }
         if (currentStep === 'features') {
           return <StepFeatures {...stepProps} />;
         }
@@ -140,22 +144,22 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
       className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-[100] p-4"
       onClick={onClose}
     >
-      <div data-theme="paper"
-        className="relative z-10 bg-[#f5ebd2] border-2 border-[#1e140a] rounded-sm shadow-md w-full max-w-3xl transition-all transform duration-300 scale-100 my-8 flex flex-col max-h-[calc(100vh-4rem)] pointer-events-auto"
+      <div
+        className="relative z-10 bg-theme-secondary text-theme-primary border border-theme-primary rounded-xl shadow-theme-lg w-full max-w-3xl transition-all transform duration-300 scale-100 my-8 flex flex-col max-h-[calc(100vh-4rem)] pointer-events-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex-shrink-0 p-6 md:p-8 pb-4 border-b border-theme-border">
+        <div className="flex-shrink-0 p-6 md:p-8 pb-4 border-b border-theme-primary">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900">Level Up!</h2>
-              <p className="text-white mt-1">
+              <h2 className="text-3xl font-bold text-theme-primary">Level Up!</h2>
+              <p className="text-theme-secondary mt-1">
                 {character.name} - Level {levelUpData.fromLevel} → {levelUpData.toLevel}
               </p>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-theme-muted hover:text-theme-primary transition-colors"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -165,13 +169,13 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
 
           {/* Progress Bar */}
           <div className="mt-4">
-            <div className="flex items-center justify-between text-sm text-white mb-2">
+            <div className="flex items-center justify-between text-sm text-theme-secondary mb-2">
               <span>Step {currentStepIndex + 1} of {steps.length}</span>
               <span className="capitalize">{currentStep.replace('-', ' ')}</span>
             </div>
             <div className="w-full bg-theme-primary rounded-full h-2">
               <div
-                className="bg-accent-gold rounded-full h-2 transition-all duration-300"
+                className="bg-accent-red rounded-full h-2 transition-all duration-300"
                 style={{ width: `${((currentStepIndex + 1) / steps.length) * 100}%` }}
               />
             </div>

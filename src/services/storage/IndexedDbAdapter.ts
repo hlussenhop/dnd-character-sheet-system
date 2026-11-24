@@ -4,7 +4,8 @@ import { log } from '../../utils/logger';
 import { initializeCharacterResources } from '../../utils/resourceUtils';
 
 // --- IndexedDB Configuration ---
-const DB_NAME = 'NexusForge';
+const DB_NAME = 'dnd character system';
+const PREVIOUS_DB_NAME = 'NexusForge';
 const DB_VERSION = 13;
 const STORE_NAME = 'characters';
 const CUSTOM_MONSTERS_STORE = 'customMonsters';
@@ -13,15 +14,88 @@ const ENCOUNTERS_STORE = 'encounters';
 const NPCS_STORE = 'npcs';
 const SPELLBOOKS_STORE = 'spellbooks';
 
+const STORES = [
+  STORE_NAME,
+  CUSTOM_MONSTERS_STORE,
+  FAVORITES_STORE,
+  ENCOUNTERS_STORE,
+  NPCS_STORE,
+  SPELLBOOKS_STORE,
+];
+
+const readStore = (db: IDBDatabase, store: string): Promise<unknown[]> => new Promise((resolve, reject) => {
+  if (!db.objectStoreNames.contains(store)) {
+    resolve([]);
+    return;
+  }
+  const request = db.transaction([store], 'readonly').objectStore(store).getAll();
+  request.onerror = () => reject(request.error);
+  request.onsuccess = () => resolve(request.result);
+});
+
+const writeStore = (db: IDBDatabase, store: string, rows: unknown[]): Promise<void> => new Promise((resolve, reject) => {
+  if (rows.length === 0 || !db.objectStoreNames.contains(store)) {
+    resolve();
+    return;
+  }
+  const transaction = db.transaction([store], 'readwrite');
+  const objectStore = transaction.objectStore(store);
+  rows.forEach(row => objectStore.put(row));
+  transaction.oncomplete = () => resolve();
+  transaction.onerror = () => reject(transaction.error);
+});
+
+/** The previous database name still holds monsters, encounters, NPCs, and spellbooks saved before the rename. */
+const copyPreviousDatabase = async (db: IDBDatabase): Promise<void> => {
+  const listed = indexedDB.databases ? await indexedDB.databases() : [];
+  if (listed.length > 0 && !listed.some(entry => entry.name === PREVIOUS_DB_NAME)) return;
+  const previous = await new Promise<IDBDatabase | null>(resolve => {
+    const request = indexedDB.open(PREVIOUS_DB_NAME);
+    let created = false;
+    request.onupgradeneeded = () => {
+      created = true;
+      request.transaction?.abort();
+    };
+    request.onsuccess = () => {
+      const opened = request.result;
+      if (created) {
+        opened.close();
+        indexedDB.deleteDatabase(PREVIOUS_DB_NAME);
+        resolve(null);
+        return;
+      }
+      resolve(opened);
+    };
+    request.onerror = () => resolve(null);
+  });
+  if (!previous) return;
+  try {
+    for (const store of STORES) {
+      await writeStore(db, store, await readStore(previous, store));
+    }
+  } finally {
+    previous.close();
+  }
+};
+
 export class IndexedDbAdapter implements IStorageService {
   private async openDB(): Promise<IDBDatabase> {
     return new Promise((resolve, reject) => {
       const request = indexedDB.open(DB_NAME, DB_VERSION);
+      let copyPrevious = false;
 
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve(request.result);
+      request.onsuccess = () => {
+        const db = request.result;
+        if (!copyPrevious) {
+          resolve(db);
+          return;
+        }
+        copyPreviousDatabase(db).then(() => resolve(db), () => resolve(db));
+      };
 
       request.onupgradeneeded = (event) => {
+        if (event.oldVersion === 0) copyPrevious = true;
         const db = (event.target as IDBOpenDBRequest).result;
         const oldVersion = event.oldVersion;
 

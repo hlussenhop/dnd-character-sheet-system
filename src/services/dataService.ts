@@ -7,13 +7,11 @@ import srdRaces2014 from '../data/srd/2014/5e-SRD-Races.json';
 import srdClasses2014 from '../data/srd/2014/5e-SRD-Classes.json';
 import srdClasses2024 from '../data/srd/2024/5e-SRD-Classes.json';
 import srdEquipment from '../data/equipment.json';
+import mundaneGear from '../data/mundaneGear.json';
 // Sprint 5: Features, Subclasses, and Feats
 import srdFeatures2014 from '../data/srd/2014/5e-SRD-Features.json';
 import srdSubclasses2014 from '../data/srd/2014/5e-SRD-Subclasses.json';
-import srdSubclasses2018 from '../data/srd/2018/5e-SRD-Subclasses.json';
-import srdSubclasses2020 from '../data/srd/2020/5e-SRD-Subclasses.json';
-import srdSubclasses2020egtw from '../data/srd/2020-egtw/5e-SRD-Subclasses.json';
-import srdFeats2014 from '../data/srd/2014/5e-SRD-Feats.json';
+import subclassesData from '../data/subclasses.json';
 import srdMonsters2014 from '../data/srd/2014/5e-SRD-Monsters.json';
 import featsData from '../data/feats.json';
 import alignmentsData from '../data/alignments.json';
@@ -33,6 +31,7 @@ import gameConstantsData from '../data/gameConstants.json';
 import levelConstantsData from '../data/levelConstants.json';
 import spellcastingTypesData from '../data/spellcastingTypes.json';
 import speciesLanguagesData from '../data/speciesLanguages.json';
+import { isPlayerSpeciesOffered } from '../data/contentFlags';
 import backgroundDefaultsData from '../data/backgroundDefaults.json';
 import combatActionsData from '../data/combatActions.json';
 import { generateName } from '../utils/nameGenerator';
@@ -134,6 +133,8 @@ interface SRDSpell {
     dc_type: { index: string; name: string };
   };
   source: '2014' | '2024';
+  /** Book the text chunk is named after. Full text loads from src/data/content/spells/. */
+  book?: string;
 }
 
 interface SRDRace {
@@ -265,6 +266,8 @@ export interface AppSpell {
   classes: string[];
   source: '2014' | '2024'; // Source edition
   year: number; // Edition year (2014 or 2024)
+  /** Book abbreviation for the lazy text chunk. */
+  book?: string;
 }
 
 // --- Transformation Functions ---
@@ -325,6 +328,7 @@ export function transformSpell(srdSpell: SRDSpell): AppSpell {
     classes,
     source: srdSpell.source,
     year: srdSpell.source === '2024' ? 2024 : 2014,
+    book: srdSpell.book,
   };
 }
 
@@ -717,20 +721,57 @@ export function loadSpells(): AppSpell[] {
   return (srdSpellsMerged as SRDSpell[]).map(spell => transformSpell(spell));
 }
 
+/** Every spell from both editions. Shared-name spells appear twice (2014 + 2024). */
 export const SPELL_DATABASE = loadSpells();
 
-export const getSpellsForClass = (classSlug: string): AppSpell[] => {
+/**
+ * Collapse shared-name spells to a single entry, preferring the 2024 version.
+ * This is the "no edition chosen" view; it matches what the app showed before
+ * the 2014 spells were restored to the merged database, and it keeps the
+ * legacy (un-suffixed) slugs that saved characters reference.
+ */
+export const dedupeSpellsByName = (spells: AppSpell[]): AppSpell[] => {
+  const byName = new Map<string, AppSpell>();
+  spells.forEach(spell => {
+    const existing = byName.get(spell.name);
+    if (!existing || (existing.source === '2014' && spell.source === '2024')) {
+      byName.set(spell.name, spell);
+    }
+  });
+  return Array.from(byName.values());
+};
+
+/** One spell per name, 2024 preferred - use for pickers that have no edition context. */
+const PRIMARY_SPELLS: AppSpell[] = dedupeSpellsByName(SPELL_DATABASE);
+export const loadPrimarySpells = (): AppSpell[] => PRIMARY_SPELLS;
+
+/**
+ * Spells for a class. With `edition`, returns only that edition's versions.
+ * Without it, returns one version per spell name (2024 preferred) so pickers
+ * never show the same spell twice.
+ */
+export const getSpellsForClass = (classSlug: string, edition?: Edition, backgroundSlug?: string, subclassSlug?: string): AppSpell[] => {
   // Extract base class name from slug (e.g., 'wizard-evocation' -> 'wizard')
   const baseClass = classSlug.split('-')[0];
-  return SPELL_DATABASE.filter(spell => spell.classes.includes(baseClass));
+  const pool = edition ? SPELL_DATABASE.filter(spell => spell.source === edition) : loadPrimarySpells();
+  const subclass = getSubclass(subclassSlug);
+  const extra = new Set([
+    ...(getBackground(backgroundSlug)?.expandedSpells ?? []),
+    ...(subclass?.expandedSpells ?? []),
+    ...(subclass?.grantedSpells ?? []).flatMap(grant => grant.slugs),
+  ]);
+  const extras = extra.size
+    ? SPELL_DATABASE.filter(spell => extra.has(spell.slug) && !pool.some(existing => existing.slug === spell.slug))
+    : [];
+  return [...pool, ...extras].filter(spell => spell.classes.includes(baseClass) || extra.has(spell.slug));
 };
 
-export const getCantripsByClass = (classSlug: string): AppSpell[] => {
-  return getSpellsForClass(classSlug).filter(spell => spell.level === 0);
+export const getCantripsByClass = (classSlug: string, edition?: Edition, backgroundSlug?: string, subclassSlug?: string): AppSpell[] => {
+  return getSpellsForClass(classSlug, edition, backgroundSlug, subclassSlug).filter(spell => spell.level === 0);
 };
 
-export const getLeveledSpellsByClass = (classSlug: string, level: number = 1): AppSpell[] => {
-  return getSpellsForClass(classSlug).filter(spell => spell.level === level);
+export const getLeveledSpellsByClass = (classSlug: string, level: number = 1, edition?: Edition, backgroundSlug?: string, subclassSlug?: string): AppSpell[] => {
+  return getSpellsForClass(classSlug, edition, backgroundSlug, subclassSlug).filter(spell => spell.level === level);
 };
 
 export function loadSpecies(): Species[] {
@@ -747,9 +788,19 @@ export function loadSpecies(): Species[] {
     const enhanced =
       getEnhancedSpeciesData(species.slug) ||
       getEnhancedSpeciesData(baseSlug);
-    return enhanced ? { ...species, ...enhanced } : species;
+    if (!enhanced) return species;
+    // Enhanced data is keyed by base slug and shared by both editions. Only its lore carries
+    // over to 2014 records; its mechanics (traits, baseSpeed, lineages, species feats, ...)
+    // describe the 2024 species and must not leak into 2014 entries.
+    return species.edition === '2014' ? { ...species, ...pickSpeciesLore(enhanced) } : { ...species, ...enhanced };
   });
 }
+
+const SPECIES_LORE_KEYS = ['detailedDescription', 'typicalRoles', 'roleplayingTips'] as const;
+const pickSpeciesLore = (enhanced: Partial<Species>): Partial<Species> =>
+  Object.fromEntries(
+    Object.entries(enhanced).filter(([key]) => (SPECIES_LORE_KEYS as readonly string[]).includes(key))
+  ) as Partial<Species>;
 
 // Legacy function for backward compatibility - returns SRD species only
 export function loadSRDSpecies(): Species[] {
@@ -805,7 +856,8 @@ export function loadClasses(edition?: Edition): Class[] {
 }
 
 export function loadEquipment(): Equipment[] {
-  return (srdEquipment as SRDEquipment[]).map(eq => transformEquipment(eq));
+  const phb = (srdEquipment as SRDEquipment[]).map(eq => transformEquipment(eq));
+  return [...phb, ...(mundaneGear as Equipment[])];
 }
 
 // Feature interfaces
@@ -869,52 +921,42 @@ export function loadFeatures(): Feature[] {
   return (srdFeatures2014 as SRDFeature[]).map(f => transformFeature(f));
 }
 
-// Load all subclasses from SRD
+// Subclasses generated from the sourcebooks by sourcebooks/build_subclasses.py.
+// 2014 slugs are the ones already saved on characters. 2024 slugs end in `-2024`.
 export function loadSubclasses(): Subclass[] {
-  const subclasses2014 = (srdSubclasses2014 as SRDSubclass[]).map(sc => transformSubclass(sc));
-  const subclasses2018 = (srdSubclasses2018 as SRDSubclass[]).map(sc => transformSubclass(sc));
-  const subclasses2020 = (srdSubclasses2020 as SRDSubclass[]).map(sc => transformSubclass(sc));
-  const subclasses2020egtw = (srdSubclasses2020egtw as SRDSubclass[]).map(sc => transformSubclass(sc));
-
-  const allSubclasses = [...subclasses2014, ...subclasses2018, ...subclasses2020, ...subclasses2020egtw];
-
-  // Merge enhanced subclass data
-  const subclassesWithEnhancedData = allSubclasses.map(subclass => {
-    // Create the lookup key in the format "class-subclass"
-    const lookupKey = `${subclass.class}-${subclass.slug}`;
-    const enhanced = getEnhancedSubclassData(lookupKey);
+  return (subclassesData as Subclass[]).map(subclass => {
+    const enhanced = getEnhancedSubclassData(`${subclass.class}-${subclass.slug}`);
     return enhanced ? { ...subclass, ...enhanced } : subclass;
   });
-
-  return subclassesWithEnhancedData;
 }
 
-// Load all feats (merge SRD + custom feats)
+// All feats, generated from the sourcebooks by sourcebooks/build_feats.py (2024 slugs end in `-2024`)
 export function loadFeats(): Feat[] {
-  // Load custom feats from our JSON
-  const customFeats = featsData as Feat[];
-
-  // Load SRD Grappler feat
-  const srdGrappler = srdFeats2014 as Array<{ index: string; name: string; prerequisites?: unknown[]; desc: string[]; url: string }>;
-  const grapplerFeat: Feat = {
-    slug: 'grappler',
-    name: 'Grappler',
-    source: 'SRD',
-    year: 2014,
-    category: 'general',
-    prerequisite: 'Strength 13 or higher',
-    benefits: [
-      'Advantage on attack rolls against creatures you\'re grappling',
-      'Can restrain a creature grappled by you'
-    ],
-    description: srdGrappler[0]?.desc?.join('\n\n') || 'You\'ve developed the skills necessary to hold your own in close-quarters grappling.'
-  };
-
-  // Check if Grappler already exists in custom feats
-  const hasGrappler = customFeats.some(f => f.slug === 'grappler');
-
-  return hasGrappler ? customFeats : [...customFeats, grapplerFeat];
+  return featsData as Feat[];
 }
+
+/** Slugs renamed when the feats were regenerated (saved characters may still carry them). */
+const LEGACY_FEAT_SLUGS: Record<string, string> = {
+  'dwarf-fortitude': 'dwarven-fortitude',
+};
+
+const FEATS_BY_SLUG = new Map((featsData as Feat[]).map(f => [f.slug, f]));
+
+/**
+ * The current slug for a stored feat slug. 2024 characters created before the feats lane carry
+ * the plain slug (`alert`); for them it resolves to the 2024 record (`alert-2024`).
+ */
+export const resolveFeatSlug = (slug: string, edition?: Edition): string => {
+  const current = LEGACY_FEAT_SLUGS[slug] ?? slug;
+  const feat = FEATS_BY_SLUG.get(current);
+  if (edition === '2024' && feat?.edition !== '2024' && FEATS_BY_SLUG.has(`${current}-2024`)) {
+    return `${current}-2024`;
+  }
+  return current;
+};
+
+export const getFeatBySlug = (slug: string, edition?: Edition): Feat | undefined =>
+  FEATS_BY_SLUG.get(resolveFeatSlug(slug, edition));
 
 // Helper functions to filter features
 export function getFeaturesByClass(classSlug: string, level: number): Feature[] {
@@ -933,8 +975,15 @@ export function getFeaturesBySubclass(classSlug: string, subclassSlug: string, l
   );
 }
 
-export function getSubclassesByClass(classSlug: string): Subclass[] {
-  return SUBCLASS_DATABASE.filter(sc => sc.class === classSlug);
+export function getSubclassesByClass(classSlug: string, edition?: Edition): Subclass[] {
+  return SUBCLASS_DATABASE.filter(sc =>
+    sc.class === classSlug && (!edition || !sc.edition || sc.edition === edition)
+  );
+}
+
+export function getSubclass(slug?: string | null): Subclass | undefined {
+  if (!slug) return undefined;
+  return SUBCLASS_DATABASE.find(sc => sc.slug === slug);
 }
 
 // Export databases
@@ -984,6 +1033,20 @@ export const ALIGNMENT_INFO: Record<string, string> = ALIGNMENTS_DATA.reduce((ac
 
 export const BACKGROUNDS: Background[] = backgroundsData as Background[];
 
+/** Slugs from before the backgrounds rebuild. */
+const BACKGROUND_SLUG_ALIASES: Record<string, string> = {
+  'guild-artisan-2024': 'artisan-2024',
+};
+
+export const resolveBackgroundSlug = (slug: string): string => BACKGROUND_SLUG_ALIASES[slug] ?? slug;
+
+/** A background by its slug (including a renamed slug) or its display name. */
+export const getBackground = (slugOrName?: string): Background | undefined => {
+  if (!slugOrName) return undefined;
+  const slug = resolveBackgroundSlug(slugOrName);
+  return BACKGROUNDS.find(bg => bg.slug === slug || bg.slug === slugOrName || bg.name === slugOrName);
+};
+
 // Comprehensive species database with 40+ species from multiple sources
 // Load species from JSON data
 const COMPREHENSIVE_SPECIES: Species[] = loadSpecies();
@@ -1007,15 +1070,43 @@ const buildSpeciesAliasMap = (speciesList: Species[]): Record<string, string> =>
 
 /** Maps legacy/alias slugs to canonical species slugs. */
 export const SPECIES_ALIAS_MAP = buildSpeciesAliasMap(COMPREHENSIVE_SPECIES);
+const SPECIES_SLUGS = new Set(COMPREHENSIVE_SPECIES.map(s => s.slug));
 
 /**
  * Normalize a species slug to its canonical value, preserving unknown slugs as-is.
- * @param slug raw species slug (possibly legacy)
+ * @param slug raw species slug (possibly legacy) or species name
+ * @param edition the character's edition; '2024' migrates old unsuffixed slugs to the 2024 record
  */
-export const resolveSpeciesSlug = (slug: string): string => {
+export const resolveSpeciesSlug = (slug: string, edition?: Edition): string => {
   if (!slug) return slug;
-  return SPECIES_ALIAS_MAP[slug] || SPECIES_ALIAS_MAP[slug.toLowerCase()] || slug;
+  const lower = slug.toLowerCase();
+  // A slug that names a real species is that species: 2014 characters stay on their 2014
+  // records (a 2014 `goliath` is not the 2024 Goliath). Only 2024 characters carrying an old,
+  // pre-`-2024` slug are migrated to the 2024 record.
+  if (edition !== '2024') {
+    if (SPECIES_SLUGS.has(slug)) return slug;
+    if (SPECIES_SLUGS.has(lower)) return lower;
+  }
+  return SPECIES_ALIAS_MAP[slug] || SPECIES_ALIAS_MAP[lower] || slug;
 };
+
+/** The full species record, including options hidden from the creation lists. */
+export function findSpeciesBySlug(slug: string | undefined): Species | undefined {
+  if (!slug) return undefined;
+  const resolved = resolveSpeciesSlug(slug);
+  return COMPREHENSIVE_SPECIES.find(s => s.slug === resolved);
+}
+
+/**
+ * Find a species by its display name. Used for saved characters, not the picker.
+ * A name that exists in only one edition still resolves when the character's edition
+ * is the other one (a 2024 character who picked a 2014-only species).
+ */
+export function findSpeciesByName(name: string, edition?: Edition): Species | undefined {
+  const matches = COMPREHENSIVE_SPECIES.filter(s => s.name === name);
+  if (!edition) return matches[0];
+  return matches.find(s => s.edition === edition) ?? (matches.length === 1 ? matches[0] : undefined);
+}
 
 interface SpeciesCategoryData {
   name: string;
@@ -1035,7 +1126,7 @@ export const SPECIES_CATEGORIES: SpeciesCategory[] = speciesCategoriesData.map((
     const matchesCore = core !== undefined ? species.core === core : true;
     const matchesExpanded = expanded !== undefined ? species.expanded === expanded : true;
     const matchesTags = tags && tags.length ? (species.tags || []).some(tag => tags.includes(tag)) : true;
-    return matchesCore && matchesExpanded && matchesTags;
+    return matchesCore && matchesExpanded && matchesTags && isPlayerSpeciesOffered(species);
   });
 
   // Debug logging for category construction
@@ -1140,8 +1231,9 @@ export const randomizeLevel = (): number => {
  * Randomize character identity (alignment, background).
  * Name generation is handled in the final step where class/species context exists.
  */
-export const randomizeIdentity = (species?: string): { name?: string; alignment: string; background: string; backgroundSlug?: string } => {
-  const background = getRandomElement(BACKGROUNDS);
+export const randomizeIdentity = (species?: string, edition?: Edition): { name?: string; alignment: string; background: string; backgroundSlug?: string } => {
+  const pool = edition ? BACKGROUNDS.filter(bg => bg.edition === edition) : BACKGROUNDS;
+  const background = getRandomElement(pool.length ? pool : BACKGROUNDS);
   return {
     name: species ? generateSpeciesSpecificName(species) : undefined,
     alignment: getRandomElement(ALIGNMENTS),
@@ -1157,8 +1249,8 @@ export const randomizeBackgroundAbilityChoices = (
   backgroundSlug: string,
   edition: Edition
 ): { method: '2/1' | '1/1/1'; bonuses: Partial<Record<AbilityName, number>> } | undefined => {
-  if (edition !== '2024') return undefined;
-  const background = BACKGROUNDS.find(bg => bg.slug === backgroundSlug || bg.name === backgroundSlug);
+  const background = getBackground(backgroundSlug);
+  if (background && background.edition !== edition) return undefined;
   const abilityScores = background?.abilityScores;
   if (!abilityScores?.from?.length) return undefined;
 
@@ -1192,9 +1284,9 @@ export const generateSpeciesSpecificName = (species: string, gender?: 'male' | '
 /**
  * Randomize species selection
  */
-export const randomizeSpecies = (): string => {
-  const category = getRandomElement(SPECIES_CATEGORIES);
-  const species = getRandomElement(category.species);
+export const randomizeSpecies = (edition?: Edition): string => {
+  const pool = getAllSpecies(edition);
+  const species = getRandomElement(pool.length ? pool : getAllSpecies());
   return species.slug;
 };
 
@@ -1207,10 +1299,10 @@ export const randomizeRace = randomizeSpecies;
 /**
  * Randomize class and required skills
  */
-export const randomizeClassAndSkills = (): { classSlug: string; selectedSkills: SkillName[]; subclassSlug?: string } => {
+export const randomizeClassAndSkills = (edition?: Edition): { classSlug: string; selectedSkills: SkillName[]; subclassSlug?: string } => {
   const category = getRandomElement(CLASS_CATEGORIES);
   const _class = getRandomElement(category.classes);
-  const classData = loadClasses().find(c => c.slug === _class.slug);
+  const classData = loadClasses(edition).find(c => c.slug === _class.slug);
 
   if (!classData) {
     throw new Error(`Class data not found for ${category.name}`);
@@ -1227,7 +1319,7 @@ export const randomizeClassAndSkills = (): { classSlug: string; selectedSkills: 
   }
 
   // Random subclass if available
-  const subclasses = getSubclassesByClass(_class.slug);
+  const subclasses = getSubclassesByClass(_class.slug, edition);
   const subclassSlug = subclasses.length > 0 ? getRandomElement(subclasses).slug : undefined;
 
   return {
@@ -1253,7 +1345,7 @@ export const randomizeFightingStyle = (classSlug: string): string | undefined =>
 
   // If no specific styles for this class, allow any style
   const stylePool = availableStyles.length > 0 ? availableStyles : FIGHTING_STYLES;
-  return getRandomElement(stylePool).name;
+  return getRandomElement(stylePool).slug;
 };
 
 interface CantripsData {
@@ -1375,7 +1467,7 @@ export const randomizeStartingEquipment = (
   equipmentGold?: number;
 } => {
   const equipmentChoices = randomizeEquipmentChoices(classSlug);
-  const background = BACKGROUNDS.find(bg => bg.slug === backgroundSlug || bg.name === backgroundSlug);
+  const background = getBackground(backgroundSlug);
   const backgroundName = background?.name || backgroundSlug;
   const equipmentData = loadEquipment();
 
@@ -1450,8 +1542,8 @@ export const randomizeLanguages = (
   const speciesLanguages = SPECIES_LANGUAGE_MAP[speciesSlug] || SPECIES_LANGUAGE_MAP[`${speciesSlug}-${edition}`] || [];
   speciesLanguages.forEach(lang => autoLanguages.add(lang));
 
-  const background = BACKGROUNDS.find(bg => bg.slug === backgroundSlug || bg.name === backgroundSlug);
-  let optionalChoices = 0;
+  const background = getBackground(backgroundSlug);
+  let optionalChoices = background?.languageChoices?.count ?? 0;
 
   if (background?.languages?.length) {
     background.languages.forEach(lang => {
@@ -1468,7 +1560,7 @@ export const randomizeLanguages = (
 
   const intelligenceScore = abilities?.INT;
   const maxLanguages = intelligenceScore !== undefined ? 1 + Math.max(0, getModifier(intelligenceScore)) : 1;
-  const selectionSlots = maxLanguages + (edition === '2024' ? 0 : optionalChoices);
+  const selectionSlots = maxLanguages + optionalChoices;
 
   const pool = getSelectableLanguages(edition, ['standard', 'rare'])
     .map(lang => lang.name)

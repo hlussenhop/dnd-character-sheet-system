@@ -5,10 +5,12 @@
  */
 
 import React, { useState } from 'react';
-import { Character, LevelUpChoices, AbilityName, ABILITY_SCORES } from '../../../types/dnd';
+import { Character, LevelUpChoices, AbilityName, ABILITY_SCORES, Feat, FeatChoiceMap } from '../../../types/dnd';
 import { LevelUpData } from '../../../data/classProgression';
-import { loadFeats, resolveSpeciesSlug } from '../../../services/dataService';
+import { loadFeats, resolveFeatSlug, resolveSpeciesSlug } from '../../../services/dataService';
 import { getAvailableFeatsForCharacter } from '../../../utils/featUtils';
+import { getFeatChoiceSections } from '../../../utils/featGrantUtils';
+import { FeatChoiceModal } from '../../CharacterCreationWizard/components';
 
 interface StepASIFeatProps {
   character: Character;
@@ -30,6 +32,8 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
   const [choiceType, setChoiceType] = useState<'asi' | 'feat'>('asi');
   const [asiSelections, setAsiSelections] = useState<Array<{ ability: AbilityName; increase: number }>>([]);
   const [selectedFeat, setSelectedFeat] = useState<string>('');
+  const [featChoices, setFeatChoices] = useState<FeatChoiceMap | undefined>();
+  const [choiceFeat, setChoiceFeat] = useState<Feat | null>(null);
 
   const abilityScores = ABILITY_SCORES.reduce((acc, ability) => {
     acc[ability as AbilityName] = character.abilities[ability as AbilityName].score;
@@ -37,13 +41,32 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
   }, {} as Record<AbilityName, number>);
 
   const featSelectionLevel = levelUpData.toLevel || character.level;
+  const heldFeats = (character.selectedFeats || character.feats || []).map(s => resolveFeatSlug(s, character.edition));
   const availableFeats = getAvailableFeatsForCharacter(loadFeats(), {
     level: featSelectionLevel,
-    classSlug: character.class?.toLowerCase(),
+    classSlug: character.classSlug || character.class?.toLowerCase(),
+    subclassSlug: character.subclass,
     abilities: abilityScores,
-    speciesSlug: resolveSpeciesSlug(character.species || ''),
+    speciesSlug: resolveSpeciesSlug(character.species || '', character.edition),
+    selectedSpeciesVariant: character.selectedSpeciesVariant,
+    background: character.background,
+    selectedFeats: heldFeats,
+    proficiencies: [
+      ...(character.proficiencies?.armor ?? []),
+      ...(character.proficiencies?.weapons ?? []),
+      ...(character.proficiencies?.tools ?? []),
+    ],
     edition: character.edition
-  }, 'asi');
+  }, 'asi').filter(feat => feat.repeatable || !heldFeats.includes(feat.slug));
+
+  const handleSelectFeat = (feat: Feat) => {
+    if (getFeatChoiceSections(feat).length > 0) {
+      setChoiceFeat(feat);
+    } else {
+      setSelectedFeat(feat.slug);
+      setFeatChoices(undefined);
+    }
+  };
   const maxASIPoints = 2;
   const remainingPoints = maxASIPoints - asiSelections.reduce((sum, sel) => sum + sel.increase, 0);
 
@@ -85,7 +108,7 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
     if (choiceType === 'asi') {
       updateChoices({ asiChoices: asiSelections, featChosen: undefined });
     } else {
-      updateChoices({ featChosen: selectedFeat, asiChoices: undefined });
+      updateChoices({ featChosen: selectedFeat, featChoices, asiChoices: undefined });
     }
     onNext();
   };
@@ -95,10 +118,10 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-2xl font-bold text-accent-gold mb-2">
+        <h3 className="text-2xl font-bold text-accent-red mb-2">
           Ability Score Improvement
         </h3>
-        <p className="text-[#992600]">
+        <p className="text-theme-secondary">
           Choose to increase your ability scores or gain a new feat.
         </p>
       </div>
@@ -109,8 +132,8 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
           onClick={() => setChoiceType('asi')}
           className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all ${
             choiceType === 'asi'
-              ? 'bg-red-800 text-white'
-              : 'bg-[#fcf6e3] text-gray-900 border-2 border-[#1e140a] hover:border-red-800'
+              ? 'bg-accent-red text-white'
+              : 'bg-theme-tertiary text-theme-primary border-2 border-theme-primary hover:border-accent-red'
           }`}
         >
           Ability Score Increase
@@ -119,8 +142,8 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
           onClick={() => setChoiceType('feat')}
           className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all ${
             choiceType === 'feat'
-              ? 'bg-red-800 text-white'
-              : 'bg-[#fcf6e3] text-gray-900 border-2 border-[#1e140a] hover:border-red-800'
+              ? 'bg-accent-red text-white'
+              : 'bg-theme-tertiary text-theme-primary border-2 border-theme-primary hover:border-accent-red'
           }`}
         >
           Choose a Feat
@@ -130,11 +153,11 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
       {/* ASI Selection */}
       {choiceType === 'asi' && (
         <div className="space-y-4">
-          <div className="bg-[#f5ebd2] border-2 border-[#1e140a] rounded-lg p-4">
-            <p className="text-gray-900 mb-2">
-              You have <span className="text-red-800 font-bold">{remainingPoints} points</span> to spend.
+          <div className="bg-theme-tertiary border border-theme-primary rounded-lg p-4">
+            <p className="text-theme-primary mb-2">
+              You have <span className="text-accent-red font-bold">{remainingPoints} points</span> to spend.
             </p>
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-theme-secondary">
               Increase one ability by 2, or two abilities by 1 each. No ability can exceed 20.
             </p>
           </div>
@@ -149,14 +172,14 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
               return (
                 <div
                   key={ability}
-                  className="bg-[#fcf6e3] border-2 border-[#1e140a] rounded-lg p-4"
+                  className="bg-theme-tertiary border border-theme-primary rounded-lg p-4"
                 >
                   <div className="text-center mb-2">
-                    <h4 className="text-lg font-semibold text-gray-900">{ability}</h4>
-                    <p className="text-2xl font-bold text-gray-900">
+                    <h4 className="text-lg font-semibold text-theme-primary">{ability}</h4>
+                    <p className="text-2xl font-bold text-theme-primary">
                       {currentScore}
                       {increase > 0 && (
-                        <span className="text-red-800 ml-2">→ {newScore}</span>
+                        <span className="text-accent-red ml-2">→ {newScore}</span>
                       )}
                     </p>
                   </div>
@@ -164,20 +187,20 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
                     <button
                       onClick={() => handleDecreaseAbility(ability)}
                       disabled={increase === 0}
-                      className="flex-1 py-1 px-2 bg-theme-secondary text-theme-text rounded hover:bg-opacity-80 disabled:opacity-30 disabled:cursor-not-allowed"
+                      className="flex-1 py-1 px-2 bg-theme-secondary text-theme-primary rounded hover:bg-opacity-80 disabled:opacity-30 disabled:cursor-not-allowed"
                     >
                       -
                     </button>
                     <button
                       onClick={() => handleIncreaseAbility(ability)}
                       disabled={remainingPoints === 0 || atMax}
-                      className="flex-1 py-1 px-2 bg-accent-gold text-theme-primary rounded hover:bg-opacity-90 disabled:opacity-30 disabled:cursor-not-allowed"
+                      className="flex-1 py-1 px-2 bg-accent-red text-white rounded hover:bg-opacity-90 disabled:opacity-30 disabled:cursor-not-allowed"
                     >
                       +
                     </button>
                   </div>
                   {atMax && increase > 0 && (
-                    <p className="text-xs text-accent-gold text-center mt-2">Max (20)</p>
+                    <p className="text-xs text-accent-red text-center mt-2">Max (20)</p>
                   )}
                 </div>
               );
@@ -189,14 +212,14 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
       {/* Feat Selection */}
       {choiceType === 'feat' && (
         <div className="space-y-4">
-          <div className="bg-[#f5ebd2] border-2 border-[#1e140a] rounded-lg p-4">
-            <p className="text-gray-700 text-sm">
+          <div className="bg-theme-tertiary border border-theme-primary rounded-lg p-4">
+            <p className="text-theme-secondary text-sm">
               Select a feat to gain new abilities and features.
             </p>
           </div>
 
           {availableFeats.length === 0 && (
-            <div className="bg-[#f5ebd2] border-2 border-[#1e140a] rounded-lg p-4 text-sm text-gray-900">
+            <div className="bg-theme-tertiary border border-theme-primary rounded-lg p-4 text-sm text-theme-primary">
               No feats meet your current prerequisites. Choose an Ability Score Increase instead.
             </div>
           )}
@@ -205,20 +228,23 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
             {availableFeats.map((feat) => (
               <button
                 key={feat.slug}
-                onClick={() => setSelectedFeat(feat.slug)}
+                onClick={() => handleSelectFeat(feat)}
                 className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                   selectedFeat === feat.slug
-                    ? 'border-red-800 bg-red-100'
-                    : 'border-[#1e140a] bg-[#fcf6e3] hover:border-red-800'
+                    ? 'border-accent-red bg-theme-quaternary'
+                    : 'border-theme-primary bg-theme-tertiary hover:border-accent-red'
                 }`}
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900">{feat.name}</h4>
-                    <p className="text-sm text-gray-700 mt-1">{feat.description}</p>
+                    <h4 className="font-semibold text-theme-primary">{feat.name}</h4>
+                    {feat.prerequisite && <p className="text-xs text-theme-muted mt-1">Prerequisite: {feat.prerequisite}</p>}
+                    <ul className="text-sm text-theme-secondary mt-1 list-disc list-inside">
+                      {feat.benefits.map((benefit, i) => <li key={i}>{benefit}</li>)}
+                    </ul>
                   </div>
                   <div className={`flex-shrink-0 ml-4 w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                    selectedFeat === feat.slug ? 'border-red-800 bg-red-800' : 'border-[#1e140a]'
+                    selectedFeat === feat.slug ? 'border-accent-red bg-accent-red' : 'border-theme-primary'
                   }`}>
                     {selectedFeat === feat.slug && (
                       <svg className="w-3 h-3 text-theme-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -237,18 +263,28 @@ export const StepASIFeat: React.FC<StepASIFeatProps> = ({
       <div className="flex justify-between pt-4">
         <button
           onClick={onPrev}
-          className="px-6 py-3 bg-theme-primary text-theme-text font-semibold rounded-lg hover:bg-opacity-80 transition-colors border border-theme-border"
+          className="px-6 py-3 bg-theme-primary text-theme-primary font-semibold rounded-lg hover:bg-opacity-80 transition-colors border border-theme-primary"
         >
           Back
         </button>
         <button
           onClick={handleNext}
           disabled={!canProceed}
-          className="px-6 py-3 bg-[#ffaa00] border bg-accent-gold text-theme-primary font-semibold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-6 py-3 bg-accent-red text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Continue
         </button>
       </div>
+      <FeatChoiceModal
+        isOpen={!!choiceFeat}
+        onClose={() => setChoiceFeat(null)}
+        feat={choiceFeat}
+        onConfirm={(picks) => {
+          if (!choiceFeat) return;
+          setSelectedFeat(choiceFeat.slug);
+          setFeatChoices(picks);
+        }}
+      />
     </div>
   );
 };

@@ -411,4 +411,43 @@ describe('CombatStatsPanel', () => {
       });
     });
   });
+
+  describe('Species grants', () => {
+    const renderPanel = (overrides = {}) => render(<CombatStatsPanel
+      character={createMockCharacter(overrides)}
+      layoutMode="modern"
+      setRollResult={vi.fn()}
+      onDiceRoll={vi.fn()}
+      onUpdateCharacter={vi.fn()}
+    />);
+
+    it('shows movement modes, senses, resistances and immunities', () => {
+      renderPanel({
+        movement: { fly: 30, swim: 30 },
+        senses: { darkvision: 60 },
+        damageResistances: ['fire'],
+        conditionImmunities: ['charmed'],
+      });
+      const summary = screen.getByTestId('species-grants-summary');
+      expect(summary).toHaveTextContent('Fly 30 ft, Swim 30 ft');
+      expect(summary).toHaveTextContent('Darkvision 60 ft');
+      expect(summary).toHaveTextContent('Fire');
+      expect(summary).toHaveTextContent('Charmed');
+    });
+
+    it('hides the summary when the species grants nothing', () => {
+      renderPanel();
+      expect(screen.queryByTestId('species-grants-summary')).not.toBeInTheDocument();
+    });
+
+    it('lists a flat species AC bonus in the AC breakdown', () => {
+      renderPanel({ acBonus: 1, armorClass: 13 });
+      expect(screen.getByTitle('Base: 10, DEX: +2, Species: +1 = 13 AC')).toBeInTheDocument();
+    });
+
+    it('uses natural armor in the AC breakdown when it beats unarmored AC', () => {
+      renderPanel({ naturalArmor: { base: 13, abilities: ['DEX'] }, armorClass: 15 });
+      expect(screen.getByTitle('Natural Armor: 15 = 15 AC')).toBeInTheDocument();
+    });
+  });
 });

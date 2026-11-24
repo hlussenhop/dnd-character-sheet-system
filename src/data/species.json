@@ -2,10 +2,82 @@
   "metadata": {
     "version": "1.1",
     "description": "Comprehensive species data for D&D 5e character creation (2014 & 2024)",
-    "lastUpdated": "2025-11-29",
-    "totalSpecies": 27
+    "lastUpdated": "2026-11-23",
+    "totalSpecies": 116
   },
   "species": [
+    {
+      "slug": "human",
+      "name": "Human",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 1,
+        "DEX": 1,
+        "CON": 1,
+        "INT": 1,
+        "WIS": 1,
+        "CHA": 1
+      },
+      "species_traits": [],
+      "description": "Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds.",
+      "typicalRoles": [
+        "Fighter",
+        "Wizard",
+        "Rogue",
+        "Cleric",
+        "Any"
+      ],
+      "variants": [
+        {
+          "slug": "standard",
+          "name": "Standard Human",
+          "description": "The classic human from the Basic Rules - +1 to all ability scores for broad versatility.",
+          "ability_bonuses": {
+            "STR": 1,
+            "DEX": 1,
+            "CON": 1,
+            "INT": 1,
+            "WIS": 1,
+            "CHA": 1
+          },
+          "species_traits": [],
+          "features": []
+        },
+        {
+          "slug": "variant",
+          "name": "Variant Human",
+          "description": "The specialist human - +1 to two abilities, one skill proficiency, and one feat for focused power.",
+          "ability_bonuses": {},
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          "species_traits": [
+            "Variant Skills",
+            "Variant Feat"
+          ],
+          "features": []
+        }
+      ],
+      "defaultVariant": "variant",
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true,
+      "languageChoices": 1
+    },
     {
       "slug": "human-2024",
       "name": "Human",
@@ -39,6 +111,80 @@
       ]
     },
     {
+      "slug": "mountain-dwarf",
+      "name": "Mountain Dwarf",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 25,
+      "ability_bonuses": {
+        "STR": 2,
+        "CON": 2
+      },
+      "species_traits": [
+        "Dwarven Speed",
+        "Darkvision",
+        "Dwarven Resilience",
+        "Dwarven Combat Training",
+        "Tool Proficiency",
+        "Stonecunning",
+        "Dwarven Armor Training"
+      ],
+      "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Mountain dwarves are strong and hardy inhabitants of the mountains.",
+      "typicalRoles": [
+        "Fighter",
+        "Barbarian",
+        "Cleric",
+        "Paladin"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "hill-dwarf",
+      "name": "Hill Dwarf",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 25,
+      "ability_bonuses": {
+        "CON": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Dwarven Speed",
+        "Darkvision",
+        "Dwarven Resilience",
+        "Dwarven Combat Training",
+        "Tool Proficiency",
+        "Stonecunning",
+        "Dwarven Toughness"
+      ],
+      "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Hill dwarves are wise and tough inhabitants of the hills.",
+      "typicalRoles": [
+        "Cleric",
+        "Fighter",
+        "Barbarian",
+        "Paladin"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
       "slug": "dwarf-2024",
       "name": "Dwarf",
       "edition": "2024",
@@ -48,7 +194,7 @@
       "size": "Medium",
       "ability_bonuses": {},
       "species_traits": [
-        "Darkvision",
+        "Darkvision (120 ft)",
         "Dwarven Resilience",
         "Dwarven Toughness",
         "Stonecunning"
@@ -73,6 +219,119 @@
       "tags": [
         "core"
       ]
+    },
+    {
+      "slug": "high-elf",
+      "name": "High Elf",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 30,
+      "ability_bonuses": {
+        "DEX": 2,
+        "INT": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Keen Senses",
+        "Fey Ancestry",
+        "Trance",
+        "Elf Weapon Training",
+        "Cantrip",
+        "Extra Language"
+      ],
+      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. High elves are the most common elves, known for their intelligence and magical affinity.",
+      "typicalRoles": [
+        "Wizard",
+        "Fighter",
+        "Rogue",
+        "Cleric",
+        "Any"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "wood-elf",
+      "name": "Wood Elf",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 35,
+      "ability_bonuses": {
+        "DEX": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Keen Senses",
+        "Fey Ancestry",
+        "Trance",
+        "Elf Weapon Training",
+        "Fleet of Foot",
+        "Mask of the Wild"
+      ],
+      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. Wood elves are reclusive and suspicious of non-elves.",
+      "typicalRoles": [
+        "Ranger",
+        "Druid",
+        "Fighter",
+        "Rogue"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "drow",
+      "name": "Drow (Dark Elf)",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 30,
+      "ability_bonuses": {
+        "DEX": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Keen Senses",
+        "Fey Ancestry",
+        "Trance",
+        "Superior Darkvision",
+        "Sunlight Sensitivity",
+        "Drow Magic",
+        "Drow Weapon Training"
+      ],
+      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. Drow, or dark elves, have black skin that resembles polished obsidian and stark white or pale yellow hair.",
+      "typicalRoles": [
+        "Wizard",
+        "Rogue",
+        "Fighter",
+        "Warlock"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
     },
     {
       "slug": "elf-2024",
@@ -127,14 +386,15 @@
           "ability_bonuses": {},
           "species_traits": [
             "Fleet of Foot",
-            "Mask of the Wild"
+            "Wood Elf Magic"
           ],
           "features": []
         }
       ],
       "sources": [
         "PHB 2024",
-        "PHB"
+        "PHB",
+        "LFL"
       ],
       "core": true,
       "expanded": false,
@@ -149,6 +409,75 @@
       ]
     },
     {
+      "slug": "lightfoot-halfling",
+      "name": "Lightfoot Halfling",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 25,
+      "ability_bonuses": {
+        "DEX": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Lucky",
+        "Brave",
+        "Halfling Nimbleness",
+        "Naturally Stealthy"
+      ],
+      "description": "Halflings are cheerful, brave, and lucky people who live in close-knit communities. Lightfoot halflings are stealthy and charismatic.",
+      "typicalRoles": [
+        "Rogue",
+        "Bard",
+        "Cleric",
+        "Wizard",
+        "Any"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "stout-halfling",
+      "name": "Stout Halfling",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 25,
+      "ability_bonuses": {
+        "DEX": 2,
+        "CON": 1
+      },
+      "species_traits": [
+        "Lucky",
+        "Brave",
+        "Halfling Nimbleness",
+        "Stout Resilience"
+      ],
+      "description": "Halflings are an affable and cheerful people. They cherish the bonds of family and friendship as well as the comforts of hearth and home. Stout halflings are hardier than average and have some resistance to poison.",
+      "typicalRoles": [
+        "Rogue",
+        "Barbarian",
+        "Fighter",
+        "Cleric"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
       "slug": "halfling-2024",
       "name": "Halfling",
       "edition": "2024",
@@ -160,7 +489,7 @@
       "species_traits": [
         "Brave",
         "Halfling Nimbleness",
-        "Lucky",
+        "Luck",
         "Naturally Stealthy"
       ],
       "description": "The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that, avoiding offense.",
@@ -182,6 +511,74 @@
       "tags": [
         "core"
       ]
+    },
+    {
+      "slug": "forest-gnome",
+      "name": "Forest Gnome",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 25,
+      "ability_bonuses": {
+        "INT": 2,
+        "DEX": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Gnome Cunning",
+        "Natural Illusionist",
+        "Speak with Small Beasts"
+      ],
+      "description": "Gnomes are small folk full of quirky inventiveness. Forest gnomes have a natural knack for illusion and a way with animals.",
+      "typicalRoles": [
+        "Wizard",
+        "Druid",
+        "Bard",
+        "Rogue"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "rock-gnome",
+      "name": "Rock Gnome",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 25,
+      "ability_bonuses": {
+        "INT": 2,
+        "CON": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Gnome Cunning",
+        "Artificer's Lore",
+        "Tinker"
+      ],
+      "description": "Gnomes are small folk full of quirky inventiveness. Rock gnomes are natural inventors and tinkerers.",
+      "typicalRoles": [
+        "Wizard",
+        "Artificer",
+        "Bard",
+        "Rogue"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
     },
     {
       "slug": "gnome-2024",
@@ -211,7 +608,7 @@
           "ability_bonuses": {},
           "species_traits": [
             "Minor Illusion",
-            "Speak with Small Beasts"
+            "Speak with Animals"
           ],
           "features": []
         },
@@ -244,6 +641,39 @@
       ]
     },
     {
+      "slug": "dragonborn",
+      "name": "Dragonborn",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Draconic Ancestry",
+        "Breath Weapon",
+        "Damage Resistance"
+      ],
+      "description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Dragonborn are proud, honorable warriors.",
+      "typicalRoles": [
+        "Fighter",
+        "Barbarian",
+        "Paladin",
+        "Sorcerer"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
       "slug": "dragonborn-2024",
       "name": "Dragonborn",
       "edition": "2024",
@@ -257,7 +687,7 @@
         "Breath Weapon",
         "Damage Resistance",
         "Darkvision",
-        "Draconic Flight (cannot fly while wearing medium or heavy armor)"
+        "Draconic Flight"
       ],
       "description": "Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension.",
       "typicalRoles": [
@@ -280,6 +710,52 @@
       ]
     },
     {
+      "slug": "orc",
+      "name": "Orc",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Adrenaline Rush",
+        "Darkvision",
+        "Powerful Build",
+        "Relentless Endurance"
+      ],
+      "description": "Orcs are brutish, green-skinned humanoids that dwell in tribal societies. They are fierce warriors who revel in battle.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Rogue",
+        "Shaman"
+      ],
+      "sources": [
+        "MPMM",
+        "ERLW",
+        "VGM"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
       "slug": "orc-2024",
       "name": "Orc",
       "edition": "2024",
@@ -290,8 +766,7 @@
       "ability_bonuses": {},
       "species_traits": [
         "Adrenaline Rush",
-        "Darkvision",
-        "Powerful Build",
+        "Darkvision (120 ft)",
         "Relentless Endurance"
       ],
       "description": "Orcs are people of deep emotion and great passion, renowned for their unyielding endurance and determination.",
@@ -313,6 +788,285 @@
         "core",
         "monstrous"
       ]
+    },
+    {
+      "slug": "tiefling",
+      "name": "Tiefling",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 30,
+      "ability_bonuses": {
+        "INT": 1,
+        "CHA": 2
+      },
+      "species_traits": [
+        "Darkvision",
+        "Hellish Resistance",
+        "Infernal Legacy"
+      ],
+      "description": "Tieflings are derived from human bloodlines, and in the broadest possible sense, they still look human. However, their infernal heritage has left a clear imprint on their appearance.",
+      "typicalRoles": [
+        "Warlock",
+        "Wizard",
+        "Rogue",
+        "Bard"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": true,
+      "expanded": false,
+      "tags": [
+        "core",
+        "legacy"
+      ],
+      "legacy": true,
+      "variants": [
+        {
+          "slug": "asmodeus",
+          "name": "Asmodeus",
+          "description": "The bloodline of Asmodeus: the Player's Handbook tiefling, with the standard Infernal Legacy.",
+          "ability_bonuses": {
+            "INT": 1,
+            "CHA": 2
+          },
+          "species_traits": [],
+          "features": []
+        },
+        {
+          "slug": "baalzebul",
+          "name": "Baalzebul",
+          "description": "Legacy of Maladomini: thaumaturgy, ray of sickness and crown of madness.",
+          "ability_bonuses": {
+            "INT": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Maladomini"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "dispater",
+          "name": "Dispater",
+          "description": "Legacy of Dis: DEX +1 and thaumaturgy, disguise self and detect thoughts.",
+          "ability_bonuses": {
+            "DEX": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Dis"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "fierna",
+          "name": "Fierna",
+          "description": "Legacy of Phlegethos: WIS +1 and friends, charm person and suggestion.",
+          "ability_bonuses": {
+            "WIS": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Phlegethos"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "glasya",
+          "name": "Glasya",
+          "description": "Legacy of Malbolge: DEX +1 and minor illusion, disguise self and invisibility.",
+          "ability_bonuses": {
+            "DEX": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Malbolge"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "levistus",
+          "name": "Levistus",
+          "description": "Legacy of Stygia: CON +1 and ray of frost, armor of Agathys and darkness.",
+          "ability_bonuses": {
+            "CON": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Stygia"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "mammon",
+          "name": "Mammon",
+          "description": "Legacy of Minauros: mage hand, Tenser's floating disk and arcane lock.",
+          "ability_bonuses": {
+            "INT": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Minauros"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "mephistopheles",
+          "name": "Mephistopheles",
+          "description": "Legacy of Cania: mage hand, burning hands and flame blade.",
+          "ability_bonuses": {
+            "INT": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Cania"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "zariel",
+          "name": "Zariel",
+          "description": "Legacy of Avernus: STR +1 and thaumaturgy, searing smite and branding smite.",
+          "ability_bonuses": {
+            "STR": 1,
+            "CHA": 2
+          },
+          "species_traits": [
+            "Legacy of Avernus"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ]
+        },
+        {
+          "slug": "devils-tongue",
+          "name": "Devil's Tongue",
+          "description": "SCAG variant: INT +1, DEX or CHA +2, vicious mockery, charm person and enthrall.",
+          "ability_bonuses": {
+            "INT": 1
+          },
+          "species_traits": [
+            "Appearance",
+            "Devil's Tongue"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2
+              ]
+            ],
+            "from": [
+              "DEX",
+              "CHA"
+            ]
+          }
+        },
+        {
+          "slug": "hellfire",
+          "name": "Hellfire",
+          "description": "SCAG variant: INT +1, DEX or CHA +2, thaumaturgy, burning hands and darkness.",
+          "ability_bonuses": {
+            "INT": 1
+          },
+          "species_traits": [
+            "Appearance",
+            "Hellfire"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2
+              ]
+            ],
+            "from": [
+              "DEX",
+              "CHA"
+            ]
+          }
+        },
+        {
+          "slug": "infernal-legacy-variant",
+          "name": "Infernal Legacy (variant)",
+          "description": "SCAG variant: INT +1, DEX or CHA +2 and the standard Infernal Legacy, with an appearance that is more human than fiendish.",
+          "ability_bonuses": {
+            "INT": 1
+          },
+          "species_traits": [
+            "Appearance"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2
+              ]
+            ],
+            "from": [
+              "DEX",
+              "CHA"
+            ]
+          }
+        },
+        {
+          "slug": "winged",
+          "name": "Winged",
+          "description": "SCAG variant: INT +1, DEX or CHA +2, and bat-like wings that give a flying speed of 30 feet.",
+          "ability_bonuses": {
+            "INT": 1
+          },
+          "species_traits": [
+            "Appearance",
+            "Winged"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Infernal Legacy"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2
+              ]
+            ],
+            "from": [
+              "DEX",
+              "CHA"
+            ]
+          }
+        }
+      ],
+      "variantOptional": true
     },
     {
       "slug": "tiefling-2024",
@@ -385,6 +1139,122 @@
       ]
     },
     {
+      "slug": "aasimar",
+      "name": "Aasimar",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Celestial Resistance",
+        "Darkvision",
+        "Healing Hands",
+        "Light Bearer"
+      ],
+      "description": "Aasimars are mortals who carry a spark of the Upper Planes within their souls. They are humanoids with a touch of the celestial in their appearance.",
+      "typicalRoles": [
+        "Paladin",
+        "Cleric",
+        "Bard",
+        "Fighter"
+      ],
+      "sources": [
+        "MPMM",
+        "VGM"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "variants": [
+        {
+          "slug": "necrotic-shroud",
+          "name": "Necrotic Shroud",
+          "description": "Your Celestial Revelation unleashes a shroud of necrotic energy that frightens nearby foes.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Celestial Revelation (Necrotic Shroud)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "radiant-consumption",
+          "name": "Radiant Consumption",
+          "description": "Your Celestial Revelation sears nearby creatures with searing radiant light.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Celestial Revelation (Radiant Consumption)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "radiant-soul",
+          "name": "Radiant Soul",
+          "description": "Your Celestial Revelation gives you spectral wings and a flying speed.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Celestial Revelation (Radiant Soul)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "languageChoices": 1
+    },
+    {
       "slug": "aasimar-2024",
       "name": "Aasimar",
       "edition": "2024",
@@ -421,6 +1291,50 @@
       ]
     },
     {
+      "slug": "goliath",
+      "name": "Goliath",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Little Giant",
+        "Mountain Born",
+        "Stone's Endurance"
+      ],
+      "description": "Goliaths are strong and reclusive people who dwell in remote mountain peaks. They are known for their great strength and endurance.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Ranger",
+        "Paladin"
+      ],
+      "sources": [
+        "MPMM",
+        "VGM"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
       "slug": "goliath-2024",
       "name": "Goliath",
       "edition": "2024",
@@ -446,7 +1360,7 @@
           "description": "Legacy of Cloud Giants.",
           "ability_bonuses": {},
           "species_traits": [
-            "Cloud Jaunt"
+            "Cloud's Jaunt"
           ],
           "features": []
         },
@@ -521,11 +1435,28 @@
       "edition": "2014",
       "source": "PHB",
       "speed": 30,
-      "ability_bonuses": {},
+      "ability_bonuses": {
+        "CHA": 2
+      },
+      "abilityChoice": {
+        "patterns": [
+          [
+            1,
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "DEX",
+          "CON",
+          "INT",
+          "WIS"
+        ]
+      },
       "species_traits": [
         "Darkvision",
         "Fey Ancestry",
-        "Skill Versatility (2 skills)"
+        "Skill Versatility"
       ],
       "description": "Half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves.",
       "typicalRoles": [
@@ -544,44 +1475,262 @@
         "expanded",
         "legacy"
       ],
-      "legacy": true
+      "legacy": true,
+      "languageChoices": 1,
+      "variants": [
+        {
+          "slug": "aquatic-elf-descent-swim",
+          "name": "Aquatic Elf Descent (Swim Speed)",
+          "description": "Aquatic elf ancestry: instead of Skill Versatility you have a swimming speed of 30 feet.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Swimming Speed (Half-Elf)"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          }
+        },
+        {
+          "slug": "drow-descent-magic",
+          "name": "Drow Descent (Drow Magic)",
+          "description": "Drow ancestry: instead of Skill Versatility you know dancing lights and later cast faerie fire and darkness.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Drow Magic (Half-Elf)"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          }
+        },
+        {
+          "slug": "moon-sun-elf-descent-cantrip",
+          "name": "Moon or Sun Elf Descent (Cantrip)",
+          "description": "Moon or sun elf ancestry: instead of Skill Versatility you know one wizard cantrip.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Cantrip"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          }
+        },
+        {
+          "slug": "moon-sun-elf-descent-weapons",
+          "name": "Moon or Sun Elf Descent (Weapon Training)",
+          "description": "Moon or sun elf ancestry: instead of Skill Versatility you gain elf weapon training.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Elf Weapon Training"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          }
+        },
+        {
+          "slug": "wood-elf-descent-weapons",
+          "name": "Wood Elf Descent (Weapon Training)",
+          "description": "Wood elf ancestry: instead of Skill Versatility you gain elf weapon training.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Elf Weapon Training"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          }
+        },
+        {
+          "slug": "wood-elf-descent-fleet",
+          "name": "Wood Elf Descent (Fleet of Foot)",
+          "description": "Wood elf ancestry: instead of Skill Versatility your walking speed is 35 feet.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Fleet of Foot"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          },
+          "speed": 35
+        },
+        {
+          "slug": "wood-elf-descent-mask",
+          "name": "Wood Elf Descent (Mask of the Wild)",
+          "description": "Wood elf ancestry: instead of Skill Versatility you can hide when only lightly obscured by natural phenomena.",
+          "ability_bonuses": {
+            "CHA": 2
+          },
+          "species_traits": [
+            "Mask of the Wild"
+          ],
+          "features": [],
+          "replacesTraits": [
+            "Skill Versatility"
+          ],
+          "abilityChoice": {
+            "patterns": [
+              [
+                1,
+                1
+              ]
+            ],
+            "from": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS"
+            ]
+          }
+        }
+      ],
+      "variantOptional": true
     },
     {
       "slug": "half-orc",
-       "name": "Half-Orc",
-       "edition": "2014",
-       "source": "PHB",
-       "speed": 30,
-       "ability_bonuses": {},
-       "species_traits": [
-         "Darkvision",
-         "Menacing (Intimidation)",
-         "Savage Attacks"
-       ],
-       "description": "Half-orcs are the short-tempered and sullen result of human and orc pairings. They are strong and tough, but they are often shunned by both races.",
-       "typicalRoles": [
-         "Barbarian",
-         "Fighter",
-         "Rogue",
-         "Paladin"
-       ],
-       "sources": [
-         "PHB"
-       ],
-       "core": false,
-       "expanded": true,
-       "tags": [
-         "expanded",
-         "legacy"
-       ],
-       "legacy": true,
-       "species_feat_options": ["relentless-endurance"]
+      "name": "Half-Orc",
+      "edition": "2014",
+      "source": "PHB",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 2,
+        "CON": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Menacing",
+        "Relentless Endurance",
+        "Savage Attacks"
+      ],
+      "description": "Half-orcs are the short-tempered and sullen result of human and orc pairings. They are strong and tough, but they are often shunned by both races.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Rogue",
+        "Paladin"
+      ],
+      "sources": [
+        "PHB"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "expanded",
+        "legacy"
+      ],
+      "legacy": true
     },
     {
       "slug": "firbolg",
       "name": "Firbolg",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
@@ -598,25 +1747,41 @@
         "Cleric"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "kenku",
       "name": "Kenku",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
-        "Expert Forgery",
-        "Kenku Training",
+        "Expert Duplication",
+        "Kenku Recall",
         "Mimicry"
       ],
       "description": "Kenku are crow-like humanoids who were transformed by powerful magic. They are cunning and resourceful, but they cannot speak except by mimicking sounds they have heard.",
@@ -627,27 +1792,44 @@
         "Wizard"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "tabaxi",
       "name": "Tabaxi",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
-        "Darkvision",
-        "Feline Agility",
+        "Climbing Speed",
         "Cat's Claws",
-        "Cat's Talent"
+        "Cat's Talent",
+        "Darkvision",
+        "Feline Agility"
       ],
       "description": "Tabaxi are cat-like humanoids who hail from distant jungles. They are curious, agile, and often follow their whims.",
       "typicalRoles": [
@@ -657,27 +1839,45 @@
         "Fighter"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "triton",
       "name": "Triton",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
+        "Swimming Speed",
         "Amphibious",
         "Control Air and Water",
+        "Darkvision",
         "Emissary of the Sea",
-        "Guardians of the Depths"
+        "Guardian of the Depths"
       ],
       "description": "Tritons are fish-like humanoids who dwell in the depths of the ocean. They are guardians of the sea and often serve powerful aquatic beings.",
       "typicalRoles": [
@@ -687,24 +1887,41 @@
         "Wizard"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "bugbear",
       "name": "Bugbear",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
         "Darkvision",
+        "Fey Ancestry (Charmed Only)",
         "Long-Limbed",
         "Powerful Build",
         "Sneaky",
@@ -718,24 +1935,42 @@
         "Ranger"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "ERLW",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "monstrous",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "goblin",
       "name": "Goblin",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
         "Darkvision",
+        "Fey Ancestry (Charmed Only)",
         "Fury of the Small",
         "Nimble Escape"
       ],
@@ -747,26 +1982,43 @@
         "Warlock"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "monstrous",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "hobgoblin",
       "name": "Hobgoblin",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
         "Darkvision",
-        "Martial Training",
-        "Saving Face"
+        "Fey Ancestry (Charmed Only)",
+        "Fey Gift",
+        "Fortune from the Many"
       ],
       "description": "Hobgoblins are large, militaristic goblinoids that organize themselves into legions. They are disciplined warriors who value honor and tradition.",
       "typicalRoles": [
@@ -776,28 +2028,41 @@
         "Wizard"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "monstrous",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "kobold",
       "name": "Kobold",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
         "Darkvision",
-        "Grovel, Cower, and Beg",
-        "Pack Tactics",
-        "Sunlight Sensitivity",
-        "Draconic Cry (frighten creatures within 10 ft)"
+        "Draconic Cry"
       ],
       "description": "Kobolds are small, reptilian humanoids that dwell in dark places. They are cowardly and subservient, but they can be surprisingly cunning.",
       "typicalRoles": [
@@ -807,27 +2072,116 @@
         "Warlock"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "monstrous",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "variants": [
+        {
+          "slug": "craftiness",
+          "name": "Craftiness",
+          "description": "Gain proficiency in one of Arcana, Investigation, Medicine, Sleight of Hand or Survival.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Kobold Legacy (Craftiness)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "defiance",
+          "name": "Defiance",
+          "description": "Advantage on saving throws to avoid or end the frightened condition on yourself.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Kobold Legacy (Defiance)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "draconic-sorcery",
+          "name": "Draconic Sorcery",
+          "description": "Learn one cantrip from the sorcerer spell list.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Kobold Legacy (Draconic Sorcery)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "languageChoices": 1
     },
     {
-      "slug": "yuan-ti-pureblood",
-      "name": "Yuan-Ti Pureblood",
+      "slug": "yuan-ti",
+      "name": "Yuan-Ti",
       "edition": "2014",
-      "source": "VGtM",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
         "Darkvision",
-        "Innate Spellcasting"
+        "Magic Resistance",
+        "Poison Resilience",
+        "Serpentine Spellcasting"
       ],
-      "description": "Yuan-ti purebloods are snake-like humanoids who appear mostly human. They are cunning and manipulative, with a natural affinity for magic.",
+      "description": "Yuan-ti are serpentine humanoids shaped by ancient, dark magic. Those who walk among other peoples pair snake-like features with innate magic and a resistance to poison and spells.",
       "typicalRoles": [
         "Warlock",
         "Wizard",
@@ -835,25 +2189,44 @@
         "Sorcerer"
       ],
       "sources": [
-        "VGtM"
+        "MPMM",
+        "VGM"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "monstrous",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "legacySlugs": [
+        "yuan-ti-pureblood"
+      ],
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "fairy",
       "name": "Fairy",
       "edition": "2014",
-      "source": "WGtE",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
         "Fairy Magic",
-        "Flight (cannot fly while wearing medium or heavy armor)"
+        "Flight"
       ],
       "description": "Fairies are tiny, magical beings from the Feywild. They are playful and mischievous, with a natural affinity for illusion magic.",
       "typicalRoles": [
@@ -863,20 +2236,36 @@
         "Wizard"
       ],
       "sources": [
-        "WGtE"
+        "MPMM",
+        "WBtW"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "harengon",
       "name": "Harengon",
       "edition": "2014",
-      "source": "WGtE",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
@@ -893,27 +2282,47 @@
         "Monk"
       ],
       "sources": [
-        "WGtE"
+        "MPMM",
+        "WBtW"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "loxodon",
       "name": "Loxodon",
       "edition": "2014",
-      "source": "GGtR",
+      "source": "GGR",
       "speed": 30,
-      "ability_bonuses": {},
+      "ability_bonuses": {
+        "CON": 2,
+        "WIS": 1
+      },
       "species_traits": [
         "Powerful Build",
         "Loxodon Serenity",
         "Natural Armor",
-        "Trunk"
+        "Trunk",
+        "Keen Smell"
       ],
       "description": "Loxodons are elephant-like humanoids known for their wisdom and calm demeanor. They are peaceful and introspective.",
       "typicalRoles": [
@@ -923,25 +2332,26 @@
         "Paladin"
       ],
       "sources": [
-        "GGtR"
+        "GGR"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true
     },
     {
       "slug": "owlin",
       "name": "Owlin",
       "edition": "2014",
-      "source": "Strixhaven",
+      "source": "SCC",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
-        "Darkvision",
-        "Flight (cannot fly while wearing medium or heavy armor)",
+        "Darkvision (120 ft)",
+        "Flight",
         "Silent Feathers"
       ],
       "description": "Owlin are owl-like humanoids who can fly silently through the night. They are wise and observant.",
@@ -952,26 +2362,40 @@
         "Cleric"
       ],
       "sources": [
-        "Strixhaven"
+        "SCC"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "exotic",
-        "expanded"
-      ]
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      }
     },
     {
       "slug": "githyanki",
       "name": "Githyanki",
       "edition": "2014",
-      "source": "MToF",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
-        "Decadent Mastery",
+        "Astral Knowledge",
         "Githyanki Psionics",
-        "Martial Prodigy"
+        "Psychic Resilience"
       ],
       "description": "Githyanki are humanoid warriors from the Astral Plane. They are fierce fighters with psionic abilities.",
       "typicalRoles": [
@@ -981,29 +2405,42 @@
         "Barbarian"
       ],
       "sources": [
-        "MToF"
+        "MPMM",
+        "MTF"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "monstrous",
-        "expanded"
+        "legacy"
       ],
-      "species_feat_options": ["magic-resistance", "poison-immunity"]
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
     },
     {
       "slug": "genasi",
       "name": "Genasi",
       "edition": "2014",
-      "source": "EE",
+      "source": "MPMM",
       "speed": 30,
       "ability_bonuses": {},
       "species_traits": [
-        "Darkvision",
-        "Fire Resistance",
-        "Reach to the Blaze"
+        "Darkvision"
       ],
-      "description": "Fire genasi are humanoids infused with elemental fire. They have a fiery temper and resistance to heat.",
+      "description": "Genasi are descended from genies and mortals, and carry the power of an elemental plane in their blood. Air, earth, fire and water genasi each manifest that heritage differently.",
       "typicalRoles": [
         "Sorcerer",
         "Fighter",
@@ -1011,19 +2448,3210 @@
         "Wizard"
       ],
       "sources": [
-        "EE"
+        "MPMM",
+        "EEPC"
       ],
       "core": false,
       "expanded": true,
       "tags": [
         "elemental",
         "planar",
-        "expanded"
+        "legacy"
       ],
       "legacySlugs": [
         "fire-genasi"
       ],
-      "legacy": false
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "variants": [
+        {
+          "slug": "air-genasi",
+          "name": "Air Genasi",
+          "description": "Descended from djinn: swift (35 ft walking speed), resistant to lightning, and able to hold your breath indefinitely.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Unending Breath",
+            "Lightning Resistance",
+            "Mingle with the Wind"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          "speed": 35
+        },
+        {
+          "slug": "earth-genasi",
+          "name": "Earth Genasi",
+          "description": "Descended from dao or marids of stone: unimpeded by difficult terrain and able to merge into rock.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Earth Walk",
+            "Merge with Stone"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "fire-genasi",
+          "name": "Fire Genasi",
+          "description": "Descended from efreet: resistant to fire and able to produce flame and burning hands.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Fire Resistance",
+            "Reach to the Blaze"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "water-genasi",
+          "name": "Water Genasi",
+          "description": "Descended from marids: resistant to acid, amphibious, and able to shape water.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Swimming Speed",
+            "Acid Resistance",
+            "Amphibious",
+            "Call to the Wave"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          "speed": {
+            "walk": 30,
+            "swim": true
+          }
+        }
+      ],
+      "languageChoices": 1
+    },
+    {
+      "slug": "aarakocra",
+      "name": "Aarakocra",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Flight",
+        "Talons",
+        "Wind Caller"
+      ],
+      "description": "Aarakocra are bird-folk native to the Elemental Plane of Air. With feathered wings and taloned hands, they are scouts and skirmishers who prize the freedom of the open sky.",
+      "typicalRoles": [
+        "Ranger",
+        "Monk",
+        "Druid",
+        "Rogue"
+      ],
+      "sources": [
+        "MPMM",
+        "EEPC"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "elemental",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "centaur",
+      "name": "Centaur",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 40,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Charge",
+        "Equine Build",
+        "Hooves",
+        "Natural Affinity"
+      ],
+      "description": "Centaurs have the upper body of a humanoid and the lower body of a horse. Swift and powerful, they are creatures of the wilds who charge into battle and run the plains.",
+      "typicalRoles": [
+        "Ranger",
+        "Druid",
+        "Fighter",
+        "Barbarian"
+      ],
+      "sources": [
+        "MPMM",
+        "GGR",
+        "MOT"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "changeling",
+      "name": "Changeling",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Changeling Instincts",
+        "Shapechanger"
+      ],
+      "description": "Changelings are fey shapeshifters who can alter their faces and voices at will. They blend into any society, and many guard their true selves closely.",
+      "typicalRoles": [
+        "Rogue",
+        "Bard",
+        "Warlock",
+        "Sorcerer"
+      ],
+      "sources": [
+        "MPMM",
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "deep-gnome",
+      "name": "Deep Gnome",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision (120 ft)",
+        "Gift of the Svirfneblin",
+        "Gnomish Magic Resistance",
+        "Svirfneblin Camouflage"
+      ],
+      "description": "Deep gnomes, or svirfneblin, live in the Underdark. They are small, stone-gray and wary, with a talent for hiding among rock and for resisting magic.",
+      "typicalRoles": [
+        "Rogue",
+        "Wizard",
+        "Artificer",
+        "Ranger"
+      ],
+      "sources": [
+        "MPMM",
+        "MTF",
+        "SCAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "duergar",
+      "name": "Duergar",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision (120 ft)",
+        "Duergar Magic",
+        "Dwarven Resilience",
+        "Psionic Fortitude"
+      ],
+      "description": "Duergar, or gray dwarves, are dwarves of the Underdark whose spirit was bent by mind flayer psionics. They are grim, resilient and gifted with innate magic.",
+      "typicalRoles": [
+        "Fighter",
+        "Cleric",
+        "Rogue",
+        "Wizard"
+      ],
+      "sources": [
+        "MPMM",
+        "MTF"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "eladrin",
+      "name": "Eladrin",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Fey Ancestry (Charmed Only)",
+        "Fey Step",
+        "Keen Senses",
+        "Trance (Change Season)"
+      ],
+      "description": "Eladrin are elves of the Feywild whose moods shift with the seasons. They can step through space in a flash of fey magic.",
+      "typicalRoles": [
+        "Wizard",
+        "Bard",
+        "Ranger",
+        "Sorcerer"
+      ],
+      "sources": [
+        "MPMM",
+        "MTF"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "githzerai",
+      "name": "Githzerai",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Githzerai Psionics",
+        "Mental Discipline",
+        "Psychic Resilience"
+      ],
+      "description": "Githzerai are disciplined ascetics from the chaos of Limbo. They hone their minds to shield themselves from psychic harm and shape their surroundings by will.",
+      "typicalRoles": [
+        "Monk",
+        "Wizard",
+        "Psion",
+        "Fighter"
+      ],
+      "sources": [
+        "MPMM",
+        "MTF"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "planar",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "lizardfolk",
+      "name": "Lizardfolk",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Swimming Speed",
+        "Bite",
+        "Hold Breath (15 Minutes)",
+        "Hungry Jaws",
+        "Natural Armor (13 + Dex)",
+        "Nature's Intuition (Two Skills)"
+      ],
+      "description": "Lizardfolk are reptilian survivors of swamps and rivers. Practical and unsentimental, they hunt with tooth and claw and read the wild with a keen instinct.",
+      "typicalRoles": [
+        "Barbarian",
+        "Ranger",
+        "Druid",
+        "Fighter"
+      ],
+      "sources": [
+        "MPMM",
+        "VGM"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "minotaur",
+      "name": "Minotaur",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Horns",
+        "Goring Rush",
+        "Hammering Horns",
+        "Labyrinthine Recall"
+      ],
+      "description": "Minotaurs are bull-headed warriors of great strength. They charge into foes with their horns and rarely lose their way, however twisting the path.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Paladin",
+        "Ranger"
+      ],
+      "sources": [
+        "MPMM",
+        "GGR",
+        "MOT"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "satyr",
+      "name": "Satyr",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 35,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Ram",
+        "Magic Resistance",
+        "Mirthful Leaps",
+        "Reveler"
+      ],
+      "description": "Satyrs are fey revelers with goat legs and horns. They love music, wine and good company, and are hard for magic to bend.",
+      "typicalRoles": [
+        "Bard",
+        "Rogue",
+        "Druid",
+        "Warlock"
+      ],
+      "sources": [
+        "MPMM",
+        "MOT"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "sea-elf",
+      "name": "Sea Elf",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Swimming Speed",
+        "Child of the Sea",
+        "Darkvision",
+        "Fey Ancestry (Charmed Only)",
+        "Friend of the Sea",
+        "Keen Senses",
+        "Trance (4-Hour Rest)"
+      ],
+      "description": "Sea elves are elves of the ocean depths. They breathe the sea's secrets, swim with ease and can speak with creatures that live below the waves.",
+      "typicalRoles": [
+        "Ranger",
+        "Fighter",
+        "Druid",
+        "Bard"
+      ],
+      "sources": [
+        "MPMM",
+        "MTF"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "shadar-kai",
+      "name": "Shadar-Kai",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Blessing of the Raven Queen",
+        "Darkvision",
+        "Fey Ancestry (Charmed Only)",
+        "Keen Senses",
+        "Necrotic Resistance",
+        "Trance (4-Hour Rest)"
+      ],
+      "description": "Shadar-kai are elves of the Shadowfell, touched by the Raven Queen. They are austere and pale, and they can slip briefly through the shadows.",
+      "typicalRoles": [
+        "Rogue",
+        "Warlock",
+        "Fighter",
+        "Monk"
+      ],
+      "sources": [
+        "MPMM",
+        "MTF"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "shifter",
+      "name": "Shifter",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Bestial Instincts",
+        "Darkvision"
+      ],
+      "description": "Shifters carry lycanthropic ancestry that lets them assume a more bestial form for a short time. Each shifter's instincts favor a particular beast-like gift.",
+      "typicalRoles": [
+        "Ranger",
+        "Barbarian",
+        "Rogue",
+        "Druid"
+      ],
+      "sources": [
+        "MPMM",
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "variants": [
+        {
+          "slug": "beasthide",
+          "name": "Beasthide",
+          "description": "Tough and resilient: you gain extra temporary hit points and +1 AC while shifted.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Shifting (Beasthide)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "longtooth",
+          "name": "Longtooth",
+          "description": "Fierce and aggressive: you gain a fanged bite attack while shifted.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Shifting (Longtooth)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "swiftstride",
+          "name": "Swiftstride",
+          "description": "Graceful and quick: you gain extra speed and can move without provoking while shifted.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Shifting (Swiftstride)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "wildhunt",
+          "name": "Wildhunt",
+          "description": "Sharp-eyed and attuned: you gain advantage on Wisdom checks and saves while shifted.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Shifting (Wildhunt)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "languageChoices": 1
+    },
+    {
+      "slug": "tortle",
+      "name": "Tortle",
+      "edition": "2014",
+      "source": "MPMM",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Claws",
+        "Hold Breath (1 Hour)",
+        "Natural Armor (Shell, AC 17)",
+        "Nature's Intuition (One Skill)",
+        "Shell Defense"
+      ],
+      "description": "Tortles are turtle-like wanderers with a protective shell. They carry their home on their backs and travel in search of new places to understand.",
+      "typicalRoles": [
+        "Druid",
+        "Monk",
+        "Cleric",
+        "Ranger"
+      ],
+      "sources": [
+        "MPMM",
+        "TTP"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "astral-elf",
+      "name": "Astral Elf",
+      "edition": "2014",
+      "source": "AAG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Astral Fire",
+        "Darkvision",
+        "Fey Ancestry (Charmed Only)",
+        "Keen Senses",
+        "Starlight Step",
+        "Astral Trance"
+      ],
+      "description": "Astral elves are elves of Wildspace and the Astral Sea, shaped by starlight. They step between places in a flash and draw on the shared memory of the Astral Plane.",
+      "typicalRoles": [
+        "Wizard",
+        "Cleric",
+        "Rogue",
+        "Bard"
+      ],
+      "sources": [
+        "AAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "fey",
+        "planar",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "autognome",
+      "name": "Autognome",
+      "edition": "2014",
+      "source": "AAG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Armored Casing",
+        "Built for Success",
+        "Healing Machine",
+        "Mechanical Nature",
+        "Sentry's Rest",
+        "Specialized Design"
+      ],
+      "description": "Autognomes are mechanical gnomes with free will, built by the rock gnomes and others who chose to let their creations decide their own purpose.",
+      "typicalRoles": [
+        "Artificer",
+        "Fighter",
+        "Rogue",
+        "Wizard"
+      ],
+      "sources": [
+        "AAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "construct",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "giff",
+      "name": "Giff",
+      "edition": "2014",
+      "source": "AAG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Swimming Speed",
+        "Astral Spark",
+        "Firearms Mastery",
+        "Hippo Build"
+      ],
+      "description": "Giff are hippo-headed soldiers of impressive size who love firearms, order and a good campaign. They channel a spark of divine power through their weapons.",
+      "typicalRoles": [
+        "Fighter",
+        "Barbarian",
+        "Ranger",
+        "Paladin"
+      ],
+      "sources": [
+        "AAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "planar",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "hadozee",
+      "name": "Hadozee",
+      "edition": "2014",
+      "source": "AAG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Climbing Speed",
+        "Dexterous Feet",
+        "Glide",
+        "Hadozee Dodge"
+      ],
+      "description": "Hadozee are simian adventurers who adapt well to the hazards of Wildspace. Gliding membranes and agile feet make them natural sailors and climbers.",
+      "typicalRoles": [
+        "Rogue",
+        "Ranger",
+        "Fighter",
+        "Monk"
+      ],
+      "sources": [
+        "AAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "plasmoid",
+      "name": "Plasmoid",
+      "edition": "2014",
+      "source": "AAG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Amorphous",
+        "Darkvision",
+        "Hold Breath (1 Hour)",
+        "Natural Resilience",
+        "Shape Self"
+      ],
+      "description": "Plasmoids are amoeba-like people who can reshape their bodies at will, squeezing through narrow gaps and shrugging off acid and poison.",
+      "typicalRoles": [
+        "Rogue",
+        "Monk",
+        "Wizard",
+        "Warlock"
+      ],
+      "sources": [
+        "AAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "thri-kreen",
+      "name": "Thri-kreen",
+      "edition": "2014",
+      "source": "AAG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Chameleon Carapace",
+        "Darkvision",
+        "Secondary Arms",
+        "Sleepless",
+        "Thri-kreen Telepathy"
+      ],
+      "description": "Thri-kreen are telepathic, insectile hunters with four arms and a chameleon carapace. They do not sleep and speak mind to mind.",
+      "typicalRoles": [
+        "Ranger",
+        "Rogue",
+        "Fighter",
+        "Monk"
+      ],
+      "sources": [
+        "AAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "leonin",
+      "name": "Leonin",
+      "edition": "2014",
+      "source": "MOT",
+      "speed": 35,
+      "ability_bonuses": {
+        "STR": 1,
+        "CON": 2
+      },
+      "species_traits": [
+        "Darkvision",
+        "Leonin Claws",
+        "Hunter's Instincts",
+        "Daunting Roar"
+      ],
+      "description": "Leonin are proud, lion-like people of Theros who live in prides. They are fierce hunters with claws and a roar that can frighten their foes.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Paladin",
+        "Ranger"
+      ],
+      "sources": [
+        "MOT"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "simic-hybrid",
+      "name": "Simic Hybrid",
+      "edition": "2014",
+      "source": "GGR",
+      "speed": 30,
+      "ability_bonuses": {
+        "CON": 2
+      },
+      "species_traits": [
+        "Darkvision",
+        "Animal Enhancement"
+      ],
+      "description": "Simic hybrids are humans, elves and vedalken whom the Simic Combine has altered with animal traits. Each hybrid chooses enhancements such as gills or climbing limbs.",
+      "typicalRoles": [
+        "Druid",
+        "Ranger",
+        "Wizard",
+        "Fighter"
+      ],
+      "sources": [
+        "GGR"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "DEX",
+          "INT",
+          "WIS",
+          "CHA"
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "vedalken",
+      "name": "Vedalken",
+      "edition": "2014",
+      "source": "GGR",
+      "speed": 30,
+      "ability_bonuses": {
+        "INT": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Vedalken Dispassion",
+        "Tireless Precision",
+        "Partially Amphibious"
+      ],
+      "description": "Vedalken are tall, blue-skinned and fiercely rational. They pursue perfection with dispassionate precision and can breathe underwater for a time.",
+      "typicalRoles": [
+        "Wizard",
+        "Artificer",
+        "Cleric",
+        "Rogue"
+      ],
+      "sources": [
+        "GGR"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "languageChoices": 1
+    },
+    {
+      "slug": "dhampir",
+      "name": "Dhampir",
+      "edition": "2014",
+      "source": "VRGR",
+      "speed": 35,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Ancestral Legacy",
+        "Darkvision",
+        "Deathless Nature (No Breathing)",
+        "Spider Climb",
+        "Vampiric Bite"
+      ],
+      "description": "Dhampirs are people who carry a vampire's curse. They climb like spiders, see in the dark and feed on the life of those they bite.",
+      "typicalRoles": [
+        "Rogue",
+        "Fighter",
+        "Warlock",
+        "Monk"
+      ],
+      "sources": [
+        "VRGR"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "undead",
+        "ravenloft",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "hexblood",
+      "name": "Hexblood",
+      "edition": "2014",
+      "source": "VRGR",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Ancestral Legacy",
+        "Darkvision",
+        "Eerie Token",
+        "Hex Magic"
+      ],
+      "description": "Hexbloods are people touched by a hag's magic, often through a bargain or a curse. They can cast hexes and see through an eerie token.",
+      "typicalRoles": [
+        "Warlock",
+        "Sorcerer",
+        "Wizard",
+        "Rogue"
+      ],
+      "sources": [
+        "VRGR"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "fey",
+        "ravenloft",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "reborn",
+      "name": "Reborn",
+      "edition": "2014",
+      "source": "VRGR",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Ancestral Legacy",
+        "Deathless Nature",
+        "Knowledge from a Past Life"
+      ],
+      "description": "The reborn are people who have escaped death, returned with glimpses of past lives and a resilience that death itself could not break.",
+      "typicalRoles": [
+        "Fighter",
+        "Cleric",
+        "Rogue",
+        "Paladin"
+      ],
+      "sources": [
+        "VRGR"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "undead",
+        "ravenloft",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "verdan",
+      "name": "Verdan",
+      "edition": "2014",
+      "source": "AI",
+      "speed": 30,
+      "ability_bonuses": {
+        "CON": 1,
+        "CHA": 2
+      },
+      "species_traits": [
+        "Black Blood Healing",
+        "Limited Telepathy",
+        "Persuasive",
+        "Telepathic Insight"
+      ],
+      "description": "Verdan are goblins transformed by the magic of That-Which-Endures. They grow from Small to Medium over time and speak mind to mind.",
+      "typicalRoles": [
+        "Bard",
+        "Rogue",
+        "Sorcerer",
+        "Warlock"
+      ],
+      "sources": [
+        "AI"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "legacy"
+      ],
+      "legacy": true,
+      "languageChoices": 1
+    },
+    {
+      "slug": "kalashtar",
+      "name": "Kalashtar",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "WIS": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Dual Mind",
+        "Mental Discipline (Psychic Resistance)",
+        "Mind Link",
+        "Severed from Dreams"
+      ],
+      "description": "Kalashtar are humans bonded to spirits from the plane of dreams, who have fled the nightmare tyrants of Dal Quor. They link minds with ease and carry a spirit's quiet discipline.",
+      "typicalRoles": [
+        "Cleric",
+        "Monk",
+        "Wizard",
+        "Bard"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "exotic",
+        "eberron",
+        "legacy"
+      ],
+      "legacy": true,
+      "languageChoices": 1
+    },
+    {
+      "slug": "warforged",
+      "name": "Warforged",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "CON": 2
+      },
+      "species_traits": [
+        "Constructed Resilience",
+        "Sentry's Rest (Warforged)",
+        "Integrated Protection",
+        "Specialized Design (Skill and Tool)"
+      ],
+      "description": "Warforged are living constructs built for the Last War. They do not tire or sleep as others do, and they weave armor into their own bodies.",
+      "typicalRoles": [
+        "Fighter",
+        "Paladin",
+        "Artificer",
+        "Barbarian"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "construct",
+        "eberron",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "DEX",
+          "INT",
+          "WIS",
+          "CHA"
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "custom-lineage",
+      "name": "Custom Lineage",
+      "edition": "2014",
+      "source": "TCE",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Custom Lineage Feat"
+      ],
+      "description": "A custom lineage is a way to build the origin you imagine: you gain a +2 to one ability, a feat, and either darkvision or a skill proficiency.",
+      "typicalRoles": [
+        "Any"
+      ],
+      "sources": [
+        "TCE"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "custom",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2
+          ]
+        ]
+      },
+      "languageChoices": 1,
+      "variants": [
+        {
+          "slug": "darkvision",
+          "name": "Darkvision",
+          "description": "Your variable trait is darkvision with a range of 60 feet.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Darkvision"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "slug": "skill-proficiency",
+          "name": "Skill Proficiency",
+          "description": "Your variable trait is proficiency in one skill of your choice.",
+          "ability_bonuses": {},
+          "species_traits": [
+            "Variable Trait (Skill Proficiency)"
+          ],
+          "features": [],
+          "abilityChoice": {
+            "patterns": [
+              [
+                2
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dragonborn-chromatic",
+      "name": "Dragonborn (Chromatic)",
+      "edition": "2014",
+      "source": "FTD",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Chromatic Ancestry",
+        "Breath Weapon (Chromatic)",
+        "Draconic Resistance (Chromatic)",
+        "Chromatic Warding"
+      ],
+      "description": "Chromatic dragonborn descend from evil dragons of acid, lightning, poison, fire or cold. Their breath is a 30-foot line, and at 5th level they can ward themselves against their element.",
+      "typicalRoles": [
+        "Fighter",
+        "Paladin",
+        "Sorcerer",
+        "Barbarian"
+      ],
+      "sources": [
+        "FTD"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "draconic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "dragonborn-gem",
+      "name": "Dragonborn (Gem)",
+      "edition": "2014",
+      "source": "FTD",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Gem Ancestry",
+        "Breath Weapon (Gem)",
+        "Draconic Resistance (Gem)",
+        "Psionic Mind",
+        "Gem Flight"
+      ],
+      "description": "Gem dragonborn descend from dragons of psionic crystal and carry that mind-power with them. They can send telepathic messages and, at 5th level, sprout spectral wings.",
+      "typicalRoles": [
+        "Sorcerer",
+        "Wizard",
+        "Psion",
+        "Cleric"
+      ],
+      "sources": [
+        "FTD"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "draconic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "dragonborn-metallic",
+      "name": "Dragonborn (Metallic)",
+      "edition": "2014",
+      "source": "FTD",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Metallic Ancestry",
+        "Breath Weapon (Metallic)",
+        "Draconic Resistance (Metallic)",
+        "Metallic Breath Weapon"
+      ],
+      "description": "Metallic dragonborn descend from good dragons of brass, bronze, copper, gold or silver. At 5th level they gain a second breath weapon that incapacitates or repels foes.",
+      "typicalRoles": [
+        "Paladin",
+        "Cleric",
+        "Fighter",
+        "Monk"
+      ],
+      "sources": [
+        "FTD"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "draconic",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "dwarf-mark-of-warding",
+      "name": "Dwarf (Mark of Warding)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 25,
+      "ability_bonuses": {
+        "CON": 2,
+        "INT": 1
+      },
+      "species_traits": [
+        "Dwarven Speed",
+        "Darkvision",
+        "Dwarven Resilience",
+        "Dwarven Combat Training",
+        "Tool Proficiency",
+        "Stonecunning",
+        "Warder's Intuition",
+        "Wards and Seals",
+        "Spells of the Mark (Warding)"
+      ],
+      "description": "Dragonmarked dwarves of House Kundarak bear the Mark of Warding, a gift for locks, wards and protective magic.",
+      "typicalRoles": [
+        "Artificer",
+        "Fighter",
+        "Wizard",
+        "Rogue"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "elf-mark-of-shadow",
+      "name": "Elf (Mark of Shadow)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "DEX": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Keen Senses",
+        "Fey Ancestry",
+        "Trance",
+        "Cunning Intuition",
+        "Shape Shadows",
+        "Spells of the Mark (Shadow)"
+      ],
+      "description": "Elves of House Phiarlan or Thuranni with the Mark of Shadow are performers and spies who can bend darkness and illusion.",
+      "typicalRoles": [
+        "Rogue",
+        "Bard",
+        "Warlock",
+        "Wizard"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "gnome-mark-of-scribing",
+      "name": "Gnome (Mark of Scribing)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 25,
+      "ability_bonuses": {
+        "INT": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Gnome Cunning",
+        "Gifted Scribe",
+        "Scribe's Insight",
+        "Spells of the Mark (Scribing)"
+      ],
+      "description": "Gnomes of House Sivis bear the Mark of Scribing, which makes them natural messengers, notaries and translators.",
+      "typicalRoles": [
+        "Wizard",
+        "Bard",
+        "Cleric",
+        "Artificer"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "halfling-mark-of-healing",
+      "name": "Halfling (Mark of Healing)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 25,
+      "ability_bonuses": {
+        "DEX": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Lucky",
+        "Brave",
+        "Halfling Nimbleness",
+        "Medical Intuition",
+        "Healing Touch",
+        "Spells of the Mark (Healing)"
+      ],
+      "description": "Halflings of House Jorasco with the Mark of Healing are the healers of Khorvaire, mending wounds with innate magic.",
+      "typicalRoles": [
+        "Cleric",
+        "Druid",
+        "Bard",
+        "Artificer"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "halfling-mark-of-hospitality",
+      "name": "Halfling (Mark of Hospitality)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 25,
+      "ability_bonuses": {
+        "DEX": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Lucky",
+        "Brave",
+        "Halfling Nimbleness",
+        "Ever Hospitable",
+        "Innkeeper's Magic",
+        "Spells of the Mark (Hospitality)"
+      ],
+      "description": "Halflings of House Ghallanda bear the Mark of Hospitality, a gift for welcome, comfort and a good meal.",
+      "typicalRoles": [
+        "Bard",
+        "Rogue",
+        "Cleric",
+        "Warlock"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "human-mark-of-handling",
+      "name": "Human (Mark of Handling)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "WIS": 2
+      },
+      "species_traits": [
+        "Wild Intuition",
+        "Primal Connection",
+        "The Bigger They Are",
+        "Spells of the Mark (Handling)"
+      ],
+      "description": "Humans of House Vadalis with the Mark of Handling have a bond with beasts and a talent for training them.",
+      "typicalRoles": [
+        "Druid",
+        "Ranger",
+        "Barbarian",
+        "Cleric"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "DEX",
+          "CON",
+          "INT",
+          "CHA"
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "human-mark-of-making",
+      "name": "Human (Mark of Making)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "INT": 2
+      },
+      "species_traits": [
+        "Artisan's Intuition",
+        "Maker's Gift",
+        "Spellsmith",
+        "Spells of the Mark (Making)"
+      ],
+      "description": "Humans of House Cannith bear the Mark of Making, which lets them craft and mend with magical ease.",
+      "typicalRoles": [
+        "Artificer",
+        "Wizard",
+        "Fighter",
+        "Cleric"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "DEX",
+          "CON",
+          "WIS",
+          "CHA"
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "human-mark-of-passage",
+      "name": "Human (Mark of Passage)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 35,
+      "ability_bonuses": {
+        "DEX": 2
+      },
+      "species_traits": [
+        "Courier's Speed",
+        "Intuitive Motion",
+        "Magical Passage",
+        "Spells of the Mark (Passage)"
+      ],
+      "description": "Humans of House Orien with the Mark of Passage are tireless couriers who move faster than others and step through space.",
+      "typicalRoles": [
+        "Rogue",
+        "Ranger",
+        "Monk",
+        "Bard"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "CON",
+          "INT",
+          "WIS",
+          "CHA"
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "human-mark-of-sentinel",
+      "name": "Human (Mark of Sentinel)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "CON": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Sentinel's Intuition",
+        "Guardian's Shield",
+        "Vigilant Guardian",
+        "Spells of the Mark (Sentinel)"
+      ],
+      "description": "Humans of House Deneith bearing the Mark of Sentinel are bodyguards who can take a blow meant for an ally.",
+      "typicalRoles": [
+        "Fighter",
+        "Paladin",
+        "Cleric",
+        "Ranger"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true,
+      "languageChoices": 1
+    },
+    {
+      "slug": "human-mark-of-finding",
+      "name": "Human (Mark of Finding)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "CON": 1,
+        "WIS": 2
+      },
+      "species_traits": [
+        "Darkvision",
+        "Hunter's Intuition",
+        "Finder's Magic",
+        "Spells of the Mark (Finding)"
+      ],
+      "description": "Humans of House Tharashk with the Mark of Finding are hunters and trackers who can locate nearly anything.",
+      "typicalRoles": [
+        "Ranger",
+        "Rogue",
+        "Fighter",
+        "Druid"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "half-elf-mark-of-detection",
+      "name": "Half-Elf (Mark of Detection)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "WIS": 2
+      },
+      "species_traits": [
+        "Darkvision",
+        "Fey Ancestry",
+        "Deductive Intuition",
+        "Magical Detection",
+        "Spells of the Mark (Detection)"
+      ],
+      "description": "Half-elves of House Medani with the Mark of Detection are investigators who sense magic, poison and hidden things.",
+      "typicalRoles": [
+        "Rogue",
+        "Ranger",
+        "Cleric",
+        "Wizard"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true,
+      "abilityChoice": {
+        "patterns": [
+          [
+            1
+          ]
+        ],
+        "from": [
+          "STR",
+          "DEX",
+          "CON",
+          "INT",
+          "CHA"
+        ]
+      },
+      "languageChoices": 1
+    },
+    {
+      "slug": "half-elf-mark-of-storm",
+      "name": "Half-Elf (Mark of Storm)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "DEX": 1,
+        "CHA": 2
+      },
+      "species_traits": [
+        "Darkvision",
+        "Fey Ancestry",
+        "Windwright's Intuition",
+        "Storm's Boon",
+        "Headwinds",
+        "Spells of the Mark (Storm)"
+      ],
+      "description": "Half-elves of House Lyrandar bear the Mark of Storm, with command of wind, weather and a resistance to lightning.",
+      "typicalRoles": [
+        "Sorcerer",
+        "Bard",
+        "Druid",
+        "Rogue"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true,
+      "languageChoices": 1
+    },
+    {
+      "slug": "half-orc-mark-of-finding",
+      "name": "Half-Orc (Mark of Finding)",
+      "edition": "2014",
+      "source": "ERLW",
+      "speed": 30,
+      "ability_bonuses": {
+        "WIS": 2,
+        "CON": 1
+      },
+      "species_traits": [
+        "Relentless Endurance",
+        "Savage Attacks",
+        "Darkvision",
+        "Hunter's Intuition",
+        "Finder's Magic",
+        "Spells of the Mark (Finding)"
+      ],
+      "description": "Half-orcs of the Shadow Marches with the Mark of Finding are hunters and trackers who can locate nearly anything.",
+      "typicalRoles": [
+        "Ranger",
+        "Barbarian",
+        "Rogue",
+        "Fighter"
+      ],
+      "sources": [
+        "ERLW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "eberron",
+        "dragonmark",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "elf-pallid",
+      "name": "Elf (Pallid)",
+      "edition": "2014",
+      "source": "EGW",
+      "speed": 30,
+      "ability_bonuses": {
+        "DEX": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Keen Senses",
+        "Fey Ancestry",
+        "Trance",
+        "Incisive Sense",
+        "Blessing of the Moon Weaver"
+      ],
+      "description": "Pallid elves are pale, moon-touched elves of Xhorhas, shaped by a blessing of the Moon Weaver.",
+      "typicalRoles": [
+        "Cleric",
+        "Druid",
+        "Wizard",
+        "Monk"
+      ],
+      "sources": [
+        "EGW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "wildemount",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "halfling-ghostwise",
+      "name": "Halfling (Ghostwise)",
+      "edition": "2014",
+      "source": "SCAG",
+      "speed": 25,
+      "ability_bonuses": {
+        "DEX": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Lucky",
+        "Brave",
+        "Halfling Nimbleness",
+        "Silent Speech"
+      ],
+      "description": "Ghostwise halflings are reclusive, forest-dwelling halflings who speak with their minds.",
+      "typicalRoles": [
+        "Ranger",
+        "Druid",
+        "Rogue",
+        "Barbarian"
+      ],
+      "sources": [
+        "SCAG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "faerun",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "halfling-lotusden",
+      "name": "Halfling (Lotusden)",
+      "edition": "2014",
+      "source": "EGW",
+      "speed": 25,
+      "ability_bonuses": {
+        "DEX": 2,
+        "WIS": 1
+      },
+      "species_traits": [
+        "Lucky",
+        "Brave",
+        "Halfling Nimbleness",
+        "Child of the Wood",
+        "Timberwalk"
+      ],
+      "description": "Lotusden halflings live in the Lotusden forest of Wildemount and have a quiet magic of the wood.",
+      "typicalRoles": [
+        "Druid",
+        "Ranger",
+        "Cleric",
+        "Rogue"
+      ],
+      "sources": [
+        "EGW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "wildemount",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "dragonborn-draconblood",
+      "name": "Dragonborn (Draconblood)",
+      "edition": "2014",
+      "source": "EGW",
+      "speed": 30,
+      "ability_bonuses": {
+        "INT": 2,
+        "CHA": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Forceful Presence",
+        "Draconic Ancestry (Breath Only)",
+        "Breath Weapon (Draconblood and Ravenite)"
+      ],
+      "description": "Draconblood dragonborn are diplomats and scholars, born to the shared bloodlines of the Dragon Empire.",
+      "typicalRoles": [
+        "Wizard",
+        "Sorcerer",
+        "Bard",
+        "Warlock"
+      ],
+      "sources": [
+        "EGW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "wildemount",
+        "draconic",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "dragonborn-ravenite",
+      "name": "Dragonborn (Ravenite)",
+      "edition": "2014",
+      "source": "EGW",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 2,
+        "CON": 1
+      },
+      "species_traits": [
+        "Darkvision",
+        "Vengeful Assault",
+        "Draconic Ancestry (Breath Only)",
+        "Breath Weapon (Draconblood and Ravenite)"
+      ],
+      "description": "Ravenite dragonborn are fierce warriors who take vengeance on anyone who wounds them.",
+      "typicalRoles": [
+        "Fighter",
+        "Barbarian",
+        "Paladin",
+        "Ranger"
+      ],
+      "sources": [
+        "EGW"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "wildemount",
+        "draconic",
+        "legacy"
+      ],
+      "legacy": true
+    },
+    {
+      "slug": "changeling-2024",
+      "name": "Changeling",
+      "edition": "2024",
+      "source": "EFA",
+      "speed": 30,
+      "creatureType": "Fey",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Changeling Instincts",
+        "Shape-Shifter"
+      ],
+      "description": "Changelings are shape-shifting fey descendants who can reshape their face, voice and build at will.",
+      "typicalRoles": [
+        "Bard",
+        "Rogue",
+        "Warlock",
+        "Sorcerer"
+      ],
+      "sources": [
+        "EFA"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "eberron",
+        "fey"
+      ]
+    },
+    {
+      "slug": "kalashtar-2024",
+      "name": "Kalashtar",
+      "edition": "2024",
+      "source": "EFA",
+      "speed": 30,
+      "creatureType": "Aberration",
+      "size": "Medium",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Dual Mind",
+        "Mental Discipline",
+        "Mind Link",
+        "Severed from Dreams"
+      ],
+      "description": "Kalashtar are people bonded to spirits from the plane of dreams, linked mind to mind and shielded from psychic harm.",
+      "typicalRoles": [
+        "Cleric",
+        "Monk",
+        "Wizard",
+        "Bard"
+      ],
+      "sources": [
+        "EFA"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "eberron"
+      ]
+    },
+    {
+      "slug": "khoravar-2024",
+      "name": "Khoravar",
+      "edition": "2024",
+      "source": "EFA",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Fey Ancestry",
+        "Fey Gift",
+        "Lethargy Resilience",
+        "Skill Versatility"
+      ],
+      "description": "Khoravar are the children of elves and humans in Eberron: versatile, fey-touched and at home in two worlds.",
+      "typicalRoles": [
+        "Bard",
+        "Ranger",
+        "Wizard",
+        "Rogue"
+      ],
+      "sources": [
+        "EFA"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "eberron"
+      ]
+    },
+    {
+      "slug": "shifter-2024",
+      "name": "Shifter",
+      "edition": "2024",
+      "source": "EFA",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Bestial Instincts",
+        "Darkvision",
+        "Shifting"
+      ],
+      "description": "Shifters carry the blood of lycanthropes and can take on a more bestial form for a short time.",
+      "typicalRoles": [
+        "Barbarian",
+        "Ranger",
+        "Fighter",
+        "Druid"
+      ],
+      "sources": [
+        "EFA"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "eberron"
+      ]
+    },
+    {
+      "slug": "warforged-2024",
+      "name": "Warforged",
+      "edition": "2024",
+      "source": "EFA",
+      "speed": 30,
+      "creatureType": "Construct",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Construct Resilience",
+        "Integrated Protection",
+        "Sentry's Rest",
+        "Specialized Design (Skill and Tool)",
+        "Tireless"
+      ],
+      "description": "Warforged are living constructs built for war. They do not sleep or tire as others do and weave armor into their own bodies.",
+      "typicalRoles": [
+        "Fighter",
+        "Paladin",
+        "Artificer",
+        "Barbarian"
+      ],
+      "sources": [
+        "EFA"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "eberron",
+        "construct"
+      ]
+    },
+    {
+      "slug": "dhampir-2024",
+      "name": "Dhampir",
+      "edition": "2024",
+      "source": "RHW",
+      "speed": 35,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Spider Climb",
+        "Trace of Undeath",
+        "Vampiric Bite"
+      ],
+      "description": "Dhampirs carry the curse of vampire blood: quick, keen-eyed and able to drain life with a bite.",
+      "typicalRoles": [
+        "Rogue",
+        "Fighter",
+        "Barbarian",
+        "Monk"
+      ],
+      "sources": [
+        "RHW",
+        "ABH"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "ravenloft",
+        "undead"
+      ]
+    },
+    {
+      "slug": "hexblood-2024",
+      "name": "Hexblood",
+      "edition": "2024",
+      "source": "RHW",
+      "speed": 30,
+      "creatureType": "Fey",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Eerie Token"
+      ],
+      "description": "Hexbloods are touched by a hag's magic, bearing an eerie token that lets them speak and see across distance.",
+      "typicalRoles": [
+        "Warlock",
+        "Wizard",
+        "Sorcerer",
+        "Bard"
+      ],
+      "sources": [
+        "RHW"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "ravenloft",
+        "fey"
+      ]
+    },
+    {
+      "slug": "lupin-2024",
+      "name": "Lupin",
+      "edition": "2024",
+      "source": "RHW",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Feral Pounce",
+        "Howl",
+        "Werewolf Instincts"
+      ],
+      "description": "Lupins carry the blood of werewolves: sharp senses, slashing claws and a chilling howl.",
+      "typicalRoles": [
+        "Barbarian",
+        "Ranger",
+        "Fighter",
+        "Rogue"
+      ],
+      "sources": [
+        "RHW"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "ravenloft"
+      ]
+    },
+    {
+      "slug": "reborn-2024",
+      "name": "Reborn",
+      "edition": "2024",
+      "source": "RHW",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Escaped Death",
+        "Everlasting",
+        "Knowledge from a Past Life",
+        "Strange Endurance"
+      ],
+      "description": "The reborn have died and returned, resisting death's touch and remembering glimpses of a past life.",
+      "typicalRoles": [
+        "Fighter",
+        "Cleric",
+        "Rogue",
+        "Wizard"
+      ],
+      "sources": [
+        "RHW",
+        "PL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "ravenloft",
+        "undead"
+      ]
+    },
+    {
+      "slug": "boggart-2024",
+      "name": "Boggart",
+      "edition": "2024",
+      "source": "LFL",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Fey Ancestry",
+        "Fury of the Small",
+        "Nimble Escape"
+      ],
+      "description": "Boggarts are goblin-like natives of Lorwyn who love mischief, novelty and odd alchemy.",
+      "typicalRoles": [
+        "Rogue",
+        "Warlock",
+        "Artificer",
+        "Bard"
+      ],
+      "sources": [
+        "LFL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "lorwyn",
+        "monstrous"
+      ]
+    },
+    {
+      "slug": "faerie-2024",
+      "name": "Faerie",
+      "edition": "2024",
+      "source": "LFL",
+      "speed": 30,
+      "creatureType": "Fey",
+      "size": "Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Fairy Magic",
+        "Flight"
+      ],
+      "description": "Faeries are tiny winged tricksters of Lorwyn and Shadowmoor, with innate nature magic.",
+      "typicalRoles": [
+        "Druid",
+        "Bard",
+        "Wizard",
+        "Rogue"
+      ],
+      "sources": [
+        "LFL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "lorwyn",
+        "fey"
+      ]
+    },
+    {
+      "slug": "flamekin-2024",
+      "name": "Flamekin",
+      "edition": "2024",
+      "source": "LFL",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Darkvision",
+        "Fire Resistance",
+        "Reach to the Blaze"
+      ],
+      "description": "Flamekin are genasi-like people of Lorwyn marked by fire: expressive, resistant to flame and gifted at conjuring it.",
+      "typicalRoles": [
+        "Sorcerer",
+        "Fighter",
+        "Bard",
+        "Wizard"
+      ],
+      "sources": [
+        "LFL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "lorwyn",
+        "elemental"
+      ]
+    },
+    {
+      "slug": "kithkin-2024",
+      "name": "Kithkin",
+      "edition": "2024",
+      "source": "LFL",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Brave",
+        "Halfling Nimbleness",
+        "Luck",
+        "Naturally Stealthy"
+      ],
+      "description": "Kithkin are halfling-like folk of Lorwyn, close-knit, lucky and skilled at crafting.",
+      "typicalRoles": [
+        "Rogue",
+        "Fighter",
+        "Cleric",
+        "Artificer"
+      ],
+      "sources": [
+        "LFL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "lorwyn"
+      ]
+    },
+    {
+      "slug": "lorwyn-changeling-2024",
+      "name": "Lorwyn Changeling",
+      "edition": "2024",
+      "source": "LFL",
+      "speed": 30,
+      "creatureType": "Fey",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Shape Self",
+        "Darkvision (120 ft)",
+        "Delightful Imitator",
+        "Unpredictable Movement"
+      ],
+      "description": "Lorwyn changelings take any guise: harbingers of good luck who can reshape into a humanoid or a four-legged beast.",
+      "typicalRoles": [
+        "Bard",
+        "Rogue",
+        "Ranger",
+        "Warlock"
+      ],
+      "sources": [
+        "LFL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "lorwyn",
+        "fey"
+      ]
+    },
+    {
+      "slug": "rimekin-2024",
+      "name": "Rimekin",
+      "edition": "2024",
+      "source": "LFL",
+      "speed": 30,
+      "creatureType": "Humanoid",
+      "size": "Medium or Small",
+      "ability_bonuses": {},
+      "species_traits": [
+        "Cold Fire Magic",
+        "Cold Resistance",
+        "Darkvision"
+      ],
+      "description": "Rimekin are genasi-like people of Lorwyn shaped by ice and cold fire, who shrug off the cold.",
+      "typicalRoles": [
+        "Wizard",
+        "Sorcerer",
+        "Monk",
+        "Fighter"
+      ],
+      "sources": [
+        "LFL"
+      ],
+      "core": false,
+      "expanded": true,
+      "legacy": false,
+      "tags": [
+        "lorwyn",
+        "elemental"
+      ]
+    },
+    {
+      "slug": "bullywug",
+      "name": "Bullywug",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 20,
+      "ability_bonuses": {
+        "INT": -2,
+        "CHA": -2
+      },
+      "species_traits": [
+        "Amphibious",
+        "Speak with Frogs and Toads",
+        "Swamp Camouflage",
+        "Standing Leap"
+      ],
+      "description": "Frogfolk of the swamps. They breathe water as easily as air and leap farther than their stride suggests.",
+      "typicalRoles": [
+        "Ranger",
+        "Druid",
+        "Fighter"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true,
+      "swimSpeed": 40
+    },
+    {
+      "slug": "gnoll",
+      "name": "Gnoll",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 2,
+        "INT": -2
+      },
+      "species_traits": [
+        "Gnoll Bite",
+        "Darkvision",
+        "Rampage"
+      ],
+      "description": "Hyena-folk with a powerful bite. Dropping a foe lets them surge forward and bite again.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Ranger"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true
+    },
+    {
+      "slug": "grimlock",
+      "name": "Grimlock",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 2,
+        "CHA": -2
+      },
+      "species_traits": [
+        "Blindsight",
+        "Keen Hearing and Smell",
+        "Stone Camouflage"
+      ],
+      "description": "Eyeless hunters of the Underdark. They sense prey by sound and smell and blend into stone.",
+      "typicalRoles": [
+        "Barbarian",
+        "Rogue",
+        "Fighter"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true
+    },
+    {
+      "slug": "kuo-toa",
+      "name": "Kuo-Toa",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 30,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Amphibious",
+        "Otherworldly Perception",
+        "Slippery",
+        "Sunlight Sensitivity",
+        "Superior Darkvision"
+      ],
+      "description": "Fishlike people of the Underdark. They sense creatures others cannot see and slip free of a grapple.",
+      "typicalRoles": [
+        "Cleric",
+        "Fighter",
+        "Rogue"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true,
+      "swimSpeed": 30
+    },
+    {
+      "slug": "merfolk",
+      "name": "Merfolk",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 10,
+      "ability_bonuses": {},
+      "species_traits": [
+        "Amphibious"
+      ],
+      "description": "People of the sea. They are slow on land, swift in the water, and able to breathe air.",
+      "typicalRoles": [
+        "Druid",
+        "Ranger",
+        "Fighter"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true,
+      "swimSpeed": 40
+    },
+    {
+      "slug": "skeleton",
+      "name": "Skeleton",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 30,
+      "ability_bonuses": {
+        "DEX": 2,
+        "INT": -4,
+        "CHA": -4
+      },
+      "species_traits": [
+        "Brittle Bones",
+        "Undead Nature (Skeleton)",
+        "Darkvision"
+      ],
+      "description": "An animated skeleton: brittle, tireless, and immune to poison. It cannot speak, but it understands the languages of its former life.",
+      "typicalRoles": [
+        "Fighter",
+        "Rogue",
+        "Wizard"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true
+    },
+    {
+      "slug": "troglodyte",
+      "name": "Troglodyte",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 2,
+        "CON": 2,
+        "INT": -4,
+        "CHA": -4
+      },
+      "species_traits": [
+        "Chameleon Skin",
+        "Stench",
+        "Sunlight Sensitivity",
+        "Natural Armor (+1)",
+        "Darkvision"
+      ],
+      "description": "A cave-dweller with a thick hide and a stench that sickens anything standing close.",
+      "typicalRoles": [
+        "Barbarian",
+        "Fighter",
+        "Ranger"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true
+    },
+    {
+      "slug": "zombie",
+      "name": "Zombie",
+      "edition": "2014",
+      "source": "DMG",
+      "speed": 30,
+      "ability_bonuses": {
+        "STR": 1,
+        "CON": 2,
+        "INT": -6,
+        "WIS": -4,
+        "CHA": -4
+      },
+      "species_traits": [
+        "Undead Fortitude",
+        "Undead Nature (Zombie)",
+        "Darkvision"
+      ],
+      "description": "A walking corpse that sometimes refuses to fall, and that shrugs off poison.",
+      "typicalRoles": [
+        "Fighter",
+        "Barbarian",
+        "Cleric"
+      ],
+      "sources": [
+        "DMG"
+      ],
+      "core": false,
+      "expanded": true,
+      "tags": [
+        "monstrous",
+        "legacy"
+      ],
+      "legacy": true,
+      "monstrousOption": true
     }
   ]
 }

@@ -23,7 +23,7 @@ import { DraggableSpellCard } from './DraggableSpellCard';
 import { DroppableSpellbook } from './DroppableSpellbook';
 import { CreateSpellbookModal } from './CreateSpellbookModal';
 import { SpellDetailModal } from '../SpellDetailModal';
-import { SpellFilterState, filterAppSpells, schoolColors } from '../../utils/spellbookAdapter';
+import { SpellFilterState, filterAppSpells, schoolColors, spellBookLabel } from '../../utils/spellbookAdapter';
 import { migrateLegacySpellbooks } from '../../utils/spellbookMigration';
 import { log } from '../../utils/logger';
 import { Character } from '../../types/dnd';
@@ -58,8 +58,12 @@ export const SpellbookManager: React.FC<SpellbookManagerProps> = ({ selectedChar
   const [filters, setFilters] = useState<Omit<SpellFilterState, 'favoriteSlugs'>>({
     searchTerm: '',
     editionFilter: '2024',
-    selectedLevel: 'all',
+    selectedLevels: [],
     selectedSchools: [],
+    selectedClasses: [],
+    selectedBooks: [],
+    casting: [],
+    sort: 'name',
     filterRitual: false,
     filterConcentration: false,
     filterFavorites: false,
@@ -118,8 +122,12 @@ export const SpellbookManager: React.FC<SpellbookManagerProps> = ({ selectedChar
     setFilters({
       searchTerm: '',
       editionFilter: '2024',
-      selectedLevel: 'all',
+      selectedLevels: [],
       selectedSchools: [],
+      selectedClasses: [],
+      selectedBooks: [],
+      casting: [],
+      sort: 'name',
       filterRitual: false,
       filterConcentration: false,
       filterFavorites: false,
@@ -131,6 +139,22 @@ export const SpellbookManager: React.FC<SpellbookManagerProps> = ({ selectedChar
     const schools = Array.from(new Set(SPELL_DATABASE.map((s) => s.school)));
     return schools.sort();
   }, []);
+
+  const availableClasses = useMemo(() => {
+    const names = new Set<string>();
+    SPELL_DATABASE.forEach(spell => spell.classes.forEach(name => names.add(name.toLowerCase())));
+    return [...names].sort();
+  }, []);
+
+  const availableBooks = useMemo(() => {
+    const books = new Set<string>();
+    SPELL_DATABASE.forEach(spell => {
+      if (!spell.book) return;
+      if (filters.editionFilter !== 'all' && spell.source !== filters.editionFilter) return;
+      books.add(spell.book);
+    });
+    return [...books].sort((a, b) => spellBookLabel(a).localeCompare(spellBookLabel(b)));
+  }, [filters.editionFilter]);
 
   // Combined filter state for search/filtering
   const fullFilterState = useMemo<SpellFilterState>(
@@ -205,7 +229,7 @@ export const SpellbookManager: React.FC<SpellbookManagerProps> = ({ selectedChar
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `nexus-forge-spellbooks-${Date.now()}.json`;
+    a.download = `dnd-character-system-spellbooks-${Date.now()}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -309,10 +333,12 @@ export const SpellbookManager: React.FC<SpellbookManagerProps> = ({ selectedChar
 
         {/* Filter Controls */}
         <SpellFilterBar
-          filters={filters}
+          filters={fullFilterState}
           onChangeFilters={handleUpdateFilters}
           onResetFilters={handleResetFilters}
           availableSchools={availableSchools}
+          availableClasses={availableClasses}
+          availableBooks={availableBooks}
         />
 
         {/* Main 2-column Grid */}

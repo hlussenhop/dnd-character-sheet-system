@@ -111,6 +111,7 @@ export interface LevelUpData {
   features: ClassLevelFeature[];   // Features gained at this level
   requiresChoices: boolean;        // If true, wizard must be shown
   choices: FeatureChoice[];        // All choices to be made
+  optionalFeaturePicks?: boolean;  // Invocations, maneuvers, metamagic, and the other catalog options
 }
 
 /**

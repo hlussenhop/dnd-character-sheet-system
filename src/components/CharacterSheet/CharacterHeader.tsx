@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Trash2, Tent, TrendingUp, TrendingDown, Dice6, Edit3 } from 'lucide-react';
 import { Character } from '../../types/dnd';
 import { LayoutSelector } from './LayoutSelector';
+import { findSpeciesByName } from '../../services/dataService';
 
 interface CharacterHeaderProps {
   character: Character;
@@ -27,6 +28,10 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
   onOpenDiceTray
 }) => {
   const [rollOnSheet, setRollOnSheet] = useState(false);
+  const variantLabel = character.selectedSpeciesVariant
+    ? findSpeciesByName(character.species, character.edition)
+        ?.variants?.find(v => v.slug === character.selectedSpeciesVariant)?.name ?? character.selectedSpeciesVariant
+    : undefined;
   return (
     <>
       {/* Header and Controls */}
@@ -38,9 +43,9 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
           </h1>
           <div className="text-sm text-theme-tertiary">
             {character.species} {character.class} • Level {character.level}
-            {character.selectedSpeciesVariant && (
+            {variantLabel && (
               <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-accent-blue-darker text-xs font-semibold text-blue-100 border border-accent-blue-dark">
-                {character.selectedSpeciesVariant}
+                {variantLabel}
               </span>
             )}
           </div>

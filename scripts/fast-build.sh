@@ -24,8 +24,8 @@ docker build \
   --progress=plain \
   --target builder \
   --build-arg BUILDKIT_INLINE_CACHE=1 \
-  --cache-from joelmale/nexus-forge:latest \
-  --tag joelmale/nexus-forge:builder \
+  --cache-from joelmale/dnd-character-system:latest \
+  --tag joelmale/dnd-character-system:builder \
   .
 
 BUILDER_END=$(date +%s)
@@ -42,9 +42,9 @@ docker build \
   --no-cache \
   --progress=plain \
   --build-arg BUILDKIT_INLINE_CACHE=1 \
-  --cache-from joelmale/nexus-forge:latest \
-  --cache-from joelmale/nexus-forge:builder \
-  --tag joelmale/nexus-forge:latest \
+  --cache-from joelmale/dnd-character-system:latest \
+  --cache-from joelmale/dnd-character-system:builder \
+  --tag joelmale/dnd-character-system:latest \
   .
 
 PRODUCTION_END=$(date +%s)

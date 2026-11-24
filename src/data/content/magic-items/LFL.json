@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Reliquary of Dawn",
+    "edition": "2024",
+    "source": "LFL",
+    "rarity": "uncommon",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This talisman contains a discarded claw, scale, or fang from Eirdu, which many believe is the incarnation of the sun in Lorwyn. While you wear a Reliquary of Dawn, you are immune to the effects of Eventide.",
+    "sources": [
+      "LFL"
+    ],
+    "slug": "reliquary-of-dawn-2024"
+  },
+  {
+    "name": "Reliquary of Twilight",
+    "edition": "2024",
+    "source": "LFL",
+    "rarity": "uncommon",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This talisman contains a discarded claw, scale, or fang from Isilu, which many believe is the incarnation of the moon in Shadowmoor. While you wear a Reliquary of Twilight, you are immune to the effects of Morningtide.",
+    "sources": [
+      "LFL"
+    ],
+    "slug": "reliquary-of-twilight-2024"
+  }
+]

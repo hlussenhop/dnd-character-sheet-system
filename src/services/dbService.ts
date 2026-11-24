@@ -4,19 +4,55 @@ import { IndexedDbAdapter } from './storage/IndexedDbAdapter';
 
 // Create a default instance for standalone mode
 let currentStorage: IStorageService = new IndexedDbAdapter();
+let externalStorage = false;
 
-// Allow external code (e.g. NexusVTT embedding) to inject a different storage adapter
+// Allow external code (e.g. NexusVTT embedding) to inject a different storage adapter.
+// Characters use that adapter only when it is injected. Otherwise they live in Firebase.
 export const setStorageAdapter = (adapter: IStorageService) => {
   currentStorage = adapter;
+  externalStorage = true;
 };
 
 // ==================== Proxy Functions ====================
 // We proxy the calls to currentStorage so existing hooks do not need to be refactored immediately.
 
-export const getAllCharacters = async (): Promise<Character[]> => currentStorage.getAllCharacters();
-export const addCharacter = async (character: Character): Promise<string> => currentStorage.addCharacter(character);
-export const deleteCharacter = async (id: string): Promise<void> => currentStorage.deleteCharacter(id);
-export const updateCharacter = async (character: Character): Promise<void> => currentStorage.updateCharacter(character);
+const stampCharacter = (character: Character): Character => ({
+  ...character,
+  createdAt: character.createdAt ?? new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+});
+
+const characterCloud = () => import('./firebase/characterCloud');
+
+export const getAllCharacters = async (): Promise<Character[]> => {
+  if (externalStorage) return currentStorage.getAllCharacters();
+  const cloud = await characterCloud();
+  return cloud.listCharacters();
+};
+export const addCharacter = async (character: Character): Promise<string> => {
+  const saved = stampCharacter(character);
+  if (externalStorage) return currentStorage.addCharacter(saved);
+  const cloud = await characterCloud();
+  await cloud.saveCharacter(saved);
+  return saved.id;
+};
+export const deleteCharacter = async (id: string): Promise<void> => {
+  if (externalStorage) {
+    await currentStorage.deleteCharacter(id);
+    return;
+  }
+  const cloud = await characterCloud();
+  await cloud.removeCharacter(id);
+};
+export const updateCharacter = async (character: Character): Promise<void> => {
+  const saved = stampCharacter(character);
+  if (externalStorage) {
+    await currentStorage.updateCharacter(saved);
+    return;
+  }
+  const cloud = await characterCloud();
+  await cloud.saveCharacter(saved);
+};
 
 export const getAllCustomMonsters = async (): Promise<UserMonster[]> => currentStorage.getAllCustomMonsters();
 export const addCustomMonster = async (monster: UserMonster): Promise<string> => currentStorage.addCustomMonster(monster);

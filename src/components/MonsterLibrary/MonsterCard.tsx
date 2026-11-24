@@ -2,7 +2,7 @@ import React from 'react';
 import { Eye, Star, Edit2, Trash2, Plus, Minus, ExternalLink } from 'lucide-react';
 import { Monster, UserMonster } from '../../types/dnd';
 import { useMonsterContext } from '../../hooks';
-import { generateMonsterSlug } from '../../utils/monsterUtils';
+import { formatChallengeRating, monsterShareSlug, monsterSourceLabel } from '../../utils/monsterUtils';
 
 interface MonsterCardProps {
   monster: Monster | UserMonster;
@@ -30,10 +30,14 @@ const getACDisplay = (armorClass: Monster['armor_class']): string => {
 };
 
 const getSpeedDisplay = (speed: Monster['speed']): string => {
-  if (speed.walk) return speed.walk;
-  if (speed.fly) return `fly ${speed.fly}`;
-  if (speed.swim) return `swim ${speed.swim}`;
-  return '0 ft.';
+  const parts = [
+    speed.walk,
+    speed.fly && `fly ${speed.fly}`,
+    speed.swim && `swim ${speed.swim}`,
+    speed.climb && `climb ${speed.climb}`,
+    speed.burrow && `burrow ${speed.burrow}`,
+  ].filter(Boolean);
+  return parts.join(', ') || '0 ft.';
 };
 
 export const MonsterCard: React.FC<MonsterCardProps> = ({
@@ -51,11 +55,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({
   const isCustom = 'isCustom' in monster && monster.isCustom;
 
   const getMonsterUrl = (): string => {
-    if (isCustom) {
-      return `${window.location.origin}/monster/custom-${monster.index}`;
-    } else {
-      return `${window.location.origin}/monster/${generateMonsterSlug(monster.name)}`;
-    }
+    return `${window.location.origin}/monster/${monsterShareSlug({ ...monster, isCustom })}`;
   };
 
   const handleOpenInNewTab = (e: React.MouseEvent) => {
@@ -107,6 +107,12 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({
             <p className="text-sm text-theme-muted">
               {monster.size} {monster.type}
               {monster.subtype && ` (${monster.subtype})`}
+              {monster.source && (
+                <span className="text-theme-disabled">
+                  {' '}
+                  · {monster.edition} {monsterSourceLabel(monster.source)}
+                </span>
+              )}
             </p>
           </div>
 
@@ -174,7 +180,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({
               monster.challenge_rating
             )} text-white text-sm font-bold rounded-full`}
           >
-            CR {monster.challenge_rating} ({monster.xp.toLocaleString()} XP)
+            CR {formatChallengeRating(monster.challenge_rating)} ({monster.xp.toLocaleString()} XP)
           </span>
         </div>
 

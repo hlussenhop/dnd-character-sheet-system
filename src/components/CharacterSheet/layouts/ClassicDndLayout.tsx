@@ -289,7 +289,7 @@ export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
         {character.spellcasting?.spellcastingType === 'prepared' && (
           <SpellPreparationModal
             character={character}
-            availableSpells={getSpellsForClass(character.class)}
+            availableSpells={getSpellsForClass(character.class, character.edition, character.background, character.subclass || undefined)}
             isOpen={showSpellPreparationModal}
             onClose={() => setShowSpellPreparationModal(false)}
             onSave={handleSpellPreparationSave}

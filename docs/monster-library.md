@@ -1,11 +1,11 @@
 # Adding Monsters to the Monster Library
 
-This guide explains how to add new monsters to the D&D NexusForge monster library. The system supports multiple methods for adding monsters, from simple custom monster creation to adding official monsters to the SRD database.
+The library lists the sourcebook catalog plus any custom monsters saved in this browser. A reprinted name is one card per edition. The search box matches name, type, and subtype, and the list can be sorted from that row. Filters for edition, source book, challenge rating (including 1/8, 1/4, and 1/2), creature type, size, fly/swim/climb/burrow, legendary actions, favorites, the 2014 SRD slugs, and custom monsters stay behind a Filters button until they are opened. Active choices remain as removable chips while the panel is closed. The grid shows 60 cards at a time. Opening a stat block or an encounter loads that creature's book file.
 
 ## Table of Contents
 
 1. [Quick Custom Monster Creation](#quick-custom-monster-creation)
-2. [Adding Monsters to SRD Database](#adding-monsters-to-srd-database)
+2. [Catalog monsters](#catalog-monsters)
 3. [Monster Data Structure](#monster-data-structure)
 4. [Monster Types and Categories](#monster-types-and-categories)
 5. [Validation and Testing](#validation-and-testing)
@@ -57,24 +57,30 @@ const bulkImportMonsters = async (monsters: UserMonster[]) => {
 };
 ```
 
-## Adding Monsters to SRD Database
+## Catalog monsters
 
-For official monsters or homebrew monsters that should be part of the core database, add them to the SRD JSON files.
+The list is `src/data/monsterIndex.json`. The stat block, including actions and traits, is `src/data/content/monsters/<SOURCE>.json`. `src/services/monsters.ts` loads the index first and one book when a stat block opens.
 
-### Method 1: Adding to Existing SRD Files
+`src/data/srd/2014/5e-SRD-Monsters.json` is the 2014 SRD slug set behind the SRD Only filter. Adding a creature there does not add it to the library list, and a new static import of the catalog will blow the bundle limit.
 
-1. **Locate SRD Files**
-   ```
-   src/data/srd/2014/5e-SRD-Monsters.json
-   ```
+Regenerate the catalog from `sourcebooks/`:
 
-2. **Add Monster Entry**
-   Add your monster to the JSON array following the SRD format:
+```bash
+python3 build_monsters.py          # report only
+python3 build_monsters.py --apply  # writes the index and the book files
+```
+
+2014 slugs reuse the SRD index when the name matches (`aboleth`, `goblin`). Every 2024 slug ends in `-2024` (`aboleth-2024`). Share links use that slug. An older name link such as `/monster/aboleth` still opens the 2014 creature.
+
+A catalog record uses the same shape as a custom monster, plus `edition`, `source`, and `sources`. Example:
 
 ```json
 {
   "index": "my-custom-monster",
   "name": "My Custom Monster",
+  "edition": "2014",
+  "source": "MM",
+  "sources": ["MM"],
   "size": "Large",
   "type": "monstrosity",
   "alignment": "neutral evil",
@@ -123,42 +129,6 @@ For official monsters or homebrew monsters that should be part of the core datab
 }
 ```
 
-3. **Update Monster Count**
-   - Update the comment in `dataService.ts` that mentions the monster count
-   - The system will automatically include your new monster
-
-### Method 2: Creating New SRD Files
-
-For large additions or different editions:
-
-1. **Create New SRD File**
-   ```
-   src/data/srd/2014/5e-SRD-Monsters-Custom.json
-   ```
-
-2. **Import in dataService.ts**
-   ```typescript
-   import customMonsters from '../data/srd/2014/5e-SRD-Monsters-Custom.json';
-
-   export const loadMonsters = (): Monster[] => {
-     const srdMonsters = srdMonsters2014.map(monster => ({
-       ...monster,
-       senses: Object.fromEntries(
-         Object.entries(monster.senses || {}).filter(([_, value]) => value !== undefined)
-       ) as Record<string, string | number>
-     })) as Monster[];
-
-     const customMonstersProcessed = customMonsters.map(monster => ({
-       ...monster,
-       senses: Object.fromEntries(
-         Object.entries(monster.senses || {}).filter(([_, value]) => value !== undefined)
-       ) as Record<string, string | number>
-     })) as Monster[];
-
-     return [...srdMonsters, ...customMonstersProcessed];
-   };
-   ```
-
 ## Monster Data Structure
 
 ### Required Fields
@@ -206,6 +176,9 @@ interface Monster {
   url?: string;                        // API URL reference
   image?: string;                      // Image URL
   desc?: string[];                     // Additional description paragraphs
+  edition?: '2014' | '2024';           // Catalog rows set this. Custom monsters omit it
+  source?: string;                     // Winning book, such as MM or XMM
+  sources?: string[];                  // Every printing in that edition, newest first
 }
 ```
 
@@ -353,8 +326,8 @@ if (missingFields.length > 0) {
 ### Performance Considerations
 
 - **Image optimization**: Use appropriately sized images
-- **Lazy loading**: Large monster lists are loaded on demand
-- **Caching**: Custom monsters are cached in IndexedDB
+- **Lazy loading**: The index loads with the library. A book's stat blocks load when one of its creatures is opened
+- **Caching**: Custom monsters are stored in IndexedDB
 
 ### Organization
 
@@ -451,4 +424,4 @@ if (missingFields.length > 0) {
 }
 ```
 
-This documentation provides comprehensive guidance for adding monsters through both the UI and direct JSON file modifications, ensuring data quality and system compatibility.
+Custom monsters are created in the library and stored in this browser. Catalog monsters come from `sourcebooks/build_monsters.py`.

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-export type TabId = 'characters' | 'monsters' | 'npcs' | 'spellbook';
+export type TabId = 'characters' | 'monsters' | 'items' | 'npcs' | 'spellbook';
 
 interface TabItem {
   id: TabId;
@@ -20,6 +20,7 @@ const TABS: TabItem[] = [
     icon: <span className="w-4 h-4 mr-2">🛡️</span>,
   },
   { id: 'monsters', label: 'Monster Library', icon: '🐉' },
+  { id: 'items', label: 'Item Library', icon: '🎒' },
   { id: 'npcs', label: 'NPC Library', icon: '🧙‍♂️' },
   { id: 'spellbook', label: 'Spellbook', icon: '📖' },
 ];
@@ -27,6 +28,7 @@ const TABS: TabItem[] = [
 const ACTIVE_TAB_CLASSES: Record<TabId, string> = {
   characters: 'text-accent-red-light border-accent-red-dark',
   monsters: 'text-accent-purple-light border-accent-purple-dark',
+  items: 'text-accent-yellow-light border-accent-yellow-dark',
   npcs: 'text-accent-green-light border-accent-green-dark',
   spellbook: 'text-accent-blue-light border-accent-blue-dark',
 };
@@ -34,6 +36,7 @@ const ACTIVE_TAB_CLASSES: Record<TabId, string> = {
 const ACTIVE_LINE_CLASSES: Record<TabId, string> = {
   characters: 'bg-accent-red-dark',
   monsters: 'bg-accent-purple-dark',
+  items: 'bg-accent-yellow-dark',
   npcs: 'bg-accent-green-dark',
   spellbook: 'bg-accent-blue-dark',
 };
@@ -44,7 +47,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabCh
       <div className={`absolute left-0 right-0 bottom-0 h-[2px] z-20 ${ACTIVE_LINE_CLASSES[activeTab]}`} />
 
       <h1 className="text-4xl font-extrabold text-red-500 mb-4 md:mb-0">
-        NexusForge
+        dnd character system
       </h1>
 
       <div className="flex gap-1 mb-[-1px] relative">

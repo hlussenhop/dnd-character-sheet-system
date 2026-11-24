@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Adventurer's Ring",
+    "edition": "2024",
+    "source": "FRHOF",
+    "rarity": "common",
+    "attunement": false,
+    "itemType": "Ring",
+    "typeCode": "RG",
+    "description": "While the cover on this ring is open, the ring produces a flame that creates no heat and consumes no fuel. It sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. As a Bonus Action, you can close the cover, smothering the flame, or open it again.",
+    "sources": [
+      "FRHOF"
+    ],
+    "slug": "adventurers-ring-2024"
+  },
+  {
+    "name": "Prosthetic Limb",
+    "edition": "2024",
+    "source": "FRHOF",
+    "rarity": "common",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "valueCp": 0,
+    "description": "This magic item replaces a lost limb—a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. You can detach or reattach it as a Magic action, and it can't be removed against your will while you are alive.",
+    "sources": [
+      "FRHOF",
+      "XDMG"
+    ],
+    "slug": "prosthetic-limb-2024"
+  },
+  {
+    "name": "Thayan Spell Tattoo",
+    "edition": "2024",
+    "source": "FRHOF",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This magical tattoo contains the essence of a level 1-3 spell chosen by the tattoo's creator. While the tattoo is on your body, you always have the associated spell prepared, and you can cast the spell using any spell slots you have of the appropriate level. If you have the Spellcasting or Pact Magic feature, the spell uses your spellcasting ability; otherwise, if the spell requires a saving throw or an attack roll, the spell save DC is 13 and the attack bonus is +5. If your Attunement to the tattoo ends, the tattoo vanishes.\nYou can also cast the spell once without a spell slot and spell components. Once the spell is cast in this way, the tattoo vanishes.",
+    "sources": [
+      "FRHOF"
+    ],
+    "slug": "thayan-spell-tattoo-2024"
+  }
+]

@@ -1,5 +1,5 @@
 import { LANGUAGES } from '../data/languages';
-import { getAllSpecies, BACKGROUNDS, getModifier, SPECIES_LANGUAGE_MAP } from '../services/dataService';
+import { findSpeciesBySlug, getBackground, getModifier, SPECIES_LANGUAGE_MAP } from '../services/dataService';
 import { CharacterCreationData } from '../types/dnd';
 
 export const calculateKnownLanguages = (data: CharacterCreationData): string[] => {
@@ -29,10 +29,7 @@ export const calculateKnownLanguages = (data: CharacterCreationData): string[] =
 };
 
 export const getSpeciesLanguages = (speciesSlug: string): string[] => {
-  const allSpecies = getAllSpecies();
-  const species = allSpecies.find(s => s.slug === speciesSlug);
-
-  if (!species) return [];
+  if (!findSpeciesBySlug(speciesSlug)) return [];
 
   return (SPECIES_LANGUAGE_MAP as Record<string, string[]>)[speciesSlug] || [];
 };
@@ -41,7 +38,7 @@ export const getSpeciesLanguages = (speciesSlug: string): string[] => {
 export const getRacialLanguages = getSpeciesLanguages;
 
 export const getBackgroundLanguages = (backgroundName: string): string[] => {
-  const background = BACKGROUNDS.find(bg => bg.name === backgroundName);
+  const background = getBackground(backgroundName);
 
   if (!background || !background.languages) return [];
 

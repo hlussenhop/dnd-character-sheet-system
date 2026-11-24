@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google sign-in</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #1c1917;
+        color: #f5f5f4;
+        font-family: system-ui, sans-serif;
+      }
+      main {
+        width: min(24rem, calc(100% - 2rem));
+        display: grid;
+        gap: 1rem;
+      }
+      button {
+        font: inherit;
+        font-weight: 700;
+        padding: 0.75rem 1rem;
+        border: 0;
+        border-radius: 0.5rem;
+        background: white;
+        color: black;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      p {
+        margin: 0;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p id="status">Opening Google…</p>
+      <button id="continue" type="button">Continue with Google</button>
+    </main>
+    <script type="module" src="/src/authPopup.ts"></script>
+  </body>
+</html>

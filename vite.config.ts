@@ -1,7 +1,56 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import type { IncomingMessage, ServerResponse } from 'node:http';
+
+const rootDir = path.dirname(fileURLToPath(import.meta.url));
+
+/** The Google window has to be a top-level page without the dice isolation header. */
+const authDocumentPlugin = (): Plugin => {
+  const serve = async (
+    req: IncomingMessage,
+    res: ServerResponse,
+    next: (error?: unknown) => void,
+    htmlPath: string,
+    transform?: (url: string, html: string) => Promise<string>,
+  ) => {
+    const url = req.url?.split('?')[0];
+    if (url !== '/auth.html' || res.writableEnded) {
+      next();
+      return;
+    }
+    try {
+      let html = await fs.readFile(htmlPath, 'utf-8');
+      if (transform) html = await transform(url, html);
+      res.statusCode = 200;
+      res.removeHeader('Cross-Origin-Embedder-Policy');
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+      res.end(html);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  return {
+    name: 'auth-document-headers',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        void serve(req, res, next, path.join(rootDir, 'auth.html'), (url, html) => server.transformIndexHtml(url, html));
+      });
+    },
+    configurePreviewServer(server) {
+      server.middlewares.use((req, res, next) => {
+        void serve(req, res, next, path.join(rootDir, 'dist', 'auth.html'));
+      });
+    },
+  };
+};
 
 const require = createRequire(import.meta.url);
 
@@ -18,9 +67,10 @@ const getVersion = () => {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    authDocumentPlugin(),
     react(),
     federation({
-      name: 'nexus_forge',
+      name: 'dnd_character_system',
       filename: 'remoteEntry.js',
       exposes: {
         './CharacterSheet': './src/components/CharacterSheet/CharacterSheet.tsx',
@@ -56,9 +106,15 @@ export default defineConfig({
       },
     },
     rollupOptions: {
+      input: {
+        index: path.resolve(rootDir, 'index.html'),
+        auth: path.resolve(rootDir, 'auth.html'),
+      },
       output: {
         manualChunks(id) {
-          // specific split for heavy 3D libraries (optional but recommended)
+          // Leave React and the rest of node_modules to Rollup. Forcing them
+          // into one vendor chunk deadlocks module federation: that chunk waits
+          // on React while the shared React file waits on the same chunk.
           if (id.includes('node_modules/three')) {
             return 'three';
           }
@@ -68,10 +124,8 @@ export default defineConfig({
           if (id.includes('node_modules/@3d-dice')) {
             return 'dice-3d';
           }
-
-          // Put all other node_modules into a 'vendor' chunk
-          if (id.includes('node_modules')) {
-            return 'vendor';
+          if (id.includes('node_modules/firebase') || id.includes('node_modules/@firebase')) {
+            return 'firebase';
           }
         },
       },

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Save, Grid, List, Trash2 } from 'lucide-react';
 import { Monster, UserMonster } from '../../types/dnd';
 import { useMonsterContext } from '../../hooks';
@@ -18,23 +18,47 @@ export const EncounterView: React.FC<EncounterViewProps> = ({ onBack, onStartCom
     setEncounterViewMode,
     clearSelection,
     allMonsters,
+    resolveMonster,
   } = useMonsterContext();
 
   const [showSaveModal, setShowSaveModal] = useState(false);
+  const [loaded, setLoaded] = useState<{ key: string; monsters: (Monster | UserMonster)[] } | null>(null);
 
-  // Get actual monster objects from IDs
-  const encounterMonsters: (Monster | UserMonster)[] = [];
-  Object.entries(selectedEncounterMonsters).forEach(([monsterId, quantity]) => {
-    const monster = allMonsters.find((m) => m.index === monsterId);
-    if (monster) {
-      // Add the monster multiple times based on quantity
-      for (let i = 0; i < quantity; i++) {
-        encounterMonsters.push(monster);
-      }
-    }
-  });
+  const selectionKey = Object.entries(selectedEncounterMonsters)
+    .map(([monsterId, quantity]) => `${monsterId}:${quantity}`)
+    .sort()
+    .join('|');
 
-  const totalMonsters = encounterMonsters.length;
+  useEffect(() => {
+    let live = true;
+    const key = selectionKey;
+    const load = async () => {
+      const ids = Object.keys(selectedEncounterMonsters);
+      if (ids.length > 0 && allMonsters.length === 0) return;
+      const rows = await Promise.all(
+        Object.entries(selectedEncounterMonsters).map(async ([monsterId, quantity]) => {
+          const monster = allMonsters.find(entry => entry.index === monsterId);
+          if (!monster) return null;
+          const full = await resolveMonster(monster).catch(() => monster);
+          return { full, quantity };
+        }),
+      );
+      if (!live) return;
+      const monsters: (Monster | UserMonster)[] = [];
+      rows.forEach(row => {
+        if (!row) return;
+        for (let i = 0; i < row.quantity; i++) monsters.push(row.full);
+      });
+      setLoaded({ key, monsters });
+    };
+    void load();
+    return () => {
+      live = false;
+    };
+  }, [selectionKey, selectedEncounterMonsters, allMonsters, resolveMonster]);
+
+  const encounterMonsters = loaded?.key === selectionKey ? loaded.monsters : null;
+  const selectedCount = Object.values(selectedEncounterMonsters).reduce((sum, quantity) => sum + quantity, 0);
   const uniqueMonsters = Object.keys(selectedEncounterMonsters).length;
 
   const handleClear = () => {
@@ -44,7 +68,7 @@ export const EncounterView: React.FC<EncounterViewProps> = ({ onBack, onStartCom
     }
   };
 
-  if (totalMonsters === 0) {
+  if (selectedCount === 0) {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
@@ -78,8 +102,8 @@ export const EncounterView: React.FC<EncounterViewProps> = ({ onBack, onStartCom
             <div>
               <h1 className="text-4xl font-bold">Encounter</h1>
               <p className="text-theme-muted mt-1">
-                {totalMonsters} monster{totalMonsters !== 1 ? 's' : ''}
-                {uniqueMonsters !== totalMonsters && (
+                {selectedCount} monster{selectedCount !== 1 ? 's' : ''}
+                {uniqueMonsters !== selectedCount && (
                   <span className="ml-1">({uniqueMonsters} unique)</span>
                 )}
               </p>
@@ -132,7 +156,9 @@ export const EncounterView: React.FC<EncounterViewProps> = ({ onBack, onStartCom
       </div>
 
       {/* Encounter Content */}
-      {encounterViewMode === 'grid' ? (
+      {!encounterMonsters ? (
+        <div className="text-center p-12 text-theme-muted">Loading stat blocks...</div>
+      ) : encounterViewMode === 'grid' ? (
         <EncounterGrid monsters={encounterMonsters} />
       ) : (
         <EncounterTabs monsters={encounterMonsters} />

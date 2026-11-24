@@ -5,7 +5,11 @@
  * Handles HP increases, spell slot progression, feature grants, and player choices.
  */
 
-import { Character, LevelUpChoices } from '../types/dnd';
+import { resolveSpeciesGrants, speciesMovement } from './speciesGrantUtils';
+import { subclassFeaturesUpToLevel } from './subclassCatalog';
+import { applyOptionalFeatureGrants, getOptionalFeature, levelUpNeedsOptionalFeatures, resolveOptionalFeatureSlug } from './optionalFeatures';
+import { applyFeatAbilityIncreases, resolveFeatGrants } from './featGrantUtils';
+import { AbilityName, Character, LevelUpChoices, SkillName } from '../types/dnd';
 import {
   ClassProgression,
   LevelUpData,
@@ -26,7 +30,7 @@ import { cleric2024Progression } from '../data/progressions/cleric2024';
 import { druid2024Progression } from '../data/progressions/druid2024';
 import { warlock2024Progression } from '../data/progressions/warlock2024';
 import { artificer2024Progression } from '../data/progressions/artificer2024';
-import { PROFICIENCY_BONUSES, CANTRIPS_KNOWN_BY_CLASS, loadSpells, loadFeats, type AppSpell } from '../services/dataService';
+import { PROFICIENCY_BONUSES, CANTRIPS_KNOWN_BY_CLASS, findSpeciesByName, loadSpells, getFeatBySlug, resolveFeatSlug, type AppSpell } from '../services/dataService';
 import { SPELL_LEARNING_RULES } from '../data/spellLearning';
 import { SPELL_SLOTS_BY_CLASS } from '../data/spellSlots';
 import { normalizeSpellSlots } from './spellSlotUtils';
@@ -80,6 +84,20 @@ export function getClassProgression(classSlug: string, edition: '2014' | '2024' 
   return null;
 }
 
+/** The catalog step is separate from the 2024 progression's invocation and metamagic lines. */
+function finishLevelUpData(character: Character, toLevel: number, data: LevelUpData): LevelUpData {
+  const classSlug = (character.classSlug || character.class).toLowerCase()
+  const needs = levelUpNeedsOptionalFeatures(
+    classSlug,
+    character.edition,
+    toLevel,
+    character.subclass,
+    data.choices.some(choice => choice.type === 'subclass'),
+  )
+  if (!needs) return data
+  return { ...data, optionalFeaturePicks: true, requiresChoices: true }
+}
+
 /**
  * Calculate all data needed for a level-up
  */
@@ -95,7 +113,7 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
   const progression = getClassProgression(character.class.toLowerCase(), character.edition);
   if (!progression) {
     // Fallback for classes without progression data yet
-    return createFallbackLevelUpData(character, fromLevel, toLevel);
+    return finishLevelUpData(character, toLevel, createFallbackLevelUpData(character, fromLevel, toLevel));
   }
 
   // Get features for the new level
@@ -176,7 +194,7 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
     }
   }
 
-  return {
+  return finishLevelUpData(character, toLevel, {
     fromLevel,
     toLevel,
     newProficiencyBonus,
@@ -189,7 +207,7 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
     features: featuresAtLevel,
     requiresChoices: choices.length > 0,
     choices
-  };
+  });
 }
 
 /**
@@ -265,6 +283,10 @@ export function getLevelUpSteps(levelUpData: LevelUpData): string[] {
     steps.push('subclass');
   }
 
+  if (levelUpData.optionalFeaturePicks) {
+    steps.push('optional-features');
+  }
+
   // Check for spell choices - create separate steps for each spell choice
   const spellChoices = levelUpData.choices.filter(c => c.type === 'spells');
   spellChoices.forEach((choice, index) => {
@@ -303,13 +325,31 @@ export function applyLevelUp(
   // Apply HP increase
   let hpGain = choices.hpGained || 0;
 
-  // Apply Tough feat bonus (+2 HP per level)
-  if (updatedCharacter.selectedFeats?.includes('tough')) {
-    hpGain += 2;
-  }
+  // Feat HP per level (Tough +2) for feats already held
+  hpGain += resolveFeatGrants(updatedCharacter.selectedFeats ?? [], {
+    edition: updatedCharacter.edition,
+    level: updatedCharacter.level,
+    walkSpeed: updatedCharacter.speed,
+  }).hpPerLevel;
+
+  // Species HP bonus (e.g. Dwarven Toughness: +1 per level)
+  hpGain += updatedCharacter.hpPerLevelBonus ?? 0;
 
   updatedCharacter.maxHitPoints += hpGain;
   updatedCharacter.hitPoints += hpGain; // Also increase current HP
+
+  // Level-gated species grants (e.g. 2024 Draconic Flight at level 5)
+  const species = findSpeciesByName(updatedCharacter.species, updatedCharacter.edition);
+  if (species) {
+    const grants = resolveSpeciesGrants(species, {
+      edition: updatedCharacter.edition,
+      level: updatedCharacter.level,
+      variantSlug: updatedCharacter.selectedSpeciesVariant,
+      choices: updatedCharacter.speciesChoices,
+      walkSpeed: updatedCharacter.speed,
+    });
+    updatedCharacter.movement = speciesMovement(grants.movement, species);
+  }
 
   // Apply hit dice
   updatedCharacter.hitDice.max += 1;
@@ -331,23 +371,44 @@ export function applyLevelUp(
 
   // Apply feat
   if (choices.featChosen) {
-    if (!updatedCharacter.selectedFeats) {
-      updatedCharacter.selectedFeats = [];
+    const featSlug = resolveFeatSlug(choices.featChosen, updatedCharacter.edition);
+    updatedCharacter.selectedFeats = [...(updatedCharacter.selectedFeats ?? []), featSlug];
+    if (choices.featChoices) {
+      updatedCharacter.featChoices = { ...(updatedCharacter.featChoices ?? {}), [featSlug]: choices.featChoices };
     }
-    updatedCharacter.selectedFeats.push(choices.featChosen);
 
-  // Process feat-granted abilities and spells
-  applyFeatEffects(updatedCharacter, choices.featChosen, character.featChoices);
+    applyFeatGrants(updatedCharacter, featSlug);
+    // Process feat-granted abilities and spells
+    applyFeatEffects(updatedCharacter, featSlug, updatedCharacter.featChoices);
   }
 
   // Apply subclass
   if (choices.subclassChosen) {
     updatedCharacter.subclass = choices.subclassChosen;
   }
+  updatedCharacter.srdFeatures = {
+    classFeatures: updatedCharacter.srdFeatures?.classFeatures ?? [],
+    subclassFeatures: subclassFeaturesUpToLevel(updatedCharacter.classSlug, updatedCharacter.subclass, updatedCharacter.level),
+  };
 
   // Apply fighting style
   if (choices.fightingStyleChosen) {
     updatedCharacter.fightingStyle = choices.fightingStyleChosen;
+  }
+
+  const optionalPicks = [
+    ...(choices.optionalFeaturesChosen ?? []),
+    ...(choices.fightingStyleChosen ? [choices.fightingStyleChosen] : []),
+  ]
+    .map(slug => resolveOptionalFeatureSlug(slug, updatedCharacter.edition))
+    .filter(slug => getOptionalFeature(slug, updatedCharacter.edition));
+  if (optionalPicks.length > 0) {
+    updatedCharacter.optionalFeatures = [...new Set([...(updatedCharacter.optionalFeatures ?? []), ...optionalPicks])];
+    const invocationPicks = optionalPicks.filter(slug => getOptionalFeature(slug, updatedCharacter.edition)?.featureTypes.includes('EI'));
+    if (invocationPicks.length > 0) {
+      updatedCharacter.eldritchInvocations = [...new Set([...(updatedCharacter.eldritchInvocations ?? []), ...invocationPicks])];
+    }
+    applyOptionalFeatureGrants(updatedCharacter, optionalPicks);
   }
 
   // Apply spell slot increases
@@ -478,23 +539,95 @@ export function getAverageHPGain(hitDie: string, conModifier: number): number {
   return Math.max(1, average + conModifier); // Minimum 1 HP
 }
 
+const unionInto = <T,>(current: T[] | undefined, added: T[]): T[] | undefined =>
+  added.length ? Array.from(new Set([...(current ?? []), ...added])) : current;
+
+/**
+ * Apply the mechanical grants of a newly gained feat (see Feat.grants and the feat's picks):
+ * ability increase, proficiencies, defenses, senses, speed, initiative and Tough-style HP.
+ */
+export function applyFeatGrants(character: Character, featSlug: string): void {
+  const feat = getFeatBySlug(featSlug, character.edition);
+  if (!feat) return;
+
+  const scores = Object.fromEntries(
+    (Object.keys(character.abilities) as AbilityName[]).map(a => [a, character.abilities[a].score]),
+  ) as Record<AbilityName, number>;
+  const raised = applyFeatAbilityIncreases(scores, [feat.slug], character.edition, character.featChoices);
+  character.abilities = Object.fromEntries((Object.keys(raised) as AbilityName[]).map(a => [
+    a, { ...character.abilities[a], score: raised[a], modifier: Math.floor((raised[a] - 10) / 2) },
+  ])) as Character['abilities'];
+
+  const g = resolveFeatGrants([feat.slug], {
+    edition: character.edition,
+    level: character.level,
+    walkSpeed: character.speed,
+    featChoices: character.featChoices,
+  });
+
+  const pb = character.proficiencyBonus;
+  const skills = { ...character.skills };
+  g.skills.forEach((skill: SkillName) => {
+    if (skills[skill] && !skills[skill].proficient) {
+      skills[skill] = { ...skills[skill], proficient: true, value: skills[skill].value + pb };
+    }
+  });
+  g.expertise.forEach((skill: SkillName) => {
+    if (skills[skill]?.proficient && !character.expertiseSkills?.includes(skill)) {
+      skills[skill] = { ...skills[skill], value: skills[skill].value + pb };
+      character.expertiseSkills = [...(character.expertiseSkills ?? []), skill];
+    }
+  });
+  character.skills = skills;
+
+  character.proficiencies = {
+    ...character.proficiencies,
+    armor: unionInto(character.proficiencies?.armor, g.armor) ?? [],
+    weapons: unionInto(character.proficiencies?.weapons, g.weapons) ?? [],
+    tools: unionInto(character.proficiencies?.tools, g.tools) ?? [],
+  };
+  character.languages = unionInto(character.languages, g.languages);
+  character.damageResistances = unionInto(character.damageResistances, g.resistances);
+  character.damageImmunities = unionInto(character.damageImmunities, g.damageImmunities);
+  character.conditionImmunities = unionInto(character.conditionImmunities, g.conditionImmunities);
+  character.savingThrowProficiencies = unionInto(character.savingThrowProficiencies, g.savingThrows);
+
+  if (Object.keys(g.senses).length) {
+    const senses = { ...(character.senses ?? {}) };
+    (Object.entries(g.senses) as Array<[keyof typeof senses, number]>).forEach(([sense, range]) => {
+      senses[sense] = Math.max(senses[sense] ?? 0, range);
+    });
+    character.senses = senses;
+  }
+  character.speed += g.speedBonus;
+  character.initiative += g.initiativeBonus + (g.initiativeProficiency ? pb : 0);
+  // "When you gain this feat": HP for every level so far (later levels add it in applyLevelUp)
+  character.maxHitPoints += g.hpPerLevel * character.level;
+  character.hitPoints += g.hpPerLevel * character.level;
+}
+
 /**
  * Apply effects granted by a feat to the character
  */
 function applyFeatEffects(character: Character, featSlug: string, featChoices?: Character['featChoices']): void {
-  const feats = loadFeats();
-  const feat = feats.find(f => f.slug === featSlug);
+  const feat = getFeatBySlug(featSlug, character.edition);
 
   if (!feat) return;
+  // The effects below are keyed by the 2014 slug; 2024 versions share them
+  featSlug = feat.slug.replace(/-2024$/, '');
 
   // Initialize feat effects object
   if (!character.featEffects) {
     character.featEffects = {};
   }
 
+  applyFeatSpells(character, featSlug);
+  applyFeatCombatEffects(character, featSlug, featChoices);
+}
+
+function applyFeatSpells(character: Character, featSlug: string): void {
   // Initialize featGrantedSpells array if it doesn't exist and feat grants spells
   if (!character.spellcasting) {
-    // Some feats might grant spells to non-spellcasters, but for now we'll assume they need spellcasting
     // Initialize spellcasting for feats that grant spells to non-casters
     if (['drow-high-magic', 'fey-touched', 'shadow-touched', 'wood-elf-magic', 'metallic-dragon-adept', 'telekinetic', 'telepathic'].includes(featSlug)) {
       character.spellcasting = {
@@ -704,8 +837,11 @@ function applyFeatEffects(character: Character, featSlug: string, featChoices?: 
       // No special effects for this feat
       break;
   }
+}
 
-  // Handle non-spell feat effects
+function applyFeatCombatEffects(character: Character, featSlug: string, featChoices?: Character['featChoices']): void {
+  // Handle non-spell feat effects (ability increases, proficiencies, speed, initiative and HP come
+  // from the feat's grants, see applyFeatGrants)
   switch (featSlug) {
     // Combat Feats
     case 'lucky':
@@ -748,11 +884,8 @@ function applyFeatEffects(character: Character, featSlug: string, featChoices?: 
 
     // Defensive Feats
     case 'alert':
-      character.featEffects!.initiativeBonus = (character.featEffects!.initiativeBonus || 0) + 5;
       character.featEffects!.cantBeSurprised = true;
       character.featEffects!.noAdvantageFromUnseen = true;
-      // Apply initiative bonus immediately
-      character.initiative += 5;
       break;
 
     case 'resilient':
@@ -814,26 +947,10 @@ function applyFeatEffects(character: Character, featSlug: string, featChoices?: 
       break;
 
     // Movement & Mobility Feats
-    case 'mobile':
-      character.speed += 10; // +10 ft speed
-      // Other effects (Dash on difficult terrain, no opportunity attacks) handled in combat calculations
-      break;
-
-    case 'tough':
-      // +2 HP per level - handled in level-up HP calculation
-      break;
-
     // Combat Feats
     case 'dual-wielder':
       // +1 AC when dual wielding - handled in AC calculations
       // Other effects handled in combat system
-      break;
-
-    case 'heavy-armor-master':
-      // +1 STR and damage reduction while wearing heavy armor
-      character.abilities.STR.score += 1;
-      character.abilities.STR.modifier = Math.floor((character.abilities.STR.score - 10) / 2);
-      // Damage reduction handled in damage calculations
       break;
 
     case 'bountiful-luck':
@@ -878,35 +995,6 @@ function applyFeatEffects(character: Character, featSlug: string, featChoices?: 
       break;
 
     // Armor Feats
-    case 'heavily-armored':
-      // Heavy armor proficiency - handled during feat selection
-      // +1 STR
-      character.abilities.STR.score += 1;
-      character.abilities.STR.modifier = Math.floor((character.abilities.STR.score - 10) / 2);
-      break;
-
-    case 'moderately-armored':
-      // Medium armor proficiency - handled during feat selection
-      // +1 STR or DEX
-      // Default to STR for now - would need player choice
-      character.abilities.STR.score += 1;
-      character.abilities.STR.modifier = Math.floor((character.abilities.STR.score - 10) / 2);
-      break;
-
-    case 'lightly-armored':
-      // Light armor proficiency - handled during feat selection
-      // +1 STR or DEX
-      // Default to DEX for now - would need player choice
-      character.abilities.DEX.score += 1;
-      character.abilities.DEX.modifier = Math.floor((character.abilities.DEX.score - 10) / 2);
-      break;
-
-    case 'medium-armor-master':
-      // Medium armor Dex bonus (+1 Dex) - handled in AC calculations
-      character.abilities.DEX.score += 1;
-      character.abilities.DEX.modifier = Math.floor((character.abilities.DEX.score - 10) / 2);
-      break;
-
     // Skill Feats
     case 'observant':
       // Passive Perception bonus - handled in skill calculations

@@ -4,6 +4,7 @@ import { getCantripsByClass, getLeveledSpellsByClass, loadClasses, AppSpell, SPE
 import { SPELL_SLOT_TABLES } from '../data/spellSlots';
 import { SPELL_LEARNING_RULES } from '../data/spellLearning';
 import spellcastingTypesData from '../data/spellcastingTypes.json';
+import cantripsData from '../data/cantrips.json';
 import { SPELL_SAVE_DC_BASE, LEVEL_1_PROFICIENCY_BONUS, ABILITY_SCORE_BASE, ABILITY_MODIFIER_DIVISOR } from '../constants/combat';
 
 // Map class slugs to spellcasting types
@@ -301,11 +302,26 @@ export function getAvailableSpellLevels(classSlug: string, characterLevel: numbe
 /**
  * Clean up invalid spell selections when character data changes
  */
+/** Cantrips the creation spell step asks for, including a 2024 order that grants one more. */
+export function cantripsKnownForCreation(
+  classSlug: string,
+  level: number,
+  extras?: { edition?: string; divineOrder?: string; primalOrder?: string },
+): number {
+  const classData = loadClasses().find(c => c.slug === classSlug);
+  const fromTable = (cantripsData as Record<string, Record<string, number>>)[classSlug]?.[level];
+  let count = fromTable ?? classData?.spellcasting?.cantripsKnown ?? 0;
+  if (classSlug === 'cleric' && extras?.edition === '2024' && extras.divineOrder === 'thaumaturge') count += 1;
+  if (classSlug === 'druid' && extras?.edition === '2024' && extras.primalOrder === 'magician') count += 1;
+  return count;
+}
+
 export function cleanupInvalidSpellSelections(
   spellSelection: SpellSelectionData,
   classSlug: string,
   level: number,
-  abilities: Record<string, number>
+  abilities: Record<string, number>,
+  extras?: { edition?: string; divineOrder?: string; primalOrder?: string },
 ): SpellSelectionData {
   const allClasses = loadClasses();
   const selectedClass = allClasses.find(c => c.slug === classSlug);
@@ -318,8 +334,8 @@ export function cleanupInvalidSpellSelections(
   const spellcastingType = getSpellcastingType(classSlug);
   const updatedSelection = { ...spellSelection };
 
-  // Validate cantrips
-  updatedSelection.selectedCantrips = spellSelection.selectedCantrips.slice(0, spellcasting.cantripsKnown);
+  // Validate cantrips against the same count the creation step requires
+  updatedSelection.selectedCantrips = spellSelection.selectedCantrips.slice(0, cantripsKnownForCreation(classSlug, level, extras));
 
   // Validate based on spellcasting type
   if (spellcastingType === 'known') {
@@ -339,6 +355,56 @@ export function cleanupInvalidSpellSelections(
   }
 
   return updatedSelection;
+}
+
+const draw = <T>(items: T[], count: number): T[] => {
+  const pool = [...items];
+  for (let i = pool.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, Math.max(0, count));
+};
+
+/** Spell picks that satisfy the creation spell step for this class, level, and ability scores. */
+export function randomSpellSelection(
+  classSlug: string,
+  level: number,
+  edition: '2014' | '2024',
+  abilities: Record<string, number>,
+  background?: string,
+  subclassSlug?: string,
+  extras?: { divineOrder?: string; primalOrder?: string },
+): SpellSelectionData {
+  const classData = loadClasses(edition).find(c => c.slug === classSlug);
+  const empty: SpellSelectionData = { selectedCantrips: [] };
+  if (!classData?.spellcasting) return empty;
+  const type = getSpellcastingType(classSlug);
+  const context = { edition, ...extras };
+  const cantripCount = cantripsKnownForCreation(classSlug, level, context);
+  const cantrips = draw(getCantripsByClass(classSlug, edition, background, subclassSlug), cantripCount).map(spell => spell.slug);
+  const spells = getAvailableSpellLevels(classSlug, level).flatMap(spellLevel =>
+    getLeveledSpellsByClass(classSlug, spellLevel, edition, background, subclassSlug),
+  );
+  if (type === 'known') {
+    const max = (SPELLS_KNOWN_BY_CLASS as Record<string, Record<string, number>>)[classSlug]?.[level]
+      ?? classData.spellcasting.spellsKnownOrPrepared;
+    return { selectedCantrips: cantrips, knownSpells: draw(spells, max).map(spell => spell.slug) };
+  }
+  if (type === 'prepared') {
+    const max = getMaxPreparedSpells(abilities, classData.spellcasting.ability, level);
+    return { selectedCantrips: cantrips, preparedSpells: draw(spells, max).map(spell => spell.slug) };
+  }
+  if (type === 'wizard') {
+    const book = draw(spells, 6);
+    const dailyMax = getMaxPreparedSpells(abilities, 'INT', level);
+    return {
+      selectedCantrips: cantrips,
+      spellbook: book.map(spell => spell.slug),
+      dailyPrepared: draw(book, Math.min(dailyMax, book.length)).map(spell => spell.slug),
+    };
+  }
+  return empty;
 }
 
 /**

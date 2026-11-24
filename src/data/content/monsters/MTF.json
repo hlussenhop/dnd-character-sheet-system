@@ -1,0 +1,2487 @@
+[
+  {
+    "name": "Abyssal Wretch",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 11
+      }
+    ],
+    "speed": {
+      "walk": "20 ft."
+    },
+    "strength": 9,
+    "dexterity": 12,
+    "constitution": 11,
+    "intelligence": 5,
+    "wisdom": 8,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 9
+    },
+    "languages": "understands Abyssal but can't speak",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 18,
+    "hit_dice": "4d8",
+    "hit_points_roll": "4d8",
+    "subtype": "demon",
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "abyssal-wretch"
+  },
+  {
+    "name": "Bronze Scout",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "burrow": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 11,
+    "intelligence": 3,
+    "wisdom": 14,
+    "charisma": 1,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't adamantine"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 16
+    },
+    "languages": "understands one language of its creator but can't speak",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 18,
+    "hit_dice": "4d8",
+    "hit_points_roll": "4d8",
+    "special_abilities": [
+      {
+        "name": "Earth Armor",
+        "desc": "The bronze scout doesn't provoke opportunity attacks when it burrows."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The bronze scout has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage plus 3 (1d6) lightning damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Lightning Flare (Recharges after a Short or Long Rest)",
+        "desc": "Each creature in contact with the ground within 15 feet of the bronze scout must make a DC 13 Dexterity saving throw, taking 14 (4d6) lightning damage on a failed save, or half as much damage on a successful one."
+      }
+    ],
+    "index": "bronze-scout"
+  },
+  {
+    "name": "Deathlock (Archfey Patron)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 15,
+    "constitution": 10,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "the languages it knew in life",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 36,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8",
+    "special_abilities": [
+      {
+        "name": "Turn Resistance",
+        "desc": "The deathlock has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The deathlock's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, disguise self, mage armor"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The deathlock is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, eldritch blast, mage hand\nLevel 3 (2 slots): blink, faerie fire, hunger of Hadar, hypnotic pattern, phantasmal force, sleep",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Deathly Claw",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) necrotic damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "deathlock-archfey-patron"
+  },
+  {
+    "name": "Deathlock (Fiend Patron)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 15,
+    "constitution": 10,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "the languages it knew in life",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 36,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8",
+    "special_abilities": [
+      {
+        "name": "Turn Resistance",
+        "desc": "The deathlock has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The deathlock's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, disguise self, mage armor"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The deathlock is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, eldritch blast, mage hand\nLevel 3 (2 slots): blindness/deafness, burning hands, command, fireball, hellish rebuke, scorching ray",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Deathly Claw",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) necrotic damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "deathlock-fiend-patron"
+  },
+  {
+    "name": "Deathlock (Great Old One Patron)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 15,
+    "constitution": 10,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "the languages it knew in life",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 36,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8",
+    "special_abilities": [
+      {
+        "name": "Turn Resistance",
+        "desc": "The deathlock has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The deathlock's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, disguise self, mage armor"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The deathlock is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, eldritch blast, mage hand\nLevel 3 (2 slots): armor of Agathys, detect thoughts, dissonant whispers, hunger of Hadar, Tasha's hideous laughter, phantasmal force",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Deathly Claw",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) necrotic damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "deathlock-great-old-one-patron"
+  },
+  {
+    "name": "Deathlock Mastermind (Archfey Patron)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      },
+      {
+        "type": "armor",
+        "value": 16,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 15,
+    "wisdom": 12,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft. (including magical darkness)",
+      "passive_perception": 14
+    },
+    "languages": "the languages it knew in life",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 110,
+    "hit_dice": "20d8",
+    "hit_points_roll": "20d8 + 20",
+    "special_abilities": [
+      {
+        "name": "Turn Resistance",
+        "desc": "The deathlock has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The deathlock's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, disguise self, mage armor"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The deathlock is a 10th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, mage hand, minor illusion, poison spray\nLevel 5 (2 slots): blink, dominate beast, dominate person, faerie fire, greater invisibility, hunger of Hadar, hypnotic pattern, phantasmal force, seeming, sleep",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Deathly Claw",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (3d6 + 3) necrotic damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Grave Bolts",
+        "desc": "Ranged Spell Attack: +6 to hit, range 120 ft., one or two targets. Hit: 18 (4d8) necrotic damage. If the target is Large or smaller, it must succeed on a DC 16 Strength saving throw or become restrained as shadowy tendrils wrap around it for 1 minute. A restrained target can use its action to repeat the saving throw, ending the effect on itself on a success.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "deathlock-mastermind-archfey-patron"
+  },
+  {
+    "name": "Deathlock Mastermind (Fiend Patron)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      },
+      {
+        "type": "armor",
+        "value": 16,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 15,
+    "wisdom": 12,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft. (including magical darkness)",
+      "passive_perception": 14
+    },
+    "languages": "the languages it knew in life",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 110,
+    "hit_dice": "20d8",
+    "hit_points_roll": "20d8 + 20",
+    "special_abilities": [
+      {
+        "name": "Turn Resistance",
+        "desc": "The deathlock has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The deathlock's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, disguise self, mage armor"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The deathlock is a 10th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, mage hand, minor illusion, poison spray\nLevel 5 (2 slots): blindness/deafness, burning hands, command, fire shield, fireball, flame strike, hellish rebuke, scorching ray, stinking cloud, wall of fire",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Deathly Claw",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (3d6 + 3) necrotic damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Grave Bolts",
+        "desc": "Ranged Spell Attack: +6 to hit, range 120 ft., one or two targets. Hit: 18 (4d8) necrotic damage. If the target is Large or smaller, it must succeed on a DC 16 Strength saving throw or become restrained as shadowy tendrils wrap around it for 1 minute. A restrained target can use its action to repeat the saving throw, ending the effect on itself on a success.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "deathlock-mastermind-fiend-patron"
+  },
+  {
+    "name": "Deathlock Mastermind (Great Old One Patron)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      },
+      {
+        "type": "armor",
+        "value": 16,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 15,
+    "wisdom": 12,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft. (including magical darkness)",
+      "passive_perception": 14
+    },
+    "languages": "the languages it knew in life",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 110,
+    "hit_dice": "20d8",
+    "hit_points_roll": "20d8 + 20",
+    "special_abilities": [
+      {
+        "name": "Turn Resistance",
+        "desc": "The deathlock has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The deathlock's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, disguise self, mage armor"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The deathlock is a 10th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, mage hand, minor illusion, poison spray\nLevel 5 (2 slots): clairvoyance, detect thoughts, dissonant whispers, dominate person, Evard's black tentacles, hunger of Hadar, phantasmal force, sending, Tasha's hideous laughter, telekinesis",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Deathly Claw",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (3d6 + 3) necrotic damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Grave Bolts",
+        "desc": "Ranged Spell Attack: +6 to hit, range 120 ft., one or two targets. Hit: 18 (4d8) necrotic damage. If the target is Large or smaller, it must succeed on a DC 16 Strength saving throw or become restrained as shadowy tendrils wrap around it for 1 minute. A restrained target can use its action to repeat the saving throw, ending the effect on itself on a success.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "deathlock-mastermind-great-old-one-patron"
+  },
+  {
+    "name": "Demonic Cambion (Baphomet)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "lawful NX chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 19,
+        "armor": [
+          {
+            "name": "scale mail",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 18,
+    "constitution": 16,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Abyssal, Common, Infernal",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 82,
+    "hit_dice": "11d8",
+    "hit_points_roll": "11d8 + 33",
+    "special_abilities": [
+      {
+        "name": "Fiendish Blessing",
+        "desc": "The AC of the cambion includes its Charisma bonus."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The cambion's spellcasting ability is Charisma (spell save DC 14). The cambion can innately cast the following spells, requiring no material components:\n1/day: plane shift (self only)\n3/day each: alter self, command, detect magic"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The cambion makes two melee attacks or uses its Fire Ray twice."
+      },
+      {
+        "name": "Spear",
+        "desc": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Fire Ray",
+        "desc": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 10 (3d6) fire damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Horned One's Call",
+        "desc": "When the cambion targets only one creature with the attacks of its Multiattack, it can choose one ally it can see within 30 feet. That ally can use its reaction to make one melee attack against a target of its choice."
+      }
+    ],
+    "index": "demonic-cambion-baphomet"
+  },
+  {
+    "name": "Demonic Cambion (Orcus)",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "lawful NX chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 19,
+        "armor": [
+          {
+            "name": "scale mail",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 18,
+    "constitution": 16,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Abyssal, Common, Infernal",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 82,
+    "hit_dice": "11d8",
+    "hit_points_roll": "11d8 + 33",
+    "special_abilities": [
+      {
+        "name": "Fiendish Blessing",
+        "desc": "The AC of the cambion includes its Charisma bonus."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The cambion's spellcasting ability is Charisma (spell save DC 14). The cambion can innately cast the following spells, requiring no material components:\n1/day: plane shift (self only)\n3/day each: alter self, command, detect magic, animate dead"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The cambion makes two melee attacks or uses its Fire Ray twice."
+      },
+      {
+        "name": "Spear",
+        "desc": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Fire Ray",
+        "desc": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 10 (3d6) fire damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Spawn of the Grave",
+        "desc": "At the end of each of the cambion's turns, each undead of its choice that it can see within 30 feet gains 10 temporary hit points, provided the cambion isn't incapacitated."
+      }
+    ],
+    "index": "demonic-cambion-orcus"
+  },
+  {
+    "name": "Gloom Weaver",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      },
+      {
+        "type": "armor",
+        "value": 17,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 18,
+    "constitution": 14,
+    "intelligence": 15,
+    "wisdom": 12,
+    "charisma": 18,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 104,
+    "hit_dice": "16d8",
+    "hit_points_roll": "16d8 + 32",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Burden of Time",
+        "desc": "Beasts and humanoids, other than shadar-kai, have disadvantage on saving throws while within 10 feet of the gloom weaver."
+      },
+      {
+        "name": "Fey Ancestry",
+        "desc": "The gloom weaver has advantage on saving throws against being charmed, and magic can't put it to sleep."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The gloom weaver's innate spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: arcane eye, mage armor, speak with dead\n1/day each: arcane gate, bane, compulsion, confusion, true seeing",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The gloom weaver is a 12th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: minor illusion, prestidigitation, chill touch, eldritch blast*\nLevel 5 (3 slots): armor of Agathys, blight, darkness, dream, invisibility, fear, hypnotic pattern, major image, contact other plane, vampiric touch, witch bolt\n*3 beams +4 bonus to each damage roll",
+        "attack_bonus": 8
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The gloom weaver makes two spear attacks and casts one spell that takes 1 action to cast."
+      },
+      {
+        "name": "Shadow Spear",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage plus 26 (4d12) necrotic damage, or 8 (1d8 + 4) piercing damage plus 26 (4d12) necrotic damage if used with two hands.",
+        "attack_bonus": 8
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Misty Escape (Recharges after a Short or Long Rest)",
+        "desc": "When the gloom weaver takes damage, it turns invisible and teleports up to 60 feet to an unoccupied space it can see. It remains invisible until the start of its next turn or until it attacks or casts a spell."
+      }
+    ],
+    "index": "gloom-weaver"
+  },
+  {
+    "name": "Infernal Cambion",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "lawful NX chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 19,
+        "armor": [
+          {
+            "name": "scale mail",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 18,
+    "constitution": 16,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Abyssal, Common, Infernal",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 82,
+    "hit_dice": "11d8",
+    "hit_points_roll": "11d8 + 33",
+    "special_abilities": [
+      {
+        "name": "Fiendish Blessing",
+        "desc": "The AC of the cambion includes its Charisma bonus."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The cambion's spellcasting ability is Charisma (spell save DC 14). The cambion can innately cast the following spells, requiring no material components:\n1/day: plane shift (self only)\n3/day each: alter self, command, detect magic"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The cambion makes two melee attacks or uses its Fire Ray twice."
+      },
+      {
+        "name": "Spear",
+        "desc": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Fire Ray",
+        "desc": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 10 (3d6) fire damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Fury of the Nine",
+        "desc": "As a bonus action, the cambion chooses another creature that can see or hear it within 120 feet. That creature gains advantage on all attack rolls and saving throws for the next minute or until the cambion uses this ability again."
+      }
+    ],
+    "index": "infernal-cambion"
+  },
+  {
+    "name": "Iron Cobra",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 3,
+    "wisdom": 10,
+    "charisma": 1,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't adamantine"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands one language of its creator but can't speak",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 45,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 14",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The iron cobra has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Constitution saving throw or suffer one random poison effect:\n1. Poison Damage: The target takes 13 (3d8) poison damage.\n2. Confusion: On its next turn, the target must use its action to make one weapon attack against a random creature it can see within 30 feet of it, using whatever weapon it has in hand and moving beforehand if necessary to get in range. If it's holding no weapon, it makes an unarmed strike. If no creature is visible within 30 feet, it takes the Dash action, moving toward the nearest creature.\n3. Paralysis: The target is paralyzed until the end of its next turn.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "iron-cobra"
+  },
+  {
+    "name": "Oaken Bolter",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 16,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 18,
+    "constitution": 15,
+    "intelligence": 3,
+    "wisdom": 10,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't adamantine"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands one language of its creator but can't speak",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 58,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8 + 18",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The oaken bolter has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The oaken bolter makes two lancing bolt attacks or one lancing bolt attack and one harpoon attack."
+      },
+      {
+        "name": "Lancing Bolt",
+        "desc": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 100/400 ft., one target. Hit: 15 (2d10 + 4) piercing damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Harpoon",
+        "desc": "Ranged Weapon Attack: +7 to hit, range 50/200 ft., one target. Hit: 9 (1d10 + 4) piercing damage, and the target is grappled (escape DC 12). While grappled in this way, a creature's speed isn't reduced, but it can move only in directions that bring it closer to the oaken bolter. A creature takes 5 (1d10) slashing damage if it escapes from the grapple or if it tries and fails. As a bonus action, the oaken bolter can pull a creature grappled by it 20 feet closer. The oaken bolter can grapple only one creature at a time.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Explosive Bolt (Recharge 5-6)",
+        "desc": "The oaken bolter launches an explosive charge at a point within 120 feet. Each creature within 20 feet of that point must make a DC 15 Dexterity saving throw, taking 17 (5d6) fire damage on a failed save, or half as much damage on a successful one."
+      }
+    ],
+    "index": "oaken-bolter"
+  },
+  {
+    "name": "Shadow Dancer",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "studded leather",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 13,
+    "intelligence": 11,
+    "wisdom": 12,
+    "charisma": 12,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 7,
+    "proficiency_bonus": 3,
+    "xp": 2900,
+    "hit_points": 71,
+    "hit_dice": "13d8",
+    "hit_points_roll": "13d8 + 13",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "The shadow dancer has advantage on saving throws against being charmed, and magic can't put it to sleep."
+      },
+      {
+        "name": "Shadow Jump",
+        "desc": "As a bonus action, the shadow dancer can teleport up to 30 feet to an unoccupied space it can see. Both the space it teleports from and the space it teleports to must be in dim light or darkness. The shadow dancer can use this ability between the weapon attacks of another action it takes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The shadow dancer makes three spiked chain attacks."
+      },
+      {
+        "name": "Spiked Chain",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 10 (2d6 + 3) piercing damage, and the target must succeed on a DC 14 Dexterity saving throw or suffer one additional effect of the shadow dancer's choice:\nThe target is grappled (escape DC 14) if it is a Medium or smaller creature. Until the grapple ends, the target is restrained, and the shadow dancer can't grapple another target.\nThe target is knocked prone.\nThe target takes 22 (4d10) necrotic damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "shadow-dancer"
+  },
+  {
+    "name": "Soul Monger",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "studded leather",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 17,
+    "constitution": 14,
+    "intelligence": 19,
+    "wisdom": 15,
+    "charisma": 13,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "psychic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 17
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 11,
+    "proficiency_bonus": 4,
+    "xp": 7200,
+    "hit_points": 123,
+    "hit_dice": "19d8",
+    "hit_points_roll": "19d8 + 38",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "The soul monger has advantage on saving throws against being charmed, and magic can't put it to sleep."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The soul monger has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Soul Thirst",
+        "desc": "When the soul monger reduces a creature to 0 hit points, the soul monger can gain temporary hit points equal to half the creature's hit point maximum. While the soul monger has temporary hit points from this ability, it has advantage on attack rolls."
+      },
+      {
+        "name": "Weight of Ages",
+        "desc": "Any beast or humanoid, other than a shadar-kai, that starts its turn within 5 feet of the soul monger has its speed reduced by 20 feet until the start of that creature's next turn."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The soul monger's innate spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: chill touch, poison spray\n1/day each: bestow curse, chain lightning, finger of death, gaseous form, phantasmal killer, seeming",
+        "attack_bonus": 8
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The soul monger makes two phantasmal dagger attacks."
+      },
+      {
+        "name": "Phantasmal Dagger",
+        "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (4d4 + 3) piercing damage plus 19 (3d12) necrotic damage, and the target has disadvantage on saving throws until the start of the soul monger's next turn.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Wave of Weariness (Recharge 4-6)",
+        "desc": "The soul monger emits weariness in a 60-foot cube. Each creature in that area must make a DC 16 Constitution saving throw. On a failed save, a creature takes 45 (10d8) psychic damage and suffers 1 level of exhaustion. On a successful save, it takes 22 (5d8) psychic damage."
+      }
+    ],
+    "index": "soul-monger"
+  },
+  {
+    "name": "Stone Defender",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 16,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 10,
+    "constitution": 17,
+    "intelligence": 3,
+    "wisdom": 10,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks that aren't adamantine"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands one language of its creator but can't speak",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 52,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 21",
+    "special_abilities": [
+      {
+        "name": "False Appearance",
+        "desc": "While the stone defender remains motionless against an uneven earthen or stone surface, it is indistinguishable from that surface."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The stone defender has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage, and if the target is Large or smaller, it is knocked prone.",
+        "attack_bonus": 6
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Intercept Attack",
+        "desc": "In response to another creature within 5 feet of it being hit by an attack roll, the stone defender gives that creature a +5 bonus to its AC against that attack, potentially causing a miss. To use this ability, the stone defender must be able to see the creature and the attacker."
+      }
+    ],
+    "index": "stone-defender"
+  },
+  {
+    "name": "The Angry",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 18,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 17,
+    "dexterity": 10,
+    "constitution": 19,
+    "intelligence": 8,
+    "wisdom": 13,
+    "charisma": 6,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing while in dim light or darkness"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 16
+    },
+    "languages": "Common",
+    "challenge_rating": 13,
+    "proficiency_bonus": 5,
+    "xp": 10000,
+    "hit_points": 255,
+    "hit_dice": "30d8",
+    "hit_points_roll": "30d8 + 120",
+    "special_abilities": [
+      {
+        "name": "Two Heads",
+        "desc": "The Angry has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, or knocked unconscious."
+      },
+      {
+        "name": "Rising Anger",
+        "desc": "If another creature deals damage to the Angry, the Angry's attack rolls have advantage until the end of its next turn, and the first time it hits with a hook attack on its next turn, the attack's target takes an extra 19 (3d12) psychic damage.\nOn its turn, the Angry has disadvantage on attack rolls if no other creature has dealt damage to it since the end of its last turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The Angry makes two hook attacks."
+      },
+      {
+        "name": "Hook",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d12 + 3) piercing damage.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "the-angry"
+  },
+  {
+    "name": "The Hungry",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 10,
+    "constitution": 17,
+    "intelligence": 6,
+    "wisdom": 11,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing while in dim light or darkness"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Common",
+    "challenge_rating": 11,
+    "proficiency_bonus": 4,
+    "xp": 7200,
+    "hit_points": 225,
+    "hit_dice": "30d8",
+    "hit_points_roll": "30d8 + 90",
+    "special_abilities": [
+      {
+        "name": "Life Hunger",
+        "desc": "If a creature the Hungry can see regains hit points, the Hungry gains two benefits until the end of its next turn: it has advantage on attack rolls, and its bite deals an extra 22 (4d10) necrotic damage on a hit."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The Hungry makes two attacks: one with its bite and one with its claws."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage plus 13 (3d8) necrotic damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Claws",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 18 (4d6 + 4) slashing damage. If the target is Medium or smaller, it is grappled (escape DC 16) and is restrained until the grapple ends. While grappling a creature, the Hungry can't attack with its claws.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "the-hungry"
+  },
+  {
+    "name": "The Lonely",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 16,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 12,
+    "constitution": 17,
+    "intelligence": 6,
+    "wisdom": 11,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing while in dim light or darkness"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Common",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 112,
+    "hit_dice": "15d8",
+    "hit_points_roll": "15d8 + 45",
+    "special_abilities": [
+      {
+        "name": "Psychic Leech",
+        "desc": "At the start of each of the Lonely's turns, each creature within 5 feet of it must succeed on a DC 15 Wisdom saving throw or take 10 (3d6) psychic damage."
+      },
+      {
+        "name": "Thrives on Company",
+        "desc": "The Lonely has advantage on attack rolls while it is within 30 feet of at least two other creatures. It otherwise has disadvantage on attack rolls."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The Lonely makes one harpoon arm attack and uses Sorrowful Embrace."
+      },
+      {
+        "name": "Harpoon Arm",
+        "desc": "Melee Weapon Attack: +7 to hit, reach 60 ft., one target. Hit: 21 (4d8 + 3) piercing damage, and the target is grappled (escape DC 15) if it is a Large or smaller creature.\nThe Lonely has two harpoon arms and can grapple up to two creatures at once.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Sorrowful Embrace",
+        "desc": "Each creature grappled by the Lonely must make a DC 15 Wisdom saving throw. A creature takes 18 (4d8) psychic damage on a failed save, or half as much damage on a successful one. In either case, the Lonely pulls each creature grappled by it up to 30 feet straight toward it."
+      }
+    ],
+    "index": "the-lonely"
+  },
+  {
+    "name": "The Lost",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 15,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 17,
+    "dexterity": 12,
+    "constitution": 15,
+    "intelligence": 6,
+    "wisdom": 7,
+    "charisma": 5,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing while in dim light or darkness"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 8
+    },
+    "languages": "Common",
+    "challenge_rating": 7,
+    "proficiency_bonus": 3,
+    "xp": 2900,
+    "hit_points": 78,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 24",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The Lost makes two arm spike attacks."
+      },
+      {
+        "name": "Arm Spike",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) piercing damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Embrace",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 25 (4d10 + 3) piercing damage, and the target is grappled (escape DC 14) if it is a Medium or smaller creature. Until the grapple ends, the target is frightened, and it takes 27 (6d8) psychic damage at the end of each of its turns. The Lost can embrace only one creature at a time.",
+        "attack_bonus": 6
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Tightening Embrace",
+        "desc": "If the Lost takes damage while it has a creature grappled, that creature takes 18 (4d8) psychic damage."
+      }
+    ],
+    "index": "the-lost"
+  },
+  {
+    "name": "The Wretched",
+    "edition": "2014",
+    "source": "MTF",
+    "sources": [
+      "MTF"
+    ],
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 15,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 7,
+    "dexterity": 12,
+    "constitution": 9,
+    "intelligence": 5,
+    "wisdom": 6,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing while in dim light or darkness"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 8
+    },
+    "languages": "",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 10,
+    "hit_dice": "4d6 - 4",
+    "hit_points_roll": "4d6 - 4",
+    "special_abilities": [
+      {
+        "name": "Wretched Pack Tactics",
+        "desc": "The Wretched has advantage on an attack roll against a creature if at least one of the Wretched's allies is within 5 feet of the creature and the ally isn't incapacitated. The Wretched otherwise has disadvantage on attack rolls."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (1d10 + 1) piercing damage, and the Wretched attaches to the target. While attached, the Wretched can't attack, and at the start of each of the Wretched's turns, the target takes 6 (1d10 + 1) necrotic damage.\nThe attached Wretched moves with the target whenever the target moves, requiring none of the Wretched's movement. The Wretched can detach itself by spending 5 feet of its movement on its turn. A creature, including the target, can use its action to detach a Wretched.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "the-wretched"
+  }
+]

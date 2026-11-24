@@ -26,35 +26,52 @@ const spells2024 = JSON.parse(fs.readFileSync(spells2024Path, 'utf8'));
 console.log(`2014 spells: ${spells2014.length}`);
 console.log(`2024 spells: ${spells2024.length}`);
 
-// Create maps for deduplication
-const spellMap = new Map();
+// IMPORTANT: 2014 and 2024 spells with the same name are NOT the same data -
+// wording, damage dice, and mechanics frequently differ between editions
+// (e.g. Acid Splash's damage progression, Scorching Ray's targeting). Both
+// editions' versions of a shared-name spell must be kept as separate
+// entries, each correctly tagged by source, so edition-aware filtering
+// (see src/utils/spellbookAdapter.ts) actually works. An earlier version of
+// this script deduplicated by name and let the 2024 entry silently
+// overwrite the 2014 one for every shared name, which left only 2 spells
+// tagged '2014' in the output. Do not reintroduce that bug.
 
-// Process 2014 spells
+// Slug compatibility: transformSpell() (dataService.ts) derives a spell's slug
+// from `index`, falling back to name.toLowerCase().replace(/\s+/g, '-').
+// Saved characters, TRAIT_SPELL_MAP, class spell lists etc. all reference
+// those legacy slugs, and until now the surviving entry for every shared name
+// was the 2024 one. So:
+//   - 2024 entries NEVER get an `index` override (they keep the legacy slug).
+//   - 2014 entries whose name also exists in 2024 get '<legacy-slug>-2014'.
+//   - 2014-only entries keep their original SRD index.
+const legacySlug = name => name.toLowerCase().trim().replace(/\s+/g, '-');
+
+const names2014 = new Set(spells2014.map(s => s.name.toLowerCase().trim()));
+const names2024 = new Set(spells2024.map(s => s.name.toLowerCase().trim()));
+const sharedNames = new Set([...names2014].filter(n => names2024.has(n)));
+
+const mergedSpells = [];
+
 spells2014.forEach(spell => {
-  if (spell.name && spell.level !== undefined) {
-    const key = spell.name.toLowerCase().trim();
-    spellMap.set(key, { ...spell, source: '2014' });
-  }
+  if (!spell.name || spell.level === undefined) return;
+  const key = spell.name.toLowerCase().trim();
+  const isShared = sharedNames.has(key);
+  mergedSpells.push({
+    ...spell,
+    index: isShared ? `${legacySlug(spell.name)}-2014` : spell.index,
+    source: '2014',
+  });
 });
 
-// Process 2024 spells (prefer 2024 versions for duplicates)
 spells2024.forEach(spell => {
-  if (spell.name && spell.level !== undefined) {
-    const key = spell.name.toLowerCase().trim();
-    const existing = spellMap.get(key);
-    if (existing) {
-      // Spell exists in both - keep 2024 version but mark as having both sources
-      spellMap.set(key, { ...spell, source: '2024' });
-    } else {
-      // 2024-only spell
-      spellMap.set(key, { ...spell, source: '2024' });
-    }
-  }
+  if (!spell.name || spell.level === undefined) return;
+  mergedSpells.push({
+    ...spell,
+    source: '2024',
+  });
 });
 
-// Convert back to array
-const mergedSpells = Array.from(spellMap.values());
-
+console.log(`Shared names (kept as separate 2014 + 2024 entries): ${sharedNames.size}`);
 console.log(`Merged spells: ${mergedSpells.length}`);
 
 // Write merged file

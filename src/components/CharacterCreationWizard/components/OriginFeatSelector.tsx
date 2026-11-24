@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BookOpen, XCircle } from 'lucide-react';
 import { FEAT_DATABASE } from '../../../services/dataService';
+import { FeatDescription } from '../../FeatDescription';
 
 interface OriginFeatSelectorProps {
   selectedFeat: string | undefined;
@@ -16,7 +17,8 @@ export const OriginFeatSelector: React.FC<OriginFeatSelectorProps> = ({
   const [showDetails, setShowDetails] = useState<string | null>(null);
 
   const availableFeats = useMemo(() => {
-    let feats = FEAT_DATABASE.filter(f => f.category === 'origin');
+    // Origin feats are a 2024 rule
+    let feats = FEAT_DATABASE.filter(f => f.category === 'origin' && f.edition === '2024');
     if (featOptions && featOptions.length > 0) {
       feats = feats.filter(f => featOptions.includes(f.slug));
     }
@@ -74,7 +76,7 @@ export const OriginFeatSelector: React.FC<OriginFeatSelectorProps> = ({
                     <XCircle className="w-4 h-4" />
                   </button>
                 </div>
-                <p className="text-xs text-theme-tertiary mb-2">{feat.description}</p>
+                <FeatDescription feat={feat} className="text-xs text-theme-tertiary mb-2" />
                 <div className="text-xs text-theme-muted">
                   <strong className="text-theme-tertiary">Benefits:</strong>
                   <ul className="list-disc list-inside mt-1 space-y-1">

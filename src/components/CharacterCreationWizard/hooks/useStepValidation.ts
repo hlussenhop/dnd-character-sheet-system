@@ -1,6 +1,10 @@
 import { useMemo, useCallback } from 'react';
 import { CharacterCreationData, ValidationResult } from '../../../types/dnd';
-import { getAllSpecies, BACKGROUNDS } from '../../../services/dataService';
+import { getAllSpecies, getBackground } from '../../../services/dataService';
+import { missingBackgroundPicks } from '../../../utils/backgroundUtils';
+import { isVariantChoiceRequired, hasValidVariantSelection } from '../../../utils/speciesVariantUtils';
+import { getSpeciesAbilityRules, getAbilityChoiceSelection, validateAbilityChoice } from '../../../utils/speciesAbilityUtils';
+import { getMissingSpeciesChoices } from '../../../utils/speciesGrantUtils';
 
 export const useStepValidation = (stepIndex: number, data: CharacterCreationData) => {
   const validateStep1 = (data: CharacterCreationData): ValidationResult => {
@@ -10,8 +14,13 @@ export const useStepValidation = (stepIndex: number, data: CharacterCreationData
     if (!data.alignment) missing.push("Alignment choice");
 
     // Enhanced 2024 background ability validation
+    if (data.background) {
+      const background = getBackground(data.background);
+      if (background) missing.push(...missingBackgroundPicks(background, data));
+    }
+
     if (data.edition === '2024' && data.background) {
-      const background = BACKGROUNDS.find(bg => bg.slug === data.background);
+      const background = getBackground(data.background);
       const needsChoices = background?.abilityScores?.choose && background.abilityScores.choose > 0;
 
       if (needsChoices) {
@@ -47,16 +56,31 @@ export const useStepValidation = (stepIndex: number, data: CharacterCreationData
   const validateStep2 = (data: CharacterCreationData): ValidationResult => {
     const missing = [];
 
-    if (!data.speciesSlug) missing.push("Species selection");
+    const species = getAllSpecies(data.edition).find(s => s.slug === data.speciesSlug);
+    if (!species) missing.push("Species selection");
 
-    if (data.edition === '2024') {
-      const species = getAllSpecies(data.edition).find(s => s.slug === data.speciesSlug);
-      if (species && species.speciesFeatOptions && !data.speciesFeat) {
+    if (species && data.edition === '2024') {
+      if (species.speciesFeatOptions && !data.speciesFeat) {
         missing.push("Species feat choice");
       }
-      if (species && species.lineages && Object.keys(species.lineages).length > 0 && !data.selectedLineage) {
+      if (species.lineages && Object.keys(species.lineages).length > 0 && !data.selectedLineage) {
         missing.push("Lineage choice");
       }
+    }
+
+    if (species && data.edition === '2014') {
+      if (isVariantChoiceRequired(species, data.edition) && !hasValidVariantSelection(species, data)) {
+        missing.push("Species variant");
+      }
+      const { fixed, choice } = getSpeciesAbilityRules(species, data.selectedSpeciesVariant);
+      if (choice && !validateAbilityChoice(choice, fixed, getAbilityChoiceSelection(data)).valid) {
+        missing.push("Species ability score increases");
+      }
+    }
+
+    // Species choices (draconic ancestry, fiendish legacy, ...) and skill/tool picks, both editions
+    if (species) {
+      getMissingSpeciesChoices(species, data).forEach(item => missing.push(`Species choice: ${item}`));
     }
 
     return {

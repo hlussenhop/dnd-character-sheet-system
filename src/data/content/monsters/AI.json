@@ -1,0 +1,2709 @@
+[
+  {
+    "name": "Ancient Deep Crow",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Huge",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 18,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "20 ft.",
+      "fly": "80 ft."
+    },
+    "strength": 23,
+    "dexterity": 16,
+    "constitution": 23,
+    "intelligence": 10,
+    "wisdom": 15,
+    "charisma": 19,
+    "proficiencies": [
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 13,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "60 ft.",
+      "darkvision": "120 ft.",
+      "passive_perception": 17
+    },
+    "languages": "Deep Crow",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 187,
+    "hit_dice": "15d12",
+    "hit_points_roll": "15d12 + 90",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The ancient deep crow has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Shadow Stealth",
+        "desc": "While in dim light or darkness, the ancient deep crow can take the Hide action as a bonus action."
+      },
+      {
+        "name": "Regional Effects",
+        "desc": "The region containing an ancient deep crow's lair is transformed by the creature's presence, which creates one or more of the following effects:\nSupernatural shadow turns all bright light to dim light in underground regions within 6 miles of the lair.\nIntermittent, echoing caws can be heard coming from all directions within 6 miles of the lair.\nSubterranean beasts within 1 mile of the ancient deep crow's lair serve as the creature's eyes and ears, alerting it to the presence of intruders and making it all but impossible to surprise the ancient deep crow.\nIf the ancient deep crow dies, these effects fade immediately."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The ancient deep crow makes three attacks: one with its mandibles and two with its claws."
+      },
+      {
+        "name": "Mandibles",
+        "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage, and the target is grappled (escape DC 19). Until this grapple ends, the target is restrained, and the ancient deep crow can't use its mandibles on another target.",
+        "attack_bonus": 11
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.",
+        "attack_bonus": 11
+      },
+      {
+        "name": "Shadow Caw",
+        "desc": "The ancient deep crow releases an ear-splitting caw. Each creature within 60 feet of the crow and able to hear it must make a DC 17 Constitution saving throw. On a failure, a creature takes 10 (3d6) psychic damage."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Detect",
+        "desc": "The deep crow makes a Wisdom (Perception) check."
+      },
+      {
+        "name": "Shadow Caw (Costs 2 Actions)",
+        "desc": "The ancient deep crow uses Shadow Caw."
+      },
+      {
+        "name": "Wing Attack (Costs 2 Actions)",
+        "desc": "The ancient deep crow beats its wings. Each creature within 10 feet of the deep crow must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The ancient deep crow can then fly up to half its flying speed."
+      }
+    ],
+    "index": "ancient-deep-crow"
+  },
+  {
+    "name": "Auspicia Dran",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral good",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "chain shirt",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 14,
+    "intelligence": 15,
+    "wisdom": 12,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 16",
+    "subtype": "half-elf",
+    "special_abilities": [
+      {
+        "name": "Innate Spellcasting (Psionics)",
+        "desc": "Auspicia's innate spellcasting ability is Intelligence. She can innately cast the following spells, requiring no components:\nAt will: detect thoughts\n1/day each: augury"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Auspicia makes two attacks."
+      },
+      {
+        "name": "Longsword",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Light Crossbow",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "auspicia-dran"
+  },
+  {
+    "name": "Brahma Lutier",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 15,
+    "constitution": 12,
+    "intelligence": 11,
+    "wisdom": 13,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 33,
+    "hit_dice": "6d8",
+    "hit_points_roll": "6d8 + 6",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "Brahma has advantage on saving throws against being charmed, and magic can't put her to sleep."
+      },
+      {
+        "name": "Taunt (2/Day)",
+        "desc": "Brahma can use a bonus action to target one creature she can see within 30 feet of her. If the target can hear Brahma, it must succeed on a DC 13 Charisma saving throw or have disadvantage on ability checks, attack rolls, and saving throws until the start of Brahma's next turn."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Brahma is a 4th-level spellcaster. Her spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). She has the following bard spells prepared:\nCantrips: mage hand, message, vicious mockery\nLevel 1 (4 slots): charm person, heroism, illusory script, sleep, unseen servant\nLevel 2 (3 slots): cloud of daggers, invisibility",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "War Lute",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Song of Domination (3/Day)",
+        "desc": "Brahma targets one creature that can see or hear her, which must succeed on a DC 13 Wisdom saving throw or be charmed by her for 1 minute. The target can repeat the save at the end of each of its turns, ending the effect on itself on a success. It has disadvantage on these saves if being charmed by Brahma is something the target openly or secretly desires. For 1 hour after the charm effect ends, the target has disadvantage on Intelligence, Wisdom, or Charisma checks made as part of a contest with Brahma."
+      }
+    ],
+    "index": "brahma-lutier"
+  },
+  {
+    "name": "Chaos Quadrapod",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Large",
+    "type": "aberration",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 13,
+    "constitution": 15,
+    "intelligence": 6,
+    "wisdom": 10,
+    "charisma": 4,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-acrobatics",
+          "name": "Skill: Acrobatics",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "120 ft. (blind beyond this radius)",
+      "passive_perception": 14
+    },
+    "languages": "",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 52,
+    "hit_dice": "7d10",
+    "hit_points_roll": "7d10 + 14",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The chaos quadrapod has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The chaos quadrapod makes up to two tentacle attacks."
+      },
+      {
+        "name": "Tentacle",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 15 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage. If the target is a creature, it is grappled (escape DC 14). Until this grapple ends, the target is restrained. The chaos quadrapod can grapple no more than two targets at a time.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Chaos Cloud (Recharges after a Short or Long Rest)",
+        "desc": "The chaos quadrapod shoots forth a knot of roiling ethereal light that explodes at a point it can see within 60 feet of it. Each creature in a 20-foot-radius sphere centered on that point must succeed on a DC 14 Charisma saving throw or be stunned until the end of its next turn."
+      }
+    ],
+    "index": "chaos-quadrapod"
+  },
+  {
+    "name": "Clockwork Dragon",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 16,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 14,
+    "dexterity": 10,
+    "constitution": 12,
+    "intelligence": 10,
+    "wisdom": 11,
+    "charisma": 13,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-acrobatics",
+          "name": "Skill: Acrobatics",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "psychic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "60 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Common, Draconic",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 22,
+    "hit_dice": "4d8",
+    "hit_points_roll": "4d8 + 4",
+    "special_abilities": [
+      {
+        "name": "False Appearance",
+        "desc": "While the clockwork dragon remains motionless, it is indistinguishable from a metal statue."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Fire Breath (Recharge 5-6)",
+        "desc": "The clockwork dragon exhales fire in a 15-foot cone. Each creature in that area must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one."
+      }
+    ],
+    "index": "clockwork-dragon"
+  },
+  {
+    "name": "Deep Crow",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "20 ft.",
+      "fly": "80 ft."
+    },
+    "strength": 20,
+    "dexterity": 16,
+    "constitution": 18,
+    "intelligence": 8,
+    "wisdom": 15,
+    "charisma": 14,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "120 ft.",
+      "passive_perception": 16
+    },
+    "languages": "Deep Crow",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 133,
+    "hit_dice": "14d10",
+    "hit_points_roll": "14d10 + 56",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The deep crow has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Shadow Stealth",
+        "desc": "While in dim light or darkness, the deep crow can take the Hide action as a bonus action."
+      },
+      {
+        "name": "Sunlight Sensitivity",
+        "desc": "While in sunlight, the deep crow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The deep crow makes three attacks: one with its mandibles and two with its claws."
+      },
+      {
+        "name": "Mandibles",
+        "desc": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) piercing damage, and the target is grappled (escape DC 17). Until this grapple ends, the target is restrained, and the deep crow can't use its mandibles on another target.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.",
+        "attack_bonus": 9
+      }
+    ],
+    "index": "deep-crow"
+  },
+  {
+    "name": "Donaar Blit'zen",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic good",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 18,
+        "armor": [
+          {
+            "name": "plate armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 17,
+    "dexterity": 8,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 10
+    },
+    "languages": "Common, Draconic, Orc",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 45,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 14",
+    "subtype": "dragonborn",
+    "special_abilities": [
+      {
+        "name": "Champion Challenge (Recharges after a Short or Long Rest)",
+        "desc": "As a bonus action, Donaar causes each creature of his choice that he can see within 30 feet of him to make a DC 13 Wisdom saving throw. On a failure, a creature can't willingly move more than 30 feet away from Donaar. This effect ends on the creature if Donaar is incapacitated or dies, or if the creature is moved more than 30 feet away from him."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Donaar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). He has the following paladin spells prepared:\nLevel 1 (4 slots): command, compelled duel, cure wounds, wrathful smite\nLevel 2 (2 slots): aid, branding smite, lesser restoration, warding bond, zone of truth",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Donaar makes two attacks with his greatsword or his whip."
+      },
+      {
+        "name": "Greatsword",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage. Whenever Donaar rolls a 1 or 2 on a damage die, he can reroll the die and must use the new roll.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Whip",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 5 (1d4 + 3) slashing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Acid Vomit",
+        "desc": "Donaar regurgitates acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 7 (2d6) acid damage on a failed save, or half as much damage on a successful one."
+      }
+    ],
+    "index": "donaar-blitzen"
+  },
+  {
+    "name": "Flabbergast",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "lawful neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 17,
+    "wisdom": 13,
+    "charisma": 13,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "Common, Draconic, Elvish, Gnomish",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8",
+    "subtype": "human",
+    "special_abilities": [
+      {
+        "name": "Spellcasting",
+        "desc": "Flabbergast is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). He has the following wizard spells prepared:\nCantrips: fire bolt, light, mage hand, prestidigitation\nLevel 1 (4 slots): detect magic, mage armor, distort value*\nLevel 2 (3 slots): gift of gab*, suggestion\nLevel 3 (3 slots): fast friends*, lightning bolt\nLevel 4 (3 slots): greater invisibility\nLevel 5 (1 slots): cone of cold\n*New spell introduced in chapter 3",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "flabbergast"
+  },
+  {
+    "name": "Jim Darkmagic",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 18,
+    "wisdom": 12,
+    "charisma": 14,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-acrobatics",
+          "name": "Skill: Acrobatics",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-animal-handling",
+          "name": "Skill: Animal Handling",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "Common",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8",
+    "subtype": "human",
+    "special_abilities": [
+      {
+        "name": "Special Equipment",
+        "desc": "Jim carries a wand of wonder."
+      },
+      {
+        "name": "Benign Transportation (Recharges after Jim Casts a Conjuration Spell of 1st Level or Higher)",
+        "desc": "As a bonus action, Jim teleports up to 30 feet to a space he can see. The space must be unoccupied or occupied by a willing Small or Medium creature. If the latter, Jim and the willing creature both teleport, swapping places."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Jim is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). He has the following wizard spells prepared:\nCantrips: fire bolt, friends, mage hand, minor illusion, prestidigitation\nLevel 1 (4 slots): disguise self, Jim's magic missile*, mage armor\nLevel 2 (3 slots): invisibility, Jim's glowing coin*\nLevel 3 (3 slots): incite greed*, fireball\nLevel 4 (3 slots): conjure minor elementals, polymorph\nLevel 5 (1 slots): mislead\n*New spell introduced in chapter 3",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Minor Conjuration",
+        "desc": "Jim conjures an inanimate object, no larger than 3 feet on a side and no more than 10 pounds, in his hand or on the ground in an unoccupied space he can see within 10 feet of him. The object is visibly magical, radiating dim light out to 5 feet. It disappears if it takes any damage, after 1 hour, or when Jim uses this feature again."
+      }
+    ],
+    "index": "jim-darkmagic"
+  },
+  {
+    "name": "K'thriss Drow'b",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 14,
+        "armor": [
+          {
+            "name": "studded leather",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 12,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 18,
+    "proficiencies": [
+      {
+        "value": 0,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-investigation",
+          "name": "Skill: Investigation",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-religion",
+          "name": "Skill: Religion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, Common, Elvish, Undercommon; can read all writing",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 44,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 8",
+    "special_abilities": [
+      {
+        "name": "Special Equipment",
+        "desc": "K'thriss wears a robe of stars (accounted for in his statistics). The robe allows him to cast the following spells: 6/day: magic missile (7 missiles)"
+      },
+      {
+        "name": "Awakened Mind",
+        "desc": "K'thriss can telepathically speak to any creature he can see within 30 feet of him, provided the creature can understand at least one language."
+      },
+      {
+        "name": "Fey Ancestry",
+        "desc": "K'thriss has advantage on saving throws against being charmed, and magic can't put him to sleep. Sunlight Sensitivity. While in sunlight, K'thriss has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "K'thriss's innate spellcasting ability is Charisma (spell save DC 14). He can innately cast the following spells, requiring no material components:\nAt will: dancing lights, disguise self\n1/day each: darkness, faerie fire"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "K'thriss is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). He regains his expended spell slots when he finishes a short or long rest, and knows the following warlock spells:\nCantrips: chill touch, eldritch blast, mending, prestidigitation, thorn whip, vicious mockery\nLevel 3 (2 slots): dissonant whispers, fly, hex, misty step, sending, shatter",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "K'thriss makes two attacks with his sickle."
+      },
+      {
+        "name": "Sickle",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "kthriss-drowb"
+  },
+  {
+    "name": "Keg Robot",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 6,
+    "wisdom": 8,
+    "charisma": 5,
+    "proficiencies": [
+      {
+        "value": 1,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [
+      "poison",
+      "psychic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "understands Common but can't speak",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 39,
+    "hit_dice": "6d8",
+    "hit_points_roll": "6d8 + 12",
+    "special_abilities": [
+      {
+        "name": "Customizable Storage",
+        "desc": "A keg robot can hold up to three types of liquid payload totaling 12 gallons within its hollow, barrel-shaped body. A full keg robot can make one liquid attack per gallon before the liquid must be refilled. Filling a keg robot takes 2 rounds per gallon. Differing payloads can alter the keg robot's attacks from those presented here."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Fist",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Acid Squirt",
+        "desc": "Ranged Weapon Attack: +5 to hit, range 20/40 ft., one target. Hit: 7 (1d8 + 3) acid damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Beer Shower",
+        "desc": "The keg robot spews an unnaturally potent beer in a 15-foot cone or in a 30-foot line that is 5 feet wide. Each creature in the area must succeed on a DC 13 Constitution saving throw or be poisoned. While poisoned in this way, a creature has its speed halved by exposure to the potent brew. An affected creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nAdditionally, the beer shower extinguishes any fires or open flames in its area."
+      },
+      {
+        "name": "Hot Oil Spray (Recharge 5-6)",
+        "desc": "The keg robot sprays hot oil in a 15-foot cone or in a 30-foot line that is 5 feet wide. Each creature in the area must make a DC 13 Dexterity saving throw. On a failed save, a creature takes 7 (1d8 + 3) fire damage and falls prone. On a successful save, a creature takes half as much damage and doesn't fall prone.\nAny creature affected by the hot oil spray that takes fire damage before the oil dries (after 1 minute) takes an additional 3 (1d6) fire damage, and the oil burns away.\nIf the oil that remains in the area of the spray is lit, it burns for 1d4 rounds and deals 3 (1d6) fire damage to any creature that enters the area for the first time on a turn or ends its turn there."
+      }
+    ],
+    "index": "keg-robot"
+  },
+  {
+    "name": "Môrgæn",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 16,
+        "armor": [
+          {
+            "name": "studded leather",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 18,
+    "constitution": 12,
+    "intelligence": 12,
+    "wisdom": 14,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Common, Draconic, Dwarvish, Giant, Goblin",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 66,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 12",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "Môrgæn has advantage on saving throws against being charmed, and magic can't put her to sleep."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "Môrgæn's spellcasting ability is Intelligence. She can innately cast the following spells, requiring no material components:\nAt will: mage hand"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Môrgæn is a 9th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). She has the following ranger spells prepared:\nLevel 1 (4 slots): alarm, animal friendship, hunter's mark\nLevel 2 (3 slots): pass without trace, spike growth\nLevel 3 (2 slots): conjure animals",
+        "attack_bonus": 4
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Môrgæn makes three attacks with her scimitars or her longbow."
+      },
+      {
+        "name": "Scimitars",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) slashing damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Longbow",
+        "desc": "Ranged Weapon Attack: +6 to hit, range 150/600 ft., one target. Hit: 8 (1d8 + 4) piercing damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "m-rg-n"
+  },
+  {
+    "name": "Oak Truestrike",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral good or neutral evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "studded leather",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "Common",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 32,
+    "hit_dice": "5d8",
+    "hit_points_roll": "5d8 + 10",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "Oak has advantage on saving throws against being charmed, and magic can't put him to sleep."
+      },
+      {
+        "name": "Keen Hearing and Sight",
+        "desc": "Oak has advantage on Wisdom (Perception) checks that rely on hearing or sight."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Oak makes three attacks with his hooked daggers or his hand crossbow."
+      },
+      {
+        "name": "Hooked Dagger",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Hand Crossbow",
+        "desc": "Ranged Weapon Attack: +5 to hit, range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Return the Favor (3/Day)",
+        "desc": "When Oak takes damage from a melee weapon attack, he can make a hooked dagger attack."
+      }
+    ],
+    "index": "oak-truestrike"
+  },
+  {
+    "name": "Omin Dran",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "lawful neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 18,
+        "armor": [
+          {
+            "name": "plate armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 8,
+    "constitution": 14,
+    "intelligence": 11,
+    "wisdom": 18,
+    "charisma": 12,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-medicine",
+          "name": "Skill: Medicine",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 17
+    },
+    "languages": "Common, Dwarvish, Elvish, Goblin",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 65,
+    "hit_dice": "10d8",
+    "hit_points_roll": "10d8 + 20",
+    "subtype": "half-elf",
+    "special_abilities": [
+      {
+        "name": "Divine Strike",
+        "desc": "Once on each of his turns when he hits a creature with a weapon attack, Omin can cause the attack to deal an extra 4 (1d8) damage of the same type dealt by the weapon."
+      },
+      {
+        "name": "Fey Ancestry",
+        "desc": "Omin has advantage on saving throws against being charmed, and magic can't put him to sleep."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Omin is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). He has the following cleric spells prepared:\nCantrips: guidance, sacred flame, spare the dying, thaumaturgy\nLevel 1 (4 slots): bless, command, divine favor, shield of faith\nLevel 2 (3 slots): enhance ability, hold person, magic weapon, silence, spiritual weapon\nLevel 3 (3 slots): beacon of hope, crusader's mantle, dispel magic, mass healing word, spirit guardians\nLevel 4 (3 slots): death ward, freedom of movement, locate creature, stoneskin\nLevel 5 (1 slots): dispel evil and good, flame strike, hold monster, greater restoration, legend lore",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Omin makes two attacks with his maul."
+      },
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "reactions": [
+      {
+        "name": "War God's Blessing (Recharges after a Short or Long Rest)",
+        "desc": "When a creature within 30 feet of Omin makes an attack roll, but before learning whether it hits or misses, Omin can grant the creature a +10 bonus to that roll."
+      }
+    ],
+    "index": "omin-dran"
+  },
+  {
+    "name": "Pendragon Beestinger",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 14,
+    "constitution": 12,
+    "intelligence": 17,
+    "wisdom": 10,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-investigation",
+          "name": "Skill: Investigation",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 10
+    },
+    "languages": "Common, Draconic, Elvish, Halfling",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 27,
+    "hit_dice": "5d8",
+    "hit_points_roll": "5d8 + 5",
+    "subtype": "human",
+    "special_abilities": [
+      {
+        "name": "Echo Spell (1/Day)",
+        "desc": "Pendragon can cast the spell he cast on his last turn, whose casting time becomes 1 bonus action. This bonus casting uses a spell slot as normal."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Pendragon is a 4th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). He has the following wizard spells prepared:\nCantrips: acid splash, light, mage hand, poison spray, shocking grasp\nLevel 1 (4 slots): detect magic, mage armor, magic missile, sleep\nLevel 2 (3 slots): blindness/deafness, cloud of daggers, scorching ray",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "pendragon-beestinger"
+  },
+  {
+    "name": "Phoenix Anvil",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "lawful neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 18,
+        "armor": [
+          {
+            "name": "chain mail",
+            "url": ""
+          },
+          {
+            "name": "shield",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 15,
+    "dexterity": 10,
+    "constitution": 12,
+    "intelligence": 13,
+    "wisdom": 16,
+    "charisma": 13,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-religion",
+          "name": "Skill: Religion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 27,
+    "hit_dice": "5d8",
+    "hit_points_roll": "5d8 + 5",
+    "subtype": "human",
+    "special_abilities": [
+      {
+        "name": "Divine Display (1/Day)",
+        "desc": "As a bonus action, Phoenix causes his shield to flare with divine light. Each creature of his choice within 30 feet of him must succeed on a DC 13 Wisdom saving throw or be blinded for 1 minute. A creature can repeat the save at the end of each of its turns, ending the effect on itself with a success."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Phoenix is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). He has the following cleric spells prepared:\nCantrips: guidance, light, mending, sacred flame\nLevel 1 (4 slots): bane, cure wounds, guiding bolt\nLevel 2 (3 slots): hold person, spiritual weapon",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Phoenix makes two melee attacks."
+      },
+      {
+        "name": "Warhammer",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage, and the target must succeed on a DC 12 Strength saving throw or be pushed 5 feet.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "phoenix-anvil"
+  },
+  {
+    "name": "Portentia Dran",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 17,
+        "armor": [
+          {
+            "name": "chain shirt",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 18,
+    "constitution": 16,
+    "intelligence": 13,
+    "wisdom": 12,
+    "charisma": 14,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 13
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 45,
+    "hit_dice": "6d8",
+    "hit_points_roll": "6d8 + 18",
+    "subtype": "shapechanger",
+    "special_abilities": [
+      {
+        "name": "Sneak Attack (1/Turn)",
+        "desc": "Portentia deals an extra 14 (4d6) damage when she hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Portentia that isn't incapacitated and Portentia doesn't have disadvantage on the attack roll."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Portentia makes three melee attacks."
+      },
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) slashing damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Change Shape",
+        "desc": "Portentia magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than her own, or back into her true form. Any equipment she is wearing or carrying is absorbed or borne by the new form (her choice). In a new form, Portentia retains her game statistics and ability to speak, but her AC, movement modes, Strength, Dexterity, and special senses are replaced by those of the new form, and she gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that she lacks."
+      }
+    ],
+    "index": "portentia-dran"
+  },
+  {
+    "name": "Prophetess Dran",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "lawful good",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 14,
+        "armor": [
+          {
+            "name": "breastplate",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 14,
+    "dexterity": 10,
+    "constitution": 12,
+    "intelligence": 13,
+    "wisdom": 16,
+    "charisma": 13,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-medicine",
+          "name": "Skill: Medicine",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-religion",
+          "name": "Skill: Religion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 13
+    },
+    "languages": "Common, Elvish",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 27,
+    "hit_dice": "5d8",
+    "hit_points_roll": "5d8 + 5",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Divine Eminence",
+        "desc": "As a bonus action, Prophetess can expend a spell slot to cause her melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If Prophetess expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st."
+      },
+      {
+        "name": "Fey Ancestry",
+        "desc": "Prophetess has advantage on saving throws against being charmed, and magic can't put her to sleep."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Prophetess is a 5th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). Prophetess has the following cleric spells prepared:\nCantrips: light, sacred flame, thaumaturgy\nLevel 1 (4 slots): cure wounds, guiding bolt, sanctuary\nLevel 2 (3 slots): lesser restoration, spiritual weapon\nLevel 3 (2 slots): dispel magic, spirit guardians",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "prophetess-dran"
+  },
+  {
+    "name": "Rosie Beestinger",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "chaotic good",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "Unarmored Defense",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 8,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 12,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [
+      {
+        "value": 1,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-acrobatics",
+          "name": "Skill: Acrobatics",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 12
+    },
+    "languages": "Common, Draconic, Elvish, Halfling",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 45,
+    "hit_dice": "10d6",
+    "hit_points_roll": "10d6 + 10",
+    "subtype": "halfling",
+    "special_abilities": [
+      {
+        "name": "Brave",
+        "desc": "Rosie has advantage on saving throws against being frightened."
+      },
+      {
+        "name": "Halfling Nimbleness",
+        "desc": "Rosie can move through the space of any creature that is of a size larger than hers."
+      },
+      {
+        "name": "Evasion",
+        "desc": "If Rosie is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails. She can't use this trait if she's incapacitated."
+      },
+      {
+        "name": "Shadow Step",
+        "desc": "When Rosie is in dim light or darkness, she can use a bonus action to teleport 60 feet to an unoccupied space she can see that is also in dim light or darkness. She then has advantage on the first melee attack she makes before the end of the turn."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "Rosie's innate spellcasting ability is Wisdom (spell save DC 12). She can innately cast the following spells, requiring no material components:\nAt will: minor illusion, sacred flame, thaumaturgy\n1/day each: command, darkness, darkvision, pass without trace, silence"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Rosie makes three attacks, then makes two unarmed strike attacks."
+      },
+      {
+        "name": "Staff of the Master (+1 Quarterstaff)",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) bludgeoning damage, or 8 (1d8 + 4) bludgeoning damage if used with two hands.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Unarmed Strike",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage. Rosie's unarmed strikes are magical.",
+        "attack_bonus": 5
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Deflect Missiles",
+        "desc": "In response to being hit by a ranged weapon attack, Rosie deflects the missile. The damage she takes from the attack is reduced by 1d10 + 9. If the damage is reduced to 0, she catches the missile if it's small enough to hold in one hand and she has a hand free."
+      }
+    ],
+    "index": "rosie-beestinger"
+  },
+  {
+    "name": "Splugoth the Returned",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 15,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 14,
+    "constitution": 12,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Common, Draconic, Elvish, Goblin",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 27,
+    "hit_dice": "6d6",
+    "hit_points_roll": "6d6 + 6",
+    "subtype": "goblinoid",
+    "special_abilities": [
+      {
+        "name": "Defensive Advantage",
+        "desc": "As long as two or more of Splugoth's allies are within 5 feet of him and are not incapacitated, attack rolls against him are made with disadvantage."
+      },
+      {
+        "name": "Nimble Escape",
+        "desc": "Splugoth can take the Disengage or Hide action as a bonus action on each of his turns."
+      },
+      {
+        "name": "Touch of Madness",
+        "desc": "Splugoth has advantage on saving throws against being charmed or frightened."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Splugoth makes two attacks with his dagger."
+      },
+      {
+        "name": "Dagger",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Word From Beyond (1/Day)",
+        "desc": "Splugoth remembers and repeats aloud a few words from a place he entered while walking back from the next world to this one. Each creature of his choice within 30 feet of him that can hear him must succeed on a DC 12 Wisdom saving throw or be stunned until the end of its next turn."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Absorb Attack",
+        "desc": "When a creature Splugoth can see hits him with a melee weapon attack, the weapon snags on a pocket of residual resurrectional energy and is caught fast. The attack is negated and the weapon cannot be used until the creature succeeds on a DC 12 Strength (Athletics) check as an action to pull it out of Splugoth. Natural weapons can have their attacks negated by this feature, but can then be retracted automatically at the end of the attacking creature's turn."
+      }
+    ],
+    "index": "splugoth-the-returned"
+  },
+  {
+    "name": "Viari",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic good",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 18,
+        "armor": [
+          {
+            "name": "+1 studded leather",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "type": "armor",
+        "value": 19,
+        "armor": [
+          {
+            "name": "while wielding two melee weapons",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 20,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 8,
+    "charisma": 14,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "skill-acrobatics",
+          "name": "Skill: Acrobatics",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "skill-sleight-of-hand",
+          "name": "Skill: Sleight of Hand",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 15
+    },
+    "languages": "Common, Draconic, Thieves' cant",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 65,
+    "hit_dice": "10d8",
+    "hit_points_roll": "10d8 + 20",
+    "subtype": "human",
+    "special_abilities": [
+      {
+        "name": "Evasion",
+        "desc": "If Viari is subjected to an effect that allows him to make a Dexterity saving throw to take only half damage, he instead takes no damage if he succeeds on the saving throw, and only half damage if he fails. He can't use this trait if he's incapacitated."
+      },
+      {
+        "name": "Second-Story Work",
+        "desc": "Climbing does not cost Viari extra movement. Additionally, when he makes a running jump, the distance he covers increases by 5 feet."
+      },
+      {
+        "name": "Sneak Attack (1/Turn)",
+        "desc": "Viari deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Viari that isn't incapacitated and Viari doesn't have disadvantage on the attack roll."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Viari makes two attacks with his shortsword and two attacks with his rapier."
+      },
+      {
+        "name": "+1 Shortsword",
+        "desc": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 9 (1d6 + 6) piercing damage.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Rapier",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 9 (1d8 + 5) piercing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +8 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d4 + 5) piercing damage.",
+        "attack_bonus": 8
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Uncanny Dodge",
+        "desc": "Viari halves the damage that he takes from an attack that hits him. He must be able to see the attacker."
+      }
+    ],
+    "index": "viari"
+  },
+  {
+    "name": "Walnut Dankgrass",
+    "edition": "2014",
+    "source": "AI",
+    "sources": [
+      "AI"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "lawful neutral",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 14,
+        "armor": [
+          {
+            "name": "leather armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "35 ft."
+    },
+    "strength": 8,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 18,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 1,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 16
+    },
+    "languages": "Common, Druidic, Elvish, Sylvan",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 52,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 16",
+    "subtype": "elf",
+    "special_abilities": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "Walnut has advantage on saving throws against being charmed, and magic can't put her to sleep."
+      },
+      {
+        "name": "Mask of the Wild",
+        "desc": "Walnut can attempt to hide even when she is only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+      },
+      {
+        "name": "Wild Shape (Recharges after a Short or Long rest)",
+        "desc": "As a bonus action, Walnut can assume the shape of a dire wolf. She can stay in this form for 3 hours or until she reverts to her normal form as a bonus action. She automatically reverts if she falls unconscious, drops to 0 hit points, or dies.\nWhile transformed, Walnut's game statistics are replaced by the statistics of the dire wolf, except she retains her alignment, personality, and Intelligence, Wisdom, and Charisma scores.\nHer attacks in beast form are magical. While in beast form, Walnut can use a bonus action to expend one spell slot and regain 1d8 hit points per level of the spell slot expended."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Walnut is a 7th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). She has the following druid spells prepared:\nCantrips: druidcraft, produce flame, thorn whip\nLevel 1 (4 slots): cure wounds, entangle, thunderwave\nLevel 2 (3 slots): flame blade, moonbeam, pass without trace\nLevel 3 (3 slots): call lightning, dispel magic, plant growth\nLevel 4 (1 slots): blight, freedom of movement",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Walnut makes two attacks with Foremother or her longbow."
+      },
+      {
+        "name": "Foremother (+1 Scimitar)",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) slashing damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Longbow",
+        "desc": "Ranged Weapon Attack: +5 to hit, range 150/600 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "walnut-dankgrass"
+  }
+]

@@ -3,14 +3,15 @@ import { ArrowLeft, ArrowRight, Check, Shuffle, MoreHorizontal } from 'lucide-re
 import { StepProps } from '../types/wizard.types';
 import { loadClasses, getCantripsByClass, getLeveledSpellsByClass, AppSpell, SPELLS_KNOWN_BY_CLASS } from '../../../services/dataService';
 import SpellDetailsModal from '../../SpellDetailsModal';
+import { SpellBlurb } from '../../SpellBlurb';
 import {
   getSpellcastingType,
   cleanupInvalidSpellSelections,
   getAvailableSpellLevels,
-  getMaxPreparedSpells
+  getMaxPreparedSpells,
+  cantripsKnownForCreation,
+  randomSpellSelection,
 } from '../../../utils/spellUtils';
-import cantripsData from '../../../data/cantrips.json';
-
 const RandomizeButton: React.FC<{ onClick: () => void; title?: string; className?: string }> = ({
   onClick,
   title = "Randomize this section",
@@ -53,7 +54,8 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
         data.spellSelection,
         data.classSlug,
         data.level,
-        data.abilities
+        data.abilities,
+        { edition: data.edition, divineOrder: data.divineOrder, primalOrder: data.primalOrder },
       );
 
       // Check if anything changed
@@ -63,7 +65,7 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
         updateData({ spellSelection: cleanedSelection });
       }
     }
-  }, [selectedClass, data.spellSelection, data.abilities, data.classSlug, data.level, updateData]);
+  }, [selectedClass, data.spellSelection, data.abilities, data.classSlug, data.level, data.edition, data.divineOrder, data.primalOrder, updateData]);
 
   // If not a spellcaster or has no spells available, skip this step
   if (!selectedClass || !selectedClass.spellcasting ||
@@ -74,28 +76,22 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
 
   const spellcasting = selectedClass.spellcasting!;
   const spellcastingType = getSpellcastingType(selectedClass.slug);
-  const availableCantrips = getCantripsByClass(data.classSlug);
+  const availableCantrips = getCantripsByClass(data.classSlug, data.edition, data.background, data.subclassSlug || undefined);
 
   // Get all available spell levels based on character level
   const availableSpellLevels = getAvailableSpellLevels(data.classSlug, data.level);
 
   // Get all spells from available levels
   const availableSpells: AppSpell[] = availableSpellLevels.flatMap(level =>
-    getLeveledSpellsByClass(data.classSlug, level)
+    getLeveledSpellsByClass(data.classSlug, level, data.edition, data.background, data.subclassSlug || undefined)
   );
 
   // Calculate level-aware cantrip and spell counts
-  let cantripsKnownAtLevel = (cantripsData as Record<string, Record<string, number>>)[data.classSlug]?.[data.level] || spellcasting.cantripsKnown;
-
-  // 2024 Cleric Thaumaturge gets +1 cantrip
-  if (data.classSlug === 'cleric' && data.edition === '2024' && data.divineOrder === 'thaumaturge') {
-    cantripsKnownAtLevel += 1;
-  }
-
-  // 2024 Druid Magician gets +1 cantrip
-  if (data.classSlug === 'druid' && data.edition === '2024' && data.primalOrder === 'magician') {
-    cantripsKnownAtLevel += 1;
-  }
+  const cantripsKnownAtLevel = cantripsKnownForCreation(data.classSlug, data.level, {
+    edition: data.edition,
+    divineOrder: data.divineOrder,
+    primalOrder: data.primalOrder,
+  });
 
   // Calculate max spells based on caster type
   let maxPreparedSpellsAtLevel: number;
@@ -275,8 +271,17 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
         </div>
         <RandomizeButton
           onClick={() => {
-            // Randomize spell selection - would need implementation
-
+            updateData({
+              spellSelection: randomSpellSelection(
+                data.classSlug,
+                data.level,
+                data.edition,
+                data.abilities,
+                data.background,
+                data.subclassSlug || undefined,
+                { divineOrder: data.divineOrder, primalOrder: data.primalOrder },
+              ),
+            });
           }}
           title="Randomize spell selection"
         />
@@ -317,7 +322,7 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
                     {isSelected && <Check className="w-5 h-5 text-accent-green-light" />}
                   </div>
                   <div className="text-xs text-theme-muted mt-2 line-clamp-2">
-                    {spell.description}
+                    <SpellBlurb spell={spell} />
                   </div>
                   <div className="text-xs text-theme-disabled mt-1">
                     {spell.castingTime} • {spell.range}
@@ -378,7 +383,7 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
                         {isSelected && <Check className="w-5 h-5 text-accent-green-light" />}
                       </div>
                       <div className="text-xs text-theme-muted mt-2 line-clamp-2">
-                        {spell.description}
+                        <SpellBlurb spell={spell} />
                       </div>
                       <div className="text-xs text-theme-disabled mt-1">
                         {spell.castingTime} • {spell.range}
@@ -441,7 +446,7 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
                         {isSelected && <Check className="w-5 h-5 text-accent-green-light" />}
                       </div>
                       <div className="text-xs text-theme-muted mt-2 line-clamp-2">
-                        {spell.description}
+                        <SpellBlurb spell={spell} />
                       </div>
                       <div className="text-xs text-theme-disabled mt-1">
                         {spell.castingTime} • {spell.range}
@@ -512,7 +517,7 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
                             {isSelected && <Check className="w-5 h-5 text-accent-green-light" />}
                           </div>
                           <div className="text-xs text-theme-muted mt-2 line-clamp-2">
-                            {spell.description}
+                            <SpellBlurb spell={spell} />
                           </div>
                           <div className="text-xs text-theme-disabled mt-1">
                             {spell.castingTime} • {spell.range}
@@ -585,7 +590,7 @@ export const Step4Spells: React.FC<StepProps> = ({ data, updateData, nextStep, p
                             {isSelected && <Check className="w-5 h-5 text-accent-green-light" />}
                           </div>
                           <div className="text-xs text-theme-muted mt-2 line-clamp-2">
-                            {spell.description}
+                            <SpellBlurb spell={spell} />
                           </div>
                           <div className="text-xs text-theme-disabled mt-1">
                             {spell.castingTime} • {spell.range}

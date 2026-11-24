@@ -2,15 +2,18 @@ import React, { useMemo, useState } from 'react';
 import { ArrowLeft, ArrowRight, Shuffle } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
 import { Feat, FeatChoiceMap } from '../../../types/dnd';
-import { FEAT_DATABASE, randomizeFeats, loadFeats } from '../../../services/dataService';
+import { randomizeFeats, loadFeats, getFeatBySlug } from '../../../services/dataService';
 import {
   calculateFeatAvailability,
   featProvidesAbilityIncrease,
   getFeatSourceInfo,
   canSelectMoreFeats,
-  getFeatAvailability
+  getFeatAvailability,
+  featsForEdition
 } from '../../../utils/featUtils';
+import { getFeatChoiceSections } from '../../../utils/featGrantUtils';
 import { FeatChoiceModal } from '../components';
+import { FeatDescription } from '../../FeatDescription';
 
 const RandomizeButton: React.FC<{ onClick: () => void; title?: string; className?: string }> = ({
   onClick,
@@ -39,7 +42,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
   const selectedFeats = data.selectedFeats || [];
 
   // Load all feats and calculate availability
-  const allFeats = useMemo(() => loadFeats().map(feat => {
+  const allFeats = useMemo(() => featsForEdition(loadFeats(), data.edition).map(feat => {
     const availability = getFeatAvailability(feat, data);
     return {
       feat,
@@ -55,8 +58,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
 
   // Helper function to check if a feat requires choices
   const featRequiresChoices = (featSlug: string): boolean => {
-    const feat = loadFeats().find(f => f.slug === featSlug);
-    return !!(feat?.abilityScoreIncrease);
+    return getFeatChoiceSections(getFeatBySlug(featSlug, data.edition) ?? null).length > 0;
   };
 
 
@@ -147,7 +149,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
           </div>
           <div className="flex flex-wrap gap-2">
             {selectedFeats.map(slug => {
-              const feat = FEAT_DATABASE.find(f => f.slug === slug);
+              const feat = getFeatBySlug(slug, data.edition);
               return (
                 <span key={slug} className="px-2 py-1 bg-accent-green-dark text-white text-xs rounded">
                   {feat?.name}
@@ -203,7 +205,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
                     </p>
                   )}
                   <p className={`text-xs mt-2 line-clamp-2 ${isAvailable ? 'text-theme-muted' : 'text-gray-500'}`}>
-                    {feat.description}
+                    {feat.benefits[0]}
                   </p>
                 </button>
                 <button
@@ -219,7 +221,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
                 {showFeatDetails === feat.slug && (
                   <div className="absolute z-10 mt-2 p-3 bg-theme-primary border border-theme-primary rounded-lg shadow-xl w-80 left-0">
                     <h5 className="font-bold text-accent-yellow-light text-sm mb-2">{feat.name}</h5>
-                    <p className="text-xs text-theme-tertiary mb-2">{feat.description}</p>
+                    <FeatDescription feat={feat} className="text-xs text-theme-tertiary mb-2" />
                     <div className="text-xs text-theme-muted">
                       <strong className="text-theme-tertiary">Benefits:</strong>
                       <ul className="list-disc list-inside mt-1 space-y-1">

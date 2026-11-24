@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { X, Check, BookOpen } from 'lucide-react';
 import { Character } from '../types/dnd';
 import { AppSpell } from '../services/dataService';
+import { SpellBlurb } from './SpellBlurb';
 
 interface SpellPreparationModalProps {
   character: Character;
@@ -155,9 +156,7 @@ export const SpellPreparationModal: React.FC<SpellPreparationModalProps> = ({
                         </div>
                       </div>
                     </div>
-                    <div className="text-xs text-theme-muted mt-2 line-clamp-2">
-                      {spell.description}
-                    </div>
+                    <SpellBlurb spell={spell} className="text-xs text-theme-muted mt-2 line-clamp-2" />
                     <div className="text-xs text-theme-disabled mt-1">
                       {spell.castingTime} • {spell.range}
                       {spell.concentration && ' • Concentration'}

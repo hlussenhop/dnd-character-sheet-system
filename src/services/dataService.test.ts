@@ -76,6 +76,40 @@ describe('Data Service Functions', () => {
       expect(sources).toContain('2014');
       expect(sources).toContain('2024');
     });
+
+    it('should have unique slugs across both editions', () => {
+      const slugs = SPELL_DATABASE.map(s => s.slug);
+      expect(new Set(slugs).size).toBe(slugs.length);
+    });
+
+    it('should keep shared-name spells for both editions', () => {
+      const fireballs = SPELL_DATABASE.filter(s => s.name === 'Fireball');
+      expect(fireballs.map(s => s.source).sort()).toEqual(['2014', '2024']);
+    });
+
+    it('should resolve the legacy slugs that saved characters and trait data reference', () => {
+      // TRAIT_SPELL_MAP (Infernal Legacy) and saved characters use un-suffixed slugs
+      ['thaumaturgy', 'hellish-rebuke', 'darkness', 'fireball'].forEach(slug => {
+        const spell = SPELL_DATABASE.find(s => s.slug === slug);
+        expect(spell, slug).toBeDefined();
+        expect(spell?.source).toBe('2024');
+      });
+    });
+
+    it('should never list the same spell twice when no edition is given', () => {
+      ['wizard', 'cleric', 'warlock'].forEach(cls => {
+        const names = getSpellsForClass(cls).map(s => s.name);
+        expect(new Set(names).size).toBe(names.length);
+      });
+    });
+
+    it('should filter by edition when one is given', () => {
+      const wizard2014 = getSpellsForClass('wizard', '2014');
+      const wizard2024 = getSpellsForClass('wizard', '2024');
+      expect(wizard2014.length).toBeGreaterThan(0);
+      expect(wizard2014.every(s => s.source === '2014')).toBe(true);
+      expect(wizard2024.every(s => s.source === '2024')).toBe(true);
+    });
   });
 
   describe('Proficiency Functions', () => {
@@ -119,8 +153,22 @@ describe('Data Service Functions', () => {
     });
 
     it('should resolve legacy species slugs to canonical', () => {
-      expect(resolveSpeciesSlug('mountain-dwarf')).toBe('dwarf-2024');
-      expect(resolveSpeciesSlug('human')).toBe('human-2024');
+      // 2024 characters carrying an old unsuffixed slug migrate to the 2024 record
+      expect(resolveSpeciesSlug('mountain-dwarf', '2024')).toBe('dwarf-2024');
+      expect(resolveSpeciesSlug('human', '2024')).toBe('human-2024');
+      expect(resolveSpeciesSlug('Aasimar', '2024')).toBe('aasimar-2024');
+      // renamed species keep resolving
+      expect(resolveSpeciesSlug('yuan-ti-pureblood')).toBe('yuan-ti');
+      expect(resolveSpeciesSlug('fire-genasi')).toBe('genasi');
+    });
+
+    it('keeps 2014 slugs on their 2014 species', () => {
+      ['human', 'mountain-dwarf', 'high-elf', 'aasimar', 'goliath', 'orc', 'half-orc'].forEach(slug => {
+        expect(resolveSpeciesSlug(slug)).toBe(slug);
+        expect(resolveSpeciesSlug(slug, '2014')).toBe(slug);
+      });
+      expect(resolveSpeciesSlug('Human', '2014')).toBe('human');
+      expect(resolveSpeciesSlug('human-2024', '2024')).toBe('human-2024');
     });
 
     it('should provide core and expanded categories', () => {

@@ -1,396 +1,1066 @@
 [
   {
-    "index": "path-of-the-world-tree",
-    "class": { "index": "barbarian", "name": "Barbarian", "url": "/api/2024/classes/barbarian" },
-    "name": "Path of the World Tree",
-    "subclass_flavor": "Primal Path",
-    "desc": ["(NEW: Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/path-of-the-world-tree/levels",
-    "url": "/api/2024/subclasses/path-of-the-world-tree"
+    "index": "alchemist-2024",
+    "name": "Alchemist",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer"
+    },
+    "subclass_flavor": "Artificer Specialist",
+    "desc": [
+      "Craft Magic Elixirs and Potions"
+    ],
+    "edition": "2024",
+    "source": "EFA"
   },
   {
-    "index": "path-of-the-wild-heart",
-    "class": { "index": "barbarian", "name": "Barbarian", "url": "/api/2024/classes/barbarian" },
-    "name": "Path of the Wild Heart",
-    "subclass_flavor": "Primal Path",
-    "desc": ["(RENAMED: Formerly Totem Warrior. Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/path-of-the-wild-heart/levels",
-    "url": "/api/2024/subclasses/path-of-the-wild-heart"
+    "index": "armorer-2024",
+    "name": "Armorer",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer"
+    },
+    "subclass_flavor": "Artificer Specialist",
+    "desc": [
+      "Craft Magic Armor to Enhance Your Abilities"
+    ],
+    "edition": "2024",
+    "source": "EFA"
   },
   {
-    "index": "path-of-the-berserker-2024",
-    "class": { "index": "barbarian", "name": "Barbarian", "url": "/api/2024/classes/barbarian" },
+    "index": "artillerist-2024",
+    "name": "Artillerist",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer"
+    },
+    "subclass_flavor": "Artificer Specialist",
+    "desc": [
+      "Wield Destructive Power from Afar"
+    ],
+    "edition": "2024",
+    "source": "EFA"
+  },
+  {
+    "index": "battle-smith-2024",
+    "name": "Battle Smith",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer"
+    },
+    "subclass_flavor": "Artificer Specialist",
+    "desc": [
+      "Command a Construct Guardian"
+    ],
+    "edition": "2024",
+    "source": "EFA"
+  },
+  {
+    "index": "cartographer-2024",
+    "name": "Cartographer",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer"
+    },
+    "subclass_flavor": "Artificer Specialist",
+    "desc": [
+      "Chart Advantageous Courses through Turmoil"
+    ],
+    "edition": "2024",
+    "source": "EFA"
+  },
+  {
+    "index": "reanimator-2024",
+    "name": "Reanimator",
+    "class": {
+      "index": "artificer",
+      "name": "Artificer"
+    },
+    "subclass_flavor": "Artificer Specialist",
+    "desc": [
+      "Reassemble Corpses and Raise the Dead"
+    ],
+    "edition": "2024",
+    "source": "RHW"
+  },
+  {
+    "index": "berserker-2024",
     "name": "Path of the Berserker",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian"
+    },
     "subclass_flavor": "Primal Path",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/path-of-the-berserker-2024/levels",
-    "url": "/api/2024/subclasses/path-of-the-berserker-2024"
+    "desc": [
+      "Channel Rage into Violent Fury"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "path-of-the-zealot-2024",
-    "class": { "index": "barbarian", "name": "Barbarian", "url": "/api/2024/classes/barbarian" },
+    "index": "wild-heart-2024",
+    "name": "Path of the Wild Heart",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian"
+    },
+    "subclass_flavor": "Primal Path",
+    "desc": [
+      "Walk in Community with the Animal World"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "world-tree-2024",
+    "name": "Path of the World Tree",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian"
+    },
+    "subclass_flavor": "Primal Path",
+    "desc": [
+      "Trace the Roots and Branches of the Multiverse"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "zealot-2024",
     "name": "Path of the Zealot",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian"
+    },
     "subclass_flavor": "Primal Path",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/path-of-the-zealot-2024/levels",
-    "url": "/api/2024/subclasses/path-of-the-zealot-2024"
+    "desc": [
+      "Rage in Ecstatic Union with a God"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "college-of-dance",
-    "class": { "index": "bard", "name": "Bard", "url": "/api/2024/classes/bard" },
+    "index": "dance-2024",
     "name": "College of Dance",
+    "class": {
+      "index": "bard",
+      "name": "Bard"
+    },
     "subclass_flavor": "Bard College",
-    "desc": ["(NEW: Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/college-of-dance/levels",
-    "url": "/api/2024/subclasses/college-of-dance"
+    "desc": [
+      "Move in Harmony with the Cosmos"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "college-of-glamour-2024",
-    "class": { "index": "bard", "name": "Bard", "url": "/api/2024/classes/bard" },
+    "index": "glamour-2024",
     "name": "College of Glamour",
+    "class": {
+      "index": "bard",
+      "name": "Bard"
+    },
     "subclass_flavor": "Bard College",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/college-of-glamour-2024/levels",
-    "url": "/api/2024/subclasses/college-of-glamour-2024"
+    "desc": [
+      "Weave Beguiling Fey Magic"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "college-of-lore-2024",
-    "class": { "index": "bard", "name": "Bard", "url": "/api/2024/classes/bard" },
+    "index": "lore-2024",
     "name": "College of Lore",
+    "class": {
+      "index": "bard",
+      "name": "Bard"
+    },
     "subclass_flavor": "Bard College",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/college-of-lore-2024/levels",
-    "url": "/api/2024/subclasses/college-of-lore-2024"
+    "desc": [
+      "Plumb the Depths of Magical Knowledge"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "college-of-valor-2024",
-    "class": { "index": "bard", "name": "Bard", "url": "/api/2024/classes/bard" },
+    "index": "spirits-2024",
+    "name": "College of Spirits",
+    "class": {
+      "index": "bard",
+      "name": "Bard"
+    },
+    "subclass_flavor": "Bard College",
+    "desc": [
+      "Call Forth Spirits from Beyond the Grave"
+    ],
+    "edition": "2024",
+    "source": "RHW"
+  },
+  {
+    "index": "valor-2024",
     "name": "College of Valor",
+    "class": {
+      "index": "bard",
+      "name": "Bard"
+    },
     "subclass_flavor": "Bard College",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/college-of-valor-2024/levels",
-    "url": "/api/2024/subclasses/college-of-valor-2024"
+    "desc": [
+      "Sing the Deeds of Ancient Heroes"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "life-domain-2024",
-    "class": { "index": "cleric", "name": "Cleric", "url": "/api/2024/classes/cleric" },
+    "index": "moon-2024",
+    "name": "College of the Moon",
+    "class": {
+      "index": "bard",
+      "name": "Bard"
+    },
+    "subclass_flavor": "Bard College",
+    "desc": [
+      "Inspire Allies with Primal Tales"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
+  },
+  {
+    "index": "arcana-2024",
+    "name": "Arcana Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
+    "subclass_flavor": "Divine Domain",
+    "desc": [
+      "Amplify Your Magical Power"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "grave-2024",
+    "name": "Grave Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
+    "subclass_flavor": "Divine Domain",
+    "desc": [
+      "Embody Deific Forces of Death"
+    ],
+    "edition": "2024",
+    "source": "RHW"
+  },
+  {
+    "index": "knowledge-2024",
+    "name": "Knowledge Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
+    "subclass_flavor": "Divine Domain",
+    "desc": [
+      "Unearth Secrets and Master the Mind"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
+  },
+  {
+    "index": "life-2024",
     "name": "Life Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
     "subclass_flavor": "Divine Domain",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/life-domain-2024/levels",
-    "url": "/api/2024/subclasses/life-domain-2024"
+    "desc": [
+      "Soothe the Hurts of the World"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "light-domain-2024",
-    "class": { "index": "cleric", "name": "Cleric", "url": "/api/2024/classes/cleric" },
+    "index": "light-2024",
     "name": "Light Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
     "subclass_flavor": "Divine Domain",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/light-domain-2024/levels",
-    "url": "/api/2024/subclasses/light-domain-2024"
+    "desc": [
+      "Bring Light to Banish Darkness"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "trickery-domain-2024",
-    "class": { "index": "cleric", "name": "Cleric", "url": "/api/2024/classes/cleric" },
+    "index": "trickery-2024",
     "name": "Trickery Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
     "subclass_flavor": "Divine Domain",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/trickery-domain-2024/levels",
-    "url": "/api/2024/subclasses/trickery-domain-2024"
+    "desc": [
+      "Make Mischief and Challenge Authority"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "war-domain-2024",
-    "class": { "index": "cleric", "name": "Cleric", "url": "/api/2024/classes/cleric" },
+    "index": "war-2024",
     "name": "War Domain",
+    "class": {
+      "index": "cleric",
+      "name": "Cleric"
+    },
     "subclass_flavor": "Divine Domain",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/war-domain-2024/levels",
-    "url": "/api/2024/subclasses/war-domain-2024"
+    "desc": [
+      "Inspire Valor and Smite Foes"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "circle-of-the-sea",
-    "class": { "index": "druid", "name": "Druid", "url": "/api/2024/classes/druid" },
-    "name": "Circle of the Sea",
-    "subclass_flavor": "Druid Circle",
-    "desc": ["(NEW: Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/circle-of-the-sea/levels",
-    "url": "/api/2024/subclasses/circle-of-the-sea"
-  },
-  {
-    "index": "circle-of-the-land-2024",
-    "class": { "index": "druid", "name": "Druid", "url": "/api/2024/classes/druid" },
+    "index": "land-2024",
     "name": "Circle of the Land",
+    "class": {
+      "index": "druid",
+      "name": "Druid"
+    },
     "subclass_flavor": "Druid Circle",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/circle-of-the-land-2024/levels",
-    "url": "/api/2024/subclasses/circle-of-the-land-2024"
+    "desc": [
+      "Celebrate Connection to the Natural World"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "circle-of-the-moon-2024",
-    "class": { "index": "druid", "name": "Druid", "url": "/api/2024/classes/druid" },
+    "index": "druid-moon-2024",
     "name": "Circle of the Moon",
+    "class": {
+      "index": "druid",
+      "name": "Druid"
+    },
     "subclass_flavor": "Druid Circle",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/circle-of-the-moon-2024/levels",
-    "url": "/api/2024/subclasses/circle-of-the-moon-2024"
+    "desc": [
+      "Adopt Animal Forms to Guard the Wilds"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "circle-of-the-stars-2024",
-    "class": { "index": "druid", "name": "Druid", "url": "/api/2024/classes/druid" },
-    "name": "Circle of the Stars",
+    "index": "sea-2024",
+    "name": "Circle of the Sea",
+    "class": {
+      "index": "druid",
+      "name": "Druid"
+    },
     "subclass_flavor": "Druid Circle",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/circle-of-the-stars-2024/levels",
-    "url": "/api/2024/subclasses/circle-of-the-stars-2024"
+    "desc": [
+      "Become One with Tides and Storms"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "stars-2024",
+    "name": "Circle of the Stars",
+    "class": {
+      "index": "druid",
+      "name": "Druid"
+    },
+    "subclass_flavor": "Druid Circle",
+    "desc": [
+      "Harness Secrets Hidden in Constellations"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "arcane-archer-2024",
+    "name": "Arcane Archer",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter"
+    },
+    "subclass_flavor": "Martial Archetype",
+    "desc": [
+      "Deploy Magical Effects Through Enchanted Ammunition"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "banneret-2024",
+    "name": "Banneret",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter"
+    },
+    "subclass_flavor": "Martial Archetype",
+    "desc": [
+      "Rally Fellow Heroes with Inspiring Leadership"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
   },
   {
     "index": "battle-master-2024",
-    "class": { "index": "fighter", "name": "Fighter", "url": "/api/2024/classes/fighter" },
     "name": "Battle Master",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter"
+    },
     "subclass_flavor": "Martial Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/battle-master-2024/levels",
-    "url": "/api/2024/subclasses/battle-master-2024"
+    "desc": [
+      "Master Sophisticated Battle Maneuvers"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "champion-2024",
-    "class": { "index": "fighter", "name": "Fighter", "url": "/api/2024/classes/fighter" },
     "name": "Champion",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter"
+    },
     "subclass_flavor": "Martial Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/champion-2024/levels",
-    "url": "/api/2024/subclasses/champion-2024"
+    "desc": [
+      "Pursue Physical Excellence in Combat"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "eldritch-knight-2024",
-    "class": { "index": "fighter", "name": "Fighter", "url": "/api/2024/classes/fighter" },
     "name": "Eldritch Knight",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter"
+    },
     "subclass_flavor": "Martial Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/eldritch-knight-2024/levels",
-    "url": "/api/2024/subclasses/eldritch-knight-2024"
+    "desc": [
+      "Support Combat Skills with Arcane Magic"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "psi-warrior-2024",
-    "class": { "index": "fighter", "name": "Fighter", "url": "/api/2024/classes/fighter" },
     "name": "Psi Warrior",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter"
+    },
     "subclass_flavor": "Martial Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/psi-warrior-2024/levels",
-    "url": "/api/2024/subclasses/psi-warrior-2024"
+    "desc": [
+      "Augment Physical Might with Psionic Power"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "warrior-of-the-elements",
-    "class": { "index": "monk", "name": "Monk", "url": "/api/2024/classes/monk" },
-    "name": "Warrior of the Elements",
-    "subclass_flavor": "Monastic Tradition",
-    "desc": ["(REPLACED: Formerly Way of the Four Elements. Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/warrior-of-the-elements/levels",
-    "url": "/api/2024/subclasses/warrior-of-the-elements"
-  },
-  {
-    "index": "warrior-of-mercy-2024",
-    "class": { "index": "monk", "name": "Monk", "url": "/api/2024/classes/monk" },
+    "index": "mercy-2024",
     "name": "Warrior of Mercy",
+    "class": {
+      "index": "monk",
+      "name": "Monk"
+    },
     "subclass_flavor": "Monastic Tradition",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/warrior-of-mercy-2024/levels",
-    "url": "/api/2024/subclasses/warrior-of-mercy-2024"
+    "desc": [
+      "Manipulate Forces of Life and Death"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "warrior-of-the-open-hand-2024",
-    "class": { "index": "monk", "name": "Monk", "url": "/api/2024/classes/monk" },
-    "name": "Warrior of the Open Hand",
-    "subclass_flavor": "Monastic Tradition",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/warrior-of-the-open-hand-2024/levels",
-    "url": "/api/2024/subclasses/warrior-of-the-open-hand-2024"
-  },
-  {
-    "index": "warrior-of-shadow-2024",
-    "class": { "index": "monk", "name": "Monk", "url": "/api/2024/classes/monk" },
+    "index": "shadow-2024",
     "name": "Warrior of Shadow",
+    "class": {
+      "index": "monk",
+      "name": "Monk"
+    },
     "subclass_flavor": "Monastic Tradition",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/warrior-of-shadow-2024/levels",
-    "url": "/api/2024/subclasses/warrior-of-shadow-2024"
+    "desc": [
+      "Harness Shadow Power for Stealth and Subterfuge"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "oath-of-devotion-2024",
-    "class": { "index": "paladin", "name": "Paladin", "url": "/api/2024/classes/paladin" },
+    "index": "elements-2024",
+    "name": "Warrior of the Elements",
+    "class": {
+      "index": "monk",
+      "name": "Monk"
+    },
+    "subclass_flavor": "Monastic Tradition",
+    "desc": [
+      "Wield Strikes and Bursts of Elemental Power"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "mystic-arts-2024",
+    "name": "Warrior of the Mystic Arts",
+    "class": {
+      "index": "monk",
+      "name": "Monk"
+    },
+    "subclass_flavor": "Monastic Tradition",
+    "desc": [
+      "Weave Martial and Mystic Arts"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "open-hand-2024",
+    "name": "Warrior of the Open Hand",
+    "class": {
+      "index": "monk",
+      "name": "Monk"
+    },
+    "subclass_flavor": "Monastic Tradition",
+    "desc": [
+      "Master Unarmed Combat Techniques"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "devotion-2024",
     "name": "Oath of Devotion",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin"
+    },
     "subclass_flavor": "Sacred Oath",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/oath-of-devotion-2024/levels",
-    "url": "/api/2024/subclasses/oath-of-devotion-2024"
+    "desc": [
+      "Uphold the Ideals of Justice and Order"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "oath-of-glory-2024",
-    "class": { "index": "paladin", "name": "Paladin", "url": "/api/2024/classes/paladin" },
+    "index": "glory-2024",
     "name": "Oath of Glory",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin"
+    },
     "subclass_flavor": "Sacred Oath",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/oath-of-glory-2024/levels",
-    "url": "/api/2024/subclasses/oath-of-glory-2024"
+    "desc": [
+      "Strive for the Heights of Heroism"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "oath-of-the-ancients-2024",
-    "class": { "index": "paladin", "name": "Paladin", "url": "/api/2024/classes/paladin" },
-    "name": "Oath of the Ancients",
-    "subclass_flavor": "Sacred Oath",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/oath-of-the-ancients-2024/levels",
-    "url": "/api/2024/subclasses/oath-of-the-ancients-2024"
-  },
-  {
-    "index": "oath-of-vengeance-2024",
-    "class": { "index": "paladin", "name": "Paladin", "url": "/api/2024/classes/paladin" },
+    "index": "vengeance-2024",
     "name": "Oath of Vengeance",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin"
+    },
     "subclass_flavor": "Sacred Oath",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/oath-of-vengeance-2024/levels",
-    "url": "/api/2024/subclasses/oath-of-vengeance-2024"
+    "desc": [
+      "Punish Evildoers at Any Cost"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "ancients-2024",
+    "name": "Oath of the Ancients",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin"
+    },
+    "subclass_flavor": "Sacred Oath",
+    "desc": [
+      "Preserve Life and Light in the World"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "noble-genies-2024",
+    "name": "Oath of the Noble Genies",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin"
+    },
+    "subclass_flavor": "Sacred Oath",
+    "desc": [
+      "Brandish the Elemental Splendor of Genies"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
   },
   {
     "index": "beast-master-2024",
-    "class": { "index": "ranger", "name": "Ranger", "url": "/api/2024/classes/ranger" },
     "name": "Beast Master",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger"
+    },
     "subclass_flavor": "Ranger Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/beast-master-2024/levels",
-    "url": "/api/2024/subclasses/beast-master-2024"
+    "desc": [
+      "Bond with a Primal Beast"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "fey-wanderer-2024",
-    "class": { "index": "ranger", "name": "Ranger", "url": "/api/2024/classes/ranger" },
     "name": "Fey Wanderer",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger"
+    },
     "subclass_flavor": "Ranger Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/fey-wanderer-2024/levels",
-    "url": "/api/2024/subclasses/fey-wanderer-2024"
+    "desc": [
+      "Wield Fey Mirth and Fury"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "gloom-stalker-2024",
-    "class": { "index": "ranger", "name": "Ranger", "url": "/api/2024/classes/ranger" },
     "name": "Gloom Stalker",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger"
+    },
     "subclass_flavor": "Ranger Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/gloom-stalker-2024/levels",
-    "url": "/api/2024/subclasses/gloom-stalker-2024"
+    "desc": [
+      "Draw on Shadow Magic to Fight Your Foes"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "hollow-warden-2024",
+    "name": "Hollow Warden",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger"
+    },
+    "subclass_flavor": "Ranger Archetype",
+    "desc": [
+      "Draw on the Might of Ancient Wild Terrors"
+    ],
+    "edition": "2024",
+    "source": "RHW"
   },
   {
     "index": "hunter-2024",
-    "class": { "index": "ranger", "name": "Ranger", "url": "/api/2024/classes/ranger" },
     "name": "Hunter",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger"
+    },
     "subclass_flavor": "Ranger Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/hunter-2024/levels",
-    "url": "/api/2024/subclasses/hunter-2024"
+    "desc": [
+      "Protect Nature and People from Destruction"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "winter-walker-2024",
+    "name": "Winter Walker",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger"
+    },
+    "subclass_flavor": "Ranger Archetype",
+    "desc": [
+      "Withstand the Horrors of Frigid Wastelands"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
   },
   {
     "index": "arcane-trickster-2024",
-    "class": { "index": "rogue", "name": "Rogue", "url": "/api/2024/classes/rogue" },
     "name": "Arcane Trickster",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue"
+    },
     "subclass_flavor": "Roguish Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/arcane-trickster-2024/levels",
-    "url": "/api/2024/subclasses/arcane-trickster-2024"
+    "desc": [
+      "Enhance Stealth with Arcane Spells"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "assassin-2024",
-    "class": { "index": "rogue", "name": "Rogue", "url": "/api/2024/classes/rogue" },
     "name": "Assassin",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue"
+    },
     "subclass_flavor": "Roguish Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/assassin-2024/levels",
-    "url": "/api/2024/subclasses/assassin-2024"
+    "desc": [
+      "Practice the Grim Art of Death"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "phantom-2024",
+    "name": "Phantom",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue"
+    },
+    "subclass_flavor": "Roguish Archetype",
+    "desc": [
+      "Embrace Death and Wield Ghostly Power"
+    ],
+    "edition": "2024",
+    "source": "RHW"
+  },
+  {
+    "index": "scion-of-the-three-2024",
+    "name": "Scion of the Three",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue"
+    },
+    "subclass_flavor": "Roguish Archetype",
+    "desc": [
+      "Become a Gruesome Agent of Malice"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
   },
   {
     "index": "soulknife-2024",
-    "class": { "index": "rogue", "name": "Rogue", "url": "/api/2024/classes/rogue" },
     "name": "Soulknife",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue"
+    },
     "subclass_flavor": "Roguish Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/soulknife-2024/levels",
-    "url": "/api/2024/subclasses/soulknife-2024"
+    "desc": [
+      "Strike Foes with Psionic Blades"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
     "index": "thief-2024",
-    "class": { "index": "rogue", "name": "Rogue", "url": "/api/2024/classes/rogue" },
     "name": "Thief",
+    "class": {
+      "index": "rogue",
+      "name": "Rogue"
+    },
     "subclass_flavor": "Roguish Archetype",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/thief-2024/levels",
-    "url": "/api/2024/subclasses/thief-2024"
+    "desc": [
+      "Hunt for Treasure as a Classic Adventurer"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "aberrant-sorcery",
-    "class": { "index": "sorcerer", "name": "Sorcerer", "url": "/api/2024/classes/sorcerer" },
+    "index": "aberrant-2024",
     "name": "Aberrant Sorcery",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer"
+    },
     "subclass_flavor": "Sorcerous Origin",
-    "desc": ["(RENAMED: Formerly Aberrant Mind. Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/aberrant-sorcery/levels",
-    "url": "/api/2024/subclasses/aberrant-sorcery"
+    "desc": [
+      "Wield Unnatural Psionic Power"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "clockwork-sorcery",
-    "class": { "index": "sorcerer", "name": "Sorcerer", "url": "/api/2024/classes/sorcerer" },
+    "index": "clockwork-2024",
     "name": "Clockwork Sorcery",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer"
+    },
     "subclass_flavor": "Sorcerous Origin",
-    "desc": ["(RENAMED: Formerly Clockwork Soul. Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/clockwork-sorcery/levels",
-    "url": "/api/2024/subclasses/clockwork-sorcery"
+    "desc": [
+      "Channel Cosmic Forces of Order"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "draconic-sorcery",
-    "class": { "index": "sorcerer", "name": "Sorcerer", "url": "/api/2024/classes/sorcerer" },
+    "index": "draconic-2024",
     "name": "Draconic Sorcery",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer"
+    },
     "subclass_flavor": "Sorcerous Origin",
-    "desc": ["(RENAMED: Formerly Draconic Bloodline. Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/draconic-sorcery/levels",
-    "url": "/api/2024/subclasses/draconic-sorcery"
+    "desc": [
+      "Breathe the Magic of Dragons"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "wild-magic-sorcery",
-    "class": { "index": "sorcerer", "name": "Sorcerer", "url": "/api/2024/classes/sorcerer" },
+    "index": "sorcerer-shadow-2024",
+    "name": "Shadow Sorcery",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer"
+    },
+    "subclass_flavor": "Sorcerous Origin",
+    "desc": [
+      "Bend Doom and Darkness to Your Will"
+    ],
+    "edition": "2024",
+    "source": "RHW"
+  },
+  {
+    "index": "spellfire-2024",
+    "name": "Spellfire Sorcery",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer"
+    },
+    "subclass_flavor": "Sorcerous Origin",
+    "desc": [
+      "Wield Raw Magic"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
+  },
+  {
+    "index": "wild-magic-2024",
     "name": "Wild Magic Sorcery",
+    "class": {
+      "index": "sorcerer",
+      "name": "Sorcerer"
+    },
     "subclass_flavor": "Sorcerous Origin",
-    "desc": ["(RENAMED: Formerly Wild Magic. Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/wild-magic-sorcery/levels",
-    "url": "/api/2024/subclasses/wild-magic-sorcery"
+    "desc": [
+      "Unleash Chaotic Magic"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "archfey-patron-2024",
-    "class": { "index": "warlock", "name": "Warlock", "url": "/api/2024/classes/warlock" },
+    "index": "archfey-2024",
     "name": "Archfey Patron",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock"
+    },
     "subclass_flavor": "Otherworldly Patron",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/archfey-patron-2024/levels",
-    "url": "/api/2024/subclasses/archfey-patron-2024"
+    "desc": [
+      "Bargain with Whimsical Fey"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "celestial-patron-2024",
-    "class": { "index": "warlock", "name": "Warlock", "url": "/api/2024/classes/warlock" },
+    "index": "celestial-2024",
     "name": "Celestial Patron",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock"
+    },
     "subclass_flavor": "Otherworldly Patron",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/celestial-patron-2024/levels",
-    "url": "/api/2024/subclasses/celestial-patron-2024"
+    "desc": [
+      "Call on the Power of the Heavens"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "fiend-patron-2024",
-    "class": { "index": "warlock", "name": "Warlock", "url": "/api/2024/classes/warlock" },
+    "index": "fiend-2024",
     "name": "Fiend Patron",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock"
+    },
     "subclass_flavor": "Otherworldly Patron",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/fiend-patron-2024/levels",
-    "url": "/api/2024/subclasses/fiend-patron-2024"
+    "desc": [
+      "Make a Deal with the Lower Planes"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
   },
   {
-    "index": "great-old-one-patron-2024",
-    "class": { "index": "warlock", "name": "Warlock", "url": "/api/2024/classes/warlock" },
+    "index": "great-old-one-2024",
     "name": "Great Old One Patron",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock"
+    },
     "subclass_flavor": "Otherworldly Patron",
-    "desc": ["(Paste description from 2024 PHB)"],
-    "subclass_levels": "/api/2024/subclasses/great-old-one-patron-2024/levels",
-    "url": "/api/2024/subclasses/great-old-one-patron-
+    "desc": [
+      "Unearth Forbidden Lore of Ineffable Beings"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "undead-2024",
+    "name": "Undead Patron",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock"
+    },
+    "subclass_flavor": "Otherworldly Patron",
+    "desc": [
+      "Defy Death for Profane Power"
+    ],
+    "edition": "2024",
+    "source": "RHW"
+  },
+  {
+    "index": "vestige-2024",
+    "name": "Vestige Patron",
+    "class": {
+      "index": "warlock",
+      "name": "Warlock"
+    },
+    "subclass_flavor": "Otherworldly Patron",
+    "desc": [
+      "Wield the Remnants of a Dying God's Power"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "abjurer-2024",
+    "name": "Abjurer",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Shield Companions and Banish Foes"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "bladesinger-2024",
+    "name": "Bladesinger",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Wield Weapon and Wizardry in Elegant Tandem"
+    ],
+    "edition": "2024",
+    "source": "FRHOF"
+  },
+  {
+    "index": "conjurer-2024",
+    "name": "Conjurer",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Step Across Space and Call Creatures from Thin Air"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "diviner-2024",
+    "name": "Diviner",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Learn the Secrets of the Multiverse"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "enchanter-2024",
+    "name": "Enchanter",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Entrance and Beguile Others"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "evoker-2024",
+    "name": "Evoker",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Create Explosive Elemental Effects"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "illusionist-2024",
+    "name": "Illusionist",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Weave Subtle Spells of Deception"
+    ],
+    "edition": "2024",
+    "source": "XPHB"
+  },
+  {
+    "index": "necromancer-2024",
+    "name": "Necromancer",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Command the Powers of Death and Undeath"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  },
+  {
+    "index": "transmuter-2024",
+    "name": "Transmuter",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard"
+    },
+    "subclass_flavor": "Arcane Tradition",
+    "desc": [
+      "Transform Energy and Matter"
+    ],
+    "edition": "2024",
+    "source": "AU"
+  }
+]

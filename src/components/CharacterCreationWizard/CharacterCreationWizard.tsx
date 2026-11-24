@@ -4,7 +4,7 @@ import { WizardProps } from './types/wizard.types';
 import { useWizardState, useWizardNavigation } from './hooks';
 import { WizardHeader, WizardProgressBar, WizardStepContainer } from './components';
 import { getStepTitles } from './constants/wizard.constants';
-import { getAllSpecies } from '../../services/dataService';
+import { findSpeciesBySlug } from '../../services/dataService';
 import SpeciesTraitModal from '../SpeciesTraitModal';
 import {
   Step0Level,
@@ -210,7 +210,8 @@ export const CharacterCreationWizard: React.FC<WizardProps> = ({
           isOpen={showTraitModal}
           onClose={closeTraitModal}
           traitName={selectedTrait}
-          speciesName={creationData.speciesSlug ? getAllSpecies().find(s => s.slug === creationData.speciesSlug)?.name || 'Unknown Species' : 'Unknown Species'}
+          edition={creationData.edition}
+          speciesName={creationData.speciesSlug ? findSpeciesBySlug(creationData.speciesSlug)?.name || 'Unknown Species' : 'Unknown Species'}
           position={modalPosition}
         />
       )}

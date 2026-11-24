@@ -290,5 +290,23 @@
     "typicalSpeakers": "Traders, scholars, emissaries, inclusive communities",
     "description": "A widely understood signed form of Common used to communicate silently or across language barriers.",
     "implementationNotes": "Selectable language; not granted by default"
+  },
+  {
+    "name": "Bullywug",
+    "category": "Exotic",
+    "typicalSpeakers": "Bullywugs",
+    "description": "The language of bullywugs",
+    "implementationNotes": "Granted by the Bullywug species.",
+    "edition": "2014",
+    "rarity": "rare"
+  },
+  {
+    "name": "Troglodyte",
+    "category": "Exotic",
+    "typicalSpeakers": "Troglodytes",
+    "description": "The language of troglodytes",
+    "implementationNotes": "Granted by the Troglodyte species.",
+    "edition": "2014",
+    "rarity": "rare"
   }
 ]

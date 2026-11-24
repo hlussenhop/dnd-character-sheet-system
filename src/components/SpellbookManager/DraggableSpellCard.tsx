@@ -3,7 +3,7 @@ import { useDraggable } from '@dnd-kit/core';
 import { GripVertical, Plus, Star, Wand2 } from 'lucide-react';
 import { AppSpell } from '../../services/dataService';
 import { SpellbookEntry } from '../../services/storage/IStorageService';
-import { schoolIcons, schoolColors } from '../../utils/spellbookAdapter';
+import { schoolIcons, schoolColors, spellBookLabel } from '../../utils/spellbookAdapter';
 
 interface DraggableSpellCardProps {
   spell: AppSpell;
@@ -68,6 +68,11 @@ export const DraggableSpellCard: React.FC<DraggableSpellCardProps> = ({
             <span className="font-semibold text-theme-primary">{levelLabel}</span>
             <span>•</span>
             <span className="capitalize">{spell.school}</span>
+            <span>•</span>
+            <span>
+              {spell.source}
+              {spell.book ? ` · ${spellBookLabel(spell.book)}` : ''}
+            </span>
             {spell.ritual && (
               <span className="px-1.5 py-0.2 bg-purple-900/60 text-purple-300 rounded text-[10px] border border-purple-700">
                 Ritual

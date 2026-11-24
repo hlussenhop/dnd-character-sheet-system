@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Heart, Shield, Zap, Sparkles } from 'lucide-reac
 import { generateCharacterProfile, CharacterProfile } from '../data/characterProfiles';
 import PersonalitySummary from './PersonalitySummary';
 import CharacterFinalization from './CharacterFinalization';
-import { loadClasses, getAllSpecies, BACKGROUNDS, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
+import { loadClasses, getAllSpecies, getBackground, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
 import { CharacterCreationData, SpellSelectionData, SkillName, Edition } from '../types/dnd';
 import { getSpellcastingType } from '../utils/spellUtils';
 import { SPELL_LEARNING_RULES } from '../data/spellLearning';
@@ -251,7 +251,7 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
       const defaultSkills = selectedClassData.skill_proficiencies?.slice(0, numSkills) || [];
 
       // Get background skills
-      const backgroundData = BACKGROUNDS.find(bg => bg.name === selectedBackground);
+      const backgroundData = getBackground(selectedBackground ?? undefined);
       const backgroundSkills = backgroundData?.skill_proficiencies || [];
 
       // Combine and deduplicate skills

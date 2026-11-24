@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, ChevronUp, ChevronDown, Shuffle } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
-import { BACKGROUNDS, randomizeLanguages } from '../../../services/dataService';
+import { findSpeciesBySlug, getBackground, randomizeLanguages } from '../../../services/dataService';
+import { getSpeciesLanguageChoices } from '../../../utils/speciesGrantUtils';
 import {
   getMaxLanguages,
   parseBackgroundLanguageChoices,
@@ -43,10 +44,11 @@ export const Step9Languages: React.FC<StepProps> = ({ data, updateData, nextStep
   classLangs.forEach((lang: string) => autoLanguages.add(lang));
 
   // Get background language choices (2024 backgrounds don't grant languages)
-  const background = BACKGROUNDS.find(bg => bg.slug === data.background || bg.name === data.background);
-  const backgroundChoices = (data.edition === '2024')
-    ? { direct: [], choices: 0 }
-    : background ? parseBackgroundLanguageChoices(background.languages || []) : { direct: [], choices: 0 };
+  const background = getBackground(data.background);
+  const backgroundChoices = background
+    ? parseBackgroundLanguageChoices(background.languages || [])
+    : { direct: [], choices: 0 };
+  backgroundChoices.choices += background?.languageChoices?.count ?? 0;
 
   // Add direct background languages
   backgroundChoices.direct.forEach((lang: string) => autoLanguages.add(lang));
@@ -54,7 +56,11 @@ export const Step9Languages: React.FC<StepProps> = ({ data, updateData, nextStep
   // Calculate remaining language slots
   const intelligenceScore = data.abilities.INT;
   const maxLanguages = getMaxLanguages(intelligenceScore);
-  const totalAvailableSlots = maxLanguages + (data.edition === '2024' ? 0 : backgroundChoices.choices);
+  // Extra languages the species lets you choose ("Common plus one of your choice")
+  const speciesLanguageChoices = data.edition === '2024'
+    ? 0
+    : getSpeciesLanguageChoices(findSpeciesBySlug(data.speciesSlug), data.edition, data.selectedSpeciesVariant);
+  const totalAvailableSlots = maxLanguages + backgroundChoices.choices + speciesLanguageChoices;
   const remainingSlots = Math.max(0, totalAvailableSlots - (autoLanguages.size + selectedLanguages.length));
 
   const toggleCategory = (categoryName: string) => {
@@ -79,7 +85,7 @@ export const Step9Languages: React.FC<StepProps> = ({ data, updateData, nextStep
   };
 
   // Validation for required background language selections
-  const hasRequiredBackgroundSelections = data.edition === '2024' || selectedLanguages.length >= backgroundChoices.choices;
+  const hasRequiredBackgroundSelections = data.edition === '2024' || selectedLanguages.length >= backgroundChoices.choices + speciesLanguageChoices;
 
   const languageCategories = data.edition === '2024'
     ? [

@@ -16,6 +16,7 @@ import {
   CANTRIPS_KNOWN_BY_CLASS
 } from '../services/dataService';
 import { initializeCharacterResources } from '../utils/resourceUtils';
+import { magicAcBonus } from '../utils/magicItemInventory';
 import { addItemToInventoryByName } from '../utils/equipmentMatching';
 // import { CANTRIPS_KNOWN_BY_CLASS } from '../data/cantrips';
 import {
@@ -32,6 +33,8 @@ import {
 import { updateCharacter } from '../services/dbService'; // Added this import
 import { migrateSpellSelectionToCharacter } from '../utils/spellUtils';
 import { log } from '../utils/logger';
+import { resolveSpeciesAbilityBonuses } from '../utils/speciesAbilityUtils';
+import { getEffectiveSpeciesTraits } from '../utils/speciesVariantUtils';
 
 // Helper to check if a class is a spellcaster
 export const isSpellcaster = (characterClass: Class | undefined | null): boolean => {
@@ -50,12 +53,13 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
     const finalAbilities: Character['abilities'] = {} as Character['abilities'];
 
     // 1. Calculate Abilities with Racial and Background Bonuses
+    const speciesAbilityBonuses = resolveSpeciesAbilityBonuses(speciesData, data);
     (Object.keys(data.abilities) as AbilityName[]).forEach((ability) => {
         let totalBonus = 0;
 
         // Species bonuses (2014) or traits (2024)
         if (data.edition === '2014') {
-            totalBonus += speciesData.ability_bonuses?.[ability] || 0;
+            totalBonus += speciesAbilityBonuses[ability];
         }
 
         // Background bonuses (2024 only)
@@ -240,7 +244,7 @@ export const calculateCharacterStats = (data: CharacterCreationData): Character 
             bonds: data.bonds,
             flaws: data.flaws,
             classFeatures: allClassFeatures, // Includes fighting style if applicable
-            speciesTraits: speciesData.species_traits,
+            speciesTraits: getEffectiveSpeciesTraits(speciesData, data.selectedSpeciesVariant),
             backgroundFeatures: [],
             musicalInstrumentProficiencies: [],
         },
@@ -333,6 +337,8 @@ export const recalculateAC = (character: Character): number => {
     })) {
         armorClass += 2;
     }
+
+    armorClass += magicAcBonus(character);
 
     return armorClass;
 };

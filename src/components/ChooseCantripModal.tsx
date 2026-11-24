@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { XCircle } from 'lucide-react';
 import { getCantripsByClass } from '../utils/srdLoader';
+import { SpellBlurb } from './SpellBlurb';
 
 interface ChooseCantripModalProps {
   isOpen: boolean;
@@ -60,7 +61,7 @@ export const ChooseCantripModal: React.FC<ChooseCantripModalProps> = ({
                 }`}
               >
                 <h3 className="font-bold text-accent-yellow-light">{cantrip.name}</h3>
-                <p className="text-sm text-theme-tertiary mt-1 line-clamp-2">{cantrip.description}</p>
+                <SpellBlurb spell={cantrip} className="text-sm text-theme-tertiary mt-1 line-clamp-2" />
               </button>
             ))}
           </div>

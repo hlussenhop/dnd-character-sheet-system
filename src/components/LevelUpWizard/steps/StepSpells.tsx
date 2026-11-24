@@ -7,7 +7,8 @@
 import React, { useMemo, useState } from 'react';
 import { Character, LevelUpChoices } from '../../../types/dnd';
 import { LevelUpData } from '../../../data/classProgression';
-import { loadSpells, AppSpell } from '../../../services/dataService';
+import { loadPrimarySpells, getBackground, getSubclass, SPELL_DATABASE, AppSpell } from '../../../services/dataService';
+import { SpellBlurb } from '../../SpellBlurb';
 import { SPELL_SLOTS_BY_CLASS } from '../../../data/spellSlots';
 import { getHighestSpellSlotLevel, normalizeSpellSlots } from '../../../utils/spellSlotUtils';
 import { evaluatePredicate } from '../../../rulesEngine/evaluators/predicates';
@@ -84,16 +85,23 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
   ]);
 
   // Load spells for this class via rule-engine predicate (classIs)
-  const allSpells = loadSpells();
+  const allSpells = loadPrimarySpells();
   const classSpells = useMemo(() => {
-    return allSpells.filter(spell => {
+    const subclass = getSubclass(character.subclass);
+    const expanded = new Set([
+      ...(getBackground(character.background)?.expandedSpells ?? []),
+      ...(subclass?.expandedSpells ?? []),
+      ...(subclass?.grantedSpells ?? []).flatMap(grant => grant.slugs),
+    ]);
+    const extras = SPELL_DATABASE.filter(spell => expanded.has(spell.slug) && !allSpells.some(s => s.slug === spell.slug));
+    return [...allSpells, ...extras].filter(spell => {
       if (!spell.classes) return false;
       const classList = Array.isArray(spell.classes) ? spell.classes : [spell.classes];
+      const onClass = classList.some(c => c && typeof c === 'string' && c.toLowerCase() === baseClass);
       const predicate = { type: 'classIs' as const, slug: baseClass };
-      return classList.some(c => c && typeof c === 'string' && c.toLowerCase() === baseClass) &&
-        evaluatePredicate(predicate, { facts, derived: {} });
+      return (onClass || expanded.has(spell.slug)) && evaluatePredicate(predicate, { facts, derived: {} });
     });
-  }, [allSpells, baseClass, facts]);
+  }, [allSpells, baseClass, facts, character.background, character.subclass]);
 
   // Get the specific spell choice for this step
   const spellChoices = levelUpData.choices.filter(c => c.type === 'spells');
@@ -103,17 +111,17 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
     return (
       <div className="space-y-6">
         <div>
-          <h3 className="text-2xl font-bold text-accent-gold mb-2">
+          <h3 className="text-2xl font-bold text-accent-red mb-2">
             No Spell Choice Available
           </h3>
-          <p className="text-[#992600]">
+          <p className="text-theme-secondary">
             There are no spell choices available for this level.
           </p>
         </div>
         <div className="flex justify-end pt-4">
           <button
             onClick={onNext}
-            className="px-6 py-3 bg-accent-gold text-theme-primary font-semibold rounded-lg hover:bg-opacity-90 transition-colors"
+            className="px-6 py-3 bg-accent-red text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors"
           >
             Continue
           </button>
@@ -206,17 +214,17 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-2xl font-bold text-accent-gold mb-2">
+        <h3 className="text-2xl font-bold text-accent-red mb-2">
           {currentSpellChoice.description}
         </h3>
-        <p className="text-[#992600]">
+        <p className="text-theme-secondary">
           Select {spellsToLearn} {isCantripChoice ? 'cantrip(s)' : 'spell(s)'} to learn.
         </p>
       </div>
 
       <div className="bg-theme-primary rounded-lg p-4">
-        <p className="text-theme-text">
-          Selected: <span className="text-accent-gold font-bold">{selectedSpells.length}</span> / {spellsToLearn}
+        <p className="text-theme-primary">
+          Selected: <span className="text-accent-red font-bold">{selectedSpells.length}</span> / {spellsToLearn}
         </p>
       </div>
 
@@ -229,10 +237,10 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
           return (
             <div
               key={spell.slug}
-              className={`w-full text-left p-3 rounded-lg border transition-all cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-gold ${
+              className={`w-full text-left p-3 rounded-lg border transition-all cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red ${
                 isSelected
-                  ? 'border-accent-gold bg-accent-gold bg-opacity-10'
-                  : 'border-theme-border bg-theme-primary hover:border-accent-gold hover:border-opacity-50'
+                  ? 'border-accent-red bg-theme-tertiary'
+                  : 'border-theme-primary bg-theme-primary hover:border-accent-red'
               }`}
               onClick={() => handleToggleExpand(spell.slug)}
               aria-expanded={isExpanded}
@@ -242,11 +250,11 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1">
-                  <h4 className="font-semibold text-theme-text">{spell.name}</h4>
-                  <p className="text-xs text-[#992600] mt-1 flex flex-wrap items-center gap-1">
+                  <h4 className="font-semibold text-theme-primary">{spell.name}</h4>
+                  <p className="text-xs text-theme-secondary mt-1 flex flex-wrap items-center gap-1">
                     {spell.level === 0 ? `${spell.school} • ${spell.castingTime}` : `Level ${spell.level} • ${spell.school} • ${spell.castingTime}`}
-                    {spell.ritual && <span className="text-[10px] uppercase tracking-wide px-1 py-0.5 rounded bg-theme-primary border border-theme-border">Ritual</span>}
-                    {spell.concentration && <span className="text-[10px] uppercase tracking-wide px-1 py-0.5 rounded bg-theme-primary border border-theme-border">Conc.</span>}
+                    {spell.ritual && <span className="text-[10px] uppercase tracking-wide px-1 py-0.5 rounded bg-theme-primary border border-theme-primary">Ritual</span>}
+                    {spell.concentration && <span className="text-[10px] uppercase tracking-wide px-1 py-0.5 rounded bg-theme-primary border border-theme-primary">Conc.</span>}
                   </p>
                 </div>
                 <button
@@ -258,8 +266,8 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
                   disabled={selectionDisabled}
                   className={`flex-shrink-0 px-3 py-1 rounded-md text-sm font-semibold border ${
                     isSelected
-                      ? 'bg-accent-gold text-theme-primary border-accent-gold'
-                      : 'bg-theme-primary text-theme-text border-theme-border hover:border-accent-gold disabled:opacity-50'
+                      ? 'bg-accent-red text-white border-accent-red'
+                      : 'bg-theme-primary text-theme-primary border-theme-primary hover:border-accent-red disabled:opacity-50'
                   }`}
                 >
                   {isSelected ? 'Selected' : 'Select'}
@@ -267,25 +275,25 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
               </div>
 
               {isExpanded && (
-                <div className="mt-3 text-sm text-theme-text space-y-3">
+                <div className="mt-3 text-sm text-theme-primary space-y-3">
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center gap-1 rounded-full border border-accent-gold/50 bg-accent-gold/10 px-2 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-gold">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-theme-primary bg-theme-tertiary px-2 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-red">
                       {spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`}
                     </span>
-                    <span className="inline-flex items-center gap-1 rounded-full border border-theme-border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-theme-primary px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
                       {spell.school}
                     </span>
                     {spell.ritual && (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-theme-border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
+                      <span className="inline-flex items-center gap-1 rounded-full border border-theme-primary px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
                         Ritual
                       </span>
                     )}
                     {spell.concentration && (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-theme-border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
+                      <span className="inline-flex items-center gap-1 rounded-full border border-theme-primary px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
                         Concentration
                       </span>
                     )}
-                    <span className="inline-flex items-center gap-1 rounded-full border border-theme-border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-theme-primary px-2 py-1 text-[11px] font-semibold uppercase tracking-wide">
                       {[['V', spell.components?.verbal], ['S', spell.components?.somatic], ['M', spell.components?.material]]
                         .filter(([, present]) => present)
                         .map(([label]) => label)
@@ -293,15 +301,9 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
                     </span>
                   </div>
 
-                  <p className="whitespace-pre-line leading-relaxed">{spell.description}</p>
+                  <SpellBlurb spell={spell} higher className="leading-relaxed" />
 
-                  {spell.atHigherLevels && (
-                    <p className="whitespace-pre-line leading-relaxed text-[#992600]">
-                      <span className="font-semibold">At Higher Levels:</span> {spell.atHigherLevels}
-                    </p>
-                  )}
-
-                  <div className="flex flex-wrap gap-3 text-xs text-theme-text opacity-80">
+                  <div className="flex flex-wrap gap-3 text-xs text-theme-primary opacity-80">
                     <span><span className="font-semibold">Casting Time:</span> {spell.castingTime}</span>
                     <span><span className="font-semibold">Range:</span> {spell.range}</span>
                     <span><span className="font-semibold">Duration:</span> {spell.duration}</span>
@@ -320,14 +322,14 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
       <div className="flex justify-between pt-4">
         <button
           onClick={onPrev}
-          className="px-6 py-3 bg-theme-primary text-theme-text font-semibold rounded-lg hover:bg-opacity-80 transition-colors border border-theme-border"
+          className="px-6 py-3 bg-theme-primary text-theme-primary font-semibold rounded-lg hover:bg-opacity-80 transition-colors border border-theme-primary"
         >
           Back
         </button>
         <button
           onClick={handleNext}
           disabled={selectedSpells.length !== spellsToLearn}
-          className="px-6 py-3 bg-accent-gold text-theme-primary font-semibold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-6 py-3 bg-accent-red text-white font-semibold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Continue
         </button>

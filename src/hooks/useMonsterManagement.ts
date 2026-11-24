@@ -1,6 +1,8 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Monster, UserMonster, Encounter } from '../types/dnd';
 import { MONSTER_DATABASE } from '../services/dataService';
+import { loadMonsterIndex, monsterFromIndex, resolveMonster } from '../services/monsters';
+import { applyMonsterFilters } from '../utils/monsterLibraryFilters';
 import { log } from '../utils/logger';
 import {
   getAllCustomMonsters,
@@ -17,20 +19,26 @@ import {
 } from '../services/dbService';
 import { MonsterFilters, EncounterMonsterSelection } from '../context/MonsterContextObject';
 
+const SRD_INDEXES = new Set(MONSTER_DATABASE.map(monster => monster.index));
+
 const DEFAULT_FILTERS: MonsterFilters = {
   search: '',
   types: [],
   sizes: [],
   crMin: 0,
   crMax: 30,
+  movement: [],
+  sort: 'name',
   hasLegendaryActions: null,
   showFavoritesOnly: false,
   showCustomOnly: false,
   showSRDOnly: false,
+  edition: 'all',
+  source: '',
 };
 
 export const useMonsterManagement = () => {
-  const [srdMonsters] = useState<Monster[]>(MONSTER_DATABASE);
+  const [catalogMonsters, setCatalogMonsters] = useState<Monster[]>([]);
   const [customMonsters, setCustomMonsters] = useState<UserMonster[]>([]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [encounters, setEncounters] = useState<Encounter[]>([]);
@@ -47,15 +55,17 @@ export const useMonsterManagement = () => {
         setLoading(true);
         setError(null);
 
-        const [custom, favorites, allEncounters] = await Promise.all([
+        const [custom, favorites, allEncounters, index] = await Promise.all([
           getAllCustomMonsters().catch(() => []),
           getFavoriteMonsters().catch(() => []),
           getAllEncounters().catch(() => []),
+          loadMonsterIndex(),
         ]);
 
         setCustomMonsters(custom);
         setFavoriteIds(favorites);
         setEncounters(allEncounters);
+        setCatalogMonsters(index.map(monsterFromIndex));
       } catch (err) {
         log.error('Monster data load error', { error: err });
         setError(
@@ -69,61 +79,14 @@ export const useMonsterManagement = () => {
     loadData();
   }, []);
 
-  // Combine SRD and custom monsters
   const allMonsters = useMemo<(Monster | UserMonster)[]>(() => {
-    return [...srdMonsters, ...customMonsters];
-  }, [srdMonsters, customMonsters]);
+    return [...catalogMonsters, ...customMonsters];
+  }, [catalogMonsters, customMonsters]);
 
-  // Apply filters
-  const filteredMonsters = useMemo(() => {
-    let result = allMonsters;
-
-    // Search filter (debounced in component)
-    if (filters.search) {
-      const searchLower = filters.search.toLowerCase();
-      result = result.filter((m) => m.name.toLowerCase().includes(searchLower));
-    }
-
-    // Type filter
-    if (filters.types.length > 0) {
-      result = result.filter((m) => filters.types.includes(m.type));
-    }
-
-    // Size filter
-    if (filters.sizes.length > 0) {
-      result = result.filter((m) => filters.sizes.includes(m.size));
-    }
-
-    // CR range filter
-    result = result.filter(
-      (m) => m.challenge_rating >= filters.crMin && m.challenge_rating <= filters.crMax
-    );
-
-    // Has legendary actions filter
-    if (filters.hasLegendaryActions !== null) {
-      result = result.filter((m) => {
-        const hasLegendary = !!m.legendary_actions && m.legendary_actions.length > 0;
-        return hasLegendary === filters.hasLegendaryActions;
-      });
-    }
-
-    // Favorites only
-    if (filters.showFavoritesOnly) {
-      result = result.filter((m) => favoriteIds.includes(m.index));
-    }
-
-    // Custom only
-    if (filters.showCustomOnly) {
-      result = result.filter((m) => 'isCustom' in m && m.isCustom);
-    }
-
-    // SRD only
-    if (filters.showSRDOnly) {
-      result = result.filter((m) => !('isCustom' in m));
-    }
-
-    return result;
-  }, [allMonsters, filters, favoriteIds]);
+  const filteredMonsters = useMemo(
+    () => applyMonsterFilters(allMonsters, filters, favoriteIds, SRD_INDEXES),
+    [allMonsters, filters, favoriteIds],
+  );
 
   // Favorites
   const toggleFavorite = useCallback(
@@ -301,10 +264,11 @@ export const useMonsterManagement = () => {
   }, []);
 
   return {
-    srdMonsters,
+    catalogMonsters,
     customMonsters,
     allMonsters,
     filteredMonsters,
+    resolveMonster,
     favoriteIds,
     toggleFavorite,
     isFavorited,

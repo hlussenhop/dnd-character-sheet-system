@@ -1,28 +1,20 @@
 import { createContext } from 'react';
-import { Monster, UserMonster, Encounter, MonsterType, MonsterSize } from '../types/dnd';
+import { Monster, UserMonster, Encounter } from '../types/dnd';
+import type { MonsterListFilters } from '../utils/monsterLibraryFilters';
 
-export interface MonsterFilters {
-  search: string;
-  types: MonsterType[];
-  sizes: MonsterSize[];
-  crMin: number;
-  crMax: number;
-  hasLegendaryActions: boolean | null;
-  showFavoritesOnly: boolean;
-  showCustomOnly: boolean;
-  showSRDOnly: boolean;
-}
+export type MonsterFilters = MonsterListFilters;
 
 export interface EncounterMonsterSelection {
   [monsterId: string]: number; // monsterId -> quantity
 }
 
 export interface MonsterContextType {
-  // Monster data
-  srdMonsters: Monster[];
+  // Monster data. Catalog rows carry card stats; open a stat block to load the book text.
+  catalogMonsters: Monster[];
   customMonsters: UserMonster[];
   allMonsters: (Monster | UserMonster)[];
   filteredMonsters: (Monster | UserMonster)[];
+  resolveMonster: (monster: Monster | UserMonster) => Promise<Monster | UserMonster>;
 
   // Favorites
   favoriteIds: string[];

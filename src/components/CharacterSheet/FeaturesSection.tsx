@@ -1,5 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Character } from '../../types/dnd';
+import { getFeatBySlug } from '../../services/dataService';
+import { FeatModal } from '../FeatModal';
+import { getOptionalFeature, resolveOptionalFeatureSlug } from '../../utils/optionalFeatures';
+
+const OptionalFeatureList: React.FC<{ character: Character; onFeatureClick: (feature: string) => void }> = ({ character, onFeatureClick }) => {
+  const slugs = [...new Set([
+    ...(character.optionalFeatures ?? []),
+    ...(character.fightingStyle ? [character.fightingStyle] : []),
+    ...(character.eldritchInvocations ?? []),
+  ])];
+  if (slugs.length === 0) return null;
+  return (
+    <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-orange-500">
+      <h3 className="text-lg font-bold text-accent-yellow-light mb-2">Class Options</h3>
+      <ul className="list-disc list-inside space-y-1 text-sm text-theme-tertiary">
+        {slugs.map(slug => {
+          const resolved = resolveOptionalFeatureSlug(slug, character.edition);
+          const feature = getOptionalFeature(resolved, character.edition);
+          const label = feature?.name ?? slug;
+          return (
+            <li key={slug}>
+              <button
+                type="button"
+                onClick={() => onFeatureClick(label)}
+                className="text-left hover:text-accent-yellow-light transition-colors cursor-pointer"
+              >
+                {label}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+const FeatList: React.FC<{ character: Character }> = ({ character }) => {
+  const [openSlug, setOpenSlug] = useState<string | null>(null);
+  const feats = character.selectedFeats ?? [];
+  if (feats.length === 0) return null;
+  return (
+    <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-cyan-500">
+      <h3 className="text-lg font-bold text-cyan-400 mb-2">Feats</h3>
+      <div className="grid grid-cols-1 gap-2">
+        {feats.map(featSlug => {
+          const feat = getFeatBySlug(featSlug, character.edition);
+          return (
+            <button
+              key={featSlug}
+              type="button"
+              onClick={() => setOpenSlug(featSlug)}
+              className="p-2 bg-theme-tertiary rounded border border-cyan-700 text-left hover:border-cyan-400 transition-colors"
+            >
+              <div className="font-semibold text-cyan-300 text-sm">{feat?.name ?? featSlug}</div>
+            </button>
+          );
+        })}
+      </div>
+      <FeatModal
+        featSlug={openSlug ?? ''}
+        edition={character.edition}
+        isOpen={openSlug !== null}
+        onClose={() => setOpenSlug(null)}
+      />
+    </div>
+  );
+};
 
 interface FeaturesSectionProps {
   character: Character;
@@ -154,20 +221,8 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
             </div>
           )}
 
-          {/* Selected Feats Display */}
-          {character.selectedFeats && character.selectedFeats.length > 0 && (
-            <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-cyan-500">
-              <h3 className="text-lg font-bold text-cyan-400 mb-2">Feats</h3>
-              <div className="grid grid-cols-1 gap-2">
-                {character.selectedFeats.map((featSlug, index) => (
-                  <div key={`feat-${index}`} className="p-2 bg-theme-tertiary rounded border border-cyan-700">
-                    <div className="font-semibold text-cyan-300 text-sm">{featSlug}</div>
-                    <p className="text-xs text-theme-muted mt-1">Feat</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          <FeatList character={character} />
+          <OptionalFeatureList character={character} onFeatureClick={onFeatureClick} />
         </div>
       </div>
     );
@@ -272,8 +327,7 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           </div>
         )}
 
-        {/* Legacy Class Features or Selected Feats */}
-        {character.featuresAndTraits.classFeatures && character.featuresAndTraits.classFeatures.length > 0 ? (
+        {character.featuresAndTraits.classFeatures && character.featuresAndTraits.classFeatures.length > 0 && (
           <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-yellow-500">
             <h3 className="text-lg font-bold text-accent-yellow-light mb-2">Other Class Features</h3>
             <ul className="list-disc list-inside space-y-1 text-sm text-theme-tertiary">
@@ -286,25 +340,16 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
               ))}
             </ul>
           </div>
-        ) : character.selectedFeats && character.selectedFeats.length > 0 ? (
-          <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-cyan-500">
-            <h3 className="text-lg font-bold text-cyan-400 mb-2">Feats</h3>
-            <div className="grid grid-cols-1 gap-2">
-              {character.selectedFeats.map((featSlug, index) => (
-                <div key={`feat-${index}`} className="p-2 bg-theme-tertiary rounded border border-cyan-700">
-                  <div className="font-semibold text-cyan-300 text-sm">{featSlug}</div>
-                  <p className="text-xs text-theme-muted mt-1">Feat</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
+        )}
+        <FeatList character={character} />
+        {!character.featuresAndTraits.classFeatures?.length && !(character.selectedFeats && character.selectedFeats.length > 0) && (
           <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-cyan-500">
             <h3 className="text-lg font-bold text-cyan-400 mb-2">Feats</h3>
             <p className="text-sm text-theme-disabled italic">No additional features</p>
           </div>
         )}
       </div>
+      <OptionalFeatureList character={character} onFeatureClick={onFeatureClick} />
     </div>
   );
 };

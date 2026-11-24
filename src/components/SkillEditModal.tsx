@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { X, Check, Lock } from 'lucide-react';
-import { loadClasses, BACKGROUNDS } from '../services/dataService';
+import { loadClasses, getBackground } from '../services/dataService';
 import skillsData from '../data/skills.json';
 
 interface SkillEditModalProps {
@@ -33,7 +33,7 @@ const SkillEditModal: React.FC<SkillEditModalProps> = ({
   }, [classSlug]);
 
   const backgroundData = useMemo(() => {
-    return BACKGROUNDS.find(bg => bg.name === backgroundSlug);
+    return getBackground(backgroundSlug);
   }, [backgroundSlug]);
 
   const availableClassSkills = classData?.skill_proficiencies || [];

@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "house-agent",
+    "description": "You have sworn fealty to a dragonmarked house. If you have a dragonmark, you're likely a member of one of the house's influential families; otherwise you're an outsider who hopes to make your fortune through the house. Your main task is to serve as the eyes of your house, but you could be called on at any time to act as its hand. Such missions can be perilous but lucrative.",
+    "personalityTraits": [
+      "I'm always looking to improve efficiency.",
+      "I love to share trivia about my house's business.",
+      "I never forget an insult against me or my house.",
+      "I'm enthusiastic about everything my house does.",
+      "I represent my house and take pride in my looks.",
+      "I'm critical of monarchies and limits on the houses."
+    ],
+    "ideals": [
+      "Common Good. My house serves a vital function, and its prosperity will help everyone. (Good)",
+      "Tradition. I uphold traditions of my house and bring honor to my family. (Lawful)",
+      "Innovation. Abandon old traditions and find better ways to do things. (Chaotic)",
+      "Power. I want to ensure the prosperity of my house and wield its power myself. (Evil)",
+      "Discovery. I want to learn all I can, both for my house and for my own curiosity. (Any)",
+      "Comfort. I want to ensure that me and mine enjoy the best things in life. (Any)"
+    ],
+    "bonds": [
+      "My house is my family. I would do anything for it.",
+      "I love someone from another house, but the relationship is forbidden.",
+      "Someone I love was killed by a rival faction within my house, and I will have revenge.",
+      "I don't care about the house as a whole, but I would do anything for my old mentor.",
+      "My house must evolve, and I'll lead the evolution.",
+      "I'm determined to impress the leaders of my house, and to become a leader myself."
+    ],
+    "flaws": [
+      "I'm fixated on following official protocols.",
+      "I'm obsessed with conspiracy theories and worried about secret societies and hidden demons.",
+      "My house and bloodline make me the best!",
+      "My secret could get me expelled from my house.",
+      "My religious beliefs aren't widespread in my house.",
+      "I'm working for a hidden faction in my house that gives me secret assignments."
+    ]
+  }
+]

@@ -1,6 +1,8 @@
 import { Character, Equipment, AbilityName } from '../types/dnd';
 import { loadEquipment } from '../services/dataService';
 import { BASE_ARMOR_CLASS, SHIELD_AC_BONUS, MAX_DEX_BONUS_MEDIUM_ARMOR } from '../constants/combat';
+import { calculateNaturalArmorClass } from './speciesGrantUtils';
+import { magicAcBonus } from './magicItemInventory';
 
 const EQUIPMENT_DATABASE: Equipment[] = loadEquipment();
 
@@ -172,6 +174,21 @@ const calculateACBonus = (character: Character): number => {
     }
   }
 
+  // Natural armor (species trait): used when armor would give less, or when armor cannot be worn
+  if (character.naturalArmor) {
+    const natural = calculateNaturalArmorClass(character.naturalArmor, {
+      STR: character.abilities.STR.modifier,
+      DEX: character.abilities.DEX.modifier,
+      CON: character.abilities.CON.modifier,
+      INT: character.abilities.INT.modifier,
+      WIS: character.abilities.WIS.modifier,
+      CHA: character.abilities.CHA.modifier,
+    });
+    if (natural !== undefined) {
+      armorClass = character.naturalArmor.noArmor ? natural : Math.max(armorClass, natural);
+    }
+  }
+
   // Add shield bonus if equipped
   if (character.equippedWeapons?.some(slug => {
     const item = EQUIPMENT_DATABASE.find(eq => eq.slug === slug);
@@ -179,6 +196,12 @@ const calculateACBonus = (character: Character): number => {
   })) {
     armorClass += SHIELD_AC_BONUS;
   }
+
+  // Flat species bonus (Warforged Integrated Protection)
+  armorClass += character.acBonus ?? 0;
+
+  // Attuned items, and carried items that do not require attunement
+  armorClass += magicAcBonus(character);
 
   return armorClass;
 };

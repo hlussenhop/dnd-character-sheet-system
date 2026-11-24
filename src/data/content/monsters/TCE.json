@@ -1,0 +1,3864 @@
+[
+  {
+    "name": "Aberrant Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Regeneration (Slaad Only)",
+        "desc": "The aberration regains 5 hit points at the start of its turn if it has at least 1 hit point."
+      },
+      {
+        "name": "Whispering Aura (Star Spawn Only)",
+        "desc": "At the start of each of the aberration's turns, each creature within 5 feet of the aberration must succeed on a Wisdom saving throw against your spell save DC or take 2d6 psychic damage, provided that the aberration isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The aberration makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Eye Ray (Beholderkin Only)",
+        "desc": "Ranged Spell Attack:  to hit, range 150 ft., one creature. Hit: 1d8 + 3 + summonSpellLevel psychic damage."
+      },
+      {
+        "name": "Claws (Slaad Only)",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 3 + summonSpellLevel slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
+      },
+      {
+        "name": "Psychic Slam (Star Spawn Only)",
+        "desc": "Melee Spell Attack:  to hit, reach 5 ft., one creature. Hit: 1d8 + 3 + summonSpellLevel psychic damage."
+      }
+    ],
+    "index": "aberrant-spirit"
+  },
+  {
+    "name": "Aberrant Spirit (Beholderkin)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4th",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The aberration makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Eye Ray",
+        "desc": "Ranged Spell Attack:  to hit, range 150 ft., one creature. Hit: 1d8 + 3 + summonSpellLevel psychic damage."
+      }
+    ],
+    "index": "aberrant-spirit-beholderkin"
+  },
+  {
+    "name": "Aberrant Spirit (Slaad)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Regeneration",
+        "desc": "The aberration regains 5 hit points at the start of its turn if it has at least 1 hit point."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The aberration makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Claws",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 3 + summonSpellLevel slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
+      }
+    ],
+    "index": "aberrant-spirit-slaad"
+  },
+  {
+    "name": "Aberrant Spirit (Star Spawn)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Whispering Aura",
+        "desc": "At the start of each of the aberration's turns, each creature within 5 feet of the aberration must succeed on a Wisdom saving throw against your spell save DC or take 2d6 psychic damage, provided that the aberration isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The aberration makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Psychic Slam",
+        "desc": "Melee Spell Attack:  to hit, reach 5 ft., one creature. Hit: 1d8 + 3 + summonSpellLevel psychic damage."
+      }
+    ],
+    "index": "aberrant-spirit-star-spawn"
+  },
+  {
+    "name": "Adult Red Dracolich",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Huge",
+    "type": "dragon",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 19,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "80 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 27,
+    "dexterity": 10,
+    "constitution": 25,
+    "intelligence": 16,
+    "wisdom": 13,
+    "charisma": 21,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 13,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 13,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "fire"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "60 ft.",
+      "darkvision": "120 ft.",
+      "passive_perception": 23
+    },
+    "languages": "Common, Draconic",
+    "challenge_rating": 17,
+    "proficiency_bonus": 6,
+    "xp": 18000,
+    "hit_points": 256,
+    "hit_dice": "19d12",
+    "hit_points_roll": "19d12 + 133",
+    "special_abilities": [
+      {
+        "name": "Legendary Resistance (3/Day)",
+        "desc": "If the dragon fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Customizing Dragons",
+        "desc": "You can customize any dragon's stat block to reflect the dragon's unique character. Minor changes such as those below are easy to make and have no impact on a dragon's challenge rating.\nMost dragons prefer to speak Draconic but learn Common for dealing with allies and minions. But given their high Intelligence and long life span, dragons can easily learn additional languages. You can add languages to a dragon's stat block.\nMost dragons are proficient in the Perception and Stealth skills, and many dragons have additional skill proficiencies. As with languages, you can customize a dragon's skill list (even doubling their proficiency bonus with certain skills) to reflect particular interests and activities. You can also give a dragon tool proficiencies, particularly if the dragon spends time in Humanoid form.\nSee the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.\nYou can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:\nDamage Absorption: You might decide that this dragon is not only unharmed by fire damage, but actually healed by it. Whenever the dragon is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.\nFlyby: The dragon is an agile flier, quick to fly out of enemies' reach. The dragon doesn't provoke an opportunity attack when it flies out of an enemy's reach.\nMimicry: Impersonating characters or their allies could be a fun trick for a crafty dragon. The dragon can mimic any sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful DC 13 Wisdom (Insight) check.\nRejuvenation: You might decide that dragons in your campaign, being an essential part of the Material Plane, are nearly impossible to destroy. A dragon's life essence might be preserved in the egg from which it first emerged, in its hoard, or in a cavernous hall at the center of the world, just as a lich's essence is hidden in a phylactery. If it has an essence-preserving object, a destroyed dragon gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the object.\nSpecial Senses: Most dragons have blindsight and darkvision. You might upgrade blindsight to truesight, or you could give a dragon with a burrowing speed tremorsense."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 19 (2d10 + 8) piercing damage plus 7 (2d6) fire damage.",
+        "attack_bonus": 14
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +14 to hit, reach 5 ft., one target. Hit: 15 (2d6 + 8) slashing damage.",
+        "attack_bonus": 14
+      },
+      {
+        "name": "Tail",
+        "desc": "Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage.",
+        "attack_bonus": 14
+      },
+      {
+        "name": "Frightful Presence",
+        "desc": "Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours."
+      },
+      {
+        "name": "Fire Breath (Recharge 5-6)",
+        "desc": "The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much damage on a successful one."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Detect",
+        "desc": "The dragon makes a Wisdom (Perception) check."
+      },
+      {
+        "name": "Tail Attack",
+        "desc": "The dragon makes a tail attack."
+      },
+      {
+        "name": "Wing Attack (Costs 2 Actions)",
+        "desc": "The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed."
+      }
+    ],
+    "index": "adult-red-dracolich"
+  },
+  {
+    "name": "Beast of the Land",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + PB (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 14,
+    "dexterity": 14,
+    "constitution": 15,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + five times your ranger level (the beast has a number of Hit Dice [d8s] equal to your ranger level)",
+    "special_abilities": [
+      {
+        "name": "Charge",
+        "desc": "If the beast moves at least 20 feet straight toward a target and then hits it with a maul attack on the same turn, the target takes an extra 1d6 slashing damage. If the target is a creature, it must succeed on a Strength saving throw against your spell save DC or be knocked prone."
+      },
+      {
+        "name": "Primal Bond",
+        "desc": "You can add your proficiency bonus to any ability check or saving throw that the beast makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 2 + PB slashing damage."
+      }
+    ],
+    "index": "beast-of-the-land"
+  },
+  {
+    "name": "Beast of the Sea",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + PB (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "swim": "60 ft."
+    },
+    "strength": 14,
+    "dexterity": 14,
+    "constitution": 15,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + five times your ranger level (the beast has a number of Hit Dice [d8s] equal to your ranger level)",
+    "special_abilities": [
+      {
+        "name": "Amphibious",
+        "desc": "The beast can breathe both air and water."
+      },
+      {
+        "name": "Primal Bond",
+        "desc": "You can add your proficiency bonus to any ability check or saving throw that the beast makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Binding Strike",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 2 + PB piercing damage or 1d6 + 2 + PB bludgeoning damage (your choice), and the target is grappled (escape DC equal to your spellcasting save DC). Until this grapple ends, the beast can't use this attack on another target."
+      }
+    ],
+    "index": "beast-of-the-sea"
+  },
+  {
+    "name": "Beast of the Sky",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + PB (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "10 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 6,
+    "dexterity": 16,
+    "constitution": 13,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "4 + four times your ranger level (the beast has a number of Hit Dice [d6s] equal to your ranger level)",
+    "special_abilities": [
+      {
+        "name": "Flyby",
+        "desc": "The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+      },
+      {
+        "name": "Primal Bond",
+        "desc": "You can add your proficiency bonus to any ability check or saving throw that the beast makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shred",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d4 + 3 + PB slashing damage."
+      }
+    ],
+    "index": "beast-of-the-sky"
+  },
+  {
+    "name": "Bestial Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft.",
+      "climb": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 (Air only) or 30 (Land and Water only) + 5 for each spell level above 2nd",
+    "special_abilities": [
+      {
+        "name": "Water Breathing (Water Only)",
+        "desc": "The beast can breathe only underwater."
+      },
+      {
+        "name": "Flyby (Air Only)",
+        "desc": "The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+      },
+      {
+        "name": "Pack Tactics (Land and Water Only)",
+        "desc": "The beast has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The beast makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel piercing damage."
+      }
+    ],
+    "index": "bestial-spirit"
+  },
+  {
+    "name": "Bestial Spirit (Air)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 + 5 for each spell level above 2nd",
+    "special_abilities": [
+      {
+        "name": "Flyby",
+        "desc": "The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The beast makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-air"
+  },
+  {
+    "name": "Bestial Spirit (Land)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "climb": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 5 for each spell level above 2nd",
+    "special_abilities": [
+      {
+        "name": "Pack Tactics",
+        "desc": "The beast has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The beast makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-land"
+  },
+  {
+    "name": "Bestial Spirit (Water)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 5 for each spell level above 2nd",
+    "special_abilities": [
+      {
+        "name": "Water Breathing (Water Only)",
+        "desc": "The beast can breathe only underwater."
+      },
+      {
+        "name": "Pack Tactics",
+        "desc": "The beast has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The beast makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Maul",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-water"
+  },
+  {
+    "name": "Celestial Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor) + 2 (Defender only)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 5th",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The celestial makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Radiant Bow (Avenger Only)",
+        "desc": "Ranged Weapon Attack:  to hit, range 150/600 ft., one target. Hit: 2d6 + 2 + summonSpellLevel radiant damage."
+      },
+      {
+        "name": "Radiant Mace (Defender Only)",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 3 + summonSpellLevel radiant damage, and the celestial can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains 1d10 temporary hit points."
+      },
+      {
+        "name": "Healing Touch (1/Day)",
+        "desc": "The celestial touches another creature. The target magically regains hit points equal to 2d8 + summonSpellLevel."
+      }
+    ],
+    "index": "celestial-spirit"
+  },
+  {
+    "name": "Celestial Spirit (Avenger)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 5th",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The celestial makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Radiant Bow",
+        "desc": "Ranged Weapon Attack:  to hit, range 150/600 ft., one target. Hit: 2d6 + 2 + summonSpellLevel radiant damage."
+      },
+      {
+        "name": "Healing Touch (1/Day)",
+        "desc": "The celestial touches another creature. The target magically regains hit points equal to 2d8 + summonSpellLevel."
+      }
+    ],
+    "index": "celestial-spirit-avenger"
+  },
+  {
+    "name": "Celestial Spirit (Defender)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 5th",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The celestial makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Radiant Mace",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 3 + summonSpellLevel radiant damage, and the celestial can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains 1d10 temporary hit points."
+      },
+      {
+        "name": "Healing Touch (1/Day)",
+        "desc": "The celestial touches another creature. The target magically regains hit points equal to 2d8 + summonSpellLevel."
+      }
+    ],
+    "index": "celestial-spirit-defender"
+  },
+  {
+    "name": "Construct Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "incapacitated",
+        "name": "incapacitated",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Heated Body (Metal Only)",
+        "desc": "A creature that touches the construct or hits it with a melee attack while within 5 feet of it takes 1d10 fire damage."
+      },
+      {
+        "name": "Stony Lethargy (Stone Only)",
+        "desc": "When a creature the construct can see starts its turn within 10 feet of the construct, the construct can force it to make a Wisdom saving throw against your spell save DC. On a failed save, the target can't use reactions and its speed is halved until the start of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The construct makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Berserk Lashing (Clay Only)",
+        "desc": "When the construct takes damage, it makes a slam attack against a random creature within 5 feet of it. If no creature is within reach, the construct moves up to half its speed toward an enemy it can see, without provoking opportunity attacks."
+      }
+    ],
+    "index": "construct-spirit"
+  },
+  {
+    "name": "Construct Spirit (Clay)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "incapacitated",
+        "name": "incapacitated",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4th",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The construct makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Berserk Lashing",
+        "desc": "When the construct takes damage, it makes a slam attack against a random creature within 5 feet of it. If no creature is within reach, the construct moves up to half its speed toward an enemy it can see, without provoking opportunity attacks."
+      }
+    ],
+    "index": "construct-spirit-clay"
+  },
+  {
+    "name": "Construct Spirit (Metal)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "incapacitated",
+        "name": "incapacitated",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Heated Body",
+        "desc": "A creature that touches the construct or hits it with a melee attack while within 5 feet of it takes 1d10 fire damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The construct makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "index": "construct-spirit-metal"
+  },
+  {
+    "name": "Construct Spirit (Stone)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "incapacitated",
+        "name": "incapacitated",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Stony Lethargy",
+        "desc": "When a creature the construct can see starts its turn within 10 feet of the construct, the construct can force it to make a Wisdom saving throw against your spell save DC. On a failed save, the target can't use reactions and its speed is halved until the start of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The construct makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "index": "construct-spirit-stone"
+  },
+  {
+    "name": "Dancing Item",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 16,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 18,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "psychic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "10 + five times your bard level",
+    "special_abilities": [
+      {
+        "name": "Immutable Form",
+        "desc": "The item is immune to any spell or effect that would alter its form."
+      },
+      {
+        "name": "Irrepressible Dance",
+        "desc": "When any creature starts its turn within 10 feet of the item, the item can increase or decrease (your choice) the walking speed of that creature by 10 feet until the end of the turn, provided the item isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Force-Empowered Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target you can see. Hit: 1d10 + PB force damage."
+      }
+    ],
+    "index": "dancing-item"
+  },
+  {
+    "name": "Elemental Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft.",
+      "swim": "40 ft.",
+      "burrow": "40 ft.",
+      "hover": true
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning, thunder (Air only)",
+      "piercing, slashing (Earth only)",
+      "acid (Water only)"
+    ],
+    "damage_immunities": [
+      "poison",
+      "fire (Fire only)"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form (Air, Fire, and Water Only)",
+        "desc": "The elemental can move through a space as narrow as 1 inch wide without squeezing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The elemental makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 4 + summonSpellLevel bludgeoning damage (Air, Earth, and Water only) or fire damage (Fire only)."
+      }
+    ],
+    "index": "elemental-spirit"
+  },
+  {
+    "name": "Elemental Spirit (Air)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft.",
+      "hover": true
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning",
+      "thunder"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form",
+        "desc": "The elemental can move through a space as narrow as 1 inch wide without squeezing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The elemental makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "index": "elemental-spirit-air"
+  },
+  {
+    "name": "Elemental Spirit (Earth)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "burrow": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "piercing",
+      "slashing"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4th",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The elemental makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "index": "elemental-spirit-earth"
+  },
+  {
+    "name": "Elemental Spirit (Fire)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning, thunder (Air only)",
+      "piercing, slashing (Earth only)",
+      "acid (Water only)"
+    ],
+    "damage_immunities": [
+      "poison",
+      "fire"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form",
+        "desc": "The elemental can move through a space as narrow as 1 inch wide without squeezing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The elemental makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 4 + summonSpellLevel fire damage."
+      }
+    ],
+    "index": "elemental-spirit-fire"
+  },
+  {
+    "name": "Elemental Spirit (Water)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "swim": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4th",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form",
+        "desc": "The elemental can move through a space as narrow as 1 inch wide without squeezing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The elemental makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d10 + 4 + summonSpellLevel bludgeoning damage."
+      }
+    ],
+    "index": "elemental-spirit-water"
+  },
+  {
+    "name": "Fey Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3rd",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fey makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 3 + summonSpellLevel piercing damage + 1d6 force damage."
+      }
+    ],
+    "index": "fey-spirit"
+  },
+  {
+    "name": "Fey Spirit (Fuming)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3rd",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fey makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 3 + summonSpellLevel piercing damage + 1d6 force damage."
+      }
+    ],
+    "index": "fey-spirit-fuming"
+  },
+  {
+    "name": "Fey Spirit (Mirthful)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3rd",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fey makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 3 + summonSpellLevel piercing damage + 1d6 force damage."
+      }
+    ],
+    "index": "fey-spirit-mirthful"
+  },
+  {
+    "name": "Fey Spirit (Tricksy)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3rd",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fey makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 3 + summonSpellLevel piercing damage + 1d6 force damage."
+      }
+    ],
+    "index": "fey-spirit-tricksy"
+  },
+  {
+    "name": "Fiendish Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "60 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 (Demon only) or 40 (Devil only) or 60 (Yugoloth only) + 15 for each spell level above 6th",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The fiend has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Death Throes (Demon Only)",
+        "desc": "When the fiend drops to 0 hit points or the spell ends, the fiend explodes, and each creature within 10 feet of it must make a Dexterity saving throw against your spell save DC. A creature takes 2d10 + summonSpellLevel fire damage on a failed save, or half as much damage on a successful one."
+      },
+      {
+        "name": "Devil's Sight (Devil Only)",
+        "desc": "Magical darkness doesn't impede the fiend's darkvision."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fiend makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Bite (Demon Only)",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d12 + 3 + summonSpellLevel necrotic damage."
+      },
+      {
+        "name": "Claws (Yugoloth Only)",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 3 + summonSpellLevel slashing damage. Immediately after the attack hits or misses, the fiend can magically teleport up to 30 feet to an unoccupied space it can see."
+      },
+      {
+        "name": "Hurl Flame (Devil Only)",
+        "desc": "Ranged Spell Attack:  to hit, range 150 ft., one target. Hit: 2d6 + 3 + summonSpellLevel fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+      }
+    ],
+    "index": "fiendish-spirit"
+  },
+  {
+    "name": "Fiendish Spirit (Demon)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 15 for each spell level above 6th",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The fiend has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Death Throes",
+        "desc": "When the fiend drops to 0 hit points or the spell ends, the fiend explodes, and each creature within 10 feet of it must make a Dexterity saving throw against your spell save DC. A creature takes 2d10 + summonSpellLevel fire damage on a failed save, or half as much damage on a successful one."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fiend makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d12 + 3 + summonSpellLevel necrotic damage."
+      }
+    ],
+    "index": "fiendish-spirit-demon"
+  },
+  {
+    "name": "Fiendish Spirit (Devil)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 6th",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The fiend has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Devil's Sight",
+        "desc": "Magical darkness doesn't impede the fiend's darkvision."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fiend makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Hurl Flame",
+        "desc": "Ranged Spell Attack:  to hit, range 150 ft., one target. Hit: 2d6 + 3 + summonSpellLevel fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+      }
+    ],
+    "index": "fiendish-spirit-devil"
+  },
+  {
+    "name": "Fiendish Spirit (Yugoloth)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "60 + 15 for each spell level above 6th",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The fiend has advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The fiend makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Claws",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d8 + 3 + summonSpellLevel slashing damage. Immediately after the attack hits or misses, the fiend can magically teleport up to 30 feet to an unoccupied space it can see."
+      }
+    ],
+    "index": "fiendish-spirit-yugoloth"
+  },
+  {
+    "name": "Homunculus Servant",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 13,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "20 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 4,
+    "dexterity": 15,
+    "constitution": 12,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 7,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": "10 + (PB × 2)"
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "1 + your Intelligence modifier + your artificer level (the homunculus has a number of Hit Dice [d4s] equal to your artificer level)",
+    "special_abilities": [
+      {
+        "name": "Evasion",
+        "desc": "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Force Strike",
+        "desc": "Ranged Weapon Attack:  to hit, range 30 ft., one target you can see. Hit: 1d4 + PB force damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Channel Magic",
+        "desc": "The homunculus delivers a spell you cast that has a range of touch. The homunculus must be within 120 feet of you."
+      }
+    ],
+    "index": "homunculus-servant"
+  },
+  {
+    "name": "Juvenile Mimic",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Tiny",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 11
+      }
+    ],
+    "speed": {
+      "walk": "10 ft.",
+      "climb": "10 ft."
+    },
+    "strength": 1,
+    "dexterity": 12,
+    "constitution": 13,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "acid"
+    ],
+    "condition_immunities": [
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Common, Undercommon, telepathy 120 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 10,
+    "hit_points": 7,
+    "hit_dice": "2d4",
+    "hit_points_roll": "2d4 + 2",
+    "subtype": "shapechanger",
+    "special_abilities": [
+      {
+        "name": "False Appearance (Object Form Only)",
+        "desc": "While the mimic remains motionless, it is indistinguishable from an ordinary object."
+      },
+      {
+        "name": "Spider Climb",
+        "desc": "The mimic can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 1 piercing damage plus 2 (1d4) acid damage.",
+        "attack_bonus": 3
+      },
+      {
+        "name": "Shape-Shift",
+        "desc": "The mimic polymorphs into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+      }
+    ],
+    "index": "juvenile-mimic"
+  },
+  {
+    "name": "Mighty Servant of Leuk-o",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Huge",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 22,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "60 ft."
+    },
+    "strength": 30,
+    "dexterity": 14,
+    "constitution": 20,
+    "intelligence": 1,
+    "wisdom": 14,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "piercing",
+      "slashing"
+    ],
+    "damage_immunities": [
+      "acid",
+      "bludgeoning",
+      "cold",
+      "fire",
+      "lightning",
+      "necrotic",
+      "poison",
+      "psychic",
+      "radiant"
+    ],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "incapacitated",
+        "name": "incapacitated",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      },
+      {
+        "index": "stunned",
+        "name": "stunned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "120 ft.",
+      "passive_perception": 19
+    },
+    "languages": "understands the languages of creatures attuned to it but can't speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 310,
+    "hit_dice": "27d12",
+    "hit_points_roll": "27d12 + 135",
+    "special_abilities": [
+      {
+        "name": "Immutable Existence",
+        "desc": "The servant is immune to any spell or effect that would alter its form or send it to another plane of existence."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The servant has advantage on saving throws against spells and other magical effects, and spell attacks made against it have disadvantage."
+      },
+      {
+        "name": "Regeneration",
+        "desc": "The servant regains 10 hit points at the start of its turn. If it is reduced to 0 hit points, this trait doesn't function until an attuned creature spends 24 hours repairing the artifact or until the artifact is subjected to lightning damage."
+      },
+      {
+        "name": "Standing Leap",
+        "desc": "The servant's long jump is up to 50 feet and its high jump is up to 25 feet, with or without a running start."
+      },
+      {
+        "name": "Unusual Nature",
+        "desc": "The servant doesn't require air, food, drink, or sleep."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Destructive Fist",
+        "desc": "Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 36 (4d12 + 10) force damage. Or Ranged Weapon Attack: +17 to hit, range 120 ft., one target. Hit: 36 (4d12 + 10) force damage. If the target is an object, it takes triple damage.",
+        "attack_bonus": 17
+      },
+      {
+        "name": "Crushing Leap",
+        "desc": "If the servant jumps at least 25 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures is pushed to an unoccupied space within 5 feet of the servant and must make a DC 25 Dexterity saving throw. On a failed save, a creature takes 26 (4d12) bludgeoning damage and is knocked prone. On a successful save, a creature takes half as much damage and isn't knocked prone."
+      }
+    ],
+    "index": "mighty-servant-of-leuk-o"
+  },
+  {
+    "name": "Reflection",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 6,
+    "dexterity": 14,
+    "constitution": 13,
+    "intelligence": 6,
+    "wisdom": 10,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [
+      "bludgeoning"
+    ],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder",
+      "piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 0.5,
+    "proficiency_bonus": 2,
+    "xp": 100,
+    "hit_points": 16,
+    "hit_dice": "3d8",
+    "hit_points_roll": "3d8 + 3",
+    "special_abilities": [
+      {
+        "name": "Amorphous",
+        "desc": "The reflection can move through a space as narrow as 1 inch wide without squeezing."
+      },
+      {
+        "name": "Shadow Stealth",
+        "desc": "While in dim light or darkness, the reflection can take the Hide action as a bonus action. Its stealth bonus is also improved to +6."
+      },
+      {
+        "name": "Sunlight Weakness",
+        "desc": "While in sunlight, the reflection has disadvantage on attack rolls, ability checks, and saving throws."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Strength Drain",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 9 (2d6 + 2) necrotic damage, and the target's Strength score is reduced by 1d4. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.\nIf a non-evil humanoid dies from this attack, a new reflection rises from the corpse 1d4 hours later.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "reflection"
+  },
+  {
+    "name": "Shadow Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "35 + 15 for each spell level above 3rd",
+    "special_abilities": [
+      {
+        "name": "Terror Frenzy (Fury Only)",
+        "desc": "The spirit has advantage on attack rolls against frightened creatures."
+      },
+      {
+        "name": "Weight of Sorrow (Despair Only)",
+        "desc": "Any creature, other than you, that starts its turn within 5 feet of the spirit has its speed reduced by 20 feet until the start of that creature's next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Chilling Rend",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d12 + 3 + summonSpellLevel cold damage."
+      },
+      {
+        "name": "Dreadful Scream (1/Day)",
+        "desc": "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "index": "shadow-spirit"
+  },
+  {
+    "name": "Shadow Spirit (Despair)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "35 + 15 for each spell level above 3rd",
+    "special_abilities": [
+      {
+        "name": "Weight of Sorrow",
+        "desc": "Any creature, other than you, that starts its turn within 5 feet of the spirit has its speed reduced by 20 feet until the start of that creature's next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Chilling Rend",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d12 + 3 + summonSpellLevel cold damage."
+      },
+      {
+        "name": "Dreadful Scream (1/Day)",
+        "desc": "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "index": "shadow-spirit-despair"
+  },
+  {
+    "name": "Shadow Spirit (Fear)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "35 + 15 for each spell level above 3rd",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Chilling Rend",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d12 + 3 + summonSpellLevel cold damage."
+      },
+      {
+        "name": "Dreadful Scream (1/Day)",
+        "desc": "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "index": "shadow-spirit-fear"
+  },
+  {
+    "name": "Shadow Spirit (Fury)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "35 + 15 for each spell level above 3rd",
+    "special_abilities": [
+      {
+        "name": "Terror Frenzy",
+        "desc": "The spirit has advantage on attack rolls against frightened creatures."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Chilling Rend",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d12 + 3 + summonSpellLevel cold damage."
+      },
+      {
+        "name": "Dreadful Scream (1/Day)",
+        "desc": "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "index": "shadow-spirit-fury"
+  },
+  {
+    "name": "Steel Defender",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 15,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 14,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": "10 + (PB × 2)"
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "2 + your Intelligence modifier + five times your artificer level (the defender has a number of Hit Dice [d8s] equal to your artificer level)",
+    "special_abilities": [
+      {
+        "name": "Vigilant",
+        "desc": "The defender can't be surprised."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Force-Empowered Rend",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target you can see. Hit: 1d8 + PB force damage."
+      },
+      {
+        "name": "Repair (3/Day)",
+        "desc": "The magical mechanisms inside the defender restore 2d8 + PB hit points to itself or to one construct or object within 5 feet of it."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Deflect Attack",
+        "desc": "The defender imposes disadvantage on the attack roll of one creature it can see that is within 5 feet of it, provided the attack roll is against a creature other than the defender."
+      }
+    ],
+    "index": "steel-defender"
+  },
+  {
+    "name": "Undead Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft.",
+      "hover": true
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3rd",
+    "special_abilities": [
+      {
+        "name": "Incorporeal Passage (Ghostly Only)",
+        "desc": "The spirit can move through other creatures and objects as if they were difficult terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 force damage for every 5 feet traveled."
+      },
+      {
+        "name": "Festering Aura (Putrid Only)",
+        "desc": "Any creature, other than you, that starts its turn within 5 feet of the spirit must succeed on a Constitution saving throw against your spell save DC or be poisoned until the start of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Deathly Touch (Ghostly Only)",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one creature. Hit: 1d8 + 3 + summonSpellLevel necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be frightened of the undead until the end of the target's next turn."
+      },
+      {
+        "name": "Grave Bolt (Skeletal Only)",
+        "desc": "Ranged Spell Attack:  to hit, range 150 ft., one target. Hit: 2d4 + 3 + summonSpellLevel necrotic damage."
+      },
+      {
+        "name": "Rotting Claw (Putrid Only)",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 3 + summonSpellLevel slashing damage. If the target is poisoned, it must succeed on a Constitution saving throw against your spell save DC or be paralyzed until the end of its next turn."
+      }
+    ],
+    "index": "undead-spirit"
+  },
+  {
+    "name": "Undead Spirit (Ghostly)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft.",
+      "hover": true
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3rd",
+    "special_abilities": [
+      {
+        "name": "Incorporeal Passage",
+        "desc": "The spirit can move through other creatures and objects as if they were difficult terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 force damage for every 5 feet traveled."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Deathly Touch",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one creature. Hit: 1d8 + 3 + summonSpellLevel necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be frightened of the undead until the end of the target's next turn."
+      }
+    ],
+    "index": "undead-spirit-ghostly"
+  },
+  {
+    "name": "Undead Spirit (Putrid)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3rd",
+    "special_abilities": [
+      {
+        "name": "Festering Aura",
+        "desc": "Any creature, other than you, that starts its turn within 5 feet of the spirit must succeed on a Constitution saving throw against your spell save DC or be poisoned until the start of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Rotting Claw",
+        "desc": "Melee Weapon Attack:  to hit, reach 5 ft., one target. Hit: 1d6 + 3 + summonSpellLevel slashing damage. If the target is poisoned, it must succeed on a Constitution saving throw against your spell save DC or be paralyzed until the end of its next turn."
+      }
+    ],
+    "index": "undead-spirit-putrid"
+  },
+  {
+    "name": "Undead Spirit (Skeletal)",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the level of the spell (natural armor)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 + 10 for each spell level above 3rd",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (rounded down)."
+      },
+      {
+        "name": "Grave Bolt",
+        "desc": "Ranged Spell Attack:  to hit, range 150 ft., one target. Hit: 2d4 + 3 + summonSpellLevel necrotic damage."
+      }
+    ],
+    "index": "undead-spirit-skeletal"
+  },
+  {
+    "name": "Wildfire Spirit",
+    "edition": "2014",
+    "source": "TCE",
+    "sources": [
+      "TCE"
+    ],
+    "size": "Small",
+    "type": "elemental",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 13,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 10,
+    "dexterity": 14,
+    "constitution": 14,
+    "intelligence": 13,
+    "wisdom": 15,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "fire"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you speak",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + five times your druid level",
+    "actions": [
+      {
+        "name": "Flame Seed",
+        "desc": "Ranged Weapon Attack:  to hit, range 60 ft., one target you can see. Hit: 1d6 + PB fire damage."
+      },
+      {
+        "name": "Fiery Teleportation",
+        "desc": "The spirit and each willing creature of your choice within 5 feet of it teleport up to 15 feet to unoccupied spaces you can see. Then each creature within 5 feet of the space that the spirit left must succeed on a Dexterity saving throw against your spell save DC or take 1d6 + PB fire damage."
+      }
+    ],
+    "index": "wildfire-spirit"
+  }
+]

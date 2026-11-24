@@ -6,23 +6,27 @@
  */
 
 import React from 'react';
-import { loadFeats } from '../services/dataService';
+import { getFeatBySlug } from '../services/dataService';
+import type { Edition } from '../types/dnd';
+import { FeatDescription } from './FeatDescription';
 
 interface FeatModalProps {
   featSlug: string;
+  /** The character's edition, to resolve feat slugs saved before the 2024 slugs existed */
+  edition?: Edition;
   isOpen: boolean;
   onClose: () => void;
 }
 
 export const FeatModal: React.FC<FeatModalProps> = ({
   featSlug,
+  edition,
   isOpen,
   onClose
 }) => {
   if (!isOpen) return null;
 
-  const feats = loadFeats();
-  const feat = feats.find(f => f.slug === featSlug);
+  const feat = getFeatBySlug(featSlug, edition);
 
   if (!feat) {
     return (
@@ -83,7 +87,7 @@ export const FeatModal: React.FC<FeatModalProps> = ({
           {/* Description */}
           <div>
             <h3 className="text-lg font-semibold text-accent-gold mb-2">Description</h3>
-            <p className="text-theme-text leading-relaxed">{feat.description}</p>
+            <FeatDescription feat={feat} className="text-theme-text leading-relaxed" />
           </div>
 
           {/* Benefits */}

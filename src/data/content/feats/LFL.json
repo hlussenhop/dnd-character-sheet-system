@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "child-of-the-sun-2024",
+    "description": "You gain the following benefits.\nEyes of Eirdu. You and allies within 10 feet of you have Advantage on saving throws made to avoid or end the Blinded condition.\nFaerie Fire. You learn the Faerie Fire spell. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\nWhen you cast Faerie Fire without a spell slot using this benefit, taking damage can't break your Concentration on the spell."
+  },
+  {
+    "slug": "shadowmoor-hexer-2024",
+    "description": "You gain the following benefits.\nHex. You always have the Hex spell prepared. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\nCurse Magic. When a creature that you've cursed with Hex hits you with an attack roll, the creature takes Psychic damage equal to your Proficiency Bonus. A creature takes this damage only once per turn."
+  }
+]

@@ -12,6 +12,7 @@ import {
   AttacksAndActions,
   HitDice,
   ExperiencePoints,
+  AttunementSlots,
   Conditions,
   CoinManagement,
   CollapsibleSection,
@@ -20,6 +21,7 @@ import {
   FeaturesSection
 } from '../index';
 import { getSpellsForClass } from '../../../services/dataService';
+import { attunedItemCount, attunementSlotCount } from '../../../utils/magicItemInventory';
 import { SpellPreparationModal } from '../../SpellPreparationModal';
 
 export const ModernStackedLayout: React.FC<CharacterSheetProps> = ({
@@ -48,7 +50,7 @@ export const ModernStackedLayout: React.FC<CharacterSheetProps> = ({
     'attacks': true,     // Collapsed by default
     'hitDice': character.hitDice.current === character.hitDice.max, // Collapse if full
     'experience': character.level >= 20, // Collapse if max level
-    'attunement': character.level < 6, // Collapse if no slots
+    'attunement': attunedItemCount(character) === 0,
     'proficiencies': true,
     'languages': true,   // Languages collapsed by default
     'conditions': !character.conditions?.length, // Expand if has conditions
@@ -230,13 +232,8 @@ export const ModernStackedLayout: React.FC<CharacterSheetProps> = ({
         title: 'Attunement Slots',
         icon: Sparkles,
         className: 'border-pink-500 bg-pink-900',
-        badge: character.level >= 6 ? `${character.level >= 17 ? 3 : character.level >= 11 ? 2 : 1}/3` : 'Locked',
-        content: (
-          <div className="text-sm text-theme-tertiary">
-            <p>Attunement slots available based on character level.</p>
-            <p>Level 6-10: 1 slot, Level 11-16: 2 slots, Level 17+: 3 slots</p>
-          </div>
-        )
+        badge: `${attunedItemCount(character)}/${attunementSlotCount(character)}`,
+        content: <AttunementSlots character={character} />
       },
       proficiencies: {
         title: 'Proficiencies',
@@ -404,7 +401,7 @@ export const ModernStackedLayout: React.FC<CharacterSheetProps> = ({
         {character.spellcasting?.spellcastingType === 'prepared' && (
           <SpellPreparationModal
             character={character}
-            availableSpells={getSpellsForClass(character.class)}
+            availableSpells={getSpellsForClass(character.class, character.edition, character.background, character.subclass || undefined)}
             isOpen={showSpellPreparationModal}
             onClose={() => setShowSpellPreparationModal(false)}
             onSave={handleSpellPreparationSave}

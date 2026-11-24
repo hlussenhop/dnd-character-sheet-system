@@ -3,10 +3,13 @@ import { render, screen } from '@testing-library/react';
 import { StepSpells } from './StepSpells';
 import { LevelUpData } from '../../../data/classProgression';
 import { Character, LevelUpChoices } from '../../../types/dnd';
-import { loadSpells } from '../../../services/dataService';
+import { loadPrimarySpells } from '../../../services/dataService';
 
 vi.mock('../../../services/dataService', () => ({
-  loadSpells: vi.fn(),
+  loadPrimarySpells: vi.fn(),
+  getBackground: vi.fn(() => undefined),
+  getSubclass: vi.fn(() => undefined),
+  SPELL_DATABASE: [],
 }));
 
 describe('StepSpells', () => {
@@ -55,7 +58,7 @@ describe('StepSpells', () => {
   const noop = () => {};
 
   beforeEach(() => {
-    vi.mocked(loadSpells).mockReturnValue(mockSpells as any);
+    vi.mocked(loadPrimarySpells).mockReturnValue(mockSpells as any);
   });
 
   it('only shows spells up to the highest castable level', () => {

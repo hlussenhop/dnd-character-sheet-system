@@ -4,7 +4,7 @@ import { IStorageService, SpellbookEntry } from './IStorageService';
 /**
  * VttSocketAdapter
  * 
- * This adapter is used when NexusForge is embedded within NexusVTT.
+ * This adapter is used when dnd character system is embedded within NexusVTT.
  * It delegates storage operations to the VTT via custom events or an injected API.
  * In a Module Federation setup, the host (NexusVTT) can also just implement IStorageService
  * directly and inject it via `setStorageAdapter`.

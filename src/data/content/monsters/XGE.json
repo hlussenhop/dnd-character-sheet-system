@@ -1,0 +1,201 @@
+[
+  {
+    "name": "Hound of Ill Omen",
+    "edition": "2014",
+    "source": "XGE",
+    "sources": [
+      "XGE"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "50 ft."
+    },
+    "strength": 17,
+    "dexterity": 15,
+    "constitution": 15,
+    "intelligence": 3,
+    "wisdom": 12,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 37,
+    "hit_dice": "5d10",
+    "hit_points_roll": "5d10 + 10",
+    "special_abilities": [
+      {
+        "name": "Keen Hearing and Smell",
+        "desc": "The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "desc": "The hound has advantage on an attack roll against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      },
+      {
+        "name": "Cloak of Shadows",
+        "desc": "The hound appears with a number of temporary hit points equal to half your sorcerer level."
+      },
+      {
+        "name": "Incorporeal Movement",
+        "desc": "The hound can move through other creatures and objects as if they were difficult terrain. The hound takes 5 force damage if it ends its turn inside an object."
+      },
+      {
+        "name": "Omen Sight",
+        "desc": "At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
+      },
+      {
+        "name": "Ever at Your Heels",
+        "desc": "On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "hound-of-ill-omen"
+  },
+  {
+    "name": "Tiny Servant",
+    "edition": "2014",
+    "source": "XGE",
+    "sources": [
+      "XGE"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 15,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "climb": "30 ft."
+    },
+    "strength": 4,
+    "dexterity": 16,
+    "constitution": 10,
+    "intelligence": 2,
+    "wisdom": 10,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "psychic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "60 ft. (blind beyond this radius)",
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 10,
+    "hit_dice": "4d4",
+    "hit_points_roll": "4d4",
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "tiny-servant"
+  }
+]

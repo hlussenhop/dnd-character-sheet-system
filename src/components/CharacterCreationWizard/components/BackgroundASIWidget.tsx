@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AbilityName, CharacterCreationData } from '../../../types/dnd';
 
 interface BackgroundASIWidgetProps {
@@ -12,23 +12,13 @@ export const BackgroundASIWidget: React.FC<BackgroundASIWidgetProps> = ({
   data,
   updateData,
 }) => {
-  const [method, setMethod] = useState<'2/1' | '1/1/1'>(data.backgroundAbilityChoices?.method || '2/1');
-  const [bonuses, setBonuses] = useState<Partial<Record<AbilityName, number>>>(data.backgroundAbilityChoices?.bonuses || {});
+  const method = data.backgroundAbilityChoices?.method || '2/1';
+  const bonuses = data.backgroundAbilityChoices?.bonuses || {};
 
-  // Reset bonuses when method changes
-  useEffect(() => {
-    setBonuses({});
-    updateData({ backgroundAbilityChoices: { method, bonuses: {} } });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [method]);
-
-  // Sync with external data changes
-  useEffect(() => {
-    if (data.backgroundAbilityChoices) {
-      setMethod(data.backgroundAbilityChoices.method || '2/1');
-      setBonuses(data.backgroundAbilityChoices.bonuses || {});
-    }
-  }, [data.backgroundAbilityChoices]);
+  // A new method starts over. The stored choice is the source of truth, including a randomized one.
+  const selectMethod = (next: '2/1' | '1/1/1') => {
+    updateData({ backgroundAbilityChoices: { method: next, bonuses: {} } });
+  };
 
   const handleBonusChange = (ability: AbilityName, value: number) => {
     const newBonuses = { ...bonuses };
@@ -65,7 +55,6 @@ export const BackgroundASIWidget: React.FC<BackgroundASIWidgetProps> = ({
         newBonuses[ability] = value;
     }
 
-    setBonuses(newBonuses);
     updateData({ backgroundAbilityChoices: { method, bonuses: newBonuses } });
   };
 
@@ -93,7 +82,7 @@ export const BackgroundASIWidget: React.FC<BackgroundASIWidgetProps> = ({
       
       <div className="flex gap-4 mb-4">
         <button
-          onClick={() => setMethod('2/1')}
+          onClick={() => selectMethod('2/1')}
           className={`flex-1 py-2 px-3 text-xs rounded border ${
             method === '2/1'
               ? 'bg-accent-blue border-accent-blue text-white'
@@ -103,7 +92,7 @@ export const BackgroundASIWidget: React.FC<BackgroundASIWidgetProps> = ({
           +2 / +1
         </button>
         <button
-          onClick={() => setMethod('1/1/1')}
+          onClick={() => selectMethod('1/1/1')}
           className={`flex-1 py-2 px-3 text-xs rounded border ${
             method === '1/1/1'
               ? 'bg-accent-blue border-accent-blue text-white'
@@ -145,7 +134,6 @@ export const BackgroundASIWidget: React.FC<BackgroundASIWidgetProps> = ({
                         const newBonuses = { ...bonuses };
                         if (oldAbility) delete newBonuses[oldAbility];
                         if (newAbility) newBonuses[newAbility] = 1;
-                        setBonuses(newBonuses);
                         updateData({ backgroundAbilityChoices: { method, bonuses: newBonuses } });
                     }}
                 >

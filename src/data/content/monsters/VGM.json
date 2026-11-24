@@ -1,0 +1,4255 @@
+[
+  {
+    "name": "Abjurer",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 14,
+    "intelligence": 18,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 84,
+    "hit_dice": "13d8",
+    "hit_points_roll": "13d8 + 26",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Arcane Ward",
+        "desc": "The abjurer has a magical ward that has 30 hit points. Whenever the abjurer takes damage, the ward takes the damage instead. If the ward is reduced to 0 hit points, the abjurer takes any remaining damage. When the abjurer casts an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The abjurer is a 13th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). The abjurer has the following wizard spells prepared:\nCantrips: blade ward, dancing lights, mending, message, ray of frost\nLevel 1 (4 slots): alarm*, mage armor*, magic missile, shield*\nLevel 2 (3 slots): arcane lock*, invisibility\nLevel 3 (3 slots): counterspell*, dispel magic*, fireball\nLevel 4 (3 slots): banishment*, stoneskin*\nLevel 5 (2 slots): cone of cold, wall of force\nLevel 6 (1 slots): flesh to stone, globe of invulnerability*\nLevel 7 (1 slots): symbol*, teleport\n*Abjuration spell of 1st level or higher",
+        "attack_bonus": 8
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quarterstaff",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) bludgeoning damage, or 3 (1d8 - 1) bludgeoning damage if used with two hands.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "abjurer"
+  },
+  {
+    "name": "Annis Hag (Coven)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Large",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 13,
+    "wisdom": 14,
+    "charisma": 15,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 15
+    },
+    "languages": "Common, Giant, Sylvan",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 75,
+    "hit_dice": "10d10",
+    "hit_points_roll": "10d10 + 20",
+    "special_abilities": [
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells:\n3/day each: disguise self (including the form of a Medium humanoid), fog cloud"
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): identify, ray of sickness\nLevel 2 (3 slots): hold person, locate object\nLevel 3 (3 slots): bestow curse, counterspell, lightning bolt\nLevel 4 (3 slots): phantasmal killer, polymorph\nLevel 5 (2 slots): contact other plane, scrying\nLevel 6 (1 slots): eyebite\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The annis makes three attacks: one with her bite and two with her claws."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) piercing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) slashing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Crushing Hug",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 36 (9d6 + 5) bludgeoning damage, and the target is grappled (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 (9d6 + 5) bludgeoning damage at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "annis-hag-coven"
+  },
+  {
+    "name": "Annis Hag (Coven; Death)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Large",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 13,
+    "wisdom": 14,
+    "charisma": 15,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 15
+    },
+    "languages": "Common, Giant, Sylvan",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 75,
+    "hit_dice": "10d10",
+    "hit_points_roll": "10d10 + 20",
+    "special_abilities": [
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells:\n3/day each: disguise self (including the form of a Medium humanoid), fog cloud"
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): false life, inflict wounds\nLevel 2 (3 slots): gentle repose, ray of enfeeblement\nLevel 3 (3 slots): animate dead, revivify, speak with dead\nLevel 4 (3 slots): blight, death ward\nLevel 5 (2 slots): contagion, raise dead\nLevel 6 (1 slots): circle of death\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The annis makes three attacks: one with her bite and two with her claws."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) piercing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) slashing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Crushing Hug",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 36 (9d6 + 5) bludgeoning damage, and the target is grappled (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 (9d6 + 5) bludgeoning damage at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "annis-hag-coven-death"
+  },
+  {
+    "name": "Annis Hag (Coven; Nature)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Large",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 13,
+    "wisdom": 14,
+    "charisma": 15,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 15
+    },
+    "languages": "Common, Giant, Sylvan",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 75,
+    "hit_dice": "10d10",
+    "hit_points_roll": "10d10 + 20",
+    "special_abilities": [
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells:\n3/day each: disguise self (including the form of a Medium humanoid), fog cloud"
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): entangle, speak with animals\nLevel 2 (3 slots): flaming sphere, moonbeam, spike growth\nLevel 3 (3 slots): call lightning, plant growth\nLevel 4 (3 slots): dominate beast, grasping vine\nLevel 5 (2 slots): insect plague, tree stride\nLevel 6 (1 slots): wall of thorns\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The annis makes three attacks: one with her bite and two with her claws."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) piercing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) slashing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Crushing Hug",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 36 (9d6 + 5) bludgeoning damage, and the target is grappled (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 (9d6 + 5) bludgeoning damage at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "annis-hag-coven-nature"
+  },
+  {
+    "name": "Annis Hag (Coven; Prophecy)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Large",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 13,
+    "wisdom": 14,
+    "charisma": 15,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 15
+    },
+    "languages": "Common, Giant, Sylvan",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 75,
+    "hit_dice": "10d10",
+    "hit_points_roll": "10d10 + 20",
+    "special_abilities": [
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells:\n3/day each: disguise self (including the form of a Medium humanoid), fog cloud"
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): bane, bless\nLevel 2 (3 slots): augury, detect thoughts\nLevel 3 (3 slots): clairvoyance, dispel magic, nondetection\nLevel 4 (3 slots): arcane eye, locate creature\nLevel 5 (2 slots): geas, legend lore\nLevel 6 (1 slots): true seeing\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The annis makes three attacks: one with her bite and two with her claws."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) piercing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 15 (3d6 + 5) slashing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Crushing Hug",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 36 (9d6 + 5) bludgeoning damage, and the target is grappled (escape DC 15) if it is a Large or smaller creature. Until the grapple ends, the target takes 36 (9d6 + 5) bludgeoning damage at the start of each of the hag's turns. The hag can't make attacks while grappling a creature in this way.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "annis-hag-coven-prophecy"
+  },
+  {
+    "name": "Bheur Hag (Coven)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 12,
+    "wisdom": 13,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "cold"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Auran, Common, Giant",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 91,
+    "hit_dice": "14d8",
+    "hit_points_roll": "14d8 + 28",
+    "special_abilities": [
+      {
+        "name": "Graystaff Magic",
+        "desc": "The hag carries a graystaff, a length of gray wood that is a focus for her inner power. She can ride the staff as if it were a broom of flying. While holding the staff, she can cast additional spells with her Innate Spellcasting trait (these spells are marked with an asterisk). If the staff is lost or destroyed, the hag must craft another, which takes a year and a day. Only a bheur hag can use a graystaff."
+      },
+      {
+        "name": "Ice Walk",
+        "desc": "The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost her extra moment."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: hold person*, ray of frost\n3/day each: cone of cold*, ice storm*, wall of ice*\n1/day each: control weather",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): identify, ray of sickness\nLevel 2 (3 slots): hold person, locate object\nLevel 3 (3 slots): bestow curse, counterspell, lightning bolt\nLevel 4 (3 slots): phantasmal killer, polymorph\nLevel 5 (2 slots): contact other plane, scrying\nLevel 6 (1 slots): eyebite\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 10 (2d8 + 1) bludgeoning damage plus 3 (1d6) cold damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Maddening Feast",
+        "desc": "The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be frightened of her for 1 minute. While frightened in this way, a creature is incapacitated, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
+      }
+    ],
+    "index": "bheur-hag-coven"
+  },
+  {
+    "name": "Bheur Hag (Coven; Death)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 12,
+    "wisdom": 13,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "cold"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Auran, Common, Giant",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 91,
+    "hit_dice": "14d8",
+    "hit_points_roll": "14d8 + 28",
+    "special_abilities": [
+      {
+        "name": "Graystaff Magic",
+        "desc": "The hag carries a graystaff, a length of gray wood that is a focus for her inner power. She can ride the staff as if it were a broom of flying. While holding the staff, she can cast additional spells with her Innate Spellcasting trait (these spells are marked with an asterisk). If the staff is lost or destroyed, the hag must craft another, which takes a year and a day. Only a bheur hag can use a graystaff."
+      },
+      {
+        "name": "Ice Walk",
+        "desc": "The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost her extra moment."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: hold person*, ray of frost\n3/day each: cone of cold*, ice storm*, wall of ice*\n1/day each: control weather",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): false life, inflict wounds\nLevel 2 (3 slots): gentle repose, ray of enfeeblement\nLevel 3 (3 slots): animate dead, revivify, speak with dead\nLevel 4 (3 slots): blight, death ward\nLevel 5 (2 slots): contagion, raise dead\nLevel 6 (1 slots): circle of death\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 10 (2d8 + 1) bludgeoning damage plus 3 (1d6) cold damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Maddening Feast",
+        "desc": "The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be frightened of her for 1 minute. While frightened in this way, a creature is incapacitated, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
+      }
+    ],
+    "index": "bheur-hag-coven-death"
+  },
+  {
+    "name": "Bheur Hag (Coven; Nature)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 12,
+    "wisdom": 13,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "cold"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Auran, Common, Giant",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 91,
+    "hit_dice": "14d8",
+    "hit_points_roll": "14d8 + 28",
+    "special_abilities": [
+      {
+        "name": "Graystaff Magic",
+        "desc": "The hag carries a graystaff, a length of gray wood that is a focus for her inner power. She can ride the staff as if it were a broom of flying. While holding the staff, she can cast additional spells with her Innate Spellcasting trait (these spells are marked with an asterisk). If the staff is lost or destroyed, the hag must craft another, which takes a year and a day. Only a bheur hag can use a graystaff."
+      },
+      {
+        "name": "Ice Walk",
+        "desc": "The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost her extra moment."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: hold person*, ray of frost\n3/day each: cone of cold*, ice storm*, wall of ice*\n1/day each: control weather",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): entangle, speak with animals\nLevel 2 (3 slots): flaming sphere, moonbeam, spike growth\nLevel 3 (3 slots): call lightning, plant growth\nLevel 4 (3 slots): dominate beast, grasping vine\nLevel 5 (2 slots): insect plague, tree stride\nLevel 6 (1 slots): wall of thorns\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 10 (2d8 + 1) bludgeoning damage plus 3 (1d6) cold damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Maddening Feast",
+        "desc": "The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be frightened of her for 1 minute. While frightened in this way, a creature is incapacitated, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
+      }
+    ],
+    "index": "bheur-hag-coven-nature"
+  },
+  {
+    "name": "Bheur Hag (Coven; Prophecy)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "fey",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 12,
+    "wisdom": 13,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "cold"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Auran, Common, Giant",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 91,
+    "hit_dice": "14d8",
+    "hit_points_roll": "14d8 + 28",
+    "special_abilities": [
+      {
+        "name": "Graystaff Magic",
+        "desc": "The hag carries a graystaff, a length of gray wood that is a focus for her inner power. She can ride the staff as if it were a broom of flying. While holding the staff, she can cast additional spells with her Innate Spellcasting trait (these spells are marked with an asterisk). If the staff is lost or destroyed, the hag must craft another, which takes a year and a day. Only a bheur hag can use a graystaff."
+      },
+      {
+        "name": "Ice Walk",
+        "desc": "The hag can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost her extra moment."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: hold person*, ray of frost\n3/day each: cone of cold*, ice storm*, wall of ice*\n1/day each: control weather",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Shared Spellcasting (Coven Only)",
+        "desc": "While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\nLevel 1 (4 slots): bane, bless\nLevel 2 (3 slots): augury, detect thoughts\nLevel 3 (3 slots): clairvoyance, dispel magic, nondetection\nLevel 4 (3 slots): arcane eye, locate creature\nLevel 5 (2 slots): geas, legend lore\nLevel 6 (1 slots): true seeing\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC 13, and the spell attack bonus is +5.",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 10 (2d8 + 1) bludgeoning damage plus 3 (1d6) cold damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Maddening Feast",
+        "desc": "The hag feasts on the corpse of one enemy within 5 feet of her that died within the past minute. Each creature of the hag's choice that is within 60 feet of her and able to see her must succeed on a DC 15 Wisdom saving throw or be frightened of her for 1 minute. While frightened in this way, a creature is incapacitated, can't understand what others say, can't read, and speaks only in gibberish; the DM controls the creature's movement, which is erratic. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Maddening Feast for the next 24 hours."
+      }
+    ],
+    "index": "bheur-hag-coven-prophecy"
+  },
+  {
+    "name": "Black Guard Drake",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "dragon",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands Draconic but can't speak it",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 21",
+    "special_abilities": [
+      {
+        "name": "Amphibious",
+        "desc": "The guard drake can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The drake attacks twice, once with its bite and once with its tail."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Tail",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "black-guard-drake"
+  },
+  {
+    "name": "Blue Guard Drake",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "dragon",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "burrow": "20 ft."
+    },
+    "strength": 16,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands Draconic but can't speak it",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 21",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The drake attacks twice, once with its bite and once with its tail."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Tail",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "blue-guard-drake"
+  },
+  {
+    "name": "Booyahg Booyahg Booyahg",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 11,
+    "intelligence": 17,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 6,
+    "proficiency_bonus": 3,
+    "xp": 2300,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Wild Magic",
+        "desc": "Each time the goblin casts a spell (including cantrips), there is an accompanying surge of wild magic; roll on the Wild Magic Surge table in the Player's Handbook to determine the wild magic effect."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The$1goblin is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The$1goblin has the following wizard spells prepared:\nCantrips: fire bolt, light, mage hand, prestidigitation\nLevel 1 (4 slots): detect magic, mage armor, magic missile, shield\nLevel 2 (3 slots): misty step, suggestion\nLevel 3 (3 slots): counterspell, fireball, fly\nLevel 4 (3 slots): greater invisibility, ice storm\nLevel 5 (1 slots): cone of cold",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Familiars",
+        "desc": "Any spellcaster that can cast the find familiar spell (such as an archmage or$1goblin) is likely to have a familiar. The familiar can be one of the creatures described in the spell (see the Player's Handbook) or some other Tiny monster, such as a crawling claw, imp, pseudodragon, or quasit."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "booyahg-booyahg-booyahg"
+  },
+  {
+    "name": "Booyahg Caster",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "leather armor",
+            "url": ""
+          },
+          {
+            "name": "shield",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 10,
+    "wisdom": 8,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 9
+    },
+    "languages": "Common, Goblin",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 7,
+    "hit_dice": "2d6",
+    "hit_points_roll": "2d6",
+    "subtype": "goblinoid",
+    "special_abilities": [
+      {
+        "name": "Nimble Escape",
+        "desc": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The goblin can cast a randomly determined 1st-level wizard spell once per day. Intelligence is its spellcasting ability (spell save DC 10, +2 to hit with spell attacks).",
+        "attack_bonus": 2
+      }
+    ],
+    "actions": [
+      {
+        "name": "Scimitar",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Shortbow",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "booyahg-caster"
+  },
+  {
+    "name": "Booyahg Slave of the Archfey",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 11
+      },
+      {
+        "type": "armor",
+        "value": 14,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 13,
+    "constitution": 11,
+    "intelligence": 11,
+    "wisdom": 12,
+    "charisma": 18,
+    "proficiencies": [
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-nature",
+          "name": "Skill: Nature",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any two languages (usually Sylvan)",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 49,
+    "hit_dice": "11d8",
+    "hit_points_roll": "11d8",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The goblin's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:\nAt will: disguise self, mage armor (self only), silent image, speak with animals\n1/day: conjure fey"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The goblin is an 11th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: dancing lights, eldritch blast, friends, mage hand, minor illusion, prestidigitation, vicious mockery\nLevel 5 (3 slots): blink, charm person, dimension door, dominate beast, faerie fire, fear, hold monster, misty step, phantasmal force, seeming, sleep",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "attack_bonus": 3
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Misty Escape (Recharges after a Short or Long Rest)",
+        "desc": "In response to taking damage, the goblin turns invisible and teleports up to 60 feet to an unoccupied space it can see. It remains invisible until the start of its next turn or until it attacks, makes a damage roll, or casts a spell."
+      }
+    ],
+    "index": "booyahg-slave-of-the-archfey"
+  },
+  {
+    "name": "Booyahg Slave of the Fiend",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 14,
+    "constitution": 15,
+    "intelligence": 12,
+    "wisdom": 12,
+    "charisma": 18,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-religion",
+          "name": "Skill: Religion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "slashing from nonmagical attacks not made with silvered weapons"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "any two languages (usually Abyssal or Infernal)",
+    "challenge_rating": 7,
+    "proficiency_bonus": 3,
+    "xp": 2900,
+    "hit_points": 78,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 24",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
+        "desc": "When the goblin makes an ability check or saving throw, it can add a d10 to the roll. It can do this after the roll is made but before any of the roll's effects occur."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The goblin's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:\nAt will: alter self, false life, levitate (self only), mage armor (self only), silent image\n1/day each: feeblemind, finger of death, plane shift"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The goblin is a 17th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: eldritch blast, fire bolt, friends, mage hand, minor illusion, prestidigitation, shocking grasp\nLevel 5 (4 slots): banishment, burning hands, flame strike, hellish rebuke, magic circle, scorching ray, scrying, stinking cloud, suggestion, wall of fire",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Mace",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage plus 10 (3d6) fire damage.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "booyahg-slave-of-the-fiend"
+  },
+  {
+    "name": "Booyahg Slave of the Great Old One",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 15,
+    "intelligence": 12,
+    "wisdom": 12,
+    "charisma": 18,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "psychic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "any two languages, telepathy 30 ft.",
+    "challenge_rating": 6,
+    "proficiency_bonus": 3,
+    "xp": 2300,
+    "hit_points": 91,
+    "hit_dice": "14d8",
+    "hit_points_roll": "14d8 + 28",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Whispering Aura",
+        "desc": "At the start of each of the goblin's turns, each creature of its choice within 5 feet of it must succeed on a DC 15 Wisdom saving throw or take 10 (3d6) psychic damage, provided that the goblin isn't incapacitated."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "desc": "The goblin's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save DC 15), requiring no material components:\nAt will: detect magic, jump, levitate, mage armor (self only), speak with dead\n1/day each: arcane gate, true seeing"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The goblin is a 14th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:\nCantrips: chill touch, eldritch blast, guidance, mage hand, minor illusion, prestidigitation, shocking grasp\nLevel 5 (3 slots): armor of Agathys, arms of Hadar, crown of madness, clairvoyance, contact other plane, detect thoughts, dimension door, dissonant whispers, dominate beast, telekinesis, vampiric touch",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "booyahg-slave-of-the-great-old-one"
+  },
+  {
+    "name": "Booyahg Whip",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "leather armor",
+            "url": ""
+          },
+          {
+            "name": "shield",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 10,
+    "wisdom": 8,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 9
+    },
+    "languages": "Common, Goblin",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 7,
+    "hit_dice": "2d6",
+    "hit_points_roll": "2d6",
+    "subtype": "goblinoid",
+    "special_abilities": [
+      {
+        "name": "Nimble Escape",
+        "desc": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
+      },
+      {
+        "name": "Khurgorbaeyag's Gift",
+        "desc": "Khurgorbaeyag saw fit to gift this goblin with powers that enable it to dominate others. The goblin has 1d3 other goblins that slavishly obey its orders."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Scimitar",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Shortbow",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "booyahg-whip"
+  },
+  {
+    "name": "Booyahg Wielder",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "leather armor",
+            "url": ""
+          },
+          {
+            "name": "shield",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 10,
+    "wisdom": 8,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 9
+    },
+    "languages": "Common, Goblin",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 7,
+    "hit_dice": "2d6",
+    "hit_points_roll": "2d6",
+    "subtype": "goblinoid",
+    "special_abilities": [
+      {
+        "name": "Nimble Escape",
+        "desc": "The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
+      },
+      {
+        "name": "Special Equipment",
+        "desc": "The goblin found a magic item (a necklace of fireballs, a circlet of blasting, or the like) and learned how to use it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Scimitar",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Shortbow",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "booyahg-wielder"
+  },
+  {
+    "name": "Conjurer",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 11,
+    "intelligence": 17,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 6,
+    "proficiency_bonus": 3,
+    "xp": 2300,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Benign Transportation (Recharges after the Conjurer Casts a Conjuration Spell of 1st Level or Higher)",
+        "desc": "As a bonus action, the conjurer teleports up to 30 feet to an unoccupied space that it can see. If it instead chooses a space within range that is occupied by a willing Small or Medium creature, they both teleport, swapping places."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The conjurer is a 9th-level spellcaster. Its spellcasting ability is intelligence (spell save DC 14, +6 to hit with spell attacks). The conjurer has the following wizard spells prepared:\nCantrips: acid splash, mage hand, poison spray, prestidigitation\nLevel 1 (4 slots): mage armor, magic missile, unseen servant*\nLevel 2 (3 slots): cloud of daggers*, misty step*, web*\nLevel 3 (3 slots): fireball, stinking cloud*\nLevel 4 (3 slots): Evard's black tentacles*, stoneskin\nLevel 5 (2 slots): cloudkill*, conjure elemental*\n*Conjuration spell of 1st level or higher",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dagger",
+        "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "conjurer"
+  },
+  {
+    "name": "Cow",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 10
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 14,
+    "intelligence": 2,
+    "wisdom": 10,
+    "charisma": 4,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 15,
+    "hit_dice": "2d10",
+    "hit_points_roll": "2d10 + 4",
+    "special_abilities": [
+      {
+        "name": "Charge",
+        "desc": "If the cow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "cow"
+  },
+  {
+    "name": "Diviner",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 11,
+    "intelligence": 18,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 67,
+    "hit_dice": "15d8",
+    "hit_points_roll": "15d8",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Portent (Recharges after the Diviner Casts a Divination Spell of 1st Level or Higher)",
+        "desc": "When the diviner or a creature it can see makes an attack roll, a saving throw, or an ability check, the diviner can roll a d20 and choose to use this roll in place of the attack roll, saving throw, or ability check."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The diviner is a 15th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). The diviner has the following wizard spells prepared:\nCantrips: fire bolt, light, mage hand, message, true strike\nLevel 1 (4 slots): detect magic*, feather fall, mage armor\nLevel 2 (3 slots): detect thoughts*, locate object*, scorching ray\nLevel 3 (3 slots): clairvoyance*, fly, fireball\nLevel 4 (3 slots): arcane eye*, ice storm, stoneskin\nLevel 5 (2 slots): Rary's telepathic bond*, seeming\nLevel 6 (1 slots): mass suggestion, true seeing*\nLevel 7 (1 slots): delayed blast fireball, teleport\nLevel 8 (1 slots): maze\n* Divination spell of 1st level or higher",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quarterstaff",
+        "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) bludgeoning damage, or 3 (1d8 - 1) bludgeoning damage if used with two hands.",
+        "attack_bonus": 2
+      }
+    ],
+    "index": "diviner"
+  },
+  {
+    "name": "Enchanter",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 11,
+    "intelligence": 17,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Spellcasting",
+        "desc": "The enchanter is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The enchanter has the following wizard spells prepared:\nCantrips: friends, mage hand, mending, message\nLevel 1 (4 slots): charm person*, mage armor, magic missile\nLevel 2 (3 slots): hold person*, invisibility, suggestion*\nLevel 3 (3 slots): fireball, haste, tongues\nLevel 4 (3 slots): dominate beast*, stoneskin\nLevel 5 (2 slots): hold monster*\n*Enchantment spell of 1st level or higher",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quarterstaff",
+        "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) bludgeoning damage, or 3 (1d8 - 1) bludgeoning damage if used with two hands.",
+        "attack_bonus": 2
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Instinctive Charm (Recharges after the Enchanter Casts an Enchantment Spell of 1st level or Higher)",
+        "desc": "The enchanter tries to magically divert an attack made against it, provided that the attacker is within 30 feet of it and visible to it. The enchanter must decide to do so before the attack hits or misses.\nThe attacker must make a DC 14 Wisdom saving throw. On a failed save, the attacker targets the creature closest to it, other than the enchanter or itself. If multiple creatures are closest, the attacker chooses which one to target."
+      }
+    ],
+    "index": "enchanter"
+  },
+  {
+    "name": "Evoker",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 12,
+    "intelligence": 17,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 66,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 12",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Sculpt Spells",
+        "desc": "When the evoker casts an evocation spell that forces other creatures it can see to make a saving throw, it can choose a number of them equal to 1 + the spell's level. These creatures automatically succeed on their saving throws against the spell. If a successful save means a chosen creature would take half damage from the spell, it instead takes no damage from it."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The evoker is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). The evoker has the following wizard spells prepared:\nCantrips: fire bolt*, light*, prestidigitation, ray of frost*\nLevel 1 (4 slots): burning hands*, mage armor, magic missile*\nLevel 2 (3 slots): mirror image, misty step, shatter*\nLevel 3 (3 slots): counterspell, fireball*, lightning bolt*\nLevel 4 (3 slots): ice storm*, stoneskin\nLevel 5 (2 slots): Bigby's hand*, cone of cold*\nLevel 6 (1 slots): chain lightning*, wall of ice*\n*Evocation spell",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quarterstaff",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) bludgeoning damage, or 3 (1d8 - 1) bludgeoning damage if used with two hands.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "evoker"
+  },
+  {
+    "name": "Green Guard Drake",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "dragon",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands Draconic but can't speak it",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 21",
+    "special_abilities": [
+      {
+        "name": "Amphibious",
+        "desc": "The guard drake can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The drake attacks twice, once with its bite and once with its tail."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Tail",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "green-guard-drake"
+  },
+  {
+    "name": "Illithilich",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "lawful NX chaotic evil",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 17,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 16,
+    "intelligence": 20,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 12,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 19,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 12,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "lightning",
+      "necrotic"
+    ],
+    "damage_immunities": [
+      "poison",
+      "bludgeoning, piercing, slashing from nonmagical attacks"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "truesight": "120 ft.",
+      "passive_perception": 19
+    },
+    "languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+    "challenge_rating": 22,
+    "proficiency_bonus": 7,
+    "xp": 41000,
+    "hit_points": 135,
+    "hit_dice": "18d8",
+    "hit_points_roll": "18d8 + 54",
+    "special_abilities": [
+      {
+        "name": "Legendary Resistance (3/Day)",
+        "desc": "If the illithilich fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Rejuvenation",
+        "desc": "If it has a phylactery, a destroyed illithilich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery."
+      },
+      {
+        "name": "Turn Resistance",
+        "desc": "The illithilich has advantage on saving throws against any effect that turns undead."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The illithilich has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Innate Spellcasting (Psionics)",
+        "desc": "The illithilich's innate spellcasting ability is Intelligence (spell save DC 20). It can innately cast the following spells, requiring no components.\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)"
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The illithilich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:\nCantrips: mage hand, prestidigitation, ray of frost\nLevel 1 (4 slots): detect magic, magic missile, shield, thunderwave\nLevel 2 (3 slots): detect thoughts, invisibility, Melf's acid arrow, mirror image\nLevel 3 (3 slots): animate dead, counterspell, dispel magic, fireball\nLevel 4 (3 slots): blight, dimension door\nLevel 5 (3 slots): cloudkill, scrying\nLevel 6 (1 slots): disintegrate, globe of invulnerability\nLevel 7 (1 slots): finger of death, plane shift\nLevel 8 (1 slots): dominate monster, power word stun\nLevel 9 (1 slots): power word kill",
+        "attack_bonus": 12
+      },
+      {
+        "name": "Lair Actions",
+        "desc": "On initiative count 20 (losing initiative ties), the illithilich can take a lair action to cause one of the following magical effects; the illithilich can't use the same effect two rounds in a row:\nThe illithilich rolls a d8 and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.\nThe illithilich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the illithilich to the target. Whenever the illithilich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the illithilich takes half the damage (rounded down), and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the illithilich or the target is no longer in the illithilich's lair.\nThe illithilich calls forth the spirits of creatures that died in its lair. These apparitions materialize and attack one creature that the illithilich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 (15d6) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Paralyzing Touch",
+        "desc": "Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "attack_bonus": 12
+      },
+      {
+        "name": "Tentacles",
+        "desc": "Melee Weapon Attack: +12 to hit, reach 5 ft., one creature. Hit: 21 (3d10 + 5) psychic damage. If the target is Large or smaller, it is grappled (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be stunned until this grapple ends.",
+        "attack_bonus": 12
+      },
+      {
+        "name": "Extract Brain",
+        "desc": "Melee Weapon Attack: +12 to hit, reach 5 ft., one incapacitated humanoid grappled by the lich. Hit: 55 (10d10) piercing damage. If this damage reduces the target to 0 hit points, the lich kills the target by extracting and devouring its brain.",
+        "attack_bonus": 12
+      },
+      {
+        "name": "Mind Blast (Recharge 5-6)",
+        "desc": "The illithilich magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 18 Intelligence saving throw or take 27 (5d8 + 5) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Tentacles",
+        "desc": "The illithilich makes one attack with its tentacles."
+      },
+      {
+        "name": "Extract Brain (Costs 2 Actions)",
+        "desc": "The illithilich uses Extract Brain."
+      },
+      {
+        "name": "Mind Blast (Costs 3 Actions)",
+        "desc": "The illithilich recharges its Mind Blast and uses it."
+      },
+      {
+        "name": "Cast Spell (Costs 1–3 Actions)",
+        "desc": "The illithilich uses a spell slot to cast a 1st-, 2nd-, or 3rd-level spell that it has prepared. Doing so costs 1 legendary action per level of the spell."
+      }
+    ],
+    "index": "illithilich"
+  },
+  {
+    "name": "Illusionist",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 13,
+    "intelligence": 16,
+    "wisdom": 11,
+    "charisma": 12,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 10
+    },
+    "languages": "any four languages",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 38,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 7",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Displacement (Recharges after the Illusionist Casts an Illusion Spell of 1st Level or Higher)",
+        "desc": "As a bonus action, the illusionist projects an illusion that makes the illusionist appear to be standing in a place a few inches from its actual location, causing any creature to have disadvantage on attack rolls against the illusionist. The effect ends if the illusionist takes damage, it is incapacitated, or its speed becomes 0."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The illusionist is a 7th-level spellcaster. its spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). The illusionist has the following wizard spells prepared:\nCantrips: dancing lights, mage hand, minor illusion, poison spray\nLevel 1 (4 slots): color spray*, disguise self*, mage armor, magic missile\nLevel 2 (3 slots): invisibility*, mirror image*, phantasmal force*\nLevel 3 (3 slots): major image*, phantom steed*\nLevel 4 (1 slots): phantasmal killer*\n*Illusion spell of 1st level or higher",
+        "attack_bonus": 5
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quarterstaff",
+        "desc": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) bludgeoning damage, or 3 (1d8 - 1) bludgeoning damage if used with two hands.",
+        "attack_bonus": 1
+      }
+    ],
+    "index": "illusionist"
+  },
+  {
+    "name": "Mind Flayer Psion",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "breastplate",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 12,
+    "constitution": 12,
+    "intelligence": 19,
+    "wisdom": 17,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 16
+    },
+    "languages": "Deep Speech, Undercommon, telepathy 120 ft.",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 71,
+    "hit_dice": "13d8",
+    "hit_points_roll": "13d8 + 13",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The mind flayer has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Innate Spellcasting (Psionics)",
+        "desc": "The mind flayer is a 10th-level spellcaster. Its innate spellcasting ability is Intelligence (spell save DC 15; +7 to hit with spell attacks). It can innately cast the following spells, requiring no components:\nAt will: guidance, mage hand, vicious mockery, true strike, detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)\nLevel 1 (4 slots): charm person, command, comprehend languages, sanctuary\nLevel 2 (3 slots): crown of madness, phantasmal force, see invisibility\nLevel 3 (3 slots): clairvoyance, fear, meld into stone\nLevel 4 (3 slots): confusion, stone shape\nLevel 5 (2 slots): scrying, telekinesis",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tentacles",
+        "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 15 (2d10 + 4) psychic damage. If the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be stunned until this grapple ends.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Extract Brain",
+        "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Mind Blast (Recharge 5-6)",
+        "desc": "The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Intelligence saving throw or take 22 (4d8 + 4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+      }
+    ],
+    "index": "mind-flayer-psion"
+  },
+  {
+    "name": "Necromancer",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 12,
+    "intelligence": 17,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 9,
+    "proficiency_bonus": 4,
+    "xp": 5000,
+    "hit_points": 66,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 12",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Grim Harvest (1/Turn)",
+        "desc": "When necromancer kills a creature that is neither a construct nor undead with a spell of 1st level or higher, the necromancer regains hit points equal to twice the spell's level, or three times if it is a necromancy spell."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The necromancer is a 12th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). The necromancer has the following wizard spells prepared:\nCantrips: chill touch, dancing lights, mage hand, mending\nLevel 1 (4 slots): false life*, mage armor, ray of sickness*\nLevel 2 (3 slots): blindness/deafness*, ray of enfeeblement*, web\nLevel 3 (3 slots): animate dead*, bestow curse*, vampiric touch*\nLevel 4 (3 slots): blight*, dimension door, stoneskin\nLevel 5 (2 slots): Bigby's hand, cloudkill\nLevel 6 (1 slots): circle of death*\n*Necromancy spell of 1st level or higher",
+        "attack_bonus": 7
+      }
+    ],
+    "actions": [
+      {
+        "name": "Withering Touch",
+        "desc": "Melee Spell Attack: +7 to hit, reach 5 ft., one creature. Hit: 5 (2d4) necrotic damage.",
+        "attack_bonus": 7
+      }
+    ],
+    "index": "necromancer"
+  },
+  {
+    "name": "Orc Blade of Ilneval",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 18,
+        "armor": [
+          {
+            "name": "chain mail",
+            "url": ""
+          },
+          {
+            "name": "shield",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 17,
+    "dexterity": 11,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 12,
+    "charisma": 14,
+    "proficiencies": [
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 13
+    },
+    "languages": "Common, Orc",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 60,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 24",
+    "subtype": "orc",
+    "special_abilities": [
+      {
+        "name": "Aggressive",
+        "desc": "As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+      },
+      {
+        "name": "Foe Smiter of Ilneval",
+        "desc": "The orc deals an extra die of damage when it hits with a longsword attack (included in the attack)."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The orc makes two melee attacks with its longsword or two ranged attacks with its javelins. If Ilneval's Command is available to use, the orc can use it after these attacks."
+      },
+      {
+        "name": "Longsword",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 12 (2d8 + 3) slashing damage, or 14 (2d10 + 3) slashing damage when used with two hands.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Javelin",
+        "desc": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Ilneval's Command (Recharge 4-6)",
+        "desc": "Up to three allied orcs within 120 feet of this orc that can hear it can use their reactions to each make one weapon attack."
+      }
+    ],
+    "index": "orc-blade-of-ilneval"
+  },
+  {
+    "name": "Orc Claw of Luthic",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 14,
+        "armor": [
+          {
+            "name": "hide armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 14,
+    "dexterity": 15,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 15,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-medicine",
+          "name": "Skill: Medicine",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Common, Orc",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 45,
+    "hit_dice": "6d8",
+    "hit_points_roll": "6d8 + 18",
+    "subtype": "orc",
+    "special_abilities": [
+      {
+        "name": "Aggressive",
+        "desc": "As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The orc is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The orc has the following cleric spells prepared:\nCantrips: guidance, mending, resistance, thaumaturgy\nLevel 1 (4 slots): bane, cure wounds, guiding bolt\nLevel 2 (3 slots): augury, warding bond\nLevel 3 (2 slots): bestow curse, create food and water",
+        "attack_bonus": 4
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The orc makes two claw attacks, or four claw attacks if it has fewer than half of its hit points remaining."
+      },
+      {
+        "name": "Claw",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "orc-claw-of-luthic"
+  },
+  {
+    "name": "Orc Hand of Yurtrus",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 12,
+        "armor": [
+          {
+            "name": "hide armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 11,
+    "wisdom": 14,
+    "charisma": 9,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 1,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-medicine",
+          "name": "Skill: Medicine",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-religion",
+          "name": "Skill: Religion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands Common and Orc but can't speak",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 30,
+    "hit_dice": "4d8",
+    "hit_points_roll": "4d8 + 12",
+    "subtype": "orc",
+    "special_abilities": [
+      {
+        "name": "Aggressive",
+        "desc": "As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The orc is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It requires no verbal components to cast its spells. The orc has the following cleric spells prepared:\nCantrips: guidance, mending, resistance, thaumaturgy\nLevel 1 (4 slots): bane, detect magic, inflict wounds, protection from evil and good\nLevel 2 (3 slots): blindness/deafness, silence",
+        "attack_bonus": 4
+      }
+    ],
+    "actions": [
+      {
+        "name": "Touch of the White Hand",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 9 (2d8) necrotic damage.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "orc-hand-of-yurtrus"
+  },
+  {
+    "name": "Orc Nurtured One of Yurtrus",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 9
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 15,
+    "dexterity": 8,
+    "constitution": 16,
+    "intelligence": 7,
+    "wisdom": 11,
+    "charisma": 7,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Common, Orc",
+    "challenge_rating": 0.5,
+    "proficiency_bonus": 2,
+    "xp": 100,
+    "hit_points": 30,
+    "hit_dice": "4d8",
+    "hit_points_roll": "4d8 + 12",
+    "subtype": "orc",
+    "special_abilities": [
+      {
+        "name": "Aggressive",
+        "desc": "As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+      },
+      {
+        "name": "Corrupted Carrier",
+        "desc": "When the orc is reduced to 0 hit points, it explodes, and any creature within 10 feet of it must make a DC 13 Constitution saving throw. On a failed save, the creature takes 14 (4d6) poison damage and becomes poisoned. On a success, the creature takes half as much damage and isn't poisoned. A creature poisoned by this effect can repeat the save at the end of each of its turn, ending the effect on itself on a success. While poisoned by this effect, a creature can't regain hit points."
+      },
+      {
+        "name": "Nurtured One of Yurtrus",
+        "desc": "The orc has advantage on saving throws against poison and disease."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claws",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage plus 2 (1d4) necrotic damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Corrupted Vengeance",
+        "desc": "The orc reduces itself to 0 hit points, triggering its Corrupted Carrier trait."
+      }
+    ],
+    "index": "orc-nurtured-one-of-yurtrus"
+  },
+  {
+    "name": "Orc Red Fang of Shargaas",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "studded leather",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 9,
+    "wisdom": 11,
+    "charisma": 9,
+    "proficiencies": [
+      {
+        "value": 1,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Common, Orc",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 52,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 16",
+    "subtype": "orc",
+    "special_abilities": [
+      {
+        "name": "Cunning Action",
+        "desc": "On each of its turns, the orc can use a bonus action to take the Dash, Disengage, or Hide action."
+      },
+      {
+        "name": "Hand of Shargaas",
+        "desc": "The orc deals 2 extra dice of damage when it hits a target with a weapon attack (included in its attacks)."
+      },
+      {
+        "name": "Shargaas's Sight",
+        "desc": "Magical darkness doesn't impede the orc's darkvision."
+      },
+      {
+        "name": "Slayer",
+        "desc": "In the first round of a combat, the orc has advantage on attack rolls against any creature that hasn't taken a turn yet. If the orc hits a creature that round who was surprised, the hit is automatically a critical hit."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The orc makes two scimitar or dart attacks."
+      },
+      {
+        "name": "Scimitar",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 13 (3d6 + 3) slashing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Dart",
+        "desc": "Ranged Weapon Attack: +5 to hit, range 20/60 ft., one target. Hit: 10 (3d4 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Veil of Shargaas (Recharges after a Short or Long Rest)",
+        "desc": "The orc casts darkness without any components. Wisdom is its spellcasting ability."
+      }
+    ],
+    "index": "orc-red-fang-of-shargaas"
+  },
+  {
+    "name": "Red Guard Drake",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "dragon",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "climb": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands Draconic but can't speak it",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 21",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The drake attacks twice, once with its bite and once with its tail."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Tail",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "red-guard-drake"
+  },
+  {
+    "name": "Rothé",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 10
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 14,
+    "intelligence": 2,
+    "wisdom": 10,
+    "charisma": 4,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "30 ft.",
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 15,
+    "hit_dice": "2d10",
+    "hit_points_roll": "2d10 + 4",
+    "special_abilities": [
+      {
+        "name": "Charge",
+        "desc": "If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "roth"
+  },
+  {
+    "name": "Thorny",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 12,
+    "constitution": 13,
+    "intelligence": 2,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning",
+      "piercing"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 14
+    },
+    "languages": "",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 27,
+    "hit_dice": "5d8",
+    "hit_points_roll": "5d8 + 5",
+    "special_abilities": [
+      {
+        "name": "Plant Camouflage",
+        "desc": "The thorny has advantage on Dexterity (Stealth) checks it makes in any terrain with ample obscuring plant life."
+      },
+      {
+        "name": "Regeneration",
+        "desc": "The thorny regains 5 hit points at the start of its turn. If it takes cold, fire, or necrotic damage, this trait doesn't function at the start of the thorny's next turn. The thorny dies only if it starts its turn with 0 hit points and doesn't regenerate."
+      },
+      {
+        "name": "Thorny Body",
+        "desc": "At the start of its turn, the thorny deals 2 (1d4) piercing damage to any creature grappling it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 8 (2d6 + 1) piercing damage.",
+        "attack_bonus": 3
+      }
+    ],
+    "index": "thorny"
+  },
+  {
+    "name": "Transmuter",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      },
+      {
+        "type": "armor",
+        "value": 15,
+        "armor": [
+          {
+            "name": "with mage armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 9,
+    "dexterity": 14,
+    "constitution": 11,
+    "intelligence": 17,
+    "wisdom": 12,
+    "charisma": 11,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "any four languages",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 40,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8",
+    "subtype": "any race",
+    "special_abilities": [
+      {
+        "name": "Transmuter's Stone",
+        "desc": "The transmuter carries a magic stone it crafted that grants its bearer one of the following effects:\nDarkvision out to a range of 60 feet\nAn extra 10 feet of speed while the bearer is unencumbered\nProficiency with Constitution saving throws\nResistance to acid, cold, fire, lightning, or thunder damage (transmuter's choice whenever the transmuter chooses this benefit)\nIf the transmuter has the stone and casts a transmutation spell of 1st level or higher, it can change the effect of the stone."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The transmuter is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The transmuter has the following wizard spells prepared:\nCantrips: light, mending, prestidigitation, ray of frost\nLevel 1 (4 slots): chromatic orb, expeditious retreat*, mage armor\nLevel 2 (3 slots): alter self*, hold person, knock*\nLevel 3 (3 slots): blink*, fireball, slow*\nLevel 4 (3 slots): polymorph*, stoneskin\nLevel 5 (1 slots): telekinesis*\n*Transmutation spell of 1st level or higher",
+        "attack_bonus": 6
+      }
+    ],
+    "actions": [
+      {
+        "name": "Quarterstaff",
+        "desc": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) bludgeoning damage, or 3 (1d8 - 1) bludgeoning damage if used with two hands.",
+        "attack_bonus": 2
+      }
+    ],
+    "index": "transmuter"
+  },
+  {
+    "name": "White Guard Drake",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "dragon",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 14,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "climb": "30 ft.",
+      "burrow": "20 ft."
+    },
+    "strength": 16,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands Draconic but can't speak it",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 21",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The drake attacks twice, once with its bite and once with its tail."
+      },
+      {
+        "name": "Bite",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Tail",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "white-guard-drake"
+  },
+  {
+    "name": "Xvart Speaker",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "armor",
+        "value": 13,
+        "armor": [
+          {
+            "name": "leather armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 13,
+    "wisdom": 7,
+    "charisma": 7,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "30 ft.",
+      "passive_perception": 8
+    },
+    "languages": "Abyssal and one additional language (usually Common or Goblin)",
+    "challenge_rating": 0.125,
+    "proficiency_bonus": 2,
+    "xp": 25,
+    "hit_points": 7,
+    "hit_dice": "2d6",
+    "hit_points_roll": "2d6",
+    "subtype": "xvart",
+    "special_abilities": [
+      {
+        "name": "Low Cunning",
+        "desc": "The xvart can take the Disengage action as a bonus action on each of its turns."
+      },
+      {
+        "name": "Overbearing Pack",
+        "desc": "The xvart has advantage on Strength (Athletics) checks to shove a creature if at least one of the xvart's allies is within 5 feet of the target and the ally isn't incapacitated."
+      },
+      {
+        "name": "Raxivort's Tongue",
+        "desc": "The xvart can communicate with ordinary bats and rats, as well as giant bats and giant rats."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shortsword",
+        "desc": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Sling",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 4 (1d4 + 2) bludgeoning damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "xvart-speaker"
+  },
+  {
+    "name": "Yuan-ti Malison (Type 4)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 13,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Abyssal, Common, Draconic",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 66,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 12",
+    "subtype": "shapechanger, yuan-ti",
+    "special_abilities": [
+      {
+        "name": "Shapechanger",
+        "desc": "The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The yuan-ti has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Malison Type",
+        "desc": "The yuan-ti has one of the following types:\nType 4:: Human form with one or more serpentine tails\nType 5:: Human form covered in scales"
+      },
+      {
+        "name": "Innate Spellcasting (Yuan-ti Form Only)",
+        "desc": "The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack (Yuan-ti Form Only)",
+        "desc": "The yuan-ti makes two ranged attacks or two melee attacks."
+      },
+      {
+        "name": "Bite (Snake Form Only)",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Scimitar (Yuan-ti Form Only)",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Longbow (Yuan-ti Form Only)",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "yuan-ti-malison-type-4"
+  },
+  {
+    "name": "Yuan-ti Malison (Type 5)",
+    "edition": "2014",
+    "source": "VGM",
+    "sources": [
+      "VGM"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 13,
+    "intelligence": 14,
+    "wisdom": 12,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Abyssal, Common, Draconic",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 66,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 12",
+    "subtype": "shapechanger, yuan-ti",
+    "special_abilities": [
+      {
+        "name": "Shapechanger",
+        "desc": "The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The yuan-ti has advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Malison Type",
+        "desc": "The yuan-ti has one of the following types:\nType 4:: Human form with one or more serpentine tails\nType 5:: Human form covered in scales"
+      },
+      {
+        "name": "Innate Spellcasting (Yuan-ti Form Only)",
+        "desc": "The yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan-ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack (Yuan-ti Form Only)",
+        "desc": "The yuan-ti makes two ranged attacks or two melee attacks."
+      },
+      {
+        "name": "Bite (Snake Form Only)",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Scimitar (Yuan-ti Form Only)",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Longbow (Yuan-ti Form Only)",
+        "desc": "Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "yuan-ti-malison-type-5"
+  }
+]

@@ -1,0 +1,1560 @@
+[
+  {
+    "name": "Amulet of the Drunkard",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "uncommon",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This amulet smells of old, ale-stained wood. While wearing it, you can regain 4d4 + 4 hit points when you drink a pint of beer, ale, mead, or wine. Once the amulet has restored hit points, it can't do so again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "amulet-of-the-drunkard"
+  },
+  {
+    "name": "Arcane Cannon",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This Large cannon is imbued with magic. It requires no ammunition and doesn't need to be loaded. It takes one action to aim the cannon and one action to fire it. After the cannon has fired, it must recharge for 5 minutes before it can be fired again.\nThe creature firing the cannon chooses the effect from the following options:\nThe cannon discharges acid in a line 300 feet long and 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 22 (4d10) acid damage on a failed save, or half as much damage on a successful one. In addition, a creature that fails its saving throw takes 11 (2d10) acid damage at the start of each of its turns; a creature can end this damage by using its action to wash off the acid with a pint or more of water.\nThe cannon discharges fire in a line 300 feet long and 5 feet wide. Each creature in the area must make a DC 15 Dexterity saving throw, taking 33 (6d10) fire damage on a failed save, or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried.\nThe cannon shoots a ball of frost to a point you can see within 1,200 feet of the cannon. The ball then expands to form a 30-foot-radius sphere centered on that point. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, a creature takes 22 (4d10) cold damage, and its speed is reduced by 10 feet for 1 minute. On a successful save, the creature takes half as much damage, and its speed isn't reduced. A creature whose speed is reduced by this effect can repeat the save at the end of each of its turns, ending the effect on itself on a success.\nThe cannon shoots a ball of lightning to a point you can see within 1,200 feet of the cannon. The lightning then expands to form a 20-foot-radius sphere centered on that point. Each creature in that area must make a DC 15 Dexterity saving throw, taking 33 (6d10) lightning damage on a failed save, or half as much damage on a successful one. Creatures wearing metal armor have disadvantage on the save.\nThe cannon expels poison gas in a 60-foot cone. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, the creature takes 22 (4d10) poison damage and is poisoned for 1 minute. On a successful save, the creature takes half as much damage and isn't poisoned. A creature poisoned in this way can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "arcane-cannon"
+  },
+  {
+    "name": "Battering Shield",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "rare",
+    "attunement": true,
+    "itemType": "Shield",
+    "typeCode": "S",
+    "weight": 6,
+    "charges": 3,
+    "recharge": "dawn",
+    "rechargeAmount": "1d3",
+    "bonusAc": 1,
+    "baseItem": "shield",
+    "description": "While holding this iron tower shield, you gain a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.\nAdditionally, the shield has 3 charges, and it regains 1d3 expended charges daily at dawn. If you are holding the shield and push a creature within your reach at least 5 feet away, you can expend 1 charge to push that creature an additional 10 feet, knock it prone, or both.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "battering-shield"
+  },
+  {
+    "name": "Blade of Broken Mirrors (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "attunementRequirement": "by a humanoid",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 1,
+    "bonusWeapon": 2,
+    "properties": [
+      "Finesse",
+      "Light",
+      "Thrown",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "dagger",
+    "spells": [
+      "fabricate-2014",
+      "hallucinatory-terrain-2014",
+      "major-image-2014",
+      "phantasmal-killer-2014"
+    ],
+    "description": "A weapon of Tharizdun, this dagger is a piece of jagged stone whose blade is scribed with a maze-like pattern with no beginning or end.\nThe Blade of Broken Mirrors is a sentient chaotic evil weapon with an Intelligence of 21, a Wisdom of 24, and a Charisma of 24. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal and Common.\nAn insane glabrezu named Ragazuu lives within the Blade of Broken Mirrors. The weapon yearns to cause chaos. It learns its wielder's principles, then uses those ideals to encourage reckless action. The dagger whispers ideas of revolution.\nThe dagger grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. Immediately after you make a ranged attack with this weapon, it returns to your hand.\nWhenever you kill a humanoid with an attack using the Blade of Broken Mirrors, the blade remembers the creature's appearance. While holding the dagger, you can use an action to change your form to match any humanoid the blade remembers. Your statistics, other than your size, don't change. Any equipment you are wearing or carrying isn't transformed. You can revert to your true appearance as an action. You revert to your true appearance automatically when you die. When the Blade of Broken Mirrors attunes to a new wielder, the appearances of humanoids it has killed are wiped from its memory.\nWhen the dagger reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nWhile holding the weapon, you can use an action to cast one of the following spells from it (save DC 15): fabricate, hallucinatory terrain, major image, or phantasmal killer. Once a spell has been cast using the dagger, that spell can't be cast from the dagger again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "blade-of-broken-mirrors-awakened"
+  },
+  {
+    "name": "Blade of Broken Mirrors (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "attunementRequirement": "by a humanoid",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 1,
+    "bonusWeapon": 1,
+    "properties": [
+      "Finesse",
+      "Light",
+      "Thrown",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "dagger",
+    "description": "A weapon of Tharizdun, this dagger is a piece of jagged stone whose blade is scribed with a maze-like pattern with no beginning or end.\nThe Blade of Broken Mirrors is a sentient chaotic evil weapon with an Intelligence of 21, a Wisdom of 24, and a Charisma of 24. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal and Common.\nAn insane glabrezu named Ragazuu lives within the Blade of Broken Mirrors. The weapon yearns to cause chaos. It learns its wielder's principles, then uses those ideals to encourage reckless action. The dagger whispers ideas of revolution.\nThe dagger grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. Immediately after you make a ranged attack with this weapon, it returns to your hand.\nWhenever you kill a humanoid with an attack using the Blade of Broken Mirrors, the blade remembers the creature's appearance. While holding the dagger, you can use an action to change your form to match any humanoid the blade remembers. Your statistics, other than your size, don't change. Any equipment you are wearing or carrying isn't transformed. You can revert to your true appearance as an action. You revert to your true appearance automatically when you die. When the Blade of Broken Mirrors attunes to a new wielder, the appearances of humanoids it has killed are wiped from its memory.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "blade-of-broken-mirrors-dormant"
+  },
+  {
+    "name": "Blade of Broken Mirrors (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "attunementRequirement": "by a humanoid",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 1,
+    "bonusWeapon": 3,
+    "properties": [
+      "Finesse",
+      "Light",
+      "Thrown",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "dagger",
+    "spells": [
+      "fabricate-2014",
+      "hallucinatory-terrain-2014",
+      "major-image-2014",
+      "phantasmal-killer-2014"
+    ],
+    "description": "A weapon of Tharizdun, this dagger is a piece of jagged stone whose blade is scribed with a maze-like pattern with no beginning or end.\nThe Blade of Broken Mirrors is a sentient chaotic evil weapon with an Intelligence of 21, a Wisdom of 24, and a Charisma of 24. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal and Common.\nAn insane glabrezu named Ragazuu lives within the Blade of Broken Mirrors. The weapon yearns to cause chaos. It learns its wielder's principles, then uses those ideals to encourage reckless action. The dagger whispers ideas of revolution.\nThe dagger grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. Immediately after you make a ranged attack with this weapon, it returns to your hand.\nWhenever you kill a humanoid with an attack using the Blade of Broken Mirrors, the blade remembers the creature's appearance. While holding the dagger, you can use an action to change your form to match any humanoid the blade remembers. Your statistics, other than your size, don't change. Any equipment you are wearing or carrying isn't transformed. You can revert to your true appearance as an action. You revert to your true appearance automatically when you die. When the Blade of Broken Mirrors attunes to a new wielder, the appearances of humanoids it has killed are wiped from its memory.\nWhen the dagger reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nWhile holding the weapon, you can use an action to cast one of the following spells from it (save DC 15): fabricate, hallucinatory terrain, major image, or phantasmal killer. Once a spell has been cast using the dagger, that spell can't be cast from the dagger again until the next dawn.\nWhen the dagger reaches an exalted state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +3.\nThe saving throw DC for spells cast from the dagger increases to 17.\nWhile holding the dagger, you can turn invisible as an action. Anything you are wearing or carrying is invisible with you. You remain invisible until you stop holding the dagger, until you attack or cast a spell that forces a creature to make a saving throw, or until you use a bonus action to become visible again.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "blade-of-broken-mirrors-exalted"
+  },
+  {
+    "name": "Bloodaxe",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "weight": 7,
+    "bonusWeapon": 2,
+    "properties": [
+      "Heavy",
+      "Two-Handed"
+    ],
+    "baseItem": "greataxe",
+    "description": "You gain a +2 bonus to attack and damage rolls made with this magic axe. The axe deals an extra 1d6 necrotic damage to creatures that aren't constructs or undead. If you reduce such a creature to 0 hit points with an attack using this axe, you gain 10 temporary hit points.\nThis axe is forged from a dark, rust-colored metal and once belonged to the goliath barbarian Grog Strongjaw of Vox Machina.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "bloodaxe"
+  },
+  {
+    "name": "Breathing Bubble",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "common",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This translucent, bubble-like sphere has a slightly tacky outer surface, and you gain the item's benefits only while wearing it over your head like a helmet.\nThe bubble contains 1 hour of breathable air. The bubble regains all its expended air daily at dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "breathing-bubble"
+  },
+  {
+    "name": "Brooch of Living Essence",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "While wearing this nondescript brooch, spells and anything else that would detect or reveal your creature type treat you as humanoid, and those that would reveal your alignment treat it as neutral.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "brooch-of-living-essence"
+  },
+  {
+    "name": "Butcher's Bib",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "rare",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This black leather apron is perpetually covered by blood, even after being washed off. You gain the following benefits while wearing the apron:\nOnce per turn when you roll damage for a melee attack with a weapon, you can reroll the weapon's damage dice. If you do so, you must use the second total.\nYour weapon attacks that deal slashing damage score a critical hit on a roll of 19 or 20 on the d20.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "butchers-bib"
+  },
+  {
+    "name": "Coin of Delving",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "common",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This scintillating copper coin sheds dim light in a 5-foot radius. If dropped a distance greater than 5 feet, the coin issues a melodious ringing sound when it hits a surface. Any creature that can hear the chime can determine the distance the coin dropped based on the tone.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "coin-of-delving"
+  },
+  {
+    "name": "Danoth's Visor (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "These mithral-frame goggles with clear diamond lenses were used by the evoker Danoth Oro to spot invisible enemies and scout areas from afar.\nWhen Danoth's Visor reaches an awakened state, it gains the following properties:\nYou see invisible creatures and objects within 60 feet of you as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.\nAs a bonus action, you can speak a command word and use the goggles to see into and through solid matter. This vision has a radius of 60 feet and lasts for 1 minute. To you, solid objects within that radius appear transparent. The vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead. This property can't be used again until the next dawn.\nAs a bonus action, you can speak a command word to switch the goggles into spyglass mode. While in this mode, creatures and objects viewed through the goggles are magnified to twice their size. Speaking the command word again reverts the goggles to their normal operation.\nWhile wearing the goggles in their dormant state, you can see normally in darkness, both magical and nonmagical, to a distance of 60 feet. Additionally, you have advantage on Intelligence (Investigation) and Wisdom (Perception) checks that rely on sight.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "danoths-visor-awakened"
+  },
+  {
+    "name": "Danoth's Visor (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "These mithral-frame goggles with clear diamond lenses were used by the evoker Danoth Oro to spot invisible enemies and scout areas from afar.\nWhile wearing the goggles in their dormant state, you can see normally in darkness, both magical and nonmagical, to a distance of 60 feet. Additionally, you have advantage on Intelligence (Investigation) and Wisdom (Perception) checks that rely on sight.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "danoths-visor-dormant"
+  },
+  {
+    "name": "Danoth's Visor (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "antimagic-field-2014"
+    ],
+    "description": "These mithral-frame goggles with clear diamond lenses were used by the evoker Danoth Oro to spot invisible enemies and scout areas from afar.\nWhen Danoth's Visor reaches an awakened state, it gains the following properties:\nYou see invisible creatures and objects within 60 feet of you as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.\nAs a bonus action, you can speak a command word and use the goggles to see into and through solid matter. This vision has a radius of 60 feet and lasts for 1 minute. To you, solid objects within that radius appear transparent. The vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead. This property can't be used again until the next dawn.\nAs a bonus action, you can speak a command word to switch the goggles into spyglass mode. While in this mode, creatures and objects viewed through the goggles are magnified to twice their size. Speaking the command word again reverts the goggles to their normal operation.\nWhen Danoth's Visor reaches an exalted state, it gains the following properties:\nYou automatically detect illusions you can see and automatically succeed on saving throws against them. In addition, you see a bright aura around any creature that isn't in its true form.\nAs an action, you can cast the antimagic field spell from the visor. This property can't be used again until the next dawn.\nWhile wearing the goggles in their dormant state, you can see normally in darkness, both magical and nonmagical, to a distance of 60 feet. Additionally, you have advantage on Intelligence (Investigation) and Wisdom (Perception) checks that rely on sight.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "danoths-visor-exalted"
+  },
+  {
+    "name": "Dispelling Stone",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This smooth, rainbow-colored, egg-shaped stone can be thrown up to 30 feet and explodes in a 10-foot-radius sphere of magical energy on impact, destroying the stone. Any active spell of 5th level or lower in the sphere ends.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "dispelling-stone"
+  },
+  {
+    "name": "Duskcrusher",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "weight": 2,
+    "bonusWeapon": 2,
+    "properties": [
+      "Versatile"
+    ],
+    "baseItem": "warhammer",
+    "spells": [
+      "sunbeam-2014"
+    ],
+    "description": "This item takes the form of a leather-wrapped metal rod emblazoned with the symbol of Pelor, the Dawn Father. While grasping the rod, you can use a bonus action to cause a warhammer head of crackling radiance to spring into existence. The warhammer's radiant head emits bright light in a 15-foot radius and dim light for an additional 15 feet. The light is sunlight. You can use an action to make the radiant head disappear.\nWhile the radiant head is active, you gain a +2 bonus to attack and damage rolls made with this magic weapon, and attacks with the weapon deal radiant damage instead of bludgeoning damage. An undead creature hit by the weapon takes an extra 1d8 radiant damage.\nWhile you are holding Duskcrusher and its radiant head is active, you can use an action to cast the sunbeam spell (save DC 15) from the weapon, and this action can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "duskcrusher"
+  },
+  {
+    "name": "Dust of Deliciousness",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "uncommon",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This reddish brown dust can be sprinkled over any edible substance to greatly improve the flavor. The dust also dulls the eater's senses: anyone eating food treated with this dust has disadvantage on Wisdom ability checks and Wisdom saving throws for 1 hour. There is enough dust to flavor six servings.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "dust-of-deliciousness"
+  },
+  {
+    "name": "Goggles of Object Reading",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "spells": [
+      "identify-2014"
+    ],
+    "description": "These leather-framed goggles feature purple crystal lenses. While wearing the goggles, you have advantage on Intelligence (Arcana) checks made to reveal information about a creature or object you can see.\nIn addition, you can cast the identify spell using the googles. Once you do so, you can't do so again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "goggles-of-object-reading"
+  },
+  {
+    "name": "Grimoire Infinitus (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "attunementRequirement": "by a wizard",
+    "wondrous": true,
+    "weight": 3,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "Several of these spellbooks with gilded pages and silver-plated covers were created during the Age of Arcanum, but only one has been found since the Calamity ended. The book has an infinite number of pages, is three inches thick, eight inches wide, twelve inches long, and weighs three pounds.\nWhen the Grimoire Infinitus reaches an awakened state, it gains the following properties:\nWhile you carry the spellbook, you have advantage on saving throws against spells and magical effects.\nWhen you prepare wizard spells using the grimoire as your spellbook, the number of spells you can prepare increases by 1 again.\nMost of the book is blank, but the following spells are recorded in the first pages of the tome: alarm, antimagic field, Bigby's hand, blight, charm person, confusion, control weather, create undead, detect thoughts, enlarge/reduce, fear, foresight, gaseous form, glyph of warding, legend lore, Leomund's tiny hut, mass suggestion, mislead, misty step, Mordenkainen's faithful hound, prismatic spray, ray of enfeeblement, silent image, teleport, and thunderwave.\nYou can use the grimoire as your spellbook, and you can scribe new spells into it as normal. When you prepare wizard spells using the grimoire, the number of wizard spells you can prepare increases by 1.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "grimoire-infinitus-awakened"
+  },
+  {
+    "name": "Grimoire Infinitus (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "attunementRequirement": "by a wizard",
+    "wondrous": true,
+    "weight": 3,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "Several of these spellbooks with gilded pages and silver-plated covers were created during the Age of Arcanum, but only one has been found since the Calamity ended. The book has an infinite number of pages, is three inches thick, eight inches wide, twelve inches long, and weighs three pounds.\nMost of the book is blank, but the following spells are recorded in the first pages of the tome: alarm, antimagic field, Bigby's hand, blight, charm person, confusion, control weather, create undead, detect thoughts, enlarge/reduce, fear, foresight, gaseous form, glyph of warding, legend lore, Leomund's tiny hut, mass suggestion, mislead, misty step, Mordenkainen's faithful hound, prismatic spray, ray of enfeeblement, silent image, teleport, and thunderwave.\nYou can use the grimoire as your spellbook, and you can scribe new spells into it as normal. When you prepare wizard spells using the grimoire, the number of wizard spells you can prepare increases by 1.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "grimoire-infinitus-dormant"
+  },
+  {
+    "name": "Grimoire Infinitus (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "attunementRequirement": "by a wizard",
+    "wondrous": true,
+    "weight": 3,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "Several of these spellbooks with gilded pages and silver-plated covers were created during the Age of Arcanum, but only one has been found since the Calamity ended. The book has an infinite number of pages, is three inches thick, eight inches wide, twelve inches long, and weighs three pounds.\nWhen the Grimoire Infinitus reaches an awakened state, it gains the following properties:\nWhile you carry the spellbook, you have advantage on saving throws against spells and magical effects.\nWhen you prepare wizard spells using the grimoire as your spellbook, the number of spells you can prepare increases by 1 again.\nWhen the Grimoire Infinitus reaches an exalted state, it gains the following properties:\nYou can now use your Arcane Recovery feature twice between long rests, rather than once.\nWhen you prepare wizard spells using the grimoire as your spellbook, the number of spells you can prepare increases by 1 again.\nMost of the book is blank, but the following spells are recorded in the first pages of the tome: alarm, antimagic field, Bigby's hand, blight, charm person, confusion, control weather, create undead, detect thoughts, enlarge/reduce, fear, foresight, gaseous form, glyph of warding, legend lore, Leomund's tiny hut, mass suggestion, mislead, misty step, Mordenkainen's faithful hound, prismatic spray, ray of enfeeblement, silent image, teleport, and thunderwave.\nYou can use the grimoire as your spellbook, and you can scribe new spells into it as normal. When you prepare wizard spells using the grimoire, the number of wizard spells you can prepare increases by 1.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "grimoire-infinitus-exalted"
+  },
+  {
+    "name": "Grovelthrash (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 2,
+    "movement": {
+      "equalToWalk": [
+        "burrow"
+      ]
+    },
+    "properties": [
+      "Versatile",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "warhammer",
+    "description": "Crafted from a single piece of obsidian, this warhammer of Torog hums with magical energy and is carved with the images of faces screaming in pain.\nGrovelthrash is a sentient neutral evil weapon with an Intelligence of 18, a Wisdom of 15, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Infernal.\nA covetous ultroloth named Ciria lives within Grovelthrash. The weapon values material possessions and doling out pain. It compliments its wielder whenever they claim treasure and takes pleasure in harming others.\nThe warhammer grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit with an attack using this warhammer, you can deal an extra 2d6 bludgeoning damage to the target. If you do, you take 1d6 psychic damage. The warhammer deals double damage to objects and structures.\nWhile holding this weapon, you have advantage on Wisdom (Insight) checks made to discern a lie spoken in a language you understand.\nWhen the warhammer reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nYou gain a burrowing speed equal to your walking speed. You can use your burrowing speed to move through sand, loose earth, mud, or ice, not solid rock.\nWhen a creature you can see within 30 feet of you hits you with an attack while you are wielding the warhammer, you can use your reaction to deal an amount of psychic damage to that creature equal to the damage you took from the attack. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "grovelthrash-awakened"
+  },
+  {
+    "name": "Grovelthrash (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 1,
+    "properties": [
+      "Versatile",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "warhammer",
+    "description": "Crafted from a single piece of obsidian, this warhammer of Torog hums with magical energy and is carved with the images of faces screaming in pain.\nGrovelthrash is a sentient neutral evil weapon with an Intelligence of 18, a Wisdom of 15, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Infernal.\nA covetous ultroloth named Ciria lives within Grovelthrash. The weapon values material possessions and doling out pain. It compliments its wielder whenever they claim treasure and takes pleasure in harming others.\nThe warhammer grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit with an attack using this warhammer, you can deal an extra 2d6 bludgeoning damage to the target. If you do, you take 1d6 psychic damage. The warhammer deals double damage to objects and structures.\nWhile holding this weapon, you have advantage on Wisdom (Insight) checks made to discern a lie spoken in a language you understand.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "grovelthrash-dormant"
+  },
+  {
+    "name": "Grovelthrash (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 3,
+    "movement": {
+      "equalToWalk": [
+        "burrow"
+      ]
+    },
+    "properties": [
+      "Versatile",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "warhammer",
+    "spells": [
+      "earthquake-2014",
+      "meld-into-stone-2014",
+      "stone-shape-2014"
+    ],
+    "description": "Crafted from a single piece of obsidian, this warhammer of Torog hums with magical energy and is carved with the images of faces screaming in pain.\nGrovelthrash is a sentient neutral evil weapon with an Intelligence of 18, a Wisdom of 15, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Infernal.\nA covetous ultroloth named Ciria lives within Grovelthrash. The weapon values material possessions and doling out pain. It compliments its wielder whenever they claim treasure and takes pleasure in harming others.\nThe warhammer grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit with an attack using this warhammer, you can deal an extra 2d6 bludgeoning damage to the target. If you do, you take 1d6 psychic damage. The warhammer deals double damage to objects and structures.\nWhile holding this weapon, you have advantage on Wisdom (Insight) checks made to discern a lie spoken in a language you understand.\nWhen the warhammer reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nYou gain a burrowing speed equal to your walking speed. You can use your burrowing speed to move through sand, loose earth, mud, or ice, not solid rock.\nWhen a creature you can see within 30 feet of you hits you with an attack while you are wielding the warhammer, you can use your reaction to deal an amount of psychic damage to that creature equal to the damage you took from the attack. This property can't be used again until the next dawn.\nWhen the warhammer reaches an exalted state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +3.\nWhen you have fewer hit points than half your hit point maximum, the warhammer deals an extra 2d6 bludgeoning damage on a hit. You can burrow through solid rock at half your burrowing speed and leave a 5-foot-diameter tunnel in your wake.\nAs an action, you can use the warhammer to cast one of the following spells from it (save DC 17): earthquake, meld into stone, or stone shape. Once a spell has been cast using the warhammer, that spell can't be cast from the warhammer again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "grovelthrash-exalted"
+  },
+  {
+    "name": "Hide of the Feral Guardian (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Light Armor",
+    "typeCode": "LA",
+    "weight": 13,
+    "bonusAc": 2,
+    "bonusWeapon": 2,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "studded-leather-armor",
+    "spells": [
+      "polymorph-2014"
+    ],
+    "description": "It is believed that this polished and beautifully detailed leather armor was a gift from Melora, bestowed on a long-forgotten archdruid and champion of the natural world before the terrors of the Calamity.\nWhen the armor reaches an awakened state, it gains the following properties:\nThe AC bonus of the armor increases to +2.\nWhile you are transformed by an effect that replaces any of your game statistics with those of another creature, your bonus to melee attack and damage rolls increases by 1 (to +2).\nWhen you cast the polymorph spell using this armor, you can transform into a cave bear.\nWhile wearing the armor in its dormant state, you gain the following benefits:\nThe armor grants you a +1 bonus to AC.\nWhile you are transformed by an effect that replaces any of your game statistics with those of another creature, you have a +1 bonus to melee attack and damage rolls, and you retain the benefits of this armor.\nAs an action, you can use the armor to cast polymorph on yourself, transforming into a giant owl while retaining your Intelligence, Wisdom, and Charisma scores. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "hide-of-the-feral-guardian-awakened"
+  },
+  {
+    "name": "Hide of the Feral Guardian (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Light Armor",
+    "typeCode": "LA",
+    "weight": 13,
+    "bonusAc": 1,
+    "bonusWeapon": 1,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "studded-leather-armor",
+    "spells": [
+      "polymorph-2014"
+    ],
+    "description": "It is believed that this polished and beautifully detailed leather armor was a gift from Melora, bestowed on a long-forgotten archdruid and champion of the natural world before the terrors of the Calamity.\nWhile wearing the armor in its dormant state, you gain the following benefits:\nThe armor grants you a +1 bonus to AC.\nWhile you are transformed by an effect that replaces any of your game statistics with those of another creature, you have a +1 bonus to melee attack and damage rolls, and you retain the benefits of this armor.\nAs an action, you can use the armor to cast polymorph on yourself, transforming into a giant owl while retaining your Intelligence, Wisdom, and Charisma scores. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "hide-of-the-feral-guardian-dormant"
+  },
+  {
+    "name": "Hide of the Feral Guardian (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Light Armor",
+    "typeCode": "LA",
+    "weight": 13,
+    "bonusAc": 3,
+    "bonusWeapon": 3,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "studded-leather-armor",
+    "spells": [
+      "polymorph-2014"
+    ],
+    "description": "It is believed that this polished and beautifully detailed leather armor was a gift from Melora, bestowed on a long-forgotten archdruid and champion of the natural world before the terrors of the Calamity.\nWhen the armor reaches an awakened state, it gains the following properties:\nThe AC bonus of the armor increases to +2.\nWhile you are transformed by an effect that replaces any of your game statistics with those of another creature, your bonus to melee attack and damage rolls increases by 1 (to +2).\nWhen you cast the polymorph spell using this armor, you can transform into a cave bear.\nWhen the armor reaches an exalted state, it gains the following properties:\nThe AC bonus of the armor increases to +3.\nWhile you are transformed by an effect that replaces any of your game statistics with those of another creature, your bonus to melee attack and damage rolls increases by 1 (to +3).\nWhen you cast the polymorph spell using this armor, you can transform into a guardian wolf.\nWhile wearing the armor in its dormant state, you gain the following benefits:\nThe armor grants you a +1 bonus to AC.\nWhile you are transformed by an effect that replaces any of your game statistics with those of another creature, you have a +1 bonus to melee attack and damage rolls, and you retain the benefits of this armor.\nAs an action, you can use the armor to cast polymorph on yourself, transforming into a giant owl while retaining your Intelligence, Wisdom, and Charisma scores. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "hide-of-the-feral-guardian-exalted"
+  },
+  {
+    "name": "Hunter's Coat",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": true,
+    "itemType": "Light Armor",
+    "typeCode": "LA",
+    "weight": 10,
+    "charges": 3,
+    "recharge": "dawn",
+    "rechargeAmount": "1d3",
+    "bonusAc": 1,
+    "baseItem": "leather-armor",
+    "description": "You have a +1 bonus to AC while wearing this armor.\nThe coat has 3 charges. When you hit a creature with an attack and that creature doesn't have all its hit points, you can expend 1 charge to deal an extra 1d10 necrotic damage to the target. The coat regains 1d3 expended charges daily at dawn.\nThe breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "hunters-coat"
+  },
+  {
+    "name": "Infiltrator's Key (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "proficient": true,
+    "bonusWeapon": 2,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "alter-self-2014",
+      "invisibility-2014",
+      "knock-2014",
+      "pass-without-trace-2014"
+    ],
+    "description": "This mithral skeleton key was forged using the blood of twelve master thieves executed for trying to steal magic items during the Age of Arcanum.\nWhen the Infiltrator's Key reaches an awakened state, it gains the following properties:\nWhile holding the key, you can use a bonus action to transform the key into a magic dagger or back into a key. While the key is in the form of a dagger, you gain a +1 bonus to attack and damage rolls made with it, and it returns to your hand immediately after it is used to make a ranged attack.\nWhile holding the key, you can use an action to cast one of the following spells from it: alter self, invisibility, knock, or pass without trace. Once a spell has been cast using the key, it can't be used to cast that spell again until the next dawn.\nThe Infiltrator's Key grants the following benefits in its dormant state:\nThe key can be used as thieves' tools for the purpose of opening locks. When using the key, you are considered proficient in thieves' tools and you have advantage on ability checks made to open locks.\nWhile holding the key, your steps are muffled, giving you advantage on Dexterity (Stealth) checks made to move silently.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "infiltrators-key-awakened"
+  },
+  {
+    "name": "Infiltrator's Key (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "proficient": true,
+    "bonusWeapon": 1,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "This mithral skeleton key was forged using the blood of twelve master thieves executed for trying to steal magic items during the Age of Arcanum.\nThe Infiltrator's Key grants the following benefits in its dormant state:\nThe key can be used as thieves' tools for the purpose of opening locks. When using the key, you are considered proficient in thieves' tools and you have advantage on ability checks made to open locks.\nWhile holding the key, your steps are muffled, giving you advantage on Dexterity (Stealth) checks made to move silently.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "infiltrators-key-dormant"
+  },
+  {
+    "name": "Infiltrator's Key (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "proficient": true,
+    "bonusWeapon": 3,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "alter-self-2014",
+      "dimension-door-2014",
+      "gaseous-form-2014",
+      "invisibility-2014",
+      "knock-2014",
+      "mislead-2014",
+      "pass-without-trace-2014"
+    ],
+    "description": "This mithral skeleton key was forged using the blood of twelve master thieves executed for trying to steal magic items during the Age of Arcanum.\nWhen the Infiltrator's Key reaches an awakened state, it gains the following properties:\nWhile holding the key, you can use a bonus action to transform the key into a magic dagger or back into a key. While the key is in the form of a dagger, you gain a +1 bonus to attack and damage rolls made with it, and it returns to your hand immediately after it is used to make a ranged attack.\nWhile holding the key, you can use an action to cast one of the following spells from it: alter self, invisibility, knock, or pass without trace. Once a spell has been cast using the key, it can't be used to cast that spell again until the next dawn.\nWhen the Infiltrator's Key reaches an exalted state, it gains the following properties:\nAs a bonus action, you can touch the key to a floor, wall, or ceiling that is no more than 5 feet thick and cause a magical opening to appear in the surface. When you create the opening, you choose its length and width, up to 10 feet for each dimension. The opening lasts until the key passes through it to the other side, at which point it disappears (if a creature is in the opening when the doorway closes, the creature is safely shunted to the nearest unoccupied space). The key can't be used to create another opening until the next dawn.\nWhile holding the key, you can use an action to cast one of the following spells from it: dimension door, gaseous form, or mislead. Once a spell has been cast using the key, it can't be used to cast that spell again until the next dawn.\nThe Infiltrator's Key grants the following benefits in its dormant state:\nThe key can be used as thieves' tools for the purpose of opening locks. When using the key, you are considered proficient in thieves' tools and you have advantage on ability checks made to open locks.\nWhile holding the key, your steps are muffled, giving you advantage on Dexterity (Stealth) checks made to move silently.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "infiltrators-key-exalted"
+  },
+  {
+    "name": "Lash of Shadows (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 3,
+    "bonusWeapon": 2,
+    "properties": [
+      "Finesse",
+      "Reach",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "whip",
+    "description": "This snakeskin whip is touched by the power of Zehir and ends in five animated serpent heads.\nThe Lash of Shadows is a sentient chaotic evil weapon with an Intelligence of 18, a Wisdom of 16, and a Charisma of 20. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Draconic.\nA mad marilith named Sizlifeth lives within the Lash of Shadows. The weapon has a short temper and experiences only extreme emotions. It is most happy when dealing harm.\nThe whip grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Draconic.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nYou can attempt to poison any creature that is hit by the whip. The creature must succeed on a DC 13 Constitution saving throw or suffer the effect of one of the following poisons of your choice; once a poison other than Serpent Venom has been used, that poison can't be used again until the next dawn:\nDead Eyes: A creature that fails the saving throw against this poison is poisoned for 1 hour. While poisoned in this way, the creature is blinded.\nSerpent Venom: A creature that fails the saving throw against this poison takes 3d6 poison damage, or half as much damage on a successful save.\nWhen the whip reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for the weapon's poisons increases to 15.\nThe weapon gains a new poison option called Ghoul's Blood. A creature that fails the saving throw against this poison is poisoned for 1 minute. While poisoned in this way, the creature is paralyzed. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "lash-of-shadows-awakened"
+  },
+  {
+    "name": "Lash of Shadows (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 3,
+    "bonusWeapon": 1,
+    "properties": [
+      "Finesse",
+      "Reach",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "whip",
+    "description": "This snakeskin whip is touched by the power of Zehir and ends in five animated serpent heads.\nThe Lash of Shadows is a sentient chaotic evil weapon with an Intelligence of 18, a Wisdom of 16, and a Charisma of 20. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Draconic.\nA mad marilith named Sizlifeth lives within the Lash of Shadows. The weapon has a short temper and experiences only extreme emotions. It is most happy when dealing harm.\nThe whip grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Draconic.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nYou can attempt to poison any creature that is hit by the whip. The creature must succeed on a DC 13 Constitution saving throw or suffer the effect of one of the following poisons of your choice; once a poison other than Serpent Venom has been used, that poison can't be used again until the next dawn:\nDead Eyes: A creature that fails the saving throw against this poison is poisoned for 1 hour. While poisoned in this way, the creature is blinded.\nSerpent Venom: A creature that fails the saving throw against this poison takes 3d6 poison damage, or half as much damage on a successful save.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "lash-of-shadows-dormant"
+  },
+  {
+    "name": "Lash of Shadows (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 3,
+    "bonusWeapon": 3,
+    "properties": [
+      "Finesse",
+      "Reach",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "whip",
+    "description": "This snakeskin whip is touched by the power of Zehir and ends in five animated serpent heads.\nThe Lash of Shadows is a sentient chaotic evil weapon with an Intelligence of 18, a Wisdom of 16, and a Charisma of 20. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Draconic.\nA mad marilith named Sizlifeth lives within the Lash of Shadows. The weapon has a short temper and experiences only extreme emotions. It is most happy when dealing harm.\nThe whip grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Draconic.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nYou can attempt to poison any creature that is hit by the whip. The creature must succeed on a DC 13 Constitution saving throw or suffer the effect of one of the following poisons of your choice; once a poison other than Serpent Venom has been used, that poison can't be used again until the next dawn:\nDead Eyes: A creature that fails the saving throw against this poison is poisoned for 1 hour. While poisoned in this way, the creature is blinded.\nSerpent Venom: A creature that fails the saving throw against this poison takes 3d6 poison damage, or half as much damage on a successful save.\nWhen the whip reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for the weapon's poisons increases to 15.\nThe weapon gains a new poison option called Ghoul's Blood. A creature that fails the saving throw against this poison is poisoned for 1 minute. While poisoned in this way, the creature is paralyzed. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nWhen the whip reaches an exalted state, it gains the following additional properties:\nThe weapon's bonus to attack and damage rolls increases to +3.\nThe saving throw DC for the weapon's poisons increases to 17.\nThe weapon gains a new poison option called Cockatrice Tears. A creature that fails the saving throw against this poison begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified for 24 hours.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "lash-of-shadows-exalted"
+  },
+  {
+    "name": "Luxon Beacon",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This dodecahedron of faintly glowing crystal is heavier than it appears. A set of handles are affixed to its sides, and it pulsates and thrums when touched.\nA creature that touches the beacon and concentrates for 1 minute receives a Fragment of Possibility, which looks like a Tiny, grayish bead of energy that follows the creature around, staying within 1 foot of it at all times. The fragment lasts for 8 hours or until used. Once the beacon grants a Fragment of Possibility, it can't grant another until the next dawn. A creature with a Fragment of Possibility from a Luxon Beacon can't gain another Fragment of Possibility from any source.\nWhen a creature with a Fragment of Possibility makes an attack roll, an ability check, or a saving throw, it can expend its fragment to roll an additional d20 and choose which of the d20s to use. Alternatively, when an attack roll is made against the creature, it can expend its fragment to roll a d20 and choose which of the d20s to use, the one it rolled or the one the attacker rolled.\nIf the original d20 roll has advantage or disadvantage, the creature rolls its d20 after advantage or disadvantage has been applied to the original roll.\nIf a follower of the Luxon who has undergone a ritual of consecution dies within 100 miles of a Luxon Beacon, their soul is ensnared by it. This soul will be reincarnated within the body of a random humanoid baby developing within 100 miles of the beacon.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "luxon-beacon"
+  },
+  {
+    "name": "Mace of the Black Crown (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 4,
+    "bonusWeapon": 2,
+    "resist": [
+      "fire",
+      "poison"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "mace",
+    "description": "This mace has a haft of black iron and a ruby head with a fiendish countenance. Carrying the boon of Asmodeus, it is fit for the most powerful servants of the Nine Hells.\nThe Mace of the Black Crown is a sentient lawful evil weapon with an Intelligence of 20, a Wisdom of 12, and a Charisma of 18. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common and Infernal.\nA greedy erinyes named Xartaza lives within the Mace of the Black Crown. Xartaza wants to recruit more souls for Asmodeus, so the weapon pushes its wielder toward lawful evil actions by manipulating the wielder's dreams. A former Blood War general, Xartaza hates demons and relishes crafting sound battle plans in any conflict.\nThe mace grants the following benefits in its dormant state:\nYou can speak, read, and write Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nWhile holding the mace, you can use a bonus action to speak its Infernal command word, causing flames to erupt from the head. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the mace is ablaze, it deals an extra 1d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you are no longer holding the mace.\nWhile holding the mace, you can use an action to summon an imp. Any devil you summon with this mace is friendly to you and your companions for the duration. The imp obeys any verbal commands that you issue to it and returns to the Nine Hells 10 minutes after you summoned it. This property can't be used again until the next dawn.\nWhen the mace reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2, and the extra fire damage dealt by the weapon when it is ignited increases to 2d6.\nThe weapon's Summon Devil feature can also be used to summon a bearded devil.\nYou have resistance to poison damage while holding this weapon.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "mace-of-the-black-crown-awakened"
+  },
+  {
+    "name": "Mace of the Black Crown (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 4,
+    "bonusWeapon": 1,
+    "resist": [
+      "fire",
+      "poison"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "mace",
+    "description": "This mace has a haft of black iron and a ruby head with a fiendish countenance. Carrying the boon of Asmodeus, it is fit for the most powerful servants of the Nine Hells.\nThe Mace of the Black Crown is a sentient lawful evil weapon with an Intelligence of 20, a Wisdom of 12, and a Charisma of 18. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common and Infernal.\nA greedy erinyes named Xartaza lives within the Mace of the Black Crown. Xartaza wants to recruit more souls for Asmodeus, so the weapon pushes its wielder toward lawful evil actions by manipulating the wielder's dreams. A former Blood War general, Xartaza hates demons and relishes crafting sound battle plans in any conflict.\nThe mace grants the following benefits in its dormant state:\nYou can speak, read, and write Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nWhile holding the mace, you can use a bonus action to speak its Infernal command word, causing flames to erupt from the head. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the mace is ablaze, it deals an extra 1d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you are no longer holding the mace.\nWhile holding the mace, you can use an action to summon an imp. Any devil you summon with this mace is friendly to you and your companions for the duration. The imp obeys any verbal commands that you issue to it and returns to the Nine Hells 10 minutes after you summoned it. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "mace-of-the-black-crown-dormant"
+  },
+  {
+    "name": "Mace of the Black Crown (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 4,
+    "bonusWeapon": 3,
+    "resist": [
+      "fire",
+      "poison"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "mace",
+    "description": "This mace has a haft of black iron and a ruby head with a fiendish countenance. Carrying the boon of Asmodeus, it is fit for the most powerful servants of the Nine Hells.\nThe Mace of the Black Crown is a sentient lawful evil weapon with an Intelligence of 20, a Wisdom of 12, and a Charisma of 18. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common and Infernal.\nA greedy erinyes named Xartaza lives within the Mace of the Black Crown. Xartaza wants to recruit more souls for Asmodeus, so the weapon pushes its wielder toward lawful evil actions by manipulating the wielder's dreams. A former Blood War general, Xartaza hates demons and relishes crafting sound battle plans in any conflict.\nThe mace grants the following benefits in its dormant state:\nYou can speak, read, and write Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nWhile holding the mace, you can use a bonus action to speak its Infernal command word, causing flames to erupt from the head. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the mace is ablaze, it deals an extra 1d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you are no longer holding the mace.\nWhile holding the mace, you can use an action to summon an imp. Any devil you summon with this mace is friendly to you and your companions for the duration. The imp obeys any verbal commands that you issue to it and returns to the Nine Hells 10 minutes after you summoned it. This property can't be used again until the next dawn.\nWhen the mace reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2, and the extra fire damage dealt by the weapon when it is ignited increases to 2d6.\nThe weapon's Summon Devil feature can also be used to summon a bearded devil.\nYou have resistance to poison damage while holding this weapon.\nWhen the mace reaches an exalted state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +3, and the extra fire damage dealt by the weapon when it is ignited increases to 3d6. Fire damage dealt by the mace ignores resistance to fire damage.\nThe weapon's Summon Devil feature can also be used to summon a barbed devil.\nYou have resistance to fire damage while you hold this weapon.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "mace-of-the-black-crown-exalted"
+  },
+  {
+    "name": "Needle of Mending",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "rare",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "weight": 1,
+    "bonusWeapon": 1,
+    "properties": [
+      "Finesse",
+      "Light",
+      "Thrown"
+    ],
+    "baseItem": "dagger",
+    "spells": [
+      "mending-2014"
+    ],
+    "description": "This weapon is a magic dagger disguised as a sewing needle. When you hold it and use a bonus action to speak its command word, it transforms into a dagger or back into a needle.\nYou gain a +1 bonus to attack and damage rolls made with the dagger. While holding it, you can use an action to cast the mending cantrip from it.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "needle-of-mending"
+  },
+  {
+    "name": "Nightfall Pearl",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "Used to summon night, this 6-inch-diameter, jet-black orb is cold to the touch. You can spend 10 minutes to activate it, causing the area within 10 miles of it at the moment of activation to become night even if it is daytime. This night lasts for 24 hours, until you cancel it as an action, or until your attunement to the pearl ends. Once used, the pearl can't be used again for 24 hours.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "nightfall-pearl"
+  },
+  {
+    "name": "Orb of the Veil",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "cursed": true,
+    "weight": 3,
+    "abilityBonus": {
+      "WIS": 2
+    },
+    "description": "This onyx sphere bears deep, spiraling grooves and dangles from an iron chain. While the orb is on your person, you gain the following benefits:\nYour Wisdom score increases by 2, as does your maximum for that score.\nYou gain darkvision out to a range of 60 feet. If you already have darkvision, the orb increases its range by 60 feet.\nYou have advantage on Wisdom checks to find hidden doors and paths.\nThe orb is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the orb, keeping it on your person at all times. All nonmagical flames within 30 feet of you automatically extinguish, and fire damage dealt by you is halved.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "orb-of-the-veil"
+  },
+  {
+    "name": "Potion of Maximum Power",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "rare",
+    "attunement": false,
+    "itemType": "Potion",
+    "typeCode": "P",
+    "description": "The first time you cast a damage-dealing spell of 4th level or lower within 1 minute after drinking the potion, instead of rolling dice to determine the damage dealt, you can instead use the highest number possible for each die.\nThis glowing purple liquid smells of sugar and plum, but it has a muddy taste.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "potion-of-maximum-power"
+  },
+  {
+    "name": "Potion of Possibility",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": false,
+    "itemType": "Potion",
+    "typeCode": "P",
+    "description": "When you drink this clear potion, you gain two Fragments of Possibility, each of which looks like a Tiny, grayish bead of energy that follows you around, staying within 1 foot of you at all times. Each fragment lasts for 8 hours or until used.\nWhen you make an attack roll, an ability check, or a saving throw, you can expend your fragment to roll an additional d20 and choose which of the d20s to use. Alternatively, when an attack roll is made against you, you can expend your fragment to roll a d20 and choose which of the d20s to use, the one you rolled or the one the attacker rolled.\nIf the original d20 roll has advantage or disadvantage, you roll your d20 after advantage or disadvantage has been applied to the original roll.\nWhile you have one or more Fragments of Possibility from this potion, you can't gain another Fragment of Possibility from any source.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "potion-of-possibility"
+  },
+  {
+    "name": "Reincarnation Dust",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "spells": [
+      "reincarnate-2014"
+    ],
+    "description": "When this small pouch of purple dust is sprinkled on a dead humanoid or a piece of a dead humanoid, the dust is absorbed by the remains. If willing, the dead creature returns to life with a new body as if the reincarnate spell had been cast on the remains.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "reincarnation-dust"
+  },
+  {
+    "name": "Ring of Obscuring",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Ring",
+    "typeCode": "RG",
+    "charges": 3,
+    "recharge": "dawn",
+    "rechargeAmount": "1d3",
+    "spells": [
+      "fog-cloud-2014"
+    ],
+    "description": "This band of iron resembles a skull and is cold to the touch. It has 3 charges and regains 1d3 expended charges daily at dawn. As an action while wearing the ring, you can expend 1 of its charges to cast the fog cloud spell from it, with the following changes: the cloud is centered on you when it first appears, and the spell lasts for 1 minute (no concentration required).",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "ring-of-obscuring"
+  },
+  {
+    "name": "Ring of Temporal Salvation",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "rare",
+    "attunement": true,
+    "itemType": "Ring",
+    "typeCode": "RG",
+    "description": "If you die while wearing this gray crystal ring, you vanish and reappear in an unoccupied space within 5 feet of the space you left (or the nearest unoccupied space). You have a number of hit points equal to 3d6 + your Constitution modifier. If your hit point maximum is lower than the number of hit points you regain, your hit point maximum rises to a similar amount. If you have any levels of exhaustion, reduce your level of exhaustion by 1. Once the ring is used, it turns to dust and is destroyed.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "ring-of-temporal-salvation"
+  },
+  {
+    "name": "Rod of Retribution",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Rod",
+    "typeCode": "RD",
+    "weight": 2,
+    "charges": 3,
+    "recharge": "dawn",
+    "rechargeAmount": "3",
+    "description": "This adamantine rod is tipped with a glowing crystalline eye. The rod has 3 charges and regains all its expended charges daily at dawn.\nWhen a creature you can see within 60 feet of you damages you while you are holding this rod, you can use your reaction to expend 1 of the rod's charges to force the creature to make a DC 13 Dexterity saving throw. The creature takes 2d10 lightning damage on a failed save, or half as much damage on a successful one.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "rod-of-retribution"
+  },
+  {
+    "name": "Ruin's Wake (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 3,
+    "bonusWeapon": 2,
+    "properties": [
+      "Thrown",
+      "Versatile",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "spear",
+    "description": "This spear is made from the ivory bone of an ancient gold dragon and carved with an Orc hymn to Gruumsh.\nRuin's Wake is a sentient chaotic evil weapon with an Intelligence of 20, a Wisdom of 16, and a Charisma of 22. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Orc.\nA slaughter-loving balor named Yarrowish lives within Ruin's Wake. The weapon desires only to draw blood and pushes its wielder to solve problems with violence.\nThe spear grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Orc.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon, and it deals an extra 1d8 piercing damage to any target it hits. Immediately after you make a ranged attack with this weapon, it flies back to your hand.\nAs a reaction when you are hit by a melee attack, you can make a melee attack with Ruin's Wake with advantage against the attacker. You can't use this property again until you finish a short or long rest.\nWhen the spear reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2, and the extra piercing damage dealt by the weapon increases to 2d8.\nWhen you hurl the spear and speak a command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a creature you can see within 120 feet of you. Each creature in the line, excluding you, must make a DC 15 Dexterity saving throw, taking 8d6 lightning damage on a failed save, or half as much damage on a successful one. Ruin's Wake then returns to your hand. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "ruins-wake-awakened"
+  },
+  {
+    "name": "Ruin's Wake (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 3,
+    "bonusWeapon": 1,
+    "properties": [
+      "Thrown",
+      "Versatile",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "spear",
+    "description": "This spear is made from the ivory bone of an ancient gold dragon and carved with an Orc hymn to Gruumsh.\nRuin's Wake is a sentient chaotic evil weapon with an Intelligence of 20, a Wisdom of 16, and a Charisma of 22. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Orc.\nA slaughter-loving balor named Yarrowish lives within Ruin's Wake. The weapon desires only to draw blood and pushes its wielder to solve problems with violence.\nThe spear grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Orc.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon, and it deals an extra 1d8 piercing damage to any target it hits. Immediately after you make a ranged attack with this weapon, it flies back to your hand.\nAs a reaction when you are hit by a melee attack, you can make a melee attack with Ruin's Wake with advantage against the attacker. You can't use this property again until you finish a short or long rest.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "ruins-wake-dormant"
+  },
+  {
+    "name": "Ruin's Wake (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 3,
+    "bonusWeapon": 3,
+    "properties": [
+      "Thrown",
+      "Versatile",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "spear",
+    "description": "This spear is made from the ivory bone of an ancient gold dragon and carved with an Orc hymn to Gruumsh.\nRuin's Wake is a sentient chaotic evil weapon with an Intelligence of 20, a Wisdom of 16, and a Charisma of 22. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, and Orc.\nA slaughter-loving balor named Yarrowish lives within Ruin's Wake. The weapon desires only to draw blood and pushes its wielder to solve problems with violence.\nThe spear grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal and Orc.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon, and it deals an extra 1d8 piercing damage to any target it hits. Immediately after you make a ranged attack with this weapon, it flies back to your hand.\nAs a reaction when you are hit by a melee attack, you can make a melee attack with Ruin's Wake with advantage against the attacker. You can't use this property again until you finish a short or long rest.\nWhen the spear reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2, and the extra piercing damage dealt by the weapon increases to 2d8.\nWhen you hurl the spear and speak a command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a creature you can see within 120 feet of you. Each creature in the line, excluding you, must make a DC 15 Dexterity saving throw, taking 8d6 lightning damage on a failed save, or half as much damage on a successful one. Ruin's Wake then returns to your hand. This property can't be used again until the next dawn.\nWhen the spear reaches an exalted state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +3.\nWhile holding the spear, you can let out a battle cry as a bonus action. Each creature you choose within 30 feet of you gains advantage on attack rolls until the start of your next turn. This property can't be used again until the next dawn.\nWhen you reduce a creature to 0 hit points with an attack from the spear, you can regain hit points equal to the damage you dealt with the attack. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "ruins-wake-exalted"
+  },
+  {
+    "name": "Silken Spite (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 2,
+    "movement": {
+      "equalToWalk": [
+        "climb"
+      ]
+    },
+    "properties": [
+      "Finesse",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "rapier",
+    "spells": [
+      "cloudkill-2014",
+      "darkness-2014",
+      "levitate-2014",
+      "web-2014"
+    ],
+    "description": "The blade of this rapier is made of spider silk. Its onyx pommel is tipped with a ruby cut in the shape of a spider, and the blade carries the blessing of Lolth.\nSilken Spite is a sentient chaotic evil weapon with an Intelligence of 13, a Wisdom of 15, and a Charisma of 15. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, Elvish, and Undercommon.\nA murderous yochlol named Sinnafex lives within Silken Spite. The weapon speaks in whispers, pushing its wielder to trust no one and to kill those who cause the slightest personal offense.\nThe rapier grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal, Elvish, and Undercommon.\nYou have darkvision out to a range of 60 feet. If you already have darkvision, being attuned to the rapier increases the range of your darkvision by 60 feet.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nYou can use an action to cause poison to coat the rapier's blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 13 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the creature is also unconscious while poisoned in this way. The creature wakes up if it takes damage or if another creature uses its action to shake the creature awake.\nWhile carrying the rapier, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. Additionally, you can't be caught in webs of any sort and can move through webs as if they were difficult terrain.\nThe rapier grants the following benefits in its awakened state:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for the weapon's poison increases to 15.\nWhile holding the rapier, you can use an action to cast one of the following spells from it (save DC 15): cloudkill, darkness, levitate, or web. Once a spell has been cast using the rapier, that spell can't be cast from the rapier again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "silken-spite-awakened"
+  },
+  {
+    "name": "Silken Spite (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 1,
+    "movement": {
+      "equalToWalk": [
+        "climb"
+      ]
+    },
+    "properties": [
+      "Finesse",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "rapier",
+    "description": "The blade of this rapier is made of spider silk. Its onyx pommel is tipped with a ruby cut in the shape of a spider, and the blade carries the blessing of Lolth.\nSilken Spite is a sentient chaotic evil weapon with an Intelligence of 13, a Wisdom of 15, and a Charisma of 15. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, Elvish, and Undercommon.\nA murderous yochlol named Sinnafex lives within Silken Spite. The weapon speaks in whispers, pushing its wielder to trust no one and to kill those who cause the slightest personal offense.\nThe rapier grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal, Elvish, and Undercommon.\nYou have darkvision out to a range of 60 feet. If you already have darkvision, being attuned to the rapier increases the range of your darkvision by 60 feet.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nYou can use an action to cause poison to coat the rapier's blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 13 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the creature is also unconscious while poisoned in this way. The creature wakes up if it takes damage or if another creature uses its action to shake the creature awake.\nWhile carrying the rapier, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. Additionally, you can't be caught in webs of any sort and can move through webs as if they were difficult terrain.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "silken-spite-dormant"
+  },
+  {
+    "name": "Silken Spite (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 3,
+    "movement": {
+      "equalToWalk": [
+        "climb"
+      ]
+    },
+    "properties": [
+      "Finesse",
+      "Vestige of Divergence"
+    ],
+    "baseItem": "rapier",
+    "spells": [
+      "cloudkill-2014",
+      "darkness-2014",
+      "levitate-2014",
+      "web-2014"
+    ],
+    "description": "The blade of this rapier is made of spider silk. Its onyx pommel is tipped with a ruby cut in the shape of a spider, and the blade carries the blessing of Lolth.\nSilken Spite is a sentient chaotic evil weapon with an Intelligence of 13, a Wisdom of 15, and a Charisma of 15. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Abyssal, Common, Elvish, and Undercommon.\nA murderous yochlol named Sinnafex lives within Silken Spite. The weapon speaks in whispers, pushing its wielder to trust no one and to kill those who cause the slightest personal offense.\nThe rapier grants the following benefits in its dormant state:\nYou can speak, read, and write Abyssal, Elvish, and Undercommon.\nYou have darkvision out to a range of 60 feet. If you already have darkvision, being attuned to the rapier increases the range of your darkvision by 60 feet.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nYou can use an action to cause poison to coat the rapier's blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 13 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the creature is also unconscious while poisoned in this way. The creature wakes up if it takes damage or if another creature uses its action to shake the creature awake.\nWhile carrying the rapier, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. Additionally, you can't be caught in webs of any sort and can move through webs as if they were difficult terrain.\nThe rapier grants the following benefits in its awakened state:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for the weapon's poison increases to 15.\nWhile holding the rapier, you can use an action to cast one of the following spells from it (save DC 15): cloudkill, darkness, levitate, or web. Once a spell has been cast using the rapier, that spell can't be cast from the rapier again until the next dawn.\nThe rapier grants the following benefits in its exalted state:\nThe weapon's bonus to attack and damage rolls increases to +3.\nThe saving throw DC for the weapon's poison and spells cast from the weapon increases to 17.\nMagical darkness doesn't impede your darkvision.\nWhile holding the weapon in dim light or darkness, you can use a bonus action to teleport up to 60 feet to an unoccupied space you can see that is also in dim light or darkness. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "silken-spite-exalted"
+  },
+  {
+    "name": "Spell Bottle",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This glass bottle can store one spell of up to 5th level at a time. When found, roll a d6 and subtract 1; the total determines the level of spell in the bottle (the DM chooses the spell, and 0 means the bottle is empty). A swirling blue vapor fills the bottle while it contains a spell.\nWhen the bottle is empty, any creature can cast a spell of 1st through 5th level into it by touching it while casting. The spell has no effect other than to be stored in the bottle.\nWhile holding the bottle, you can cast the spell stored in it. The spell uses the slot level, spell save DC, spell attack bonus, and spellcasting ability of the original caster, but is otherwise treated as if you cast the spell. The bottle becomes empty once the spell is cast.\nIf you're holding the empty bottle when you see a creature casting a spell within 60 feet of you, you can open the bottle as a reaction in an attempt to interrupt the spell. If the creature is casting a spell of 3rd level or lower, the spell has no effect, and it is stored in the bottle. If it is casting a spell of 4th level or higher, make an Intelligence check. The DC equals 10 + the spell's level. On a success, the spell has no effect, and it is stored in the bottle.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "spell-bottle"
+  },
+  {
+    "name": "Staff of Dunamancy",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "very rare",
+    "attunement": true,
+    "itemType": "Staff",
+    "attunementRequirement": "by a wizard",
+    "staff": true,
+    "weight": 4,
+    "charges": 10,
+    "recharge": "dawn",
+    "rechargeAmount": "1d6 + 4",
+    "properties": [
+      "Versatile"
+    ],
+    "spells": [
+      "fortunes-favor",
+      "pulse-wave",
+      "gravity-sinkhole"
+    ],
+    "description": "This staff of polished gray wood bears numerous runes carved along its length. The staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns into dust and is destroyed.\nWhile holding the staff, you can use an action to expend 2 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: fortune's favor (2 charges), pulse wave (3 charges), or gravity sinkhole (4 charges).\nIf you are holding the staff and fail a saving throw against a spell that targets only you, you can turn your failed save into a successful one. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "staff-of-dunamancy"
+  },
+  {
+    "name": "Staff of the Ivory Claw",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "rare",
+    "attunement": true,
+    "itemType": "Staff",
+    "attunementRequirement": "by a spellcaster",
+    "staff": true,
+    "weight": 4,
+    "bonusSpellAttack": 1,
+    "properties": [
+      "Versatile"
+    ],
+    "description": "This gray-and-cerulean staff is topped with a small dragon claw carved from ivory. While holding the staff, you gain a +1 bonus to spell attack rolls. Whenever you score a critical hit with a spell attack, the target takes an extra 3d6 radiant damage.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "staff-of-the-ivory-claw"
+  },
+  {
+    "name": "Stormgirdle (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "abilityScoreSet": {
+      "STR": 21
+    },
+    "resist": [
+      "lightning",
+      "thunder"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "A Stormgirdle is a wide belt made of thick leather branded with the symbol of Kord. The girdle's clasps are made from dragon ivory.\nWhile wearing the Stormgirdle in its awakened state, you gain the following benefits:\nYour Strength score becomes 23 if it isn't already 23 or higher.\nYour Storm Avatar's lightning strike deals 4d6 lightning damage (instead of 3d6).\nWhile transformed into a Storm Avatar, you gain a flying speed of 30 feet and can hover.\nWhile wearing the Stormgirdle in its dormant state, you have resistance to lightning damage and thunder damage, and your Strength score becomes 21 if it isn't already 21 or higher. In addition, you can use an action to become a Storm Avatar for 1 minute, gaining the following benefits for the duration:\nYou have immunity to lightning damage and thunder damage.\nWhen you hit with a weapon attack that normally deals bludgeoning damage, it deals thunder damage instead. When you hit with a weapon attack that normally deals piercing or slashing damage, it deals lightning damage instead.\nAs a bonus action, you can choose one creature you can see within 30 feet of you to be struck by lightning. The target must make a DC 15 Dexterity saving throw, taking 3d6 lightning damage on a failed save, or half as much damage on a successful one.\nOnce you use the girdle's Storm Avatar property, that property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "stormgirdle-awakened"
+  },
+  {
+    "name": "Stormgirdle (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "abilityScoreSet": {
+      "STR": 21
+    },
+    "resist": [
+      "lightning",
+      "thunder"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "description": "A Stormgirdle is a wide belt made of thick leather branded with the symbol of Kord. The girdle's clasps are made from dragon ivory.\nWhile wearing the Stormgirdle in its dormant state, you have resistance to lightning damage and thunder damage, and your Strength score becomes 21 if it isn't already 21 or higher. In addition, you can use an action to become a Storm Avatar for 1 minute, gaining the following benefits for the duration:\nYou have immunity to lightning damage and thunder damage.\nWhen you hit with a weapon attack that normally deals bludgeoning damage, it deals thunder damage instead. When you hit with a weapon attack that normally deals piercing or slashing damage, it deals lightning damage instead.\nAs a bonus action, you can choose one creature you can see within 30 feet of you to be struck by lightning. The target must make a DC 15 Dexterity saving throw, taking 3d6 lightning damage on a failed save, or half as much damage on a successful one.\nOnce you use the girdle's Storm Avatar property, that property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "stormgirdle-dormant"
+  },
+  {
+    "name": "Stormgirdle (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "abilityScoreSet": {
+      "STR": 21
+    },
+    "resist": [
+      "lightning",
+      "thunder"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "control-weather-2014"
+    ],
+    "description": "A Stormgirdle is a wide belt made of thick leather branded with the symbol of Kord. The girdle's clasps are made from dragon ivory.\nWhile wearing the Stormgirdle in its awakened state, you gain the following benefits:\nYour Strength score becomes 23 if it isn't already 23 or higher.\nYour Storm Avatar's lightning strike deals 4d6 lightning damage (instead of 3d6).\nWhile transformed into a Storm Avatar, you gain a flying speed of 30 feet and can hover.\nWhile wearing the Stormgirdle in its exalted state, you gain the following benefits:\nYour Strength score becomes 25 if it isn't already 25 or higher.\nYour Storm Avatar's lightning strike deals 5d6 lightning damage (instead of 3d6).\nYou can cast the control weather spell from the girdle. This property can't be used again until the next dawn.\nWhile wearing the Stormgirdle in its dormant state, you have resistance to lightning damage and thunder damage, and your Strength score becomes 21 if it isn't already 21 or higher. In addition, you can use an action to become a Storm Avatar for 1 minute, gaining the following benefits for the duration:\nYou have immunity to lightning damage and thunder damage.\nWhen you hit with a weapon attack that normally deals bludgeoning damage, it deals thunder damage instead. When you hit with a weapon attack that normally deals piercing or slashing damage, it deals lightning damage instead.\nAs a bonus action, you can choose one creature you can see within 30 feet of you to be struck by lightning. The target must make a DC 15 Dexterity saving throw, taking 3d6 lightning damage on a failed save, or half as much damage on a successful one.\nOnce you use the girdle's Storm Avatar property, that property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "stormgirdle-exalted"
+  },
+  {
+    "name": "The Bloody End (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 4,
+    "bonusWeapon": 2,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "morningstar",
+    "spells": [
+      "charm-person-2014",
+      "dominate-person-2014",
+      "fear-2014"
+    ],
+    "description": "Carrying the power of Bane, this adamantine morningstar sports foot-long spikes and has a jagged blade on its pommel.\nThe Bloody End is a sentient lawful evil weapon with an Intelligence of 22, a Wisdom of 18, and a Charisma of 24. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common and Infernal.\nA tyrannical pit fiend named Izeelzee lives within The Bloody End. The weapon boisterously pushes its wielder to subjugate others and to never back down from a challenge. If the wielder doesn't demand fealty from others, the weapon is happy to demand it on their behalf.\nThe morningstar grants the following benefits in its dormant state:\nYou can speak, read, and write Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nWhile holding the morningstar, you can use an action to cast one of the following spells from it (save DC 13): charm person, dominate person, or fear. Once a spell has been cast using the morningstar, that spell can't be cast from it again until the next dawn.\nWhile holding the morningstar, you have advantage on Charisma (Intimidation) checks.\nWhen the morningstar reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for spells cast from the morningstar increases to 15.\nWhen you reduce a creature to 0 hit points with an attack using The Bloody End, you can cause the following effect: each creature of your choice within 15 feet of you must succeed on a DC 15 Wisdom saving throw or be frightened of you until the end of your next turn. This property can't be used again until the next dawn.\nWhen a creature hits you with a melee attack, you can use your reaction to deal 1d6 psychic damage to the attacker.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "the-bloody-end-awakened"
+  },
+  {
+    "name": "The Bloody End (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 4,
+    "bonusWeapon": 1,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "morningstar",
+    "spells": [
+      "charm-person-2014",
+      "dominate-person-2014",
+      "fear-2014"
+    ],
+    "description": "Carrying the power of Bane, this adamantine morningstar sports foot-long spikes and has a jagged blade on its pommel.\nThe Bloody End is a sentient lawful evil weapon with an Intelligence of 22, a Wisdom of 18, and a Charisma of 24. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common and Infernal.\nA tyrannical pit fiend named Izeelzee lives within The Bloody End. The weapon boisterously pushes its wielder to subjugate others and to never back down from a challenge. If the wielder doesn't demand fealty from others, the weapon is happy to demand it on their behalf.\nThe morningstar grants the following benefits in its dormant state:\nYou can speak, read, and write Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nWhile holding the morningstar, you can use an action to cast one of the following spells from it (save DC 13): charm person, dominate person, or fear. Once a spell has been cast using the morningstar, that spell can't be cast from it again until the next dawn.\nWhile holding the morningstar, you have advantage on Charisma (Intimidation) checks.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "the-bloody-end-dormant"
+  },
+  {
+    "name": "The Bloody End (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 4,
+    "bonusWeapon": 3,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "morningstar",
+    "spells": [
+      "charm-person-2014",
+      "dominate-person-2014",
+      "fear-2014"
+    ],
+    "description": "Carrying the power of Bane, this adamantine morningstar sports foot-long spikes and has a jagged blade on its pommel.\nThe Bloody End is a sentient lawful evil weapon with an Intelligence of 22, a Wisdom of 18, and a Charisma of 24. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common and Infernal.\nA tyrannical pit fiend named Izeelzee lives within The Bloody End. The weapon boisterously pushes its wielder to subjugate others and to never back down from a challenge. If the wielder doesn't demand fealty from others, the weapon is happy to demand it on their behalf.\nThe morningstar grants the following benefits in its dormant state:\nYou can speak, read, and write Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nWhile holding the morningstar, you can use an action to cast one of the following spells from it (save DC 13): charm person, dominate person, or fear. Once a spell has been cast using the morningstar, that spell can't be cast from it again until the next dawn.\nWhile holding the morningstar, you have advantage on Charisma (Intimidation) checks.\nWhen the morningstar reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for spells cast from the morningstar increases to 15.\nWhen you reduce a creature to 0 hit points with an attack using The Bloody End, you can cause the following effect: each creature of your choice within 15 feet of you must succeed on a DC 15 Wisdom saving throw or be frightened of you until the end of your next turn. This property can't be used again until the next dawn.\nWhen a creature hits you with a melee attack, you can use your reaction to deal 1d6 psychic damage to the attacker.\nWhen the morningstar reaches an exalted state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +3.\nAdd dominate monster to the list of spells that can be cast from the morningstar.\nThe saving throw DC for spells cast from the morningstar, as well as for creatures to avoid being frightened by it, increases to 17.\nWhen you use your reaction to deal psychic damage to a creature that hits you with a melee attack, the amount of psychic damage increases to 2d6.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "the-bloody-end-exalted"
+  },
+  {
+    "name": "Verminshroud (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "resist": [
+      "poison"
+    ],
+    "conditionImmune": [
+      "disease"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "insect-plague-2014",
+      "polymorph-2014"
+    ],
+    "description": "This patchy cloak was pieced together from the pelts of rats found feasting on the dead in Blightshore and is dotted with the bloated corpses of magically preserved insects along its seams.\nWhile wearing the Verminshroud in its awakened state, you gain the following benefits:\nYou have resistance to poison damage.\nYou can use an action to cast the insect plague spell (save DC 15) from the Verminshroud, requiring no material components. This property can't be used again until the next dawn.\nWhen you cast the polymorph spell using the Verminshroud, you can transform into a giant wasp.\nWhile wearing the Verminshroud in its dormant state, you gain the following benefits:\nYou have advantage on Wisdom (Perception) checks that rely on smell, you are immune to disease, and you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the cloak increases the range of your darkvision by 60 feet.\nAs an action, you can use the Verminshroud to cast polymorph on yourself, transforming into a giant rat or rat while retaining your Intelligence, Wisdom, and Charisma scores, as well as the properties of the cloak. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "verminshroud-awakened"
+  },
+  {
+    "name": "Verminshroud (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "conditionImmune": [
+      "disease"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "polymorph-2014"
+    ],
+    "description": "This patchy cloak was pieced together from the pelts of rats found feasting on the dead in Blightshore and is dotted with the bloated corpses of magically preserved insects along its seams.\nWhile wearing the Verminshroud in its dormant state, you gain the following benefits:\nYou have advantage on Wisdom (Perception) checks that rely on smell, you are immune to disease, and you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the cloak increases the range of your darkvision by 60 feet.\nAs an action, you can use the Verminshroud to cast polymorph on yourself, transforming into a giant rat or rat while retaining your Intelligence, Wisdom, and Charisma scores, as well as the properties of the cloak. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "verminshroud-dormant"
+  },
+  {
+    "name": "Verminshroud (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "resist": [
+      "poison"
+    ],
+    "conditionImmune": [
+      "disease"
+    ],
+    "movement": {
+      "equalToWalk": [
+        "climb"
+      ]
+    },
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "insect-plague-2014",
+      "polymorph-2014"
+    ],
+    "description": "This patchy cloak was pieced together from the pelts of rats found feasting on the dead in Blightshore and is dotted with the bloated corpses of magically preserved insects along its seams.\nWhile wearing the Verminshroud in its awakened state, you gain the following benefits:\nYou have resistance to poison damage.\nYou can use an action to cast the insect plague spell (save DC 15) from the Verminshroud, requiring no material components. This property can't be used again until the next dawn.\nWhen you cast the polymorph spell using the Verminshroud, you can transform into a giant wasp.\nWhile wearing the Verminshroud in its exalted state, you gain the following benefits:\nYou gain a climbing speed equal to your walking speed.\nYour teeth become razor-sharp natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike. You can make this attack as a bonus action. When you bite a creature and deal damage to it, the creature must succeed on a DC 17 Constitution saving throw or be poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the condition on itself on a success.\nWhen you cast the polymorph spell using the Verminshroud, you can transform into a giant scorpion.\nWhile wearing the Verminshroud in its dormant state, you gain the following benefits:\nYou have advantage on Wisdom (Perception) checks that rely on smell, you are immune to disease, and you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the cloak increases the range of your darkvision by 60 feet.\nAs an action, you can use the Verminshroud to cast polymorph on yourself, transforming into a giant rat or rat while retaining your Intelligence, Wisdom, and Charisma scores, as well as the properties of the cloak. This property can't be used again until the next dawn.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "verminshroud-exalted"
+  },
+  {
+    "name": "Vox Seeker",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "common",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "This clockwork device resembles a metal crab the size of a dinner plate. Every action used to wind up the device allows it to operate for 1 minute, to a maximum of 10 minutes. While operational, the item uses the accompanying Vox Seeker stat block. This automaton is under the DM's control. A vox seeker reduced to 0 hit points is destroyed.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "vox-seeker"
+  },
+  {
+    "name": "Will of the Talon (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 2,
+    "resist": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "war-pick",
+    "description": "Black, blue, green, red, and white gems carved in the form of dragon heads cover this ostentatious gold war pick, marking it as a weapon channeling the power of Tiamat.\nWill of the Talon is a sentient lawful evil weapon with an Intelligence of 14, a Wisdom of 15, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common, Draconic, and Infernal.\nA short-tempered bone devil named Ashtyrlon lives within Will of the Talon. The weapon is greedy and values strong leadership. It demands that its wielder take decisive action to keep order in high-pressure situations—and to always take a fair share of treasure in return.\nThe war pick grants the following benefits in its dormant state:\nYou can speak, read, and write Draconic and Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nAs a bonus action while holding the war pick, you can cause the following effect: each creature of your choice that is within 30 feet of you and is aware of you must succeed on a DC 13 Wisdom saving throw or become frightened of you for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to your Frightful Presence for the next 24 hours. This property can't be used again until the next dawn.\nWhile holding the war pick, you can use your action to exhale destructive energy. Pick a damage type from the Will of the Talon Breath Weapons table. Each creature in the area of the exhalation must make a DC 13 saving throw, the type of which is specified in the table. A creature takes 3d6 damage on a failed save, or half as much damage on a successful one.\nWhen you use the war pick to unleash a breath weapon of a specific damage type, you can't choose that same damage type again until the next dawn.\nWill of the Talon Breath Weapons\nDamage Type | Area | Saving Throw\nAcid | 5 ft. wide, 30 ft. long line | Dexterity\nCold | 15 ft. cone | Constitution\nFire | 15 ft. cone | Dexterity\nLightning | 5 ft. wide, 30 ft. long line | Dexterity\nPoison | 15 ft. cone | Constitution\nWhen the war pick reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for the war pick's Breath Weapon property increases to 15, and that property deals 4d6 damage on a failed save, or half as much damage on a successful one.\nThe saving throw DC for the war pick's Frightful Presence property increases to 15.\nWhile carrying the weapon, you have resistance to acid, cold, fire, lightning, and poison damage.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "will-of-the-talon-awakened"
+  },
+  {
+    "name": "Will of the Talon (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 1,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "war-pick",
+    "description": "Black, blue, green, red, and white gems carved in the form of dragon heads cover this ostentatious gold war pick, marking it as a weapon channeling the power of Tiamat.\nWill of the Talon is a sentient lawful evil weapon with an Intelligence of 14, a Wisdom of 15, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common, Draconic, and Infernal.\nA short-tempered bone devil named Ashtyrlon lives within Will of the Talon. The weapon is greedy and values strong leadership. It demands that its wielder take decisive action to keep order in high-pressure situations—and to always take a fair share of treasure in return.\nThe war pick grants the following benefits in its dormant state:\nYou can speak, read, and write Draconic and Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nAs a bonus action while holding the war pick, you can cause the following effect: each creature of your choice that is within 30 feet of you and is aware of you must succeed on a DC 13 Wisdom saving throw or become frightened of you for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to your Frightful Presence for the next 24 hours. This property can't be used again until the next dawn.\nWhile holding the war pick, you can use your action to exhale destructive energy. Pick a damage type from the Will of the Talon Breath Weapons table. Each creature in the area of the exhalation must make a DC 13 saving throw, the type of which is specified in the table. A creature takes 3d6 damage on a failed save, or half as much damage on a successful one.\nWhen you use the war pick to unleash a breath weapon of a specific damage type, you can't choose that same damage type again until the next dawn.\nWill of the Talon Breath Weapons\nDamage Type | Area | Saving Throw\nAcid | 5 ft. wide, 30 ft. long line | Dexterity\nCold | 15 ft. cone | Constitution\nFire | 15 ft. cone | Dexterity\nLightning | 5 ft. wide, 30 ft. long line | Dexterity\nPoison | 15 ft. cone | Constitution",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "will-of-the-talon-dormant"
+  },
+  {
+    "name": "Will of the Talon (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "artifact",
+    "attunement": true,
+    "itemType": "Melee Weapon",
+    "typeCode": "M",
+    "sentient": true,
+    "weight": 2,
+    "bonusWeapon": 3,
+    "resist": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "baseItem": "war-pick",
+    "description": "Black, blue, green, red, and white gems carved in the form of dragon heads cover this ostentatious gold war pick, marking it as a weapon channeling the power of Tiamat.\nWill of the Talon is a sentient lawful evil weapon with an Intelligence of 14, a Wisdom of 15, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.\nThe weapon communicates telepathically with its wielder and can speak, read, and understand Common, Draconic, and Infernal.\nA short-tempered bone devil named Ashtyrlon lives within Will of the Talon. The weapon is greedy and values strong leadership. It demands that its wielder take decisive action to keep order in high-pressure situations—and to always take a fair share of treasure in return.\nThe war pick grants the following benefits in its dormant state:\nYou can speak, read, and write Draconic and Infernal.\nYou gain a +1 bonus to attack and damage rolls made with this magic weapon.\nAs a bonus action while holding the war pick, you can cause the following effect: each creature of your choice that is within 30 feet of you and is aware of you must succeed on a DC 13 Wisdom saving throw or become frightened of you for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to your Frightful Presence for the next 24 hours. This property can't be used again until the next dawn.\nWhile holding the war pick, you can use your action to exhale destructive energy. Pick a damage type from the Will of the Talon Breath Weapons table. Each creature in the area of the exhalation must make a DC 13 saving throw, the type of which is specified in the table. A creature takes 3d6 damage on a failed save, or half as much damage on a successful one.\nWhen you use the war pick to unleash a breath weapon of a specific damage type, you can't choose that same damage type again until the next dawn.\nWill of the Talon Breath Weapons\nDamage Type | Area | Saving Throw\nAcid | 5 ft. wide, 30 ft. long line | Dexterity\nCold | 15 ft. cone | Constitution\nFire | 15 ft. cone | Dexterity\nLightning | 5 ft. wide, 30 ft. long line | Dexterity\nPoison | 15 ft. cone | Constitution\nWhen the war pick reaches an awakened state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +2.\nThe saving throw DC for the war pick's Breath Weapon property increases to 15, and that property deals 4d6 damage on a failed save, or half as much damage on a successful one.\nThe saving throw DC for the war pick's Frightful Presence property increases to 15.\nWhile carrying the weapon, you have resistance to acid, cold, fire, lightning, and poison damage.\nWhen the war pick reaches an exalted state, it gains the following properties:\nThe weapon's bonus to attack and damage rolls increases to +3.\nThe saving throw DC for the war pick's Breath Weapon property increases to 17, and that property deals 5d6 damage on a failed save, or half as much damage on a successful one.\nThe saving throw DC for the war pick's Frightful Presence property increases to 17.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "will-of-the-talon-exalted"
+  },
+  {
+    "name": "Wreath of the Prism (Awakened)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "dominate-monster-2014"
+    ],
+    "description": "This loop of golden thorns is inset with dozens of gems representing the five colors of Tiamat.\nOnce the Wreath of the Prism reaches an awakened state, it gains the following benefits:\nYou can affect creatures of challenge rating 10 or lower with the wreath.\nThe save DC of the wreath's spell increases to 15.\nWhile wearing the wreath in its dormant state, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the wreath increases the range of your darkvision by 60 feet.\nWhen you hit a beast, dragon, or monstrosity of challenge rating 5 or lower with an attack, or when you grapple it, you can use the wreath to cast dominate monster on the creature (save DC 13). On a successful save, the target is immune to the power of the wreath for 24 hours. On a failure, a shimmering, golden image of the wreath appears as a collar around the target's neck or as a crown on its head (your choice) until it is no longer charmed by the spell. If you use the wreath to charm a second creature, the first spell immediately ends. When the spell ends, the target knows it was charmed by you.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "wreath-of-the-prism-awakened"
+  },
+  {
+    "name": "Wreath of the Prism (Dormant)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "dominate-monster-2014"
+    ],
+    "description": "This loop of golden thorns is inset with dozens of gems representing the five colors of Tiamat.\nWhile wearing the wreath in its dormant state, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the wreath increases the range of your darkvision by 60 feet.\nWhen you hit a beast, dragon, or monstrosity of challenge rating 5 or lower with an attack, or when you grapple it, you can use the wreath to cast dominate monster on the creature (save DC 13). On a successful save, the target is immune to the power of the wreath for 24 hours. On a failure, a shimmering, golden image of the wreath appears as a collar around the target's neck or as a crown on its head (your choice) until it is no longer charmed by the spell. If you use the wreath to charm a second creature, the first spell immediately ends. When the spell ends, the target knows it was charmed by you.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "wreath-of-the-prism-dormant"
+  },
+  {
+    "name": "Wreath of the Prism (Exalted)",
+    "edition": "2014",
+    "source": "EGW",
+    "rarity": "legendary",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "properties": [
+      "Vestige of Divergence"
+    ],
+    "spells": [
+      "dominate-monster-2014"
+    ],
+    "description": "This loop of golden thorns is inset with dozens of gems representing the five colors of Tiamat.\nOnce the Wreath of the Prism reaches an awakened state, it gains the following benefits:\nYou can affect creatures of challenge rating 10 or lower with the wreath.\nThe save DC of the wreath's spell increases to 15.\nOnce the Wreath of the Prism reaches an exalted state, it gains the following benefits:\nYou can affect creatures of challenge rating 15 or lower with the wreath.\nThe save DC of the wreath's spell increases to 17.\nWhile wearing the wreath in its dormant state, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the wreath increases the range of your darkvision by 60 feet.\nWhen you hit a beast, dragon, or monstrosity of challenge rating 5 or lower with an attack, or when you grapple it, you can use the wreath to cast dominate monster on the creature (save DC 13). On a successful save, the target is immune to the power of the wreath for 24 hours. On a failure, a shimmering, golden image of the wreath appears as a collar around the target's neck or as a crown on its head (your choice) until it is no longer charmed by the spell. If you use the wreath to charm a second creature, the first spell immediately ends. When the spell ends, the target knows it was charmed by you.",
+    "sources": [
+      "EGW"
+    ],
+    "slug": "wreath-of-the-prism-exalted"
+  }
+]

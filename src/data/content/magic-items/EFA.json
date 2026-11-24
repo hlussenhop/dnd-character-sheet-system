@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Boots of the Winding Path",
+    "edition": "2024",
+    "source": "EFA",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "While wearing these boots, you can take a Bonus Action to teleport up to 15 feet to an unoccupied space you can see. You must have occupied that space at some point during the current turn.",
+    "sources": [
+      "EFA"
+    ],
+    "slug": "boots-of-the-winding-path-2024"
+  },
+  {
+    "name": "Helm of Awareness",
+    "edition": "2024",
+    "source": "EFA",
+    "rarity": "uncommon",
+    "attunement": false,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "description": "While wearing this helmet, you have Advantage on Initiative rolls.",
+    "sources": [
+      "EFA"
+    ],
+    "slug": "helm-of-awareness-2024"
+  },
+  {
+    "name": "Manifold Tool",
+    "edition": "2024",
+    "source": "EFA",
+    "rarity": "common",
+    "attunement": true,
+    "itemType": "Wondrous Item",
+    "wondrous": true,
+    "proficient": true,
+    "description": "This tool takes the form of a wrench, a screwdriver, or another basic tool. As a Magic action, you can touch the item and transform it into a type of Artisan's Tools of your choice. Whatever form the tool takes, you have proficiency with it when you use it.",
+    "sources": [
+      "EFA"
+    ],
+    "slug": "manifold-tool-2024"
+  },
+  {
+    "name": "Mind Sharpener",
+    "edition": "2024",
+    "source": "EFA",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Ring",
+    "typeCode": "RG",
+    "charges": 4,
+    "recharge": "dawn",
+    "rechargeAmount": "1d4",
+    "description": "The item has 4 charges. When you fail a Constitution saving throw to maintain Concentration, you can take a Reaction and expend 1 of the item's charges to succeed instead. The item regains 1d4 expended charges daily at dawn.",
+    "sources": [
+      "EFA"
+    ],
+    "slug": "mind-sharpener-2024"
+  },
+  {
+    "name": "Repulsion Shield",
+    "edition": "2024",
+    "source": "EFA",
+    "rarity": "uncommon",
+    "attunement": false,
+    "itemType": "Shield",
+    "typeCode": "S",
+    "weight": 6,
+    "charges": 4,
+    "recharge": "dawn",
+    "rechargeAmount": "1d4",
+    "bonusAc": 1,
+    "baseItem": "shield",
+    "description": "You gain a +1 bonus to Armor Class while wielding this shield.\nThe shield has 4 charges. While holding it, when a Large or smaller creature within 5 feet of you hits you with a melee attack roll, you can take a Reaction to expend 1 of the shield's charges and push the attacker up to 15 feet straight away. The shield regains 1d4 expended charges daily at dawn.",
+    "sources": [
+      "EFA"
+    ],
+    "slug": "repulsion-shield-2024"
+  },
+  {
+    "name": "Spell-Refueling Ring",
+    "edition": "2024",
+    "source": "EFA",
+    "rarity": "uncommon",
+    "attunement": true,
+    "itemType": "Ring",
+    "attunementRequirement": "by a spellcaster",
+    "typeCode": "RG",
+    "description": "While wearing this ring, you can recover one expended spell slot as a Bonus Action. The recovered slot can be of level 3 or lower. Once used, the ring can't be used again until the next dawn.",
+    "sources": [
+      "EFA"
+    ],
+    "slug": "spell-refueling-ring-2024"
+  }
+]

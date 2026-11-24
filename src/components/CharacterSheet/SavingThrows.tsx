@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Character, AbilityName } from '../../types/dnd';
 import { createSavingThrowRoll, createAdvantageRoll, createDisadvantageRoll, DiceRoll } from '../../services/diceService';
 import { formatModifier } from '../../utils/formatters';
+import { sumMagicBonus } from '../../utils/magicItemInventory';
+import { useMagicItemIndex } from '../../hooks/useMagicItemIndex';
 import { loadClasses } from '../../services/dataService';
 import type { LayoutMode } from './AbilityScores';
 
@@ -39,9 +41,14 @@ export const SavingThrows: React.FC<SavingThrowsProps> = ({
   // Load class data to get saving throw proficiencies
   const CLASSES_DATABASE = loadClasses();
   const classData = CLASSES_DATABASE.find(c => c.slug === character.class);
-  const savingThrowProficiencies = classData?.save_throws || [];
+  const savingThrowProficiencies = [...(classData?.save_throws || []), ...(character.savingThrowProficiencies || [])];
 
   const hasGnomishCunning = character.featuresAndTraits?.speciesTraits?.includes('Gnomish Cunning');
+  const magicIndex = useMagicItemIndex();
+  const magicSaves = sumMagicBonus(character, magicIndex, 'bonusSavingThrow');
+
+  const saveModifierFor = (abilityName: AbilityName, proficient: boolean) =>
+    character.abilities[abilityName].modifier + (proficient ? character.proficiencyBonus : 0) + magicSaves;
 
   const abilities: AbilityName[] = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 
@@ -50,7 +57,7 @@ export const SavingThrows: React.FC<SavingThrowsProps> = ({
     const isProficient = savingThrowProficiencies.includes(abilityName);
 
     let roll;
-    const saveModifier = ability.modifier + (isProficient ? character.proficiencyBonus : 0);
+    const saveModifier = saveModifierFor(abilityName, isProficient);
 
     switch (type) {
       case 'advantage':
@@ -60,7 +67,7 @@ export const SavingThrows: React.FC<SavingThrowsProps> = ({
         roll = createDisadvantageRoll(`${abilityName} Save`, saveModifier);
         break;
       default:
-        roll = createSavingThrowRoll(abilityName, ability.modifier, character.proficiencyBonus, isProficient);
+        roll = createSavingThrowRoll(abilityName, ability.modifier + magicSaves, character.proficiencyBonus, isProficient);
     }
 
     // Create detailed results for display
@@ -98,9 +105,8 @@ export const SavingThrows: React.FC<SavingThrowsProps> = ({
     return (
       <div className="grid grid-cols-2 gap-2">
         {abilities.map((abilityName) => {
-          const ability = character.abilities[abilityName];
           const isProficient = savingThrowProficiencies.includes(abilityName);
-          const saveModifier = ability.modifier + (isProficient ? character.proficiencyBonus : 0);
+          const saveModifier = saveModifierFor(abilityName, isProficient);
           const isMenuOpen = activeMenuAbility === abilityName;
           const hasAdvantage = hasGnomishCunning && ['INT', 'WIS', 'CHA'].includes(abilityName);
           const badge = hasAdvantage ? (
@@ -196,9 +202,8 @@ export const SavingThrows: React.FC<SavingThrowsProps> = ({
         {/* Saving Throws List */}
         <div className="space-y-1">
           {abilities.map((abilityName) => {
-            const ability = character.abilities[abilityName];
             const isProficient = savingThrowProficiencies.includes(abilityName);
-            const saveModifier = ability.modifier + (isProficient ? character.proficiencyBonus : 0);
+            const saveModifier = saveModifierFor(abilityName, isProficient);
             const isMenuOpen = activeMenuAbility === abilityName;
 
             return (
@@ -276,9 +281,8 @@ export const SavingThrows: React.FC<SavingThrowsProps> = ({
       {/* Saving Throws Grid */}
       <div className="grid grid-cols-2 gap-2">
         {abilities.map((abilityName) => {
-          const ability = character.abilities[abilityName];
           const isProficient = savingThrowProficiencies.includes(abilityName);
-          const saveModifier = ability.modifier + (isProficient ? character.proficiencyBonus : 0);
+          const saveModifier = saveModifierFor(abilityName, isProficient);
           const isMenuOpen = activeMenuAbility === abilityName;
           const hasAdvantage = hasGnomishCunning && ['INT', 'WIS', 'CHA'].includes(abilityName);
           const badge = hasAdvantage ? (

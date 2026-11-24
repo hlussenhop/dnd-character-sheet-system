@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { ArrowLeft, Dice6, Shuffle } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
 import { CharacterCreationData, AbilityName } from '../../../types/dnd';
-import { getAllSpecies, randomizeAbilities, getModifier, BACKGROUNDS } from '../../../services/dataService';
+import { findSpeciesBySlug, randomizeAbilities, getModifier, getBackground } from '../../../services/dataService';
 import { rollDice } from '../../../services/diceService';
 import { SmartNavigationButton } from '../components';
 import { useStepValidation } from '../hooks';
@@ -15,6 +15,7 @@ import {
   ABILITY_METHOD_TITLES,
   POINT_BUY_COSTS
 } from '../../../utils/abilityScoreUtils';
+import { clampAssignedScore, formatSignedBonus, resolveSpeciesAbilityBonuses } from '../../../utils/speciesAbilityUtils';
 
 const RandomizeButton: React.FC<{ onClick: () => void; title?: string; className?: string }> = ({
   onClick,
@@ -36,18 +37,22 @@ const RandomizeButton: React.FC<{ onClick: () => void; title?: string; className
 const formatModifier = (mod: number): string => mod >= 0 ? `+${mod}` : `${mod}`;
 
 export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep, prevStep, getNextStepLabel }) => {
-  const allSpecies = getAllSpecies(data.edition);
-  const speciesData = allSpecies.find(s => s.slug === data.speciesSlug);
-  const backgroundData = BACKGROUNDS.find(bg => bg.slug === data.background && bg.edition === data.edition);
+  const selectedSpecies = findSpeciesBySlug(data.speciesSlug);
+  // 2014 ability modifiers apply only on a 2014 character. The name still shows for a 2024 character who picked a 2014 species.
+  const speciesData = data.edition === '2014' ? selectedSpecies : undefined;
+  const backgroundData = getBackground(data.background);
   const abilityNames = ABILITY_NAMES;
 
   // Validation hook
   const { canProceed, missingItems, nextAction } = useStepValidation(4, data);
 
+  // Fixed + player-chosen species increases (an incomplete choice contributes nothing)
+  const speciesAbilityBonuses = resolveSpeciesAbilityBonuses(speciesData, data);
+
   // Helper to get bonus based on edition
   const getBonus = (ability: AbilityName) => {
     // Species bonuses apply in both editions
-    const speciesBonus = speciesData?.ability_bonuses?.[ability] || 0;
+    const speciesBonus = speciesAbilityBonuses[ability];
 
     if (data.edition === '2024') {
       // In 2024, bonuses come from Species + Background (User Selected)
@@ -242,14 +247,14 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
            {/* Species Information */}
            <div className="bg-theme-tertiary/50 p-3 rounded-lg">
-             <h5 className="text-sm font-semibold text-accent-blue-light mb-2">Species: {speciesData?.name || 'Unknown'}</h5>
-             {speciesData?.ability_bonuses && Object.keys(speciesData.ability_bonuses).length > 0 ? (
+             <h5 className="text-sm font-semibold text-accent-blue-light mb-2">Species: {selectedSpecies?.name || 'Unknown'}</h5>
+             {Object.values(speciesAbilityBonuses).some(bonus => bonus !== 0) ? (
                <div className="space-y-1">
                  <div className="text-xs font-medium text-theme-muted uppercase">Ability Bonuses:</div>
-                 {Object.entries(speciesData.ability_bonuses).map(([ability, bonus]) => (
+                 {Object.entries(speciesAbilityBonuses).filter(([, bonus]) => bonus !== 0).map(([ability, bonus]) => (
                    <div key={ability} className="text-sm text-theme-primary flex items-center">
                      <span className="text-accent-yellow-light mr-2">•</span>
-                     {ability}: +{bonus}
+                     {ability}: {formatSignedBonus(bonus)}
                    </div>
                  ))}
                </div>
@@ -273,7 +278,7 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
                    Object.entries(data.backgroundAbilityChoices.bonuses).map(([ability, bonus]) => (
                      <div key={ability} className="text-sm text-theme-primary flex items-center">
                        <span className="text-accent-yellow-light mr-2">•</span>
-                       {ability}: +{bonus} (from background choice)
+                       {ability}: {formatSignedBonus(bonus)} (from background choice)
                      </div>
                    ))
                  ) : (
@@ -295,8 +300,8 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
                return (
                  <div key={ability} className="text-center">
                    <div className="text-sm font-medium text-theme-primary">{ability}</div>
-                   <div className={`text-lg font-bold ${bonus > 0 ? 'text-accent-green-light' : 'text-theme-muted'}`}>
-                     {bonus > 0 ? `+${bonus}` : '0'}
+                   <div className={`text-lg font-bold ${bonus > 0 ? 'text-accent-green-light' : bonus < 0 ? 'text-accent-red-light' : 'text-theme-muted'}`}>
+                     {bonus === 0 ? '0' : formatSignedBonus(bonus)}
                    </div>
                  </div>
                );
@@ -321,7 +326,7 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
             {abilityNames.map(ability => {
               const baseScore = data.abilities[ability];
               const bonus = getBonus(ability);
-              const finalScore = baseScore + bonus;
+              const finalScore = clampAssignedScore(baseScore, baseScore + bonus);
               const modifier = getModifier(finalScore);
 
               return (
@@ -392,7 +397,7 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
                 {abilityNames.map((ability, idx) => {
                   const baseScore = data.abilities[ability];
                   const bonus = getBonus(ability);
-                  const finalScore = baseScore + bonus;
+                  const finalScore = clampAssignedScore(baseScore, baseScore + bonus);
                   const modifier = getModifier(finalScore);
 
                   return (
@@ -450,7 +455,7 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
             {abilityNames.map(ability => {
               const baseScore = data.abilities[ability] || 8;
               const bonus = getBonus(ability);
-              const finalScore = baseScore + bonus;
+              const finalScore = clampAssignedScore(baseScore, baseScore + bonus);
               const modifier = getModifier(finalScore);
 
               return (
@@ -501,7 +506,7 @@ export const Step4Abilities: React.FC<StepProps> = ({ data, updateData, nextStep
             {abilityNames.map(ability => {
               const baseScore = data.abilities[ability];
               const bonus = getBonus(ability);
-              const finalScore = baseScore + bonus;
+              const finalScore = clampAssignedScore(baseScore, baseScore + bonus);
               const modifier = getModifier(finalScore);
 
               return (

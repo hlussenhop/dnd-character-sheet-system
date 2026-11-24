@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { generateMonsterSlug, isCustomMonsterId, getCustomMonsterDbId } from '../utils/monsterUtils';
+import { generateMonsterSlug, isCustomMonsterId, getCustomMonsterDbId, formatChallengeRating, monsterShareSlug, pickCatalogSlug } from './monsterUtils';
 
 describe('monsterUtils', () => {
   describe('generateMonsterSlug', () => {
@@ -45,3 +45,34 @@ describe('monsterUtils', () => {
     });
   });
 });
+
+const entries = [
+  { slug: 'aboleth', name: 'Aboleth', edition: '2014' as const },
+  { slug: 'aboleth-2024', name: 'Aboleth', edition: '2024' as const },
+  { slug: 'ancient-red-dragon-2024', name: 'Ancient Red Dragon', edition: '2024' as const },
+]
+
+describe('monster links', () => {
+  it('uses the catalog slug so the two Aboleths do not share a path', () => {
+    expect(monsterShareSlug({ index: 'aboleth' })).toBe('aboleth')
+    expect(monsterShareSlug({ index: 'aboleth-2024' })).toBe('aboleth-2024')
+    expect(monsterShareSlug({ index: 'custom-goblin-1', isCustom: true })).toBe('custom-custom-goblin-1')
+  })
+
+  it('opens an old name link on the 2014 creature and an exact 2024 slug on that reprint', () => {
+    expect(pickCatalogSlug(entries, 'aboleth')).toBe('aboleth')
+    expect(pickCatalogSlug(entries, 'aboleth-2024')).toBe('aboleth-2024')
+    expect(pickCatalogSlug(entries, 'ancient-red-dragon')).toBe('ancient-red-dragon-2024')
+    expect(pickCatalogSlug(entries, 'missing')).toBeUndefined()
+  })
+})
+
+describe('formatChallengeRating', () => {
+  it('writes the fractional ratings a DM reads on the page', () => {
+    expect(formatChallengeRating(0)).toBe('0')
+    expect(formatChallengeRating(0.125)).toBe('1/8')
+    expect(formatChallengeRating(0.25)).toBe('1/4')
+    expect(formatChallengeRating(0.5)).toBe('1/2')
+    expect(formatChallengeRating(10)).toBe('10')
+  })
+})

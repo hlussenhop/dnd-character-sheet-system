@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "gate-warden",
+    "description": "You spent a significant amount of time somewhere influenced by intense planar forces or a portal to another plane of existence, such as one of the gatetowns in the Outlands. You're accustomed to experiences that would leave others reeling in terror or enraptured by otherworldly beauty, and you're as comfortable dealing with Celestials and Fiends as you are with the vendors in town (who might be one and the same).",
+    "personalityTraits": [
+      "Strange events and otherworldly creatures don't faze me.",
+      "I think in terms of exchange: something for something, nothing for nothing.",
+      "I speak with an unusual cadence.",
+      "I pepper my speech with words or curses borrowed from planar languages.",
+      "I've seen enough to know that you can't take anyone at face value, so I scrutinize everyone.",
+      "I have a superstitious habit I picked up from my gate-town, such as touching iron when I'm nervous or arranging objects in a specific order."
+    ],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  },
+  {
+    "slug": "planar-philosopher",
+    "description": "You subscribe to a philosophy that seeks to understand the nature of the planes or some hidden truth of the multiverse. You draw strength from your conviction and, perhaps, a network of like-minded thinkers, such as the factions of Sigil (summarized below). In your travels, you explore the depths of your understanding and spread your philosophy wherever you go.",
+    "personalityTraits": [
+      "I don't venerate any gods. With time, we can be as powerful as them or greater.",
+      "Experience is everything; live in the moment.",
+      "When things crumble, I find meaning in the dust.",
+      "Life thrives through order, and I seek to maintain that order.",
+      "When others make plans, the multiverse laughs and so do I.",
+      "I know what's right, and none will stand in my way."
+    ],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  }
+]

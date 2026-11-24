@@ -1,0 +1,3612 @@
+[
+  {
+    "name": "Abjurer Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed-with-mind-blank",
+        "name": "charmed (with Mind Blank)",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 198,
+    "hit_dice": "36d8",
+    "hit_points_roll": "36d8 + 36",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Magic Disruption (2/Day)",
+        "desc": "The archmage casts Dispel Magic or Globe of Invulnerability, using the same spellcasting ability as Spellcasting.\n2/day: Dispel Magic, Globe of Invulnerability"
+      },
+      {
+        "name": "Counterspell (3/Day)",
+        "desc": "The archmage casts Counterspell in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes three Arcane Burst attacks."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 27 (4d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Banishing Blast (Recharge 6)",
+        "desc": "cha DC 18, each creature in a 60-foot Cone.  45 (10d8) Force damage, and the target has the Incapacitated condition and is transported to a harmless demiplane until the start of the archmage's next turn, at which point it reappears in the space it left or in the nearest unoccupied space if that space is occupied.  Half damage only."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Arcane Lock, Detect Magic, Mage Armor (included in AC), Mage Hand, Prestidigitation\n2/day each: Fireball (level 7 version), Nondetection, Otiluke's Resilient Sphere\n1/day each: Mind Blank (cast before combat), Teleport"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "abjurer-archmage-2024"
+  },
+  {
+    "name": "Baelnorn",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral good",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 18
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 16,
+    "intelligence": 21,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 17,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning",
+      "radiant"
+    ],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "truesight": "120 ft.",
+      "passive_perception": 18
+    },
+    "languages": "all",
+    "challenge_rating": 18,
+    "proficiency_bonus": 6,
+    "xp": 20000,
+    "hit_points": 255,
+    "hit_dice": "34d8",
+    "hit_points_roll": "34d8 + 102",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+        "desc": "If the baelnorn fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The baelnorn has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Counterspell",
+        "desc": "The baelnorn casts Counterspell in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\nAt will: Counterspell"
+      },
+      {
+        "name": "Regional Effects",
+        "desc": "A baelnorn extends its presence into the region it inhabits, creating the following effects:\nProjection: While in its lair, the baelnorn can cast Project Image, requiring no spell components and using Intelligence as the spellcasting ability (spell save DC 19). The spell's range is limited to the baelnorn's lair.\nTravel Ward: Creatures can't use teleportation or planar travel to enter or exit the lair.\nIf the baelnorn is destroyed or moves its lair elsewhere, these effects end immediately."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The baelnorn makes three attacks, using Arcane Burst or Paralyzing Touch in any combination. It can replace two attacks with a use of Spellcasting to cast Lightning Bolt (level 4 version)."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +11, reach 5 ft. or range 120 ft. Hit: 31 (4d12 + 5) Force damage.",
+        "attack_bonus": 11
+      },
+      {
+        "name": "Paralyzing Touch",
+        "desc": "m +11, reach 5 ft. Hit: 10 (2d4 + 5) Cold damage, and the target has the Paralyzed condition until the start of the baelnorn's next turn.",
+        "attack_bonus": 11
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The baelnorn casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 19):\nAt will: Detect Magic, Detect Thoughts, Dispel Magic, Invisibility, Lightning Bolt (level 4 version), Mage Hand, Prestidigitation\n2/day each: Dimension Door, Scrying\n1/day each: Clone, Guards and Wards"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Overwhelming Radiance",
+        "desc": "con DC 19, each creature in a 20-foot Emanation originating from the baelnorn; Undead have Disadvantage on this save.  11 (2d10) Radiant damage.  Half damage."
+      },
+      {
+        "name": "Recuperative Teleport",
+        "desc": "The baelnorn teleports up to 60 feet to an unoccupied space it can see and regains 11 (2d10) Hit Points. The baelnorn can't take this action again until the start of its next turn."
+      },
+      {
+        "name": "Frightening Glance",
+        "desc": "The baelnorn casts Fear, using the same spellcasting ability as Spellcasting. The baelnorn can't take this action again until the start of its next turn."
+      }
+    ],
+    "index": "baelnorn-2024"
+  },
+  {
+    "name": "Battle Familiar",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level + 2 (Brute only)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "30 ft.",
+      "swim": "30 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 8,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 (Brute only) or 20 (Flyer or Stalker only) + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Flyby (Flyer Only)",
+        "desc": "The familiar doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+      },
+      {
+        "name": "Talented",
+        "desc": "Add half the spell's level (round down) to any ability check or saving throw the familiar makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The familiar makes a number of Rend attacks equal to half this spell's level (round down). The familiar can replace one of these attacks with Prowl if available."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Force damage."
+      },
+      {
+        "name": "Prowl (Stalker Only)",
+        "desc": "The familiar moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the familiar can take the Hide action."
+      }
+    ],
+    "desc": [
+      "Type: {'choose': ['celestial', 'fey', 'fiend']}."
+    ],
+    "index": "battle-familiar-2024"
+  },
+  {
+    "name": "Battle Familiar (Brute)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 8,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Talented",
+        "desc": "Add half the spell's level (round down) to any ability check or saving throw the familiar makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The familiar makes a number of Rend attacks equal to half this spell's level (round down). The familiar can replace one of these attacks with Prowl if available."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Force damage."
+      }
+    ],
+    "desc": [
+      "Type: {'choose': ['celestial', 'fey', 'fiend']}."
+    ],
+    "index": "battle-familiar-brute-2024"
+  },
+  {
+    "name": "Battle Familiar (Flyer)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "30 ft.",
+      "swim": "30 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 8,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Flyby",
+        "desc": "The familiar doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+      },
+      {
+        "name": "Talented",
+        "desc": "Add half the spell's level (round down) to any ability check or saving throw the familiar makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The familiar makes a number of Rend attacks equal to half this spell's level (round down). The familiar can replace one of these attacks with Prowl if available."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Force damage."
+      }
+    ],
+    "desc": [
+      "Type: {'choose': ['celestial', 'fey', 'fiend']}."
+    ],
+    "index": "battle-familiar-flyer-2024"
+  },
+  {
+    "name": "Battle Familiar (Stalker)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 8,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Talented",
+        "desc": "Add half the spell's level (round down) to any ability check or saving throw the familiar makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The familiar makes a number of Rend attacks equal to half this spell's level (round down). The familiar can replace one of these attacks with Prowl if available."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Force damage."
+      },
+      {
+        "name": "Prowl",
+        "desc": "The familiar moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the familiar can take the Hide action."
+      }
+    ],
+    "desc": [
+      "Type: {'choose': ['celestial', 'fey', 'fiend']}."
+    ],
+    "index": "battle-familiar-stalker-2024"
+  },
+  {
+    "name": "Conjurer Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 225,
+    "hit_dice": "41d8",
+    "hit_points_roll": "41d8 + 41",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst attacks."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 27 (4d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Find Familiar, Mage Armor (included in AC), Mage Hand, Prestidigitation, Unseen Servant\n2/day: Dimension Door\n1/day each: Incendiary Cloud, Lightning Bolt (level 8 version), Plane Shift, Teleport"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "conjurer-archmage-2024"
+  },
+  {
+    "name": "Darkenbeast",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "20 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 5,
+    "wisdom": 10,
+    "charisma": 13,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-str",
+          "name": "Saving Throw: STR",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 60,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 24",
+    "special_abilities": [
+      {
+        "name": "Spell Imprint",
+        "desc": "As part of the darkenbeast's creation, its creator can cast one spell of level 5 or lower with a casting time of an action. The spell has no effect but is stored within the darkenbeast. While within 30 feet of the darkenbeast, the darkenbeast's creator can cast the stored spell, requiring no spell components and using the caster's spellcasting ability. When the spell is cast this way, its effects originate from the darkenbeast (as if the darkenbeast were the spellcaster), and immediately after the spell is cast, the darkenbeast dies in a flash of purple flame."
+      },
+      {
+        "name": "Sunlight Sensitivity",
+        "desc": "While in sunlight, the darkenbeast has Disadvantage on ability checks and attack rolls."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The darkenbeast makes three Rend attacks."
+      },
+      {
+        "name": "Rend",
+        "desc": "m +5, reach 5 ft. Hit: 12 (2d8 + 3) Slashing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "darkenbeast-2024"
+  },
+  {
+    "name": "Dinosaur Spirit",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Huge",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level + 2 (Ankylosaur only)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 11,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 12,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "60 + 10 for each spell level above 6",
+    "subtype": "dinosaur",
+    "special_abilities": [
+      {
+        "name": "Siege Monster (Ankylosaur Only)",
+        "desc": "The spirit deals double damage to objects and structures."
+      },
+      {
+        "name": "Tough",
+        "desc": "Add half the spell's level (round down) to any Strength or Constitution saving throw the spirit makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Bite (Tyrannosaur Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 2d10 + 5 + summonSpellLevel Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC equals your spell save DC), and it has the Restrained condition until the grapple ends."
+      },
+      {
+        "name": "Gore (Triceratops Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 5 + summonSpellLevel Piercing damage. If the target is a Huge or smaller creature and the spirit moved 20+ feet straight toward it immediately before the hit, the target takes an extra 1d10 Piercing damage and has the Prone condition."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d10 + 5 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "dinosaur-spirit-2024"
+  },
+  {
+    "name": "Dinosaur Spirit (Ankylosaur)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Huge",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 11,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 12,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "60 + 10 for each spell level above 6",
+    "subtype": "dinosaur",
+    "special_abilities": [
+      {
+        "name": "Siege Monster",
+        "desc": "The spirit deals double damage to objects and structures."
+      },
+      {
+        "name": "Tough",
+        "desc": "Add half the spell's level (round down) to any Strength or Constitution saving throw the spirit makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d10 + 5 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "dinosaur-spirit-ankylosaur-2024"
+  },
+  {
+    "name": "Dinosaur Spirit (Triceratops)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Huge",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 11,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 12,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "60 + 10 for each spell level above 6",
+    "subtype": "dinosaur",
+    "special_abilities": [
+      {
+        "name": "Tough",
+        "desc": "Add half the spell's level (round down) to any Strength or Constitution saving throw the spirit makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Gore",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 5 + summonSpellLevel Piercing damage. If the target is a Huge or smaller creature and the spirit moved 20+ feet straight toward it immediately before the hit, the target takes an extra 1d10 Piercing damage and has the Prone condition."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d10 + 5 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "dinosaur-spirit-triceratops-2024"
+  },
+  {
+    "name": "Dinosaur Spirit (Tyrannosaur)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Huge",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 11,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 12,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "60 + 10 for each spell level above 6",
+    "subtype": "dinosaur",
+    "special_abilities": [
+      {
+        "name": "Tough",
+        "desc": "Add half the spell's level (round down) to any Strength or Constitution saving throw the spirit makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Bite",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 2d10 + 5 + summonSpellLevel Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC equals your spell save DC), and it has the Restrained condition until the grapple ends."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d10 + 5 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "dinosaur-spirit-tyrannosaur-2024"
+  },
+  {
+    "name": "Diviner Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-investigation",
+          "name": "Skill: Investigation",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "truesight": "60 ft.",
+      "passive_perception": 17
+    },
+    "languages": "all",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 176,
+    "hit_dice": "32d8",
+    "hit_points_roll": "32d8 + 32",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and similar effects."
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst attacks. It can replace one attack with a use of Spellcasting to cast Mind Spike (level 4 version)."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 24 (3d12 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Detect Thoughts, Mage Armor (included in AC), Mage Hand, Mind Spike (level 4 version), Prestidigitation\n2/day each: Scrying, Sending\n1/day each: Foresight (cast before combat), Telepathy"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "diviner-archmage-2024"
+  },
+  {
+    "name": "Enchanter Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 13,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 214,
+    "hit_dice": "39d8",
+    "hit_points_roll": "39d8 + 39",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Dominate Person (1/Day)",
+        "desc": "The archmage casts Dominate Person, using the same spellcasting ability as Spellcasting.\n1/day: Dominate Person"
+      },
+      {
+        "name": "Duplicitous Magic (2/Day)",
+        "desc": "The archmage casts Charm Person, Hold Person, or Sleep, using the same spellcasting ability as Spellcasting.\n2/day: Charm Person, Hold Person, Sleep"
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst Attacks."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 21 (3d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Mage Armor (included in AC), Mage Hand, Prestidigitation\n2/day each: Fireball (level 7 version), Geas, Modify Memory"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "enchanter-archmage-2024"
+  },
+  {
+    "name": "Evoker Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 214,
+    "hit_dice": "39d8",
+    "hit_points_roll": "39d8 + 39",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Evocation Sculptor",
+        "desc": "When the archmage casts a spell that creates an area of effect, it can choose itself and up to five other creatures it can see, sculpting the spell's energy around them. A chosen creature automatically succeeds on its saving throw against the spell, and it takes no damage if it would normally take half damage on a successful save."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst attacks. It can replace one attack with a use of Spellcasting to cast Shatter."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 27 (4d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Mage Armor (included in AC), Mage Hand, Prestidigitation, Shatter (level 3 version)"
+      },
+      {
+        "name": "Evocation Barrage (Recharge 5-6)",
+        "desc": "The archmage casts Fireball, Ice Storm, or Lightning Bolt twice in any combination, using the same spellcasting ability as Spellcasting."
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "evoker-archmage-2024"
+  },
+  {
+    "name": "Groundling Grunt",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "burrow": "10 ft."
+    },
+    "strength": 16,
+    "dexterity": 15,
+    "constitution": 14,
+    "intelligence": 7,
+    "wisdom": 10,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 2,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Common",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 45,
+    "hit_dice": "7d8",
+    "hit_points_roll": "7d8 + 14",
+    "actions": [
+      {
+        "name": "Claw",
+        "desc": "m +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two paws.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Sling",
+        "desc": "r +4, range 30/120 ft. Hit: 7 (2d4 + 2) Bludgeoning damage.",
+        "attack_bonus": 4
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Go to Ground",
+        "desc": " The groundling is hit by an attack roll while it is on the ground.  The groundling halves the damage (round down) it takes from that attack."
+      }
+    ],
+    "index": "groundling-grunt-2024"
+  },
+  {
+    "name": "Groundling Slayer",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "burrow": "20 ft."
+    },
+    "strength": 17,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 13
+    },
+    "languages": "Common",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 58,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8 + 18",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The groundling makes two attacks, using Claw or Dagger in any combination."
+      },
+      {
+        "name": "Claw",
+        "desc": "m +5, reach 5 ft. Hit: 12 (2d8 + 3) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two paws.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Dagger",
+        "desc": "m,r +5, reach 5 ft. or range 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage plus 7 (2d6) Poison damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Go to Ground",
+        "desc": " The groundling is hit by an attack roll while it is on the ground.  The groundling halves the damage (round down) it takes from that attack."
+      }
+    ],
+    "index": "groundling-slayer-2024"
+  },
+  {
+    "name": "Groundling Stalker",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "burrow": "10 ft."
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 8,
+    "wisdom": 12,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-survival",
+          "name": "Skill: Survival",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 13
+    },
+    "languages": "Common",
+    "challenge_rating": 2,
+    "proficiency_bonus": 2,
+    "xp": 450,
+    "hit_points": 52,
+    "hit_dice": "8d8",
+    "hit_points_roll": "8d8 + 16",
+    "actions": [
+      {
+        "name": "Claw",
+        "desc": "m +5, reach 5 ft. Hit: 12 (2d8 + 3) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two paws.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Heavy Crossbow",
+        "desc": "r +5, range 100/400 ft. Hit: 14 (2d10 + 3) Piercing damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Go to Ground",
+        "desc": " The groundling is hit by an attack roll while it is on the ground.  The groundling halves the damage (round down) it takes from that attack."
+      }
+    ],
+    "index": "groundling-stalker-2024"
+  },
+  {
+    "name": "Illusionist Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 220,
+    "hit_dice": "40d8",
+    "hit_points_roll": "40d8 + 40",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Beguiling Spells (2/Day)",
+        "desc": "The archmage casts Hypnotic Pattern or Mirror Image, using the same spellcasting ability as Spellcasting.\n2/day: Hypnotic Pattern, Mirror Image"
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst attacks."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 21 (3d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Disguise Self, Invisibility, Mage Armor (included in AC), Mage Hand, Minor Illusion, Prestidigitation\n2/day each: Creation, Major Image, Nystul's Magic Aura, Seeming\n1/day each: Mirage Arcane, Weird"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "illusionist-archmage-2024"
+  },
+  {
+    "name": "Living Cone of Cold",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Large",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "25 ft.",
+      "fly": "25 ft.",
+      "hover": true
+    },
+    "strength": 10,
+    "dexterity": 15,
+    "constitution": 20,
+    "intelligence": 3,
+    "wisdom": 11,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "cold"
+    ],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 7,
+    "proficiency_bonus": 3,
+    "xp": 2900,
+    "hit_points": 105,
+    "hit_dice": "10d10",
+    "hit_points_roll": "10d10 + 50",
+    "special_abilities": [
+      {
+        "name": "Amorphous",
+        "desc": "The living spell can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The living spell has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The living spell makes two Magical Strike attacks."
+      },
+      {
+        "name": "Magical Strike",
+        "desc": "m +8, reach 10 ft. Hit: 27 (5d8 + 5) Cold damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Spell Mimicry (Recharge 5-6)",
+        "desc": "con DC 16, each creature in a 60-foot Cone.  36 (8d8) Cold damage.  Half damage."
+      }
+    ],
+    "index": "living-cone-of-cold-2024"
+  },
+  {
+    "name": "Living Thunderwave",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "25 ft.",
+      "fly": "25 ft.",
+      "hover": true
+    },
+    "strength": 10,
+    "dexterity": 13,
+    "constitution": 16,
+    "intelligence": 3,
+    "wisdom": 6,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "thunder"
+    ],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "60 ft.",
+      "passive_perception": 8
+    },
+    "languages": "",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 30,
+    "hit_dice": "4d8",
+    "hit_points_roll": "4d8 + 12",
+    "special_abilities": [
+      {
+        "name": "Amorphous",
+        "desc": "The living spell can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The living spell has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Magical Strike",
+        "desc": "m +5, reach 5 ft. Hit: 6 (1d6 + 3) Thunder damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Spell Mimicry (Recharge 5-6)",
+        "desc": "con DC 13, each creature in a 15-foot Cube originating from the living spell.  9 (2d8) Thunder damage, and the target is pushed 10 feet away from the living spell.  Half damage only.  A thunderous boom is audible within 300 feet."
+      }
+    ],
+    "index": "living-thunderwave-2024"
+  },
+  {
+    "name": "Living Vitriolic Sphere",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Large",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "25 ft.",
+      "fly": "25 ft.",
+      "hover": true
+    },
+    "strength": 10,
+    "dexterity": 15,
+    "constitution": 18,
+    "intelligence": 3,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "acid"
+    ],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 76,
+    "hit_dice": "8d10",
+    "hit_points_roll": "8d10 + 32",
+    "special_abilities": [
+      {
+        "name": "Amorphous",
+        "desc": "The living spell can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The living spell has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The living spell makes two Magical Strike attacks."
+      },
+      {
+        "name": "Magical Strike",
+        "desc": "m +7, reach 10 ft. Hit: 21 (5d6 + 4) Acid damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Spell Mimicry (Recharge 5-6)",
+        "desc": "dex DC 15, each creature in a 20-foot-radius Sphere centered on a point within 150 feet.  25 (10d4) Acid damage, and 12 (5d4) Acid damage at the end of the target's next turn.  Half initial damage only."
+      }
+    ],
+    "index": "living-vitriolic-sphere-2024"
+  },
+  {
+    "name": "Necromancer Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 225,
+    "hit_dice": "41d8",
+    "hit_points_roll": "41d8 + 41",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Marshal Undead",
+        "desc": "Undead creatures of the archmage's choice in a 60-foot Emanation originating from the archmage have Advantage on attack rolls and saving throws unless the archmage has the Incapacitated condition."
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst attacks. It can replace one attack with a use of Spellcasting to cast Blight."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 21 (3d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Blight, Detect Magic, Mage Armor (included in AC), Mage Hand, Prestidigitation, Speak with Dead\n1/day each: Circle of Death (level 7 version), Create Undead"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "necromancer-archmage-2024"
+  },
+  {
+    "name": "Plant Spirit",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Large",
+    "type": "plant",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level + 2 (Tree only)"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [
+      "fire (Tree only)",
+      "slashing (Fungus or Vine only)"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Siege Monster (Tree Only)",
+        "desc": "The spirit deals double damage to objects and structures."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam (Tree or Vine Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Bludgeoning damage."
+      },
+      {
+        "name": "Spore Spray (Fungus Only)",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 30 ft. Hit: 1d4 + summonSpellLevel Poison damage, and the target has the Poisoned condition until the end of its next turn. If the target already has the Poisoned condition, it instead takes an extra 3d4 Poison damage."
+      }
+    ],
+    "index": "plant-spirit-2024"
+  },
+  {
+    "name": "Plant Spirit (Fungus)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Large",
+    "type": "plant",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [
+      "slashing"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Spore Spray",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 30 ft. Hit: 1d4 + summonSpellLevel Poison damage, and the target has the Poisoned condition until the end of its next turn. If the target already has the Poisoned condition, it instead takes an extra 3d4 Poison damage."
+      }
+    ],
+    "index": "plant-spirit-fungus-2024"
+  },
+  {
+    "name": "Plant Spirit (Tree)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Large",
+    "type": "plant",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [
+      "fire"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Siege Monster",
+        "desc": "The spirit deals double damage to objects and structures."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "plant-spirit-tree-2024"
+  },
+  {
+    "name": "Plant Spirit (Vine)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Large",
+    "type": "plant",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [],
+    "damage_vulnerabilities": [
+      "slashing"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "plant-spirit-vine-2024"
+  },
+  {
+    "name": "Spellguard",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "lawful neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 20
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 12,
+    "wisdom": 13,
+    "charisma": 10,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 14
+    },
+    "languages": "Common",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 105,
+    "hit_dice": "14d8",
+    "hit_points_roll": "14d8 + 42",
+    "special_abilities": [
+      {
+        "name": "Superior Magic Resistance",
+        "desc": "The spellguard has Advantage on saving throws against spells and other magical effects. Spell attack rolls have Disadvantage against the spellguard."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spellguard makes two attacks, using Force Flail or Javelin in any combination."
+      },
+      {
+        "name": "Force Flail",
+        "desc": "m +7, reach 5 ft. Hit: 8 (1d8 + 4) Bludgeoning damage plus 7 (2d6) Force damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Javelin",
+        "desc": "m,r +7, reach 5 ft. or range 30/120 ft. Hit: 14 (3d6 + 4) Piercing damage.",
+        "attack_bonus": 7
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Defensive Divination",
+        "desc": " A creature the spellguard can see hits an ally within 5 feet of the spellguard with an attack roll, or an ally within 5 feet of the spellguard fails a saving throw against a spell or other magical effect.  The spellguard rolls 1d20 and chooses whether to use that roll in place of the d20 rolled for the attack roll or saving throw."
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "spellguard-2024"
+  },
+  {
+    "name": "Taisus",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Huge",
+    "type": "aberration",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 18
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "60 ft.",
+      "hover": true
+    },
+    "strength": 17,
+    "dexterity": 18,
+    "constitution": 20,
+    "intelligence": 25,
+    "wisdom": 22,
+    "charisma": 19,
+    "proficiencies": [
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 13,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 12,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 19,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 12,
+        "proficiency": {
+          "index": "skill-insight",
+          "name": "Skill: Insight",
+          "url": ""
+        }
+      },
+      {
+        "value": 12,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "truesight": "120 ft.",
+      "passive_perception": 22
+    },
+    "languages": "all, telepathy 120 ft.",
+    "challenge_rating": 19,
+    "proficiency_bonus": 6,
+    "xp": 22000,
+    "hit_points": 310,
+    "hit_dice": "27d12",
+    "hit_points_roll": "27d12 + 135",
+    "special_abilities": [
+      {
+        "name": "Arcane Immortality",
+        "desc": "If the taisus dies, its body crumbles into glittering dust. It gains a new body after 1d10 days, reviving with all its Hit Points, unless a Wish spell is cast on its remains to prevent the effects of this trait. The new body appears in an unoccupied space within 5 feet of a location designated by the taisus on its creation."
+      },
+      {
+        "name": "Legendary Resistance (4/Day)",
+        "desc": "If the taisus fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The taisus has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Protective Magic",
+        "desc": "The taisus casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\nAt will: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The taisus makes two Brain Drain attacks."
+      },
+      {
+        "name": "Brain Drain",
+        "desc": "m +13, reach 20 ft. Hit: 20 (3d8 + 7) Force damage plus 16 (3d10) Psychic damage, and if the target is a creature with spell slots, it's subjected to the following effect. con DC 21.  The target's highest-level unexpended spell slot is expended.",
+        "attack_bonus": 13
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The taisus casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 21):\nAt will: Detect Magic, Fireball (level 5 version), Invisibility, Mage Hand\n2/day each: Jallarzi's Storm of Radiance, Plane Shift, Scrying\n1/day each: Befuddlement, Disintegrate"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Deadly Drain",
+        "desc": "The taisus makes a Brain Drain attack. The taisus can't take this action again until the start of its next turn."
+      },
+      {
+        "name": "Teleport",
+        "desc": "The taisus teleports itself or a willing creature it can see within 10 feet of itself up to 120 feet to an unoccupied space the taisus can see."
+      }
+    ],
+    "index": "taisus-2024"
+  },
+  {
+    "name": "Transmuter Archmage",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "humanoid",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 20,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 15,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 17
+    },
+    "languages": "Common plus five other languages",
+    "challenge_rating": 15,
+    "proficiency_bonus": 5,
+    "xp": 13000,
+    "hit_points": 220,
+    "hit_dice": "40d8",
+    "hit_points_roll": "40d8 + 40",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The archmage has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Slow (2/Day)",
+        "desc": "The archmage casts Slow, using the same spellcasting ability as Spellcasting.\n2/day: Slow"
+      },
+      {
+        "name": "Protective Magic (3/Day)",
+        "desc": "The archmage casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\n3/day: Counterspell, Shield"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The archmage makes four Arcane Burst attacks."
+      },
+      {
+        "name": "Arcane Burst",
+        "desc": "m,r +10, reach 5 ft. or range 150 ft. Hit: 27 (4d10 + 5) Force damage.",
+        "attack_bonus": 10
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Alter Self, Detect Magic, Knock, Mage Armor (included in AC), Mage Hand, Polymorph, Prestidigitation\n1/day: Reverse Gravity\n2/day: Gaseous Form"
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "transmuter-archmage-2024"
+  },
+  {
+    "name": "Venger",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 19
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 20,
+    "constitution": 16,
+    "intelligence": 17,
+    "wisdom": 14,
+    "charisma": 21,
+    "proficiencies": [
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 11,
+        "proficiency": {
+          "index": "skill-intimidation",
+          "name": "Skill: Intimidation",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft. (unimpeded by magical Darkness)",
+      "passive_perception": 18
+    },
+    "languages": "Abyssal, Common, Infernal",
+    "challenge_rating": 17,
+    "proficiency_bonus": 6,
+    "xp": 18000,
+    "hit_points": 202,
+    "hit_dice": "27d8",
+    "hit_points_roll": "27d8 + 81",
+    "special_abilities": [
+      {
+        "name": "Fiendish Restoration",
+        "desc": "If Venger dies, his body dissipates into crimson dust, and he gains a new body in 1d10 days, reviving with all his Hit Points somewhere in one of his lairs."
+      },
+      {
+        "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+        "desc": "If Venger fails a saving throw, he can choose to succeed instead."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "Venger has Advantage on saving throws against spells and magical effects."
+      },
+      {
+        "name": "Mounted Adept",
+        "desc": "While Venger is mounted, he and his mount have Advantage on Dexterity saving throws, and Venger can force an attack targeting his mount to target him instead. Venger can't use this trait if he has the Incapacitated condition."
+      },
+      {
+        "name": "Telekinesis (2/Day)",
+        "desc": "Venger casts Telekinesis, using the same spellcasting ability as Spellcasting.\n2/day: Telekinesis"
+      },
+      {
+        "name": "Protective Magic",
+        "desc": "Venger casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.\nAt will: Counterspell, Shield"
+      },
+      {
+        "name": "Regional Effects",
+        "desc": "Venger's presence fouls the regions his lairs inhabit, creating the following effects:\nDesolate Terrain: Plant life within 1 mile of a lair withers and dies, creating a barren wasteland of cracked dirt.\nTormented Rest: Abyssal whispers plague visitors' dreams. Whenever a creature other than Venger or his allies finishes a Long Rest within 1 mile of a lair, it must succeed on a DC 15 Constitution saving throw or gain 1 Exhaustion level.\nIf Venger dies or moves a lair elsewhere, these effects end immediately."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "Venger makes three attacks, using Crimson Claw or Crimson Blast in any combination."
+      },
+      {
+        "name": "Crimson Claw",
+        "desc": "m +11, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage plus 10 (3d6) Fire damage.",
+        "attack_bonus": 11
+      },
+      {
+        "name": "Crimson Blast",
+        "desc": "r +11, range 120 ft. Hit: 24 (3d12 + 5) Force damage.",
+        "attack_bonus": 11
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "Venger casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 19):\nAt will: Detect Magic, Invisibility, Mage Hand, Silent Image\n2/day each: Alter Self, Contact Other Plane, Create Undead, Dimension Door\n1/day each: Control Weather, Imprisonment"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Booming Censure",
+        "desc": "wis DC 19, one creature Venger can see within 60 feet.  14 (4d6) Psychic damage, and the target has the Frightened condition until the end of its next turn.  Half damage only."
+      },
+      {
+        "name": "Crimson Strike",
+        "desc": "Venger makes one Crimson Claw or Crimson Blast attack."
+      },
+      {
+        "name": "Magic-Binding Chains",
+        "desc": "dex DC 19, one creature Venger can see within 30 feet.  The target has the Restrained condition until the end of its next turn. While Restrained, the target can't take the Magic action.  Venger can't take this action again until the start of his next turn."
+      }
+    ],
+    "index": "venger-2024"
+  },
+  {
+    "name": "Vestige Companion",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + your Charisma modifier"
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 1,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 15,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire (Fiend only)",
+      "necrotic (Undead only)",
+      "radiant (Celestial only)"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "speaks the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "4 + four times your Warlock level (the vestige has a number of Hit Dice [d6s] equal to your Warlock level)",
+    "special_abilities": [
+      {
+        "name": "Pact Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the vestige makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Vestige's Strike",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 60 ft. Hit: 1d6 + 3 plus your Charisma modifier Fire (Fiend), Necrotic (Undead), or Radiant (Celestial) damage."
+      }
+    ],
+    "desc": [
+      "Type: {'choose': ['celestial', 'fiend', 'undead']}."
+    ],
+    "index": "vestige-companion-2024"
+  },
+  {
+    "name": "Vestige Companion (Celestial)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "celestial",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + your Charisma modifier"
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 1,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 15,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "speaks the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "4 + four times your Warlock level (the vestige has a number of Hit Dice [d6s] equal to your Warlock level)",
+    "special_abilities": [
+      {
+        "name": "Pact Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the vestige makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Vestige's Strike",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 60 ft. Hit: 1d6 + 3 plus your Charisma modifier Radiant damage."
+      }
+    ],
+    "index": "vestige-companion-celestial-2024"
+  },
+  {
+    "name": "Vestige Companion (Fiend)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "fiend",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + your Charisma modifier"
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 1,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 15,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "speaks the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "4 + four times your Warlock level (the vestige has a number of Hit Dice [d6s] equal to your Warlock level)",
+    "special_abilities": [
+      {
+        "name": "Pact Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the vestige makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Vestige's Strike",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 60 ft. Hit: 1d6 + 3 plus your Charisma modifier Fire damage."
+      }
+    ],
+    "index": "vestige-companion-fiend-2024"
+  },
+  {
+    "name": "Vestige Companion (Undead)",
+    "edition": "2024",
+    "source": "AU",
+    "sources": [
+      "AU"
+    ],
+    "size": "Small",
+    "type": "undead",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + your Charisma modifier"
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 1,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 15,
+    "wisdom": 15,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "speaks the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "4 + four times your Warlock level (the vestige has a number of Hit Dice [d6s] equal to your Warlock level)",
+    "special_abilities": [
+      {
+        "name": "Pact Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the vestige makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Vestige's Strike",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 60 ft. Hit: 1d6 + 3 plus your Charisma modifier Necrotic damage."
+      }
+    ],
+    "index": "vestige-companion-undead-2024"
+  }
+]

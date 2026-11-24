@@ -9,9 +9,11 @@ import React, { useState, useMemo } from 'react';
 import { ArrowRight, ArrowLeft, TrendingUp, Award, Plus, Minus } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
 import { getASILevelsForCharacter } from '../../../utils/highLevelCreationUtils';
-import { AbilityName } from '../../../types/dnd';
+import { AbilityName, Feat, FeatChoiceMap } from '../../../types/dnd';
 import { getAvailableFeatsForCharacter } from '../../../utils/featUtils';
+import { getFeatChoiceSections } from '../../../utils/featGrantUtils';
 import { FEAT_DATABASE } from '../../../services/dataService';
+import { FeatChoiceModal } from '../components';
 
 interface ASIChoice {
   level: number;
@@ -34,21 +36,36 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
   const asiLevels = getASILevelsForCharacter(classSlug, edition, targetLevel);
 
   const [currentASIIndex, setCurrentASIIndex] = useState(0);
+  const [choiceFeat, setChoiceFeat] = useState<Feat | null>(null);
 
   // Initialize choices based on ASI levels
   const [choices, setChoices] = useState<ASIChoice[]>(() => {
-    return asiLevels.map(level => ({
-      level,
-      type: 'asi',
-      asiAllocations: {
-        STR: 0,
-        DEX: 0,
-        CON: 0,
-        INT: 0,
-        WIS: 0,
-        CHA: 0
+    return asiLevels.map(level => {
+      const saved = data.cumulativeASI?.find(choice => choice.level === level);
+      const allocated = Object.values(saved?.asiAllocations ?? {}).reduce((sum, points) => sum + points, 0);
+      if (saved?.type === 'asi' && saved.asiAllocations && allocated === 2) {
+        return {
+          level,
+          type: 'asi',
+          asiAllocations: {
+            STR: saved.asiAllocations.STR ?? 0,
+            DEX: saved.asiAllocations.DEX ?? 0,
+            CON: saved.asiAllocations.CON ?? 0,
+            INT: saved.asiAllocations.INT ?? 0,
+            WIS: saved.asiAllocations.WIS ?? 0,
+            CHA: saved.asiAllocations.CHA ?? 0,
+          },
+        };
       }
-    }));
+      if (saved?.type === 'feat' && saved.featSlug) {
+        return { level, type: 'feat', featSlug: saved.featSlug, asiAllocations: { STR: 0, DEX: 0, CON: 0, INT: 0, WIS: 0, CHA: 0 } };
+      }
+      return {
+        level,
+        type: 'asi',
+        asiAllocations: { STR: 0, DEX: 0, CON: 0, INT: 0, WIS: 0, CHA: 0 },
+      };
+    });
   });
 
   // Load available feats when switching to feat mode
@@ -74,6 +91,19 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
   }
 
   const currentChoice = choices[currentASIIndex];
+
+  const selectFeat = (featSlug: string) => {
+    const newChoices = [...choices];
+    newChoices[currentASIIndex] = { ...currentChoice, featSlug };
+    setChoices(newChoices);
+  };
+
+  const handleFeatChoiceConfirm = (featChoices: FeatChoiceMap) => {
+    if (!choiceFeat) return;
+    updateData({ featChoices: { ...(data.featChoices || {}), [choiceFeat.slug]: featChoices } });
+    selectFeat(choiceFeat.slug);
+  };
+
   const abilities: AbilityName[] = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 
   // Calculate total points allocated for current ASI
@@ -321,12 +351,11 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
               <button
                 key={feat.slug}
                 onClick={() => {
-                  const newChoices = [...choices];
-                  newChoices[currentASIIndex] = {
-                    ...currentChoice,
-                    featSlug: feat.slug
-                  };
-                  setChoices(newChoices);
+                  if (getFeatChoiceSections(feat).length > 0) {
+                    setChoiceFeat(feat);
+                  } else {
+                    selectFeat(feat.slug);
+                  }
                 }}
                 className={`p-4 rounded-lg border-2 text-left transition-all ${
                   currentChoice.featSlug === feat.slug
@@ -341,7 +370,7 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
                   {feat.category.replace('_', ' ')}
                 </div>
                 <div className="text-sm text-theme-text line-clamp-3">
-                  {feat.description.split('\n')[0]} {/* First line of description */}
+                  {feat.benefits[0]}
                 </div>
               </button>
             ))}
@@ -405,6 +434,12 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
       </div>
+      <FeatChoiceModal
+        isOpen={!!choiceFeat}
+        onClose={() => setChoiceFeat(null)}
+        feat={choiceFeat}
+        onConfirm={handleFeatChoiceConfirm}
+      />
     </div>
   );
 };

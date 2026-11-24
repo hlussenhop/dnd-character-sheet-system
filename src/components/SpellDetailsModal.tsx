@@ -1,6 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { AppSpell } from '../services/dataService';
+import { SpellBlurb } from './SpellBlurb';
 
 interface SpellDetailsModalProps {
   spell: AppSpell | null;
@@ -111,27 +112,10 @@ const SpellDetailsModal: React.FC<SpellDetailsModalProps> = ({
             </div>
           </div>
 
-          {/* Full Description */}
           <div className="mb-4">
             <h3 className="text-sm font-semibold text-theme-tertiary mb-2">Description</h3>
-            <div className="bg-theme-secondary rounded p-4">
-              <p className="text-sm text-theme-tertiary leading-relaxed">
-                {spell.description}
-              </p>
-            </div>
+            <SpellBlurb spell={spell} higher className="bg-theme-secondary rounded p-4 text-sm text-theme-tertiary leading-relaxed" />
           </div>
-
-          {/* At Higher Levels */}
-          {spell.atHigherLevels && (
-            <div className="mb-4">
-              <h3 className="text-sm font-semibold text-theme-tertiary mb-2">At Higher Levels</h3>
-              <div className="bg-theme-secondary rounded p-4 border-l-4 border-accent-purple">
-                <p className="text-sm text-purple-200">
-                  {spell.atHigherLevels}
-                </p>
-              </div>
-            </div>
-          )}
 
           {/* Damage/Save Info */}
           {(spell.damageType || spell.saveType) && (

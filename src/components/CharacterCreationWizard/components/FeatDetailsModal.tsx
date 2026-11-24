@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Star, Sword, Zap, Heart, Eye, Users, Mountain } from 'lucide-react';
 import { Feat } from '../../../types/dnd';
+import { FeatDescription } from '../../FeatDescription';
 
 interface FeatDetailsModalProps {
   feat: Feat | null;
@@ -45,24 +46,7 @@ export const FeatDetailsModal: React.FC<FeatDetailsModalProps> = ({
     return 'text-green-400';
   };
 
-  const formatPrerequisites = (feat: Feat) => {
-    if (feat.prerequisites) {
-      const prereqs = [];
-      if (feat.prerequisites.level) prereqs.push(`Level ${feat.prerequisites.level}`);
-      if (feat.prerequisites.stats) {
-        const stats = Object.entries(feat.prerequisites.stats)
-          .map(([ability, score]) => `${ability} ${score}`)
-          .join(', ');
-        prereqs.push(stats);
-      }
-      if (feat.prerequisites.features && feat.prerequisites.features.length > 0) {
-        prereqs.push(feat.prerequisites.features.join(', '));
-      }
-      if (feat.prerequisites.spellcasting) prereqs.push('Spellcasting');
-      return prereqs.join(', ');
-    }
-    return feat.prerequisite || 'None';
-  };
+  const formatPrerequisites = (feat: Feat) => feat.prerequisite || 'None';
 
   return (
     <div className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-50 p-4">
@@ -97,7 +81,7 @@ export const FeatDetailsModal: React.FC<FeatDetailsModalProps> = ({
           {/* Description */}
           <div className="bg-theme-tertiary/50 p-4 rounded-lg">
             <h3 className="text-sm font-semibold text-theme-muted uppercase mb-2">Description</h3>
-            <p className="text-sm text-theme-primary leading-relaxed">{feat.description}</p>
+            <FeatDescription feat={feat} className="text-sm text-theme-primary leading-relaxed" />
           </div>
 
           {/* Benefits */}

@@ -11,15 +11,34 @@ export interface Alignment {
   description: string;
 }
 
+/** A pick a background asks for: `from` omitted means any skill, tool or language. */
+export interface BackgroundChoice {
+  count: number;
+  from?: string[];
+}
+
+/** One alternative set of tools (the Eberron House Agent picks a dragonmarked house). */
+export interface BackgroundToolPackage {
+  label: string;
+  tools: string[];
+  choices?: BackgroundChoice[];
+}
+
 export interface Background {
   slug: string; // Unique identifier
   name: string;
   edition: Edition; // '2014' | '2024'
+  source?: string; // Book abbreviation the record was generated from
+  sources?: string[]; // Other printings of the same background
   description: string;
   details?: string; // Additional detailed description
   detailedDescription?: string; // Even more detailed
   skill_proficiencies: string[];
+  /** Choose this many skills. `from` omitted means any skill. */
+  skillChoices?: BackgroundChoice;
   languages?: string[];
+  /** Extra languages chosen from a list (on top of "One of your choice" / "Two of your choice"). */
+  languageChoices?: BackgroundChoice;
   equipment: string[];
   equipmentOptions?: EquipmentOption[];
   
@@ -34,7 +53,17 @@ export interface Background {
     fixed?: Partial<Record<AbilityName, number>>;
   };
   originFeat?: string;
-  tool_proficiencies?: string[]; // 2024 specific
+  /** The background offers one of these feats (a named feat, or a feat or any Dark Gift). */
+  originFeatOptions?: string[];
+  tool_proficiencies?: string[];
+  /** Tool picks granted alongside the fixed tools. */
+  toolChoices?: BackgroundChoice[];
+  /** Pick one package; its tools replace tool_proficiencies. */
+  toolPackages?: BackgroundToolPackage[];
+  /** Shown but not enforced, such as a campaign requirement. */
+  note?: string;
+  /** Spells this background adds to the class spell list (Ravnica guilds, Strixhaven colleges). */
+  expandedSpells?: string[];
 
   personality_traits: string[];
   ideals: string[];
@@ -107,6 +136,8 @@ export interface Character {
   weaponMastery?: string[]; // Rogue, Fighter, Barbarian, Paladin: Mastered weapon slugs
   fightingStyle?: string; // Fighter, Paladin, Ranger: Fighting Style slug
   eldritchInvocations?: string[]; // Warlock: Eldritch Invocation slugs
+  /** Invocations, maneuvers, metamagic, infusions, and the other optional class features. */
+  optionalFeatures?: string[];
   secondWindUses?: number; // Fighter: Second Wind uses remaining
 
   // Background data (2024)
@@ -125,6 +156,26 @@ export interface Character {
     dieType: number; // d6, d8, d10, d12, etc.
   };
   speed: number;
+  /** Extra movement modes from species traits, in feet (e.g. { fly: 30, swim: 30 }). Walking speed is `speed`. */
+  movement?: Partial<Record<MovementKind, number>>;
+  /** Special senses in feet, from species traits (darkvision, ...). */
+  senses?: SensesGrant;
+  /** Damage types the character resists (species traits; more sources later). */
+  damageResistances?: string[];
+  /** Conditions the character is immune to. */
+  conditionImmunities?: string[];
+  /** Damage types the character is immune to (feats such as Boon of Poison Mastery). */
+  damageImmunities?: string[];
+  /** Saving throw proficiencies beyond the class's (e.g. the Resilient feat). */
+  savingThrowProficiencies?: AbilityName[];
+  /** Natural armor from a species trait; used by AC recalculation. */
+  naturalArmor?: NaturalArmorGrant;
+  /** Extra max HP gained per character level from species traits (e.g. Dwarven Toughness). */
+  hpPerLevelBonus?: number;
+  /** Flat AC bonus from species traits (e.g. Warforged Integrated Protection). */
+  acBonus?: number;
+  /** Selections made for species choices (draconic ancestry, fiendish legacy, ...), by choice id. */
+  speciesChoices?: Record<string, string>;
   initiative: number;
   abilities: {
     STR: AbilityScore; DEX: AbilityScore; CON: AbilityScore;
@@ -391,12 +442,76 @@ export interface Equipment {
 }
 
 export interface EquippedItem {
-  equipmentSlug: string; // Reference to Equipment slug
+  equipmentSlug: string; // Reference to Equipment slug. A magic item uses `magic:<catalog slug>` so it does not stack with mundane gear.
   quantity: number;
   equipped: boolean; // Is this item currently equipped?
+  /** Catalog slug when this row is a magic item. */
+  magicItemSlug?: string;
   attuned?: boolean; // Is this magic item attuned? (requires attunement slot)
   notes?: string; // Player notes about the item
   trinket?: TrinketData; // If this is a trinket item
+}
+
+/** A speed the item grants. `equalToWalk` copies the wearer's walking speed. */
+export interface MagicItemMovement {
+  equalToWalk?: Array<'walk' | 'fly' | 'climb' | 'swim' | 'burrow'>;
+  set?: Partial<Record<'walk' | 'fly' | 'climb' | 'swim' | 'burrow', number>>;
+  multiplyWalk?: number;
+}
+
+/**
+ * A magic item from the sourcebooks. The catalog omits `description`;
+ * `loadMagicItems` fills it from the item's source chunk.
+ * Bonuses are only the structured ones (a +1 ring, a fixed ability score).
+ */
+export interface MagicItem {
+  slug: string;
+  name: string;
+  edition: Edition;
+  source: string;
+  sources: string[];
+  rarity: string;
+  attunement: boolean;
+  attunementRequirement?: string;
+  itemType: string;
+  typeCode?: string;
+  wondrous?: boolean;
+  staff?: boolean;
+  cursed?: boolean;
+  sentient?: boolean;
+  tier?: 'minor' | 'major';
+  weight?: number;
+  /** Cost in copper pieces, when the book prints one. */
+  valueCp?: number;
+  charges?: number;
+  recharge?: string;
+  rechargeAmount?: string;
+  /** The wielder is proficient with this item. */
+  proficient?: boolean;
+  bonusAc?: number;
+  bonusWeapon?: number;
+  bonusWeaponAttack?: number;
+  bonusWeaponDamage?: number;
+  bonusSpellAttack?: number;
+  bonusSpellSaveDc?: number;
+  bonusSavingThrow?: number;
+  bonusAbilityCheck?: number;
+  bonusProficiencyBonus?: number;
+  bonusSavingThrowConcentration?: number;
+  /** The ability becomes this score while the item applies. */
+  abilityScoreSet?: Partial<Record<Ability, number>>;
+  abilityBonus?: Partial<Record<Ability, number>>;
+  resist?: string[];
+  immune?: string[];
+  conditionImmune?: string[];
+  movement?: MagicItemMovement;
+  focus?: string[];
+  properties?: string[];
+  /** Equipment index of the mundane item this magic item is based on. */
+  baseItem?: string;
+  /** Spell indexes the item can cast. Choices and unknown names stay in the description. */
+  spells?: string[];
+  description?: string;
 }
 
 // Sprint 5: Class Features, Subclasses, and Feats
@@ -430,30 +545,70 @@ export interface Subclass {
   roleplayingTips?: string[];
   source?: string;
   edition?: Edition; // D&D edition (2014 or 2024 rules)
+  /** Level this subclass is chosen (1 for a 2014 cleric, 2 for a 2014 wizard, usually 3). */
+  subclassLevel?: number;
+  /** Spells the subclass adds at a character level. Added on top of the spells the player picks. */
+  grantedSpells?: { level: number; slugs: string[] }[];
+  /** Spells added to the class list (dunamancy, or every option of a land-style choice). */
+  expandedSpells?: string[];
   icon?: string;
   themeColor?: string;
+}
+
+export type FeatCategory =
+  | 'origin' | 'fighting_style' | 'general' | 'epic_boon' | 'dragonmark' | 'dark_gift' | 'species';
+
+/** One way to qualify for a feat: every listed condition must hold (lists inside are "any of"). */
+export interface FeatPrerequisiteGroup {
+  level?: number;
+  /** With `level`: that many levels in this class (e.g. "Level 1 Sorcerer") */
+  className?: string;
+  abilities?: Array<Partial<Record<AbilityName, number>>>;
+  species?: Array<{ name: string; subrace?: string }>;
+  spellcasting?: boolean;
+  features?: string[];
+  /** Feat slugs */
+  feats?: string[];
+  proficiencies?: Array<{ armor?: string; weapon?: string; tool?: string }>;
+  backgrounds?: string[];
+  /** Has a feat of one of these categories */
+  featCategories?: FeatCategory[];
+  /** Has no other feat of these categories */
+  exclusiveFeatCategories?: FeatCategory[];
+  /** Setting restriction, shown but not enforced */
+  campaign?: string[];
+  /** Free-text condition, shown but not enforced */
+  other?: string;
 }
 
 export interface Feat {
   slug: string;
   name: string;
-  source: string; // 'PHB', 'XGtE', 'TCoE', 'FToD', 'SRD'
+  source: string; // 5etools source code ('PHB', 'XPHB', 'XGE', ...)
+  edition: Edition;
   year: number; // 2014 or 2024
-  category: 'origin' | 'fighting_style' | 'general' | 'epic_boon'; // 2024 feat categories
+  category: FeatCategory;
+  /** Display text of the prerequisites */
   prerequisite: string | null;
-  prerequisites?: { // Enhanced prerequisite structure for 2024
+  prerequisites?: {
+    /** Lowest level any alternative needs */
     level?: number;
-    stats?: Record<AbilityName, number>;
-    features?: string[];
-    spellcasting?: boolean;
+    /** Alternatives (OR); the feat is available when any group is met */
+    anyOf?: FeatPrerequisiteGroup[];
   };
   abilityScoreIncrease?: {
     choices: number;
     options: AbilityName[];
     amount: number;
+    /** Score cap (default 20; Epic Boons 30) */
+    max?: number;
   };
+  repeatable?: boolean;
+  /** Mechanical benefits the app applies (from structured source data) */
+  grants?: TraitGrant;
   benefits: string[];
-  description: string;
+  /** Full text; most feats load it lazily (see useFeatDescription) */
+  description?: string;
 }
 
 // Validation types for enhanced wizard feedback
@@ -478,6 +633,12 @@ export interface CharacterCreationData {
   speciesSlug: string;
   selectedSpeciesVariant?: string; // e.g., "standard", "variant"
   selectedLineage?: string; // 2024 lineage choice when applicable
+  /** Player's pick for the species' flexible ability score increases (2014 rules) */
+  speciesAbilityChoices?: SpeciesAbilityChoiceSelection;
+  /** Picks for species choice definitions (draconic ancestry, fiendish legacy, ...), by choice id */
+  speciesChoices?: Record<string, string>;
+  /** Picks for species proficiency choices, by slot id (see getSpeciesPickSlots) */
+  speciesPicks?: Record<string, string[]>;
 
   // Variant Human Choices
   variantAbilityBonuses?: Record<AbilityName, number>; // +1 to two abilities
@@ -491,8 +652,10 @@ export interface CharacterCreationData {
   alignment: string;
 
   // 2024 Universal Wizard Flow Fields
-  backgroundSkills?: string[]; // Skills granted by background (Step 1)
-  backgroundTools?: string[]; // Tools granted by background (Step 1)
+  backgroundSkills?: string[]; // Skills chosen for the background (Step 1)
+  backgroundTools?: string[]; // Tools chosen for the background (Step 1)
+  /** The dragonmarked house (or other tool package) chosen for the background. */
+  backgroundToolPackage?: string;
   speciesFeat?: string; // 2024: Feat chosen from species options
   humanVersatileFeat?: string; // 2024: Extra Origin Feat for humans
   backgroundFeat?: string; // Origin Feat from background (Step 1)
@@ -531,6 +694,8 @@ export interface CharacterCreationData {
   // Sprint 5: Subclass, Fighting Style, and Feats
   subclassSlug?: string | null;
   selectedFightingStyle?: string | null;
+  /** Invocations, maneuvers, metamagic, infusions, and the other optional class features. */
+  optionalFeatures?: string[];
   selectedFeats?: string[]; // Array of feat slugs
   featChoices?: Record<string, FeatChoiceMap>; // Additional choices for feats (e.g., Elemental Adept damage type)
 
@@ -560,12 +725,118 @@ export interface CharacterCreationData {
   }>;
 }
 
+/**
+ * Player-chosen (flexible) ability score increases granted by a species or variant.
+ * Fixed increases stay in `ability_bonuses`; this describes the part the player picks.
+ *
+ * Examples:
+ *  - MPMM "Customizing Your Origin":  { patterns: [[2, 1], [1, 1, 1]] }
+ *  - 2014 Half-Elf (CHA +2 fixed):    { patterns: [[1, 1]], from: [STR, DEX, CON, INT, WIS] }
+ *  - Changeling / Warforged style:    { patterns: [[1]], from: [...] }
+ *  - Custom Lineage:                  { patterns: [[2]] }
+ *
+ * Each ability can be chosen at most once, and never one that already has a fixed bonus.
+ */
+export interface SpeciesAbilityChoice {
+  /** Allowed distributions of increments; each inner array is one valid way to spend the choice. */
+  patterns: number[][];
+  /** Abilities that may receive a chosen increase. Defaults to all six. */
+  from?: AbilityName[];
+}
+
+/** The player's pick for a SpeciesAbilityChoice. */
+export interface SpeciesAbilityChoiceSelection {
+  /** Which pattern was picked, e.g. [2, 1] */
+  pattern: number[];
+  /** Abilities that received an increase and by how much */
+  bonuses: Partial<Record<AbilityName, number>>;
+}
+
+export type MovementKind = 'fly' | 'swim' | 'climb' | 'burrow';
+
+export interface SensesGrant {
+  darkvision?: number;
+  blindsight?: number;
+  tremorsense?: number;
+  truesight?: number;
+}
+
+/** Natural armor: AC = base + the listed ability modifiers (when no armor is worn, or armor gives less). */
+export interface NaturalArmorGrant {
+  base: number;
+  abilities?: AbilityName[];
+  /** Tortle-style shells: armor cannot be worn, only a shield applies. */
+  noArmor?: boolean;
+}
+
+/**
+ * Mechanics a species trait (or a species choice option) gives the character.
+ * Data lives in `src/data/speciesTraitGrants.json`, keyed by trait name; a
+ * `"<Name> [2024]"` key overrides the plain key for 2024 characters (the same
+ * convention as featureDescriptions.json).
+ */
+export interface TraitGrant {
+  /** Movement modes in feet, or 'walk' for "equal to your walking speed" */
+  movement?: Partial<Record<MovementKind, number | 'walk'>>;
+  senses?: SensesGrant;
+  resistances?: string[];
+  conditionImmunities?: string[];
+  skills?: SkillName[];
+  /** Choose `count` skills (from `from`, default any) */
+  skillChoices?: { count: number; from?: SkillName[] };
+  tools?: string[];
+  toolChoices?: { count: number; from: string[] };
+  weapons?: string[];
+  armor?: string[];
+  /** Extra languages of the player's choice */
+  languageChoices?: number;
+  naturalArmor?: NaturalArmorGrant;
+  hpPerLevel?: number;
+  /** Flat bonus to Armor Class (Warforged Integrated Protection) */
+  acBonus?: number;
+  /** Proficiency bonus added to initiative (Harengon Hare-Trigger) */
+  initiativeProficiency?: boolean;
+  /** Flat initiative bonus (2014 Alert) */
+  initiativeBonus?: number;
+  /** Added to walking speed (Mobile, Speedy) */
+  speedBonus?: number;
+  /** Fixed languages */
+  languages?: string[];
+  resistanceChoices?: { count: number; from: string[] };
+  damageImmunities?: string[];
+  savingThrows?: AbilityName[];
+  savingThrowChoices?: { count: number; from: AbilityName[] };
+  expertise?: SkillName[];
+  /** Character level at which the grant starts to apply (e.g. 2024 Draconic Flight at 5) */
+  minLevel?: number;
+  /** Short note shown with the grant, e.g. a restriction ("not in medium or heavy armor") */
+  note?: string;
+}
+
+/** A pick the player makes for a species (e.g. Draconic Ancestry); each option can carry grants. */
+export interface SpeciesChoiceDef {
+  id: string;
+  label: string;
+  description?: string;
+  options: Array<{ value: string; label: string; description?: string; grants?: TraitGrant }>;
+}
+
 export interface SpeciesVariant {
   slug: string;
   name: string;
   description: string;
+  /** Walking speed override in feet (e.g. Air Genasi 35). Omit to use the species' speed. */
+  speed?: number;
+  /**
+   * Fixed increases. When a variant is selected its bonuses/abilityChoice REPLACE the
+   * base species' (they are not additive), so variants must restate anything inherited.
+   */
   ability_bonuses: Partial<Record<AbilityName, number>>;
+  /** Player-chosen increases (see SpeciesAbilityChoice) */
+  abilityChoice?: SpeciesAbilityChoice;
   species_traits: string[];
+  /** Base species traits this variant replaces (e.g. a Tiefling bloodline replaces Infernal Legacy). */
+  replacesTraits?: string[];
   features: string[];
 }
 
@@ -577,19 +848,36 @@ export interface Species {
   /** List of all sources this species draws from (for deduped records) */
   sources?: string[];
   speed: number;
+  /** Swim speed in feet, when the book gives one that is not equal to the walk speed. */
+  swimSpeed?: number;
   ability_bonuses?: Partial<Record<AbilityName, number>>; // Optional in 2024 (moved to Background)
+  /** Player-chosen increases on top of `ability_bonuses` (2014 rules only) */
+  abilityChoice?: SpeciesAbilityChoice;
    species_traits: string[];
    description: string;
    detailedDescription?: string;
    typicalRoles: string[];
   variants?: SpeciesVariant[];
   defaultVariant?: string;
+  /**
+   * 2014 species whose base form is also playable (e.g. a Half-Elf with or without a Dragonmark).
+   * When true the generic variant picker offers a "base species" option and does not block Step 2.
+   * When false/absent, one variant must be chosen.
+   */
+  variantOptional?: boolean;
+  /** Extra languages of the player's choice the species grants ("Common plus one of your choice") */
+  languageChoices?: number;
   /** Flag species as 2024 PHB core entry */
   core?: boolean;
   /** Flag species as non-core expanded option */
   expanded?: boolean;
   /** Tag species for category filtering (e.g., monstrous, planar, exotic) */
   tags?: string[];
+  /**
+   * DMG monstrous player option (Bullywug, Gnoll, and the rest).
+   * Hidden from creation lists when SHOW_MONSTROUS_PLAYER_SPECIES is off.
+   */
+  monstrousOption?: boolean;
   /** Mark legacy-only species (2014 or deprecated) */
   legacy?: boolean;
   /** Alternate historical slugs for migration */
@@ -944,6 +1232,10 @@ export interface Monster {
   url?: string;
   image?: string;
   desc?: string[];
+  /** Source-book edition. The 2014 SRD file leaves this unset. */
+  edition?: Edition;
+  source?: string;
+  sources?: string[];
 }
 
 export interface UserMonster extends Monster {
@@ -994,6 +1286,9 @@ export interface LevelUpChoices {
   /** Feat chosen (if taking feat instead of ASI) */
   featChosen?: string;
 
+  /** Picks for the chosen feat (ability, skills, ...; see getFeatPickSlots) */
+  featChoices?: FeatChoiceMap;
+
   /** Subclass chosen */
   subclassChosen?: string;
 
@@ -1011,6 +1306,9 @@ export interface LevelUpChoices {
 
   /** Eldritch invocations chosen (Warlock) */
   eldritchInvocationsChosen?: string[];
+
+  /** Optional class features chosen at this level (invocations, maneuvers, metamagic, ...). */
+  optionalFeaturesChosen?: string[];
 }
 
 // ==================== NPC System ====================

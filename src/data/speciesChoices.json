@@ -1,0 +1,725 @@
+{
+  "choices": {
+    "dragonborn": [
+      {
+        "id": "draconicAncestry",
+        "label": "Draconic Ancestry",
+        "description": "Your dragon type sets your breath weapon and damage resistance.",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black (Acid)",
+            "description": "Breath weapon: acid damage, a 5 by 30 ft. line (Dex save). Resistance to acid damage.",
+            "grants": {
+              "resistances": [
+                "acid"
+              ]
+            }
+          },
+          {
+            "value": "blue",
+            "label": "Blue (Lightning)",
+            "description": "Breath weapon: lightning damage, a 5 by 30 ft. line (Dex save). Resistance to lightning damage.",
+            "grants": {
+              "resistances": [
+                "lightning"
+              ]
+            }
+          },
+          {
+            "value": "brass",
+            "label": "Brass (Fire)",
+            "description": "Breath weapon: fire damage, a 5 by 30 ft. line (Dex save). Resistance to fire damage.",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "bronze",
+            "label": "Bronze (Lightning)",
+            "description": "Breath weapon: lightning damage, a 5 by 30 ft. line (Dex save). Resistance to lightning damage.",
+            "grants": {
+              "resistances": [
+                "lightning"
+              ]
+            }
+          },
+          {
+            "value": "copper",
+            "label": "Copper (Acid)",
+            "description": "Breath weapon: acid damage, a 5 by 30 ft. line (Dex save). Resistance to acid damage.",
+            "grants": {
+              "resistances": [
+                "acid"
+              ]
+            }
+          },
+          {
+            "value": "gold",
+            "label": "Gold (Fire)",
+            "description": "Breath weapon: fire damage, a 15 ft. cone (Dex save). Resistance to fire damage.",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "green",
+            "label": "Green (Poison)",
+            "description": "Breath weapon: poison damage, a 15 ft. cone (Con save). Resistance to poison damage.",
+            "grants": {
+              "resistances": [
+                "poison"
+              ]
+            }
+          },
+          {
+            "value": "red",
+            "label": "Red (Fire)",
+            "description": "Breath weapon: fire damage, a 15 ft. cone (Dex save). Resistance to fire damage.",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "silver",
+            "label": "Silver (Cold)",
+            "description": "Breath weapon: cold damage, a 15 ft. cone (Con save). Resistance to cold damage.",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          },
+          {
+            "value": "white",
+            "label": "White (Cold)",
+            "description": "Breath weapon: cold damage, a 15 ft. cone (Con save). Resistance to cold damage.",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "dragonborn-2024": [
+      {
+        "id": "draconicAncestry",
+        "label": "Draconic Ancestry",
+        "description": "Your dragon type sets your Breath Weapon damage and Damage Resistance.",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black (Acid)",
+            "description": "Acid damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "acid"
+              ]
+            }
+          },
+          {
+            "value": "blue",
+            "label": "Blue (Lightning)",
+            "description": "Lightning damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "lightning"
+              ]
+            }
+          },
+          {
+            "value": "brass",
+            "label": "Brass (Fire)",
+            "description": "Fire damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "bronze",
+            "label": "Bronze (Lightning)",
+            "description": "Lightning damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "lightning"
+              ]
+            }
+          },
+          {
+            "value": "copper",
+            "label": "Copper (Acid)",
+            "description": "Acid damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "acid"
+              ]
+            }
+          },
+          {
+            "value": "gold",
+            "label": "Gold (Fire)",
+            "description": "Fire damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "green",
+            "label": "Green (Poison)",
+            "description": "Poison damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "poison"
+              ]
+            }
+          },
+          {
+            "value": "red",
+            "label": "Red (Fire)",
+            "description": "Fire damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "silver",
+            "label": "Silver (Cold)",
+            "description": "Cold damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          },
+          {
+            "value": "white",
+            "label": "White (Cold)",
+            "description": "Cold damage for your Breath Weapon and Damage Resistance.",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "tiefling-2024": [
+      {
+        "id": "fiendishLegacy",
+        "label": "Fiendish Legacy",
+        "description": "Your legacy sets your damage resistance and the spells you learn (cantrip now, one spell at level 3 and one at level 5).",
+        "options": [
+          {
+            "value": "abyssal",
+            "label": "Abyssal",
+            "description": "Poison Resistance; Poison Spray; Ray of Sickness (3rd); Hold Person (5th).",
+            "grants": {
+              "resistances": [
+                "poison"
+              ]
+            }
+          },
+          {
+            "value": "chthonic",
+            "label": "Chthonic",
+            "description": "Necrotic Resistance; Chill Touch; False Life (3rd); Ray of Enfeeblement (5th).",
+            "grants": {
+              "resistances": [
+                "necrotic"
+              ]
+            }
+          },
+          {
+            "value": "infernal",
+            "label": "Infernal",
+            "description": "Fire Resistance; Fire Bolt; Hellish Rebuke (3rd); Darkness (5th).",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "goliath-2024": [
+      {
+        "id": "giantAncestry",
+        "label": "Giant Ancestry",
+        "description": "Choose a supernatural boon (uses equal to your Proficiency Bonus per long rest).",
+        "options": [
+          {
+            "value": "cloud",
+            "label": "Cloud's Jaunt (Cloud Giant)",
+            "description": "Bonus Action: teleport up to 30 feet."
+          },
+          {
+            "value": "fire",
+            "label": "Fire's Burn (Fire Giant)",
+            "description": "When you hit, deal an extra 1d10 Fire damage."
+          },
+          {
+            "value": "frost",
+            "label": "Frost's Chill (Frost Giant)",
+            "description": "When you hit, deal an extra 1d6 Cold damage and reduce the target's Speed by 10 feet."
+          },
+          {
+            "value": "hill",
+            "label": "Hill's Tumble (Hill Giant)",
+            "description": "When you hit a Large or smaller creature, you can knock it Prone."
+          },
+          {
+            "value": "stone",
+            "label": "Stone's Endurance (Stone Giant)",
+            "description": "Reaction: reduce damage taken by 1d12 + your Constitution modifier."
+          },
+          {
+            "value": "storm",
+            "label": "Storm's Thunder (Storm Giant)",
+            "description": "Reaction: when damaged by a creature within 60 feet, deal 1d8 Thunder damage to it."
+          }
+        ]
+      }
+    ],
+    "simic-hybrid": [
+      {
+        "id": "animalEnhancement",
+        "label": "Animal Enhancement (1st level)",
+        "description": "Your first animal enhancement. The 5th-level enhancement is described in the trait text.",
+        "options": [
+          {
+            "value": "manta-glide",
+            "label": "Manta Glide",
+            "description": "Ray-like fins slow your fall: subtract up to 100 feet from falling damage and glide 2 feet per foot descended."
+          },
+          {
+            "value": "nimble-climber",
+            "label": "Nimble Climber",
+            "description": "You have a climbing speed equal to your walking speed.",
+            "grants": {
+              "movement": {
+                "climb": "walk"
+              }
+            }
+          },
+          {
+            "value": "underwater-adaptation",
+            "label": "Underwater Adaptation",
+            "description": "You can breathe air and water and have a swimming speed equal to your walking speed.",
+            "grants": {
+              "movement": {
+                "swim": "walk"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "dragonborn-chromatic": [
+      {
+        "id": "ancestry",
+        "label": "Chromatic Ancestry",
+        "description": "Choose your chromatic dragon ancestor. It sets the damage type of your breath weapon and your resistance.",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black (Acid)",
+            "description": "Acid breath and acid resistance",
+            "grants": {
+              "resistances": [
+                "acid"
+              ]
+            }
+          },
+          {
+            "value": "blue",
+            "label": "Blue (Lightning)",
+            "description": "Lightning breath and lightning resistance",
+            "grants": {
+              "resistances": [
+                "lightning"
+              ]
+            }
+          },
+          {
+            "value": "green",
+            "label": "Green (Poison)",
+            "description": "Poison breath and poison resistance",
+            "grants": {
+              "resistances": [
+                "poison"
+              ]
+            }
+          },
+          {
+            "value": "red",
+            "label": "Red (Fire)",
+            "description": "Fire breath and fire resistance",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "white",
+            "label": "White (Cold)",
+            "description": "Cold breath and cold resistance",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "dragonborn-gem": [
+      {
+        "id": "ancestry",
+        "label": "Gem Ancestry",
+        "description": "Choose your gem dragon ancestor. It sets the damage type of your breath weapon and your resistance.",
+        "options": [
+          {
+            "value": "amethyst",
+            "label": "Amethyst (Force)",
+            "description": "Force breath and force resistance",
+            "grants": {
+              "resistances": [
+                "force"
+              ]
+            }
+          },
+          {
+            "value": "crystal",
+            "label": "Crystal (Radiant)",
+            "description": "Radiant breath and radiant resistance",
+            "grants": {
+              "resistances": [
+                "radiant"
+              ]
+            }
+          },
+          {
+            "value": "emerald",
+            "label": "Emerald (Psychic)",
+            "description": "Psychic breath and psychic resistance",
+            "grants": {
+              "resistances": [
+                "psychic"
+              ]
+            }
+          },
+          {
+            "value": "sapphire",
+            "label": "Sapphire (Thunder)",
+            "description": "Thunder breath and thunder resistance",
+            "grants": {
+              "resistances": [
+                "thunder"
+              ]
+            }
+          },
+          {
+            "value": "topaz",
+            "label": "Topaz (Necrotic)",
+            "description": "Necrotic breath and necrotic resistance",
+            "grants": {
+              "resistances": [
+                "necrotic"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "dragonborn-metallic": [
+      {
+        "id": "ancestry",
+        "label": "Metallic Ancestry",
+        "description": "Choose your metallic dragon ancestor. It sets the damage type of your breath weapon and your resistance.",
+        "options": [
+          {
+            "value": "brass",
+            "label": "Brass (Fire)",
+            "description": "Fire breath and fire resistance",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "bronze",
+            "label": "Bronze (Lightning)",
+            "description": "Lightning breath and lightning resistance",
+            "grants": {
+              "resistances": [
+                "lightning"
+              ]
+            }
+          },
+          {
+            "value": "copper",
+            "label": "Copper (Acid)",
+            "description": "Acid breath and acid resistance",
+            "grants": {
+              "resistances": [
+                "acid"
+              ]
+            }
+          },
+          {
+            "value": "gold",
+            "label": "Gold (Fire)",
+            "description": "Fire breath and fire resistance",
+            "grants": {
+              "resistances": [
+                "fire"
+              ]
+            }
+          },
+          {
+            "value": "silver",
+            "label": "Silver (Cold)",
+            "description": "Cold breath and cold resistance",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "dragonborn-draconblood": [
+      {
+        "id": "draconicAncestry",
+        "label": "Draconic Ancestry",
+        "description": "Your dragon type sets the damage type, shape and saving throw of your breath weapon.",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black (Acid)",
+            "description": "Breath weapon: acid damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "blue",
+            "label": "Blue (Lightning)",
+            "description": "Breath weapon: lightning damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "brass",
+            "label": "Brass (Fire)",
+            "description": "Breath weapon: fire damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "bronze",
+            "label": "Bronze (Lightning)",
+            "description": "Breath weapon: lightning damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "copper",
+            "label": "Copper (Acid)",
+            "description": "Breath weapon: acid damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "gold",
+            "label": "Gold (Fire)",
+            "description": "Breath weapon: fire damage, a 15 ft. cone (Dex save)."
+          },
+          {
+            "value": "green",
+            "label": "Green (Poison)",
+            "description": "Breath weapon: poison damage, a 15 ft. cone (Con save)."
+          },
+          {
+            "value": "red",
+            "label": "Red (Fire)",
+            "description": "Breath weapon: fire damage, a 15 ft. cone (Dex save)."
+          },
+          {
+            "value": "silver",
+            "label": "Silver (Cold)",
+            "description": "Breath weapon: cold damage, a 15 ft. cone (Con save)."
+          },
+          {
+            "value": "white",
+            "label": "White (Cold)",
+            "description": "Breath weapon: cold damage, a 15 ft. cone (Con save)."
+          }
+        ]
+      }
+    ],
+    "dragonborn-ravenite": [
+      {
+        "id": "draconicAncestry",
+        "label": "Draconic Ancestry",
+        "description": "Your dragon type sets the damage type, shape and saving throw of your breath weapon.",
+        "options": [
+          {
+            "value": "black",
+            "label": "Black (Acid)",
+            "description": "Breath weapon: acid damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "blue",
+            "label": "Blue (Lightning)",
+            "description": "Breath weapon: lightning damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "brass",
+            "label": "Brass (Fire)",
+            "description": "Breath weapon: fire damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "bronze",
+            "label": "Bronze (Lightning)",
+            "description": "Breath weapon: lightning damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "copper",
+            "label": "Copper (Acid)",
+            "description": "Breath weapon: acid damage, a 5 by 30 ft. line (Dex save)."
+          },
+          {
+            "value": "gold",
+            "label": "Gold (Fire)",
+            "description": "Breath weapon: fire damage, a 15 ft. cone (Dex save)."
+          },
+          {
+            "value": "green",
+            "label": "Green (Poison)",
+            "description": "Breath weapon: poison damage, a 15 ft. cone (Con save)."
+          },
+          {
+            "value": "red",
+            "label": "Red (Fire)",
+            "description": "Breath weapon: fire damage, a 15 ft. cone (Dex save)."
+          },
+          {
+            "value": "silver",
+            "label": "Silver (Cold)",
+            "description": "Breath weapon: cold damage, a 15 ft. cone (Con save)."
+          },
+          {
+            "value": "white",
+            "label": "White (Cold)",
+            "description": "Breath weapon: cold damage, a 15 ft. cone (Con save)."
+          }
+        ]
+      }
+    ],
+    "shifter-2024": [
+      {
+        "id": "shifting",
+        "label": "Shifting",
+        "description": "Choose the benefit you gain whenever you shift.",
+        "options": [
+          {
+            "value": "beasthide",
+            "label": "Beasthide",
+            "description": "You gain 1d6 additional Temporary Hit Points. While shifted, you have a +1 bonus to your Armor Class."
+          },
+          {
+            "value": "longtooth",
+            "label": "Longtooth",
+            "description": "When you shift and as a Bonus Action on your other turns while shifted, you can use your elongated fangs to make an Unarmed Strike. If you hit with this Unarmed Strike and deal damage, you can deal Piercing damage equal to 1d6 plus your Strength modifier, instead of the normal damage of an Unarmed Strike."
+          },
+          {
+            "value": "swiftstride",
+            "label": "Swiftstride",
+            "description": "While you are shifted, your Speed increases by 10 feet. Additionally, you can move up to 10 feet as a Reaction when a creature ends its turn within 5 feet of you. This reactive movement doesn't provoke Opportunity Attacks."
+          },
+          {
+            "value": "wildhunt",
+            "label": "Wildhunt",
+            "description": "While shifted, you have Advantage on Wisdom checks. Additionally, no creature within 30 feet of you can have Advantage on an attack roll against you unless you have the Incapacitated condition."
+          }
+        ]
+      }
+    ],
+    "reborn-2024": [
+      {
+        "id": "strangeEndurance",
+        "label": "Strange Endurance",
+        "description": "Choose the damage type you resist.",
+        "options": [
+          {
+            "value": "cold",
+            "label": "Cold",
+            "description": "Resistance to cold damage.",
+            "grants": {
+              "resistances": [
+                "cold"
+              ]
+            }
+          },
+          {
+            "value": "necrotic",
+            "label": "Necrotic",
+            "description": "Resistance to necrotic damage.",
+            "grants": {
+              "resistances": [
+                "necrotic"
+              ]
+            }
+          },
+          {
+            "value": "poison",
+            "label": "Poison",
+            "description": "Resistance to poison damage.",
+            "grants": {
+              "resistances": [
+                "poison"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "lineageGrants": {
+    "elf-2024": {
+      "Drow": {
+        "senses": {
+          "darkvision": 120
+        }
+      },
+      "Shadowmoor": {
+        "senses": {
+          "darkvision": 120
+        }
+      }
+    },
+    "faerie-2024": {
+      "Shadowmoor": {
+        "senses": {
+          "darkvision": 120
+        }
+      }
+    },
+    "kithkin-2024": {
+      "Shadowmoor": {
+        "senses": {
+          "darkvision": 120
+        }
+      }
+    }
+  }
+}

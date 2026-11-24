@@ -1,0 +1,733 @@
+[
+  {
+    "name": "Incarnation of Transience",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Huge",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "swim": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 20,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "grappled",
+        "name": "grappled",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "prone",
+        "name": "prone",
+        "url": ""
+      },
+      {
+        "index": "restrained",
+        "name": "restrained",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Sylvan; telepathy 120 ft.",
+    "challenge_rating": 7,
+    "proficiency_bonus": 3,
+    "xp": 2900,
+    "hit_points": 142,
+    "hit_dice": "15d12",
+    "hit_points_roll": "15d12 + 45",
+    "special_abilities": [
+      {
+        "name": "Ephemeral Movement",
+        "desc": "The incarnation can move through other creatures and objects as if they were Difficult Terrain, and its movement doesn't provoke Opportunity Attacks. It takes 5 (1d10) Force damage if it ends its turn inside an object."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The incarnation has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The incarnation makes three attacks, using Bite or Miasmic Globule in any combination."
+      },
+      {
+        "name": "Bite",
+        "desc": "m +8, reach 5 ft. Hit: 14 (2d8 + 5) Piercing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Miasmic Globule",
+        "desc": "r +8, range 60/120 ft. Hit: 15 (6d4) Acid damage, and the target's Speed is reduced by 10 feet until the end of the incarnation's next turn.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Spectral Stampede",
+        "desc": "The incarnation moves up to 80 feet in a straight line. Each creature whose space the incarnation enters is targeted once by the following effect. dex DC 16.  18 (4d8) Force damage. If the target is the incarnation's size or smaller, it has the Prone condition.  Half damage only."
+      }
+    ],
+    "index": "incarnation-of-transience-2024"
+  },
+  {
+    "name": "Incarnation of Vibrance",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Huge",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 20,
+    "dexterity": 17,
+    "constitution": 20,
+    "intelligence": 10,
+    "wisdom": 16,
+    "charisma": 21,
+    "proficiencies": [
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "blinded",
+        "name": "blinded",
+        "url": ""
+      },
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 13
+    },
+    "languages": "Sylvan; telepathy 120 ft.",
+    "challenge_rating": 10,
+    "proficiency_bonus": 4,
+    "xp": 5900,
+    "hit_points": 230,
+    "hit_dice": "20d12",
+    "hit_points_roll": "20d12 + 100",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The incarnation has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The incarnation makes two Vine attacks and uses Radiant Blast. It can replace one vine attack with a use of Spellcasting to cast Blindness/Deafness if available."
+      },
+      {
+        "name": "Vine",
+        "desc": "m +9, reach 20 ft. Hit: 18 (3d8 + 5) Bludgeoning damage. If the target is the incarnation's size or smaller, it has the Grappled condition (escape DC 15) from one of two vines.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Radiant Blast",
+        "desc": "con DC 17, each creature of the incarnation's choice in a 20-foot Emanation originating from the incarnation.  The creature takes 14 (2d8 + 5) Radiant damage.  Half damage."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The incarnation casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability:\nAt will: Daylight, Druidcraft, Plant Growth\n1/day: Blindness/Deafness"
+      }
+    ],
+    "index": "incarnation-of-vibrance-2024"
+  },
+  {
+    "name": "Lorwyn Giant",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Huge",
+    "type": "giant",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 21,
+    "dexterity": 13,
+    "constitution": 18,
+    "intelligence": 9,
+    "wisdom": 16,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 13
+    },
+    "languages": "Common, Giant",
+    "challenge_rating": 6,
+    "proficiency_bonus": 3,
+    "xp": 2300,
+    "hit_points": 115,
+    "hit_dice": "11d12",
+    "hit_points_roll": "11d12 + 44",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The giant makes two attacks, using Stone Sword or Boulder in any combination."
+      },
+      {
+        "name": "Stone Sword",
+        "desc": "m +8, reach 15 ft. Hit: 21 (3d10 + 5) Slashing damage.",
+        "attack_bonus": 8
+      },
+      {
+        "name": "Boulder",
+        "desc": "r +8, range 60/240 ft. Hit: 14 (2d8 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "lorwyn-giant-2024"
+  },
+  {
+    "name": "Merrow Doublespeaker",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      }
+    ],
+    "speed": {
+      "walk": "20 ft.",
+      "swim": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 17,
+    "constitution": 16,
+    "intelligence": 12,
+    "wisdom": 13,
+    "charisma": 16,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-deception",
+          "name": "Skill: Deception",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Common, Primordial (Aquan)",
+    "challenge_rating": 4,
+    "proficiency_bonus": 2,
+    "xp": 1100,
+    "hit_points": 67,
+    "hit_dice": "9d8",
+    "hit_points_roll": "9d8 + 27",
+    "special_abilities": [
+      {
+        "name": "Amphibious",
+        "desc": "The merrow can breathe air and water."
+      },
+      {
+        "name": "Mimicry",
+        "desc": "The merrow can mimic voices and animal sounds. A creature that hears the mimicries can tell they are imitations with a successful DC 15 Wisdom (Insight) check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The merrow makes three Spined Tail attacks. It can replace one of these attacks with a use of Spellcasting to cast Command."
+      },
+      {
+        "name": "Spined Tail",
+        "desc": "m,r +6, reach 5 ft. or range 20/60 ft. Hit: 14 (3d6 + 4) Piercing damage.",
+        "attack_bonus": 6
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The merrow casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13):\nAt will: Command, Mage Hand, Minor Illusion"
+      }
+    ],
+    "index": "merrow-doublespeaker-2024"
+  },
+  {
+    "name": "Merrow Haranguer",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "lawful neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "swim": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 18,
+    "constitution": 16,
+    "intelligence": 14,
+    "wisdom": 15,
+    "charisma": 19,
+    "proficiencies": [
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-dex",
+          "name": "Saving Throw: DEX",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-performance",
+          "name": "Skill: Performance",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 12
+    },
+    "languages": "Common, Primordial (Aquan)",
+    "challenge_rating": 5,
+    "proficiency_bonus": 3,
+    "xp": 1800,
+    "hit_points": 90,
+    "hit_dice": "12d8",
+    "hit_points_roll": "12d8 + 36",
+    "special_abilities": [
+      {
+        "name": "Amphibious",
+        "desc": "The merrow can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The merrow makes three attacks, using Coral Scepter and Poisoned Longbow in any combination."
+      },
+      {
+        "name": "Coral Scepter",
+        "desc": "m +7, reach 5 ft. Hit: 14 (2d10 + 4) Bludgeoning damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Poisoned Longbow",
+        "desc": "r +7, range 150/600 ft. Hit: 8 (1d8 + 4) Piercing damage plus 7 (2d6) Poison damage.",
+        "attack_bonus": 7
+      },
+      {
+        "name": "Invective",
+        "desc": "wis DC 15, up to three creatures the merrow can see within 60 feet.  14 (4d6) Psychic damage, and the creature has Disadvantage on its next attack roll before the end of the merrow's next turn.  Half damage only."
+      }
+    ],
+    "index": "merrow-haranguer-2024"
+  },
+  {
+    "name": "Noggle Ransacker",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 12
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 14,
+    "dexterity": 15,
+    "constitution": 13,
+    "intelligence": 8,
+    "wisdom": 10,
+    "charisma": 12,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Common, Sylvan",
+    "challenge_rating": 0.25,
+    "proficiency_bonus": 2,
+    "xp": 50,
+    "hit_points": 13,
+    "hit_dice": "3d6",
+    "hit_points_roll": "3d6 + 3",
+    "special_abilities": [
+      {
+        "name": "Siege Monster",
+        "desc": "The noggle deals double damage to objects and structures."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sabotaging Swipe",
+        "desc": "m +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage. If the target is wearing armor, it is subjected to the following effect. dex DC 12.  The armor takes a -1 penalty to the AC it offers. The target can take an action to remove the penalty from its armor.",
+        "attack_bonus": 4
+      }
+    ],
+    "index": "noggle-ransacker-2024"
+  },
+  {
+    "name": "Noggle Wild Mage",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "chaotic neutral",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 11,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 12,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 11
+    },
+    "languages": "Common, Sylvan",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 22,
+    "hit_dice": "4d6",
+    "hit_points_roll": "4d6 + 8",
+    "special_abilities": [
+      {
+        "name": "Bloodied Wild Magic",
+        "desc": "While Bloodied, the noggle has a Fly Speed of 30 feet and it can choose for any damage it deals to be Force damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The noggle makes two attacks, using Noggling Stick or Befuddling Ray in any combination."
+      },
+      {
+        "name": "Noggling Stick",
+        "desc": "m +5, reach 5 ft. Hit: 5 (1d4 + 3) Bludgeoning damage plus 2 (1d4) Psychic damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Befuddling Ray",
+        "desc": "r +5, range 60 ft. Hit: 6 (1d6 + 3) Psychic damage, and the target subtracts 1d4 from the next saving throw it makes before the end of the noggle's next turn.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "noggle-wild-mage-2024"
+  },
+  {
+    "name": "Shadowmoor Giant",
+    "edition": "2024",
+    "source": "LFL",
+    "sources": [
+      "LFL"
+    ],
+    "size": "Huge",
+    "type": "giant",
+    "alignment": "chaotic evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 22,
+    "dexterity": 14,
+    "constitution": 20,
+    "intelligence": 7,
+    "wisdom": 19,
+    "charisma": 8,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 14
+    },
+    "languages": "Giant",
+    "challenge_rating": 8,
+    "proficiency_bonus": 3,
+    "xp": 3900,
+    "hit_points": 172,
+    "hit_dice": "15d12",
+    "hit_points_roll": "15d12 + 75",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The giant makes three attacks, using Tree Club or Boulder in any combination."
+      },
+      {
+        "name": "Tree Club",
+        "desc": "m +9, reach 15 ft. Hit: 17 (2d10 + 6) Bludgeoning damage.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Boulder",
+        "desc": "r +9, range 60/240 ft. Hit: 13 (2d6 + 6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Wild Magic Cataclysm (Recharge 5-6)",
+        "desc": "dex DC 15, each creature in a 20-foot-radius Sphere centered on a point within 120 feet.  28 (8d6) damage (roll 1d4 to determine damage type: 1—Acid; 2—Fire; 3—Lightning; 4—Thunder).  Half damage."
+      }
+    ],
+    "index": "shadowmoor-giant-2024"
+  }
+]

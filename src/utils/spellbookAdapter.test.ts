@@ -18,6 +18,8 @@ const mockSpells: AppSpell[] = [
     classes: ['wizard', 'sorcerer'],
     source: '2024',
     year: 2024,
+    book: 'XPHB',
+    damageType: 'Fire',
   },
   {
     slug: 'shield',
@@ -57,8 +59,12 @@ describe('spellbookAdapter filterAppSpells', () => {
   const baseFilters: SpellFilterState = {
     searchTerm: '',
     editionFilter: 'all',
-    selectedLevel: 'all',
+    selectedLevels: [],
     selectedSchools: [],
+    selectedClasses: [],
+    selectedBooks: [],
+    casting: [],
+    sort: 'name',
     filterRitual: false,
     filterConcentration: false,
     filterFavorites: false,
@@ -77,7 +83,7 @@ describe('spellbookAdapter filterAppSpells', () => {
   });
 
   it('filters by level', () => {
-    const result = filterAppSpells(mockSpells, { ...baseFilters, selectedLevel: '1' });
+    const result = filterAppSpells(mockSpells, { ...baseFilters, selectedLevels: [1] });
     expect(result).toHaveLength(2);
   });
 
@@ -97,5 +103,25 @@ describe('spellbookAdapter filterAppSpells', () => {
     const result2014 = filterAppSpells(mockSpells, { ...baseFilters, editionFilter: '2014' });
     expect(result2014).toHaveLength(1);
     expect(result2014[0].slug).toBe('shield');
+  });
+
+  it('matches every search word against name, class, school, or book', () => {
+    const found = filterAppSpells(mockSpells, { ...baseFilters, searchTerm: 'wizard fire' });
+    expect(found.map(spell => spell.slug)).toEqual(['fireball']);
+    expect(filterAppSpells(mockSpells, { ...baseFilters, searchTerm: 'cleric fire' })).toEqual([]);
+  });
+
+  it('filters by class, book, and casting time, then sorts by level', () => {
+    const cleric = filterAppSpells(mockSpells, { ...baseFilters, selectedClasses: ['cleric'] });
+    expect(cleric.map(spell => spell.slug)).toEqual(['detect-magic']);
+
+    const book = filterAppSpells(mockSpells, { ...baseFilters, selectedBooks: ['XPHB'] });
+    expect(book.map(spell => spell.slug)).toEqual(['fireball']);
+
+    const reactions = filterAppSpells(mockSpells, { ...baseFilters, casting: ['reaction'] });
+    expect(reactions.map(spell => spell.slug)).toEqual(['shield']);
+
+    const ranked = filterAppSpells(mockSpells, { ...baseFilters, sort: 'level-desc' });
+    expect(ranked.map(spell => spell.slug)).toEqual(['fireball', 'detect-magic', 'shield']);
   });
 });

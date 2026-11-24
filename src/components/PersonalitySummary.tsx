@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { ArrowLeft, ArrowRight, Edit3, Sparkles, Heart, Shield, Zap, HelpCircle, Pencil } from 'lucide-react';
 import { CharacterProfile } from '../data/characterProfiles';
-import { loadClasses, getAllSpecies, BACKGROUNDS, getModifier, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
+import { loadClasses, getAllSpecies, getBackground, getModifier, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
 import { SpellSelectionData, Edition } from '../types/dnd';
 import { getSpellcastingType } from '../utils/spellUtils';
 import { assignAbilityScoresByClass } from '../utils/abilityScoreUtils';
@@ -97,9 +97,7 @@ const PersonalitySummary: React.FC<PersonalitySummaryProps> = ({
       const numSkills = selectedClassData?.num_skill_choices || 0;
       const classSkills = selectedClassData?.skill_proficiencies?.slice(0, numSkills) || [];
 
-      // Get background skills
-      // Note: In a full implementation, we'd filter BACKGROUNDS by edition too, but here we just match by name
-      const backgroundData = BACKGROUNDS.find(bg => bg.name === currentBackground);
+      const backgroundData = getBackground(currentBackground);
       const backgroundSkills = backgroundData?.skill_proficiencies || [];
 
       // Combine and deduplicate skills

@@ -47,64 +47,6 @@
       "Common",
       "Orc"
     ],
-    "firbolg": [
-      "Elvish",
-      "Common"
-    ],
-    "kenku": [
-      "Auran",
-      "Common"
-    ],
-    "tabaxi": [
-      "Common"
-    ],
-    "triton": [
-      "Primordial",
-      "Common"
-    ],
-    "bugbear": [
-      "Goblin",
-      "Common"
-    ],
-    "goblin": [
-      "Goblin",
-      "Common"
-    ],
-    "hobgoblin": [
-      "Goblin",
-      "Common"
-    ],
-    "kobold": [
-      "Draconic",
-      "Common"
-    ],
-    "yuan-ti-pureblood": [
-      "Abyssal",
-      "Draconic",
-      "Common"
-    ],
-    "fairy": [
-      "Sylvan",
-      "Common"
-    ],
-    "harengon": [
-      "Sylvan",
-      "Common"
-    ],
-    "loxodon": [
-      "Common"
-    ],
-    "owlin": [
-      "Common"
-    ],
-    "githyanki": [
-      "Gith",
-      "Common"
-    ],
-    "genasi": [
-      "Primordial",
-      "Common"
-    ],
     "human": [
       "Common"
     ],
@@ -153,15 +95,297 @@
       "Common"
     ],
     "aasimar": [
-      "Celestial",
+      "Common"
+    ],
+    "bugbear": [
+      "Common"
+    ],
+    "fairy": [
+      "Common"
+    ],
+    "firbolg": [
+      "Common"
+    ],
+    "genasi": [
+      "Common"
+    ],
+    "githyanki": [
+      "Common"
+    ],
+    "goblin": [
       "Common"
     ],
     "goliath": [
-      "Giant",
       "Common"
     ],
+    "harengon": [
+      "Common"
+    ],
+    "hobgoblin": [
+      "Common"
+    ],
+    "kenku": [
+      "Common"
+    ],
+    "kobold": [
+      "Common"
+    ],
+    "loxodon": [
+      "Common",
+      "Loxodon"
+    ],
     "orc": [
-      "Orc",
+      "Common"
+    ],
+    "owlin": [
+      "Common"
+    ],
+    "tabaxi": [
+      "Common"
+    ],
+    "triton": [
+      "Common"
+    ],
+    "yuan-ti": [
+      "Common"
+    ],
+    "aarakocra": [
+      "Common"
+    ],
+    "centaur": [
+      "Common"
+    ],
+    "changeling": [
+      "Common"
+    ],
+    "deep-gnome": [
+      "Common"
+    ],
+    "duergar": [
+      "Common"
+    ],
+    "eladrin": [
+      "Common"
+    ],
+    "githzerai": [
+      "Common"
+    ],
+    "lizardfolk": [
+      "Common"
+    ],
+    "minotaur": [
+      "Common"
+    ],
+    "satyr": [
+      "Common"
+    ],
+    "sea-elf": [
+      "Common"
+    ],
+    "shadar-kai": [
+      "Common"
+    ],
+    "shifter": [
+      "Common"
+    ],
+    "tortle": [
+      "Common"
+    ],
+    "astral-elf": [
+      "Common"
+    ],
+    "autognome": [
+      "Common"
+    ],
+    "giff": [
+      "Common"
+    ],
+    "hadozee": [
+      "Common"
+    ],
+    "plasmoid": [
+      "Common"
+    ],
+    "thri-kreen": [
+      "Common"
+    ],
+    "leonin": [
+      "Common",
+      "Leonin"
+    ],
+    "simic-hybrid": [
+      "Common"
+    ],
+    "vedalken": [
+      "Common",
+      "Vedalken"
+    ],
+    "dhampir": [
+      "Common"
+    ],
+    "hexblood": [
+      "Common"
+    ],
+    "reborn": [
+      "Common"
+    ],
+    "verdan": [
+      "Common",
+      "Goblin"
+    ],
+    "kalashtar": [
+      "Common",
+      "Quori"
+    ],
+    "warforged": [
+      "Common"
+    ],
+    "custom-lineage": [
+      "Common"
+    ],
+    "dragonborn-chromatic": [
+      "Common"
+    ],
+    "dragonborn-gem": [
+      "Common"
+    ],
+    "dragonborn-metallic": [
+      "Common"
+    ],
+    "dwarf-mark-of-warding": [
+      "Dwarvish",
+      "Common"
+    ],
+    "elf-mark-of-shadow": [
+      "Elvish",
+      "Common"
+    ],
+    "gnome-mark-of-scribing": [
+      "Gnomish",
+      "Common"
+    ],
+    "halfling-mark-of-healing": [
+      "Halfling",
+      "Common"
+    ],
+    "halfling-mark-of-hospitality": [
+      "Halfling",
+      "Common"
+    ],
+    "human-mark-of-handling": [
+      "Common"
+    ],
+    "human-mark-of-making": [
+      "Common"
+    ],
+    "human-mark-of-passage": [
+      "Common"
+    ],
+    "human-mark-of-sentinel": [
+      "Common"
+    ],
+    "human-mark-of-finding": [
+      "Common",
+      "Goblin"
+    ],
+    "half-elf-mark-of-detection": [
+      "Common",
+      "Elvish"
+    ],
+    "half-elf-mark-of-storm": [
+      "Common",
+      "Elvish"
+    ],
+    "half-orc-mark-of-finding": [
+      "Common",
+      "Goblin"
+    ],
+    "elf-pallid": [
+      "Elvish",
+      "Common"
+    ],
+    "halfling-ghostwise": [
+      "Halfling",
+      "Common"
+    ],
+    "halfling-lotusden": [
+      "Halfling",
+      "Common"
+    ],
+    "dragonborn-draconblood": [
+      "Draconic",
+      "Common"
+    ],
+    "dragonborn-ravenite": [
+      "Draconic",
+      "Common"
+    ],
+    "changeling-2024": [
+      "Common"
+    ],
+    "kalashtar-2024": [
+      "Common"
+    ],
+    "khoravar-2024": [
+      "Common"
+    ],
+    "shifter-2024": [
+      "Common"
+    ],
+    "warforged-2024": [
+      "Common"
+    ],
+    "dhampir-2024": [
+      "Common"
+    ],
+    "hexblood-2024": [
+      "Common"
+    ],
+    "lupin-2024": [
+      "Common"
+    ],
+    "reborn-2024": [
+      "Common"
+    ],
+    "boggart-2024": [
+      "Common"
+    ],
+    "faerie-2024": [
+      "Common"
+    ],
+    "flamekin-2024": [
+      "Common"
+    ],
+    "kithkin-2024": [
+      "Common"
+    ],
+    "lorwyn-changeling-2024": [
+      "Common"
+    ],
+    "rimekin-2024": [
+      "Common"
+    ],
+    "bullywug": [
+      "Bullywug"
+    ],
+    "gnoll": [],
+    "grimlock": [
+      "Undercommon"
+    ],
+    "kuo-toa": [
+      "Undercommon"
+    ],
+    "merfolk": [
+      "Common",
+      "Aquan"
+    ],
+    "skeleton": [
+      "Common"
+    ],
+    "troglodyte": [
+      "Troglodyte"
+    ],
+    "zombie": [
       "Common"
     ]
   }

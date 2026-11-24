@@ -1,5 +1,5 @@
 {
-  "name": "nexus-forge",
+  "name": "dnd-character-system",
   "version": "1.5.3",
   "description": "A client-side D&D 5e character generator and sheet manager",
   "type": "module",
@@ -14,10 +14,10 @@
     "size-limit": "size-limit",
     "docker:build": "bash ./scripts/fast-build.sh",
     "docker:build-push": "bash ./scripts/docker-build-push.sh",
-    "docker:run": "docker stop nexus-forge 2>/dev/null || true && docker rm nexus-forge 2>/dev/null || true && docker run -d --name nexus-forge -p 8080:8080 joelmale/nexus-forge:latest && echo '✅ Container started at http://localhost:8080'",
-    "docker:stop": "docker stop nexus-forge && docker rm nexus-forge && echo '✅ Container stopped and removed'",
-    "docker:logs": "docker logs -f nexus-forge",
-    "docker:restart": "docker restart nexus-forge && echo '✅ Container restarted'"
+    "docker:run": "docker stop dnd-character-system 2>/dev/null || true && docker rm dnd-character-system 2>/dev/null || true && docker run -d --name dnd-character-system -p 8080:8080 joelmale/dnd-character-system:latest && echo '✅ Container started at http://localhost:8080'",
+    "docker:stop": "docker stop dnd-character-system && docker rm dnd-character-system && echo '✅ Container stopped and removed'",
+    "docker:logs": "docker logs -f dnd-character-system",
+    "docker:restart": "docker restart dnd-character-system && echo '✅ Container restarted'"
   },
   "dependencies": {
     "@3d-dice/dice-box": "^1.1.4",
@@ -28,6 +28,7 @@
     "@tiptap/pm": "^3.14.0",
     "@tiptap/react": "^3.14.0",
     "@tiptap/starter-kit": "^3.14.0",
+    "firebase": "^13.4.0",
     "loglevel": "^1.9.2",
     "lucide-react": "^0.561.0",
     "react": "^19.2.3",

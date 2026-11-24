@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Animated Object (Huge)",
+    "edition": "2014",
+    "source": "PHB",
+    "sources": [
+      "PHB"
+    ],
+    "size": "Huge",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 10,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 6,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft. (blind beyond this radius)",
+      "passive_perception": 6
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "80",
+    "special_abilities": [
+      {
+        "name": "Animated",
+        "desc": "If the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0.\nWhen the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.\nThe DM might rule that a specific objects slam attack inflicts slashing or piercing damage based on its form."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d12 + 4) bludgeoning damage.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "animated-object-huge"
+  },
+  {
+    "name": "Animated Object (Large)",
+    "edition": "2014",
+    "source": "PHB",
+    "sources": [
+      "PHB"
+    ],
+    "size": "Large",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 10,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 14,
+    "dexterity": 10,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft. (blind beyond this radius)",
+      "passive_perception": 6
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50",
+    "special_abilities": [
+      {
+        "name": "Animated",
+        "desc": "If the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0.\nWhen the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.\nThe DM might rule that a specific objects slam attack inflicts slashing or piercing damage based on its form."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 12 (2d10 + 2) bludgeoning damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "animated-object-large"
+  },
+  {
+    "name": "Animated Object (Medium)",
+    "edition": "2014",
+    "source": "PHB",
+    "sources": [
+      "PHB"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 13,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 10,
+    "dexterity": 12,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft. (blind beyond this radius)",
+      "passive_perception": 6
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40",
+    "special_abilities": [
+      {
+        "name": "Animated",
+        "desc": "If the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0.\nWhen the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.\nThe DM might rule that a specific objects slam attack inflicts slashing or piercing damage based on its form."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (2d6 + 1) bludgeoning damage.",
+        "attack_bonus": 5
+      }
+    ],
+    "index": "animated-object-medium"
+  },
+  {
+    "name": "Animated Object (Small)",
+    "edition": "2014",
+    "source": "PHB",
+    "sources": [
+      "PHB"
+    ],
+    "size": "Small",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 16,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 6,
+    "dexterity": 14,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft. (blind beyond this radius)",
+      "passive_perception": 6
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "25",
+    "special_abilities": [
+      {
+        "name": "Animated",
+        "desc": "If the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0.\nWhen the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.\nThe DM might rule that a specific objects slam attack inflicts slashing or piercing damage based on its form."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage.",
+        "attack_bonus": 6
+      }
+    ],
+    "index": "animated-object-small"
+  },
+  {
+    "name": "Animated Object (Tiny)",
+    "edition": "2014",
+    "source": "PHB",
+    "sources": [
+      "PHB"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "natural",
+        "value": 18,
+        "armor": [
+          {
+            "name": "natural armor",
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 4,
+    "dexterity": 18,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft. (blind beyond this radius)",
+      "passive_perception": 6
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20",
+    "special_abilities": [
+      {
+        "name": "Animated",
+        "desc": "If the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0.\nWhen the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.\nThe DM might rule that a specific objects slam attack inflicts slashing or piercing damage based on its form."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 6 (1d4 + 4) bludgeoning damage.",
+        "attack_bonus": 8
+      }
+    ],
+    "index": "animated-object-tiny"
+  }
+]

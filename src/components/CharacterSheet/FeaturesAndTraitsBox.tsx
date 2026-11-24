@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Character } from '../../types/dnd';
 import { FeatModal } from '../FeatModal';
+import { getFeatBySlug } from '../../services/dataService';
 
 interface FeaturesAndTraitsBoxProps {
   character: Character;
@@ -127,7 +128,7 @@ export const FeaturesAndTraitsBox: React.FC<FeaturesAndTraitsBoxProps> = ({ char
                   className="text-xs homemade-apple-regular text-[#3d2817] leading-tight cursor-pointer hover:text-accent-gold transition-colors"
                   onClick={() => openFeatModal(featSlug)}
                 >
-                  • {featSlug}
+                  • {getFeatBySlug(featSlug, character.edition)?.name ?? featSlug}
                 </div>
               ))}
             </div>
@@ -147,6 +148,7 @@ export const FeaturesAndTraitsBox: React.FC<FeaturesAndTraitsBoxProps> = ({ char
 
       {/* Feat Modal */}
       <FeatModal
+        edition={character.edition}
         featSlug={featModalState.featSlug || ''}
         isOpen={featModalState.isOpen}
         onClose={closeFeatModal}

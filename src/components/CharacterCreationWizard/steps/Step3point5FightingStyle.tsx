@@ -1,162 +1,131 @@
-import React from 'react';
-import { ArrowLeft, ArrowRight, Shuffle } from 'lucide-react';
-import { StepProps } from '../types/wizard.types';
-import { loadClasses, randomizeFightingStyle } from '../../../services/dataService';
+import React, { useEffect } from 'react'
+import { ArrowLeft, ArrowRight, Shuffle } from 'lucide-react'
+import { StepProps } from '../types/wizard.types'
+import {
+  getOptionalFeature,
+  optionalFeatureAllowance,
+  optionalFeatureSelectionComplete,
+  optionalFeaturesForPick,
+  resolveOptionalFeatureSlug,
+} from '../../../utils/optionalFeatures'
+import { OptionalFeaturePicker } from '../../OptionalFeaturePicker'
 
-interface RandomizeButtonProps {
-  onClick: () => void;
-  title: string;
-}
-
-const RandomizeButton: React.FC<RandomizeButtonProps> = ({ onClick, title }) => (
+const RandomizeButton: React.FC<{ onClick: () => void; title: string }> = ({ onClick, title }) => (
   <button
+    type="button"
     onClick={onClick}
     title={title}
     className="p-2 bg-accent-yellow-dark hover:bg-accent-yellow rounded-lg text-white transition-colors"
   >
     <Shuffle className="w-4 h-4" />
   </button>
-);
+)
 
-export const Step3point5FightingStyle: React.FC<StepProps> = ({ data, updateData, nextStep, prevStep }) => {
-  const allClasses = loadClasses();
-  const selectedClass = allClasses.find(c => c.slug === data.classSlug);
-  const hasProcessedAutoAdvance = React.useRef(false);
+const storedSlugs = (data: StepProps['data'], edition: StepProps['data']['edition']): string[] => {
+  if (data.optionalFeatures) return data.optionalFeatures
+  return [data.fightingStyle, data.selectedFightingStyle, ...(data.eldritchInvocations ?? [])]
+    .filter((slug): slug is string => !!slug)
+    .map(slug => resolveOptionalFeatureSlug(slug, edition))
+    .filter(slug => getOptionalFeature(slug, edition))
+}
 
-  // Define fighting styles available in SRD
-  const FIGHTING_STYLES = [
-    {
-      name: 'Archery',
-      description: 'You gain a +2 bonus to attack rolls you make with ranged weapons.',
-      recommendedFor: ['ranger']
-    },
-    {
-      name: 'Defense',
-      description: 'While you are wearing armor, you gain a +1 bonus to AC.',
-      recommendedFor: ['paladin']
-    },
-    {
-      name: 'Dueling',
-      description: 'When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.',
-      recommendedFor: ['fighter']
-    },
-    {
-      name: 'Great Weapon Fighting',
-      description: 'When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll. The weapon must have the two-handed or versatile property.',
-      recommendedFor: ['fighter']
-    },
-    {
-      name: 'Protection',
-      description: 'When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.',
-      recommendedFor: ['paladin']
-    },
-    {
-      name: 'Two-Weapon Fighting',
-      description: 'When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.',
-      recommendedFor: ['ranger']
+/**
+ * Every optional class feature the character knows at the level they are created:
+ * fighting styles, invocations, metamagic, maneuvers, infusions, and the rest.
+ */
+export const Step3point5FightingStyle: React.FC<StepProps> = ({ data, updateData, nextStep, prevStep, getNextStepLabel }) => {
+  const edition = data.edition || '2014'
+  const stored = storedSlugs(data, edition)
+  const provisional = data.classSlug
+    ? optionalFeatureAllowance(data.classSlug, edition, data.level, data.subclassSlug, stored)
+    : []
+  const selected = [...new Set([...stored, ...provisional.flatMap(group => group.required)])]
+  const groups = data.classSlug
+    ? optionalFeatureAllowance(data.classSlug, edition, data.level, data.subclassSlug, selected)
+    : []
+  const hasProcessedAutoAdvance = React.useRef(false)
+
+  const commit = (slugs: string[]) => {
+    const features = slugs.map(slug => getOptionalFeature(slug, edition)).filter(feature => !!feature)
+    const update: Parameters<typeof updateData>[0] = { optionalFeatures: slugs }
+    if (groups.some(group => group.featureType.startsWith('FS:'))) {
+      const fighting = features.find(feature => feature.featureTypes.some(type => type.startsWith('FS:')))
+      update.fightingStyle = fighting?.slug
+      update.selectedFightingStyle = fighting?.slug ?? null
     }
-  ];
-
-  // Check if this class gets a fighting style
-  const hasFightingStyle = selectedClass && ['fighter', 'paladin', 'ranger'].includes(selectedClass.slug);
-
-  // Get recommended style for this class
-  const recommendedStyle = selectedClass ? FIGHTING_STYLES.find(style =>
-    style.recommendedFor.includes(selectedClass.slug)
-  ) : undefined;
-
-  // Set default if not already selected
-  React.useEffect(() => {
-    if (!data.selectedFightingStyle && recommendedStyle) {
-      updateData({ selectedFightingStyle: recommendedStyle.name });
+    if (groups.some(group => group.featureType === 'EI')) {
+      update.eldritchInvocations = features.filter(feature => feature.featureTypes.includes('EI')).map(feature => feature.slug)
     }
-
-  }, [recommendedStyle, data.selectedFightingStyle, updateData]);
-
-  // Auto-skip if class doesn't get fighting style (only on first mount)
-  React.useEffect(() => {
-    if (!hasProcessedAutoAdvance.current && !hasFightingStyle) {
-      hasProcessedAutoAdvance.current = true;
-      nextStep();
-    }
-  }, [hasFightingStyle, nextStep]);
-
-  if (!hasFightingStyle) {
-     
-    return <div className='text-center text-theme-muted'>This class doesn't have Fighting Styles. Advancing...</div>;
+    updateData(update)
   }
 
+  useEffect(() => {
+    if (!hasProcessedAutoAdvance.current && groups.length === 0) {
+      hasProcessedAutoAdvance.current = true
+      nextStep()
+    }
+  }, [groups.length, nextStep])
+
+  const randomize = () => {
+    const context = [...selected]
+    const next: string[] = []
+    for (const group of groups) {
+      const pool = optionalFeaturesForPick(group.featureType, edition, data.level, data.classSlug, context, data.pactBoon)
+        .map(feature => feature.slug)
+      const required = group.required.filter(slug => pool.includes(slug))
+      const shuffled = pool.filter(slug => !required.includes(slug)).sort(() => Math.random() - 0.5)
+      const picks = [...required, ...shuffled].slice(0, group.known)
+      next.push(...picks)
+      context.push(...picks)
+    }
+    commit([...new Set(next)])
+  }
+
+  if (groups.length === 0) {
+    return <div className="text-center text-theme-muted">This class has no options at level {data.level}. Advancing...</div>
+  }
+
+  const title = groups.length === 1 ? `Choose ${groups[0].name}` : 'Choose Class Options'
+  const ready = optionalFeatureSelectionComplete(groups, selected, edition)
+
   return (
-    <div className='space-y-6'>
-      <div className='flex justify-between items-start'>
+    <div className="space-y-6">
+      <div className="flex justify-between items-start">
         <div>
-          <h3 className='text-xl font-bold text-red-300'>Choose Fighting Style</h3>
-          <p className='text-sm text-theme-muted mt-2'>
-            As a {selectedClass.name}, you learn a particular style of fighting. Select one Fighting Style option.
+          <h3 className="text-xl font-bold text-red-300">{title}</h3>
+          <p className="text-sm text-theme-muted mt-2">
+            These are the options your class knows at level {data.level}.
           </p>
         </div>
-        <RandomizeButton
-          onClick={() => {
-            const fightingStyle = randomizeFightingStyle(data.classSlug);
-            updateData({ selectedFightingStyle: fightingStyle });
-          }}
-          title="Randomize fighting style"
-        />
+        <RandomizeButton onClick={randomize} title="Randomize class options" />
       </div>
 
-      {recommendedStyle && (
-        <div className="bg-blue-900/30 border border-accent-blue-dark rounded-lg p-3">
-          <div className="text-sm text-blue-300">
-            💡 <strong>Recommended for {selectedClass.name}:</strong> {recommendedStyle.name}
-            <br />
-            <span className="text-xs text-theme-muted">
-              (This is a smart default, but you can choose any style below)
-            </span>
-          </div>
-        </div>
-      )}
+      <OptionalFeaturePicker
+        groups={groups}
+        edition={edition}
+        level={data.level}
+        classSlug={data.classSlug}
+        pact={data.pactBoon}
+        selected={selected}
+        onChange={commit}
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {FIGHTING_STYLES.map(style => {
-          const isSelected = data.selectedFightingStyle === style.name;
-          const isRecommended = style.recommendedFor.includes(selectedClass.slug);
-
-          return (
-            <button
-              key={style.name}
-              onClick={() => updateData({ selectedFightingStyle: style.name })}
-              className={`p-4 rounded-lg text-left border-2 transition-all ${
-                isSelected
-                  ? 'bg-orange-800 border-orange-500 shadow-md'
-                  : 'bg-theme-tertiary border-theme-primary hover:bg-theme-quaternary'
-              }`}
-            >
-              <div className="flex items-start justify-between">
-                <p className="text-base font-bold text-accent-yellow-light">{style.name}</p>
-                {isRecommended && (
-                  <span className="text-xs bg-accent-blue text-white px-2 py-1 rounded ml-2">
-                    Recommended
-                  </span>
-                )}
-              </div>
-              <p className="text-sm text-theme-tertiary mt-2">{style.description}</p>
-            </button>
-          );
-        })}
-      </div>
-
-      <div className='flex justify-between'>
-        <button onClick={prevStep} className="px-4 py-2 bg-theme-quaternary hover:bg-theme-hover rounded-lg text-white flex items-center">
+      <div className="flex justify-between">
+        <button type="button" onClick={prevStep} className="px-4 py-2 bg-theme-quaternary hover:bg-theme-hover rounded-lg text-white flex items-center">
           <ArrowLeft className="w-4 h-4 mr-2" /> Back
         </button>
         <button
-          onClick={nextStep}
-          disabled={!data.selectedFightingStyle}
+          type="button"
+          onClick={() => {
+            commit(selected)
+            nextStep()
+          }}
+          disabled={!ready}
           className="px-4 py-2 bg-accent-red hover:bg-accent-red-light rounded-lg text-white flex items-center disabled:bg-theme-quaternary disabled:cursor-not-allowed"
         >
-          Next: {selectedClass.spellcasting ? 'Spells' : 'Abilities'} <ArrowRight className="w-4 h-4 ml-2" />
+          Next: {getNextStepLabel?.() || 'Continue'} <ArrowRight className="w-4 h-4 ml-2" />
         </button>
       </div>
     </div>
-  );
-};
+  )
+}

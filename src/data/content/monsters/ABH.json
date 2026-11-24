@@ -1,0 +1,669 @@
+[
+  {
+    "name": "Fiendish Icon",
+    "edition": "2024",
+    "source": "ABH",
+    "sources": [
+      "ABH"
+    ],
+    "size": "Small",
+    "type": "construct",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 13
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 15,
+    "dexterity": 12,
+    "constitution": 13,
+    "intelligence": 6,
+    "wisdom": 11,
+    "charisma": 6,
+    "proficiencies": [
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "fire",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "deafened",
+        "name": "deafened",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60",
+      "passive_perception": 10
+    },
+    "languages": "understands Common and Infernal but can't speak",
+    "challenge_rating": 1,
+    "proficiency_bonus": 2,
+    "xp": 200,
+    "hit_points": 22,
+    "hit_dice": "5d6",
+    "hit_points_roll": "5d6 + 5",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The icon has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The icon makes two Slam attacks and uses Fiery Eruption."
+      },
+      {
+        "name": "Slam",
+        "desc": "m +4, reach 5 ft. Hit: 4 (1d4 + 2) Bludgeoning damage.",
+        "attack_bonus": 4
+      },
+      {
+        "name": "Fiery Eruption",
+        "desc": "dex DC 11, each creature in a 5-foot Emanation originating from the icon.  7 (2d6) Fire damage."
+      }
+    ],
+    "index": "fiendish-icon-2024"
+  },
+  {
+    "name": "Harvester Devil",
+    "edition": "2024",
+    "source": "ABH",
+    "sources": [
+      "ABH"
+    ],
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 14
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 17,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 13,
+    "charisma": 19,
+    "proficiencies": [
+      {
+        "value": 4,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 3,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-persuasion",
+          "name": "Skill: Persuasion",
+          "url": ""
+        }
+      },
+      {
+        "value": 5,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold"
+    ],
+    "damage_immunities": [
+      "fire",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft. (unimpeded by magical Darkness)",
+      "passive_perception": 13
+    },
+    "languages": "Common, Infernal; telepathy 120 ft.",
+    "challenge_rating": 3,
+    "proficiency_bonus": 2,
+    "xp": 700,
+    "hit_points": 65,
+    "hit_dice": "10d8",
+    "hit_points_roll": "10d8 + 20",
+    "subtype": "devil",
+    "special_abilities": [
+      {
+        "name": "Diabolic Ward",
+        "desc": "Attack rolls against the devil have Disadvantage. If the devil makes an attack roll, this trait is suppressed until the start of its next turn."
+      },
+      {
+        "name": "Diabolical Restoration",
+        "desc": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The devil has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The devil makes two attacks, using Infernal Blade or Confounding Ray in any combination."
+      },
+      {
+        "name": "Infernal Blade",
+        "desc": "m +5, reach 5 ft. Hit: 6 (1d6 + 3) Slashing damage and 7 (2d6) Fire damage.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Confounding Ray",
+        "desc": "r +5, range 120 ft. Hit: 13 (2d12) Psychic damage. If the target is a creature, it can't make Opportunity Attacks until the start of the devil's next turn.",
+        "attack_bonus": 5
+      },
+      {
+        "name": "Compelling Contract (1/Day)",
+        "desc": "cha DC 14, one creature within 30 feet of the devil.  The target has the Charmed condition. While it is Charmed, it has the Stunned condition, except the target can speak. If the target agrees to the devil's contract, the effect ends. Otherwise, the target repeats the save whenever it takes damage and at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+      }
+    ],
+    "index": "harvester-devil-2024"
+  },
+  {
+    "name": "Speaker Devil",
+    "edition": "2024",
+    "source": "ABH",
+    "sources": [
+      "ABH"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 17
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 21,
+    "dexterity": 19,
+    "constitution": 20,
+    "intelligence": 22,
+    "wisdom": 18,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 7,
+        "proficiency": {
+          "index": "saving-throw-cha",
+          "name": "Saving Throw: CHA",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-history",
+          "name": "Skill: History",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "cold"
+    ],
+    "damage_immunities": [
+      "fire",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 18
+    },
+    "languages": "Infernal; telepathy 120 ft.",
+    "challenge_rating": 12,
+    "proficiency_bonus": 4,
+    "xp": 8400,
+    "hit_points": 189,
+    "hit_dice": "18d10",
+    "hit_points_roll": "18d10 + 90",
+    "subtype": "devil",
+    "special_abilities": [
+      {
+        "name": "Diabolical Restoration",
+        "desc": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The devil has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The devil makes two Thundering Halberd attacks."
+      },
+      {
+        "name": "Thundering Halberd",
+        "desc": "m +9, reach 10 ft. Hit: 16 (2d10 + 5) Slashing damage plus 14 (4d6) Thunder damage.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The devil casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Detect Thoughts\n2/day each: Dimension Door, Modify Memory"
+      }
+    ],
+    "index": "speaker-devil-2024"
+  },
+  {
+    "name": "Vampire Infernalist",
+    "edition": "2024",
+    "source": "ABH",
+    "sources": [
+      "ABH"
+    ],
+    "size": "Small",
+    "type": "undead",
+    "alignment": "lawful evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 16
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 19,
+    "dexterity": 16,
+    "constitution": 17,
+    "intelligence": 20,
+    "wisdom": 16,
+    "charisma": 18,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "saving-throw-int",
+          "name": "Saving Throw: INT",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-arcana",
+          "name": "Skill: Arcana",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-religion",
+          "name": "Skill: Religion",
+          "url": ""
+        }
+      },
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "skill-stealth",
+          "name": "Skill: Stealth",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire",
+      "necrotic",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft. (unimpeded by magical Darkness)",
+      "passive_perception": 18
+    },
+    "languages": "Common, Infernal",
+    "challenge_rating": 14,
+    "proficiency_bonus": 5,
+    "xp": 11500,
+    "hit_points": 172,
+    "hit_dice": "23d8",
+    "hit_points_roll": "23d8 + 69",
+    "subtype": "wizard",
+    "special_abilities": [
+      {
+        "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+        "desc": "If the vampire fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Misty Escape",
+        "desc": "If the vampire drops to 0 Hit Points outside its resting place, the vampire uses Shape-Shift to become mist (no action required). If it can't use Shape-Shift, it is destroyed.\nWhile it has 0 Hit Points in mist form, it can't return to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it returns to its vampire form and has the Paralyzed condition until it regains any Hit Points, and it regains 1 Hit Point after spending 1 hour there."
+      },
+      {
+        "name": "Vampire Weakness",
+        "desc": "The vampire has these weaknesses:\nForbiddance: The vampire can't enter a residence without an invitation from an occupant.\nRunning Water: The vampire takes 20 Acid damage if it ends its turn in running water.\nStake to the Heart: If a weapon that deals Piercing damage is driven into the vampire's heart while the vampire has the Incapacitated condition in its resting place, the vampire has the Paralyzed condition until the weapon is removed.\nSunlight: The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks."
+      },
+      {
+        "name": "Regional Effects",
+        "desc": "The region containing an infernalist's lair is warped by its presence, creating the following effects, all of which happen at the vampire's discretion:\nDiabolic Beasts: Animals in the vampire's domain serve the vampire's will. From dusk until dawn, Medium or smaller Beasts have the Charmed condition while within 1 mile of the lair.\nDrained Essence: Grasping shadows within 1 mile of the lair sap the body and mind. Creatures (excluding the vampire and its allies) that finish a Short or Long Rest while within 1 mile of the lair make a DC 15 Wisdom saving throw. On a failed save, a creature can't spend Hit Point Dice at the end of the rest and doesn't regain Hit Points, Hit Point Dice, or spell slots at the end of the rest.\nTenacious Lore: Within 1 mile of the lair, flame doesn't burn written material.\nIf the infernalist dies or moves its lair elsewhere, these effects end immediately."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack (Vampire Form Only)",
+        "desc": "The vampire makes two Hellfire Claw attacks and uses Bite."
+      },
+      {
+        "name": "Hellfire Claw (Vampire Form Only)",
+        "desc": "m +9, reach 5 ft. Hit: 13 (2d8 + 4) Slashing damage plus 10 (3d6) Fire damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 17) from one of two claws.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Bite (Imp or Vampire Form Only)",
+        "desc": "con DC 18, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition.  6 (1d4 + 4) Piercing damage plus 16 (3d10) Necrotic damage and the creature loses its highest-level available spell slot (if any). The target's Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount. A Humanoid reduced to 0 Hit Points by this damage and then buried rises the following sunset as a Vampire Spawn under the vampire's control."
+      },
+      {
+        "name": "Spellcasting",
+        "desc": "The vampire casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 18):\nAt will: Detect Magic, Detect Thoughts, Dispel Magic, Fireball (level 4 version), Mage Hand, Prestidigitation\n1/day: Wall of Fire\n2/day: Scrying"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Hellfire Strike",
+        "desc": "The vampire moves up to half its Speed, and it makes one Hellfire Claw attack."
+      },
+      {
+        "name": "Infernal Majesty",
+        "desc": "cha DC 17, each creature in a 20-foot Emanation originating from the vampire.  9 (2d8) Psychic damage, and the target has the Frightened condition until the start of its next turn.  Half damage only.  The vampire can't take this action again until the start of its next turn."
+      },
+      {
+        "name": "Teleport",
+        "desc": "The vampire teleports up to 30 feet to an unoccupied space it can see."
+      }
+    ],
+    "desc": [
+      "Size: Small or Medium."
+    ],
+    "index": "vampire-infernalist-2024"
+  },
+  {
+    "name": "Vampire Warden",
+    "edition": "2024",
+    "source": "ABH",
+    "sources": [
+      "ABH"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 18
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 21,
+    "dexterity": 15,
+    "constitution": 18,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 17,
+    "proficiencies": [
+      {
+        "value": 8,
+        "proficiency": {
+          "index": "saving-throw-con",
+          "name": "Saving Throw: CON",
+          "url": ""
+        }
+      },
+      {
+        "value": 6,
+        "proficiency": {
+          "index": "saving-throw-wis",
+          "name": "Saving Throw: WIS",
+          "url": ""
+        }
+      },
+      {
+        "value": 9,
+        "proficiency": {
+          "index": "skill-athletics",
+          "name": "Skill: Athletics",
+          "url": ""
+        }
+      },
+      {
+        "value": 10,
+        "proficiency": {
+          "index": "skill-perception",
+          "name": "Skill: Perception",
+          "url": ""
+        }
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "120 ft.",
+      "passive_perception": 20
+    },
+    "languages": "Common",
+    "challenge_rating": 10,
+    "proficiency_bonus": 4,
+    "xp": 5900,
+    "hit_points": 190,
+    "hit_dice": "21d8",
+    "hit_points_roll": "21d8 + 96",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The vampire has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Vampire Weakness",
+        "desc": "The vampire has these weaknesses:\nForbiddance: The vampire can't enter a residence without an invitation from an occupant.\nRunning Water: The vampire takes 20 Acid damage if it ends its turn in running water.\nStake to the Heart: If a weapon that deals Piercing damage is driven into the vampire's heart while the vampire has the Incapacitated condition, the vampire has the Paralyzed condition until the weapon is removed.\nSunlight: The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.\nImmobile Restoration: If the vampire drops to 0 Hit Points while it doesn't have the Petrified condition, it turns to stone, regains 50 Hit Points, and has the Petrified condition for 1 hour."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The vampire makes two Claw attacks and uses Bite or Guardian's Command."
+      },
+      {
+        "name": "Claw",
+        "desc": "m +9, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage plus 7 (2d6) Necrotic damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 16) from one of two claws.",
+        "attack_bonus": 9
+      },
+      {
+        "name": "Bite",
+        "desc": "con DC 16, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition.  7 (1d4 + 5) Piercing damage plus 7 (2d6) Necrotic damage. The target's Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount."
+      },
+      {
+        "name": "Guardian's Command",
+        "desc": "The vampire casts Compulsion, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15).\nAt will: Compulsion"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Resilient Flesh",
+        "desc": " The vampire is hit by a melee attack roll from an attacker the vampire can see.  The vampire reduces the damage it takes from the attack by 11 (2d6 + 4)."
+      }
+    ],
+    "index": "vampire-warden-2024"
+  }
+]

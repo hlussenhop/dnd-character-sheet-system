@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
-import { ChevronUp, ChevronDown, XCircle, Shuffle, ArrowLeft } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { Shuffle, ArrowLeft } from 'lucide-react';
 import { StepProps } from '../types/wizard.types';
-import { getAllSpecies, SPECIES_CATEGORIES, randomizeSpecies } from '../../../services/dataService';
-import { HumanVariantSelector, OriginFeatSelector, SmartNavigationButton } from '../components';
+import { getAllSpecies, getBackground } from '../../../services/dataService';
+import { SpeciesFilterBar } from './SpeciesFilterBar';
+import {
+  EMPTY_SPECIES_PICKER_FILTERS,
+  SPECIES_PICKER_TAGS,
+  filterPickerSpecies,
+  speciesSourceLabel,
+  type SpeciesPickerFilters,
+} from '../../../utils/speciesPickerFilters';
+import { grantedBackgroundSkills } from '../../../utils/backgroundUtils';
+import { HumanVariantSelector, OriginFeatSelector, SmartNavigationButton, SpeciesAbilityChoiceWidget, SpeciesGrantChoices, SpeciesVariantSelector } from '../components';
+import { getVariantPickerOptions, hasValidVariantSelection, isVariantChoiceRequired } from '../../../utils/speciesVariantUtils';
+import { getSpeciesAbilityRules, formatAbilityPattern, formatSignedBonus, getChoosableAbilities } from '../../../utils/speciesAbilityUtils';
+import { resolveSpeciesGrants, SPECIES_CHOICE_RESET } from '../../../utils/speciesGrantUtils';
+import { randomSpeciesSelections } from '../../../utils/randomizeCreation';
 import { useStepValidation } from '../hooks';
 
 interface RandomizeButtonProps {
@@ -20,12 +33,55 @@ const RandomizeButton: React.FC<RandomizeButtonProps> = ({ onClick, title }) => 
   </button>
 );
 
-export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, prevStep, getNextStepLabel, openTraitModal }) => {
-  // Start with all categories collapsed
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
-  const [showSpeciesInfo, setShowSpeciesInfo] = useState(true);
+const randomSpecies = <T,>(items: T[]): T => items[Math.floor(Math.random() * items.length)];
 
-  const selectedSpecies = getAllSpecies().find(s => s.slug === data.speciesSlug);
+const SpeciesLore: React.FC<{ text: string }> = ({ text }) => {
+  const [open, setOpen] = useState(false);
+  const long = text.length > 280;
+  if (!text) return null;
+  return (
+    <div>
+      <p className={`text-sm text-theme-tertiary ${open || !long ? '' : 'line-clamp-4'}`}>{text}</p>
+      {long && (
+        <button
+          type="button"
+          onClick={() => setOpen(current => !current)}
+          className="mt-1 text-xs text-accent-yellow-light hover:underline"
+        >
+          {open ? 'Show less' : 'Read more'}
+        </button>
+      )}
+    </div>
+  );
+};
+
+export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, prevStep, getNextStepLabel, openTraitModal }) => {
+  const [filters, setFilters] = useState<SpeciesPickerFilters>(EMPTY_SPECIES_PICKER_FILTERS);
+  const [filtersForEdition, setFiltersForEdition] = useState(data.edition);
+  if (filtersForEdition !== data.edition) {
+    setFiltersForEdition(data.edition);
+    setFilters(EMPTY_SPECIES_PICKER_FILTERS);
+  }
+
+  // The ruleset is chosen before the wizard starts, so this step only offers that edition.
+  const visibleSpecies = useMemo(() => getAllSpecies(data.edition), [data.edition]);
+  const selectedSpecies = visibleSpecies.find(species => species.slug === data.speciesSlug);
+  const abilityRules = getSpeciesAbilityRules(selectedSpecies, data.selectedSpeciesVariant);
+  const variantOptions = getVariantPickerOptions(selectedSpecies, data.edition);
+  // A species whose variant must be picked doesn't show its ability choice until it is
+  const awaitingVariant = isVariantChoiceRequired(selectedSpecies, data.edition) && !hasValidVariantSelection(selectedSpecies, data);
+
+  // Skills already granted elsewhere (background, fixed species proficiencies) are not offered as species picks
+  const backgroundSkills = grantedBackgroundSkills(getBackground(data.background), data);
+  const unavailableSkills = [
+    ...backgroundSkills,
+    ...resolveSpeciesGrants(selectedSpecies, {
+      edition: data.edition,
+      level: data.level,
+      variantSlug: data.selectedSpeciesVariant,
+      walkSpeed: selectedSpecies?.speed ?? 30,
+    }).skills,
+  ];
 
   // Validation hook
   const { canProceed, missingItems, nextAction } = useStepValidation(2, data);
@@ -34,16 +90,21 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
 
 
 
-  const toggleCategory = (categoryName: string) => {
-    setExpandedCategories(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(categoryName)) {
-        newSet.delete(categoryName);
-      } else {
-        newSet.add(categoryName);
-      }
-      return newSet;
-    });
+  const shownSpecies = useMemo(
+    () => filterPickerSpecies(visibleSpecies, filters),
+    [visibleSpecies, filters],
+  );
+  const sources = useMemo(() => {
+    const codes = new Set(visibleSpecies.map(species => species.source).filter(Boolean));
+    return [...codes].sort((a, b) => speciesSourceLabel(a).localeCompare(speciesSourceLabel(b)));
+  }, [visibleSpecies]);
+  const tags = useMemo(() => {
+    const present = new Set(visibleSpecies.flatMap(species => species.tags ?? []));
+    return SPECIES_PICKER_TAGS.map(tag => tag.id).filter(tag => present.has(tag));
+  }, [visibleSpecies]);
+
+  const updateFilters = (updated: Partial<SpeciesPickerFilters>) => {
+    setFilters(current => ({ ...current, ...updated }));
   };
 
   return (
@@ -51,78 +112,74 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
       <div className='flex justify-between items-center'>
         <h3 className='text-xl font-bold text-red-300'>Select Species (Species Bonuses will be applied automatically)</h3>
         <RandomizeButton
-          onClick={() => updateData({ speciesSlug: randomizeSpecies() })}
+          onClick={() => {
+            if (visibleSpecies.length === 0) return;
+            const pick = randomSpecies(visibleSpecies);
+            const selections = randomSpeciesSelections(pick, data.edition, backgroundSkills);
+            const { featChoices, ...rest } = selections;
+            updateData({
+              speciesSlug: pick.slug,
+              ...rest,
+              featChoices: { ...(data.featChoices ?? {}), ...(featChoices ?? {}) },
+            });
+          }}
           title="Randomize species selection"
         />
       </div>
 
-      {/* Species Categories */}
-      <div className='space-y-3'>
-        {SPECIES_CATEGORIES.map(category => (
-          <div key={category.name} className='border border-theme-primary rounded-lg overflow-hidden'>
-            {/* Category Header */}
-            <button
-              onClick={() => toggleCategory(category.name)}
-              className='w-full p-4 bg-theme-tertiary hover:bg-gray-650 flex items-center justify-between transition-colors'
-            >
-              <div className='flex items-center gap-3'>
-                <span className='text-2xl'>{category.icon}</span>
-                <div className='text-left'>
-                  <div className='font-bold text-accent-yellow-light text-lg'>
-                    {category.name} ({category.species.filter(s => s.edition === data.edition || (data.edition === '2024' && s.edition === '2014')).length})
-                  </div>
-                  <div className='text-xs text-theme-muted'>{category.description}</div>
-                </div>
-              </div>
-              {expandedCategories.has(category.name) ? (
-                <ChevronUp className='w-5 h-5 text-theme-muted' />
-              ) : (
-                <ChevronDown className='w-5 h-5 text-theme-muted' />
-              )}
-            </button>
+      <SpeciesFilterBar
+        filters={filters}
+        onChange={updateFilters}
+        onReset={() => setFilters(EMPTY_SPECIES_PICKER_FILTERS)}
+        sources={sources}
+        tags={tags}
+      />
 
-            {/* Category Species */}
-            {expandedCategories.has(category.name) && (
-              <div className='p-4 bg-theme-secondary/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-                {category.species.filter(s => s.edition === data.edition || (data.edition === '2024' && s.edition === '2014')).map(species => ( // Filter by edition
-                  <button
-                    key={species.slug}
-                    onClick={() => updateData({ speciesSlug: species.slug, selectedLineage: undefined })}
-                    className={`p-3 rounded-lg text-left border-2 transition-all ${
-                      data.speciesSlug === species.slug
-                        ? 'bg-accent-red-darker border-red-500 shadow-md'
-                        : 'bg-theme-tertiary border-theme-primary hover:bg-theme-quaternary'
-                    }`}
-                  >
-                    <p className='text-sm font-bold text-accent-yellow-light'>{species.name}</p>
-                    <p className='text-xs text-theme-disabled mt-1'>{species.source}</p>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Selected Species Details */}
-      {selectedSpecies && showSpeciesInfo && (
-        <div className="bg-theme-tertiary/50 border border-theme-primary rounded-lg p-4 space-y-3 relative">
-          <button
-            onClick={() => setShowSpeciesInfo(false)}
-            className="absolute top-2 right-2 text-theme-muted hover:text-white transition-colors"
-            title="Close"
-          >
-            <XCircle className="w-5 h-5" />
-          </button>
-
-          <div className="flex items-start justify-between pr-8">
-            <div>
-              <h4 className="text-lg font-bold text-accent-yellow-light">{selectedSpecies.name}</h4>
-              <p className="text-xs text-theme-disabled">{selectedSpecies.source}</p>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+        <div className="lg:col-span-5">
+          <p className="mb-2 text-sm text-theme-muted">
+            {shownSpecies.length} species
+          </p>
+          {shownSpecies.length === 0 ? (
+            <div className="p-8 text-center rounded-lg border border-dashed border-theme-primary text-theme-muted">
+              No species match these filters.
             </div>
+          ) : (
+            <div className="max-h-72 lg:max-h-[36rem] overflow-y-auto rounded-lg border border-theme-primary divide-y divide-theme-primary">
+              {shownSpecies.map(species => (
+                <button
+                  key={species.slug}
+                  onClick={() => updateData({ speciesSlug: species.slug, ...SPECIES_CHOICE_RESET })}
+                  className={`w-full px-3 py-2 text-left transition-colors ${
+                    data.speciesSlug === species.slug
+                      ? 'bg-accent-red-darker'
+                      : 'bg-theme-tertiary hover:bg-theme-quaternary'
+                  }`}
+                >
+                  <span className="block text-sm font-semibold text-accent-yellow-light truncate">{species.name}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="lg:col-span-7 lg:sticky lg:top-4 lg:max-h-[36rem] lg:overflow-y-auto">
+      {!selectedSpecies ? (
+        <div className="p-8 text-center rounded-lg border border-dashed border-theme-primary text-theme-muted">
+          Choose a species to see its traits and any choices it asks for.
+        </div>
+      ) : (
+        <div className="bg-theme-tertiary/50 border border-theme-primary rounded-lg p-4 space-y-3">
+          <div>
+            <h4 className="text-lg font-bold text-accent-yellow-light">{selectedSpecies.name}</h4>
+            <p className="text-xs text-theme-disabled">
+              {selectedSpecies.edition} · {speciesSourceLabel(selectedSpecies.source)}
+              {selectedSpecies.speed ? ` · ${selectedSpecies.speed} ft.` : ''}
+              {selectedSpecies.swimSpeed ? ` · swim ${selectedSpecies.swimSpeed} ft.` : ''}
+            </p>
           </div>
 
-            <p className="text-sm text-theme-tertiary">{selectedSpecies.detailedDescription || selectedSpecies.description}</p>
+          <SpeciesLore key={selectedSpecies.slug} text={selectedSpecies.detailedDescription || selectedSpecies.description} />
 
            <div className="space-y-3 text-sm">
              {/* 2024 Traits */}
@@ -141,15 +198,23 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
               )}
 
              {/* 2014 Ability Bonuses */}
-             {data.edition === '2014' && selectedSpecies.ability_bonuses && Object.keys(selectedSpecies.ability_bonuses).length > 0 && (
+             {data.edition === '2014' && (Object.keys(abilityRules.fixed).length > 0 || abilityRules.choice) && (
                <div>
                  <h5 className="font-semibold text-accent-red-light mb-2">Ability Bonuses:</h5>
                  <div className="flex flex-wrap gap-2">
-                   {Object.entries(selectedSpecies.ability_bonuses).map(([ability, bonus]) => (
+                   {Object.entries(abilityRules.fixed).map(([ability, bonus]) => (
                      <span key={ability} className="px-2 py-1 bg-blue-700 text-white text-xs rounded">
-                       {ability} +{bonus}
+                       {ability} {formatSignedBonus(bonus)}
                      </span>
                    ))}
+                   {abilityRules.choice && (
+                     <span className="px-2 py-1 bg-blue-900 text-white text-xs rounded">
+                       Your choice: {abilityRules.choice.patterns.map(formatAbilityPattern).join(' or ')}
+                       {abilityRules.choice.from && getChoosableAbilities(abilityRules.choice, abilityRules.fixed).length < 6
+                         ? ` (from ${getChoosableAbilities(abilityRules.choice, abilityRules.fixed).join(', ')})`
+                         : ''}
+                     </span>
+                   )}
                  </div>
                </div>
              )}
@@ -186,55 +251,6 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
                 </div>
               )}
 
-              {/* Ancestry Choices for Dragonborn */}
-              {data.edition === '2024' && selectedSpecies.slug === 'dragonborn' && selectedSpecies.ancestries && (
-                <div>
-                  <h5 className="font-semibold text-accent-purple-light mb-2">Choose Draconic Ancestry:</h5>
-                  <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedSpecies.ancestries).map(([color, damageType]) => (
-                      <div key={color} className="text-xs p-2 bg-theme-secondary rounded border">
-                        <strong className="capitalize">{color}:</strong> {String(damageType)} damage
-                     </div>
-                   ))}
-                 </div>
-               </div>
-             )}
-
-              {/* Fiendish Legacy Choices for Tiefling */}
-              {data.edition === '2024' && selectedSpecies.slug === 'tiefling' && selectedSpecies.fiendishLegacies && (
-                <div>
-                  <h5 className="font-semibold text-accent-orange-light mb-2">Choose Fiendish Legacy:</h5>
-                  <div className="space-y-2">
-                    {Object.entries(selectedSpecies.fiendishLegacies).map(([legacyName, legacyData]) => (
-                      <div key={legacyName} className="border border-theme-primary rounded p-3">
-                        <h6 className="font-medium text-theme-primary mb-1 capitalize">{legacyName}</h6>
-                        <div className="text-xs text-theme-muted mb-1">
-                          <strong>Resistance:</strong> {legacyData.resistance}
-                        </div>
-                        <div className="text-xs text-theme-muted">
-                          <strong>Spells:</strong> {legacyData.spells.join(', ')}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Giant Ancestry Choices for Goliath */}
-              {data.edition === '2024' && selectedSpecies.slug === 'goliath' && selectedSpecies.giantAncestry && (
-                <div>
-                  <h5 className="font-semibold text-accent-stone-light mb-2">Choose Giant Ancestry:</h5>
-                  <div className="space-y-2">
-                    {Object.entries(selectedSpecies.giantAncestry).map(([ancestry, effect]) => (
-                      <div key={ancestry} className="border border-theme-primary rounded p-3">
-                        <h6 className="font-medium text-theme-primary mb-1 capitalize">{ancestry} Giant</h6>
-                        <div className="text-xs text-theme-muted">{String(effect)}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
               {/* Celestial Revelation Choices for Aasimar */}
               {data.edition === '2024' && selectedSpecies.slug === 'aasimar' && selectedSpecies.celestialRevelationOptions && (
                 <div>
@@ -259,7 +275,9 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
              <div>
                <span className="font-semibold text-accent-red-light">Species Traits: </span>
                <div className="flex flex-wrap gap-2 mt-1">
-                 {selectedSpecies.species_traits.map((trait, idx) => (
+                 {selectedSpecies.species_traits
+                   .filter(trait => !selectedSpecies.variants?.find(v => v.slug === data.selectedSpeciesVariant)?.replacesTraits?.includes(trait))
+                   .map((trait, idx) => (
                     <button
                       key={idx}
                       onClick={(e) => {
@@ -279,12 +297,43 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
                </div>
              </div>
 
-            <div className="pt-2 border-t border-theme-primary">
-              <div className="font-semibold text-accent-yellow-light mb-1">Typical Roles:</div>
-              <p className="text-xs text-theme-muted">{selectedSpecies.typicalRoles.join(', ')}</p>
-            </div>
-          </div>
-        </div>
+            {selectedSpecies.typicalRoles.length > 0 && (
+              <div className="pt-2 border-t border-theme-primary">
+                <div className="font-semibold text-accent-yellow-light mb-1">Typical Roles:</div>
+                <p className="text-xs text-theme-muted">{selectedSpecies.typicalRoles.join(', ')}</p>
+              </div>
+            )}
+
+      {/* Generic variant picker (subraces, Dragonmarks, ...). Human has its own selector. */}
+      {selectedSpecies && variantOptions && (
+        <SpeciesVariantSelector
+          species={selectedSpecies}
+          variants={variantOptions}
+          selectedSlug={data.selectedSpeciesVariant}
+          onSelect={variantSlug => updateData({ selectedSpeciesVariant: variantSlug, speciesAbilityChoices: undefined, speciesPicks: undefined })}
+        />
+      )}
+
+      {/* Flexible species ability score increases (2014). Human is handled by its own variant selector. */}
+      {selectedSpecies && selectedSpecies.slug !== 'human' && data.edition === '2014' && abilityRules.choice && !awaitingVariant && (
+        <SpeciesAbilityChoiceWidget
+          key={`${selectedSpecies.slug}:${data.selectedSpeciesVariant ?? ''}`}
+          choice={abilityRules.choice}
+          fixed={abilityRules.fixed}
+          selection={data.speciesAbilityChoices}
+          onChange={selection => updateData({ speciesAbilityChoices: selection })}
+        />
+      )}
+
+      {/* Species choices (draconic ancestry, fiendish legacy, giant ancestry) and trait skill/tool picks */}
+      {selectedSpecies && !awaitingVariant && (
+        <SpeciesGrantChoices
+          key={`grants:${selectedSpecies.slug}:${data.selectedSpeciesVariant ?? ''}`}
+          species={selectedSpecies}
+          data={data}
+          unavailableSkills={unavailableSkills}
+          onChange={patch => updateData(patch)}
+        />
       )}
 
       {/* Human Variant Selection */}
@@ -320,14 +369,6 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
           </div>
         )}
 
-        {/* 2024 Species Fixed Feat Display */}
-        {data.edition === '2024' && selectedSpecies?.speciesFeat && (
-          <div className="text-sm text-theme-muted p-4 bg-theme-secondary/50 rounded-lg border border-theme-primary">
-            <p className="font-semibold text-accent-yellow-light">Species Feat:</p>
-            <p className="mt-2 text-theme-secondary">Your species grants you the <strong>{selectedSpecies.speciesFeat}</strong> feat.</p>
-          </div>
-        )}
-
         {selectedSpecies?.slug === 'human-2024' && data.edition === '2024' && (
          <div className="text-sm text-theme-muted p-4 bg-theme-secondary/50 rounded-lg border border-theme-primary space-y-4">
            <div>
@@ -359,6 +400,11 @@ export const Step2Species: React.FC<StepProps> = ({ data, updateData, nextStep, 
            )}
          </div>
        )}
+          </div>
+        </div>
+      )}
+        </div>
+      </div>
 
       <div className='flex justify-between'>
         <button onClick={prevStep} className="px-4 py-2 bg-theme-quaternary hover:bg-theme-hover rounded-lg text-white flex items-center">

@@ -1,0 +1,695 @@
+{
+  "Celestial Resistance": {
+    "resistances": [
+      "necrotic",
+      "radiant"
+    ]
+  },
+  "Hellish Resistance": {
+    "resistances": [
+      "fire"
+    ]
+  },
+  "Acid Resistance": {
+    "resistances": [
+      "acid"
+    ]
+  },
+  "Fire Resistance": {
+    "resistances": [
+      "fire"
+    ]
+  },
+  "Lightning Resistance": {
+    "resistances": [
+      "lightning"
+    ]
+  },
+  "Dwarven Resilience": {
+    "resistances": [
+      "poison"
+    ]
+  },
+  "Stout Resilience": {
+    "resistances": [
+      "poison"
+    ]
+  },
+  "Poison Resilience": {
+    "resistances": [
+      "poison"
+    ]
+  },
+  "Guardian of the Depths": {
+    "resistances": [
+      "cold"
+    ]
+  },
+  "Mountain Born": {
+    "resistances": [
+      "cold"
+    ]
+  },
+  "Necrotic Resistance": {
+    "resistances": [
+      "necrotic"
+    ]
+  },
+  "Psychic Resilience": {
+    "resistances": [
+      "psychic"
+    ]
+  },
+  "Child of the Sea": {
+    "resistances": [
+      "cold"
+    ],
+    "note": "You can breathe air and water."
+  },
+  "Flight": {
+    "movement": {
+      "fly": "walk"
+    },
+    "note": "Can't use this flying speed in medium or heavy armor."
+  },
+  "Swimming Speed": {
+    "movement": {
+      "swim": "walk"
+    }
+  },
+  "Climbing Speed": {
+    "movement": {
+      "climb": "walk"
+    }
+  },
+  "Draconic Flight [2024]": {
+    "movement": {
+      "fly": "walk"
+    },
+    "minLevel": 5,
+    "note": "Active for 10 minutes once per long rest."
+  },
+  "Darkvision": {
+    "senses": {
+      "darkvision": 60
+    }
+  },
+  "Darkvision (120 ft)": {
+    "senses": {
+      "darkvision": 120
+    }
+  },
+  "Superior Darkvision": {
+    "senses": {
+      "darkvision": 120
+    }
+  },
+  "Keen Senses": {
+    "skills": [
+      "Perception"
+    ]
+  },
+  "Keen Senses [2024]": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Insight",
+        "Perception",
+        "Survival"
+      ]
+    }
+  },
+  "Cat's Talent": {
+    "skills": [
+      "Perception",
+      "Stealth"
+    ]
+  },
+  "Leporine Senses": {
+    "skills": [
+      "Perception"
+    ]
+  },
+  "Little Giant": {
+    "skills": [
+      "Athletics"
+    ]
+  },
+  "Menacing": {
+    "skills": [
+      "Intimidation"
+    ]
+  },
+  "Silent Feathers": {
+    "skills": [
+      "Stealth"
+    ]
+  },
+  "Sneaky": {
+    "skills": [
+      "Stealth"
+    ]
+  },
+  "Reveler": {
+    "skills": [
+      "Performance",
+      "Persuasion"
+    ],
+    "note": "Also proficiency with one musical instrument of your choice."
+  },
+  "Skill Versatility": {
+    "skillChoices": {
+      "count": 2
+    }
+  },
+  "Skillful": {
+    "skillChoices": {
+      "count": 1
+    }
+  },
+  "Bestial Instincts": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Acrobatics",
+        "Athletics",
+        "Intimidation",
+        "Survival"
+      ]
+    }
+  },
+  "Changeling Instincts": {
+    "skillChoices": {
+      "count": 2,
+      "from": [
+        "Deception",
+        "Insight",
+        "Intimidation",
+        "Performance",
+        "Persuasion"
+      ]
+    }
+  },
+  "Natural Affinity": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "AnimalHandling",
+        "Medicine",
+        "Nature",
+        "Survival"
+      ]
+    }
+  },
+  "Nature's Intuition (Two Skills)": {
+    "skillChoices": {
+      "count": 2,
+      "from": [
+        "AnimalHandling",
+        "Medicine",
+        "Nature",
+        "Perception",
+        "Stealth",
+        "Survival"
+      ]
+    }
+  },
+  "Nature's Intuition (One Skill)": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "AnimalHandling",
+        "Medicine",
+        "Nature",
+        "Perception",
+        "Stealth",
+        "Survival"
+      ]
+    }
+  },
+  "Kenku Recall": {
+    "skillChoices": {
+      "count": 2
+    }
+  },
+  "Kobold Legacy (Craftiness)": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Arcana",
+        "Investigation",
+        "Medicine",
+        "SleightOfHand",
+        "Survival"
+      ]
+    }
+  },
+  "Tool Proficiency": {
+    "toolChoices": {
+      "count": 1,
+      "from": [
+        "Smith's tools",
+        "Brewer's supplies",
+        "Mason's tools"
+      ]
+    }
+  },
+  "Tinker": {
+    "tools": [
+      "Tinker's tools"
+    ]
+  },
+  "Tinker [2024]": {},
+  "Drow Weapon Training": {
+    "weapons": [
+      "Rapiers",
+      "Shortswords",
+      "Hand crossbows"
+    ]
+  },
+  "Dwarven Combat Training": {
+    "weapons": [
+      "Battleaxes",
+      "Handaxes",
+      "Light hammers",
+      "Warhammers"
+    ]
+  },
+  "Elf Weapon Training": {
+    "weapons": [
+      "Longswords",
+      "Shortswords",
+      "Shortbows",
+      "Longbows"
+    ]
+  },
+  "Dwarven Armor Training": {
+    "armor": [
+      "Light Armor",
+      "Medium Armor"
+    ]
+  },
+  "Dwarven Toughness": {
+    "hpPerLevel": 1
+  },
+  "Hare-Trigger": {
+    "initiativeProficiency": true
+  },
+  "Extra Language": {
+    "languageChoices": 1
+  },
+  "Natural Armor": {
+    "naturalArmor": {
+      "base": 12,
+      "abilities": [
+        "CON"
+      ]
+    }
+  },
+  "Natural Armor (13 + Dex)": {
+    "naturalArmor": {
+      "base": 13,
+      "abilities": [
+        "DEX"
+      ]
+    }
+  },
+  "Natural Armor (Shell, AC 17)": {
+    "naturalArmor": {
+      "base": 17,
+      "abilities": [],
+      "noArmor": true
+    }
+  },
+  "Armored Casing": {
+    "naturalArmor": {
+      "base": 13,
+      "abilities": [
+        "DEX"
+      ]
+    }
+  },
+  "Chameleon Carapace": {
+    "naturalArmor": {
+      "base": 13,
+      "abilities": [
+        "DEX"
+      ]
+    }
+  },
+  "Mechanical Nature": {
+    "resistances": [
+      "poison"
+    ],
+    "conditionImmunities": [
+      "disease"
+    ]
+  },
+  "Specialized Design": {
+    "toolChoices": {
+      "count": 2,
+      "from": [
+        "Alchemist's supplies",
+        "Brewer's supplies",
+        "Calligrapher's supplies",
+        "Carpenter's tools",
+        "Cartographer's tools",
+        "Cobbler's tools",
+        "Cook's utensils",
+        "Glassblower's tools",
+        "Jeweler's tools",
+        "Leatherworker's tools",
+        "Mason's tools",
+        "Painter's supplies",
+        "Potter's tools",
+        "Smith's tools",
+        "Tinker's tools",
+        "Weaver's tools",
+        "Woodcarver's tools",
+        "Disguise kit",
+        "Forgery kit",
+        "Herbalism kit",
+        "Navigator's tools",
+        "Poisoner's kit",
+        "Thieves' tools",
+        "Dice set",
+        "Dragonchess set",
+        "Playing card set",
+        "Three-Dragon Ante set",
+        "Bagpipes",
+        "Drum",
+        "Dulcimer",
+        "Flute",
+        "Horn",
+        "Lute",
+        "Lyre",
+        "Pan flute",
+        "Shawm",
+        "Viol",
+        "Land vehicles",
+        "Water vehicles"
+      ]
+    }
+  },
+  "Tireless Precision": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Arcana",
+        "History",
+        "Investigation",
+        "Medicine",
+        "Performance",
+        "SleightOfHand"
+      ]
+    },
+    "toolChoices": {
+      "count": 1,
+      "from": [
+        "Alchemist's supplies",
+        "Brewer's supplies",
+        "Calligrapher's supplies",
+        "Carpenter's tools",
+        "Cartographer's tools",
+        "Cobbler's tools",
+        "Cook's utensils",
+        "Glassblower's tools",
+        "Jeweler's tools",
+        "Leatherworker's tools",
+        "Mason's tools",
+        "Painter's supplies",
+        "Potter's tools",
+        "Smith's tools",
+        "Tinker's tools",
+        "Weaver's tools",
+        "Woodcarver's tools",
+        "Disguise kit",
+        "Forgery kit",
+        "Herbalism kit",
+        "Navigator's tools",
+        "Poisoner's kit",
+        "Thieves' tools",
+        "Dice set",
+        "Dragonchess set",
+        "Playing card set",
+        "Three-Dragon Ante set",
+        "Bagpipes",
+        "Drum",
+        "Dulcimer",
+        "Flute",
+        "Horn",
+        "Lute",
+        "Lyre",
+        "Pan flute",
+        "Shawm",
+        "Viol",
+        "Land vehicles",
+        "Water vehicles"
+      ]
+    },
+    "note": "Add a d4 to ability checks with the chosen skill or tool."
+  },
+  "Hunter's Instincts": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Athletics",
+        "Intimidation",
+        "Perception",
+        "Survival"
+      ]
+    }
+  },
+  "Persuasive": {
+    "skills": [
+      "Persuasion"
+    ]
+  },
+  "Natural Resilience": {
+    "resistances": [
+      "acid",
+      "poison"
+    ]
+  },
+  "Firearms Mastery": {
+    "weapons": [
+      "Firearms"
+    ]
+  },
+  "Spider Climb": {
+    "movement": {
+      "climb": "walk"
+    }
+  },
+  "Ancestral Legacy": {
+    "skillChoices": {
+      "count": 2
+    }
+  },
+  "Deathless Nature": {
+    "resistances": [
+      "poison"
+    ]
+  },
+  "Mental Discipline (Psychic Resistance)": {
+    "resistances": [
+      "psychic"
+    ]
+  },
+  "Constructed Resilience": {
+    "resistances": [
+      "poison"
+    ],
+    "conditionImmunities": [
+      "disease"
+    ]
+  },
+  "Integrated Protection": {
+    "acBonus": 1
+  },
+  "Specialized Design (Skill and Tool)": {
+    "skillChoices": {
+      "count": 1
+    },
+    "toolChoices": {
+      "count": 1,
+      "from": [
+        "Alchemist's supplies",
+        "Brewer's supplies",
+        "Calligrapher's supplies",
+        "Carpenter's tools",
+        "Cartographer's tools",
+        "Cobbler's tools",
+        "Cook's utensils",
+        "Glassblower's tools",
+        "Jeweler's tools",
+        "Leatherworker's tools",
+        "Mason's tools",
+        "Painter's supplies",
+        "Potter's tools",
+        "Smith's tools",
+        "Tinker's tools",
+        "Weaver's tools",
+        "Woodcarver's tools",
+        "Disguise kit",
+        "Forgery kit",
+        "Herbalism kit",
+        "Navigator's tools",
+        "Poisoner's kit",
+        "Thieves' tools",
+        "Dice set",
+        "Dragonchess set",
+        "Playing card set",
+        "Three-Dragon Ante set",
+        "Bagpipes",
+        "Drum",
+        "Dulcimer",
+        "Flute",
+        "Horn",
+        "Lute",
+        "Lyre",
+        "Pan flute",
+        "Shawm",
+        "Viol",
+        "Land vehicles",
+        "Water vehicles"
+      ]
+    }
+  },
+  "Variable Trait (Skill Proficiency)": {
+    "skillChoices": {
+      "count": 1
+    }
+  },
+  "Gem Flight": {
+    "movement": {
+      "fly": "walk"
+    },
+    "minLevel": 5
+  },
+  "Storm's Boon": {
+    "resistances": [
+      "lightning"
+    ]
+  },
+  "Maker's Gift": {
+    "toolChoices": {
+      "count": 1,
+      "from": [
+        "Alchemist's supplies",
+        "Brewer's supplies",
+        "Calligrapher's supplies",
+        "Carpenter's tools",
+        "Cartographer's tools",
+        "Cobbler's tools",
+        "Cook's utensils",
+        "Glassblower's tools",
+        "Jeweler's tools",
+        "Leatherworker's tools",
+        "Mason's tools",
+        "Painter's supplies",
+        "Potter's tools",
+        "Smith's tools",
+        "Tinker's tools",
+        "Weaver's tools",
+        "Woodcarver's tools"
+      ]
+    }
+  },
+  "Swimming Speed (Half-Elf)": {
+    "movement": {
+      "swim": 30
+    }
+  },
+  "Winged": {
+    "movement": {
+      "fly": 30
+    },
+    "note": "No flying speed while wearing heavy armor."
+  },
+  "Trace of Undeath": {
+    "resistances": [
+      "necrotic"
+    ]
+  },
+  "Construct Resilience": {
+    "resistances": [
+      "poison"
+    ]
+  },
+  "Werewolf Instincts": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Perception",
+        "Stealth",
+        "Survival"
+      ]
+    }
+  },
+  "Mental Discipline [2024]": {
+    "resistances": [
+      "psychic"
+    ]
+  },
+  "Severed from Dreams [2024]": {
+    "skillChoices": {
+      "count": 1
+    },
+    "note": "You can change this skill each time you finish a Long Rest."
+  },
+  "Skill Versatility [2024]": {
+    "skillChoices": {
+      "count": 1
+    },
+    "note": "May instead be a tool proficiency; you can swap it each time you finish a Long Rest."
+  },
+  "Knowledge from a Past Life [2024]": {
+    "skillChoices": {
+      "count": 1
+    }
+  },
+  "Cold Resistance": {
+    "resistances": [
+      "cold"
+    ]
+  },
+  "Delightful Imitator": {
+    "skillChoices": {
+      "count": 1,
+      "from": [
+        "Deception",
+        "Performance"
+      ]
+    }
+  },
+  "Blindsight": {
+    "senses": {
+      "blindsight": 30
+    },
+    "conditionImmunities": [
+      "blinded"
+    ],
+    "note": "10 feet while deafened. You are blind beyond this radius."
+  },
+  "Natural Armor (+1)": {
+    "acBonus": 1
+  },
+  "Undead Nature (Skeleton)": {
+    "damageImmunities": [
+      "poison"
+    ],
+    "conditionImmunities": [
+      "poisoned",
+      "exhaustion"
+    ]
+  },
+  "Undead Nature (Zombie)": {
+    "damageImmunities": [
+      "poison"
+    ],
+    "conditionImmunities": [
+      "poisoned"
+    ]
+  }
+}

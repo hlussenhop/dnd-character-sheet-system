@@ -1,6 +1,6 @@
 # Using the Character Sheet
 
-The NexusForge character sheet is a comprehensive, interactive hub for managing all aspects of your D&D 5e character. It features multiple layout options, collapsible sections, and extensive functionality for character management, combat, and roleplaying.
+The dnd character system character sheet is a comprehensive, interactive hub for managing all aspects of your D&D 5e character. It features multiple layout options, collapsible sections, and extensive functionality for character management, combat, and roleplaying.
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ The NexusForge character sheet is a comprehensive, interactive hub for managing 
 
 ## Edition Selection (2014 vs 2024 Rules)
 
-The NexusForge now supports both the 2014 (original 5th Edition) and 2024 (revised 5th Edition) D&D rules. Your choice of edition affects class features, subclass timing, proficiencies, and special abilities.
+The dnd character system now supports both the 2014 (original 5th Edition) and 2024 (revised 5th Edition) D&D rules. Your choice of edition affects class features, subclass timing, proficiencies, and special abilities.
 
 ### Choosing Your Edition
 
@@ -65,9 +65,8 @@ During character creation (Step 0: Level Selection), you'll see an **Edition Sel
 
 - **Edition is set during character creation** and stored with your character
 - **Cannot be changed later** - create a new character to use a different edition
-- **All classes default to 2024 rules** when 2024 edition is selected
-- **Only Cleric has full 2024 implementation** currently (other classes use 2014 rules)
-- **Character sheet automatically applies** edition-specific bonuses and features
+- **The edition selects that edition's species, background, class, subclass, spells, and feats**
+- **2024 Cleric** still chooses Divine Order at level 1 and a domain at level 3
 
 ## 2024 Cleric - Divine Order System
 
@@ -247,7 +246,7 @@ The character sheet offers three distinct layout modes, automatically adapting f
 
 ### Ability Score Display
 - **STR/DEX/CON/INT/WIS/CHA**: All six ability scores with modifiers
-- **Score Breakdown**: Base score + racial bonuses + other modifiers
+- **Score Breakdown**: Base score plus species, background, and feat modifiers
 - **Modifier Display**: Automatic calculation of ability modifiers (-5 to +10)
 
 ### Ability Checks
@@ -428,16 +427,16 @@ The character sheet offers three distinct layout modes, automatically adapting f
 ## Attunement & Magic Items
 
 ### Attunement Slots
-- **Available Slots**: Current attunement capacity (3 + proficiency bonus)
-- **Slot Tracking**: Visual indication of used/free slots
-- **Item Attunement**: One-click attunement to magic items
-- **Attunement Requirements**: Track attunement prerequisites
+- **Three slots** for every character
+- **Artificer**: 4 slots at level 10, 5 at level 14, and 6 at level 18
+- **Slot Tracking**: Used and free slots, with the names of attuned items
+- **Attune / End**: A row attunes only when the item requires it and a slot is free
 
 ### Magic Item Management
-- **Attuned Items**: List of currently attuned magic items
-- **Item Properties**: Detailed magic item descriptions
-- **Charges Tracking**: Track charges on limited-use items
-- **Cursed Items**: Special handling for cursed magic items
+- **Add from the catalog**: Search by name (two letters), edition, and rarity. The item is stored on the inventory row and does not stack with mundane gear
+- **Book text**: Opening the row loads that item's source
+- **Bonuses on the sheet**: Armor class and saving throws, while the item is attuned, or while it is carried when it does not require attunement
+- **Shown on the card**: Ability score changes, resistances, weapon and spell bonuses, charges, and the cursed or sentient flag. Those are not written into ability scores or the attack roll
 
 ## Proficiencies & Languages
 

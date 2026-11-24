@@ -1,0 +1,7406 @@
+# Content Inventory
+
+Generated from the 5etools JSON data mirror, filtered to the 38 source books currently in `/content-sourcebooks`. This lists every named entry each book contributes per content type, independent of the book's prose structure.
+
+## Summary
+
+- **Species / Races:** 201
+- **Backgrounds:** 146
+- **Feats:** 293
+- **Classes:** 29
+- **Subclasses:** 310
+- **Optional Class Features (invocations, maneuvers, metamagic, etc.):** 221
+- **Spells:** 963
+- **Magic Items:** 2247
+- **Monsters:** 2477
+
+## Species / Races
+
+### Acquisitions Incorporated (AI) — 1
+
+- Verdan
+
+### Astral Adventurer's Guide (AAG) — 6
+
+- Astral Elf
+- Autognome
+- Giff
+- Hadozee
+- Plasmoid
+- Thri-kreen
+
+### Dungeon Master's Guide (2014) (DMG) — 18
+
+- Aarakocra
+- Aasimar
+- Bullywug
+- Elf (Eladrin) _(subrace)_
+- Gnoll
+- Gnome (Deep)
+- Goblin
+- Grimlock
+- Hobgoblin
+- Kenku
+- Kobold
+- Kuo-Toa
+- Lizardfolk
+- Merfolk
+- Orc
+- Skeleton
+- Troglodyte
+- Zombie
+
+### Eberron: Forge of the Artificer (EFA) — 5
+
+- Changeling
+- Kalashtar
+- Khoravar
+- Shifter
+- Warforged
+
+### Eberron: Rising from the Last War (ERLW) — 25
+
+- Bugbear
+- Changeling
+- Dwarf (Mark of Warding) _(subrace)_
+- Elf (Mark of Shadow) _(subrace)_
+- Gnome (Mark of Scribing) _(subrace)_
+- Goblin
+- Half-Elf (Variant; Mark of Detection) _(subrace)_
+- Half-Elf (Variant; Mark of Storm) _(subrace)_
+- Half-Orc (Variant; Mark of Finding) _(subrace)_
+- Halfling (Mark of Healing) _(subrace)_
+- Halfling (Mark of Hospitality) _(subrace)_
+- Hobgoblin
+- Human (Mark of Handling) _(subrace)_
+- Human (Mark of Making) _(subrace)_
+- Human (Mark of Passage) _(subrace)_
+- Human (Mark of Sentinel) _(subrace)_
+- Human (Variant; Mark of Finding) _(subrace)_
+- Kalashtar
+- Orc
+- Shifter
+- Shifter (Beasthide) _(subrace)_
+- Shifter (Longtooth) _(subrace)_
+- Shifter (Swiftstride) _(subrace)_
+- Shifter (Wildhunt) _(subrace)_
+- Warforged
+
+### Explorer's Guide to Wildemount (EGW) — 5
+
+- Dragonborn (Draconblood) _(subrace)_
+- Dragonborn (Ravenite) _(subrace)_
+- Elf (Pallid) _(subrace)_
+- Halfling (Lotusden) _(subrace)_
+- Orc
+
+### Fizban's Treasury of Dragons (FTD) — 3
+
+- Dragonborn (Chromatic)
+- Dragonborn (Gem)
+- Dragonborn (Metallic)
+
+### Guildmasters' Guide to Ravnica (GGR) — 6
+
+- Centaur
+- Goblin
+- Loxodon
+- Minotaur
+- Simic Hybrid
+- Vedalken
+
+### Lorwyn: First Light (LFL) — 7
+
+- Boggart
+- Elf
+- Faerie
+- Flamekin
+- Kithkin
+- Lorwyn Changeling
+- Rimekin
+
+### Mordenkainen Presents: Monsters of the Multiverse (MPMM) — 34
+
+- Aarakocra
+- Aasimar
+- Bugbear
+- Centaur
+- Changeling
+- Deep Gnome
+- Duergar
+- Eladrin
+- Fairy
+- Firbolg
+- Genasi
+- Genasi (Air) _(subrace)_
+- Genasi (Earth) _(subrace)_
+- Genasi (Fire) _(subrace)_
+- Genasi (Water) _(subrace)_
+- Githyanki
+- Githzerai
+- Goblin
+- Goliath
+- Harengon
+- Hobgoblin
+- Kenku
+- Kobold
+- Lizardfolk
+- Minotaur
+- Orc
+- Satyr
+- Sea Elf
+- Shadar-Kai
+- Shifter
+- Tabaxi
+- Tortle
+- Triton
+- Yuan-Ti
+
+### Mordenkainen's Tome of Foes (MTF) — 17
+
+- Dwarf (Duergar) _(subrace)_
+- Elf (Eladrin) _(subrace)_
+- Elf (Sea) _(subrace)_
+- Elf (Shadar-kai) _(subrace)_
+- Gith
+- Gith (Githyanki) _(subrace)_
+- Gith (Githzerai) _(subrace)_
+- Gnome (Deep) _(subrace)_
+- Tiefling (Asmodeus) _(subrace)_
+- Tiefling (Baalzebul) _(subrace)_
+- Tiefling (Dispater) _(subrace)_
+- Tiefling (Fierna) _(subrace)_
+- Tiefling (Glasya) _(subrace)_
+- Tiefling (Levistus) _(subrace)_
+- Tiefling (Mammon) _(subrace)_
+- Tiefling (Mephistopheles) _(subrace)_
+- Tiefling (Zariel) _(subrace)_
+
+### Mythic Odysseys of Theros (MOT) — 5
+
+- Centaur
+- Leonin
+- Minotaur
+- Satyr
+- Triton
+
+### Player's Handbook (2014) (PHB) — 24
+
+- Dragonborn
+- Dragonborn (?) _(subrace)_
+- Dwarf
+- Dwarf (Hill) _(subrace)_
+- Dwarf (Mountain) _(subrace)_
+- Elf
+- Elf (Drow) _(subrace)_
+- Elf (High) _(subrace)_
+- Elf (Wood) _(subrace)_
+- Gnome
+- Gnome (Forest) _(subrace)_
+- Gnome (Rock) _(subrace)_
+- Half-Elf
+- Half-Elf (?) _(subrace)_
+- Half-Orc
+- Half-Orc (?) _(subrace)_
+- Halfling
+- Halfling (Lightfoot) _(subrace)_
+- Halfling (Stout) _(subrace)_
+- Human
+- Human (?) _(subrace)_
+- Human (Variant) _(subrace)_
+- Tiefling
+- Tiefling (?) _(subrace)_
+
+### Player's Handbook (2024) (XPHB) — 10
+
+- Aasimar
+- Dragonborn
+- Dwarf
+- Elf
+- Gnome
+- Goliath
+- Halfling
+- Human
+- Orc
+- Tiefling
+
+### Ravenloft: The Horrors Within (RHW) — 4
+
+- Dhampir
+- Hexblood
+- Lupin
+- Reborn
+
+### Strixhaven: A Curriculum of Chaos (SCC) — 1
+
+- Owlin
+
+### Sword Coast Adventurer's Guide (SCAG) — 10
+
+- Gnome (Deep/Svirfneblin) _(subrace)_
+- Half-Elf (Variant; Aquatic Elf Descent) _(subrace)_
+- Half-Elf (Variant; Drow Descent) _(subrace)_
+- Half-Elf (Variant; Moon Elf or Sun Elf Descent) _(subrace)_
+- Half-Elf (Variant; Wood Elf Descent) _(subrace)_
+- Halfling (Ghostwise) _(subrace)_
+- Tiefling (Variant; Devil's Tongue) _(subrace)_
+- Tiefling (Variant; Hellfire) _(subrace)_
+- Tiefling (Variant; Infernal Legacy) _(subrace)_
+- Tiefling (Variant; Winged) _(subrace)_
+
+### Tasha's Cauldron of Everything (TCE) — 1
+
+- Custom Lineage
+
+### Van Richten's Guide to Ravenloft (VRGR) — 3
+
+- Dhampir
+- Hexblood
+- Reborn
+
+### Volo's Guide to Monsters (VGM) — 16
+
+- Aasimar
+- Aasimar (Fallen) _(subrace)_
+- Aasimar (Protector) _(subrace)_
+- Aasimar (Scourge) _(subrace)_
+- Bugbear
+- Firbolg
+- Goblin
+- Goliath
+- Hobgoblin
+- Kenku
+- Kobold
+- Lizardfolk
+- Orc
+- Tabaxi
+- Triton
+- Yuan-ti Pureblood
+
+## Backgrounds
+
+### Acquisitions Incorporated (AI) — 5
+
+- Celebrity Adventurer's Scion
+- Failed Merchant
+- Gambler
+- Plaintiff
+- Rival Intern
+
+### Arcana Unleashed (AU) — 10
+
+- Agent of the Ninth Quill
+- Bejeweled Conclave Spy
+- Cosmic Dawn Experiment
+- Covenant of the Grave Recruit
+- Crucible Storm Chaser
+- Familiar Trainer
+- Horizon Weaver Initiate
+- Phantasmic Circus Trouper
+- Seer Apprentice
+- Ward of the Sheltering Hands
+
+### Astarion's Book of Hungers (ABH) — 3
+
+- Carouser
+- Vampire Devotee
+- Vampire Survivor
+
+### Astral Adventurer's Guide (AAG) — 2
+
+- Astral Drifter
+- Wildspacer
+
+### Bigby Presents: Glory of the Giants (BGG) — 2
+
+- Giant Foundling
+- Rune Carver
+
+### Eberron: Forge of the Artificer (EFA) — 17
+
+- Aberrant Heir
+- Archaeologist
+- House Agent
+- House Cannith Heir
+- House Deneith Heir
+- House Ghallanda Heir
+- House Jorasco Heir
+- House Kundarak Heir
+- House Lyrandar Heir
+- House Medani Heir
+- House Orien Heir
+- House Phiarlan Heir
+- House Sivis Heir
+- House Tharashk Heir
+- House Thuranni Heir
+- House Vadalis Heir
+- Inquisitive
+
+### Eberron: Rising from the Last War (ERLW) — 1
+
+- House Agent
+
+### Explorer's Guide to Wildemount (EGW) — 7
+
+- Augen Trust (Spy)
+- Cobalt Scholar (Sage)
+- Grinner
+- Luxonborn (Acolyte)
+- Myriad Operative (Criminal)
+- Revelry Pirate (Sailor)
+- Volstrucker Agent
+
+### Forgotten Realms: Heroes of Faerûn (FRHOF) — 18
+
+- Chondathan Freebooter
+- Dead Magic Dweller
+- Dragon Cultist
+- Emerald Enclave Caretaker
+- Flaming Fist Mercenary
+- Genie Touched
+- Harper
+- Ice Fisher
+- Knight of the Gauntlet
+- Lords' Alliance Vassal
+- Moonwell Pilgrim
+- Mulhorandi Tomb Raider
+- Mythalkeeper
+- Purple Dragon Squire
+- Rashemi Wanderer
+- Shadowmasters Exile
+- Spellfire Initiate
+- Zhentarim Mercenary
+
+### Guildmasters' Guide to Ravnica (GGR) — 10
+
+- Azorius Functionary
+- Boros Legionnaire
+- Dimir Operative
+- Golgari Agent
+- Gruul Anarch
+- Izzet Engineer
+- Orzhov Representative
+- Rakdos Cultist
+- Selesnya Initiate
+- Simic Scientist
+
+### Lorwyn: First Light (LFL) — 2
+
+- Lorwyn Expert
+- Shadowmoor Expert
+
+### Mythic Odysseys of Theros (MOT) — 1
+
+- Athlete
+
+### Player's Handbook (2014) (PHB) — 20
+
+- Acolyte
+- Charlatan
+- Criminal
+- Custom Background
+- Entertainer
+- Folk Hero
+- Guild Artisan
+- Hermit
+- Noble
+- Outlander
+- Sage
+- Sailor
+- Soldier
+- Urchin
+- Variant Criminal (Spy)
+- Variant Entertainer (Gladiator)
+- Variant Guild Artisan (Guild Merchant)
+- Variant Noble (Knight)
+- Variant Noble (Retainers)
+- Variant Sailor (Pirate)
+
+### Player's Handbook (2024) (XPHB) — 16
+
+- Acolyte
+- Artisan
+- Charlatan
+- Criminal
+- Entertainer
+- Farmer
+- Guard
+- Guide
+- Hermit
+- Merchant
+- Noble
+- Sage
+- Sailor
+- Scribe
+- Soldier
+- Wayfarer
+
+### Project_Lamordia (PL) — 4
+
+- Discredited Neural Tuner
+- Fabricated Mind
+- Mutated Commuter
+- Reconstructed Runaway
+
+### Ravenloft: The Horrors Within (RHW) — 4
+
+- Haunted One
+- Investigator
+- Mist Wanderer
+- Spirit Medium
+
+### Sigil and the Outlands (SATO) — 2
+
+- Gate Warden
+- Planar Philosopher
+
+### Strixhaven: A Curriculum of Chaos (SCC) — 5
+
+- Lorehold Student
+- Prismari Student
+- Quandrix Student
+- Silverquill Student
+- Witherbloom Student
+
+### Sword Coast Adventurer's Guide (SCAG) — 13
+
+- City Watch
+- Clan Crafter
+- Cloistered Scholar
+- Courtier
+- Faction Agent
+- Far Traveler
+- Inheritor
+- Knight of the Order
+- Mercenary Veteran
+- Urban Bounty Hunter
+- Uthgardt Tribe Member
+- Variant City Watch (Investigator)
+- Waterdhavian Noble
+
+### The Book of Many Things (BMT) — 2
+
+- Rewarded
+- Ruined
+
+### Van Richten's Guide to Ravenloft (VRGR) — 2
+
+- Haunted One
+- Investigator
+
+## Feats
+
+### Arcana Unleashed (AU) — 29
+
+- Abjuration Adept
+- Arcane Artist
+- Arcane Eloquence
+- Arcane Infiltrator
+- Arcane Omens
+- Arcane Overload
+- Arcane Safeguard
+- Arcane Undertaker
+- Arcane Warrior
+- Boon of Erupting Spellpower
+- Boon of Magic School Mastery
+- Boon of the Iron Mind
+- Conjuration Adept
+- Divination Adept
+- Elemental Familiar
+- Enchantment Adept
+- Evocation Adept
+- Familiar Friend
+- Illusion Adept
+- Magic Connoisseur
+- Necromancy Adept
+- Otherworldly Familiar
+- Portal Jumper
+- Soothing Familiar
+- Spell Resistant
+- Spell Subterfuge
+- Transmutation Adept
+- Transmuted Anatomy
+- Warlike Familiar
+
+### Astarion's Book of Hungers (ABH) — 16
+
+- Bloodlust
+- Bomber
+- Boon of Blazing Dawn
+- Boon of Looming Shadows
+- Boon of Misty Escape
+- Cloying Mists
+- Delicious Pain
+- Light Bringer
+- Love Bites
+- Putrefy
+- Rebuke
+- Tireless Reveler
+- Treacherous Allure
+- Vampire Hunter
+- Vampire Touched
+- Vampire's Plaything
+
+### Bigby Presents: Glory of the Giants (BGG) — 8
+
+- Ember of the Fire Giant
+- Fury of the Frost Giant
+- Guile of the Cloud Giant
+- Keenness of the Stone Giant
+- Rune Shaper
+- Soul of the Storm Giant
+- Strike of the Giants
+- Vigor of the Hill Giant
+
+### Eberron: Forge of the Artificer (EFA) — 28
+
+- Aberrant Dragonmark
+- Boon of Siberys
+- Greater Aberrant Mark
+- Greater Mark of Detection
+- Greater Mark of Finding
+- Greater Mark of Handling
+- Greater Mark of Healing
+- Greater Mark of Hospitality
+- Greater Mark of Making
+- Greater Mark of Passage
+- Greater Mark of Scribing
+- Greater Mark of Sentinel
+- Greater Mark of Shadow
+- Greater Mark of Storm
+- Greater Mark of Warding
+- Mark of Detection
+- Mark of Finding
+- Mark of Handling
+- Mark of Healing
+- Mark of Hospitality
+- Mark of Making
+- Mark of Passage
+- Mark of Scribing
+- Mark of Sentinel
+- Mark of Shadow
+- Mark of Storm
+- Mark of Warding
+- Potent Dragonmark
+
+### Eberron: Rising from the Last War (ERLW) — 2
+
+- Aberrant Dragonmark
+- Revenant Blade
+
+### Fizban's Treasury of Dragons (FTD) — 3
+
+- Gift of the Chromatic Dragon
+- Gift of the Gem Dragon
+- Gift of the Metallic Dragon
+
+### Forgotten Realms: Heroes of Faerûn (FRHOF) — 34
+
+- Boon of Bloodshed
+- Boon of Bountiful Health
+- Boon of Communication
+- Boon of Desperate Resilience
+- Boon of Exquisite Radiance
+- Boon of Fluid Forms
+- Boon of Fortune's Favor
+- Boon of Poison Mastery
+- Boon of Revelry
+- Boon of Terror
+- Boon of the Bright Sun
+- Boon of the Furious Storm
+- Boon of the Soul Drinker
+- Cold Caster
+- Cult of the Dragon Initiate
+- Dragonscarred
+- Emerald Enclave Fledgling
+- Enclave Magic
+- Fairy Trickster
+- Genie Magic
+- Harper Agent
+- Harper Teamwork
+- Lordly Resolve
+- Lords' Alliance Agent
+- Mythal Touched
+- Order's Resilience
+- Purple Dragon Commandant
+- Purple Dragon Rook
+- Spellfire Adept
+- Spellfire Spark
+- Street Justice
+- Tyro of the Gauntlet
+- Zhentarim Ruffian
+- Zhentarim Tactics
+
+### Lorwyn: First Light (LFL) — 2
+
+- Child of the Sun
+- Shadowmoor Hexer
+
+### Mordenkainen's Tome of Foes (MTF) — 1
+
+- Svirfneblin Magic
+
+### Player's Handbook (2014) (PHB) — 42
+
+- Actor
+- Alert
+- Athlete
+- Charger
+- Crossbow Expert
+- Defensive Duelist
+- Dual Wielder
+- Dungeon Delver
+- Durable
+- Elemental Adept
+- Grappler
+- Great Weapon Master
+- Healer
+- Heavily Armored
+- Heavy Armor Master
+- Inspiring Leader
+- Keen Mind
+- Lightly Armored
+- Linguist
+- Lucky
+- Mage Slayer
+- Magic Initiate
+- Martial Adept
+- Medium Armor Master
+- Mobile
+- Moderately Armored
+- Mounted Combatant
+- Observant
+- Polearm Master
+- Resilient
+- Ritual Caster
+- Savage Attacker
+- Sentinel
+- Sharpshooter
+- Shield Master
+- Skilled
+- Skulker
+- Spell Sniper
+- Tavern Brawler
+- Tough
+- War Caster
+- Weapon Master
+
+### Player's Handbook (2024) (XPHB) — 77
+
+- Ability Score Improvement
+- Actor
+- Alert
+- Archery
+- Athlete
+- Blessed Warrior
+- Blind Fighting
+- Boon of Combat Prowess
+- Boon of Dimensional Travel
+- Boon of Energy Resistance
+- Boon of Fate
+- Boon of Fortitude
+- Boon of Irresistible Offense
+- Boon of Recovery
+- Boon of Skill
+- Boon of Speed
+- Boon of Spell Recall
+- Boon of Truesight
+- Boon of the Night Spirit
+- Charger
+- Chef
+- Crafter
+- Crossbow Expert
+- Crusher
+- Defense
+- Defensive Duelist
+- Druidic Warrior
+- Dual Wielder
+- Dueling
+- Durable
+- Elemental Adept
+- Fey-Touched
+- Grappler
+- Great Weapon Fighting
+- Great Weapon Master
+- Healer
+- Heavily Armored
+- Heavy Armor Master
+- Inspiring Leader
+- Interception
+- Keen Mind
+- Lightly Armored
+- Lucky
+- Mage Slayer
+- Magic Initiate
+- Martial Weapon Training
+- Medium Armor Master
+- Moderately Armored
+- Mounted Combatant
+- Musician
+- Observant
+- Piercer
+- Poisoner
+- Polearm Master
+- Protection
+- Resilient
+- Ritual Caster
+- Savage Attacker
+- Sentinel
+- Shadow-Touched
+- Sharpshooter
+- Shield Master
+- Skill Expert
+- Skilled
+- Skulker
+- Slasher
+- Speedy
+- Spell Sniper
+- Tavern Brawler
+- Telekinetic
+- Telepathic
+- Thrown Weapon Fighting
+- Tough
+- Two-Weapon Fighting
+- Unarmed Fighting
+- War Caster
+- Weapon Master
+
+### Ravenloft: The Horrors Within (RHW) — 11
+
+- Aberrant Anatomy
+- Echoing Soul
+- Gathered Whispers
+- Living Shadow
+- Mist Walker
+- Second Skin
+- Sharp Eye
+- Survivor
+- Symbiotic Being
+- Touch of Death
+- Watchers
+
+### Sigil and the Outlands (SATO) — 7
+
+- Agent of Order
+- Baleful Scion
+- Cohort of Chaos
+- Outlands Envoy
+- Planar Wanderer
+- Righteous Heritor
+- Scion of the Outer Planes
+
+### Strixhaven: A Curriculum of Chaos (SCC) — 2
+
+- Strixhaven Initiate
+- Strixhaven Mascot
+
+### Tasha's Cauldron of Everything (TCE) — 15
+
+- Artificer Initiate
+- Chef
+- Crusher
+- Eldritch Adept
+- Fey Touched
+- Fighting Initiate
+- Gunner
+- Metamagic Adept
+- Piercer
+- Poisoner
+- Shadow Touched
+- Skill Expert
+- Slasher
+- Telekinetic
+- Telepathic
+
+### The Book of Many Things (BMT) — 1
+
+- Cartomancer
+
+### Xanathar's Guide to Everything (XGE) — 15
+
+- Bountiful Luck
+- Dragon Fear
+- Dragon Hide
+- Drow High Magic
+- Dwarven Fortitude
+- Elven Accuracy
+- Fade Away
+- Fey Teleportation
+- Flames of Phlegethos
+- Infernal Constitution
+- Orcish Fury
+- Prodigy
+- Second Chance
+- Squat Nimbleness
+- Wood Elf Magic
+
+## Classes
+
+### Eberron: Forge of the Artificer (EFA) — 1
+
+- Artificer
+
+### Player's Handbook (2014) (PHB) — 12
+
+- Barbarian
+- Bard
+- Cleric
+- Druid
+- Fighter
+- Monk
+- Paladin
+- Ranger
+- Rogue
+- Sorcerer
+- Warlock
+- Wizard
+
+### Player's Handbook (2024) (XPHB) — 12
+
+- Barbarian
+- Bard
+- Cleric
+- Druid
+- Fighter
+- Monk
+- Paladin
+- Ranger
+- Rogue
+- Sorcerer
+- Warlock
+- Wizard
+
+### Tasha's Cauldron of Everything (TCE) — 4
+
+- Artificer
+- Expert Sidekick
+- Spellcaster Sidekick
+- Warrior Sidekick
+
+## Subclasses
+
+### Arcana Unleashed (AU) — 8
+
+- Arcana Domain _(class: Cleric)_
+- Arcane Archer _(class: Fighter)_
+- Conjurer _(class: Wizard)_
+- Enchanter _(class: Wizard)_
+- Necromancer _(class: Wizard)_
+- Transmuter _(class: Wizard)_
+- Vestige Patron _(class: Warlock)_
+- Warrior of the Mystic Arts _(class: Monk)_
+
+### Bigby Presents: Glory of the Giants (BGG) — 2
+
+- Path of the Giant _(class: Barbarian)_
+- Path of the Giant _(class: Barbarian)_
+
+### Dungeon Master's Guide (2014) (DMG) — 4
+
+- Death Domain _(class: Cleric)_
+- Death Domain _(class: Cleric)_
+- Oathbreaker _(class: Paladin)_
+- Oathbreaker _(class: Paladin)_
+
+### Eberron: Forge of the Artificer (EFA) — 5
+
+- Alchemist _(class: Artificer)_
+- Armorer _(class: Artificer)_
+- Artillerist _(class: Artificer)_
+- Battle Smith _(class: Artificer)_
+- Cartographer _(class: Artificer)_
+
+### Explorer's Guide to Wildemount (EGW) — 6
+
+- Chronurgy Magic _(class: Wizard)_
+- Chronurgy Magic _(class: Wizard)_
+- Echo Knight _(class: Fighter)_
+- Echo Knight _(class: Fighter)_
+- Graviturgy Magic _(class: Wizard)_
+- Graviturgy Magic _(class: Wizard)_
+
+### Fizban's Treasury of Dragons (FTD) — 4
+
+- Drakewarden _(class: Ranger)_
+- Drakewarden _(class: Ranger)_
+- Way of the Ascendant Dragon _(class: Monk)_
+- Way of the Ascendant Dragon _(class: Monk)_
+
+### Forgotten Realms: Heroes of Faerûn (FRHOF) — 8
+
+- Banneret _(class: Fighter)_
+- Bladesinger _(class: Wizard)_
+- College of the Moon _(class: Bard)_
+- Knowledge Domain _(class: Cleric)_
+- Oath of the Noble Genies _(class: Paladin)_
+- Scion of the Three _(class: Rogue)_
+- Spellfire Sorcery _(class: Sorcerer)_
+- Winter Walker _(class: Ranger)_
+
+### Player's Handbook (2014) (PHB) — 80
+
+- Arcane Trickster _(class: Rogue)_
+- Arcane Trickster _(class: Rogue)_
+- Assassin _(class: Rogue)_
+- Assassin _(class: Rogue)_
+- Battle Master _(class: Fighter)_
+- Battle Master _(class: Fighter)_
+- Beast Master _(class: Ranger)_
+- Beast Master _(class: Ranger)_
+- Champion _(class: Fighter)_
+- Champion _(class: Fighter)_
+- Circle of the Land _(class: Druid)_
+- Circle of the Land _(class: Druid)_
+- Circle of the Moon _(class: Druid)_
+- Circle of the Moon _(class: Druid)_
+- College of Lore _(class: Bard)_
+- College of Lore _(class: Bard)_
+- College of Valor _(class: Bard)_
+- College of Valor _(class: Bard)_
+- Draconic Bloodline _(class: Sorcerer)_
+- Draconic Bloodline _(class: Sorcerer)_
+- Eldritch Knight _(class: Fighter)_
+- Eldritch Knight _(class: Fighter)_
+- Hunter _(class: Ranger)_
+- Hunter _(class: Ranger)_
+- Knowledge Domain _(class: Cleric)_
+- Knowledge Domain _(class: Cleric)_
+- Life Domain _(class: Cleric)_
+- Life Domain _(class: Cleric)_
+- Light Domain _(class: Cleric)_
+- Light Domain _(class: Cleric)_
+- Nature Domain _(class: Cleric)_
+- Nature Domain _(class: Cleric)_
+- Oath of Devotion _(class: Paladin)_
+- Oath of Devotion _(class: Paladin)_
+- Oath of Vengeance _(class: Paladin)_
+- Oath of Vengeance _(class: Paladin)_
+- Oath of the Ancients _(class: Paladin)_
+- Oath of the Ancients _(class: Paladin)_
+- Path of the Berserker _(class: Barbarian)_
+- Path of the Berserker _(class: Barbarian)_
+- Path of the Totem Warrior _(class: Barbarian)_
+- Path of the Totem Warrior _(class: Barbarian)_
+- School of Abjuration _(class: Wizard)_
+- School of Abjuration _(class: Wizard)_
+- School of Conjuration _(class: Wizard)_
+- School of Conjuration _(class: Wizard)_
+- School of Divination _(class: Wizard)_
+- School of Divination _(class: Wizard)_
+- School of Enchantment _(class: Wizard)_
+- School of Enchantment _(class: Wizard)_
+- School of Evocation _(class: Wizard)_
+- School of Evocation _(class: Wizard)_
+- School of Illusion _(class: Wizard)_
+- School of Illusion _(class: Wizard)_
+- School of Necromancy _(class: Wizard)_
+- School of Necromancy _(class: Wizard)_
+- School of Transmutation _(class: Wizard)_
+- School of Transmutation _(class: Wizard)_
+- Tempest Domain _(class: Cleric)_
+- Tempest Domain _(class: Cleric)_
+- The Archfey _(class: Warlock)_
+- The Archfey _(class: Warlock)_
+- The Fiend _(class: Warlock)_
+- The Fiend _(class: Warlock)_
+- The Great Old One _(class: Warlock)_
+- The Great Old One _(class: Warlock)_
+- Thief _(class: Rogue)_
+- Thief _(class: Rogue)_
+- Trickery Domain _(class: Cleric)_
+- Trickery Domain _(class: Cleric)_
+- War Domain _(class: Cleric)_
+- War Domain _(class: Cleric)_
+- Way of Shadow _(class: Monk)_
+- Way of Shadow _(class: Monk)_
+- Way of the Four Elements _(class: Monk)_
+- Way of the Four Elements _(class: Monk)_
+- Way of the Open Hand _(class: Monk)_
+- Way of the Open Hand _(class: Monk)_
+- Wild Magic _(class: Sorcerer)_
+- Wild Magic _(class: Sorcerer)_
+
+### Player's Handbook (2024) (XPHB) — 48
+
+- Aberrant Sorcery _(class: Sorcerer)_
+- Abjurer _(class: Wizard)_
+- Arcane Trickster _(class: Rogue)_
+- Archfey Patron _(class: Warlock)_
+- Assassin _(class: Rogue)_
+- Battle Master _(class: Fighter)_
+- Beast Master _(class: Ranger)_
+- Celestial Patron _(class: Warlock)_
+- Champion _(class: Fighter)_
+- Circle of the Land _(class: Druid)_
+- Circle of the Moon _(class: Druid)_
+- Circle of the Sea _(class: Druid)_
+- Circle of the Stars _(class: Druid)_
+- Clockwork Sorcery _(class: Sorcerer)_
+- College of Dance _(class: Bard)_
+- College of Glamour _(class: Bard)_
+- College of Lore _(class: Bard)_
+- College of Valor _(class: Bard)_
+- Diviner _(class: Wizard)_
+- Draconic Sorcery _(class: Sorcerer)_
+- Eldritch Knight _(class: Fighter)_
+- Evoker _(class: Wizard)_
+- Fey Wanderer _(class: Ranger)_
+- Fiend Patron _(class: Warlock)_
+- Gloom Stalker _(class: Ranger)_
+- Great Old One Patron _(class: Warlock)_
+- Hunter _(class: Ranger)_
+- Illusionist _(class: Wizard)_
+- Life Domain _(class: Cleric)_
+- Light Domain _(class: Cleric)_
+- Oath of Devotion _(class: Paladin)_
+- Oath of Glory _(class: Paladin)_
+- Oath of Vengeance _(class: Paladin)_
+- Oath of the Ancients _(class: Paladin)_
+- Path of the Berserker _(class: Barbarian)_
+- Path of the Wild Heart _(class: Barbarian)_
+- Path of the World Tree _(class: Barbarian)_
+- Path of the Zealot _(class: Barbarian)_
+- Psi Warrior _(class: Fighter)_
+- Soulknife _(class: Rogue)_
+- Thief _(class: Rogue)_
+- Trickery Domain _(class: Cleric)_
+- War Domain _(class: Cleric)_
+- Warrior of Mercy _(class: Monk)_
+- Warrior of Shadow _(class: Monk)_
+- Warrior of the Elements _(class: Monk)_
+- Warrior of the Open Hand _(class: Monk)_
+- Wild Magic Sorcery _(class: Sorcerer)_
+
+### Ravenloft: The Horrors Within (RHW) — 7
+
+- College of Spirits _(class: Bard)_
+- Grave Domain _(class: Cleric)_
+- Hollow Warden _(class: Ranger)_
+- Phantom _(class: Rogue)_
+- Reanimator _(class: Artificer)_
+- Shadow Sorcery _(class: Sorcerer)_
+- Undead Patron _(class: Warlock)_
+
+### Sword Coast Adventurer's Guide (SCAG) — 12
+
+- Arcana Domain _(class: Cleric)_
+- Arcana Domain _(class: Cleric)_
+- Oath of the Crown _(class: Paladin)_
+- Oath of the Crown _(class: Paladin)_
+- Path of the Battlerager _(class: Barbarian)_
+- Path of the Battlerager _(class: Barbarian)_
+- Purple Dragon Knight (Banneret) _(class: Fighter)_
+- Purple Dragon Knight (Banneret) _(class: Fighter)_
+- The Undying _(class: Warlock)_
+- The Undying _(class: Warlock)_
+- Way of the Long Death _(class: Monk)_
+- Way of the Long Death _(class: Monk)_
+
+### Tasha's Cauldron of Everything (TCE) — 60
+
+- Aberrant Mind _(class: Sorcerer)_
+- Aberrant Mind _(class: Sorcerer)_
+- Alchemist _(class: Artificer)_
+- Alchemist _(class: Artificer)_
+- Armorer _(class: Artificer)_
+- Armorer _(class: Artificer)_
+- Artillerist _(class: Artificer)_
+- Artillerist _(class: Artificer)_
+- Battle Smith _(class: Artificer)_
+- Battle Smith _(class: Artificer)_
+- Bladesinging _(class: Wizard)_
+- Bladesinging _(class: Wizard)_
+- Circle of Spores _(class: Druid)_
+- Circle of Spores _(class: Druid)_
+- Circle of Stars _(class: Druid)_
+- Circle of Stars _(class: Druid)_
+- Circle of Wildfire _(class: Druid)_
+- Circle of Wildfire _(class: Druid)_
+- Clockwork Soul _(class: Sorcerer)_
+- Clockwork Soul _(class: Sorcerer)_
+- College of Creation _(class: Bard)_
+- College of Creation _(class: Bard)_
+- College of Eloquence _(class: Bard)_
+- College of Eloquence _(class: Bard)_
+- Fey Wanderer _(class: Ranger)_
+- Fey Wanderer _(class: Ranger)_
+- Oath of Glory _(class: Paladin)_
+- Oath of Glory _(class: Paladin)_
+- Oath of the Watchers _(class: Paladin)_
+- Oath of the Watchers _(class: Paladin)_
+- Order Domain _(class: Cleric)_
+- Order Domain _(class: Cleric)_
+- Order of Scribes _(class: Wizard)_
+- Order of Scribes _(class: Wizard)_
+- Path of Wild Magic _(class: Barbarian)_
+- Path of Wild Magic _(class: Barbarian)_
+- Path of the Beast _(class: Barbarian)_
+- Path of the Beast _(class: Barbarian)_
+- Peace Domain _(class: Cleric)_
+- Peace Domain _(class: Cleric)_
+- Phantom _(class: Rogue)_
+- Phantom _(class: Rogue)_
+- Psi Warrior _(class: Fighter)_
+- Psi Warrior _(class: Fighter)_
+- Rune Knight _(class: Fighter)_
+- Rune Knight _(class: Fighter)_
+- Soulknife _(class: Rogue)_
+- Soulknife _(class: Rogue)_
+- Swarmkeeper _(class: Ranger)_
+- Swarmkeeper _(class: Ranger)_
+- The Fathomless _(class: Warlock)_
+- The Fathomless _(class: Warlock)_
+- The Genie _(class: Warlock)_
+- The Genie _(class: Warlock)_
+- Twilight Domain _(class: Cleric)_
+- Twilight Domain _(class: Cleric)_
+- Way of Mercy _(class: Monk)_
+- Way of Mercy _(class: Monk)_
+- Way of the Astral Self _(class: Monk)_
+- Way of the Astral Self _(class: Monk)_
+
+### Van Richten's Guide to Ravenloft (VRGR) — 4
+
+- College of Spirits _(class: Bard)_
+- College of Spirits _(class: Bard)_
+- The Undead _(class: Warlock)_
+- The Undead _(class: Warlock)_
+
+### Xanathar's Guide to Everything (XGE) — 62
+
+- Arcane Archer _(class: Fighter)_
+- Arcane Archer _(class: Fighter)_
+- Cavalier _(class: Fighter)_
+- Cavalier _(class: Fighter)_
+- Circle of Dreams _(class: Druid)_
+- Circle of Dreams _(class: Druid)_
+- Circle of the Shepherd _(class: Druid)_
+- Circle of the Shepherd _(class: Druid)_
+- College of Glamour _(class: Bard)_
+- College of Glamour _(class: Bard)_
+- College of Swords _(class: Bard)_
+- College of Swords _(class: Bard)_
+- College of Whispers _(class: Bard)_
+- College of Whispers _(class: Bard)_
+- Divine Soul _(class: Sorcerer)_
+- Divine Soul _(class: Sorcerer)_
+- Forge Domain _(class: Cleric)_
+- Forge Domain _(class: Cleric)_
+- Gloom Stalker _(class: Ranger)_
+- Gloom Stalker _(class: Ranger)_
+- Grave Domain _(class: Cleric)_
+- Grave Domain _(class: Cleric)_
+- Horizon Walker _(class: Ranger)_
+- Horizon Walker _(class: Ranger)_
+- Inquisitive _(class: Rogue)_
+- Inquisitive _(class: Rogue)_
+- Mastermind _(class: Rogue)_
+- Mastermind _(class: Rogue)_
+- Monster Slayer _(class: Ranger)_
+- Monster Slayer _(class: Ranger)_
+- Oath of Conquest _(class: Paladin)_
+- Oath of Conquest _(class: Paladin)_
+- Oath of Redemption _(class: Paladin)_
+- Oath of Redemption _(class: Paladin)_
+- Path of the Ancestral Guardian _(class: Barbarian)_
+- Path of the Ancestral Guardian _(class: Barbarian)_
+- Path of the Storm Herald _(class: Barbarian)_
+- Path of the Storm Herald _(class: Barbarian)_
+- Path of the Zealot _(class: Barbarian)_
+- Path of the Zealot _(class: Barbarian)_
+- Samurai _(class: Fighter)_
+- Samurai _(class: Fighter)_
+- Scout _(class: Rogue)_
+- Scout _(class: Rogue)_
+- Shadow Magic _(class: Sorcerer)_
+- Shadow Magic _(class: Sorcerer)_
+- Storm Sorcery _(class: Sorcerer)_
+- Storm Sorcery _(class: Sorcerer)_
+- Swashbuckler _(class: Rogue)_
+- Swashbuckler _(class: Rogue)_
+- The Celestial _(class: Warlock)_
+- The Celestial _(class: Warlock)_
+- The Hexblade _(class: Warlock)_
+- The Hexblade _(class: Warlock)_
+- War Magic _(class: Wizard)_
+- War Magic _(class: Wizard)_
+- Way of the Drunken Master _(class: Monk)_
+- Way of the Drunken Master _(class: Monk)_
+- Way of the Kensei _(class: Monk)_
+- Way of the Kensei _(class: Monk)_
+- Way of the Sun Soul _(class: Monk)_
+- Way of the Sun Soul _(class: Monk)_
+
+## Optional Class Features (invocations, maneuvers, metamagic, etc.)
+
+### Arcana Unleashed (AU) — 8
+
+- Banishing Shot _(AS)_
+- Beguiling Shot _(AS)_
+- Bursting Shot _(AS)_
+- Enfeebling Shot _(AS)_
+- Grasping Shot _(AS)_
+- Piercing Shot _(AS)_
+- Seeking Shot _(AS)_
+- Shadow Shot _(AS)_
+
+### Eberron: Forge of the Artificer (EFA) — 4
+
+- Celebrated in House _(RP)_
+- Favored in House _(RP)_
+- Preeminent in House _(RP)_
+- Recognized in House _(RP)_
+
+### Player's Handbook (2014) (PHB) — 82
+
+- Agonizing Blast _(EI)_
+- Archery _(FS:F,FS:R)_
+- Armor of Shadows _(EI)_
+- Ascendant Step _(EI)_
+- Beast Speech _(EI)_
+- Beguiling Influence _(EI)_
+- Bewitching Whispers _(EI)_
+- Book of Ancient Secrets _(EI)_
+- Breath of Winter _(ED)_
+- Careful Spell _(MM)_
+- Chains of Carceri _(EI)_
+- Clench of the North Wind _(ED)_
+- Commander's Strike _(MV:B)_
+- Defense _(FS:F,FS:P,FS:R)_
+- Devil's Sight _(EI)_
+- Disarming Attack _(MV:B)_
+- Distant Spell _(MM)_
+- Distracting Strike _(MV:B)_
+- Dreadful Word _(EI)_
+- Dueling _(FS:F,FS:B,FS:P,FS:R)_
+- Eldritch Sight _(EI)_
+- Eldritch Spear _(EI)_
+- Elemental Attunement _(ED)_
+- Empowered Spell _(MM)_
+- Eternal Mountain Defense _(ED)_
+- Evasive Footwork _(MV:B)_
+- Extended Spell _(MM)_
+- Eyes of the Rune Keeper _(EI)_
+- Fangs of the Fire Snake _(ED)_
+- Feinting Attack _(MV:B)_
+- Fiendish Vigor _(EI)_
+- Fist of Four Thunders _(ED)_
+- Flames of the Phoenix _(ED)_
+- Gaze of Two Minds _(EI)_
+- Goading Attack _(MV:B)_
+- Gong of the Summit _(ED)_
+- Great Weapon Fighting _(FS:F,FS:P)_
+- Heightened Spell _(MM)_
+- Lifedrinker _(EI)_
+- Lunging Attack _(MV:B)_
+- Maneuvering Attack _(MV:B)_
+- Mask of Many Faces _(EI)_
+- Master of Myriad Forms _(EI)_
+- Menacing Attack _(MV:B)_
+- Minions of Chaos _(EI)_
+- Mire the Mind _(EI)_
+- Mist Stance _(ED)_
+- Misty Visions _(EI)_
+- One with Shadows _(EI)_
+- Otherworldly Leap _(EI)_
+- Pact of the Blade _(PB)_
+- Pact of the Chain _(PB)_
+- Pact of the Tome _(PB)_
+- Parry _(MV:B)_
+- Precision Attack _(MV:B)_
+- Protection _(FS:F,FS:P)_
+- Pushing Attack _(MV:B)_
+- Quickened Spell _(MM)_
+- Rally _(MV:B)_
+- Repelling Blast _(EI)_
+- Ride the Wind _(ED)_
+- Riposte _(MV:B)_
+- River of Hungry Flame _(ED)_
+- Rush of the Gale Spirits _(ED)_
+- Sculptor of Flesh _(EI)_
+- Shape the Flowing River _(ED)_
+- Sign of Ill Omen _(EI)_
+- Subtle Spell _(MM)_
+- Sweeping Attack _(MV:B)_
+- Sweeping Cinder Strike _(ED)_
+- Thief of Five Fates _(EI)_
+- Thirsting Blade _(EI)_
+- Trip Attack _(MV:B)_
+- Twinned Spell _(MM)_
+- Two-Weapon Fighting _(FS:F,FS:B,FS:R)_
+- Unbroken Air _(ED)_
+- Visions of Distant Realms _(EI)_
+- Voice of the Chain Master _(EI)_
+- Water Whip _(ED)_
+- Wave of Rolling Earth _(ED)_
+- Whispers of the Grave _(EI)_
+- Witch Sight _(EI)_
+
+### Player's Handbook (2024) (XPHB) — 58
+
+- Agonizing Blast _(EI)_
+- Ambush _(MV:B)_
+- Armor of Shadows _(EI)_
+- Ascendant Step _(EI)_
+- Bait and Switch _(MV:B)_
+- Careful Spell _(MM)_
+- Commander's Strike _(MV:B)_
+- Commanding Presence _(MV:B)_
+- Devil's Sight _(EI)_
+- Devouring Blade _(EI)_
+- Disarming Attack _(MV:B)_
+- Distant Spell _(MM)_
+- Distracting Strike _(MV:B)_
+- Eldritch Mind _(EI)_
+- Eldritch Smite _(EI)_
+- Eldritch Spear _(EI)_
+- Empowered Spell _(MM)_
+- Evasive Footwork _(MV:B)_
+- Extended Spell _(MM)_
+- Feinting Attack _(MV:B)_
+- Fiendish Vigor _(EI)_
+- Gaze of Two Minds _(EI)_
+- Gift of the Depths _(EI)_
+- Gift of the Protectors _(EI)_
+- Goading Attack _(MV:B)_
+- Heightened Spell _(MM)_
+- Investment of the Chain Master _(EI)_
+- Lessons of the First Ones _(EI)_
+- Lifedrinker _(EI)_
+- Lunging Attack _(MV:B)_
+- Maneuvering Attack _(MV:B)_
+- Mask of Many Faces _(EI)_
+- Master of Myriad Forms _(EI)_
+- Menacing Attack _(MV:B)_
+- Misty Visions _(EI)_
+- One with Shadows _(EI)_
+- Otherworldly Leap _(EI)_
+- Pact of the Blade _(EI)_
+- Pact of the Chain _(EI)_
+- Pact of the Tome _(EI)_
+- Parry _(MV:B)_
+- Precision Attack _(MV:B)_
+- Pushing Attack _(MV:B)_
+- Quickened Spell _(MM)_
+- Rally _(MV:B)_
+- Repelling Blast _(EI)_
+- Riposte _(MV:B)_
+- Seeking Spell _(MM)_
+- Subtle Spell _(MM)_
+- Sweeping Attack _(MV:B)_
+- Tactical Assessment _(MV:B)_
+- Thirsting Blade _(EI)_
+- Transmuted Spell _(MM)_
+- Trip Attack _(MV:B)_
+- Twinned Spell _(MM)_
+- Visions of Distant Realms _(EI)_
+- Whispers of the Grave _(EI)_
+- Witch Sight _(EI)_
+
+### Tasha's Cauldron of Everything (TCE) — 47
+
+- Ambush _(MV:B)_
+- Arcane Propulsion Armor _(AI)_
+- Armor of Magical Strength _(AI)_
+- Bait and Switch _(MV:B)_
+- Blessed Warrior _(FS:P)_
+- Blind Fighting _(FS:F,FS:P,FS:R)_
+- Bond of the Talisman _(EI)_
+- Boots of the Winding Path _(AI)_
+- Brace _(MV:B)_
+- Cloud Rune _(RN)_
+- Commanding Presence _(MV:B)_
+- Druidic Warrior _(FS:R)_
+- Eldritch Mind _(EI)_
+- Enhanced Arcane Focus _(AI)_
+- Enhanced Defense _(AI)_
+- Enhanced Weapon _(AI)_
+- Far Scribe _(EI)_
+- Fire Rune _(RN)_
+- Frost Rune _(RN)_
+- Gift of the Protectors _(EI)_
+- Grappling Strike _(MV:B)_
+- Helm of Awareness _(AI)_
+- Hill Rune _(RN)_
+- Homunculus Servant _(AI)_
+- Interception _(FS:F,FS:P)_
+- Investment of the Chain Master _(EI)_
+- Mind Sharpener _(AI)_
+- Pact of the Talisman _(PB)_
+- Protection of the Talisman _(EI)_
+- Quick Toss _(MV:B)_
+- Radiant Weapon _(AI)_
+- Rebuke of the Talisman _(EI)_
+- Repeating Shot _(AI)_
+- Replicate Magic Item _(AI)_
+- Repulsion Shield _(AI)_
+- Resistant Armor _(AI)_
+- Returning Weapon _(AI)_
+- Seeking Spell _(MM)_
+- Spell-Refueling Ring _(AI)_
+- Stone Rune _(RN)_
+- Storm Rune _(RN)_
+- Superior Technique _(FS:F)_
+- Tactical Assessment _(MV:B)_
+- Thrown Weapon Fighting _(FS:F,FS:R)_
+- Transmuted Spell _(MM)_
+- Unarmed Fighting _(FS:F)_
+- Undying Servitude _(EI)_
+
+### Xanathar's Guide to Everything (XGE) — 22
+
+- Aspect of the Moon _(EI)_
+- Banishing Arrow _(AS)_
+- Beguiling Arrow _(AS)_
+- Bursting Arrow _(AS)_
+- Cloak of Flies _(EI)_
+- Eldritch Smite _(EI)_
+- Enfeebling Arrow _(AS)_
+- Ghostly Gaze _(EI)_
+- Gift of the Depths _(EI)_
+- Gift of the Ever-Living Ones _(EI)_
+- Grasp of Hadar _(EI)_
+- Grasping Arrow _(AS)_
+- Improved Pact Weapon _(EI)_
+- Lance of Lethargy _(EI)_
+- Maddening Hex _(EI)_
+- Piercing Arrow _(AS)_
+- Relentless Hex _(EI)_
+- Seeking Arrow _(AS)_
+- Shadow Arrow _(AS)_
+- Shroud of Shadow _(EI)_
+- Tomb of Levistus _(EI)_
+- Trickster's Escape _(EI)_
+
+## Spells
+
+### Acquisitions Incorporated (AI) — 7
+
+- Distort Value _(level 1)_
+- Fast Friends _(level 3)_
+- Gift of Gab _(level 2)_
+- Incite Greed _(level 3)_
+- Jim's Glowing Coin _(level 2)_
+- Jim's Magic Missile _(level 1)_
+- Motivational Speech _(level 3)_
+
+### Arcana Unleashed (AU) — 33
+
+- Aura of Evasion _(level 7)_
+- Battle Familiar _(level 2)_
+- Catnap _(level 3)_
+- Detonate _(level 9)_
+- Disruptive Tune _(level 2)_
+- Distorted Distance _(level 4)_
+- Dueling Ground _(level 2)_
+- Enervation _(level 5)_
+- Entrancing Mirrors _(level 8)_
+- Festering Blast _(level 4)_
+- Fractured Awareness _(level 7)_
+- Grave Ground _(level 5)_
+- Hindsight _(level 9)_
+- Illusory Dragon _(level 8)_
+- Inflict Doubt _(level 3)_
+- Invulnerability _(level 9)_
+- Iron Body _(level 8)_
+- Lightning Ring _(level 8)_
+- Moment of Prescience _(level 8)_
+- Mordenkainen's Lucubration _(level 5)_
+- Negative Energy Flood _(level 5)_
+- Power Word Pain _(level 7)_
+- Reweave Fate _(level 7)_
+- Spirit Lantern _(level 5)_
+- Summon Dinosaur _(level 6)_
+- Summon Plant _(level 5)_
+- Transfix _(level 7)_
+- Uncertain Footing _(level 2)_
+- Vision of Elapsing Eons _(level 9)_
+- Wail of the Banshee _(level 9)_
+- Waves of Exhaustion _(level 5)_
+- Wither and Bloom _(level 2)_
+- Zone of Amicability _(level 4)_
+
+### Astral Adventurer's Guide (AAG) — 2
+
+- Air Bubble _(level 2)_
+- Create Spelljamming Helm _(level 5)_
+
+### Eberron: Forge of the Artificer (EFA) — 1
+
+- Homunculus Servant _(level 2)_
+
+### Explorer's Guide to Wildemount (EGW) — 15
+
+- Dark Star _(level 8)_
+- Fortune's Favor _(level 2)_
+- Gift of Alacrity _(level 1)_
+- Gravity Fissure _(level 6)_
+- Gravity Sinkhole _(level 4)_
+- Immovable Object _(level 2)_
+- Magnify Gravity _(level 1)_
+- Pulse Wave _(level 3)_
+- Ravenous Void _(level 9)_
+- Reality Break _(level 8)_
+- Sapping Sting _(level 0)_
+- Temporal Shunt _(level 5)_
+- Tether Essence _(level 7)_
+- Time Ravage _(level 9)_
+- Wristpocket _(level 2)_
+
+### Fizban's Treasury of Dragons (FTD) — 7
+
+- Ashardalon's Stride _(level 3)_
+- Draconic Transformation _(level 7)_
+- Fizban's Platinum Shield _(level 6)_
+- Nathair's Mischief _(level 2)_
+- Raulothim's Psychic Lance _(level 4)_
+- Rime's Binding Ice _(level 2)_
+- Summon Draconic Spirit _(level 5)_
+
+### Forgotten Realms: Heroes of Faerûn (FRHOF) — 19
+
+- Alustriel's Mooncloak _(level 5)_
+- Backlash _(level 4)_
+- Blade of Disaster _(level 9)_
+- Cacophonic Shield _(level 3)_
+- Conjure Constructs _(level 3)_
+- Death Armor _(level 2)_
+- Deryan's Helpful Homunculi _(level 2)_
+- Dirge _(level 6)_
+- Doomtide _(level 4)_
+- Elminster's Effulgent Spheres _(level 6)_
+- Elminster's Elusion _(level 2)_
+- Holy Star of Mystra _(level 8)_
+- Laeral's Silver Lance _(level 3)_
+- Simbul's Synostodweomer _(level 7)_
+- Songal's Elemental Suffusion _(level 5)_
+- Spellfire Flare _(level 1)_
+- Spellfire Storm _(level 4)_
+- Syluné's Viper _(level 3)_
+- Wardaway _(level 1)_
+
+### Guildmasters' Guide to Ravnica (GGR) — 1
+
+- Encode Thoughts _(level 0)_
+
+### Player's Handbook (2014) (PHB) — 361
+
+- Acid Splash _(level 0)_
+- Aid _(level 2)_
+- Alarm _(level 1)_
+- Alter Self _(level 2)_
+- Animal Friendship _(level 1)_
+- Animal Messenger _(level 2)_
+- Animal Shapes _(level 8)_
+- Animate Dead _(level 3)_
+- Animate Objects _(level 5)_
+- Antilife Shell _(level 5)_
+- Antimagic Field _(level 8)_
+- Antipathy/Sympathy _(level 8)_
+- Arcane Eye _(level 4)_
+- Arcane Gate _(level 6)_
+- Arcane Lock _(level 2)_
+- Armor of Agathys _(level 1)_
+- Arms of Hadar _(level 1)_
+- Astral Projection _(level 9)_
+- Augury _(level 2)_
+- Aura of Life _(level 4)_
+- Aura of Purity _(level 4)_
+- Aura of Vitality _(level 3)_
+- Awaken _(level 5)_
+- Bane _(level 1)_
+- Banishing Smite _(level 5)_
+- Banishment _(level 4)_
+- Barkskin _(level 2)_
+- Beacon of Hope _(level 3)_
+- Beast Sense _(level 2)_
+- Bestow Curse _(level 3)_
+- Bigby's Hand _(level 5)_
+- Blade Barrier _(level 6)_
+- Blade Ward _(level 0)_
+- Bless _(level 1)_
+- Blight _(level 4)_
+- Blinding Smite _(level 3)_
+- Blindness/Deafness _(level 2)_
+- Blink _(level 3)_
+- Blur _(level 2)_
+- Branding Smite _(level 2)_
+- Burning Hands _(level 1)_
+- Call Lightning _(level 3)_
+- Calm Emotions _(level 2)_
+- Chain Lightning _(level 6)_
+- Charm Person _(level 1)_
+- Chill Touch _(level 0)_
+- Chromatic Orb _(level 1)_
+- Circle of Death _(level 6)_
+- Circle of Power _(level 5)_
+- Clairvoyance _(level 3)_
+- Clone _(level 8)_
+- Cloud of Daggers _(level 2)_
+- Cloudkill _(level 5)_
+- Color Spray _(level 1)_
+- Command _(level 1)_
+- Commune _(level 5)_
+- Commune with Nature _(level 5)_
+- Compelled Duel _(level 1)_
+- Comprehend Languages _(level 1)_
+- Compulsion _(level 4)_
+- Cone of Cold _(level 5)_
+- Confusion _(level 4)_
+- Conjure Animals _(level 3)_
+- Conjure Barrage _(level 3)_
+- Conjure Celestial _(level 7)_
+- Conjure Elemental _(level 5)_
+- Conjure Fey _(level 6)_
+- Conjure Minor Elementals _(level 4)_
+- Conjure Volley _(level 5)_
+- Conjure Woodland Beings _(level 4)_
+- Contact Other Plane _(level 5)_
+- Contagion _(level 5)_
+- Contingency _(level 6)_
+- Continual Flame _(level 2)_
+- Control Water _(level 4)_
+- Control Weather _(level 8)_
+- Cordon of Arrows _(level 2)_
+- Counterspell _(level 3)_
+- Create Food and Water _(level 3)_
+- Create Undead _(level 6)_
+- Create or Destroy Water _(level 1)_
+- Creation _(level 5)_
+- Crown of Madness _(level 2)_
+- Crusader's Mantle _(level 3)_
+- Cure Wounds _(level 1)_
+- Dancing Lights _(level 0)_
+- Darkness _(level 2)_
+- Darkvision _(level 2)_
+- Daylight _(level 3)_
+- Death Ward _(level 4)_
+- Delayed Blast Fireball _(level 7)_
+- Demiplane _(level 8)_
+- Destructive Wave _(level 5)_
+- Detect Evil and Good _(level 1)_
+- Detect Magic _(level 1)_
+- Detect Poison and Disease _(level 1)_
+- Detect Thoughts _(level 2)_
+- Dimension Door _(level 4)_
+- Disguise Self _(level 1)_
+- Disintegrate _(level 6)_
+- Dispel Evil and Good _(level 5)_
+- Dispel Magic _(level 3)_
+- Dissonant Whispers _(level 1)_
+- Divination _(level 4)_
+- Divine Favor _(level 1)_
+- Divine Word _(level 7)_
+- Dominate Beast _(level 4)_
+- Dominate Monster _(level 8)_
+- Dominate Person _(level 5)_
+- Drawmij's Instant Summons _(level 6)_
+- Dream _(level 5)_
+- Druidcraft _(level 0)_
+- Earthquake _(level 8)_
+- Eldritch Blast _(level 0)_
+- Elemental Weapon _(level 3)_
+- Enhance Ability _(level 2)_
+- Enlarge/Reduce _(level 2)_
+- Ensnaring Strike _(level 1)_
+- Entangle _(level 1)_
+- Enthrall _(level 2)_
+- Etherealness _(level 7)_
+- Evard's Black Tentacles _(level 4)_
+- Expeditious Retreat _(level 1)_
+- Eyebite _(level 6)_
+- Fabricate _(level 4)_
+- Faerie Fire _(level 1)_
+- False Life _(level 1)_
+- Fear _(level 3)_
+- Feather Fall _(level 1)_
+- Feeblemind _(level 8)_
+- Feign Death _(level 3)_
+- Find Familiar _(level 1)_
+- Find Steed _(level 2)_
+- Find Traps _(level 2)_
+- Find the Path _(level 6)_
+- Finger of Death _(level 7)_
+- Fire Bolt _(level 0)_
+- Fire Shield _(level 4)_
+- Fire Storm _(level 7)_
+- Fireball _(level 3)_
+- Flame Blade _(level 2)_
+- Flame Strike _(level 5)_
+- Flaming Sphere _(level 2)_
+- Flesh to Stone _(level 6)_
+- Fly _(level 3)_
+- Fog Cloud _(level 1)_
+- Forbiddance _(level 6)_
+- Forcecage _(level 7)_
+- Foresight _(level 9)_
+- Freedom of Movement _(level 4)_
+- Friends _(level 0)_
+- Gaseous Form _(level 3)_
+- Gate _(level 9)_
+- Geas _(level 5)_
+- Gentle Repose _(level 2)_
+- Giant Insect _(level 4)_
+- Glibness _(level 8)_
+- Globe of Invulnerability _(level 6)_
+- Glyph of Warding _(level 3)_
+- Goodberry _(level 1)_
+- Grasping Vine _(level 4)_
+- Grease _(level 1)_
+- Greater Invisibility _(level 4)_
+- Greater Restoration _(level 5)_
+- Guardian of Faith _(level 4)_
+- Guards and Wards _(level 6)_
+- Guidance _(level 0)_
+- Guiding Bolt _(level 1)_
+- Gust of Wind _(level 2)_
+- Hail of Thorns _(level 1)_
+- Hallow _(level 5)_
+- Hallucinatory Terrain _(level 4)_
+- Harm _(level 6)_
+- Haste _(level 3)_
+- Heal _(level 6)_
+- Healing Word _(level 1)_
+- Heat Metal _(level 2)_
+- Hellish Rebuke _(level 1)_
+- Heroes' Feast _(level 6)_
+- Heroism _(level 1)_
+- Hex _(level 1)_
+- Hold Monster _(level 5)_
+- Hold Person _(level 2)_
+- Holy Aura _(level 8)_
+- Hunger of Hadar _(level 3)_
+- Hunter's Mark _(level 1)_
+- Hypnotic Pattern _(level 3)_
+- Ice Storm _(level 4)_
+- Identify _(level 1)_
+- Illusory Script _(level 1)_
+- Imprisonment _(level 9)_
+- Incendiary Cloud _(level 8)_
+- Inflict Wounds _(level 1)_
+- Insect Plague _(level 5)_
+- Invisibility _(level 2)_
+- Jump _(level 1)_
+- Knock _(level 2)_
+- Legend Lore _(level 5)_
+- Leomund's Secret Chest _(level 4)_
+- Leomund's Tiny Hut _(level 3)_
+- Lesser Restoration _(level 2)_
+- Levitate _(level 2)_
+- Light _(level 0)_
+- Lightning Arrow _(level 3)_
+- Lightning Bolt _(level 3)_
+- Locate Animals or Plants _(level 2)_
+- Locate Creature _(level 4)_
+- Locate Object _(level 2)_
+- Longstrider _(level 1)_
+- Mage Armor _(level 1)_
+- Mage Hand _(level 0)_
+- Magic Circle _(level 3)_
+- Magic Jar _(level 6)_
+- Magic Missile _(level 1)_
+- Magic Mouth _(level 2)_
+- Magic Weapon _(level 2)_
+- Major Image _(level 3)_
+- Mass Cure Wounds _(level 5)_
+- Mass Heal _(level 9)_
+- Mass Healing Word _(level 3)_
+- Mass Suggestion _(level 6)_
+- Maze _(level 8)_
+- Meld into Stone _(level 3)_
+- Melf's Acid Arrow _(level 2)_
+- Mending _(level 0)_
+- Message _(level 0)_
+- Meteor Swarm _(level 9)_
+- Mind Blank _(level 8)_
+- Minor Illusion _(level 0)_
+- Mirage Arcane _(level 7)_
+- Mirror Image _(level 2)_
+- Mislead _(level 5)_
+- Misty Step _(level 2)_
+- Modify Memory _(level 5)_
+- Moonbeam _(level 2)_
+- Mordenkainen's Faithful Hound _(level 4)_
+- Mordenkainen's Magnificent Mansion _(level 7)_
+- Mordenkainen's Private Sanctum _(level 4)_
+- Mordenkainen's Sword _(level 7)_
+- Move Earth _(level 6)_
+- Nondetection _(level 3)_
+- Nystul's Magic Aura _(level 2)_
+- Otiluke's Freezing Sphere _(level 6)_
+- Otiluke's Resilient Sphere _(level 4)_
+- Otto's Irresistible Dance _(level 6)_
+- Pass without Trace _(level 2)_
+- Passwall _(level 5)_
+- Phantasmal Force _(level 2)_
+- Phantasmal Killer _(level 4)_
+- Phantom Steed _(level 3)_
+- Planar Ally _(level 6)_
+- Planar Binding _(level 5)_
+- Plane Shift _(level 7)_
+- Plant Growth _(level 3)_
+- Poison Spray _(level 0)_
+- Polymorph _(level 4)_
+- Power Word Heal _(level 9)_
+- Power Word Kill _(level 9)_
+- Power Word Stun _(level 8)_
+- Prayer of Healing _(level 2)_
+- Prestidigitation _(level 0)_
+- Prismatic Spray _(level 7)_
+- Prismatic Wall _(level 9)_
+- Produce Flame _(level 0)_
+- Programmed Illusion _(level 6)_
+- Project Image _(level 7)_
+- Protection from Energy _(level 3)_
+- Protection from Evil and Good _(level 1)_
+- Protection from Poison _(level 2)_
+- Purify Food and Drink _(level 1)_
+- Raise Dead _(level 5)_
+- Rary's Telepathic Bond _(level 5)_
+- Ray of Enfeeblement _(level 2)_
+- Ray of Frost _(level 0)_
+- Ray of Sickness _(level 1)_
+- Regenerate _(level 7)_
+- Reincarnate _(level 5)_
+- Remove Curse _(level 3)_
+- Resistance _(level 0)_
+- Resurrection _(level 7)_
+- Reverse Gravity _(level 7)_
+- Revivify _(level 3)_
+- Rope Trick _(level 2)_
+- Sacred Flame _(level 0)_
+- Sanctuary _(level 1)_
+- Scorching Ray _(level 2)_
+- Scrying _(level 5)_
+- Searing Smite _(level 1)_
+- See Invisibility _(level 2)_
+- Seeming _(level 5)_
+- Sending _(level 3)_
+- Sequester _(level 7)_
+- Shapechange _(level 9)_
+- Shatter _(level 2)_
+- Shield _(level 1)_
+- Shield of Faith _(level 1)_
+- Shillelagh _(level 0)_
+- Shocking Grasp _(level 0)_
+- Silence _(level 2)_
+- Silent Image _(level 1)_
+- Simulacrum _(level 7)_
+- Sleep _(level 1)_
+- Sleet Storm _(level 3)_
+- Slow _(level 3)_
+- Spare the Dying _(level 0)_
+- Speak with Animals _(level 1)_
+- Speak with Dead _(level 3)_
+- Speak with Plants _(level 3)_
+- Spider Climb _(level 2)_
+- Spike Growth _(level 2)_
+- Spirit Guardians _(level 3)_
+- Spiritual Weapon _(level 2)_
+- Staggering Smite _(level 4)_
+- Stinking Cloud _(level 3)_
+- Stone Shape _(level 4)_
+- Stoneskin _(level 4)_
+- Storm of Vengeance _(level 9)_
+- Suggestion _(level 2)_
+- Sunbeam _(level 6)_
+- Sunburst _(level 8)_
+- Swift Quiver _(level 5)_
+- Symbol _(level 7)_
+- Tasha's Hideous Laughter _(level 1)_
+- Telekinesis _(level 5)_
+- Telepathy _(level 8)_
+- Teleport _(level 7)_
+- Teleportation Circle _(level 5)_
+- Tenser's Floating Disk _(level 1)_
+- Thaumaturgy _(level 0)_
+- Thorn Whip _(level 0)_
+- Thunderous Smite _(level 1)_
+- Thunderwave _(level 1)_
+- Time Stop _(level 9)_
+- Tongues _(level 3)_
+- Transport via Plants _(level 6)_
+- Tree Stride _(level 5)_
+- True Polymorph _(level 9)_
+- True Resurrection _(level 9)_
+- True Seeing _(level 6)_
+- True Strike _(level 0)_
+- Tsunami _(level 8)_
+- Unseen Servant _(level 1)_
+- Vampiric Touch _(level 3)_
+- Vicious Mockery _(level 0)_
+- Wall of Fire _(level 4)_
+- Wall of Force _(level 5)_
+- Wall of Ice _(level 6)_
+- Wall of Stone _(level 5)_
+- Wall of Thorns _(level 6)_
+- Warding Bond _(level 2)_
+- Water Breathing _(level 3)_
+- Water Walk _(level 3)_
+- Web _(level 2)_
+- Weird _(level 9)_
+- Wind Walk _(level 6)_
+- Wind Wall _(level 3)_
+- Wish _(level 9)_
+- Witch Bolt _(level 1)_
+- Word of Recall _(level 6)_
+- Wrathful Smite _(level 1)_
+- Zone of Truth _(level 2)_
+
+### Player's Handbook (2024) (XPHB) — 391
+
+- Acid Splash _(level 0)_
+- Aid _(level 2)_
+- Alarm _(level 1)_
+- Alter Self _(level 2)_
+- Animal Friendship _(level 1)_
+- Animal Messenger _(level 2)_
+- Animal Shapes _(level 8)_
+- Animate Dead _(level 3)_
+- Animate Objects _(level 5)_
+- Antilife Shell _(level 5)_
+- Antimagic Field _(level 8)_
+- Antipathy/Sympathy _(level 8)_
+- Arcane Eye _(level 4)_
+- Arcane Gate _(level 6)_
+- Arcane Lock _(level 2)_
+- Arcane Vigor _(level 2)_
+- Armor of Agathys _(level 1)_
+- Arms of Hadar _(level 1)_
+- Astral Projection _(level 9)_
+- Augury _(level 2)_
+- Aura of Life _(level 4)_
+- Aura of Purity _(level 4)_
+- Aura of Vitality _(level 3)_
+- Awaken _(level 5)_
+- Bane _(level 1)_
+- Banishing Smite _(level 5)_
+- Banishment _(level 4)_
+- Barkskin _(level 2)_
+- Beacon of Hope _(level 3)_
+- Beast Sense _(level 2)_
+- Befuddlement _(level 8)_
+- Bestow Curse _(level 3)_
+- Bigby's Hand _(level 5)_
+- Blade Barrier _(level 6)_
+- Blade Ward _(level 0)_
+- Bless _(level 1)_
+- Blight _(level 4)_
+- Blinding Smite _(level 3)_
+- Blindness/Deafness _(level 2)_
+- Blink _(level 3)_
+- Blur _(level 2)_
+- Burning Hands _(level 1)_
+- Call Lightning _(level 3)_
+- Calm Emotions _(level 2)_
+- Chain Lightning _(level 6)_
+- Charm Monster _(level 4)_
+- Charm Person _(level 1)_
+- Chill Touch _(level 0)_
+- Chromatic Orb _(level 1)_
+- Circle of Death _(level 6)_
+- Circle of Power _(level 5)_
+- Clairvoyance _(level 3)_
+- Clone _(level 8)_
+- Cloud of Daggers _(level 2)_
+- Cloudkill _(level 5)_
+- Color Spray _(level 1)_
+- Command _(level 1)_
+- Commune _(level 5)_
+- Commune with Nature _(level 5)_
+- Compelled Duel _(level 1)_
+- Comprehend Languages _(level 1)_
+- Compulsion _(level 4)_
+- Cone of Cold _(level 5)_
+- Confusion _(level 4)_
+- Conjure Animals _(level 3)_
+- Conjure Barrage _(level 3)_
+- Conjure Celestial _(level 7)_
+- Conjure Elemental _(level 5)_
+- Conjure Fey _(level 6)_
+- Conjure Minor Elementals _(level 4)_
+- Conjure Volley _(level 5)_
+- Conjure Woodland Beings _(level 4)_
+- Contact Other Plane _(level 5)_
+- Contagion _(level 5)_
+- Contingency _(level 6)_
+- Continual Flame _(level 2)_
+- Control Water _(level 4)_
+- Control Weather _(level 8)_
+- Cordon of Arrows _(level 2)_
+- Counterspell _(level 3)_
+- Create Food and Water _(level 3)_
+- Create Undead _(level 6)_
+- Create or Destroy Water _(level 1)_
+- Creation _(level 5)_
+- Crown of Madness _(level 2)_
+- Crusader's Mantle _(level 3)_
+- Cure Wounds _(level 1)_
+- Dancing Lights _(level 0)_
+- Darkness _(level 2)_
+- Darkvision _(level 2)_
+- Daylight _(level 3)_
+- Death Ward _(level 4)_
+- Delayed Blast Fireball _(level 7)_
+- Demiplane _(level 8)_
+- Destructive Wave _(level 5)_
+- Detect Evil and Good _(level 1)_
+- Detect Magic _(level 1)_
+- Detect Poison and Disease _(level 1)_
+- Detect Thoughts _(level 2)_
+- Dimension Door _(level 4)_
+- Disguise Self _(level 1)_
+- Disintegrate _(level 6)_
+- Dispel Evil and Good _(level 5)_
+- Dispel Magic _(level 3)_
+- Dissonant Whispers _(level 1)_
+- Divination _(level 4)_
+- Divine Favor _(level 1)_
+- Divine Smite _(level 1)_
+- Divine Word _(level 7)_
+- Dominate Beast _(level 4)_
+- Dominate Monster _(level 8)_
+- Dominate Person _(level 5)_
+- Dragon's Breath _(level 2)_
+- Drawmij's Instant Summons _(level 6)_
+- Dream _(level 5)_
+- Druidcraft _(level 0)_
+- Earthquake _(level 8)_
+- Eldritch Blast _(level 0)_
+- Elemental Weapon _(level 3)_
+- Elementalism _(level 0)_
+- Enhance Ability _(level 2)_
+- Enlarge/Reduce _(level 2)_
+- Ensnaring Strike _(level 1)_
+- Entangle _(level 1)_
+- Enthrall _(level 2)_
+- Etherealness _(level 7)_
+- Evard's Black Tentacles _(level 4)_
+- Expeditious Retreat _(level 1)_
+- Eyebite _(level 6)_
+- Fabricate _(level 4)_
+- Faerie Fire _(level 1)_
+- False Life _(level 1)_
+- Fear _(level 3)_
+- Feather Fall _(level 1)_
+- Feign Death _(level 3)_
+- Find Familiar _(level 1)_
+- Find Steed _(level 2)_
+- Find Traps _(level 2)_
+- Find the Path _(level 6)_
+- Finger of Death _(level 7)_
+- Fire Bolt _(level 0)_
+- Fire Shield _(level 4)_
+- Fire Storm _(level 7)_
+- Fireball _(level 3)_
+- Flame Blade _(level 2)_
+- Flame Strike _(level 5)_
+- Flaming Sphere _(level 2)_
+- Flesh to Stone _(level 6)_
+- Fly _(level 3)_
+- Fog Cloud _(level 1)_
+- Forbiddance _(level 6)_
+- Forcecage _(level 7)_
+- Foresight _(level 9)_
+- Fount of Moonlight _(level 4)_
+- Freedom of Movement _(level 4)_
+- Friends _(level 0)_
+- Gaseous Form _(level 3)_
+- Gate _(level 9)_
+- Geas _(level 5)_
+- Gentle Repose _(level 2)_
+- Giant Insect _(level 4)_
+- Glibness _(level 8)_
+- Globe of Invulnerability _(level 6)_
+- Glyph of Warding _(level 3)_
+- Goodberry _(level 1)_
+- Grasping Vine _(level 4)_
+- Grease _(level 1)_
+- Greater Invisibility _(level 4)_
+- Greater Restoration _(level 5)_
+- Guardian of Faith _(level 4)_
+- Guards and Wards _(level 6)_
+- Guidance _(level 0)_
+- Guiding Bolt _(level 1)_
+- Gust of Wind _(level 2)_
+- Hail of Thorns _(level 1)_
+- Hallow _(level 5)_
+- Hallucinatory Terrain _(level 4)_
+- Harm _(level 6)_
+- Haste _(level 3)_
+- Heal _(level 6)_
+- Healing Word _(level 1)_
+- Heat Metal _(level 2)_
+- Hellish Rebuke _(level 1)_
+- Heroes' Feast _(level 6)_
+- Heroism _(level 1)_
+- Hex _(level 1)_
+- Hold Monster _(level 5)_
+- Hold Person _(level 2)_
+- Holy Aura _(level 8)_
+- Hunger of Hadar _(level 3)_
+- Hunter's Mark _(level 1)_
+- Hypnotic Pattern _(level 3)_
+- Ice Knife _(level 1)_
+- Ice Storm _(level 4)_
+- Identify _(level 1)_
+- Illusory Script _(level 1)_
+- Imprisonment _(level 9)_
+- Incendiary Cloud _(level 8)_
+- Inflict Wounds _(level 1)_
+- Insect Plague _(level 5)_
+- Invisibility _(level 2)_
+- Jallarzi's Storm of Radiance _(level 5)_
+- Jump _(level 1)_
+- Knock _(level 2)_
+- Legend Lore _(level 5)_
+- Leomund's Secret Chest _(level 4)_
+- Leomund's Tiny Hut _(level 3)_
+- Lesser Restoration _(level 2)_
+- Levitate _(level 2)_
+- Light _(level 0)_
+- Lightning Arrow _(level 3)_
+- Lightning Bolt _(level 3)_
+- Locate Animals or Plants _(level 2)_
+- Locate Creature _(level 4)_
+- Locate Object _(level 2)_
+- Longstrider _(level 1)_
+- Mage Armor _(level 1)_
+- Mage Hand _(level 0)_
+- Magic Circle _(level 3)_
+- Magic Jar _(level 6)_
+- Magic Missile _(level 1)_
+- Magic Mouth _(level 2)_
+- Magic Weapon _(level 2)_
+- Major Image _(level 3)_
+- Mass Cure Wounds _(level 5)_
+- Mass Heal _(level 9)_
+- Mass Healing Word _(level 3)_
+- Mass Suggestion _(level 6)_
+- Maze _(level 8)_
+- Meld into Stone _(level 3)_
+- Melf's Acid Arrow _(level 2)_
+- Mending _(level 0)_
+- Message _(level 0)_
+- Meteor Swarm _(level 9)_
+- Mind Blank _(level 8)_
+- Mind Sliver _(level 0)_
+- Mind Spike _(level 2)_
+- Minor Illusion _(level 0)_
+- Mirage Arcane _(level 7)_
+- Mirror Image _(level 2)_
+- Mislead _(level 5)_
+- Misty Step _(level 2)_
+- Modify Memory _(level 5)_
+- Moonbeam _(level 2)_
+- Mordenkainen's Faithful Hound _(level 4)_
+- Mordenkainen's Magnificent Mansion _(level 7)_
+- Mordenkainen's Private Sanctum _(level 4)_
+- Mordenkainen's Sword _(level 7)_
+- Move Earth _(level 6)_
+- Nondetection _(level 3)_
+- Nystul's Magic Aura _(level 2)_
+- Otiluke's Freezing Sphere _(level 6)_
+- Otiluke's Resilient Sphere _(level 4)_
+- Otto's Irresistible Dance _(level 6)_
+- Pass without Trace _(level 2)_
+- Passwall _(level 5)_
+- Phantasmal Force _(level 2)_
+- Phantasmal Killer _(level 4)_
+- Phantom Steed _(level 3)_
+- Planar Ally _(level 6)_
+- Planar Binding _(level 5)_
+- Plane Shift _(level 7)_
+- Plant Growth _(level 3)_
+- Poison Spray _(level 0)_
+- Polymorph _(level 4)_
+- Power Word Fortify _(level 7)_
+- Power Word Heal _(level 9)_
+- Power Word Kill _(level 9)_
+- Power Word Stun _(level 8)_
+- Prayer of Healing _(level 2)_
+- Prestidigitation _(level 0)_
+- Prismatic Spray _(level 7)_
+- Prismatic Wall _(level 9)_
+- Produce Flame _(level 0)_
+- Programmed Illusion _(level 6)_
+- Project Image _(level 7)_
+- Protection from Energy _(level 3)_
+- Protection from Evil and Good _(level 1)_
+- Protection from Poison _(level 2)_
+- Purify Food and Drink _(level 1)_
+- Raise Dead _(level 5)_
+- Rary's Telepathic Bond _(level 5)_
+- Ray of Enfeeblement _(level 2)_
+- Ray of Frost _(level 0)_
+- Ray of Sickness _(level 1)_
+- Regenerate _(level 7)_
+- Reincarnate _(level 5)_
+- Remove Curse _(level 3)_
+- Resistance _(level 0)_
+- Resurrection _(level 7)_
+- Reverse Gravity _(level 7)_
+- Revivify _(level 3)_
+- Rope Trick _(level 2)_
+- Sacred Flame _(level 0)_
+- Sanctuary _(level 1)_
+- Scorching Ray _(level 2)_
+- Scrying _(level 5)_
+- Searing Smite _(level 1)_
+- See Invisibility _(level 2)_
+- Seeming _(level 5)_
+- Sending _(level 3)_
+- Sequester _(level 7)_
+- Shapechange _(level 9)_
+- Shatter _(level 2)_
+- Shield _(level 1)_
+- Shield of Faith _(level 1)_
+- Shillelagh _(level 0)_
+- Shining Smite _(level 2)_
+- Shocking Grasp _(level 0)_
+- Silence _(level 2)_
+- Silent Image _(level 1)_
+- Simulacrum _(level 7)_
+- Sleep _(level 1)_
+- Sleet Storm _(level 3)_
+- Slow _(level 3)_
+- Sorcerous Burst _(level 0)_
+- Spare the Dying _(level 0)_
+- Speak with Animals _(level 1)_
+- Speak with Dead _(level 3)_
+- Speak with Plants _(level 3)_
+- Spider Climb _(level 2)_
+- Spike Growth _(level 2)_
+- Spirit Guardians _(level 3)_
+- Spiritual Weapon _(level 2)_
+- Staggering Smite _(level 4)_
+- Starry Wisp _(level 0)_
+- Steel Wind Strike _(level 5)_
+- Stinking Cloud _(level 3)_
+- Stone Shape _(level 4)_
+- Stoneskin _(level 4)_
+- Storm of Vengeance _(level 9)_
+- Suggestion _(level 2)_
+- Summon Aberration _(level 4)_
+- Summon Beast _(level 2)_
+- Summon Celestial _(level 5)_
+- Summon Construct _(level 4)_
+- Summon Dragon _(level 5)_
+- Summon Elemental _(level 4)_
+- Summon Fey _(level 3)_
+- Summon Fiend _(level 6)_
+- Summon Undead _(level 3)_
+- Sunbeam _(level 6)_
+- Sunburst _(level 8)_
+- Swift Quiver _(level 5)_
+- Symbol _(level 7)_
+- Synaptic Static _(level 5)_
+- Tasha's Bubbling Cauldron _(level 6)_
+- Tasha's Hideous Laughter _(level 1)_
+- Telekinesis _(level 5)_
+- Telepathy _(level 8)_
+- Teleport _(level 7)_
+- Teleportation Circle _(level 5)_
+- Tenser's Floating Disk _(level 1)_
+- Thaumaturgy _(level 0)_
+- Thorn Whip _(level 0)_
+- Thunderclap _(level 0)_
+- Thunderous Smite _(level 1)_
+- Thunderwave _(level 1)_
+- Time Stop _(level 9)_
+- Toll the Dead _(level 0)_
+- Tongues _(level 3)_
+- Transport via Plants _(level 6)_
+- Tree Stride _(level 5)_
+- True Polymorph _(level 9)_
+- True Resurrection _(level 9)_
+- True Seeing _(level 6)_
+- True Strike _(level 0)_
+- Tsunami _(level 8)_
+- Unseen Servant _(level 1)_
+- Vampiric Touch _(level 3)_
+- Vicious Mockery _(level 0)_
+- Vitriolic Sphere _(level 4)_
+- Wall of Fire _(level 4)_
+- Wall of Force _(level 5)_
+- Wall of Ice _(level 6)_
+- Wall of Stone _(level 5)_
+- Wall of Thorns _(level 6)_
+- Warding Bond _(level 2)_
+- Water Breathing _(level 3)_
+- Water Walk _(level 3)_
+- Web _(level 2)_
+- Weird _(level 9)_
+- Wind Walk _(level 6)_
+- Wind Wall _(level 3)_
+- Wish _(level 9)_
+- Witch Bolt _(level 1)_
+- Word of Radiance _(level 0)_
+- Word of Recall _(level 6)_
+- Wrathful Smite _(level 1)_
+- Yolande's Regal Presence _(level 5)_
+- Zone of Truth _(level 2)_
+
+### Sigil and the Outlands (SATO) — 2
+
+- Gate Seal _(level 4)_
+- Warp Sense _(level 2)_
+
+### Strixhaven: A Curriculum of Chaos (SCC) — 5
+
+- Borrowed Knowledge _(level 2)_
+- Kinetic Jaunt _(level 2)_
+- Silvery Barbs _(level 1)_
+- Vortex Warp _(level 2)_
+- Wither and Bloom _(level 2)_
+
+### Tasha's Cauldron of Everything (TCE) — 21
+
+- Blade of Disaster _(level 9)_
+- Booming Blade _(level 0)_
+- Dream of the Blue Veil _(level 7)_
+- Green-Flame Blade _(level 0)_
+- Intellect Fortress _(level 3)_
+- Lightning Lure _(level 0)_
+- Mind Sliver _(level 0)_
+- Spirit Shroud _(level 3)_
+- Summon Aberration _(level 4)_
+- Summon Beast _(level 2)_
+- Summon Celestial _(level 5)_
+- Summon Construct _(level 4)_
+- Summon Elemental _(level 4)_
+- Summon Fey _(level 3)_
+- Summon Fiend _(level 6)_
+- Summon Shadowspawn _(level 3)_
+- Summon Undead _(level 3)_
+- Sword Burst _(level 0)_
+- Tasha's Caustic Brew _(level 1)_
+- Tasha's Mind Whip _(level 2)_
+- Tasha's Otherworldly Guise _(level 6)_
+
+### The Book of Many Things (BMT) — 3
+
+- Antagonize _(level 3)_
+- Spirit of Death _(level 4)_
+- Spray of Cards _(level 2)_
+
+### Xanathar's Guide to Everything (XGE) — 95
+
+- Abi-Dalzim's Horrid Wilting _(level 8)_
+- Absorb Elements _(level 1)_
+- Aganazzar's Scorcher _(level 2)_
+- Beast Bond _(level 1)_
+- Bones of the Earth _(level 6)_
+- Catapult _(level 1)_
+- Catnap _(level 3)_
+- Cause Fear _(level 1)_
+- Ceremony _(level 1)_
+- Chaos Bolt _(level 1)_
+- Charm Monster _(level 4)_
+- Control Flames _(level 0)_
+- Control Winds _(level 5)_
+- Create Bonfire _(level 0)_
+- Create Homunculus _(level 6)_
+- Crown of Stars _(level 7)_
+- Danse Macabre _(level 5)_
+- Dawn _(level 5)_
+- Dragon's Breath _(level 2)_
+- Druid Grove _(level 6)_
+- Dust Devil _(level 2)_
+- Earth Tremor _(level 1)_
+- Earthbind _(level 2)_
+- Elemental Bane _(level 4)_
+- Enemies Abound _(level 3)_
+- Enervation _(level 5)_
+- Erupting Earth _(level 3)_
+- Far Step _(level 5)_
+- Find Greater Steed _(level 4)_
+- Flame Arrows _(level 3)_
+- Frostbite _(level 0)_
+- Guardian of Nature _(level 4)_
+- Gust _(level 0)_
+- Healing Spirit _(level 2)_
+- Holy Weapon _(level 5)_
+- Ice Knife _(level 1)_
+- Illusory Dragon _(level 8)_
+- Immolation _(level 5)_
+- Infernal Calling _(level 5)_
+- Infestation _(level 0)_
+- Investiture of Flame _(level 6)_
+- Investiture of Ice _(level 6)_
+- Investiture of Stone _(level 6)_
+- Investiture of Wind _(level 6)_
+- Invulnerability _(level 9)_
+- Life Transference _(level 3)_
+- Maddening Darkness _(level 8)_
+- Maelstrom _(level 5)_
+- Magic Stone _(level 0)_
+- Mass Polymorph _(level 9)_
+- Maximilian's Earthen Grasp _(level 2)_
+- Melf's Minute Meteors _(level 3)_
+- Mental Prison _(level 6)_
+- Mighty Fortress _(level 8)_
+- Mind Spike _(level 2)_
+- Mold Earth _(level 0)_
+- Negative Energy Flood _(level 5)_
+- Power Word Pain _(level 7)_
+- Primal Savagery _(level 0)_
+- Primordial Ward _(level 6)_
+- Psychic Scream _(level 9)_
+- Pyrotechnics _(level 2)_
+- Scatter _(level 6)_
+- Shadow Blade _(level 2)_
+- Shadow of Moil _(level 4)_
+- Shape Water _(level 0)_
+- Sickening Radiance _(level 4)_
+- Skill Empowerment _(level 5)_
+- Skywrite _(level 2)_
+- Snare _(level 1)_
+- Snilloc's Snowball Swarm _(level 2)_
+- Soul Cage _(level 6)_
+- Steel Wind Strike _(level 5)_
+- Storm Sphere _(level 4)_
+- Summon Greater Demon _(level 4)_
+- Summon Lesser Demons _(level 3)_
+- Synaptic Static _(level 5)_
+- Temple of the Gods _(level 7)_
+- Tenser's Transformation _(level 6)_
+- Thunder Step _(level 3)_
+- Thunderclap _(level 0)_
+- Tidal Wave _(level 3)_
+- Tiny Servant _(level 3)_
+- Toll the Dead _(level 0)_
+- Transmute Rock _(level 5)_
+- Vitriolic Sphere _(level 4)_
+- Wall of Light _(level 5)_
+- Wall of Sand _(level 3)_
+- Wall of Water _(level 3)_
+- Warding Wind _(level 2)_
+- Watery Sphere _(level 4)_
+- Whirlwind _(level 7)_
+- Word of Radiance _(level 0)_
+- Wrath of Nature _(level 5)_
+- Zephyr Strike _(level 1)_
+
+## Magic Items
+
+### Acquisitions Incorporated (AI) — 23
+
+- Cartographer's Map Case _(common)_
+- Chronolometer _(very rare)_
+- Coin of Decisionry _(varies)_
+- Dimensional Loop _(very rare)_
+- Documancy Satchel _(varies)_
+- Elder Cartographer's Glossography _(uncommon)_
+- Failed Experiment Wand _(rare)_
+- Far Gear _(very rare)_
+- Living Loot Satchel _(varies)_
+- Obviator's Lenses _(varies)_
+- Occultant Abacus _(varies)_
+- Orrery of the Wanderer _(artifact)_
+- Piercer _(rare)_
+- Portfolio Keeper _(varies)_
+- Rotor of Return _(very rare)_
+- Sending Stone _(uncommon)_
+- Spyglass of Clairvoyance _(common)_
+- Timepiece of Travel _(very rare)_
+- Travel Alchemical Kit _(uncommon)_
+- Trinket _(none)_
+- Voting Kit _(common)_
+- Wheel of Stars _(very rare)_
+- Whisper Jar _(varies)_
+
+### Arcana Unleashed (AU) — 75
+
+- Arcane Chatelaine _(rare)_
+- Arcanist's Bestiary _(rare)_
+- Bejeweled Conclave Trinket _(none)_
+- Bellows of Strangulation _(rare)_
+- Blemished Idol of Good Fortunes _(uncommon)_
+- Blood Amulet _(rare)_
+- Boon Companions' Bands _(uncommon)_
+- Bringers of Cosmic Dawn Trinket _(none)_
+- Budding Blossom Rod _(uncommon)_
+- Chattering Staff of Skulls _(rare)_
+- Conjurer's Canopy _(common)_
+- Covenant of the Grave Trinket _(none)_
+- Crucible Keepers Trinket _(none)_
+- Crusading Wand of Celestial Prowess _(rare)_
+- Diamond Staff _(legendary)_
+- Dictation Quill _(common)_
+- Dissuader _(rare)_
+- Dream Weaver _(rare)_
+- Elocutionist's Lexicon _(common)_
+- Ensorcelled Missive _(common)_
+- Evergreen Fertilizer _(common)_
+- Flowering Blossom Rod _(rare)_
+- Golden Idol of Good Fortunes _(very rare)_
+- Grave Reaper _(legendary)_
+- Heliacal Wand of Celestial Prowess _(legendary)_
+- Homeward Compass _(common)_
+- Horizon Weavers Trinket _(none)_
+- Lucky Foot _(common)_
+- Lunar Wand of Celestial Prowess _(very rare)_
+- Mage Breaker _(rare)_
+- Mage's Manacle _(rare)_
+- Magewright's Gloves _(uncommon)_
+- Many Keyholes Dagger _(very rare)_
+- Martialist's Quarterstaff _(uncommon)_
+- Namer's Needle _(rare)_
+- Necklace of the Beastly Familiar (Giant Octopus) _(uncommon)_
+- Necklace of the Beastly Familiar (Giant Scorpion) _(rare)_
+- Necklace of the Beastly Familiar (Hippopotamus) _(rare)_
+- Necklace of the Beastly Familiar (Mammoth) _(very rare)_
+- Necklace of the Beastly Familiar (Tyrannosaurus Rex) _(legendary)_
+- Ninth Quill Trinket _(none)_
+- Ominous Staff of Skulls _(uncommon)_
+- Orb of Divination Detection _(uncommon)_
+- Orb of Sorcery _(uncommon)_
+- Phantasmic Circus Trinket _(none)_
+- Potion of Dragon's Breath _(uncommon)_
+- Potion of Tirelessness _(uncommon)_
+- Prismatic Rune _(rare)_
+- Psionic Rod of the Honed Mind _(very rare)_
+- Pulverizing Staff of Skulls _(very rare)_
+- Queen Ehlissa's Marvelous Nightingale _(artifact)_
+- Ring of Dedicated Focus _(uncommon)_
+- Scholar's Anchoring Bangle _(rare)_
+- Secret Keeper's Circlet _(rare)_
+- Seers of Sea and Sky Trinket _(none)_
+- Sheltering Hands Trinket _(none)_
+- Somniferous Blossom Rod _(very rare)_
+- Spell Component Ring _(common)_
+- Spell Duelist's Trophy _(rare)_
+- Spell-Slinger's Puppet _(uncommon)_
+- Staff of the Lost _(very rare)_
+- Sweeping Broom _(common)_
+- Tarnished Idol of Good Fortunes _(rare)_
+- Ten Keyholes Dagger _(rare)_
+- Thespian's Playbill _(uncommon)_
+- Thief's Thimble _(uncommon)_
+- Three Keyholes Dagger _(uncommon)_
+- Tranquil Rod of the Honed Mind _(legendary)_
+- Traveler's Pearl _(legendary)_
+- Universal Pantograph _(artifact)_
+- Vigilant Rod of the Honed Mind _(rare)_
+- Wand of Freshness _(uncommon)_
+- Wand of Slumber _(rare)_
+- Wand of Teeth _(rare)_
+- Workshop Wrecker _(very rare)_
+
+### Astral Adventurer's Guide (AAG) — 20
+
+- Basic Fishing Equipment _(none)_
+- Bombard _(none)_
+- Damselfly Ship _(none)_
+- Fish Suit _(very rare)_
+- Flying Fish Ship _(none)_
+- Hammerhead Ship _(none)_
+- Lamprey Ship _(none)_
+- Living Ship _(none)_
+- Nautiloid _(none)_
+- Nightspider _(none)_
+- Scorpion Ship _(none)_
+- Shrike Ship _(none)_
+- Space Galleon _(none)_
+- Spelljamming Helm _(rare)_
+- Squid Ship _(none)_
+- Star Moth _(none)_
+- Turtle Ship _(none)_
+- Tyrant Ship _(none)_
+- Wasp Ship _(none)_
+- Wildspace Orrery _(uncommon)_
+
+### Bigby Presents: Glory of the Giants (BGG) — 31
+
+- Adze of Annam _(artifact)_
+- Bigby's Beneficent Bracelet _(artifact)_
+- Crown of the Wrath Bringer _(rare)_
+- Delver's Claws _(rare)_
+- Elven Thrower _(very rare)_
+- Giant Trinket _(none)_
+- Glowrune Pigment _(rare)_
+- Goose Egg Trinket _(none)_
+- Harp of Gilded Plenty _(legendary)_
+- Helm of Perfect Potential _(artifact)_
+- Horizon Puzzle Cube _(unknown (magic))_
+- Lash of Immolation _(rare)_
+- Longbow of the Healing Hearth _(legendary)_
+- Lucent Destroyer _(very rare)_
+- Mistral Mantle _(very rare)_
+- Nimbus Coronet _(very rare)_
+- Orb of Skoraeus _(legendary)_
+- Prehistoric Figurine of Wondrous Power, Carnelian Triceratops _(very rare)_
+- Prehistoric Figurine of Wondrous Power, Jasper Tyrannosaurus Rex _(legendary)_
+- Prehistoric Figurine of Wondrous Power, Kyanite Pteranodon _(rare)_
+- Prehistoric Figurine of Wondrous Power, Pyrite Plesiosaurus _(uncommon)_
+- Reaper's Scream _(legendary)_
+- Ring of Amity _(very rare)_
+- Sanctum Amulet _(very rare)_
+- Shield of the Blazing Dreadnought _(legendary)_
+- Staff of the Rooted Hills _(rare)_
+- Stonebreaker's Breastplate _(legendary)_
+- Thunderbuss _(very rare)_
+- War Horn of Valor _(rare)_
+- Wayfarer's Boots _(rare)_
+- Wyrmreaver Gauntlets _(very rare)_
+
+### Boo's Astral Menagerie (BAM) — 1
+
+- Talarith _(legendary)_
+
+### Dungeon Master's Guide (2014) (DMG) — 515
+
+- +1 Rod of the Pact Keeper _(uncommon)_
+- +1 Wand of the War Mage _(uncommon)_
+- +2 Rod of the Pact Keeper _(rare)_
+- +2 Wand of the War Mage _(rare)_
+- +3 Rod of the Pact Keeper _(very rare)_
+- +3 Wand of the War Mage _(very rare)_
+- Airship _(none)_
+- Alchemy Jug _(uncommon)_
+- Alexandrite _(none)_
+- Amber _(none)_
+- Amethyst _(none)_
+- Amulet of Health _(rare)_
+- Amulet of Proof against Detection and Location _(uncommon)_
+- Amulet of the Planes _(very rare)_
+- Animated Shield _(very rare)_
+- Antimatter Rifle _(none)_
+- Apparatus of Kwalish _(legendary)_
+- Aquamarine _(none)_
+- Armor of Invulnerability _(legendary)_
+- Armor of Vulnerability (Bludgeoning) _(rare)_
+- Armor of Vulnerability (Piercing) _(rare)_
+- Armor of Vulnerability (Slashing) _(rare)_
+- Arrow-Catching Shield _(rare)_
+- Assassin's Blood _(none)_
+- Automatic Pistol _(none)_
+- Automatic Rifle _(none)_
+- Axe of the Dwarvish Lords _(artifact)_
+- Azurite _(none)_
+- Bag of Beans _(rare)_
+- Bag of Devouring _(very rare)_
+- Bag of Holding _(uncommon)_
+- Bag of Tricks, Gray _(uncommon)_
+- Bag of Tricks, Rust _(uncommon)_
+- Bag of Tricks, Tan _(uncommon)_
+- Banded Agate _(none)_
+- Bead of Force _(rare)_
+- Bejeweled ivory drinking horn with gold filigree _(none)_
+- Belt of Cloud Giant Strength _(legendary)_
+- Belt of Dwarvenkind _(rare)_
+- Belt of Fire Giant Strength _(very rare)_
+- Belt of Frost Giant Strength _(very rare)_
+- Belt of Hill Giant Strength _(rare)_
+- Belt of Stone Giant Strength _(very rare)_
+- Belt of Storm Giant Strength _(legendary)_
+- Black Dragon Scale Mail _(very rare)_
+- Black Opal _(none)_
+- Black Pearl _(none)_
+- Black Sapphire _(none)_
+- Black velvet mask stitched with silver thread _(none)_
+- Blackrazor _(legendary)_
+- Bloodstone _(none)_
+- Blue Dragon Scale Mail _(very rare)_
+- Blue Quartz _(none)_
+- Blue Sapphire _(none)_
+- Blue Spinel _(none)_
+- Bomb _(none)_
+- Book of Exalted Deeds _(artifact)_
+- Book of Vile Darkness _(artifact)_
+- Boots of Elvenkind _(uncommon)_
+- Boots of Levitation _(rare)_
+- Boots of Speed _(rare)_
+- Boots of Striding and Springing _(uncommon)_
+- Boots of the Winterlands _(uncommon)_
+- Bottle stopper cork embossed with gold leaf and set with amethysts _(none)_
+- Bowl of Commanding Water Elementals _(rare)_
+- Box of turquoise animal figurines _(none)_
+- Bracers of Archery _(uncommon)_
+- Bracers of Defense _(rare)_
+- Brass Dragon Scale Mail _(very rare)_
+- Brass mug with jade inlay _(none)_
+- Brazier of Commanding Fire Elementals _(rare)_
+- Bronze Dragon Scale Mail _(very rare)_
+- Bronze crown _(none)_
+- Brooch of Shielding _(uncommon)_
+- Broom of Flying _(uncommon)_
+- Burnt Othur Fumes _(none)_
+- Candle of Invocation _(very rare)_
+- Cap of Water Breathing _(uncommon)_
+- Cape of the Mountebank _(rare)_
+- Carnelian _(none)_
+- Carpet of Flying, 3 ft. × 5 ft. _(very rare)_
+- Carpet of Flying, 4 ft. × 6 ft. _(very rare)_
+- Carpet of Flying, 5 ft. × 7 ft. _(very rare)_
+- Carpet of Flying, 6 ft. × 9 ft. _(very rare)_
+- Carrion Crawler Mucus _(none)_
+- Carved bone statuette _(none)_
+- Carved harp of exotic wood with ivory inlay and zircon gems _(none)_
+- Carved ivory statuette _(none)_
+- Censer of Controlling Air Elementals _(rare)_
+- Ceremonial electrum dagger with a black pearl in the pommel _(none)_
+- Chalcedony _(none)_
+- Chime of Opening _(rare)_
+- Chrysoberyl _(none)_
+- Chrysoprase _(none)_
+- Circlet of Blasting _(uncommon)_
+- Citrine _(none)_
+- Cloak of Arachnida _(very rare)_
+- Cloak of Displacement _(rare)_
+- Cloak of Elvenkind _(uncommon)_
+- Cloak of Invisibility _(legendary)_
+- Cloak of Protection _(uncommon)_
+- Cloak of the Bat _(rare)_
+- Cloak of the Manta Ray _(uncommon)_
+- Cloth-of-gold vestments _(none)_
+- Copper Dragon Scale Mail _(very rare)_
+- Copper chalice with silver filigree _(none)_
+- Coral _(none)_
+- Crystal Ball _(very rare)_
+- Crystal Ball of Mind Reading _(legendary)_
+- Crystal Ball of Telepathy _(legendary)_
+- Crystal Ball of True Seeing _(legendary)_
+- Cube of Force _(rare)_
+- Cubic Gate _(legendary)_
+- Daern's Instant Fortress _(rare)_
+- Dagger of Venom _(rare)_
+- Decanter of Endless Water _(uncommon)_
+- Deck of Illusions _(uncommon)_
+- Deck of Many Things _(legendary)_
+- Demon Armor _(very rare)_
+- Diamond _(none)_
+- Dimensional Shackles _(rare)_
+- Driftglobe _(uncommon)_
+- Drow Poison _(none)_
+- Dust of Disappearance _(uncommon)_
+- Dust of Dryness _(uncommon)_
+- Dust of Sneezing and Choking _(uncommon)_
+- Dwarven Plate _(very rare)_
+- Dwarven Thrower _(very rare)_
+- Dynamite (stick) _(none)_
+- Efreeti Bottle _(very rare)_
+- Efreeti Chain _(legendary)_
+- Elemental Gem, Blue Sapphire _(uncommon)_
+- Elemental Gem, Emerald _(uncommon)_
+- Elemental Gem, Red Corundum _(uncommon)_
+- Elemental Gem, Yellow Diamond _(uncommon)_
+- Elixir of Health _(rare)_
+- Elven Chain _(rare)_
+- Embroidered glove set with jewel chips _(none)_
+- Embroidered silk and velvet mantle set with numerous moonstones _(none)_
+- Embroidered silk handkerchief _(none)_
+- Emerald _(none)_
+- Energy Cell _(none)_
+- Essence of Ether _(none)_
+- Eversmoking Bottle _(uncommon)_
+- Eye Agate _(none)_
+- Eye of Vecna _(artifact)_
+- Eye patch with a mock eye set in blue sapphire and moonstone _(none)_
+- Eyes of Charming _(uncommon)_
+- Eyes of Minute Seeing _(uncommon)_
+- Eyes of the Eagle _(uncommon)_
+- Figurine of Wondrous Power, Bronze Griffon _(rare)_
+- Figurine of Wondrous Power, Ebony Fly _(rare)_
+- Figurine of Wondrous Power, Golden Lions _(rare)_
+- Figurine of Wondrous Power, Ivory Goats _(rare)_
+- Figurine of Wondrous Power, Marble Elephant _(rare)_
+- Figurine of Wondrous Power, Obsidian Steed _(very rare)_
+- Figurine of Wondrous Power, Onyx Dog _(rare)_
+- Figurine of Wondrous Power, Serpentine Owl _(rare)_
+- Figurine of Wondrous Power, Silver Raven _(uncommon)_
+- Fine gold chain set with a fire opal _(none)_
+- Fire Opal _(none)_
+- Folding Boat _(rare)_
+- Fragmentation Grenade _(none)_
+- Galley _(none)_
+- Garnet _(none)_
+- Gauntlets of Ogre Power _(uncommon)_
+- Gem of Brightness _(uncommon)_
+- Gem of Seeing _(rare)_
+- Glamoured Studded Leather _(rare)_
+- Gloves of Missile Snaring _(uncommon)_
+- Gloves of Swimming and Climbing _(uncommon)_
+- Gloves of Thievery _(uncommon)_
+- Goggles of Night _(uncommon)_
+- Gold Dragon Scale Mail _(very rare)_
+- Gold bird cage with electrum filigree _(none)_
+- Gold circlet set with four aquamarines _(none)_
+- Gold cup set with emeralds _(none)_
+- Gold dragon comb set with red garnets as eyes _(none)_
+- Gold jewelry box with platinum filigree _(none)_
+- Gold locket with a painted portrait inside _(none)_
+- Gold music box _(none)_
+- Gold ring set with bloodstones _(none)_
+- Green Dragon Scale Mail _(very rare)_
+- Grenade Launcher _(none)_
+- Gunpowder Horn _(none)_
+- Gunpowder Keg _(none)_
+- Hammer of Thunderbolts _(legendary)_
+- Hand of Vecna _(artifact)_
+- Hat of Disguise _(uncommon)_
+- Headband of Intellect _(uncommon)_
+- Helm of Brilliance _(very rare)_
+- Helm of Comprehending Languages _(uncommon)_
+- Helm of Telepathy _(uncommon)_
+- Helm of Teleportation _(rare)_
+- Hematite _(none)_
+- Heward's Handy Haversack _(rare)_
+- Horn of Blasting _(rare)_
+- Horn of Valhalla, Brass _(rare)_
+- Horn of Valhalla, Bronze _(very rare)_
+- Horn of Valhalla, Iron _(legendary)_
+- Horn of Valhalla, Silver _(rare)_
+- Horseshoes of Speed _(rare)_
+- Horseshoes of a Zephyr _(very rare)_
+- Hunting Rifle _(none)_
+- Immovable Rod _(uncommon)_
+- Instrument of the Bards, Anstruth Harp _(very rare)_
+- Instrument of the Bards, Canaith Mandolin _(rare)_
+- Instrument of the Bards, Cli Lyre _(rare)_
+- Instrument of the Bards, Doss Lute _(uncommon)_
+- Instrument of the Bards, Fochlucan Bandore _(uncommon)_
+- Instrument of the Bards, Mac-Fuirmidh Cittern _(uncommon)_
+- Instrument of the Bards, Ollamh Harp _(legendary)_
+- Ioun Stone, Absorption _(very rare)_
+- Ioun Stone, Agility _(very rare)_
+- Ioun Stone, Awareness _(rare)_
+- Ioun Stone, Fortitude _(very rare)_
+- Ioun Stone, Greater Absorption _(legendary)_
+- Ioun Stone, Insight _(very rare)_
+- Ioun Stone, Intellect _(very rare)_
+- Ioun Stone, Leadership _(very rare)_
+- Ioun Stone, Mastery _(legendary)_
+- Ioun Stone, Protection _(rare)_
+- Ioun Stone, Regeneration _(legendary)_
+- Ioun Stone, Reserve _(rare)_
+- Ioun Stone, Strength _(very rare)_
+- Ioun Stone, Sustenance _(rare)_
+- Iron Bands of Bilarro _(rare)_
+- Iron Flask _(legendary)_
+- Jacinth _(none)_
+- Jade _(none)_
+- Jade game board with solid gold playing pieces _(none)_
+- Jasper _(none)_
+- Javelin of Lightning _(uncommon)_
+- Jet _(none)_
+- Jeweled anklet _(none)_
+- Jeweled gold crown _(none)_
+- Jeweled platinum ring _(none)_
+- Keelboat _(none)_
+- Keoghtom's Ointment _(uncommon)_
+- Lantern of Revealing _(uncommon)_
+- Lapis Lazuli _(none)_
+- Large gold bracelet _(none)_
+- Large well-made tapestry _(none)_
+- Laser Pistol _(none)_
+- Laser Rifle _(none)_
+- Longship _(none)_
+- Mace of Disruption _(rare)_
+- Mace of Smiting _(rare)_
+- Mace of Terror _(rare)_
+- Malachite _(none)_
+- Malice _(none)_
+- Mantle of Spell Resistance _(rare)_
+- Manual of Bodily Health _(very rare)_
+- Manual of Clay Golems _(very rare)_
+- Manual of Flesh Golems _(very rare)_
+- Manual of Gainful Exercise _(very rare)_
+- Manual of Iron Golems _(very rare)_
+- Manual of Quickness of Action _(very rare)_
+- Manual of Stone Golems _(very rare)_
+- Medallion of Thoughts _(uncommon)_
+- Midnight Tears _(none)_
+- Mirror of Life Trapping _(very rare)_
+- Modern Bullet _(none)_
+- Modern Bullets (10) _(none)_
+- Moonblade _(legendary)_
+- Moonstone _(none)_
+- Moss Agate _(none)_
+- Musket _(none)_
+- Necklace of Adaptation _(uncommon)_
+- Necklace of Fireballs _(rare)_
+- Necklace of Prayer Beads _(rare)_
+- Necklace string of small pink pearls _(none)_
+- Nolzur's Marvelous Pigments _(very rare)_
+- Oathbow _(very rare)_
+- Obsidian _(none)_
+- Obsidian statuette with gold fittings and inlay _(none)_
+- Oil of Etherealness _(rare)_
+- Oil of Sharpness _(very rare)_
+- Oil of Slipperiness _(uncommon)_
+- Oil of Taggit _(none)_
+- Old masterpiece painting _(none)_
+- Onyx _(none)_
+- Opal _(none)_
+- Orb of Dragonkind _(artifact)_
+- Painted gold child's sarcophagus _(none)_
+- Painted gold war mask _(none)_
+- Pair of engraved bone dice _(none)_
+- Pale Tincture _(none)_
+- Pearl _(none)_
+- Pearl of Power _(uncommon)_
+- Periapt of Health _(uncommon)_
+- Periapt of Proof against Poison _(rare)_
+- Periapt of Wound Closure _(uncommon)_
+- Peridot _(none)_
+- Philter of Love _(uncommon)_
+- Pipes of Haunting _(uncommon)_
+- Pipes of the Sewers _(uncommon)_
+- Pistol _(none)_
+- Plate Armor of Etherealness _(legendary)_
+- Platinum bracelet set with a sapphire _(none)_
+- Portable Hole _(rare)_
+- Potion of Acid Resistance _(uncommon)_
+- Potion of Animal Friendship _(uncommon)_
+- Potion of Clairvoyance _(rare)_
+- Potion of Climbing _(common)_
+- Potion of Cloud Giant Strength _(very rare)_
+- Potion of Cold Resistance _(uncommon)_
+- Potion of Diminution _(rare)_
+- Potion of Fire Breath _(uncommon)_
+- Potion of Fire Giant Strength _(rare)_
+- Potion of Fire Resistance _(uncommon)_
+- Potion of Flying _(very rare)_
+- Potion of Force Resistance _(uncommon)_
+- Potion of Frost Giant Strength _(rare)_
+- Potion of Gaseous Form _(rare)_
+- Potion of Greater Healing _(uncommon)_
+- Potion of Growth _(uncommon)_
+- Potion of Healing _(common)_
+- Potion of Heroism _(rare)_
+- Potion of Hill Giant Strength _(uncommon)_
+- Potion of Invisibility _(very rare)_
+- Potion of Invulnerability _(rare)_
+- Potion of Lightning Resistance _(uncommon)_
+- Potion of Longevity _(very rare)_
+- Potion of Mind Reading _(rare)_
+- Potion of Necrotic Resistance _(uncommon)_
+- Potion of Poison _(uncommon)_
+- Potion of Poison Resistance _(uncommon)_
+- Potion of Psychic Resistance _(uncommon)_
+- Potion of Radiant Resistance _(uncommon)_
+- Potion of Speed _(very rare)_
+- Potion of Stone Giant Strength _(rare)_
+- Potion of Storm Giant Strength _(legendary)_
+- Potion of Superior Healing _(rare)_
+- Potion of Supreme Healing _(very rare)_
+- Potion of Thunder Resistance _(uncommon)_
+- Potion of Vitality _(very rare)_
+- Potion of Water Breathing _(uncommon)_
+- Purple Worm Poison _(none)_
+- Quaal's Feather Token, Anchor _(rare)_
+- Quaal's Feather Token, Bird _(rare)_
+- Quaal's Feather Token, Fan _(rare)_
+- Quaal's Feather Token, Swan Boat _(rare)_
+- Quaal's Feather Token, Tree _(rare)_
+- Quaal's Feather Token, Whip _(rare)_
+- Quartz _(none)_
+- Quiver of Ehlonna _(uncommon)_
+- Red Dragon Scale Mail _(very rare)_
+- Renaissance Bullet _(none)_
+- Renaissance Bullets (10) _(none)_
+- Revolver _(none)_
+- Rhodochrosite _(none)_
+- Ring of Acid Resistance _(rare)_
+- Ring of Air Elemental Command _(legendary)_
+- Ring of Animal Influence _(rare)_
+- Ring of Cold Resistance _(rare)_
+- Ring of Djinni Summoning _(legendary)_
+- Ring of Earth Elemental Command _(legendary)_
+- Ring of Evasion _(rare)_
+- Ring of Feather Falling _(rare)_
+- Ring of Fire Elemental Command _(legendary)_
+- Ring of Fire Resistance _(rare)_
+- Ring of Force Resistance _(rare)_
+- Ring of Free Action _(rare)_
+- Ring of Invisibility _(legendary)_
+- Ring of Jumping _(uncommon)_
+- Ring of Lightning Resistance _(rare)_
+- Ring of Mind Shielding _(uncommon)_
+- Ring of Necrotic Resistance _(rare)_
+- Ring of Poison Resistance _(rare)_
+- Ring of Protection _(rare)_
+- Ring of Psychic Resistance _(rare)_
+- Ring of Radiant Resistance _(rare)_
+- Ring of Regeneration _(very rare)_
+- Ring of Shooting Stars _(very rare)_
+- Ring of Spell Storing _(rare)_
+- Ring of Spell Turning _(legendary)_
+- Ring of Swimming _(uncommon)_
+- Ring of Telekinesis _(very rare)_
+- Ring of Three Wishes _(legendary)_
+- Ring of Thunder Resistance _(rare)_
+- Ring of Warmth _(uncommon)_
+- Ring of Water Elemental Command _(legendary)_
+- Ring of Water Walking _(uncommon)_
+- Ring of X-ray Vision _(rare)_
+- Ring of the Ram _(rare)_
+- Robe of Eyes _(rare)_
+- Robe of Scintillating Colors _(very rare)_
+- Robe of Stars _(very rare)_
+- Robe of Useful Items _(uncommon)_
+- Robe of the Archmagi _(legendary)_
+- Rod of Absorption _(very rare)_
+- Rod of Alertness _(very rare)_
+- Rod of Lordly Might _(legendary)_
+- Rod of Resurrection _(legendary)_
+- Rod of Rulership _(rare)_
+- Rod of Security _(very rare)_
+- Rope of Climbing _(uncommon)_
+- Rope of Entanglement _(rare)_
+- Rowboat _(none)_
+- Ruby _(none)_
+- Saddle of the Cavalier _(uncommon)_
+- Sailing Ship _(none)_
+- Sardonyx _(none)_
+- Scarab of Protection _(legendary)_
+- Scimitar of Speed _(very rare)_
+- Scroll of Protection from Aberrations _(rare)_
+- Scroll of Protection from Beasts _(rare)_
+- Scroll of Protection from Celestials _(rare)_
+- Scroll of Protection from Elementals _(rare)_
+- Scroll of Protection from Fey _(rare)_
+- Scroll of Protection from Fiends _(rare)_
+- Scroll of Protection from Plants _(rare)_
+- Scroll of Protection from Undead _(rare)_
+- Sending Stones _(uncommon)_
+- Sentinel Shield _(uncommon)_
+- Serpent Venom _(none)_
+- Shield of Missile Attraction _(rare)_
+- Shotgun _(none)_
+- Silk robe with gold embroidery _(none)_
+- Silver Dragon Scale Mail _(very rare)_
+- Silver and gold brooch _(none)_
+- Silver chalice set with moonstones _(none)_
+- Silver ewer _(none)_
+- Silver necklace with a gemstone pendant _(none)_
+- Silver-plated steel longsword with jet set in hilt _(none)_
+- Slippers of Spider Climbing _(uncommon)_
+- Small gold bracelet _(none)_
+- Small gold idol _(none)_
+- Small gold statuette set with rubies _(none)_
+- Small mirror set in a painted wooden frame _(none)_
+- Smoke Grenade _(none)_
+- Sovereign Glue _(legendary)_
+- Spell Scroll (1st Level) _(common)_
+- Spell Scroll (2nd Level) _(uncommon)_
+- Spell Scroll (3rd Level) _(uncommon)_
+- Spell Scroll (4th Level) _(rare)_
+- Spell Scroll (5th Level) _(rare)_
+- Spell Scroll (6th Level) _(very rare)_
+- Spell Scroll (7th Level) _(very rare)_
+- Spell Scroll (8th Level) _(very rare)_
+- Spell Scroll (9th Level) _(legendary)_
+- Spell Scroll (Cantrip) _(common)_
+- Spellguard Shield _(very rare)_
+- Sphere of Annihilation _(legendary)_
+- Spinel _(none)_
+- Staff of Charming _(rare)_
+- Staff of Fire _(very rare)_
+- Staff of Frost _(very rare)_
+- Staff of Healing _(rare)_
+- Staff of Power _(very rare)_
+- Staff of Striking _(very rare)_
+- Staff of Swarming Insects _(rare)_
+- Staff of Thunder and Lightning _(very rare)_
+- Staff of Withering _(rare)_
+- Staff of the Adder _(uncommon)_
+- Staff of the Magi _(legendary)_
+- Staff of the Python _(uncommon)_
+- Staff of the Woodlands _(rare)_
+- Star Ruby _(none)_
+- Star Sapphire _(none)_
+- Star rose quartz _(none)_
+- Stone of Controlling Earth Elementals _(rare)_
+- Stone of Good Luck _(uncommon)_
+- Sun Blade _(rare)_
+- Sword of Answering (Answerer) _(legendary)_
+- Sword of Answering (Back Talker) _(legendary)_
+- Sword of Answering (Concluder) _(legendary)_
+- Sword of Answering (Last Quip) _(legendary)_
+- Sword of Answering (Rebutter) _(legendary)_
+- Sword of Answering (Replier) _(legendary)_
+- Sword of Answering (Retorter) _(legendary)_
+- Sword of Answering (Scather) _(legendary)_
+- Sword of Answering (Squelcher) _(legendary)_
+- Sword of Kas _(artifact)_
+- Talisman of Pure Good _(legendary)_
+- Talisman of Ultimate Evil _(legendary)_
+- Talisman of the Sphere _(legendary)_
+- Tentacle Rod _(rare)_
+- Tiger Eye _(none)_
+- Tome of Clear Thought _(very rare)_
+- Tome of Leadership and Influence _(very rare)_
+- Tome of Understanding _(very rare)_
+- Tome of the Stilled Tongue _(legendary)_
+- Topaz _(none)_
+- Torpor _(none)_
+- Tourmaline _(none)_
+- Trident of Fish Command _(uncommon)_
+- Truth Serum _(none)_
+- Turquoise _(none)_
+- Universal Solvent _(legendary)_
+- Wand of Binding _(rare)_
+- Wand of Enemy Detection _(rare)_
+- Wand of Fear _(rare)_
+- Wand of Fireballs _(rare)_
+- Wand of Lightning Bolts _(rare)_
+- Wand of Magic Detection _(uncommon)_
+- Wand of Magic Missiles _(uncommon)_
+- Wand of Orcus _(artifact)_
+- Wand of Paralysis _(rare)_
+- Wand of Polymorph _(very rare)_
+- Wand of Secrets _(uncommon)_
+- Wand of Web _(uncommon)_
+- Wand of Wonder _(rare)_
+- Warship _(none)_
+- Wave _(legendary)_
+- Well of Many Worlds _(legendary)_
+- Whelm _(legendary)_
+- White Dragon Scale Mail _(very rare)_
+- Wind Fan _(uncommon)_
+- Winged Boots _(uncommon)_
+- Wings of Flying _(rare)_
+- Wyvern Poison _(none)_
+- Yellow Sapphire _(none)_
+- Zircon _(none)_
+
+### Dungeon Master's Guide (2024) (XDMG) — 593
+
+- +1 Rod of the Pact Keeper _(uncommon)_
+- +1 Wand of the War Mage _(uncommon)_
+- +1 Wraps of Unarmed Power _(uncommon)_
+- +2 Rod of the Pact Keeper _(rare)_
+- +2 Wand of the War Mage _(rare)_
+- +2 Wraps of Unarmed Power _(rare)_
+- +3 Rod of the Pact Keeper _(very rare)_
+- +3 Wand of the War Mage _(very rare)_
+- +3 Wraps of Unarmed Power _(very rare)_
+- Alchemy Jug _(uncommon)_
+- Alexandrite _(none)_
+- Amber _(none)_
+- Amethyst _(none)_
+- Amulet of Health _(rare)_
+- Amulet of Proof against Detection and Location _(uncommon)_
+- Amulet of the Planes _(very rare)_
+- Animated Shield _(very rare)_
+- Antimatter Rifle _(none)_
+- Apparatus of Kwalish _(legendary)_
+- Aquamarine _(none)_
+- Armor of Invulnerability _(legendary)_
+- Arrow-Catching Shield _(rare)_
+- Assassin's Blood _(none)_
+- Automatic Rifle _(none)_
+- Axe of the Dwarvish Lords _(artifact)_
+- Azurite _(none)_
+- Baba Yaga's Dancing Broom _(uncommon)_
+- Bag of Beans _(rare)_
+- Bag of Devouring _(very rare)_
+- Bag of Holding _(uncommon)_
+- Bag of Tricks, Gray _(uncommon)_
+- Bag of Tricks, Rust _(uncommon)_
+- Bag of Tricks, Tan _(uncommon)_
+- Banded Agate _(none)_
+- Bead of Force _(rare)_
+- Bead of Nourishment _(common)_
+- Bead of Refreshment _(common)_
+- Bejeweled gold bracelet _(none)_
+- Bejeweled ivory drinking horn with gold filigree _(none)_
+- Belt of Cloud Giant Strength _(legendary)_
+- Belt of Dwarvenkind _(rare)_
+- Belt of Fire Giant Strength _(very rare)_
+- Belt of Frost Giant Strength _(very rare)_
+- Belt of Hill Giant Strength _(rare)_
+- Belt of Stone Giant Strength _(very rare)_
+- Belt of Storm Giant Strength _(legendary)_
+- Black Dragon Scale Mail _(very rare)_
+- Black Opal _(none)_
+- Black Pearl _(none)_
+- Black Sapphire _(none)_
+- Black velvet mask stitched with silver thread _(none)_
+- Blackrazor _(artifact)_
+- Bloodstone _(none)_
+- Blue Dragon Scale Mail _(very rare)_
+- Blue Quartz _(none)_
+- Blue Sapphire _(none)_
+- Blue Spinel _(none)_
+- Bomb _(none)_
+- Book of Exalted Deeds _(artifact)_
+- Book of Vile Darkness _(artifact)_
+- Boots of Elvenkind _(uncommon)_
+- Boots of False Tracks _(common)_
+- Boots of Levitation _(rare)_
+- Boots of Speed _(rare)_
+- Boots of Striding and Springing _(uncommon)_
+- Boots of the Winterlands _(uncommon)_
+- Bottle stopper cork embossed with gold leaf and set with amethysts _(none)_
+- Bowl of Commanding Water Elementals _(rare)_
+- Box of turquoise animal figurines _(none)_
+- Bracers of Archery _(uncommon)_
+- Bracers of Defense _(rare)_
+- Brass Dragon Scale Mail _(very rare)_
+- Brass mug with jade inlay _(none)_
+- Brazier of Commanding Fire Elementals _(rare)_
+- Bronze Dragon Scale Mail _(very rare)_
+- Bronze crown _(none)_
+- Brooch of Shielding _(uncommon)_
+- Broom of Flying _(uncommon)_
+- Bundle of sheet music representing the lost dirges of a famous composer _(none)_
+- Burnt Othur Fumes _(none)_
+- Candle of Invocation _(very rare)_
+- Candle of the Deep _(common)_
+- Canvas (1 sq. yd.) _(none)_
+- Cap of Water Breathing _(uncommon)_
+- Cape of the Mountebank _(rare)_
+- Carnelian _(none)_
+- Carpet of Flying, 3 ft. × 5 ft. _(very rare)_
+- Carpet of Flying, 4 ft. × 6 ft. _(very rare)_
+- Carpet of Flying, 5 ft. × 7 ft. _(very rare)_
+- Carpet of Flying, 6 ft. × 9 ft. _(very rare)_
+- Carrion Crawler Mucus _(none)_
+- Carved bone statuette _(none)_
+- Carved ivory statuette _(none)_
+- Carved wooden harp with ivory inlay and zircon gems _(none)_
+- Cauldron of Rebirth _(very rare)_
+- Censer of Controlling Air Elementals _(rare)_
+- Ceremonial gold armor with black pearls _(none)_
+- Chalcedony _(none)_
+- Charlatan's Die _(common)_
+- Chicken _(none)_
+- Chime of Opening _(rare)_
+- Chrysoberyl _(none)_
+- Chrysoprase _(none)_
+- Cinnamon _(none)_
+- Circlet of Blasting _(uncommon)_
+- Citrine _(none)_
+- Cloak of Arachnida _(very rare)_
+- Cloak of Billowing _(common)_
+- Cloak of Displacement _(rare)_
+- Cloak of Elvenkind _(uncommon)_
+- Cloak of Invisibility _(legendary)_
+- Cloak of Many Fashions _(common)_
+- Cloak of Protection _(uncommon)_
+- Cloak of the Bat _(rare)_
+- Cloak of the Manta Ray _(uncommon)_
+- Clockwork Amulet _(common)_
+- Cloth-of-gold vestments _(none)_
+- Clothes of Mending _(common)_
+- Cloves _(none)_
+- Copper _(none)_
+- Copper Dragon Scale Mail _(very rare)_
+- Copper chalice with silver filigree _(none)_
+- Coral _(none)_
+- Cotton Cloth (1 sq. yd.) _(none)_
+- Cow _(none)_
+- Crystal Ball _(very rare)_
+- Crystal Ball of Mind Reading _(legendary)_
+- Crystal Ball of Telepathy _(legendary)_
+- Crystal Ball of True Seeing _(legendary)_
+- Cube of Force _(rare)_
+- Cube of Summoning _(rare)_
+- Cubic Gate _(legendary)_
+- Daern's Instant Fortress _(rare)_
+- Dagger of Venom _(rare)_
+- Dark Shard Amulet _(common)_
+- Decanter of Endless Water _(uncommon)_
+- Deck of Illusions _(uncommon)_
+- Deck of Many Things _(legendary)_
+- Demonomicon of Iggwilv _(artifact)_
+- Detailed, life-sized dragonborn skull cast in electrum _(none)_
+- Diamond _(none)_
+- Dimensional Shackles _(rare)_
+- Dread Helm _(common)_
+- Driftglobe _(uncommon)_
+- Dust of Disappearance _(uncommon)_
+- Dust of Dryness _(uncommon)_
+- Dust of Sneezing and Choking _(uncommon)_
+- Dwarven Thrower _(very rare)_
+- Dynamite Stick _(none)_
+- Ear Horn of Hearing _(common)_
+- Efreeti Bottle _(very rare)_
+- Elemental Gem, Blue Sapphire _(uncommon)_
+- Elemental Gem, Emerald _(uncommon)_
+- Elemental Gem, Red Corundum _(uncommon)_
+- Elemental Gem, Yellow Diamond _(uncommon)_
+- Elixir of Health _(rare)_
+- Embroidered glove set with jewel chips _(none)_
+- Embroidered silk and velvet mantle set with numerous moonstones _(none)_
+- Embroidered silk handkerchief _(none)_
+- Emerald _(none)_
+- Enduring Spellbook _(common)_
+- Energy Cell _(none)_
+- Enspelled Staff (Cantrip) _(uncommon)_
+- Enspelled Staff (Level 1) _(uncommon)_
+- Enspelled Staff (Level 2) _(rare)_
+- Enspelled Staff (Level 3) _(rare)_
+- Enspelled Staff (Level 4) _(very rare)_
+- Enspelled Staff (Level 5) _(very rare)_
+- Enspelled Staff (Level 6) _(legendary)_
+- Enspelled Staff (Level 7) _(legendary)_
+- Enspelled Staff (Level 8) _(legendary)_
+- Ersatz Eye _(common)_
+- Essence of Ether _(none)_
+- Eversmoking Bottle _(uncommon)_
+- Eye Agate _(none)_
+- Eye of Vecna _(artifact)_
+- Eye patch decorated with tiny blue sapphires and moonstones _(none)_
+- Eyes of Charming _(uncommon)_
+- Eyes of Minute Seeing _(uncommon)_
+- Eyes of the Eagle _(uncommon)_
+- Figurine of Wondrous Power, Bronze Griffon _(rare)_
+- Figurine of Wondrous Power, Ebony Fly _(rare)_
+- Figurine of Wondrous Power, Golden Lions _(rare)_
+- Figurine of Wondrous Power, Ivory Goats _(rare)_
+- Figurine of Wondrous Power, Marble Elephant _(rare)_
+- Figurine of Wondrous Power, Obsidian Steed _(very rare)_
+- Figurine of Wondrous Power, Onyx Dog _(rare)_
+- Figurine of Wondrous Power, Serpentine Owl _(rare)_
+- Figurine of Wondrous Power, Silver Raven _(uncommon)_
+- Fine gold chain set with a fire opal _(none)_
+- Fire Opal _(none)_
+- Flour _(none)_
+- Folding Boat _(rare)_
+- Fragmentation Grenade _(none)_
+- Garnet _(none)_
+- Gauntlets of Ogre Power _(uncommon)_
+- Gem of Brightness _(uncommon)_
+- Gem of Seeing _(rare)_
+- Gilded royal coach or funeral barge _(none)_
+- Ginger _(none)_
+- Glamoured Studded Leather _(rare)_
+- Gloves of Missile Snaring _(uncommon)_
+- Gloves of Swimming and Climbing _(uncommon)_
+- Gloves of Thievery _(uncommon)_
+- Goat _(none)_
+- Goggles of Night _(uncommon)_
+- Gold _(none)_
+- Gold Bar (5-pound) _(none)_
+- Gold Dragon Scale Mail _(very rare)_
+- Gold birdcage with electrum filigree _(none)_
+- Gold bracelet _(none)_
+- Gold circlet set with four aquamarines _(none)_
+- Gold comb shaped like a dragon with red garnets as eyes _(none)_
+- Gold cup set with emeralds _(none)_
+- Gold idol _(none)_
+- Gold jewelry box with platinum filigree _(none)_
+- Gold locket with a painted portrait inside _(none)_
+- Gold music box _(none)_
+- Gold ring set with bloodstones _(none)_
+- Gold statuette set with rubies _(none)_
+- Green Dragon Scale Mail _(very rare)_
+- Grenade Launcher _(none)_
+- Gunpowder (keg) _(none)_
+- Gunpowder (powder horn) _(none)_
+- Hag Eye _(uncommon)_
+- Hand of Vecna _(artifact)_
+- Handheld mirror set in a painted wooden frame _(none)_
+- Hat of Disguise _(uncommon)_
+- Hat of Many Spells _(very rare)_
+- Hat of Vermin _(common)_
+- Hat of Wizardry _(common)_
+- Headband of Intellect _(uncommon)_
+- Helm of Brilliance _(very rare)_
+- Helm of Comprehending Languages _(uncommon)_
+- Helm of Telepathy _(uncommon)_
+- Helm of Teleportation _(rare)_
+- Hematite _(none)_
+- Heward's Handy Haversack _(rare)_
+- Heward's Handy Spice Pouch _(common)_
+- Horn of Blasting _(rare)_
+- Horn of Silent Alarm _(common)_
+- Horn of Valhalla, Brass _(rare)_
+- Horn of Valhalla, Bronze _(very rare)_
+- Horn of Valhalla, Iron _(legendary)_
+- Horn of Valhalla, Silver _(rare)_
+- Horseshoes of Speed _(rare)_
+- Horseshoes of a Zephyr _(very rare)_
+- Hunting Rifle _(none)_
+- Immovable Rod _(uncommon)_
+- Instrument of Illusions _(common)_
+- Instrument of Scribing _(common)_
+- Instrument of the Bards, Anstruth Harp _(very rare)_
+- Instrument of the Bards, Canaith Mandolin _(rare)_
+- Instrument of the Bards, Cli Lyre _(rare)_
+- Instrument of the Bards, Doss Lute _(uncommon)_
+- Instrument of the Bards, Fochlucan Bandore _(uncommon)_
+- Instrument of the Bards, Mac-Fuirmidh Cittern _(uncommon)_
+- Instrument of the Bards, Ollamh Harp _(legendary)_
+- Ioun Stone, Absorption _(very rare)_
+- Ioun Stone, Agility _(very rare)_
+- Ioun Stone, Awareness _(rare)_
+- Ioun Stone, Fortitude _(very rare)_
+- Ioun Stone, Greater Absorption _(legendary)_
+- Ioun Stone, Insight _(very rare)_
+- Ioun Stone, Intellect _(very rare)_
+- Ioun Stone, Leadership _(very rare)_
+- Ioun Stone, Mastery _(legendary)_
+- Ioun Stone, Protection _(rare)_
+- Ioun Stone, Regeneration _(legendary)_
+- Ioun Stone, Reserve _(rare)_
+- Ioun Stone, Strength _(very rare)_
+- Ioun Stone, Sustenance _(rare)_
+- Iron _(none)_
+- Iron Bands of Bilarro _(rare)_
+- Iron Flask _(legendary)_
+- Jacinth _(none)_
+- Jade _(none)_
+- Jade game board with gold playing pieces _(none)_
+- Jasper _(none)_
+- Javelin of Lightning _(uncommon)_
+- Jet _(none)_
+- Jeweled anklet _(none)_
+- Jeweled gold crown _(none)_
+- Jeweled platinum ring _(none)_
+- Keoghtom's Ointment _(uncommon)_
+- Lantern of Revealing _(uncommon)_
+- Lapis Lazuli _(none)_
+- Laser Pistol _(none)_
+- Laser Rifle _(none)_
+- Linen (1 sq. yd.) _(none)_
+- Lock of Trickery _(common)_
+- Lolth's Sting _(none)_
+- Lute of Thunderous Thumping _(very rare)_
+- Mace of Disruption _(rare)_
+- Mace of Smiting _(rare)_
+- Mace of Terror _(rare)_
+- Malachite _(none)_
+- Malice _(none)_
+- Mantle of Spell Resistance _(rare)_
+- Manual of Bodily Health _(very rare)_
+- Manual of Clay Golems _(very rare)_
+- Manual of Flesh Golems _(very rare)_
+- Manual of Gainful Exercise _(very rare)_
+- Manual of Iron Golems _(very rare)_
+- Manual of Quickness of Action _(very rare)_
+- Manual of Stone Golems _(very rare)_
+- Medallion of Thoughts _(uncommon)_
+- Midnight Tears _(none)_
+- Mirror of Life Trapping _(very rare)_
+- Moonstone _(none)_
+- Moss Agate _(none)_
+- Mystery Key _(common)_
+- Nature's Mantle _(uncommon)_
+- Necklace of Adaptation _(uncommon)_
+- Necklace of Fireballs _(rare)_
+- Necklace of Prayer Beads _(rare)_
+- Necklace string of small pink pearls _(none)_
+- Nolzur's Marvelous Pigments _(very rare)_
+- Obsidian _(none)_
+- Obsidian statuette with gold fittings and inlay _(none)_
+- Oil of Etherealness _(rare)_
+- Oil of Sharpness _(very rare)_
+- Oil of Slipperiness _(uncommon)_
+- Oil of Taggit _(none)_
+- Old masterpiece painting _(none)_
+- Onyx _(none)_
+- Opal _(none)_
+- Orb of Direction _(common)_
+- Orb of Dragonkind _(artifact)_
+- Orb of Time _(common)_
+- Ox _(none)_
+- Painted gold war mask _(none)_
+- Pair of engraved bone dice _(none)_
+- Pale Tincture _(none)_
+- Pearl _(none)_
+- Pearl of Power _(uncommon)_
+- Pepper _(none)_
+- Perfume of Bewitching _(common)_
+- Periapt of Health _(uncommon)_
+- Periapt of Proof against Poison _(rare)_
+- Periapt of Wound Closure _(uncommon)_
+- Peridot _(none)_
+- Philter of Love _(uncommon)_
+- Pig _(none)_
+- Pipe of Smoke Monsters _(common)_
+- Pipes of Haunting _(uncommon)_
+- Pipes of the Sewers _(uncommon)_
+- Platinum _(none)_
+- Platinum bracelet set with an emerald _(none)_
+- Pole of Angling _(common)_
+- Pole of Collapsing _(common)_
+- Portable Hole _(rare)_
+- Pot of Awakening _(common)_
+- Potion of Acid Resistance _(uncommon)_
+- Potion of Animal Friendship _(uncommon)_
+- Potion of Clairvoyance _(rare)_
+- Potion of Climbing _(common)_
+- Potion of Cloud Giant Strength _(very rare)_
+- Potion of Cold Resistance _(uncommon)_
+- Potion of Comprehension _(common)_
+- Potion of Diminution _(rare)_
+- Potion of Fire Breath _(uncommon)_
+- Potion of Fire Giant Strength _(rare)_
+- Potion of Fire Resistance _(uncommon)_
+- Potion of Flying _(very rare)_
+- Potion of Force Resistance _(uncommon)_
+- Potion of Frost Giant Strength _(rare)_
+- Potion of Gaseous Form _(rare)_
+- Potion of Greater Healing _(uncommon)_
+- Potion of Greater Invisibility _(very rare)_
+- Potion of Growth _(uncommon)_
+- Potion of Healing _(common)_
+- Potion of Heroism _(rare)_
+- Potion of Hill Giant Strength _(uncommon)_
+- Potion of Invisibility _(rare)_
+- Potion of Invulnerability _(rare)_
+- Potion of Lightning Resistance _(uncommon)_
+- Potion of Longevity _(very rare)_
+- Potion of Mind Reading _(rare)_
+- Potion of Necrotic Resistance _(uncommon)_
+- Potion of Poison _(uncommon)_
+- Potion of Poison Resistance _(uncommon)_
+- Potion of Psychic Resistance _(uncommon)_
+- Potion of Pugilism _(uncommon)_
+- Potion of Radiant Resistance _(uncommon)_
+- Potion of Speed _(very rare)_
+- Potion of Stone Giant Strength _(rare)_
+- Potion of Storm Giant Strength _(legendary)_
+- Potion of Superior Healing _(rare)_
+- Potion of Supreme Healing _(very rare)_
+- Potion of Thunder Resistance _(uncommon)_
+- Potion of Vitality _(very rare)_
+- Potion of Water Breathing _(uncommon)_
+- Prosthetic Limb _(common)_
+- Purple Worm Poison _(none)_
+- Quaal's Feather Token, Anchor _(uncommon)_
+- Quaal's Feather Token, Bird _(rare)_
+- Quaal's Feather Token, Fan _(uncommon)_
+- Quaal's Feather Token, Swan Boat _(rare)_
+- Quaal's Feather Token, Tree _(uncommon)_
+- Quaal's Feather Token, Whip _(rare)_
+- Quarterstaff of the Acrobat _(very rare)_
+- Quartz _(none)_
+- Quiver of Ehlonna _(uncommon)_
+- Red Dragon Scale Mail _(very rare)_
+- Revolver _(none)_
+- Rhodochrosite _(none)_
+- Ring of Acid Resistance _(rare)_
+- Ring of Animal Influence _(rare)_
+- Ring of Cold Resistance _(rare)_
+- Ring of Djinni Summoning _(legendary)_
+- Ring of Elemental Command (Air) _(legendary)_
+- Ring of Elemental Command (Earth) _(legendary)_
+- Ring of Elemental Command (Fire) _(legendary)_
+- Ring of Elemental Command (Water) _(legendary)_
+- Ring of Evasion _(rare)_
+- Ring of Feather Falling _(rare)_
+- Ring of Fire Resistance _(rare)_
+- Ring of Force Resistance _(rare)_
+- Ring of Free Action _(rare)_
+- Ring of Invisibility _(legendary)_
+- Ring of Jumping _(uncommon)_
+- Ring of Lightning Resistance _(rare)_
+- Ring of Mind Shielding _(uncommon)_
+- Ring of Necrotic Resistance _(rare)_
+- Ring of Poison Resistance _(rare)_
+- Ring of Protection _(rare)_
+- Ring of Psychic Resistance _(rare)_
+- Ring of Radiant Resistance _(rare)_
+- Ring of Regeneration _(very rare)_
+- Ring of Shooting Stars _(very rare)_
+- Ring of Spell Storing _(rare)_
+- Ring of Spell Turning _(legendary)_
+- Ring of Swimming _(uncommon)_
+- Ring of Telekinesis _(very rare)_
+- Ring of Three Wishes _(legendary)_
+- Ring of Thunder Resistance _(rare)_
+- Ring of Warmth _(uncommon)_
+- Ring of Water Walking _(uncommon)_
+- Ring of X-ray Vision _(rare)_
+- Ring of the Ram _(rare)_
+- Rival Coin _(common)_
+- Robe of Eyes _(rare)_
+- Robe of Scintillating Colors _(very rare)_
+- Robe of Stars _(very rare)_
+- Robe of Useful Items _(uncommon)_
+- Robe of the Archmagi _(legendary)_
+- Rod of Absorption _(very rare)_
+- Rod of Alertness _(very rare)_
+- Rod of Lordly Might _(legendary)_
+- Rod of Resurrection _(legendary)_
+- Rod of Rulership _(rare)_
+- Rod of Security _(very rare)_
+- Rope of Climbing _(uncommon)_
+- Rope of Entanglement _(rare)_
+- Rope of Mending _(common)_
+- Ruby _(none)_
+- Ruby of the War Mage _(common)_
+- Saddle of the Cavalier _(uncommon)_
+- Saffron _(none)_
+- Salt _(none)_
+- Sardonyx _(none)_
+- Scarab of Protection _(legendary)_
+- Scimitar of Speed _(very rare)_
+- Scroll of Protection (Aberrations) _(rare)_
+- Scroll of Protection (Beasts) _(rare)_
+- Scroll of Protection (Celestials) _(rare)_
+- Scroll of Protection (Constructs) _(rare)_
+- Scroll of Protection (Dragons) _(rare)_
+- Scroll of Protection (Elementals) _(rare)_
+- Scroll of Protection (Fey) _(rare)_
+- Scroll of Protection (Fiends) _(rare)_
+- Scroll of Protection (Giants) _(rare)_
+- Scroll of Protection (Humanoids) _(rare)_
+- Scroll of Protection (Monstrosities) _(rare)_
+- Scroll of Protection (Oozes) _(rare)_
+- Scroll of Protection (Plants) _(rare)_
+- Scroll of Protection (Undead) _(rare)_
+- Scroll of Titan Summoning (Animal Lord) _(legendary)_
+- Scroll of Titan Summoning (Blob of Annihilation) _(legendary)_
+- Scroll of Titan Summoning (Colossus) _(legendary)_
+- Scroll of Titan Summoning (Elemental Cataclysm) _(legendary)_
+- Scroll of Titan Summoning (Empyrean) _(legendary)_
+- Scroll of Titan Summoning (Kraken) _(legendary)_
+- Scroll of Titan Summoning (Tarrasque) _(legendary)_
+- Semiautomatic Pistol _(none)_
+- Sending Stones _(uncommon)_
+- Sentinel Shield _(uncommon)_
+- Serpent Venom _(none)_
+- Set of gold nesting dolls _(none)_
+- Sheep _(none)_
+- Shield of Expression _(common)_
+- Shield of Missile Attraction _(rare)_
+- Shield of the Cavalier _(very rare)_
+- Shotgun _(none)_
+- Silk _(none)_
+- Silk vestments with gold embroidery _(none)_
+- Silver _(none)_
+- Silver Bar (2-pound) _(none)_
+- Silver Bar (5-pound) _(none)_
+- Silver Dragon Scale Mail _(very rare)_
+- Silver and gold brooch _(none)_
+- Silver chalice set with moonstones _(none)_
+- Silver ewer _(none)_
+- Silver necklace with a gemstone pendant _(none)_
+- Slippers of Spider Climbing _(uncommon)_
+- Smoke Grenade _(none)_
+- Sovereign Glue _(legendary)_
+- Spell Scroll (Cantrip) _(common)_
+- Spell Scroll (Level 1) _(common)_
+- Spell Scroll (Level 2) _(uncommon)_
+- Spell Scroll (Level 3) _(uncommon)_
+- Spell Scroll (Level 4) _(rare)_
+- Spell Scroll (Level 5) _(rare)_
+- Spell Scroll (Level 6) _(very rare)_
+- Spell Scroll (Level 7) _(very rare)_
+- Spell Scroll (Level 8) _(very rare)_
+- Spell Scroll (Level 9) _(legendary)_
+- Spellguard Shield _(very rare)_
+- Sphere of Annihilation _(legendary)_
+- Spinel _(none)_
+- Spirit Board _(very rare)_
+- Staff of Adornment _(common)_
+- Staff of Birdcalls _(common)_
+- Staff of Charming _(rare)_
+- Staff of Fire _(very rare)_
+- Staff of Flowers _(common)_
+- Staff of Frost _(very rare)_
+- Staff of Healing _(rare)_
+- Staff of Power _(very rare)_
+- Staff of Striking _(very rare)_
+- Staff of Swarming Insects _(rare)_
+- Staff of Thunder and Lightning _(very rare)_
+- Staff of Withering _(rare)_
+- Staff of the Adder _(uncommon)_
+- Staff of the Magi _(legendary)_
+- Staff of the Python _(uncommon)_
+- Staff of the Woodlands _(rare)_
+- Star Ruby _(none)_
+- Star Sapphire _(none)_
+- Star rose quartz _(none)_
+- Stone of Controlling Earth Elementals _(rare)_
+- Stone of Good Luck _(uncommon)_
+- Sun Blade _(rare)_
+- Sword of Answering _(legendary)_
+- Sword of Kas _(artifact)_
+- Talisman of Pure Good _(legendary)_
+- Talisman of Ultimate Evil _(legendary)_
+- Talisman of the Sphere _(legendary)_
+- Talking Doll _(common)_
+- Tankard of Sobriety _(common)_
+- Tentacle Rod _(rare)_
+- Thunderous Greatclub _(very rare)_
+- Tiger Eye _(none)_
+- Tome of Clear Thought _(very rare)_
+- Tome of Leadership and Influence _(very rare)_
+- Tome of Understanding _(very rare)_
+- Tome of the Stilled Tongue _(legendary)_
+- Topaz _(none)_
+- Torpor _(none)_
+- Tourmaline _(none)_
+- Trident of Fish Command _(uncommon)_
+- Truth Serum _(none)_
+- Turquoise _(none)_
+- Universal Solvent _(legendary)_
+- Veteran's Cane _(common)_
+- Wand of Binding _(rare)_
+- Wand of Conducting _(common)_
+- Wand of Enemy Detection _(rare)_
+- Wand of Fear _(rare)_
+- Wand of Fireballs _(rare)_
+- Wand of Lightning Bolts _(rare)_
+- Wand of Magic Detection _(uncommon)_
+- Wand of Magic Missiles _(uncommon)_
+- Wand of Orcus _(artifact)_
+- Wand of Paralysis _(rare)_
+- Wand of Polymorph _(very rare)_
+- Wand of Pyrotechnics _(common)_
+- Wand of Secrets _(uncommon)_
+- Wand of Web _(uncommon)_
+- Wand of Wonder _(rare)_
+- Wave _(artifact)_
+- Well of Many Worlds _(legendary)_
+- Well-made tapestry that is 10 feet by 10 feet _(none)_
+- Wheat _(none)_
+- Whelm _(artifact)_
+- White Dragon Scale Mail _(very rare)_
+- Wind Fan _(uncommon)_
+- Winged Boots _(uncommon)_
+- Wings of Flying _(rare)_
+- Wyvern Poison _(none)_
+- Yellow Sapphire _(none)_
+- Zircon _(none)_
+
+### Eberron: Forge of the Artificer (EFA) — 6
+
+- Boots of the Winding Path _(uncommon)_
+- Helm of Awareness _(uncommon)_
+- Manifold Tool _(common)_
+- Mind Sharpener _(uncommon)_
+- Repulsion Shield _(uncommon)_
+- Spell-Refueling Ring _(uncommon)_
+
+### Eberron: Rising from the Last War (ERLW) — 31
+
+- Aerenal Trinket _(none)_
+- Arcane Propulsion Arm _(very rare)_
+- Argonnessen Trinket _(none)_
+- Belashyrra's Beholder Crown _(legendary)_
+- Cleansing Stone _(common)_
+- Common Glamerweave _(common)_
+- Docent _(rare)_
+- Double-Bladed Scimitar _(none)_
+- Dragon's Blood _(none)_
+- Dreamlily _(none)_
+- Dyrrn's Tentacle Whip _(very rare)_
+- Earworm _(uncommon)_
+- Everbright Lantern _(common)_
+- Feather Token _(common)_
+- Finder's Goggles _(uncommon)_
+- Frostfell and Everice Trinket _(none)_
+- Keycharm _(common)_
+- Khyber Trinket _(none)_
+- Kyrzin's Ooze _(very rare)_
+- Living Gloves _(uncommon)_
+- Mournland Trinket _(none)_
+- Sarlona Trinket _(none)_
+- Scribe's Pen _(common)_
+- Shiftweave _(common)_
+- Speaking Stone _(very rare)_
+- Spellshard _(common)_
+- Uncommon Glamerweave _(uncommon)_
+- Ventilating Lungs _(rare)_
+- Wand Sheath _(common)_
+- Wheel of Wind and Water _(uncommon)_
+- Xen'drik Trinket _(none)_
+
+### Explorer's Guide to Wildemount (EGW) — 85
+
+- Amulet of the Drunkard _(uncommon)_
+- Arcane Cannon _(very rare)_
+- Battering Shield _(rare)_
+- Black Sap _(none)_
+- Blade of Broken Mirrors (Awakened)
+- Blade of Broken Mirrors (Dormant) _(artifact)_
+- Blade of Broken Mirrors (Exalted)
+- Blasting Powder _(none)_
+- Blight Ichor _(none)_
+- Bloodaxe _(very rare)_
+- Breathing Bubble _(common)_
+- Brooch of Living Essence _(uncommon)_
+- Butcher's Bib _(rare)_
+- Coin of Delving _(common)_
+- Danoth's Visor (Awakened)
+- Danoth's Visor (Dormant) _(legendary)_
+- Danoth's Visor (Exalted)
+- Dispelling Stone _(very rare)_
+- Duskcrusher _(very rare)_
+- Dust of Deliciousness _(uncommon)_
+- Explosive Seed _(none)_
+- Goggles of Object Reading _(uncommon)_
+- Grimoire Infinitus (Awakened)
+- Grimoire Infinitus (Dormant) _(legendary)_
+- Grimoire Infinitus (Exalted)
+- Grovelthrash (Awakened)
+- Grovelthrash (Dormant) _(artifact)_
+- Grovelthrash (Exalted)
+- Hide of the Feral Guardian (Awakened)
+- Hide of the Feral Guardian (Dormant) _(legendary)_
+- Hide of the Feral Guardian (Exalted)
+- Hunter's Coat _(very rare)_
+- Infiltrator's Key (Awakened)
+- Infiltrator's Key (Dormant) _(legendary)_
+- Infiltrator's Key (Exalted)
+- Lash of Shadows (Awakened)
+- Lash of Shadows (Dormant) _(artifact)_
+- Lash of Shadows (Exalted)
+- Luxon Beacon _(legendary)_
+- Mace of the Black Crown (Awakened)
+- Mace of the Black Crown (Dormant) _(artifact)_
+- Mace of the Black Crown (Exalted)
+- Moorbounder _(none)_
+- Muroosa Balm _(none)_
+- Needle of Mending _(rare)_
+- Nightfall Pearl _(legendary)_
+- Olisuba Leaf _(none)_
+- Orb of the Veil _(very rare)_
+- Potion of Maximum Power _(rare)_
+- Potion of Possibility _(very rare)_
+- Pride Silk _(none)_
+- Pride Silk Outfit _(none)_
+- Reincarnation Dust _(very rare)_
+- Ring of Obscuring _(uncommon)_
+- Ring of Temporal Salvation _(rare)_
+- Rod of Retribution _(uncommon)_
+- Ruin's Wake (Awakened)
+- Ruin's Wake (Dormant) _(artifact)_
+- Ruin's Wake (Exalted)
+- Silken Spite (Awakened)
+- Silken Spite (Dormant) _(artifact)_
+- Silken Spite (Exalted)
+- Skyship _(none)_
+- Soothsalts _(none)_
+- Spell Bottle _(legendary)_
+- Staff of Dunamancy _(very rare)_
+- Staff of the Ivory Claw _(rare)_
+- Stormgirdle (Awakened)
+- Stormgirdle (Dormant) _(legendary)_
+- Stormgirdle (Exalted)
+- The Bloody End (Awakened)
+- The Bloody End (Dormant) _(artifact)_
+- The Bloody End (Exalted)
+- Theki Root _(none)_
+- Verminshroud (Awakened)
+- Verminshroud (Dormant) _(legendary)_
+- Verminshroud (Exalted)
+- Vox Seeker _(common)_
+- Will of the Talon (Awakened)
+- Will of the Talon (Dormant) _(artifact)_
+- Will of the Talon (Exalted)
+- Willowshade Oil _(none)_
+- Wreath of the Prism (Awakened)
+- Wreath of the Prism (Dormant) _(legendary)_
+- Wreath of the Prism (Exalted)
+
+### Fizban's Treasury of Dragons (FTD) — 24
+
+- +1 Dragonhide Belt _(uncommon)_
+- +2 Dragonhide Belt _(rare)_
+- +3 Dragonhide Belt _(very rare)_
+- Amethyst Lodestone _(very rare)_
+- Ascendant Dragon Vessel _(legendary)_
+- Ascendant Dragon-Touched Focus _(legendary)_
+- Ascendant Scaled Ornament _(legendary)_
+- Emerald Pen _(uncommon)_
+- Flail of Tiamat _(legendary)_
+- Gold Canary Figurine of Wondrous Power _(legendary)_
+- Platinum Scarf _(legendary)_
+- Potion of Dragon's Majesty _(legendary)_
+- Ruby Weave Gem _(legendary)_
+- Sapphire Buckler _(very rare)_
+- Slumbering Dragon Vessel _(uncommon)_
+- Slumbering Dragon-Touched Focus _(uncommon)_
+- Slumbering Scaled Ornament _(uncommon)_
+- Stirring Dragon Vessel _(rare)_
+- Stirring Dragon-Touched Focus _(rare)_
+- Stirring Scaled Ornament _(rare)_
+- Topaz Annihilator _(legendary)_
+- Wakened Dragon Vessel _(very rare)_
+- Wakened Dragon-Touched Focus _(very rare)_
+- Wakened Scaled Ornament _(very rare)_
+
+### Forgotten Realms: Adventures in Faerûn (FRAIF) — 18
+
+- Calimemnon Crystal _(artifact)_
+- Crown of Horns _(artifact)_
+- Deathdance _(none)_
+- Ffolk Sailing Ship _(none)_
+- Harper Pin _(uncommon)_
+- Mechanical Wonder (Domestic) _(uncommon)_
+- Mechanical Wonder (Flying) _(common)_
+- Mechanical Wonder (Gyrocopter) _(rare)_
+- Mechanical Wonder (Mobility) _(common)_
+- Norlander Longship _(none)_
+- Orb of Damara _(artifact)_
+- Prespra _(none)_
+- Rusted Hulk _(none)_
+- Tome of the Dragon _(legendary)_
+- Ulcrun _(none)_
+- Whaleboat _(none)_
+- Windskiff _(rare)_
+- Yellow Death _(none)_
+
+### Forgotten Realms: Heroes of Faerûn (FRHOF) — 27
+
+- Adventurer's Ring _(common)_
+- Axe Beak _(none)_
+- Bandore _(none)_
+- Bright Fungal Cloak _(none)_
+- Cittern _(none)_
+- Covered Wagon _(none)_
+- Cult of the Dragon Trinket _(none)_
+- Desert Clothing _(none)_
+- Devil Mask _(none)_
+- Emerald Enclave Trinket _(none)_
+- Flying Snake _(none)_
+- Garb of Light and Shadow _(none)_
+- Genie Robe _(none)_
+- Harper Trinket _(none)_
+- Locking Spellbook _(none)_
+- Lords' Alliance Trinket _(none)_
+- Monster Camouflage _(none)_
+- Order of the Gauntlet Trinket _(none)_
+- Prosthetic Limb
+- Purple Dragon Knight Trinket _(none)_
+- Red Wizard Trinket _(none)_
+- Sled Dog _(none)_
+- Thayan Spell Tattoo _(uncommon)_
+- Warm Fungal Clothing _(none)_
+- Winter Camouflage _(none)_
+- Yarting _(none)_
+- Zhentarim Trinket _(none)_
+
+### Guildmasters' Guide to Ravnica (GGR) — 41
+
+- Azorius Guild Signet _(uncommon)_
+- Azorius Keyrune _(rare)_
+- Boros Guild Signet _(uncommon)_
+- Boros Keyrune _(rare)_
+- Copper Alms-Coin _(none)_
+- Copper Zib _(none)_
+- Dimir Guild Signet _(uncommon)_
+- Dimir Keyrune _(very rare)_
+- Electrum 50-Zib Coin _(none)_
+- Gold 5-Zino Coin _(none)_
+- Gold Zino _(none)_
+- Golgari Guild Signet _(uncommon)_
+- Golgari Keyrune _(very rare)_
+- Gruul Guild Signet _(uncommon)_
+- Gruul Keyrune _(rare)_
+- Illusionist's Bracers _(very rare)_
+- Izzet Guild Signet _(uncommon)_
+- Izzet Keyrune _(rare)_
+- Mizzium Apparatus _(uncommon)_
+- Mizzium Mortar _(rare)_
+- Moodmark Paint _(common)_
+- Orzhov Guild Signet _(uncommon)_
+- Orzhov Keyrune _(rare)_
+- Pariah's Shield _(rare)_
+- Peregrine Mask _(very rare)_
+- Platinum 10-Zino Coin _(none)_
+- Platinum 100-Zino Coin _(none)_
+- Pyroconverger _(uncommon)_
+- Rakdos Guild Signet _(uncommon)_
+- Rakdos Keyrune _(uncommon)_
+- Rakdos Riteknife _(legendary)_
+- Selesnya Guild Signet _(uncommon)_
+- Selesnya Keyrune _(rare)_
+- Silver 25-Zib Coin _(none)_
+- Simic Guild Signet _(uncommon)_
+- Simic Keyrune _(uncommon)_
+- Skyblinder Staff _(uncommon)_
+- Spies' Murmur _(uncommon)_
+- Sunforger _(rare)_
+- Sword of the Paruns _(very rare)_
+- Voyager Staff _(very rare)_
+
+### Lorwyn: First Light (LFL) — 2
+
+- Reliquary of Dawn _(uncommon)_
+- Reliquary of Twilight _(uncommon)_
+
+### Monster Manual (2014) (MM) — 4
+
+- Hag Eye _(unknown (magic))_
+- Heartstone _(very rare)_
+- Master's Amulet _(unknown (magic))_
+- Soul Bag _(very rare)_
+
+### Monster Manual (2025) (XMM) — 1
+
+- Command Amulet _(unknown (magic))_
+
+### Mordenkainen's Tome of Foes (MTF) — 4
+
+- Elven Trinket _(none)_
+- Greater Silver Sword _(legendary)_
+- Infernal Tack _(legendary)_
+- Silver Sword _(unknown (magic))_
+
+### Mythic Odysseys of Theros (MOT) — 12
+
+- Akmon, Hammer of Purphoros _(artifact)_
+- Dekella, Bident of Thassa _(artifact)_
+- Ephixis, Bow of Nylea _(artifact)_
+- Flying Chariot _(rare)_
+- Helm of the Gods _(rare)_
+- Khrusor, Spear of Heliod _(artifact)_
+- Mastix, Whip of Erebos _(artifact)_
+- Potion of Aqueous Form _(rare)_
+- Pyxis of Pandemonium _(legendary)_
+- Siren Song Lyre _(rare)_
+- Sling Bullets of Althemone _(very rare)_
+- Two-Birds Sling _(rare)_
+
+### Netheril's Fall (NF) — 8
+
+- Arcane Battery _(uncommon)_
+- Brooch of the Elements _(rare)_
+- Fork of Eddy Summoning _(rare)_
+- Hat of Vortexes _(uncommon)_
+- Magen Handbell _(rare)_
+- Mask of Changed Appearance _(common)_
+- Mythallar Bracelet _(common)_
+- Mythallar Cloak _(rare)_
+
+### Player's Handbook (2014) (PHB) — 259
+
+- Abacus _(none)_
+- Acid (vial) _(none)_
+- Alchemist's Fire (flask) _(none)_
+- Alchemist's Supplies _(none)_
+- Ale (gallon) _(none)_
+- Ale (mug) _(none)_
+- Amulet _(none)_
+- Antitoxin (vial) _(none)_
+- Arrow _(none)_
+- Arrows (20) _(none)_
+- Backpack _(none)_
+- Bagpipes _(none)_
+- Ball Bearing _(none)_
+- Ball Bearings (bag of 1,000) _(none)_
+- Barrel _(none)_
+- Basic Poison (vial) _(none)_
+- Basket _(none)_
+- Battleaxe _(none)_
+- Bedroll _(none)_
+- Bell _(none)_
+- Bit and bridle _(none)_
+- Blanket _(none)_
+- Block and Tackle _(none)_
+- Blowgun _(none)_
+- Blowgun Needle _(none)_
+- Blowgun Needles (50) _(none)_
+- Book _(none)_
+- Breastplate _(none)_
+- Brewer's Supplies _(none)_
+- Bucket _(none)_
+- Bullseye Lantern _(none)_
+- Burglar's Pack _(none)_
+- Calligrapher's Supplies _(none)_
+- Caltrop _(none)_
+- Caltrops (bag of 20) _(none)_
+- Camel _(none)_
+- Candle _(none)_
+- Canvas (1 sq. yd.) _(none)_
+- Carpenter's Tools _(none)_
+- Carriage _(none)_
+- Cart _(none)_
+- Cartographer's Tools _(none)_
+- Chain (10 feet) _(none)_
+- Chain Mail _(none)_
+- Chain Shirt _(none)_
+- Chalk (1 piece) _(none)_
+- Chariot _(none)_
+- Chest _(none)_
+- Chicken _(none)_
+- Chunk of Meat _(none)_
+- Cinnamon _(none)_
+- Climber's Kit _(none)_
+- Cloves _(none)_
+- Club _(none)_
+- Cobbler's Tools _(none)_
+- Common Clothes _(none)_
+- Common Wine (pitcher) _(none)_
+- Component Pouch _(none)_
+- Cook's Utensils _(none)_
+- Copper _(none)_
+- Copper (cp) _(none)_
+- Costume Clothes _(none)_
+- Cotton Cloth (1 sq. yd.) _(none)_
+- Cow _(none)_
+- Crossbow Bolt _(none)_
+- Crossbow Bolt Case _(none)_
+- Crossbow Bolts (20) _(none)_
+- Crowbar _(none)_
+- Crystal _(none)_
+- Dagger _(none)_
+- Dart _(none)_
+- Dice Set _(none)_
+- Diplomat's Pack _(none)_
+- Disguise Kit _(none)_
+- Donkey _(none)_
+- Draft Horse _(none)_
+- Dragonchess Set _(none)_
+- Drum _(none)_
+- Dulcimer _(none)_
+- Dungeoneer's Pack _(none)_
+- Electrum (ep) _(none)_
+- Elephant _(none)_
+- Emblem _(none)_
+- Entertainer's Pack _(none)_
+- Exotic Saddle _(none)_
+- Explorer's Pack _(none)_
+- Feed (per day) _(none)_
+- Fine Clothes _(none)_
+- Fine Wine (bottle) _(none)_
+- Fishing Tackle _(none)_
+- Flail _(none)_
+- Flask _(none)_
+- Flour _(none)_
+- Flute _(none)_
+- Forgery Kit _(none)_
+- Ginger _(none)_
+- Glaive _(none)_
+- Glass Bottle _(none)_
+- Glassblower's Tools _(none)_
+- Goat _(none)_
+- Gold _(none)_
+- Gold (gp) _(none)_
+- Grappling Hook _(none)_
+- Greataxe _(none)_
+- Greatclub _(none)_
+- Greatsword _(none)_
+- Halberd _(none)_
+- Half Plate Armor _(none)_
+- Hammer _(none)_
+- Hand Crossbow _(none)_
+- Handaxe _(none)_
+- Healer's Kit _(none)_
+- Heavy Crossbow _(none)_
+- Hempen Rope (50 feet) _(none)_
+- Herbalism Kit _(none)_
+- Hide Armor _(none)_
+- Holy Water (flask) _(none)_
+- Hooded Lantern _(none)_
+- Horn _(none)_
+- Hourglass _(none)_
+- Hunk of Cheese _(none)_
+- Hunting Trap _(none)_
+- Ink (1-ounce bottle) _(none)_
+- Ink Pen _(none)_
+- Iron _(none)_
+- Iron Pot _(none)_
+- Iron Spike _(none)_
+- Iron Spikes (10) _(none)_
+- Javelin _(none)_
+- Jeweler's Tools _(none)_
+- Jug _(none)_
+- Ladder (10-foot) _(none)_
+- Lamp _(none)_
+- Lance _(none)_
+- Leather Armor _(none)_
+- Leatherworker's Tools _(none)_
+- Light Crossbow _(none)_
+- Light Hammer _(none)_
+- Linen (1 sq. yd.) _(none)_
+- Loaf of Bread _(none)_
+- Lock _(none)_
+- Longbow _(none)_
+- Longsword _(none)_
+- Lute _(none)_
+- Lyre _(none)_
+- Mace _(none)_
+- Magnifying Glass _(none)_
+- Manacles _(none)_
+- Map or Scroll Case _(none)_
+- Mason's Tools _(none)_
+- Mastiff _(none)_
+- Maul _(none)_
+- Merchant's Scale _(none)_
+- Mess Kit _(none)_
+- Military Saddle _(none)_
+- Miner's Pick _(none)_
+- Morningstar _(none)_
+- Mule _(none)_
+- Navigator's Tools _(none)_
+- Net _(none)_
+- Oil (flask) _(none)_
+- Orb _(none)_
+- Ox _(none)_
+- Pack Saddle _(none)_
+- Padded Armor _(none)_
+- Painter's Supplies _(none)_
+- Pan Flute _(none)_
+- Paper (one sheet) _(none)_
+- Parchment (one sheet) _(none)_
+- Pepper _(none)_
+- Perfume (vial) _(none)_
+- Pig _(none)_
+- Pike _(none)_
+- Pitcher _(none)_
+- Piton _(none)_
+- Plate Armor _(none)_
+- Platinum _(none)_
+- Platinum (pp) _(none)_
+- Playing Card Set _(none)_
+- Poisoner's Kit _(none)_
+- Pole (10-foot) _(none)_
+- Pony _(none)_
+- Portable Ram _(none)_
+- Potter's Tools _(none)_
+- Pouch _(none)_
+- Priest's Pack _(none)_
+- Quarterstaff _(none)_
+- Quiver _(none)_
+- Rapier _(none)_
+- Rations (1 day) _(none)_
+- Reliquary _(none)_
+- Riding Horse _(none)_
+- Riding Saddle _(none)_
+- Ring Mail _(none)_
+- Robes _(none)_
+- Rod _(none)_
+- Sack _(none)_
+- Saddlebags _(none)_
+- Saffron _(none)_
+- Salt _(none)_
+- Scale Mail _(none)_
+- Scholar's Pack _(none)_
+- Scimitar _(none)_
+- Sealing Wax _(none)_
+- Shawm _(none)_
+- Sheep _(none)_
+- Shield _(none)_
+- Shortbow _(none)_
+- Shortsword _(none)_
+- Shovel _(none)_
+- Sickle _(none)_
+- Signal Whistle _(none)_
+- Signet Ring _(none)_
+- Silk (1 sq. yd.) _(none)_
+- Silk Rope (50 feet) _(none)_
+- Silver _(none)_
+- Silver (sp) _(none)_
+- Sled _(none)_
+- Sledgehammer _(none)_
+- Sling _(none)_
+- Sling Bullet _(none)_
+- Sling Bullets (20) _(none)_
+- Smith's Tools _(none)_
+- Soap _(none)_
+- Spear _(none)_
+- Spellbook _(none)_
+- Splint Armor _(none)_
+- Sprig of Mistletoe _(none)_
+- Spyglass _(none)_
+- Stabling (per day) _(none)_
+- Staff _(none)_
+- Steel Mirror _(none)_
+- Studded Leather Armor _(none)_
+- Tankard _(none)_
+- Thieves' Tools _(none)_
+- Three-Dragon Ante Set _(none)_
+- Tinderbox _(none)_
+- Tinker's Tools _(none)_
+- Torch _(none)_
+- Totem _(none)_
+- Traveler's Clothes _(none)_
+- Trident _(none)_
+- Trinket _(none)_
+- Two-Person Tent _(none)_
+- Vial _(none)_
+- Viol _(none)_
+- Wagon _(none)_
+- Wand _(none)_
+- War Pick _(none)_
+- Warhammer _(none)_
+- Warhorse _(none)_
+- Waterskin _(none)_
+- Weaver's Tools _(none)_
+- Wheat _(none)_
+- Whetstone _(none)_
+- Whip _(none)_
+- Woodcarver's Tools _(none)_
+- Wooden Staff _(none)_
+- Yew Wand _(none)_
+
+### Player's Handbook (2024) (XPHB) — 217
+
+- Acid _(none)_
+- Airship _(none)_
+- Alchemist's Fire _(none)_
+- Alchemist's Supplies _(none)_
+- Ale (mug) _(none)_
+- Amulet _(none)_
+- Antitoxin _(none)_
+- Arrow _(none)_
+- Arrows (20) _(none)_
+- Backpack _(none)_
+- Bagpipes _(none)_
+- Ball Bearings _(none)_
+- Barrel _(none)_
+- Basic Poison _(none)_
+- Basket _(none)_
+- Battleaxe _(none)_
+- Bedroll _(none)_
+- Bell _(none)_
+- Blanket _(none)_
+- Block and Tackle _(none)_
+- Blowgun _(none)_
+- Bolt _(none)_
+- Bolts (20) _(none)_
+- Book _(none)_
+- Bread (loaf) _(none)_
+- Breastplate _(none)_
+- Brewer's Supplies _(none)_
+- Bucket _(none)_
+- Bullseye Lantern _(none)_
+- Burglar's Pack _(none)_
+- Calligrapher's Supplies _(none)_
+- Caltrops _(none)_
+- Camel _(none)_
+- Candle _(none)_
+- Carpenter's Tools _(none)_
+- Carriage _(none)_
+- Cart _(none)_
+- Cartographer's Tools _(none)_
+- Chain _(none)_
+- Chain Mail _(none)_
+- Chain Shirt _(none)_
+- Chariot _(none)_
+- Cheese (wedge) _(none)_
+- Chest _(none)_
+- Climber's Kit _(none)_
+- Club _(none)_
+- Cobbler's Tools _(none)_
+- Common Wine (bottle) _(none)_
+- Component Pouch _(none)_
+- Cook's Utensils _(none)_
+- Costume _(none)_
+- Crossbow Bolt Case _(none)_
+- Crowbar _(none)_
+- Crystal _(none)_
+- Dagger _(none)_
+- Dart _(none)_
+- Dice Set _(none)_
+- Diplomat's Pack _(none)_
+- Disguise Kit _(none)_
+- Draft Horse _(none)_
+- Dragonchess Set _(none)_
+- Drum _(none)_
+- Dulcimer _(none)_
+- Dungeoneer's Pack _(none)_
+- Elephant _(none)_
+- Emblem _(none)_
+- Entertainer's Pack _(none)_
+- Exotic Saddle _(none)_
+- Explorer's Pack _(none)_
+- Feed (per day) _(none)_
+- Fine Clothes _(none)_
+- Fine Wine (bottle) _(none)_
+- Firearm Bullet _(none)_
+- Firearm Bullets (10) _(none)_
+- Flail _(none)_
+- Flask _(none)_
+- Flute _(none)_
+- Forgery Kit _(none)_
+- Galley _(none)_
+- Glaive _(none)_
+- Glass Bottle _(none)_
+- Glassblower's Tools _(none)_
+- Grappling Hook _(none)_
+- Greataxe _(none)_
+- Greatclub _(none)_
+- Greatsword _(none)_
+- Halberd _(none)_
+- Half Plate Armor _(none)_
+- Hand Crossbow _(none)_
+- Handaxe _(none)_
+- Healer's Kit _(none)_
+- Heavy Crossbow _(none)_
+- Herbalism Kit _(none)_
+- Hide Armor _(none)_
+- Holy Water _(none)_
+- Hooded Lantern _(none)_
+- Horn _(none)_
+- Hunting Trap _(none)_
+- Ink _(none)_
+- Ink Pen _(none)_
+- Iron Pot _(none)_
+- Iron Spike _(none)_
+- Iron Spikes _(none)_
+- Javelin _(none)_
+- Jeweler's Tools _(none)_
+- Jug _(none)_
+- Keelboat _(none)_
+- Ladder _(none)_
+- Lamp _(none)_
+- Lance _(none)_
+- Leather Armor _(none)_
+- Leatherworker's Tools _(none)_
+- Light Crossbow _(none)_
+- Light Hammer _(none)_
+- Lock _(none)_
+- Longbow _(none)_
+- Longship _(none)_
+- Longsword _(none)_
+- Lute _(none)_
+- Lyre _(none)_
+- Mace _(none)_
+- Magnifying Glass _(none)_
+- Manacles _(none)_
+- Map _(none)_
+- Map or Scroll Case _(none)_
+- Mason's Tools _(none)_
+- Mastiff _(none)_
+- Maul _(none)_
+- Military Saddle _(none)_
+- Mirror _(none)_
+- Morningstar _(none)_
+- Mule _(none)_
+- Musket _(none)_
+- Navigator's Tools _(none)_
+- Needle _(none)_
+- Needles (50) _(none)_
+- Net _(none)_
+- Oil _(none)_
+- Orb _(none)_
+- Padded Armor _(none)_
+- Painter's Supplies _(none)_
+- Pan Flute _(none)_
+- Paper _(none)_
+- Parchment _(none)_
+- Perfume _(none)_
+- Pike _(none)_
+- Pistol _(none)_
+- Plate Armor _(none)_
+- Playing Cards _(none)_
+- Poisoner's Kit _(none)_
+- Pole _(none)_
+- Pony _(none)_
+- Portable Ram _(none)_
+- Potter's Tools _(none)_
+- Pouch _(none)_
+- Priest's Pack _(none)_
+- Psychic Blade _(none)_
+- Quarterstaff _(none)_
+- Quiver _(none)_
+- Rapier _(none)_
+- Rations _(none)_
+- Reliquary _(none)_
+- Riding Horse _(none)_
+- Riding Saddle _(none)_
+- Ring Mail _(none)_
+- Robe _(none)_
+- Rod _(none)_
+- Rope _(none)_
+- Rowboat _(none)_
+- Sack _(none)_
+- Sailing Ship _(none)_
+- Scale Mail _(none)_
+- Scholar's Pack _(none)_
+- Scimitar _(none)_
+- Shawm _(none)_
+- Shield _(none)_
+- Shortbow _(none)_
+- Shortsword _(none)_
+- Shovel _(none)_
+- Sickle _(none)_
+- Signal Whistle _(none)_
+- Sled _(none)_
+- Sling _(none)_
+- Sling Bullet _(none)_
+- Sling Bullets (20) _(none)_
+- Smith's Tools _(none)_
+- Spear _(none)_
+- Splint Armor _(none)_
+- Sprig of Mistletoe _(none)_
+- Spyglass _(none)_
+- Stabling (per day) _(none)_
+- Staff _(none)_
+- String _(none)_
+- Studded Leather Armor _(none)_
+- Tent _(none)_
+- Thieves' Tools _(none)_
+- Three-Dragon Ante Set _(none)_
+- Tinderbox _(none)_
+- Tinker's Tools _(none)_
+- Torch _(none)_
+- Traveler's Clothes _(none)_
+- Trident _(none)_
+- Trinket _(none)_
+- Vial _(none)_
+- Viol _(none)_
+- Wagon _(none)_
+- Wand _(none)_
+- War Pick _(none)_
+- Warhammer _(none)_
+- Warhorse _(none)_
+- Warship _(none)_
+- Waterskin _(none)_
+- Weaver's Tools _(none)_
+- Whip _(none)_
+- Woodcarver's Tools _(none)_
+- Wooden Staff _(none)_
+- Yew Wand _(none)_
+
+### Ravenloft: The Horrors Within (RHW) — 2
+
+- Ebonbane _(artifact)_
+- Harkon's Bite _(uncommon)_
+
+### Sigil and the Outlands (SATO) — 5
+
+- Gate Warden Trinket _(none)_
+- Mimir _(rare)_
+- Planar Philosopher Trinket _(none)_
+- Portal Compass _(uncommon)_
+- Sensory Stone _(uncommon)_
+
+### Strixhaven: A Curriculum of Chaos (SCC) — 18
+
+- Alchemist's Doom _(unknown)_
+- Bottle of Boundless Coffee _(common)_
+- Catapult Munition _(unknown)_
+- Cuddly Strixhaven Mascot _(common)_
+- Lorehold Primer _(uncommon)_
+- Lorehold Trinket _(none)_
+- Masque Charm _(common)_
+- Murgaxor's Elixir of Life _(unknown)_
+- Murgaxor's Orb _(legendary)_
+- Prismari Primer _(uncommon)_
+- Prismari Trinket _(none)_
+- Quandrix Primer _(uncommon)_
+- Quandrix Trinket _(none)_
+- Silverquill Primer _(uncommon)_
+- Silverquill Trinket _(none)_
+- Strixhaven Pennant _(common)_
+- Witherbloom Primer _(uncommon)_
+- Witherbloom Trinket _(none)_
+
+### Sword Coast Adventurer's Guide (SCAG) — 13
+
+- Birdpipes _(none)_
+- Glaur _(none)_
+- Hand Drum _(none)_
+- Longhorn _(none)_
+- Shawm _(none)_
+- Songhorn _(none)_
+- Spiked Armor _(unknown)_
+- Tantan _(none)_
+- Thelarr _(none)_
+- Tocken _(none)_
+- Wargong _(none)_
+- Yarting _(none)_
+- Zulkoon _(none)_
+
+### Tasha's Cauldron of Everything (TCE) — 84
+
+- +1 All-Purpose Tool _(uncommon)_
+- +1 Amulet of the Devout _(uncommon)_
+- +1 Arcane Grimoire _(uncommon)_
+- +1 Bloodwell Vial _(uncommon)_
+- +1 Moon Sickle _(uncommon)_
+- +1 Rhythm-Maker's Drum _(uncommon)_
+- +2 All-Purpose Tool _(rare)_
+- +2 Amulet of the Devout _(rare)_
+- +2 Arcane Grimoire _(rare)_
+- +2 Bloodwell Vial _(rare)_
+- +2 Moon Sickle _(rare)_
+- +2 Rhythm-Maker's Drum _(rare)_
+- +3 All-Purpose Tool _(very rare)_
+- +3 Amulet of the Devout _(very rare)_
+- +3 Arcane Grimoire _(very rare)_
+- +3 Bloodwell Vial _(very rare)_
+- +3 Moon Sickle _(very rare)_
+- +3 Rhythm-Maker's Drum _(very rare)_
+- Acid Absorbing Tattoo _(very rare)_
+- Alchemical Compendium _(rare)_
+- Astral Shard _(rare)_
+- Astromancy Archive _(rare)_
+- Atlas of Endless Horizons _(rare)_
+- Baba Yaga's Mortar and Pestle _(artifact)_
+- Baba Yaga's Pestle _(artifact)_
+- Barrier Tattoo (Large) _(very rare)_
+- Barrier Tattoo (Medium) _(rare)_
+- Barrier Tattoo (Small) _(uncommon)_
+- Bell Branch _(rare)_
+- Blood Fury Tattoo _(legendary)_
+- Cauldron of Rebirth _(very rare)_
+- Coiling Grasp Tattoo _(uncommon)_
+- Cold Absorbing Tattoo _(very rare)_
+- Crook of Rao _(artifact)_
+- Crystalline Chronicle _(very rare)_
+- Demonomicon of Iggwilv _(artifact)_
+- Devotee's Censer _(rare)_
+- Duplicitous Manuscript _(rare)_
+- Eldritch Claw Tattoo _(uncommon)_
+- Elemental Essence Shard _(rare)_
+- Elemental Essence Shard (Air) _(rare)_
+- Elemental Essence Shard (Earth) _(rare)_
+- Elemental Essence Shard (Fire) _(rare)_
+- Elemental Essence Shard (Water) _(rare)_
+- Far Realm Shard _(rare)_
+- Feywild Shard _(uncommon)_
+- Fire Absorbing Tattoo _(very rare)_
+- Force Absorbing Tattoo _(very rare)_
+- Fulminating Treatise _(rare)_
+- Ghost Step Tattoo _(very rare)_
+- Guardian Emblem _(uncommon)_
+- Heart Weaver's Primer _(rare)_
+- Illuminator's Tattoo _(common)_
+- Libram of Souls and Flesh _(rare)_
+- Lifewell Tattoo _(very rare)_
+- Lightning Absorbing Tattoo _(very rare)_
+- Luba's Tarokka of Souls _(artifact)_
+- Lyre of Building _(rare)_
+- Masquerade Tattoo _(common)_
+- Mighty Servant of Leuk-o _(artifact)_
+- Nature's Mantle _(uncommon)_
+- Necrotic Absorbing Tattoo _(very rare)_
+- Outer Essence Shard _(rare)_
+- Outer Essence Shard (Chaotic) _(rare)_
+- Outer Essence Shard (Evil) _(rare)_
+- Outer Essence Shard (Good) _(rare)_
+- Outer Essence Shard (Lawful) _(rare)_
+- Planecaller's Codex _(rare)_
+- Poison Absorbing Tattoo _(very rare)_
+- Prosthetic Limb _(common)_
+- Protective Verses _(rare)_
+- Psychic Absorbing Tattoo _(very rare)_
+- Radiant Absorbing Tattoo _(very rare)_
+- Reveler's Concertina _(rare)_
+- Shadowfell Brand Tattoo _(rare)_
+- Shadowfell Shard _(rare)_
+- Spellwrought Tattoo (1st Level) _(common)_
+- Spellwrought Tattoo (2nd Level) _(uncommon)_
+- Spellwrought Tattoo (3rd Level) _(uncommon)_
+- Spellwrought Tattoo (4th Level) _(rare)_
+- Spellwrought Tattoo (5th Level) _(rare)_
+- Spellwrought Tattoo (Cantrip) _(common)_
+- Teeth of Dahlver-Nar _(artifact)_
+- Thunder Absorbing Tattoo _(very rare)_
+
+### The Book of Many Things (BMT) — 73
+
+- +1 Fate Dealer's Deck _(rare)_
+- +1 Wraps of Unarmed Prowess _(uncommon)_
+- +2 Fate Dealer's Deck _(very rare)_
+- +2 Wraps of Unarmed Prowess _(rare)_
+- +3 Fate Dealer's Deck _(legendary)_
+- +3 Wraps of Unarmed Prowess _(very rare)_
+- Balance Card _(legendary)_
+- Baleful Talon _(very rare)_
+- Blasted Goggles _(uncommon)_
+- Bloodrage Greataxe _(uncommon)_
+- Boomerang Shield _(uncommon)_
+- Breastplate of Balance _(rare)_
+- Card Sharp's Deck _(uncommon)_
+- Comet Card _(legendary)_
+- Crown of Whirling Comets _(very rare)_
+- Deck of Dimensions _(very rare)_
+- Deck of Many More Things _(legendary)_
+- Deck of Many Things _(legendary)_
+- Deck of Miscellany _(uncommon)_
+- Deck of Oracles _(rare)_
+- Deck of Wild Cards _(very rare)_
+- Deck of Wonder _(uncommon)_
+- Donjon Card _(legendary)_
+- Donjon's Sundering Sphere _(rare)_
+- Euryale Card _(legendary)_
+- Euryale's Aegis _(legendary)_
+- Fabulist Gem _(uncommon)_
+- Fate Cutter Shears _(very rare)_
+- Fates Card _(legendary)_
+- Flames Card _(legendary)_
+- Fool Card _(legendary)_
+- Gem Card _(legendary)_
+- Grasping Whip _(rare)_
+- Hammer of Runic Focus _(very rare)_
+- House of Cards _(uncommon)_
+- Jester Card _(legendary)_
+- Jester's Mask _(legendary)_
+- Key Card _(legendary)_
+- Knight Card _(legendary)_
+- Moon Card _(legendary)_
+- Plate of Knight's Fellowship _(uncommon)_
+- Puzzle Card _(legendary)_
+- Ring of Puzzler's Wit _(uncommon)_
+- Rod of Hellish Flames _(very rare)_
+- Rogue Card _(legendary)_
+- Rogue's Mantle _(rare)_
+- Ruin Card _(legendary)_
+- Ruinous Flail _(rare)_
+- Sage Card _(legendary)_
+- Sage's Signet (Bear) _(very rare)_
+- Sage's Signet (Hart) _(very rare)_
+- Sage's Signet (Lion) _(very rare)_
+- Sage's Signet (Serpent) _(rare)_
+- Sage's Signet (Songbird) _(rare)_
+- Sage's Signet (Wolf) _(very rare)_
+- Secondhand Steal Trinket _(none)_
+- Shield of the Tortoise _(uncommon)_
+- Shrieking Greaves _(rare)_
+- Skull Card _(legendary)_
+- Skull Helm _(very rare)_
+- Sling of Giant Felling _(uncommon)_
+- Spindle of Fate _(legendary)_
+- Star Card _(legendary)_
+- Stonemaker War Pick _(very rare)_
+- Sun Card _(legendary)_
+- Sun Staff _(rare)_
+- Talons Card _(legendary)_
+- Telescopic Transporter _(legendary)_
+- Throne Card _(legendary)_
+- Tidecaller Trident _(very rare)_
+- Void Card _(legendary)_
+- Voidwalker Armor _(rare)_
+- Warrior's Passkey _(rare)_
+
+### Van Richten's Guide to Ravenloft (VRGR) — 5
+
+- Harkon's Bite _(uncommon)_
+- Horror Trinket _(none)_
+- Ivana's Whisper _(unknown)_
+- Monster Hunter's Pack _(none)_
+- Nepenthe _(legendary)_
+
+### Volo's Guide to Monsters (VGM) — 7
+
+- Flensing Claws (Huge) _(unknown)_
+- Flensing Claws (Large) _(unknown)_
+- Flensing Claws (Medium) _(unknown)_
+- Flensing Claws (Small) _(unknown)_
+- Mind Lash _(rare)_
+- Shield of Far Sight _(rare)_
+- Survival Mantle _(unknown)_
+
+### Xanathar's Guide to Everything (XGE) — 43
+
+- Bead of Nourishment _(common)_
+- Bead of Refreshment _(common)_
+- Boots of False Tracks _(common)_
+- Candle of the Deep _(common)_
+- Charlatan's Die _(common)_
+- Cloak of Billowing _(common)_
+- Cloak of Many Fashions _(common)_
+- Clockwork Amulet _(common)_
+- Clothes of Mending _(common)_
+- Dark Shard Amulet _(common)_
+- Dread Helm _(common)_
+- Ear Horn of Hearing _(common)_
+- Enduring Spellbook _(common)_
+- Ersatz Eye _(common)_
+- Hat of Vermin _(common)_
+- Hat of Wizardry _(common)_
+- Heward's Handy Spice Pouch _(common)_
+- Horn of Silent Alarm _(common)_
+- Instrument of Illusions _(common)_
+- Instrument of Scribing _(common)_
+- Lock of Trickery _(common)_
+- Mystery Key _(common)_
+- Orb of Direction _(common)_
+- Orb of Time _(common)_
+- Perfume of Bewitching _(common)_
+- Pipe of Smoke Monsters _(common)_
+- Pole of Angling _(common)_
+- Pole of Collapsing _(common)_
+- Pot of Awakening _(common)_
+- Rope of Mending _(common)_
+- Ruby of the War Mage _(common)_
+- Shield of Expression _(common)_
+- Staff of Adornment _(common)_
+- Staff of Birdcalls _(common)_
+- Staff of Flowers _(common)_
+- Talking Doll _(common)_
+- Tankard of Sobriety _(common)_
+- Unbreakable Arrow _(common)_
+- Veteran's Cane _(common)_
+- Wand of Conducting _(common)_
+- Wand of Pyrotechnics _(common)_
+- Wand of Scowls _(common)_
+- Wand of Smiles _(common)_
+
+## Monsters
+
+### Acquisitions Incorporated (AI) — 22
+
+- Ancient Deep Crow _(CR 15)_
+- Auspicia Dran _(CR 2)_
+- Brahma Lutier _(CR 2)_
+- Chaos Quadrapod _(CR 4)_
+- Clockwork Dragon _(CR 1)_
+- Deep Crow _(CR 9)_
+- Donaar Blit'zen _(CR 3)_
+- Flabbergast _(CR 4)_
+- Jim Darkmagic _(CR 5)_
+- K'thriss Drow'b _(CR 3)_
+- Keg Robot _(CR 2)_
+- Môrgæn _(CR 4)_
+- Oak Truestrike _(CR 2)_
+- Omin Dran _(CR 5)_
+- Pendragon Beestinger _(CR 2)_
+- Phoenix Anvil _(CR 2)_
+- Portentia Dran _(CR 3)_
+- Prophetess Dran _(CR 2)_
+- Rosie Beestinger _(CR 3)_
+- Splugoth the Returned _(CR 2)_
+- Viari _(CR 5)_
+- Walnut Dankgrass _(CR 3)_
+
+### Arcana Unleashed (AU) — 23
+
+- Abjurer Archmage _(CR 15)_
+- Baelnorn _(CR {'cr': '18', 'xpLair': 22000})_
+- Battle Familiar
+- Conjurer Archmage _(CR 15)_
+- Darkenbeast _(CR 4)_
+- Dinosaur Spirit
+- Diviner Archmage _(CR 15)_
+- Enchanter Archmage _(CR 15)_
+- Evoker Archmage _(CR 15)_
+- Groundling Grunt _(CR 1)_
+- Groundling Slayer _(CR 3)_
+- Groundling Stalker _(CR 2)_
+- Illusionist Archmage _(CR 15)_
+- Living Cone of Cold _(CR 7)_
+- Living Thunderwave _(CR 1)_
+- Living Vitriolic Sphere _(CR 5)_
+- Necromancer Archmage _(CR 15)_
+- Plant Spirit
+- Spellguard _(CR 5)_
+- Taisus _(CR 19)_
+- Transmuter Archmage _(CR 15)_
+- Venger _(CR {'cr': '17', 'xpLair': 20000})_
+- Vestige Companion
+
+### Astarion's Book of Hungers (ABH) — 5
+
+- Fiendish Icon _(CR 1)_
+- Harvester Devil _(CR 3)_
+- Speaker Devil _(CR 12)_
+- Vampire Infernalist _(CR {'cr': '14', 'xpLair': 13000})_
+- Vampire Warden _(CR 10)_
+
+### Bigby Presents: Glory of the Giants (BGG) — 72
+
+- Aerosaur _(CR 10)_
+- Altisaur _(CR 13)_
+- Bag Jelly _(CR 1)_
+- Barrowghast _(CR 7)_
+- Cairnwight _(CR 9)_
+- Ceratops _(CR 9)_
+- Cinder Hulk _(CR 7)_
+- Cloud Giant Destiny Gambler _(CR 19)_
+- Cloud Giant of Evil Air _(CR 12)_
+- Cradle of the Cloud Scion _(CR 26)_
+- Cradle of the Fire Scion _(CR 25)_
+- Cradle of the Frost Scion _(CR 24)_
+- Cradle of the Hill Scion _(CR 22)_
+- Cradle of the Stone Scion _(CR 23)_
+- Cradle of the Storm Scion _(CR 27)_
+- Death Giant Reaper _(CR 12)_
+- Death Giant Shrouded One _(CR 15)_
+- Dust Hulk _(CR 5)_
+- Echo of Demogorgon _(CR 6)_
+- Ettin Ceremorph _(CR 8)_
+- Fensir Devourer _(CR 8)_
+- Fensir Skirmisher _(CR 6)_
+- Firbolg Primeval Warden _(CR 4)_
+- Firbolg Wanderer _(CR 5)_
+- Fire Giant Forgecaller _(CR 18)_
+- Fire Giant of Evil Fire _(CR 10)_
+- Fire Hellion _(CR 11)_
+- Firegaunt _(CR 11)_
+- Flesh Colossus _(CR 20)_
+- Fomorian Deep Crawler _(CR 10)_
+- Fomorian Noble _(CR 15)_
+- Fomorian Warlock of the Dark _(CR 12)_
+- Frost Giant Ice Shaper _(CR 17)_
+- Frost Giant of Evil Water _(CR 11)_
+- Frostmourn _(CR 10)_
+- Fury of Kostchtchie _(CR 14)_
+- Gargantua _(CR 21)_
+- Giant Child _(CR 0)_
+- Giant Goose _(CR 3)_
+- Giant Lynx _(CR 1/2)_
+- Giant Ox _(CR 3)_
+- Giant Ram _(CR 1)_
+- Giant Tick _(CR 2)_
+- Gigant _(CR 20)_
+- Goliath Giant-Kin _(CR 3)_
+- Grinning Cat _(CR 1)_
+- Hill Giant Avalancher _(CR 12)_
+- Lightning Hulk _(CR 9)_
+- Maw of Yeenoghu _(CR 10)_
+- Mist Hulk _(CR 6)_
+- Mud Hulk _(CR 3)_
+- Regisaur _(CR 14)_
+- Rime Hulk _(CR 5)_
+- Runic Colossus _(CR 21)_
+- Scion of Grolantor _(CR 22)_
+- Scion of Memnor _(CR 26)_
+- Scion of Skoraeus _(CR 23)_
+- Scion of Stronmaus _(CR 27)_
+- Scion of Surtur _(CR 25)_
+- Scion of Thrym _(CR 24)_
+- Spectral Cloud _(CR 13)_
+- Spotted Lion _(CR 3)_
+- Stalker of Baphomet _(CR 12)_
+- Stone Giant Rockspeaker _(CR 16)_
+- Stone Giant of Evil Earth _(CR 9)_
+- Storm Crab _(CR 11)_
+- Storm Giant Tempest Caller _(CR 20)_
+- Storm Herald _(CR 17)_
+- Tempest Spirit _(CR 15)_
+- Titanothere _(CR 5)_
+- Troll Amalgam _(CR 17)_
+- Troll Mutate _(CR 7)_
+
+### Boo's Astral Menagerie (BAM) — 72
+
+- Aartuk Elder _(CR 3)_
+- Aartuk Starhorror _(CR 2)_
+- Aartuk Weedling _(CR 2)_
+- Adult Lunar Dragon _(CR 13)_
+- Adult Solar Dragon _(CR 14)_
+- Ancient Lunar Dragon _(CR 19)_
+- Ancient Solar Dragon _(CR 21)_
+- Astral Elf Aristocrat _(CR 8)_
+- Astral Elf Commander _(CR 7)_
+- Astral Elf Honor Guard _(CR 5)_
+- Astral Elf Star Priest _(CR 5)_
+- Astral Elf Warrior _(CR 3)_
+- Autognome _(CR 2)_
+- B'rohg _(CR 6)_
+- Braxat _(CR 9)_
+- Brown Scavver _(CR 4)_
+- Chwinga Astronaut _(CR 0)_
+- Cosmic Horror _(CR 18)_
+- Dohwar _(CR 0)_
+- Esthetic _(CR 12)_
+- Eye Monger _(CR 10)_
+- Feyr _(CR 5)_
+- Gaj _(CR 4)_
+- Giant Space Hamster _(CR 1/4)_
+- Giff Shipmate _(CR 3)_
+- Giff Shock Trooper _(CR 6)_
+- Giff Warlord _(CR 10)_
+- Githyanki Buccaneer _(CR 3)_
+- Githyanki Star Seer _(CR 7)_
+- Githyanki Xenomancer _(CR 9)_
+- Gray Scavver _(CR 1/4)_
+- Hadozee Explorer _(CR 2)_
+- Hadozee Shipmate _(CR 1/8)_
+- Hadozee Warrior _(CR 1/2)_
+- Jammer Leech _(CR 1)_
+- Kindori _(CR 7)_
+- Lunar Dragon Wyrmling _(CR 2)_
+- Megapede _(CR 11)_
+- Mercane _(CR 5)_
+- Murder Comet _(CR 5)_
+- Neh-thalggu _(CR 4)_
+- Neogi Hatchling Swarm _(CR 3)_
+- Neogi Pirate _(CR 3)_
+- Neogi Void Hunter _(CR 4)_
+- Night Scavver _(CR 5)_
+- Plasmoid Boss _(CR 4)_
+- Plasmoid Explorer _(CR 1/4)_
+- Plasmoid Warrior _(CR 3)_
+- Psurlon _(CR 2)_
+- Psurlon Leader _(CR 6)_
+- Psurlon Ringer _(CR 1)_
+- Reigar _(CR 8)_
+- Solar Dragon Wyrmling _(CR 3)_
+- Space Clown _(CR 2)_
+- Space Eel _(CR 1/2)_
+- Space Guppy _(CR 0)_
+- Space Hamster _(CR 1/4)_
+- Space Mollymawk _(CR 0)_
+- Space Swine _(CR 1/4)_
+- Ssurran Defiler _(CR 3)_
+- Ssurran Poisoner _(CR 1/2)_
+- Starlight Apparition _(CR 5)_
+- Thri-kreen Gladiator _(CR 7)_
+- Thri-kreen Hunter _(CR 2)_
+- Thri-kreen Mystic _(CR 5)_
+- Vampirate _(CR 2)_
+- Vampirate Captain _(CR 6)_
+- Vampirate Mage _(CR 5)_
+- Void Scavver _(CR 11)_
+- Young Lunar Dragon _(CR 7)_
+- Young Solar Dragon _(CR 9)_
+- Zodar _(CR 16)_
+
+### Dungeon Master's Guide (2014) (DMG) — 3
+
+- Avatar of Death
+- Giant Fly
+- Larva _(CR 0)_
+
+### Dungeon Master's Guide (2024) (XDMG) — 2
+
+- Avatar of Death
+- Giant Fly _(CR {'cr': '0', 'xp': 0})_
+
+### Eberron: Forge of the Artificer (EFA) — 27
+
+- Boromar Smuggler _(CR 1/2)_
+- Boromar Underboss _(CR 8)_
+- Cannith Artificer _(CR 4)_
+- Daask Bruiser _(CR 9)_
+- Daask Raider _(CR 1)_
+- Dreaming Dark Infiltrator _(CR 7)_
+- Dreaming Dark Mindkiller _(CR 11)_
+- Emerald Claw Commander _(CR 4)_
+- Emerald Claw Knight _(CR 2)_
+- Ghallanda Troubleshooter _(CR 3)_
+- Homunculus Servant
+- Jorasco Medic _(CR 4)_
+- Kundarak Warden _(CR 5)_
+- Lyrandar Scion _(CR 4)_
+- Medani Inquisitive _(CR 3)_
+- Orien Enforcer _(CR 4)_
+- Sentinel Marshal _(CR 6)_
+- Shadow-Marked Agent _(CR 7)_
+- Sivis Scribe _(CR 3)_
+- Steel Defender
+- Tarkanan Marauder _(CR 11)_
+- Tarkanan Ruffian _(CR 1)_
+- Tharashk Hunter _(CR 6)_
+- Umbragen Shadow Walker _(CR 9)_
+- Vadalis Heir _(CR 4)_
+- Vulkoori Stingblade _(CR 1/2)_
+- Vulkoori Venom Priest _(CR 2)_
+
+### Eberron: Rising from the Last War (ERLW) — 41
+
+- Belashyrra _(CR {'cr': '22', 'lair': '23'})_
+- Bone Knight _(CR 5)_
+- Changeling _(CR 1/2)_
+- Clawfoot _(CR 1)_
+- Corrin Delmaco
+- Dolgaunt _(CR 3)_
+- Dolgrim _(CR 1/2)_
+- Dusk Hag _(CR 6)_
+- Dyrrn _(CR 24)_
+- Expeditious Messenger _(CR 1/8)_
+- Fastieth _(CR 1/4)_
+- Garra
+- Hashalaq Quori _(CR 9)_
+- Inspired _(CR 2)_
+- Iron Defender _(CR 1)_
+- Kalaraq Quori _(CR 19)_
+- Kalashtar _(CR 1/4)_
+- Karrnathi Undead Soldier _(CR 3)_
+- Lady Illmarrow _(CR 22)_
+- Living Burning Hands _(CR 1)_
+- Living Cloudkill _(CR 7)_
+- Living Lightning Bolt _(CR 5)_
+- Magewright _(CR 0)_
+- Mordakhesh _(CR 15)_
+- Radiant Idol _(CR 11)_
+- Rak Tulkhesh _(CR 28)_
+- Sergeant
+- Shifter _(CR 1/2)_
+- Sul Khatesh _(CR 28)_
+- Tarkanan Assassin _(CR 2)_
+- The Lord of Blades _(CR 18)_
+- Tsucora Quori _(CR 7)_
+- Undying Councilor _(CR 10)_
+- Undying Soldier _(CR 2)_
+- Valenar Hawk _(CR 1/8)_
+- Valenar Hound _(CR 1/2)_
+- Valenar Steed _(CR 1/2)_
+- Warforged Colossus _(CR 25)_
+- Warforged Soldier _(CR 1)_
+- Warforged Titan _(CR 8)_
+- Zakya Rakshasa _(CR 5)_
+
+### Explorer's Guide to Wildemount (EGW) — 48
+
+- Aeorian Absorber _(CR 10)_
+- Aeorian Nullifier _(CR 12)_
+- Aeorian Reverser _(CR 8)_
+- Allowak Abominable Yeti
+- Allowak Yeti
+- Animated Knife _(CR 1/8)_
+- Animated Tree
+- Blood Hunter _(CR 5)_
+- Bol'bara _(CR 3)_
+- Bristled Moorbounder _(CR 3)_
+- Core Spawn Crawler _(CR 1)_
+- Core Spawn Emissary _(CR 6)_
+- Core Spawn Seer _(CR 13)_
+- Core Spawn Worm _(CR 15)_
+- Damaged Flesh Golem _(CR 1)_
+- Ferol Sal
+- Frost Giant Zombie _(CR 9)_
+- Frost Worm _(CR 17)_
+- Gearkeeper Construct _(CR 10)_
+- Gloomstalker _(CR 6)_
+- Guardian Wolf _(CR 4)_
+- Horizonback Tortoise _(CR 8)_
+- Hulil Lutan
+- Husk Zombie _(CR 1)_
+- Ishel _(CR 1/2)_
+- Karkethzerethzerus, the Sable Despoiler
+- Kobold Underling _(CR 1/8)_
+- Merrow Shallowpriest _(CR 4)_
+- Moorbounder _(CR 1)_
+- Mossback Steward
+- Nergaliid _(CR 3)_
+- Ogre Lord Buhfal II
+- Old Croaker
+- Oracs the Enduring
+- Parson Pellinost
+- Raegrin Mau
+- Sahuagin Warlock of Uk'otoa _(CR 3)_
+- Sea Fury _(CR {'cr': '12', 'lair': '14'})_
+- Shadowghast _(CR 5)_
+- Sharkbody Abomination
+- Sken Zabriss _(CR 1)_
+- Skr'a S'orsk
+- Swarm of Undead Snakes
+- Swavain Basilisk _(CR 7)_
+- Three Earrings
+- Udaak _(CR 16)_
+- Vox Seeker _(CR 1/8)_
+- Yinra Emberwind _(CR 1/2)_
+
+### Fizban's Treasury of Dragons (FTD) — 85
+
+- Adult Amethyst Dragon _(CR {'cr': '16', 'lair': '17'})_
+- Adult Crystal Dragon _(CR {'cr': '12', 'lair': '13'})_
+- Adult Deep Dragon _(CR {'cr': '11', 'lair': '12'})_
+- Adult Emerald Dragon _(CR {'cr': '14', 'lair': '15'})_
+- Adult Moonstone Dragon _(CR {'cr': '15', 'lair': '16'})_
+- Adult Sapphire Dragon _(CR {'cr': '15', 'lair': '16'})_
+- Adult Topaz Dragon _(CR {'cr': '13', 'lair': '14'})_
+- Amethyst Dragon Wyrmling _(CR 4)_
+- Amethyst Greatwyrm _(CR 26)_
+- Ancient Amethyst Dragon _(CR {'cr': '23', 'lair': '24'})_
+- Ancient Crystal Dragon _(CR {'cr': '19', 'lair': '20'})_
+- Ancient Deep Dragon _(CR {'cr': '18', 'lair': '19'})_
+- Ancient Dragon Turtle _(CR 24)_
+- Ancient Emerald Dragon _(CR {'cr': '21', 'lair': '22'})_
+- Ancient Moonstone Dragon _(CR {'cr': '21', 'lair': '22'})_
+- Ancient Sapphire Dragon _(CR {'cr': '22', 'lair': '23'})_
+- Ancient Sea Serpent _(CR 14)_
+- Ancient Topaz Dragon _(CR {'cr': '20', 'lair': '21'})_
+- Animated Breath _(CR 6)_
+- Aspect of Bahamut _(CR 30)_
+- Aspect of Tiamat _(CR 30)_
+- Black Greatwyrm _(CR 27)_
+- Blue Greatwyrm _(CR 27)_
+- Brass Greatwyrm _(CR 28)_
+- Bronze Greatwyrm _(CR 28)_
+- Copper Greatwyrm _(CR 28)_
+- Crystal Dragon Wyrmling _(CR 2)_
+- Crystal Greatwyrm _(CR 26)_
+- Deep Dragon Wyrmling _(CR 1)_
+- Dracohydra _(CR 11)_
+- Draconian Dreadnought _(CR 4)_
+- Draconian Foot Soldier _(CR 1/2)_
+- Draconian Infiltrator _(CR 3)_
+- Draconian Mage _(CR 2)_
+- Draconian Mastermind _(CR 6)_
+- Draconic Shard _(CR 17)_
+- Draconic Spirit
+- Dragon Blessed _(CR 5)_
+- Dragon Chosen _(CR 3)_
+- Dragon Speaker _(CR 2)_
+- Dragon Turtle Wyrmling _(CR 4)_
+- Dragonblood Ooze _(CR 5)_
+- Dragonbone Golem _(CR 11)_
+- Dragonborn of Bahamut _(CR 8)_
+- Dragonborn of Sardior _(CR 6)_
+- Dragonborn of Tiamat _(CR 7)_
+- Dragonflesh Abomination _(CR 6)_
+- Dragonflesh Grafter _(CR 3)_
+- Dragonnel _(CR 2)_
+- Drake Companion
+- Egg Hunter Adult _(CR 5)_
+- Egg Hunter Hatchling _(CR 2)_
+- Elder Brain Dragon _(CR 22)_
+- Emerald Dragon Wyrmling _(CR 2)_
+- Emerald Greatwyrm _(CR 26)_
+- Eyedrake _(CR 8)_
+- Gem Stalker _(CR 5)_
+- Ghost Dragon _(CR 17)_
+- Giant Canary _(CR 1/2)_
+- Gold Greatwyrm _(CR 28)_
+- Green Greatwyrm _(CR 27)_
+- Hoard Mimic _(CR 8)_
+- Hoard Scarab _(CR 1/8)_
+- Hollow Dragon _(CR 18)_
+- Liondrake _(CR 7)_
+- Metallic Peacekeeper _(CR 4)_
+- Metallic Warbler _(CR 1/4)_
+- Moonstone Dragon Wyrmling _(CR 2)_
+- Red Greatwyrm _(CR 27)_
+- Sapphire Dragon Wyrmling _(CR 3)_
+- Sapphire Greatwyrm _(CR 26)_
+- Silver Greatwyrm _(CR 28)_
+- Swarm of Hoard Scarabs _(CR 2)_
+- Topaz Dragon Wyrmling _(CR 2)_
+- Topaz Greatwyrm _(CR 26)_
+- White Greatwyrm _(CR 27)_
+- Young Amethyst Dragon _(CR 9)_
+- Young Crystal Dragon _(CR 5)_
+- Young Deep Dragon _(CR 5)_
+- Young Dragon Turtle _(CR 10)_
+- Young Emerald Dragon _(CR 8)_
+- Young Moonstone Dragon _(CR 8)_
+- Young Sapphire Dragon _(CR 9)_
+- Young Sea Serpent _(CR 8)_
+- Young Topaz Dragon _(CR 7)_
+
+### Forgotten Realms: Adventures in Faerûn (FRAIF) — 42
+
+- Adult Deep Dragon _(CR {'cr': '11', 'xpLair': 8400})_
+- Adult Spirit Dragon _(CR {'cr': '15', 'xpLair': 15000})_
+- Ancient Deep Dragon _(CR {'cr': '18', 'xpLair': 22000})_
+- Ancient Spirit Dragon _(CR 22)_
+- Aranea _(CR 2)_
+- Beast of Malar _(CR 11)_
+- Biha Babir _(CR 12)_
+- Cultist of Bane _(CR 9)_
+- Cultist of Bhaal _(CR 7)_
+- Cultist of Myrkul _(CR 11)_
+- Dead Three Scion _(CR 16)_
+- Deep Dragon Wyrmling _(CR 1)_
+- Domestic Wonder _(CR 0)_
+- Drow Elite Warrior of Lolth _(CR 5)_
+- Drow Mage of Lolth _(CR 7)_
+- Drow Priestess of Lolth _(CR 8)_
+- Drow of Lolth _(CR 1/4)_
+- Flying Wonder _(CR 0)_
+- Karas Chembryl _(CR {'cr': '8', 'xpLair': 5000})_
+- Manshoon _(CR 13)_
+- Nimblewright Guard _(CR 3)_
+- Nimblewright Hulk _(CR 7)_
+- Nimblewright Steed _(CR 2)_
+- Phaerimm Agent _(CR 8)_
+- Phaerimm Hatchling _(CR 1/4)_
+- Polar Serpent _(CR 3)_
+- Queen Forfallen _(CR 10)_
+- Rusted Behemoth _(CR 9)_
+- Rusted Berserker _(CR 4)_
+- Rusted Wyrm _(CR 14)_
+- Sammaster (Dracolich Form) _(CR 22)_
+- Sammaster (Lich Form) _(CR 22)_
+- Spirit Dragon Wyrmling _(CR 2)_
+- Spore of Moander _(CR 12)_
+- Swanmay _(CR 3)_
+- Valindra Shadowmantle _(CR {'cr': '21', 'xpLair': 41000})_
+- Werewyvern _(CR 8)_
+- Young Deep Dragon _(CR 5)_
+- Young Spirit Dragon _(CR 8)_
+- Zhentilar Paladin of Bane _(CR 4)_
+- Zhentilar Soldier _(CR 1)_
+- Zlan _(CR 18)_
+
+### Guildmasters' Guide to Ravnica (GGR) — 79
+
+- Anarch _(CR 1/4)_
+- Archon of the Triumvirate _(CR 14)_
+- Arclight Phoenix _(CR 12)_
+- Aurelia _(CR 23)_
+- Battleforce Angel _(CR 5)_
+- Biomancer _(CR 10)_
+- Blistercoil Weird _(CR 4)_
+- Blood Drinker Vampire _(CR 8)_
+- Blood Witch _(CR 7)_
+- Bloodfray Giant _(CR 6)_
+- Borborygmos _(CR 18)_
+- Cackler _(CR 1/2)_
+- Category 1 Krasis _(CR 1)_
+- Category 2 Krasis _(CR 6)_
+- Category 3 Krasis _(CR 16)_
+- Conclave Dryad _(CR 9)_
+- Cosmotronic Blastseeker _(CR 4)_
+- Counterflux Blastseeker _(CR 2)_
+- Deathpact Angel _(CR 14)_
+- Devkarin Lich _(CR 14)_
+- Druid of the Old Ways _(CR 7)_
+- Felidar _(CR 5)_
+- Firefist _(CR 7)_
+- Firemane Angel _(CR 12)_
+- Flux Blastseeker _(CR 5)_
+- Fluxcharger _(CR 7)_
+- Flying Horror _(CR 3)_
+- Frontline Medic _(CR 1/4)_
+- Galvanic Blastseeker _(CR 5)_
+- Galvanice Weird _(CR 1)_
+- Gloamwing _(CR 8)_
+- Golgari Shaman _(CR 5)_
+- Guardian Giant _(CR 8)_
+- Horncaller _(CR 1)_
+- Hybrid Brute _(CR 2)_
+- Hybrid Flier _(CR 2)_
+- Hybrid Poisoner _(CR 1)_
+- Hybrid Shocker _(CR 1)_
+- Hybrid Spy _(CR 1/2)_
+- Indentured Spirit _(CR 1)_
+- Isperia _(CR 21)_
+- Jarad Vod Savo _(CR 22)_
+- Kraul Death Priest _(CR 4)_
+- Kraul Warrior _(CR 1/2)_
+- Lawmage _(CR 6)_
+- Lazav _(CR 17)_
+- Master of Cruelties _(CR 9)_
+- Mind Drinker Vampire _(CR 4)_
+- Mind Mage _(CR 5)_
+- Nightveil Specter _(CR 10)_
+- Niv-Mizzet _(CR 26)_
+- Nivix Cyclops _(CR 8)_
+- Obzedat Ghost _(CR 8)_
+- Orzhov Giant _(CR 6)_
+- Precognitive Mage _(CR 3)_
+- Rakdos _(CR 24)_
+- Rakdos Lampooner _(CR 2)_
+- Rakdos Performer, Blade Juggler _(CR 1)_
+- Rakdos Performer, Fire Eater _(CR 1)_
+- Rakdos Performer, High-Wire Acrobat _(CR 1)_
+- Reckoner _(CR 4)_
+- Rubblebelt Stalker _(CR 1/2)_
+- Scorchbringer Guard _(CR 1/2)_
+- Servitor Thrull _(CR 1/4)_
+- Shadow Horror _(CR 9)_
+- Simic Merfolk
+- Sire of Insanity _(CR 12)_
+- Skittering Horror _(CR 15)_
+- Skyjek Roc _(CR 2)_
+- Skyswimmer _(CR 13)_
+- Soldier _(CR 1/2)_
+- Sphinx of Judgment
+- Sunder Shaman _(CR 10)_
+- Thought Spy _(CR 1)_
+- Trostani _(CR 18)_
+- Undercity Medusa _(CR 6)_
+- Winged Thrull _(CR 1/2)_
+- Wurm _(CR 14)_
+- Zegana _(CR 16)_
+
+### Lorwyn: First Light (LFL) — 8
+
+- Incarnation of Transience _(CR 7)_
+- Incarnation of Vibrance _(CR 10)_
+- Lorwyn Giant _(CR 6)_
+- Merrow Doublespeaker _(CR 4)_
+- Merrow Haranguer _(CR 5)_
+- Noggle Ransacker _(CR 1/4)_
+- Noggle Wild Mage _(CR 1)_
+- Shadowmoor Giant _(CR 8)_
+
+### Minsc and Boo's Journal of Villainy (MABJOV) — 56
+
+- Achaierai _(CR 5)_
+- Aribeth de Tylmarande _(CR 10)_
+- Baalzebul _(CR 26)_
+- Bebilith _(CR 12)_
+- Bhaal, Ravager _(CR 24)_
+- Bhaal, Slayer _(CR 20)_
+- Bodhi Irenicus _(CR 15)_
+- Borivik Windheim _(CR 10)_
+- Cornelius Watson _(CR 12)_
+- Cryonax _(CR 22)_
+- Dagryn _(CR 4)_
+- Darien _(CR 9)_
+- Deep Spider _(CR 7)_
+- Dread Doppelganger _(CR 5)_
+- Edwin Odesseiron _(CR 15)_
+- Eo Ashmajiir _(CR 11)_
+- Faldorn _(CR 13)_
+- Farastu Stalker _(CR 7)_
+- Flimp Shagglecran _(CR 9)_
+- Gibberling _(CR 1/4)_
+- Hamadryad _(CR 2)_
+- Imoen _(CR 8)_
+- Jaheira _(CR 13)_
+- Jon Irenicus _(CR 22)_
+- Kagain _(CR 11)_
+- Kelubar Consul _(CR 11)_
+- Kivan _(CR 7)_
+- Lothar _(CR 9)_
+- Mephistopheles _(CR 27)_
+- Minsc and Boo! _(CR 10)_
+- Montaron and the Laughing Skull _(CR 11)_
+- Naes Inuus _(CR 13)_
+- Nauk _(CR 9)_
+- Pazuzu _(CR 25)_
+- Pelyious Avhoste _(CR 9)_
+- Phaerimm _(CR 15)_
+- Saemon Havarian _(CR 10)_
+- Sarevok _(CR 15)_
+- Shator Warden _(CR 14)_
+- Sirene _(CR 3)_
+- Skeleton Lord _(CR 9)_
+- Skeleton Warrior _(CR 5)_
+- Ssendam, Lord of Madness _(CR 23)_
+- Suldil Baldoriel _(CR 10)_
+- Sword Spider _(CR 3)_
+- Tasloi _(CR 1/4)_
+- Tasloi Sniper _(CR 1)_
+- Tiberius Inuus _(CR 9)_
+- Valygar _(CR 9)_
+- Vellin Farstride _(CR 9)_
+- Viconia DeVir _(CR 13)_
+- Viktor _(CR 9)_
+- Wolfwere _(CR 4)_
+- Wolfwere Alpha _(CR 6)_
+- Xan Moonblade _(CR 8)_
+- Xzar the Chaos Clone _(CR 11)_
+
+### Monster Manual (2014) (MM) — 450
+
+- Aarakocra _(CR 1/4)_
+- Aboleth _(CR 10)_
+- Abominable Yeti _(CR 9)_
+- Acolyte _(CR 1/4)_
+- Adult Black Dragon _(CR 14)_
+- Adult Blue Dracolich _(CR 17)_
+- Adult Blue Dragon _(CR 16)_
+- Adult Brass Dragon _(CR 13)_
+- Adult Bronze Dragon _(CR 15)_
+- Adult Copper Dragon _(CR 14)_
+- Adult Gold Dragon _(CR 17)_
+- Adult Green Dragon _(CR 15)_
+- Adult Red Dragon _(CR 17)_
+- Adult Silver Dragon _(CR 16)_
+- Adult White Dragon _(CR 13)_
+- Air Elemental _(CR 5)_
+- Allosaurus _(CR 2)_
+- Ancient Black Dragon _(CR 21)_
+- Ancient Blue Dragon _(CR 23)_
+- Ancient Brass Dragon _(CR 20)_
+- Ancient Bronze Dragon _(CR 22)_
+- Ancient Copper Dragon _(CR 21)_
+- Ancient Gold Dragon _(CR 24)_
+- Ancient Green Dragon _(CR 22)_
+- Ancient Red Dragon _(CR 24)_
+- Ancient Silver Dragon _(CR 23)_
+- Ancient White Dragon _(CR 20)_
+- Androsphinx _(CR 17)_
+- Animated Armor _(CR 1)_
+- Ankheg _(CR 2)_
+- Ankylosaurus _(CR 3)_
+- Ape _(CR 1/2)_
+- Arcanaloth _(CR 12)_
+- Archmage _(CR 12)_
+- Assassin _(CR 8)_
+- Awakened Shrub _(CR 0)_
+- Awakened Tree _(CR 2)_
+- Axe Beak _(CR 1/4)_
+- Azer _(CR 2)_
+- Baboon _(CR 0)_
+- Badger _(CR 0)_
+- Balor _(CR 19)_
+- Bandit _(CR 1/8)_
+- Bandit Captain _(CR 2)_
+- Banshee _(CR 4)_
+- Barbed Devil _(CR 5)_
+- Barlgura _(CR 5)_
+- Basilisk _(CR 3)_
+- Bat _(CR 0)_
+- Bearded Devil _(CR 3)_
+- Behir _(CR 11)_
+- Beholder _(CR {'cr': '13', 'lair': '14'})_
+- Beholder Zombie _(CR 5)_
+- Berserker _(CR 2)_
+- Black Bear _(CR 1/2)_
+- Black Dragon Wyrmling _(CR 2)_
+- Black Pudding _(CR 4)_
+- Blink Dog _(CR 1/4)_
+- Blood Hawk _(CR 1/8)_
+- Blue Dragon Wyrmling _(CR 3)_
+- Blue Slaad _(CR 7)_
+- Boar _(CR 1/4)_
+- Bone Devil _(CR 9)_
+- Bone Naga (Guardian) _(CR 4)_
+- Bone Naga (Spirit) _(CR 4)_
+- Brass Dragon Wyrmling _(CR 1)_
+- Bronze Dragon Wyrmling _(CR 2)_
+- Brown Bear _(CR 1)_
+- Bugbear _(CR 1)_
+- Bugbear Chief _(CR 3)_
+- Bulette _(CR 5)_
+- Bullywug _(CR 1/4)_
+- Cambion _(CR 5)_
+- Camel _(CR 1/8)_
+- Carrion Crawler _(CR 2)_
+- Cat _(CR 0)_
+- Cave Bear _(CR 2)_
+- Centaur _(CR 2)_
+- Chain Devil _(CR 8)_
+- Chasme _(CR 6)_
+- Chimera _(CR 6)_
+- Chuul _(CR 4)_
+- Clay Golem _(CR 9)_
+- Cloaker _(CR 8)_
+- Cloud Giant _(CR 9)_
+- Cockatrice _(CR 1/2)_
+- Commoner _(CR 0)_
+- Constrictor Snake _(CR 1/4)_
+- Copper Dragon Wyrmling _(CR 1)_
+- Couatl _(CR 4)_
+- Crab _(CR 0)_
+- Crawling Claw _(CR 0)_
+- Crocodile _(CR 1/2)_
+- Cult Fanatic _(CR 2)_
+- Cultist _(CR 1/8)_
+- Cyclops _(CR 6)_
+- Dao _(CR 11)_
+- Darkmantle _(CR 1/2)_
+- Death Dog _(CR 1)_
+- Death Knight _(CR 17)_
+- Death Slaad _(CR 10)_
+- Death Tyrant _(CR {'cr': '14', 'lair': '15'})_
+- Deep Gnome (Svirfneblin) _(CR 1/2)_
+- Deer _(CR 0)_
+- Demilich _(CR {'cr': '18', 'lair': '20'})_
+- Deva _(CR 10)_
+- Dire Wolf _(CR 1)_
+- Displacer Beast _(CR 3)_
+- Djinni _(CR 11)_
+- Doppelganger _(CR 3)_
+- Draft Horse _(CR 1/4)_
+- Dragon Turtle _(CR 17)_
+- Dretch _(CR 1/4)_
+- Drider _(CR 6)_
+- Drow _(CR 1/4)_
+- Drow Elite Warrior _(CR 5)_
+- Drow Mage _(CR 7)_
+- Drow Priestess of Lolth _(CR 8)_
+- Druid _(CR 2)_
+- Dryad _(CR 1)_
+- Duergar _(CR 1)_
+- Duodrone _(CR 1/4)_
+- Dust Mephit _(CR 1/2)_
+- Eagle _(CR 0)_
+- Earth Elemental _(CR 5)_
+- Efreeti _(CR 11)_
+- Elephant _(CR 4)_
+- Elk _(CR 1/4)_
+- Empyrean _(CR 23)_
+- Erinyes _(CR 12)_
+- Ettercap _(CR 2)_
+- Ettin _(CR 4)_
+- Faerie Dragon (Blue) _(CR 2)_
+- Faerie Dragon (Green) _(CR 2)_
+- Faerie Dragon (Indigo) _(CR 2)_
+- Faerie Dragon (Orange) _(CR 1)_
+- Faerie Dragon (Red) _(CR 1)_
+- Faerie Dragon (Violet) _(CR 2)_
+- Faerie Dragon (Yellow) _(CR 1)_
+- Fire Elemental _(CR 5)_
+- Fire Giant _(CR 9)_
+- Fire Snake _(CR 1)_
+- Flameskull _(CR 4)_
+- Flesh Golem _(CR 5)_
+- Flumph _(CR 1/8)_
+- Flying Snake _(CR 1/8)_
+- Flying Sword _(CR 1/4)_
+- Fomorian _(CR 8)_
+- Frog _(CR {'cr': '0', 'xp': 0})_
+- Frost Giant _(CR 8)_
+- Galeb Duhr _(CR 6)_
+- Gargoyle _(CR 2)_
+- Gas Spore _(CR 1/2)_
+- Gelatinous Cube _(CR 2)_
+- Ghast _(CR 2)_
+- Ghost _(CR 4)_
+- Ghoul _(CR 1)_
+- Giant Ape _(CR 7)_
+- Giant Badger _(CR 1/4)_
+- Giant Bat _(CR 1/4)_
+- Giant Boar _(CR 2)_
+- Giant Centipede _(CR 1/4)_
+- Giant Constrictor Snake _(CR 2)_
+- Giant Crab _(CR 1/8)_
+- Giant Crocodile _(CR 5)_
+- Giant Eagle _(CR 1)_
+- Giant Elk _(CR 2)_
+- Giant Fire Beetle _(CR 0)_
+- Giant Frog _(CR 1/4)_
+- Giant Goat _(CR 1/2)_
+- Giant Hyena _(CR 1)_
+- Giant Lizard _(CR 1/4)_
+- Giant Octopus _(CR 1)_
+- Giant Owl _(CR 1/4)_
+- Giant Poisonous Snake _(CR 1/4)_
+- Giant Rat _(CR 1/8)_
+- Giant Scorpion _(CR 3)_
+- Giant Sea Horse _(CR 1/2)_
+- Giant Shark _(CR 5)_
+- Giant Spider _(CR 1)_
+- Giant Toad _(CR 1)_
+- Giant Vulture _(CR 1)_
+- Giant Wasp _(CR 1/2)_
+- Giant Weasel _(CR 1/8)_
+- Giant Wolf Spider _(CR 1/4)_
+- Gibbering Mouther _(CR 2)_
+- Githyanki Knight _(CR 8)_
+- Githyanki Warrior _(CR 3)_
+- Githzerai Monk _(CR 2)_
+- Githzerai Zerth _(CR 6)_
+- Glabrezu _(CR 9)_
+- Gladiator _(CR 5)_
+- Gnoll _(CR 1/2)_
+- Gnoll Fang of Yeenoghu _(CR 4)_
+- Gnoll Pack Lord _(CR 2)_
+- Goat _(CR 0)_
+- Goblin _(CR 1/4)_
+- Goblin Boss _(CR 1)_
+- Gold Dragon Wyrmling _(CR 3)_
+- Gorgon _(CR 5)_
+- Goristro _(CR 17)_
+- Gray Ooze _(CR 1/2)_
+- Gray Slaad _(CR 9)_
+- Green Dragon Wyrmling _(CR 2)_
+- Green Hag _(CR {'cr': '3', 'coven': '5'})_
+- Green Slaad _(CR 8)_
+- Grell _(CR 3)_
+- Grick _(CR 2)_
+- Grick Alpha _(CR 7)_
+- Griffon _(CR 2)_
+- Grimlock _(CR 1/4)_
+- Guard _(CR 1/8)_
+- Guardian Naga _(CR 10)_
+- Gynosphinx _(CR 11)_
+- Half-Ogre (Ogrillon) _(CR 1)_
+- Half-Red Dragon Veteran _(CR 5)_
+- Harpy _(CR 1)_
+- Hawk _(CR 0)_
+- Hell Hound _(CR 3)_
+- Helmed Horror _(CR 4)_
+- Hezrou _(CR 8)_
+- Hill Giant _(CR 5)_
+- Hippogriff _(CR 1)_
+- Hobgoblin _(CR 1/2)_
+- Hobgoblin Captain _(CR 3)_
+- Hobgoblin Warlord _(CR 6)_
+- Homunculus _(CR 0)_
+- Hook Horror _(CR 3)_
+- Horned Devil _(CR 11)_
+- Hunter Shark _(CR 2)_
+- Hydra _(CR 8)_
+- Hyena _(CR 0)_
+- Ice Devil _(CR 14)_
+- Ice Mephit _(CR 1/2)_
+- Imp _(CR 1)_
+- Incubus _(CR 4)_
+- Intellect Devourer _(CR 2)_
+- Invisible Stalker _(CR 6)_
+- Iron Golem _(CR 16)_
+- Jackal _(CR 0)_
+- Jackalwere _(CR 1/2)_
+- Kenku _(CR 1/4)_
+- Killer Whale _(CR 3)_
+- Knight _(CR 3)_
+- Kobold _(CR 1/8)_
+- Kraken _(CR 23)_
+- Kuo-toa _(CR 1/4)_
+- Kuo-toa Archpriest _(CR 6)_
+- Kuo-toa Monitor _(CR 3)_
+- Kuo-toa Whip _(CR 1)_
+- Lamia _(CR 4)_
+- Lemure _(CR 0)_
+- Lich _(CR {'cr': '21', 'lair': '22'})_
+- Lion _(CR 1)_
+- Lizard _(CR 0)_
+- Lizard King _(CR 4)_
+- Lizard Queen _(CR 4)_
+- Lizardfolk _(CR 1/2)_
+- Lizardfolk Shaman _(CR 2)_
+- Mage _(CR 6)_
+- Magma Mephit _(CR 1/2)_
+- Magmin _(CR 1/2)_
+- Mammoth _(CR 6)_
+- Manes _(CR 1/8)_
+- Manticore _(CR 3)_
+- Marid _(CR 11)_
+- Marilith _(CR 16)_
+- Mastiff _(CR 1/8)_
+- Medusa _(CR 6)_
+- Merfolk _(CR 1/8)_
+- Merrow _(CR 2)_
+- Mezzoloth _(CR 5)_
+- Mimic _(CR 2)_
+- Mind Flayer _(CR 7)_
+- Mind Flayer Arcanist _(CR 8)_
+- Minotaur _(CR 3)_
+- Minotaur Skeleton _(CR 2)_
+- Monodrone _(CR 1/8)_
+- Mud Mephit _(CR 1/4)_
+- Mule _(CR 1/8)_
+- Mummy _(CR 3)_
+- Mummy Lord _(CR {'cr': '15', 'lair': '16'})_
+- Myconid Adult _(CR 1/2)_
+- Myconid Sovereign _(CR 2)_
+- Myconid Sprout _(CR 0)_
+- Nalfeshnee _(CR 13)_
+- Needle Blight _(CR 1/4)_
+- Night Hag _(CR {'cr': '5', 'coven': '7'})_
+- Nightmare _(CR 3)_
+- Noble _(CR 1/8)_
+- Nothic _(CR 2)_
+- Nycaloth _(CR 9)_
+- Ochre Jelly _(CR 2)_
+- Octopus _(CR 0)_
+- Ogre _(CR 2)_
+- Ogre Zombie _(CR 2)_
+- Oni _(CR 7)_
+- Orc _(CR 1/2)_
+- Orc Eye of Gruumsh _(CR 2)_
+- Orc War Chief _(CR 4)_
+- Orog _(CR 2)_
+- Otyugh _(CR 5)_
+- Owl _(CR 0)_
+- Owlbear _(CR 3)_
+- Panther _(CR 1/4)_
+- Pegasus _(CR 2)_
+- Pentadrone _(CR 2)_
+- Peryton _(CR 2)_
+- Phase Spider _(CR 3)_
+- Piercer _(CR 1/2)_
+- Pit Fiend _(CR 20)_
+- Pixie _(CR 1/4)_
+- Planetar _(CR 16)_
+- Plesiosaurus _(CR 2)_
+- Poisonous Snake _(CR 1/8)_
+- Polar Bear _(CR 2)_
+- Poltergeist _(CR 2)_
+- Pony _(CR 1/8)_
+- Priest _(CR 2)_
+- Pseudodragon _(CR 1/4)_
+- Pteranodon _(CR 1/4)_
+- Purple Worm _(CR 15)_
+- Quadrone _(CR 1)_
+- Quaggoth _(CR 2)_
+- Quaggoth Spore Servant _(CR 1)_
+- Quaggoth Thonot _(CR 3)_
+- Quasit _(CR 1)_
+- Quipper _(CR 0)_
+- Rakshasa _(CR 13)_
+- Rat _(CR 0)_
+- Raven _(CR 0)_
+- Red Dragon Wyrmling _(CR 4)_
+- Red Slaad _(CR 5)_
+- Reef Shark _(CR 1/2)_
+- Remorhaz _(CR 11)_
+- Revenant _(CR 5)_
+- Rhinoceros _(CR 2)_
+- Riding Horse _(CR 1/4)_
+- Roc _(CR 11)_
+- Roper _(CR 5)_
+- Rug of Smothering _(CR 2)_
+- Rust Monster _(CR 1/2)_
+- Saber-Toothed Tiger _(CR 2)_
+- Sahuagin _(CR 1/2)_
+- Sahuagin Baron _(CR 5)_
+- Sahuagin Priestess _(CR 2)_
+- Salamander _(CR 5)_
+- Satyr _(CR 1/2)_
+- Scarecrow _(CR 1)_
+- Scorpion _(CR 0)_
+- Scout _(CR 1/2)_
+- Sea Hag _(CR {'cr': '2', 'coven': '4'})_
+- Sea Horse _(CR {'cr': '0', 'xp': 0})_
+- Shadow _(CR 1/2)_
+- Shadow Demon _(CR 4)_
+- Shambling Mound _(CR 5)_
+- Shield Guardian _(CR 7)_
+- Shrieker _(CR 0)_
+- Silver Dragon Wyrmling _(CR 2)_
+- Skeleton _(CR 1/4)_
+- Slaad Tadpole _(CR 1/8)_
+- Smoke Mephit _(CR 1/4)_
+- Solar _(CR 21)_
+- Spectator _(CR 3)_
+- Specter _(CR 1)_
+- Spider _(CR 0)_
+- Spined Devil _(CR 2)_
+- Spirit Naga _(CR 8)_
+- Sprite _(CR 1/4)_
+- Spy _(CR 1)_
+- Steam Mephit _(CR 1/4)_
+- Stirge _(CR 1/8)_
+- Stone Giant _(CR 7)_
+- Stone Golem _(CR 10)_
+- Storm Giant _(CR 13)_
+- Succubus _(CR 4)_
+- Swarm of Bats _(CR 1/4)_
+- Swarm of Beetles _(CR 1/2)_
+- Swarm of Centipedes _(CR 1/2)_
+- Swarm of Insects _(CR 1/2)_
+- Swarm of Poisonous Snakes _(CR 2)_
+- Swarm of Quippers _(CR 1)_
+- Swarm of Rats _(CR 1/4)_
+- Swarm of Ravens _(CR 1/4)_
+- Swarm of Spiders _(CR 1/2)_
+- Swarm of Wasps _(CR 1/2)_
+- Tarrasque _(CR 30)_
+- Thri-kreen _(CR 1)_
+- Thug _(CR 1/2)_
+- Tiger _(CR 1)_
+- Treant _(CR 9)_
+- Tribal Warrior _(CR 1/8)_
+- Triceratops _(CR 5)_
+- Tridrone _(CR 1/2)_
+- Troglodyte _(CR 1/4)_
+- Troll _(CR 5)_
+- Twig Blight _(CR 1/8)_
+- Tyrannosaurus Rex _(CR 8)_
+- Ultroloth _(CR 13)_
+- Umber Hulk _(CR 5)_
+- Unicorn _(CR 5)_
+- Vampire _(CR 13)_
+- Vampire Spawn _(CR 5)_
+- Vampire Spellcaster _(CR 15)_
+- Vampire Warrior _(CR 15)_
+- Veteran _(CR 3)_
+- Vine Blight _(CR 1/2)_
+- Violet Fungus _(CR 1/4)_
+- Vrock _(CR 6)_
+- Vulture _(CR 0)_
+- Warhorse _(CR 1/2)_
+- Warhorse Skeleton _(CR 1/2)_
+- Water Elemental _(CR 5)_
+- Water Weird _(CR 3)_
+- Weasel _(CR 0)_
+- Werebear _(CR 5)_
+- Wereboar _(CR 4)_
+- Wererat _(CR 2)_
+- Weretiger _(CR 4)_
+- Werewolf _(CR 3)_
+- White Dragon Wyrmling _(CR 2)_
+- Wight _(CR 3)_
+- Will-o'-Wisp _(CR 2)_
+- Winged Kobold _(CR 1/4)_
+- Winter Wolf _(CR 3)_
+- Wolf _(CR 1/4)_
+- Worg _(CR 1/2)_
+- Wraith _(CR 5)_
+- Wyvern _(CR 6)_
+- Xorn _(CR 5)_
+- Yeti _(CR 3)_
+- Yochlol _(CR 10)_
+- Young Black Dragon _(CR 7)_
+- Young Blue Dragon _(CR 9)_
+- Young Brass Dragon _(CR 6)_
+- Young Bronze Dragon _(CR 8)_
+- Young Copper Dragon _(CR 7)_
+- Young Gold Dragon _(CR 10)_
+- Young Green Dragon _(CR 8)_
+- Young Red Dragon _(CR 10)_
+- Young Red Shadow Dragon _(CR 13)_
+- Young Remorhaz _(CR 5)_
+- Young Silver Dragon _(CR 9)_
+- Young White Dragon _(CR 6)_
+- Yuan-ti Abomination _(CR 7)_
+- Yuan-ti Malison (Type 1) _(CR 3)_
+- Yuan-ti Malison (Type 2) _(CR 3)_
+- Yuan-ti Malison (Type 3) _(CR 3)_
+- Yuan-ti Pureblood _(CR 1)_
+- Zombie _(CR 1/4)_
+
+### Monster Manual (2025) (XMM) — 503
+
+- Aarakocra Aeromancer _(CR 4)_
+- Aarakocra Skirmisher _(CR 1/4)_
+- Aberrant Cultist _(CR 8)_
+- Aboleth _(CR {'cr': '10', 'xpLair': 7200})_
+- Abominable Yeti _(CR 9)_
+- Adult Black Dragon _(CR {'cr': '14', 'xpLair': 13000})_
+- Adult Blue Dragon _(CR {'cr': '16', 'xpLair': 18000})_
+- Adult Brass Dragon _(CR {'cr': '13', 'xpLair': 11500})_
+- Adult Bronze Dragon _(CR {'cr': '15', 'xpLair': 15000})_
+- Adult Copper Dragon _(CR {'cr': '14', 'xpLair': 13000})_
+- Adult Gold Dragon _(CR {'cr': '17', 'xpLair': 20000})_
+- Adult Green Dragon _(CR {'cr': '15', 'xpLair': 15000})_
+- Adult Red Dragon _(CR {'cr': '17', 'xpLair': 20000})_
+- Adult Silver Dragon _(CR {'cr': '16', 'xpLair': 18000})_
+- Adult White Dragon _(CR {'cr': '13', 'xpLair': 11500})_
+- Air Elemental _(CR 5)_
+- Allosaurus _(CR 2)_
+- Ancient Black Dragon _(CR {'cr': '21', 'xpLair': 41000})_
+- Ancient Blue Dragon _(CR {'cr': '23', 'xpLair': 62000})_
+- Ancient Brass Dragon _(CR {'cr': '20', 'xpLair': 33000})_
+- Ancient Bronze Dragon _(CR {'cr': '22', 'xpLair': 50000})_
+- Ancient Copper Dragon _(CR {'cr': '21', 'xpLair': 41000})_
+- Ancient Gold Dragon _(CR {'cr': '24', 'xpLair': 75000})_
+- Ancient Green Dragon _(CR {'cr': '22', 'xpLair': 50000})_
+- Ancient Red Dragon _(CR {'cr': '24', 'xpLair': 75000})_
+- Ancient Silver Dragon _(CR {'cr': '23', 'xpLair': 62000})_
+- Ancient White Dragon _(CR {'cr': '20', 'xpLair': 33000})_
+- Animal Lord _(CR 20)_
+- Animated Armor _(CR 1)_
+- Animated Broom _(CR 1/4)_
+- Animated Flying Sword _(CR 1/4)_
+- Animated Rug of Smothering _(CR 2)_
+- Ankheg _(CR 2)_
+- Ankylosaurus _(CR 3)_
+- Ape _(CR 1/2)_
+- Arcanaloth _(CR 12)_
+- Arch-hag _(CR {'cr': '21', 'xpLair': 41000})_
+- Archelon _(CR 4)_
+- Archmage _(CR 12)_
+- Archpriest _(CR 12)_
+- Assassin _(CR 8)_
+- Awakened Shrub _(CR 0)_
+- Awakened Tree _(CR 2)_
+- Axe Beak _(CR 1/4)_
+- Azer Pyromancer _(CR 6)_
+- Azer Sentinel _(CR 2)_
+- Baboon _(CR 0)_
+- Badger _(CR 0)_
+- Balor _(CR 19)_
+- Bandit _(CR 1/8)_
+- Bandit Captain _(CR 2)_
+- Bandit Crime Lord _(CR 11)_
+- Bandit Deceiver _(CR 7)_
+- Banshee _(CR 4)_
+- Barbed Devil _(CR 5)_
+- Barlgura _(CR 5)_
+- Basilisk _(CR 3)_
+- Bat _(CR 0)_
+- Bearded Devil _(CR 3)_
+- Behir _(CR 11)_
+- Beholder _(CR {'cr': '13', 'xpLair': 11500})_
+- Beholder Zombie _(CR 5)_
+- Berserker _(CR 2)_
+- Berserker Commander _(CR 8)_
+- Black Bear _(CR 1/2)_
+- Black Dragon Wyrmling _(CR 2)_
+- Black Pudding _(CR 4)_
+- Blink Dog _(CR 1/4)_
+- Blob of Annihilation _(CR 23)_
+- Blood Hawk _(CR 1/8)_
+- Blue Dragon Wyrmling _(CR 3)_
+- Blue Slaad _(CR 7)_
+- Boar _(CR 1/4)_
+- Bone Devil _(CR 9)_
+- Bone Naga _(CR 4)_
+- Brass Dragon Wyrmling _(CR 1)_
+- Brazen Gorgon _(CR 9)_
+- Bronze Dragon Wyrmling _(CR 2)_
+- Brown Bear _(CR 1)_
+- Bugbear Stalker _(CR 3)_
+- Bugbear Warrior _(CR 1)_
+- Bulette _(CR 5)_
+- Bulette Pup _(CR 2)_
+- Bullywug Bog Sage _(CR 4)_
+- Bullywug Warrior _(CR 1/4)_
+- Cambion _(CR 5)_
+- Camel _(CR 1/8)_
+- Carrion Crawler _(CR 2)_
+- Cat _(CR 0)_
+- Centaur Trooper _(CR 2)_
+- Centaur Warden _(CR 7)_
+- Chain Devil _(CR 8)_
+- Chasme _(CR 6)_
+- Chimera _(CR 6)_
+- Chuul _(CR 4)_
+- Clay Golem _(CR 9)_
+- Cloaker _(CR 8)_
+- Cloud Giant _(CR 9)_
+- Cockatrice _(CR 1/2)_
+- Cockatrice Regent _(CR 8)_
+- Colossus _(CR 25)_
+- Commoner _(CR 0)_
+- Constrictor Snake _(CR 1/4)_
+- Copper Dragon Wyrmling _(CR 1)_
+- Couatl _(CR 4)_
+- Crab _(CR 0)_
+- Crawling Claw _(CR 0)_
+- Crocodile _(CR 1/2)_
+- Cultist _(CR 1/8)_
+- Cultist Fanatic _(CR 2)_
+- Cultist Hierophant _(CR 10)_
+- Cyclops Oracle _(CR 10)_
+- Cyclops Sentry _(CR 6)_
+- Dao _(CR 11)_
+- Darkmantle _(CR 1/2)_
+- Death Cultist _(CR 8)_
+- Death Dog _(CR 1)_
+- Death Knight _(CR 17)_
+- Death Knight Aspirant _(CR 11)_
+- Death Slaad _(CR 10)_
+- Death Tyrant _(CR {'cr': '14', 'xpLair': 13000})_
+- Deer _(CR 0)_
+- Demilich _(CR {'cr': '18', 'xpLair': 22000})_
+- Deva _(CR 10)_
+- Dire Wolf _(CR 1)_
+- Dire Worg _(CR 10)_
+- Displacer Beast _(CR 3)_
+- Djinni _(CR 11)_
+- Doppelganger _(CR 3)_
+- Dracolich _(CR {'cr': '17', 'xpLair': 20000})_
+- Draft Horse _(CR 1/4)_
+- Dragon Turtle _(CR 17)_
+- Dretch _(CR 1/4)_
+- Drider _(CR 6)_
+- Druid _(CR 2)_
+- Dryad _(CR 1)_
+- Dust Mephit _(CR 1/2)_
+- Eagle _(CR 0)_
+- Earth Elemental _(CR 5)_
+- Efreeti _(CR 11)_
+- Elemental Cataclysm _(CR 22)_
+- Elemental Cultist _(CR 8)_
+- Elephant _(CR 4)_
+- Elk _(CR 1/4)_
+- Empyrean _(CR 23)_
+- Empyrean Iota _(CR 1)_
+- Erinyes _(CR 12)_
+- Ettercap _(CR 2)_
+- Ettin _(CR 4)_
+- Faerie Dragon Adult _(CR 2)_
+- Faerie Dragon Youth _(CR 1)_
+- Fiend Cultist _(CR 8)_
+- Fire Elemental _(CR 5)_
+- Fire Giant _(CR 9)_
+- Flameskull _(CR 4)_
+- Flaming Skeleton _(CR 3)_
+- Flesh Golem _(CR 5)_
+- Flumph _(CR 1/8)_
+- Flying Snake _(CR 1/8)_
+- Fomorian _(CR 8)_
+- Frog _(CR 0)_
+- Frost Giant _(CR 8)_
+- Galeb Duhr _(CR 6)_
+- Gargoyle _(CR 2)_
+- Gas Spore Fungus _(CR 1/2)_
+- Gelatinous Cube _(CR 2)_
+- Ghast _(CR 2)_
+- Ghast Gravecaller _(CR 6)_
+- Ghost _(CR 4)_
+- Ghoul _(CR 1)_
+- Giant Ape _(CR 7)_
+- Giant Axe Beak _(CR 5)_
+- Giant Badger _(CR 1/4)_
+- Giant Bat _(CR 1/4)_
+- Giant Boar _(CR 2)_
+- Giant Centipede _(CR 1/4)_
+- Giant Constrictor Snake _(CR 2)_
+- Giant Crab _(CR 1/8)_
+- Giant Crocodile _(CR 5)_
+- Giant Eagle _(CR 1)_
+- Giant Elk _(CR 2)_
+- Giant Fire Beetle _(CR 0)_
+- Giant Frog _(CR 1/4)_
+- Giant Goat _(CR 1/2)_
+- Giant Hyena _(CR 1)_
+- Giant Lizard _(CR 1/4)_
+- Giant Octopus _(CR 1)_
+- Giant Owl _(CR 1/4)_
+- Giant Rat _(CR 1/8)_
+- Giant Scorpion _(CR 3)_
+- Giant Seahorse _(CR 1/2)_
+- Giant Shark _(CR 5)_
+- Giant Spider _(CR 1)_
+- Giant Squid _(CR 6)_
+- Giant Toad _(CR 1)_
+- Giant Venomous Snake _(CR 1/4)_
+- Giant Vulture _(CR 1)_
+- Giant Wasp _(CR 1/2)_
+- Giant Weasel _(CR 1/8)_
+- Giant Wolf Spider _(CR 1/4)_
+- Gibbering Mouther _(CR 2)_
+- Githyanki Dracomancer _(CR 16)_
+- Githyanki Knight _(CR 8)_
+- Githyanki Warrior _(CR 3)_
+- Githzerai Monk _(CR 2)_
+- Githzerai Psion _(CR 12)_
+- Githzerai Zerth _(CR 6)_
+- Glabrezu _(CR 9)_
+- Gladiator _(CR 5)_
+- Gnoll Demoniac _(CR 8)_
+- Gnoll Fang of Yeenoghu _(CR 4)_
+- Gnoll Pack Lord _(CR 2)_
+- Gnoll Warrior _(CR 1/2)_
+- Goat _(CR 0)_
+- Goblin Boss _(CR 1)_
+- Goblin Hexer _(CR 3)_
+- Goblin Minion _(CR 1/8)_
+- Goblin Warrior _(CR 1/4)_
+- Gold Dragon Wyrmling _(CR 3)_
+- Gorgon _(CR 5)_
+- Goristro _(CR 17)_
+- Graveyard Revenant _(CR 7)_
+- Gray Ooze _(CR 1/2)_
+- Gray Slaad _(CR 9)_
+- Green Dragon Wyrmling _(CR 2)_
+- Green Hag _(CR 3)_
+- Green Slaad _(CR 8)_
+- Grell _(CR 3)_
+- Grick _(CR 2)_
+- Grick Ancient _(CR 7)_
+- Griffon _(CR 2)_
+- Grimlock _(CR 1/4)_
+- Guard _(CR 1/8)_
+- Guard Captain _(CR 4)_
+- Guardian Naga _(CR 10)_
+- Gulthias Blight _(CR 16)_
+- Half-Dragon _(CR 5)_
+- Harpy _(CR 1)_
+- Haunting Revenant _(CR 10)_
+- Hawk _(CR 0)_
+- Hell Hound _(CR 3)_
+- Helmed Horror _(CR 4)_
+- Hezrou _(CR 8)_
+- Hill Giant _(CR 5)_
+- Hippogriff _(CR 1)_
+- Hippopotamus _(CR 4)_
+- Hobgoblin Captain _(CR 3)_
+- Hobgoblin Warlord _(CR 6)_
+- Hobgoblin Warrior _(CR 1/2)_
+- Homunculus _(CR 0)_
+- Hook Horror _(CR 3)_
+- Horned Devil _(CR 11)_
+- Hunter Shark _(CR 2)_
+- Hydra _(CR 8)_
+- Hyena _(CR 0)_
+- Ice Devil _(CR 14)_
+- Ice Mephit _(CR 1/2)_
+- Imp _(CR 1)_
+- Incubus _(CR 4)_
+- Intellect Devourer _(CR 2)_
+- Invisible Stalker _(CR 6)_
+- Iron Golem _(CR 16)_
+- Jackal _(CR 0)_
+- Jackalwere _(CR 1/2)_
+- Juvenile Shadow Dragon _(CR 4)_
+- Kenku _(CR 1/4)_
+- Killer Whale _(CR 3)_
+- Knight _(CR 3)_
+- Kobold Warrior _(CR 1/8)_
+- Kraken _(CR {'cr': '23', 'xpLair': 62000})_
+- Kuo-toa _(CR 1/4)_
+- Kuo-toa Archpriest _(CR 6)_
+- Kuo-toa Monitor _(CR 3)_
+- Kuo-toa Whip _(CR 1)_
+- Lacedon Ghoul _(CR 1)_
+- Lamia _(CR 4)_
+- Larva _(CR 0)_
+- Lemure _(CR 0)_
+- Lich _(CR {'cr': '21', 'xpLair': 41000})_
+- Lion _(CR 1)_
+- Lizard _(CR 0)_
+- Lizardfolk Geomancer _(CR 2)_
+- Lizardfolk Sovereign _(CR 4)_
+- Mage _(CR 6)_
+- Mage Apprentice _(CR 2)_
+- Magma Mephit _(CR 1/2)_
+- Magmin _(CR 1/2)_
+- Mammoth _(CR 6)_
+- Manes _(CR 1/8)_
+- Manes Vaporspawn _(CR 1)_
+- Manticore _(CR 3)_
+- Marid _(CR 11)_
+- Marilith _(CR 16)_
+- Mastiff _(CR 1/8)_
+- Medusa _(CR 6)_
+- Merfolk Skirmisher _(CR 1/8)_
+- Merfolk Wavebender _(CR 6)_
+- Merrow _(CR 2)_
+- Mezzoloth _(CR 5)_
+- Mimic _(CR 2)_
+- Mind Flayer _(CR 7)_
+- Mind Flayer Arcanist _(CR 11)_
+- Minotaur Skeleton _(CR 2)_
+- Minotaur of Baphomet _(CR 3)_
+- Modron Duodrone _(CR 1/4)_
+- Modron Monodrone _(CR 1/8)_
+- Modron Pentadrone _(CR 2)_
+- Modron Quadrone _(CR 1)_
+- Modron Tridrone _(CR 1/2)_
+- Mud Mephit _(CR 1/4)_
+- Mule _(CR 1/8)_
+- Mummy _(CR 3)_
+- Mummy Lord _(CR {'cr': '15', 'xpLair': 15000})_
+- Myconid Adult _(CR 1/2)_
+- Myconid Sovereign _(CR 2)_
+- Myconid Spore Servant _(CR 1)_
+- Myconid Sprout _(CR 0)_
+- Nalfeshnee _(CR 13)_
+- Needle Blight _(CR 1/4)_
+- Night Hag _(CR 5)_
+- Nightmare _(CR 3)_
+- Noble _(CR 1/8)_
+- Noble Prodigy _(CR 10)_
+- Nothic _(CR 2)_
+- Nycaloth _(CR 9)_
+- Ochre Jelly _(CR 2)_
+- Octopus _(CR 0)_
+- Ogre _(CR 2)_
+- Ogre Zombie _(CR 2)_
+- Ogrillon Ogre _(CR 1)_
+- Oni _(CR 7)_
+- Otyugh _(CR 5)_
+- Owl _(CR 0)_
+- Owlbear _(CR 3)_
+- Panther _(CR 1/4)_
+- Pegasus _(CR 2)_
+- Performer _(CR 1/2)_
+- Performer Legend _(CR 10)_
+- Performer Maestro _(CR 6)_
+- Peryton _(CR 2)_
+- Phase Spider _(CR 3)_
+- Piercer _(CR 1/2)_
+- Piranha _(CR 0)_
+- Pirate _(CR 1)_
+- Pirate Admiral _(CR 12)_
+- Pirate Captain _(CR 6)_
+- Pit Fiend _(CR 20)_
+- Pixie _(CR 1/4)_
+- Pixie Wonderbringer _(CR 5)_
+- Planetar _(CR 16)_
+- Plesiosaurus _(CR 2)_
+- Polar Bear _(CR 2)_
+- Poltergeist _(CR 2)_
+- Pony _(CR 1/8)_
+- Priest _(CR 2)_
+- Priest Acolyte _(CR 1/4)_
+- Primeval Owlbear _(CR 7)_
+- Pseudodragon _(CR 1/4)_
+- Psychic Gray Ooze _(CR 1)_
+- Pteranodon _(CR 1/4)_
+- Purple Worm _(CR 15)_
+- Quaggoth _(CR 2)_
+- Quaggoth Thonot _(CR 3)_
+- Quasit _(CR 1)_
+- Questing Knight _(CR 12)_
+- Rakshasa _(CR 13)_
+- Rat _(CR 0)_
+- Raven _(CR 0)_
+- Red Dragon Wyrmling _(CR 4)_
+- Red Slaad _(CR 5)_
+- Reef Shark _(CR 1/2)_
+- Remorhaz _(CR 11)_
+- Revenant _(CR 5)_
+- Rhinoceros _(CR 2)_
+- Riding Horse _(CR 1/4)_
+- Roc _(CR 11)_
+- Roper _(CR 5)_
+- Rust Monster _(CR 1/2)_
+- Saber-Toothed Tiger _(CR 2)_
+- Sahuagin Baron _(CR 5)_
+- Sahuagin Priest _(CR 2)_
+- Sahuagin Warrior _(CR 1/2)_
+- Salamander _(CR 5)_
+- Salamander Fire Snake _(CR 1)_
+- Salamander Inferno Master _(CR 15)_
+- Satyr _(CR 1/2)_
+- Satyr Revelmaster _(CR 6)_
+- Scarecrow _(CR 1)_
+- Scorpion _(CR 0)_
+- Scout _(CR 1/2)_
+- Scout Captain _(CR 3)_
+- Sea Hag _(CR 2)_
+- Seahorse _(CR {'cr': '0', 'xp': 0})_
+- Shadow _(CR 1/2)_
+- Shadow Demon _(CR 4)_
+- Shadow Dragon _(CR {'cr': '13', 'xpLair': 11500})_
+- Shambling Mound _(CR 5)_
+- Shield Guardian _(CR 7)_
+- Shrieker Fungus _(CR {'cr': '0', 'xp': 0})_
+- Silver Dragon Wyrmling _(CR 2)_
+- Skeleton _(CR 1/4)_
+- Slaad Tadpole _(CR 1/8)_
+- Smoke Mephit _(CR 1/4)_
+- Solar _(CR 21)_
+- Spectator _(CR 3)_
+- Specter _(CR 1)_
+- Sphinx of Lore _(CR {'cr': '11', 'xpLair': 8400})_
+- Sphinx of Secrets _(CR 8)_
+- Sphinx of Valor _(CR {'cr': '17', 'xpLair': 20000})_
+- Sphinx of Wonder _(CR 1)_
+- Spider _(CR 0)_
+- Spined Devil _(CR 2)_
+- Spirit Naga _(CR 8)_
+- Sprite _(CR 1/4)_
+- Spy _(CR 1)_
+- Spy Master _(CR 10)_
+- Steam Mephit _(CR 1/4)_
+- Stirge _(CR 1/8)_
+- Stone Giant _(CR 7)_
+- Stone Golem _(CR 10)_
+- Storm Giant _(CR 13)_
+- Succubus _(CR 4)_
+- Swarm of Bats _(CR 1/4)_
+- Swarm of Crawling Claws _(CR 3)_
+- Swarm of Dretches _(CR 4)_
+- Swarm of Insects _(CR 1/2)_
+- Swarm of Larvae _(CR 1)_
+- Swarm of Lemures _(CR 3)_
+- Swarm of Piranhas _(CR 1)_
+- Swarm of Rats _(CR 1/4)_
+- Swarm of Ravens _(CR 1/4)_
+- Swarm of Stirges _(CR 2)_
+- Swarm of Venomous Snakes _(CR 2)_
+- Tarrasque _(CR 30)_
+- Thri-kreen Marauder _(CR 1)_
+- Thri-kreen Psion _(CR 8)_
+- Tiger _(CR 1)_
+- Tough _(CR 1/2)_
+- Tough Boss _(CR 4)_
+- Treant _(CR 9)_
+- Tree Blight _(CR 7)_
+- Triceratops _(CR 5)_
+- Troglodyte _(CR 1/4)_
+- Troll _(CR 5)_
+- Troll Limb _(CR 1/2)_
+- Twig Blight _(CR 1/8)_
+- Tyrannosaurus Rex _(CR 8)_
+- Ultroloth _(CR 13)_
+- Umber Hulk _(CR 5)_
+- Unicorn _(CR 5)_
+- Vampire _(CR {'cr': '13', 'xpLair': 11500})_
+- Vampire Familiar _(CR 3)_
+- Vampire Nightbringer _(CR 8)_
+- Vampire Spawn _(CR 5)_
+- Vampire Umbral Lord _(CR {'cr': '15', 'xpLair': 15000})_
+- Venomous Snake _(CR 1/8)_
+- Vine Blight _(CR 1/2)_
+- Violet Fungus _(CR 1/4)_
+- Violet Fungus Necrohulk _(CR 7)_
+- Vrock _(CR 6)_
+- Vulture _(CR 0)_
+- Warhorse _(CR 1/2)_
+- Warhorse Skeleton _(CR 1/2)_
+- Warrior Commander _(CR 10)_
+- Warrior Infantry _(CR 1/8)_
+- Warrior Veteran _(CR 3)_
+- Water Elemental _(CR 5)_
+- Water Weird _(CR 3)_
+- Weasel _(CR 0)_
+- Werebear _(CR 5)_
+- Wereboar _(CR 4)_
+- Wererat _(CR 2)_
+- Weretiger _(CR 4)_
+- Werewolf _(CR 3)_
+- White Dragon Wyrmling _(CR 2)_
+- Wight _(CR 3)_
+- Will-o'-Wisp _(CR 2)_
+- Winged Kobold _(CR 1/4)_
+- Winter Wolf _(CR 3)_
+- Wolf _(CR 1/4)_
+- Worg _(CR 1/2)_
+- Wraith _(CR 5)_
+- Wyvern _(CR 6)_
+- Xorn _(CR 5)_
+- Yeti _(CR 3)_
+- Yochlol _(CR 10)_
+- Young Black Dragon _(CR 7)_
+- Young Blue Dragon _(CR 9)_
+- Young Brass Dragon _(CR 6)_
+- Young Bronze Dragon _(CR 8)_
+- Young Copper Dragon _(CR 7)_
+- Young Gold Dragon _(CR 10)_
+- Young Green Dragon _(CR 8)_
+- Young Red Dragon _(CR 10)_
+- Young Remorhaz _(CR 5)_
+- Young Silver Dragon _(CR 9)_
+- Young White Dragon _(CR 6)_
+- Yuan-ti Abomination _(CR 7)_
+- Yuan-ti Infiltrator _(CR 1)_
+- Yuan-ti Malison (Type 1) _(CR 3)_
+- Yuan-ti Malison (Type 2) _(CR 3)_
+- Yuan-ti Malison (Type 3) _(CR 3)_
+- Zombie _(CR 1/4)_
+
+### Monstrous Compendium Volume 1: Spelljammer Creatures (MCV1SC) — 10
+
+- Asteroid Spider _(CR 15)_
+- Clockwork Horror _(CR 2)_
+- Eldritch Lich _(CR 15)_
+- Fractine _(CR 9)_
+- Gadabout _(CR 1/8)_
+- Goon Balloon _(CR 1/8)_
+- Nightmare Beast _(CR 16)_
+- Puppeteer Parasite _(CR 3)_
+- Star Lancer _(CR 2)_
+- Yggdrasti _(CR 7)_
+
+### Monstrous Compendium Volume 4: Eldraine Creatures (MCV4EC) — 25
+
+- Archon of Boundaries _(CR 15)_
+- Beanstalk Wurm _(CR 18)_
+- Deathless Rider _(CR 5)_
+- Dunbarrow Witch _(CR 5)_
+- Faerie Borrower _(CR 1/2)_
+- Faerie Pathlighter _(CR 2)_
+- Faerie Pest _(CR 1)_
+- Gingerbrute _(CR 1/2)_
+- Goose Mother _(CR 7)_
+- High Fae Impostor _(CR 11)_
+- High Fae Kindguard _(CR 12)_
+- High Fae Mage _(CR 12)_
+- High Fae Noble _(CR 13)_
+- Knight of Eldraine _(CR 3)_
+- Nightmare Haunt _(CR 5)_
+- Ogre Chitterlord _(CR 3)_
+- Redtooth Werefox _(CR 3)_
+- Sewer King _(CR 2)_
+- Snapping Hydra _(CR 11)_
+- Specter of Night _(CR 12)_
+- Sweettooth Horror _(CR 4)_
+- Tempest Hart _(CR 11)_
+- Treefolk _(CR 11)_
+- Witchkite _(CR 15)_
+- Witchstalker _(CR 6)_
+
+### Mordenkainen Presents: Monsters of the Multiverse (MPMM) — 261
+
+- Abjurer Wizard _(CR 9)_
+- Adult Kruthik _(CR 2)_
+- Adult Oblex _(CR 5)_
+- Air Elemental Myrmidon _(CR 7)_
+- Alhoon _(CR 10)_
+- Alkilith _(CR 11)_
+- Allip _(CR 5)_
+- Amnizu _(CR 18)_
+- Angry Sorrowsworn _(CR 13)_
+- Annis Hag _(CR {'cr': '6', 'coven': '8'})_
+- Apprentice Wizard _(CR 1/4)_
+- Archdruid _(CR 12)_
+- Archer _(CR 3)_
+- Armanite _(CR 7)_
+- Astral Dreadnought _(CR 21)_
+- Aurochs _(CR 2)_
+- Autumn Eladrin _(CR 10)_
+- Babau _(CR 4)_
+- Bael _(CR 19)_
+- Balhannoth _(CR 11)_
+- Banderhobb _(CR 5)_
+- Baphomet _(CR 23)_
+- Bard _(CR 2)_
+- Barghest _(CR 4)_
+- Berbalang _(CR 2)_
+- Bheur Hag _(CR {'cr': '7', 'coven': '9'})_
+- Black Abishai _(CR 7)_
+- Blackguard _(CR 8)_
+- Blue Abishai _(CR 17)_
+- Bodak _(CR 6)_
+- Boggle _(CR 1/8)_
+- Boneclaw _(CR 12)_
+- Brontosaurus _(CR 5)_
+- Bulezau _(CR 3)_
+- Cadaver Collector _(CR 14)_
+- Canoloth _(CR 8)_
+- Catoblepas _(CR 5)_
+- Cave Fisher _(CR 3)_
+- Champion _(CR 9)_
+- Chitine _(CR 1/2)_
+- Choker _(CR 1)_
+- Choldrith _(CR 3)_
+- Clockwork Bronze Scout _(CR 1)_
+- Clockwork Iron Cobra _(CR 4)_
+- Clockwork Oaken Bolter _(CR 5)_
+- Clockwork Stone Defender _(CR 4)_
+- Cloud Giant Smiling One _(CR 11)_
+- Conjurer Wizard _(CR 6)_
+- Corpse Flower _(CR 8)_
+- Cranium Rat _(CR 0)_
+- Darkling _(CR 1/2)_
+- Darkling Elder _(CR 2)_
+- Death Kiss _(CR 10)_
+- Deathlock _(CR 4)_
+- Deathlock Mastermind _(CR 8)_
+- Deathlock Wight _(CR 3)_
+- Deep Rothé _(CR 1/4)_
+- Deep Scion _(CR 3)_
+- Deinonychus _(CR 1)_
+- Demogorgon _(CR 26)_
+- Derro _(CR 1/4)_
+- Derro Savant _(CR 3)_
+- Devourer _(CR 13)_
+- Dhergoloth _(CR 7)_
+- Dimetrodon _(CR 1/4)_
+- Dire Troll _(CR 13)_
+- Diviner Wizard _(CR 8)_
+- Dolphin _(CR 1/8)_
+- Dolphin Delighter _(CR 3)_
+- Draegloth _(CR 7)_
+- Drow Arachnomancer _(CR 13)_
+- Drow Favored Consort _(CR 18)_
+- Drow House Captain _(CR 9)_
+- Drow Inquisitor _(CR 14)_
+- Drow Matron Mother _(CR 20)_
+- Drow Shadowblade _(CR 11)_
+- Duergar Despot _(CR 12)_
+- Duergar Hammerer _(CR 2)_
+- Duergar Kavalrachni _(CR 2)_
+- Duergar Mind Master _(CR 2)_
+- Duergar Screamer _(CR 3)_
+- Duergar Soulblade _(CR 1)_
+- Duergar Stone Guard _(CR 2)_
+- Duergar Warlord _(CR 6)_
+- Duergar Xarrorn _(CR 2)_
+- Dybbuk _(CR 4)_
+- Earth Elemental Myrmidon _(CR 7)_
+- Eidolon _(CR 12)_
+- Elder Brain _(CR 14)_
+- Elder Oblex _(CR 10)_
+- Elder Tempest _(CR 23)_
+- Enchanter Wizard _(CR 5)_
+- Evoker Wizard _(CR 9)_
+- Female Steeder _(CR 1)_
+- Fire Elemental Myrmidon _(CR 7)_
+- Fire Giant Dreadnought _(CR 14)_
+- Firenewt Warlock of Imix _(CR 1)_
+- Firenewt Warrior _(CR 1/2)_
+- Flail Snail _(CR 3)_
+- Flind _(CR 9)_
+- Fraz-Urb'luu _(CR {'cr': '23', 'lair': '24'})_
+- Froghemoth _(CR 10)_
+- Frost Giant Everlasting One _(CR 12)_
+- Frost Salamander _(CR 9)_
+- Gauth _(CR 6)_
+- Gazer _(CR 1/2)_
+- Geryon _(CR {'cr': '22', 'lair': '23'})_
+- Giant Strider _(CR 1)_
+- Giff _(CR 3)_
+- Girallon _(CR 4)_
+- Githyanki Gish _(CR 10)_
+- Githyanki Kith'rak _(CR 12)_
+- Githyanki Supreme Commander _(CR 14)_
+- Githzerai Anarch _(CR {'cr': '16', 'lair': '17'})_
+- Githzerai Enlightened _(CR 10)_
+- Gnoll Flesh Gnawer _(CR 1)_
+- Gnoll Hunter _(CR 1/2)_
+- Gnoll Witherling _(CR 1/4)_
+- Gray Render _(CR 12)_
+- Graz'zt _(CR 24)_
+- Green Abishai _(CR 15)_
+- Grung _(CR 1/4)_
+- Grung Elite Warrior _(CR 2)_
+- Grung Wildling _(CR 1)_
+- Guard Drake _(CR 2)_
+- Hadrosaurus _(CR 1/4)_
+- Hellfire Engine _(CR 16)_
+- Hobgoblin Devastator _(CR 4)_
+- Hobgoblin Iron Shadow _(CR 2)_
+- Howler _(CR 8)_
+- Hungry Sorrowsworn _(CR 11)_
+- Hutijin _(CR 21)_
+- Hydroloth _(CR 9)_
+- Illusionist Wizard _(CR 3)_
+- Juiblex _(CR {'cr': '23', 'lair': '24'})_
+- Ki-rin _(CR 12)_
+- Kobold Dragonshield _(CR 1)_
+- Kobold Inventor _(CR 1/4)_
+- Kobold Scale Sorcerer _(CR 1)_
+- Korred _(CR 7)_
+- Kraken Priest _(CR 5)_
+- Kruthik Hive Lord _(CR 5)_
+- Leucrotta _(CR 3)_
+- Leviathan _(CR 20)_
+- Lonely Sorrowsworn _(CR 9)_
+- Lost Sorrowsworn _(CR 7)_
+- Male Steeder _(CR 1/4)_
+- Martial Arts Adept _(CR 3)_
+- Marut _(CR 25)_
+- Master Thief _(CR 5)_
+- Maurezhi _(CR 7)_
+- Maw Demon _(CR 1)_
+- Meazel _(CR 1)_
+- Meenlock _(CR 2)_
+- Merregon _(CR 4)_
+- Merrenoloth _(CR 3)_
+- Mindwitness _(CR 5)_
+- Moloch _(CR 21)_
+- Molydeus _(CR 21)_
+- Morkoth _(CR {'cr': '11', 'lair': '12'})_
+- Mouth of Grolantor _(CR 6)_
+- Nabassu _(CR 15)_
+- Nagpa _(CR 17)_
+- Narzugon _(CR 13)_
+- Necromancer Wizard _(CR 9)_
+- Neogi _(CR 3)_
+- Neogi Hatchling _(CR 1/8)_
+- Neogi Master _(CR 4)_
+- Neothelid _(CR 13)_
+- Nightwalker _(CR 20)_
+- Nilbog _(CR 1)_
+- Nupperibo _(CR 1/2)_
+- Oblex Spawn _(CR 1/4)_
+- Ogre Battering Ram _(CR 4)_
+- Ogre Bolt Launcher _(CR 2)_
+- Ogre Chain Brute _(CR 3)_
+- Ogre Howdah _(CR 2)_
+- Oinoloth _(CR 12)_
+- Orcus _(CR 26)_
+- Orthon _(CR 10)_
+- Ox _(CR 1/4)_
+- Phoenix _(CR 16)_
+- Quetzalcoatlus _(CR 2)_
+- Quickling _(CR 1)_
+- Red Abishai _(CR 19)_
+- Redcap _(CR 3)_
+- Retriever _(CR 14)_
+- Rot Troll _(CR 9)_
+- Rutterkin _(CR 2)_
+- Sacred Statue
+- Sea Spawn _(CR 1)_
+- Shadar-kai Gloom Weaver _(CR 9)_
+- Shadar-kai Shadow Dancer _(CR 7)_
+- Shadar-kai Soul Monger _(CR 11)_
+- Shadow Mastiff _(CR 2)_
+- Shadow Mastiff Alpha _(CR 3)_
+- Shoosuva _(CR 8)_
+- Sibriex _(CR 18)_
+- Skulk _(CR 1/2)_
+- Skull Lord _(CR 15)_
+- Slithering Tracker _(CR 3)_
+- Spawn of Kyuss _(CR 5)_
+- Spirit Troll _(CR 11)_
+- Spring Eladrin _(CR 10)_
+- Star Spawn Grue _(CR 1/4)_
+- Star Spawn Hulk _(CR 10)_
+- Star Spawn Larva Mage _(CR 16)_
+- Star Spawn Mangler _(CR 5)_
+- Star Spawn Seer _(CR 13)_
+- Steel Predator _(CR 16)_
+- Stegosaurus _(CR 4)_
+- Stench Kow _(CR 1/2)_
+- Stone Cursed _(CR 1)_
+- Stone Giant Dreamwalker _(CR 10)_
+- Storm Giant Quintessent _(CR 16)_
+- Summer Eladrin _(CR 10)_
+- Swarm of Cranium Rats _(CR 5)_
+- Swarm of Rot Grubs _(CR 1/2)_
+- Swashbuckler _(CR 3)_
+- Sword Wraith Commander _(CR 8)_
+- Sword Wraith Warrior _(CR 3)_
+- Tanarukk _(CR 5)_
+- Thorny Vegepygmy _(CR 1)_
+- Titivilus _(CR 16)_
+- Tlincalli _(CR 5)_
+- Tortle _(CR 1/4)_
+- Tortle Druid _(CR 2)_
+- Transmuter Wizard _(CR 5)_
+- Trapper _(CR 3)_
+- Ulitharid _(CR 9)_
+- Vampiric Mist _(CR 3)_
+- Vargouille _(CR 1)_
+- Vegepygmy _(CR 1/4)_
+- Vegepygmy Chief _(CR 2)_
+- Velociraptor _(CR 1/4)_
+- Venom Troll _(CR 7)_
+- War Priest _(CR 9)_
+- Warlock of the Archfey _(CR 4)_
+- Warlock of the Fiend _(CR 7)_
+- Warlock of the Great Old One _(CR 6)_
+- Warlord _(CR 12)_
+- Wastrilith _(CR 13)_
+- Water Elemental Myrmidon _(CR 7)_
+- White Abishai _(CR 6)_
+- Winter Eladrin _(CR 10)_
+- Wood Woad _(CR 5)_
+- Wretched Sorrowsworn _(CR 1/4)_
+- Xvart _(CR 1/8)_
+- Xvart Warlock of Raxivort _(CR 1)_
+- Yagnoloth _(CR 11)_
+- Yeenoghu _(CR {'cr': '24', 'lair': '25'})_
+- Yeth Hound _(CR 4)_
+- Young Kruthik _(CR 1/8)_
+- Yuan-ti Anathema _(CR 12)_
+- Yuan-ti Broodguard _(CR 2)_
+- Yuan-ti Mind Whisperer _(CR 4)_
+- Yuan-ti Nightmare Speaker _(CR 4)_
+- Yuan-ti Pit Master _(CR 5)_
+- Zaratan _(CR 22)_
+- Zariel _(CR 26)_
+- Zuggtmoy _(CR 23)_
+
+### Mordenkainen's Tome of Foes (MTF) — 140
+
+- Abyssal Wretch _(CR 1/4)_
+- Adult Kruthik _(CR 2)_
+- Adult Oblex _(CR 5)_
+- Air Elemental Myrmidon _(CR 7)_
+- Alkilith _(CR 11)_
+- Allip _(CR 5)_
+- Amnizu _(CR 18)_
+- Armanite _(CR 7)_
+- Astral Dreadnought _(CR 21)_
+- Autumn Eladrin _(CR 10)_
+- Bael _(CR 19)_
+- Balhannoth _(CR 11)_
+- Baphomet _(CR 23)_
+- Berbalang _(CR 2)_
+- Black Abishai _(CR 7)_
+- Blue Abishai _(CR 17)_
+- Boneclaw _(CR 12)_
+- Bronze Scout _(CR 1)_
+- Bulezau _(CR 3)_
+- Cadaver Collector _(CR 14)_
+- Canoloth _(CR 8)_
+- Choker _(CR 1)_
+- Corpse Flower _(CR 8)_
+- Deathlock _(CR 4)_
+- Deathlock Mastermind _(CR 8)_
+- Deathlock Wight _(CR 3)_
+- Demogorgon _(CR 26)_
+- Derro _(CR 1/4)_
+- Derro Savant _(CR 3)_
+- Dhergoloth _(CR 7)_
+- Dire Troll _(CR 13)_
+- Drow Arachnomancer _(CR 13)_
+- Drow Favored Consort _(CR 18)_
+- Drow House Captain _(CR 9)_
+- Drow Inquisitor _(CR 14)_
+- Drow Matron Mother _(CR 20)_
+- Drow Shadowblade _(CR 11)_
+- Duergar Despot _(CR 12)_
+- Duergar Hammerer _(CR 2)_
+- Duergar Kavalrachni _(CR 2)_
+- Duergar Mind Master _(CR 2)_
+- Duergar Screamer _(CR 3)_
+- Duergar Soulblade _(CR 1)_
+- Duergar Stone Guard _(CR 2)_
+- Duergar Warlord _(CR 6)_
+- Duergar Xarrorn _(CR 2)_
+- Dybbuk _(CR 4)_
+- Earth Elemental Myrmidon _(CR 7)_
+- Eidolon _(CR 12)_
+- Elder Oblex _(CR 10)_
+- Elder Tempest _(CR 23)_
+- Female Steeder _(CR 1)_
+- Fire Elemental Myrmidon _(CR 7)_
+- Fraz-Urb'luu _(CR {'cr': '23', 'lair': '24'})_
+- Frost Salamander _(CR 9)_
+- Geryon _(CR 22)_
+- Giff _(CR 3)_
+- Githyanki Gish _(CR 10)_
+- Githyanki Kith'rak _(CR 12)_
+- Githyanki Supreme Commander _(CR 14)_
+- Githzerai Anarch _(CR 16)_
+- Githzerai Enlightened _(CR 10)_
+- Gloom Weaver _(CR 9)_
+- Gray Render _(CR 12)_
+- Graz'zt _(CR 24)_
+- Green Abishai _(CR 15)_
+- Hellfire Engine _(CR 16)_
+- Howler _(CR 8)_
+- Hutijin _(CR 21)_
+- Hydroloth _(CR 9)_
+- Iron Cobra _(CR 4)_
+- Juiblex _(CR 23)_
+- Kruthik Hive Lord _(CR 5)_
+- Leviathan _(CR 20)_
+- Male Steeder _(CR 1/4)_
+- Marut _(CR 25)_
+- Maurezhi _(CR 7)_
+- Meazel _(CR 1)_
+- Merregon _(CR 4)_
+- Merrenoloth _(CR 3)_
+- Moloch _(CR 21)_
+- Molydeus _(CR 21)_
+- Nabassu _(CR 15)_
+- Nagpa _(CR 17)_
+- Narzugon _(CR 13)_
+- Nightwalker _(CR 20)_
+- Nupperibo _(CR 1/2)_
+- Oaken Bolter _(CR 5)_
+- Oblex Spawn _(CR 1/4)_
+- Ogre Battering Ram _(CR 4)_
+- Ogre Bolt Launcher _(CR 2)_
+- Ogre Chain Brute _(CR 3)_
+- Ogre Howdah _(CR 2)_
+- Oinoloth _(CR 12)_
+- Orcus _(CR 26)_
+- Orthon _(CR 10)_
+- Phoenix _(CR 16)_
+- Red Abishai _(CR 19)_
+- Retriever _(CR 14)_
+- Rot Troll _(CR 9)_
+- Rutterkin _(CR 2)_
+- Sacred Statue
+- Shadow Dancer _(CR 7)_
+- Sibriex _(CR 18)_
+- Skulk _(CR 1/2)_
+- Skull Lord _(CR 15)_
+- Soul Monger _(CR 11)_
+- Spirit Troll _(CR 11)_
+- Spring Eladrin _(CR 10)_
+- Star Spawn Grue _(CR 1/4)_
+- Star Spawn Hulk _(CR 10)_
+- Star Spawn Larva Mage _(CR 16)_
+- Star Spawn Mangler _(CR 5)_
+- Star Spawn Seer _(CR 13)_
+- Steel Predator _(CR 16)_
+- Stone Cursed _(CR 1)_
+- Stone Defender _(CR 4)_
+- Summer Eladrin _(CR 10)_
+- Sword Wraith Commander _(CR 8)_
+- Sword Wraith Warrior _(CR 3)_
+- The Angry _(CR 13)_
+- The Hungry _(CR 11)_
+- The Lonely _(CR 9)_
+- The Lost _(CR 7)_
+- The Wretched _(CR 1/4)_
+- Titivilus _(CR 16)_
+- Tortle _(CR 1/4)_
+- Tortle Druid _(CR 2)_
+- Vampiric Mist _(CR 3)_
+- Venom Troll _(CR 7)_
+- Wastrilith _(CR 13)_
+- Water Elemental Myrmidon _(CR 7)_
+- White Abishai _(CR 6)_
+- Winter Eladrin _(CR 10)_
+- Yagnoloth _(CR 11)_
+- Yeenoghu _(CR 24)_
+- Young Kruthik _(CR 1/8)_
+- Zaratan _(CR 22)_
+- Zariel _(CR 26)_
+- Zuggtmoy _(CR 23)_
+
+### Morte's Planar Parade (MPP) — 54
+
+- Adult Time Dragon _(CR {'cr': '18', 'lair': '19'})_
+- Ancient Time Dragon _(CR {'cr': '26', 'lair': '27'})_
+- Athar Null _(CR 5)_
+- Aurumach Rilmani _(CR 17)_
+- Avoral Guardinal _(CR 9)_
+- Baernaloth _(CR 17)_
+- Bariaur Wanderer _(CR 3)_
+- Bleak Cabal Void Soother _(CR 3)_
+- Cranium Rat Squeaker _(CR 0)_
+- Cranium Rat Squeaker Swarm _(CR 5)_
+- Cuprilach Rilmani _(CR 12)_
+- Dabus _(CR 2)_
+- Darkweaver _(CR 10)_
+- Decaton Modron _(CR 8)_
+- Doomguard Doom Lord _(CR 12)_
+- Doomguard Rot Blade _(CR 6)_
+- Eater of Knowledge _(CR 6)_
+- Equinal Guardinal _(CR 6)_
+- Farastu Demodand _(CR 11)_
+- Fated Shaker _(CR 5)_
+- Ferrumach Rilmani _(CR 9)_
+- Fraternity of Order Law Bender _(CR 9)_
+- Githzerai Futurist _(CR 9)_
+- Githzerai Traveler _(CR 3)_
+- Githzerai Uniter _(CR 7)_
+- Hands of Havoc Fire Starter _(CR 4)_
+- Harmonium Captain _(CR 8)_
+- Harmonium Peacekeeper _(CR 3)_
+- Heralds of Dust Remnant _(CR 4)_
+- Hexton Modron _(CR 13)_
+- Hound Archon _(CR 4)_
+- Kelubar Demodand _(CR 13)_
+- Kolyarut _(CR 20)_
+- Lantern Archon _(CR 2)_
+- Maelephant _(CR 10)_
+- Mercykiller Bloodhound _(CR 7)_
+- Mind's Eye Matter Smith _(CR 4)_
+- Musteval Guardinal _(CR 2)_
+- Nonaton Modron _(CR 10)_
+- Octon Modron _(CR 11)_
+- Planar Incarnate _(CR 22)_
+- Razorvine Blight _(CR 1)_
+- Septon Modron _(CR 12)_
+- Shator Demodand _(CR 16)_
+- Shemeshka _(CR 14)_
+- Society of Sensation Muse _(CR 3)_
+- Sunfly _(CR 0)_
+- Swarm of Sunflies _(CR 1)_
+- Time Dragon Wyrmling _(CR 5)_
+- Transcendent Order Conduit _(CR 8)_
+- Transcendent Order Instinct _(CR 3)_
+- Vargouille Reflection _(CR 1)_
+- Warden Archon _(CR 8)_
+- Young Time Dragon _(CR 11)_
+
+### Mythic Odysseys of Theros (MOT) — 51
+
+- Abhorrent Overlord _(CR 9)_
+- Akroan Hoplite _(CR 3)_
+- Alseid _(CR 1)_
+- Anvilwrought Raptor _(CR 1/2)_
+- Aphemia _(CR 5)_
+- Arasta _(CR 21)_
+- Archon of Falling Stars _(CR 12)_
+- Ashen Rider _(CR 16)_
+- Blood-Toll Harpy _(CR 1/8)_
+- Broken King Antigonos _(CR 3)_
+- Bronze Sable _(CR 1)_
+- Burnished Hart _(CR 2)_
+- Colossus of Akros _(CR 23)_
+- Doomwake Giant _(CR 11)_
+- Eater of Hope _(CR 6)_
+- Fleecemane Lion _(CR 3)_
+- Flitterstep Eidolon _(CR 3)_
+- Ghostblade Eidolon _(CR 5)_
+- Gold-Forged Sentinel _(CR 5)_
+- Hippocamp _(CR 1/2)_
+- Hundred-Handed One _(CR 15)_
+- Hythonia _(CR 17)_
+- Ironscale Hydra _(CR 12)_
+- Lampad _(CR 3)_
+- Leonin Iconoclast _(CR 5)_
+- Medusa
+- Meletian Hoplite _(CR 3)_
+- Naiad _(CR 2)_
+- Nightmare Shepherd _(CR 11)_
+- Nyx-Fleece Ram _(CR 1)_
+- Oracle _(CR 4)_
+- Oread _(CR 4)_
+- Phylaskia _(CR 9)_
+- Polukranos _(CR 19)_
+- Returned Drifter _(CR 1/4)_
+- Returned Kakomantis _(CR 4)_
+- Returned Palamnite _(CR 4)_
+- Returned Sentry _(CR 1)_
+- Satyr Reveler _(CR 1)_
+- Satyr Thornbearer _(CR 2)_
+- Setessan Hoplite _(CR 4)_
+- Theran Chimera _(CR 7)_
+- Triton Master of Waves _(CR 8)_
+- Triton Shorestalker _(CR 2)_
+- Tromokratis _(CR 26)_
+- Two-Headed Cerberus _(CR 2)_
+- Typhon _(CR 15)_
+- Underworld Cerberus _(CR 6)_
+- Winged Bull _(CR 4)_
+- Winged Lion _(CR 4)_
+- Woe Strider _(CR 7)_
+
+### Netheril's Fall (NF) — 6
+
+- Caldron Magen _(CR 4)_
+- Eldritch Eddy _(CR 6)_
+- Phaerimm Elder _(CR 14)_
+- Phaerimm Scout _(CR 2)_
+- Terran Magen _(CR 8)_
+- Virvos Magen _(CR 6)_
+
+### Player's Handbook (2014) (PHB) — 5
+
+- Animated Object (Huge)
+- Animated Object (Large)
+- Animated Object (Medium)
+- Animated Object (Small)
+- Animated Object (Tiny)
+
+### Player's Handbook (2024) (XPHB) — 15
+
+- Aberrant Spirit
+- Animated Object
+- Beast of the Land
+- Beast of the Sea
+- Beast of the Sky
+- Bestial Spirit
+- Celestial Spirit
+- Construct Spirit
+- Draconic Spirit
+- Elemental Spirit
+- Fey Spirit
+- Fiendish Spirit
+- Giant Insect
+- Otherworldly Steed
+- Undead Spirit
+
+### Project_Lamordia (PL) — 14
+
+- Adam _(CR 12)_
+- CEO Viktra Mordenheim _(CR 7)_
+- Created _(CR 5)_
+- Echo _(CR 1/2)_
+- Empty Echo _(CR 1/2)_
+- Gerta von Aubrecker _(CR 5)_
+- Hendrik von Aubrecker _(CR 3)_
+- K-Nine _(CR 1)_
+- Lamordian Evangelist _(CR {'cr': 'None', 'xp': 0})_
+- Lamordian Infiltrator _(CR {'cr': 'None', 'xp': 0})_
+- Lamordian Mercenary _(CR {'cr': 'None', 'xp': 0})_
+- Lamordian Technician _(CR {'cr': 'None', 'xp': 0})_
+- Rudolph von Aubrecker _(CR 6)_
+- Shattered Echo _(CR 3)_
+
+### Ravenloft: The Horrors Within (RHW) — 70
+
+- Aberrant Death's Head _(CR 1)_
+- Ankhtepot _(CR {'cr': '17', 'xpLair': 20000})_
+- Azalin Rex _(CR {'cr': '23', 'xpLair': 62000})_
+- Bodytaker Plant _(CR 7)_
+- Bodytaker Podling _(CR 1/2)_
+- Boneless _(CR 1)_
+- Brain in a Jar _(CR 3)_
+- Carrion Stalker _(CR 3)_
+- Carrionette _(CR 1)_
+- Chakuna _(CR {'cr': '11', 'xpLair': 8400})_
+- Cthulhu _(CR {'cr': '25', 'xpLair': 90000})_
+- Death's Head _(CR 1/2)_
+- Death's Head Tree _(CR 4)_
+- Dullahan _(CR 10)_
+- Ebonbane _(CR {'cr': '13', 'xpLair': 11500})_
+- Elder Thing _(CR 14)_
+- Ez d'Avenir _(CR 8)_
+- Gallows Speaker _(CR 6)_
+- Gennifer Weathermay-Foxgrove _(CR 3)_
+- Greater Star Spawn Emissary _(CR {'cr': '21', 'xpLair': 41000})_
+- Gremishka _(CR 2)_
+- Gug _(CR 12)_
+- Harkon Lukas _(CR {'cr': '14', 'xpLair': 13000})_
+- Hazlik _(CR {'cr': '14', 'xpLair': 13000})_
+- Inquisitor of the Mind Fire _(CR 8)_
+- Inquisitor of the Sword _(CR 8)_
+- Inquisitor of the Tome _(CR 8)_
+- Ivan Dilisnya _(CR {'cr': '5', 'xpLair': 2300})_
+- Ivana Boritsi _(CR {'cr': '5', 'xpLair': 2300})_
+- Jiangshi _(CR 9)_
+- Laurie Weathermay-Foxgrove _(CR 3)_
+- Lesser Star Spawn Emissary _(CR {'cr': '19', 'xpLair': 25000})_
+- Lord Soth of Sithicus _(CR {'cr': '19', 'xpLair': 25000})_
+- Loup Garou _(CR 13)_
+- Madam Eva _(CR 10)_
+- Mi-Go _(CR 9)_
+- Mist Horror _(CR 3)_
+- Mist Wanderer _(CR 3)_
+- Mordenheim's Monster _(CR 12)_
+- Mother Lorinda _(CR {'cr': '8', 'xpLair': 5000})_
+- Necrichor _(CR 7)_
+- Nightgaunt _(CR 8)_
+- Petrifying Death's Head _(CR 1)_
+- Priest of Osybus _(CR 6)_
+- Ramya Vasavadan _(CR {'cr': '15', 'xpLair': 15000})_
+- Reanimated Companion
+- Relentless Juggernaut _(CR 12)_
+- Relentless Nightmare _(CR 11)_
+- Relentless Slasher _(CR 8)_
+- Rudolph van Richten _(CR 5)_
+- Saidra d'Honaire _(CR {'cr': '9', 'xpLair': 5900})_
+- Shoggoth _(CR 11)_
+- Strahd Skeleton _(CR 4)_
+- Strahd von Zarovich _(CR {'cr': '15', 'xpLair': 15000})_
+- Strigoi _(CR 4)_
+- Swarm of Gremishkas _(CR 2)_
+- Swarm of Infesting Insects _(CR 2)_
+- Swarm of Ravenous Insects _(CR 3)_
+- Swarm of Zombie Limbs _(CR 1)_
+- Unspeakable Horror _(CR 8)_
+- Vampire Mind Flayer _(CR 5)_
+- Vampire Nosferatu _(CR 8)_
+- Viktra Mordenheim _(CR {'cr': '7', 'xpLair': 3900})_
+- Vladeska Drakov _(CR {'cr': '12', 'xpLair': 10000})_
+- Waxwork _(CR 3)_
+- Wereraven _(CR 2)_
+- Wilfred Godefroy _(CR {'cr': '6', 'xpLair': 2900})_
+- Yithian _(CR 15)_
+- Zombie Clot _(CR 6)_
+- Zombie Plague Spreader _(CR 4)_
+
+### Strixhaven: A Curriculum of Chaos (SCC) — 47
+
+- Archaic _(CR 18)_
+- Art Elemental Mascot _(CR 1/4)_
+- Beledros Witherbloom _(CR 24)_
+- Brackish Trudge _(CR 3)_
+- Cogwork Archivist _(CR 4)_
+- Daemogoth _(CR 10)_
+- Daemogoth Titan _(CR 16)_
+- First-Year Student _(CR 1/2)_
+- Fractal Mascot _(CR 1/4)_
+- Galazeth Prismari _(CR 23)_
+- Groff _(CR 4)_
+- Inkling Mascot _(CR 1/4)_
+- Lorehold Apprentice _(CR 2)_
+- Lorehold Pledgemage _(CR 4)_
+- Lorehold Professor of Chaos _(CR 7)_
+- Lorehold Professor of Order _(CR 7)_
+- Mage Hunter _(CR 5)_
+- Murgaxor _(CR 9)_
+- Oracle of Strixhaven _(CR 15)_
+- Oriq Blood Mage _(CR 9)_
+- Oriq Recruiter _(CR 4)_
+- Pest Mascot _(CR 1/4)_
+- Prismari Apprentice _(CR 2)_
+- Prismari Pledgemage _(CR 4)_
+- Prismari Professor of Expression _(CR 7)_
+- Prismari Professor of Perfection _(CR 7)_
+- Quandrix Apprentice _(CR 2)_
+- Quandrix Pledgemage _(CR 4)_
+- Quandrix Professor of Substance _(CR 7)_
+- Quandrix Professor of Theory _(CR 7)_
+- Relic Sloth _(CR 2)_
+- Ruin Grinder _(CR 5)_
+- Scufflecup Teacup _(CR 0)_
+- Shadrix Silverquill _(CR 22)_
+- Silverquill Apprentice _(CR 2)_
+- Silverquill Pledgemage _(CR 4)_
+- Silverquill Professor of Radiance _(CR 7)_
+- Silverquill Professor of Shadow _(CR 7)_
+- Spirit Statue Mascot _(CR 1/4)_
+- Strixhaven Campus Guide _(CR 1)_
+- Tanazir Quandrix _(CR 24)_
+- Velomachus Lorehold _(CR 25)_
+- Witherbloom Apprentice _(CR 2)_
+- Witherbloom Pledgemage _(CR 4)_
+- Witherbloom Professor of Decay _(CR 7)_
+- Witherbloom Professor of Growth _(CR 7)_
+- Y'demi _(CR 9)_
+
+### Tasha's Cauldron of Everything (TCE) — 20
+
+- Aberrant Spirit
+- Adult Red Dracolich
+- Beast of the Land
+- Beast of the Sea
+- Beast of the Sky
+- Bestial Spirit
+- Celestial Spirit
+- Construct Spirit
+- Dancing Item
+- Elemental Spirit
+- Fey Spirit
+- Fiendish Spirit
+- Homunculus Servant
+- Juvenile Mimic _(CR 0)_
+- Mighty Servant of Leuk-o
+- Reflection
+- Shadow Spirit
+- Steel Defender
+- Undead Spirit
+- Wildfire Spirit
+
+### The Book of Many Things (BMT) — 41
+
+- Advanced Detention Drone
+- Ambitious Assassin _(CR {'cr': '5', 'lair': '6'})_
+- Animated Armor Detention Drone
+- Aspirant of the Comet _(CR 1/2)_
+- Asteria _(CR 18)_
+- Aurnozci _(CR {'cr': '22', 'lair': '23'})_
+- Boss Augustus _(CR 9)_
+- Boss Delour _(CR 9)_
+- Breath Drinker _(CR 14)_
+- Brusipha _(CR 3)_
+- Deck Defender
+- Enchanting Infiltrator _(CR {'cr': '11', 'lair': '12'})_
+- Euryale _(CR 18)_
+- Fate Hag _(CR 4)_
+- Gremorly's Ghost _(CR 9)_
+- Grim Champion of Bloodshed _(CR 20)_
+- Grim Champion of Desolation _(CR 25)_
+- Grim Champion of Pestilence _(CR 15)_
+- Harrow Hawk _(CR 1)_
+- Harrow Hound _(CR 3)_
+- Helmed Horror Detention Drone
+- Hierophant Medusa _(CR 17)_
+- Hierophant of the Comet _(CR 11)_
+- Hulgaz _(CR 14)_
+- Initiate of the Comet _(CR 4)_
+- Living Portent _(CR 3)_
+- Malaxxix _(CR 18)_
+- Minotaur Archaeologist _(CR 1/4)_
+- Minotaur Infiltrator _(CR 2)_
+- Oddlewin _(CR 2)_
+- Otherworldly Corrupter _(CR {'cr': '17', 'lair': '18'})_
+- Pazrodine _(CR 21)_
+- Quadrone Detention Drone
+- Reaper Spirit
+- Riffler _(CR 5)_
+- Ruin Spider _(CR 5)_
+- Sir Jared _(CR 5)_
+- Solar Bastion Knight _(CR 9)_
+- Talon Beast _(CR 7)_
+- Veiled Presence _(CR {'cr': '21', 'lair': '22'})_
+- Werevulture _(CR 4)_
+
+### Van Richten's Guide to Ravenloft (VRGR) — 35
+
+- Bodytaker Plant _(CR 7)_
+- Boneless _(CR 1)_
+- Brain in a Jar _(CR 3)_
+- Carrion Stalker _(CR 3)_
+- Carrionette _(CR 1)_
+- Death's Head _(CR 1/2)_
+- Dullahan _(CR 10)_
+- Elise _(CR 5)_
+- Gallows Speaker _(CR 6)_
+- Greater Star Spawn Emissary _(CR 21)_
+- Gremishka _(CR 1/8)_
+- Inquisitor of the Mind Fire _(CR 8)_
+- Inquisitor of the Sword _(CR 8)_
+- Inquisitor of the Tome _(CR 8)_
+- Isolde _(CR 5)_
+- Jiangshi _(CR 9)_
+- Lesser Star Spawn Emissary _(CR 19)_
+- Loup Garou _(CR 13)_
+- Necrichor _(CR 7)_
+- Nosferatu _(CR 8)_
+- Podling _(CR 1/2)_
+- Priest of Osybus _(CR 6)_
+- Relentless Juggernaut _(CR 12)_
+- Relentless Slasher _(CR 8)_
+- Strigoi _(CR 4)_
+- Swarm of Gremishkas _(CR 2)_
+- Swarm of Maggots _(CR 2)_
+- Swarm of Scarabs _(CR 3)_
+- Swarm of Zombie Limbs _(CR 1)_
+- The Bagman
+- Unspeakable Horror _(CR 8)_
+- Vampiric Mind Flayer _(CR 5)_
+- Wereraven _(CR 2)_
+- Zombie Clot _(CR 6)_
+- Zombie Plague Spreader _(CR 4)_
+
+### Volo's Guide to Monsters (VGM) — 143
+
+- Abjurer _(CR 9)_
+- Alhoon _(CR 10)_
+- Annis Hag _(CR {'cr': '6', 'coven': '8'})_
+- Apprentice Wizard _(CR 1/4)_
+- Archdruid _(CR 12)_
+- Archer _(CR 3)_
+- Aurochs _(CR 2)_
+- Babau _(CR 4)_
+- Banderhobb _(CR 5)_
+- Bard _(CR 2)_
+- Barghest _(CR 4)_
+- Bheur Hag _(CR {'cr': '7', 'coven': '9'})_
+- Black Guard Drake _(CR 2)_
+- Blackguard _(CR 8)_
+- Blue Guard Drake _(CR 2)_
+- Bodak _(CR 6)_
+- Boggle _(CR 1/8)_
+- Booyahg Booyahg Booyahg
+- Booyahg Caster
+- Booyahg Slave of the Archfey
+- Booyahg Slave of the Fiend
+- Booyahg Slave of the Great Old One
+- Booyahg Whip
+- Booyahg Wielder
+- Brontosaurus _(CR 5)_
+- Catoblepas _(CR 5)_
+- Cave Fisher _(CR 3)_
+- Champion _(CR 9)_
+- Chitine _(CR 1/2)_
+- Choldrith _(CR 3)_
+- Cloud Giant Smiling One _(CR 11)_
+- Conjurer _(CR 6)_
+- Cow _(CR 1/4)_
+- Cranium Rat _(CR 0)_
+- Darkling _(CR 1/2)_
+- Darkling Elder _(CR 2)_
+- Death Kiss _(CR 10)_
+- Deep Rothé _(CR 1/4)_
+- Deep Scion _(CR 3)_
+- Deinonychus _(CR 1)_
+- Devourer _(CR 13)_
+- Dimetrodon _(CR 1/4)_
+- Diviner _(CR 8)_
+- Dolphin _(CR 1/8)_
+- Draegloth _(CR 7)_
+- Elder Brain _(CR 14)_
+- Enchanter _(CR 5)_
+- Evoker _(CR 9)_
+- Fire Giant Dreadnought _(CR 14)_
+- Firenewt Warlock of Imix _(CR 1)_
+- Firenewt Warrior _(CR 1/2)_
+- Flail Snail _(CR 3)_
+- Flind _(CR 9)_
+- Froghemoth _(CR 10)_
+- Frost Giant Everlasting One _(CR 12)_
+- Gauth _(CR 6)_
+- Gazer _(CR 1/2)_
+- Giant Strider _(CR 1)_
+- Girallon _(CR 4)_
+- Gnoll Flesh Gnawer _(CR 1)_
+- Gnoll Hunter _(CR 1/2)_
+- Gnoll Witherling _(CR 1/4)_
+- Green Guard Drake _(CR 2)_
+- Grung _(CR 1/4)_
+- Grung Elite Warrior _(CR 2)_
+- Grung Wildling _(CR 1)_
+- Hadrosaurus _(CR 1/4)_
+- Hobgoblin Devastator _(CR 4)_
+- Hobgoblin Iron Shadow _(CR 2)_
+- Illithilich _(CR 22)_
+- Illusionist _(CR 3)_
+- Ki-rin _(CR 12)_
+- Kobold Dragonshield _(CR 1)_
+- Kobold Inventor _(CR 1/4)_
+- Kobold Scale Sorcerer _(CR 1)_
+- Korred _(CR 7)_
+- Kraken Priest _(CR 5)_
+- Leucrotta _(CR 3)_
+- Martial Arts Adept _(CR 3)_
+- Master Thief _(CR 5)_
+- Maw Demon _(CR 1)_
+- Meenlock _(CR 2)_
+- Mind Flayer Psion _(CR 8)_
+- Mindwitness _(CR 5)_
+- Morkoth _(CR {'cr': '11', 'lair': '12'})_
+- Mouth of Grolantor _(CR 6)_
+- Necromancer _(CR 9)_
+- Neogi _(CR 3)_
+- Neogi Hatchling _(CR 1/8)_
+- Neogi Master _(CR 4)_
+- Neothelid _(CR 13)_
+- Nilbog _(CR 1)_
+- Orc Blade of Ilneval _(CR 4)_
+- Orc Claw of Luthic _(CR 2)_
+- Orc Hand of Yurtrus _(CR 2)_
+- Orc Nurtured One of Yurtrus _(CR 1/2)_
+- Orc Red Fang of Shargaas _(CR 3)_
+- Ox _(CR 1/4)_
+- Quetzalcoatlus _(CR 2)_
+- Quickling _(CR 1)_
+- Red Guard Drake _(CR 2)_
+- Redcap _(CR 3)_
+- Rothé _(CR 1/4)_
+- Sea Spawn _(CR 1)_
+- Shadow Mastiff _(CR 2)_
+- Shoosuva _(CR 8)_
+- Slithering Tracker _(CR 3)_
+- Spawn of Kyuss _(CR 5)_
+- Stegosaurus _(CR 4)_
+- Stench Kow _(CR 1/4)_
+- Stone Giant Dreamwalker _(CR 10)_
+- Storm Giant Quintessent _(CR 16)_
+- Swarm of Cranium Rats _(CR 5)_
+- Swarm of Rot Grubs _(CR 1/2)_
+- Swashbuckler _(CR 3)_
+- Tanarukk _(CR 5)_
+- Thorny _(CR 1)_
+- Tlincalli _(CR 5)_
+- Transmuter _(CR 5)_
+- Trapper _(CR 3)_
+- Ulitharid _(CR 9)_
+- Vargouille _(CR 1)_
+- Vegepygmy _(CR 1/4)_
+- Vegepygmy Chief _(CR 2)_
+- Velociraptor _(CR 1/4)_
+- War Priest _(CR 9)_
+- Warlock of the Archfey _(CR 4)_
+- Warlock of the Fiend _(CR 7)_
+- Warlock of the Great Old One _(CR 6)_
+- Warlord _(CR 12)_
+- White Guard Drake _(CR 2)_
+- Wood Woad _(CR 5)_
+- Xvart _(CR 1/8)_
+- Xvart Speaker _(CR 1/8)_
+- Xvart Warlock of Raxivort _(CR 1)_
+- Yeth Hound _(CR 4)_
+- Yuan-ti Anathema _(CR 12)_
+- Yuan-ti Broodguard _(CR 2)_
+- Yuan-ti Malison (Type 4) _(CR 3)_
+- Yuan-ti Malison (Type 5) _(CR 3)_
+- Yuan-ti Mind Whisperer _(CR 4)_
+- Yuan-ti Nightmare Speaker _(CR 4)_
+- Yuan-ti Pit Master _(CR 5)_
+
+### Xanathar's Guide to Everything (XGE) — 2
+
+- Hound of Ill Omen
+- Tiny Servant

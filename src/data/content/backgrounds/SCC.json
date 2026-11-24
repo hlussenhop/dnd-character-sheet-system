@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "lorehold-student",
+    "description": "You have spent your youth preparing to be a student of Lorehold College, reading every book on the college's recommended reading list for prospective students. Your academic passions are in the broad field of history. You might dream of using magic to contact great historical figures or your own ancestors or of recreating the mighty magic of a distant age.",
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  },
+  {
+    "slug": "prismari-student",
+    "description": "You are an artist, and you have been preparing to hone your craft according to the traditions of Prismari College. Whatever your medium—sculpture, dance, paint, music, drama, architecture, or any other field—you have grand visions of bringing your art to life in a fusion of magic and creativity.",
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  },
+  {
+    "slug": "quandrix-student",
+    "description": "In preparation to become a student of Quandrix College, you have spent years working through the college's math problems for prospective students. Your interests concentrate on the mathematical principles and patterns found in the natural world. You might lean more toward mathematics or physics, or you delve into more abstract studies of metaphysics, arcana, or logic.",
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  },
+  {
+    "slug": "silverquill-student",
+    "description": "You have spent years practicing your writing and oration in the hope of becoming a student of Silverquill College. Your studies focus on language, literature, and the power of words, both magical and otherwise. The metaphorical power of words to illuminate or conceal is joined with the literal ability of magic to do the same in your academic pursuits.",
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  },
+  {
+    "slug": "witherbloom-student",
+    "description": "You filled your childhood with rudimentary alchemical experiments, all in the hope of becoming a student of Witherbloom College. The life sciences are the focus of your reading, which include biology and necromancy. Brewing strange concoctions with medicinal properties, exploring the anatomies of monsters, and cataloging swamp flora are the kinds of studies you might pursue at Witherbloom College.",
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": []
+  }
+]

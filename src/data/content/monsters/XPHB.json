@@ -1,0 +1,3835 @@
+[
+  {
+    "name": "Aberrant Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Regeneration (Slaad Only)",
+        "desc": "The spirit regains 5 Hit Points at the start of its turn if it has at least 1 Hit Point."
+      },
+      {
+        "name": "Whispering Aura (Mind Flayer Only)",
+        "desc": "At the start of each of the spirit's turns, the spirit emits psionic energy if it doesn't have the Incapacitated condition. wis DC equals your spell save DC, each creature (other than you) within 5 feet of the spirit.  2d6 Psychic damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Claw (Slaad Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Slashing damage, and the target can't regain Hit Points until the start of the spirit's next turn."
+      },
+      {
+        "name": "Eye Ray (Beholderkin Only)",
+        "desc": "r Bonus equals your spell attack modifier, range 150 ft. Hit: 1d8 + 3 + summonSpellLevel Psychic damage."
+      },
+      {
+        "name": "Psychic Slam (Mind Flayer Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Psychic damage."
+      }
+    ],
+    "index": "aberrant-spirit-2024"
+  },
+  {
+    "name": "Aberrant Spirit (Beholderkin)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Eye Ray",
+        "desc": "r Bonus equals your spell attack modifier, range 150 ft. Hit: 1d8 + 3 + summonSpellLevel Psychic damage."
+      }
+    ],
+    "index": "aberrant-spirit-beholderkin-2024"
+  },
+  {
+    "name": "Aberrant Spirit (Mind Flayer)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Whispering Aura",
+        "desc": "At the start of each of the spirit's turns, the spirit emits psionic energy if it doesn't have the Incapacitated condition. wis DC equals your spell save DC, each creature (other than you) within 5 feet of the spirit.  2d6 Psychic damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Psychic Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Psychic damage."
+      }
+    ],
+    "index": "aberrant-spirit-mind-flayer-2024"
+  },
+  {
+    "name": "Aberrant Spirit (Slaad)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 15,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 6,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Deep Speech, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Regeneration",
+        "desc": "The spirit regains 5 Hit Points at the start of its turn if it has at least 1 Hit Point."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Claw",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Slashing damage, and the target can't regain Hit Points until the start of the spirit's next turn."
+      }
+    ],
+    "index": "aberrant-spirit-slaad-2024"
+  },
+  {
+    "name": "Animated Object",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft.",
+      "passive_perception": 6
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "10 (Medium or smaller), 20 (Large), 40 (Huge)",
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: Force damage equal to (summonSpellLevel - 4)d4 + 3, (summonSpellLevel - 3)d6 + 3 + your spellcasting ability modifier (Large), or (summonSpellLevel - 3)d12 + 3 + your spellcasting ability modifier (Huge)."
+      }
+    ],
+    "desc": [
+      "Size: Tiny or Small or Medium or Large or Huge."
+    ],
+    "index": "animated-object-2024"
+  },
+  {
+    "name": "Animated Object (Huge)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft.",
+      "passive_perception": 6
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40",
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: Force damage equal to (summonSpellLevel - 3)d12 + 3 + your spellcasting ability modifier."
+      }
+    ],
+    "desc": [
+      "Size: Tiny or Small or Medium or Large or Huge."
+    ],
+    "index": "animated-object-huge-2024"
+  },
+  {
+    "name": "Animated Object (Large)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft.",
+      "passive_perception": 6
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20",
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: Force damage equal to (summonSpellLevel - 3)d6 + 3 + your spellcasting ability modifier."
+      }
+    ],
+    "desc": [
+      "Size: Tiny or Small or Medium or Large or Huge."
+    ],
+    "index": "animated-object-large-2024"
+  },
+  {
+    "name": "Animated Object (Medium or Smaller)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 15
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 16,
+    "dexterity": 10,
+    "constitution": 10,
+    "intelligence": 3,
+    "wisdom": 3,
+    "charisma": 1,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "blindsight": "30 ft.",
+      "passive_perception": 6
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "10",
+    "actions": [
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: Force damage equal to (summonSpellLevel - 4)d4 + 3 + your spellcasting ability modifier."
+      }
+    ],
+    "desc": [
+      "Size: Tiny or Small or Medium or Large or Huge."
+    ],
+    "index": "animated-object-medium-or-smaller-2024"
+  },
+  {
+    "name": "Beast of the Land",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 plus your Wisdom modifier"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 14,
+    "dexterity": 14,
+    "constitution": 15,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 plus five times your Ranger level (the beast has a number of Hit Dice [d8s] equal to your Ranger level)",
+    "special_abilities": [
+      {
+        "name": "Primal Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the beast makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beast's Strike",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 2 plus your Wisdom modifier Bludgeoning, Piercing, or Slashing damage (your choice when you summon the beast). If the beast moved at least 20 feet straight toward the target before the hit, the target takes an extra 1d6 damage of the same type, and the target has the Prone condition if it is a Large or smaller creature."
+      }
+    ],
+    "index": "beast-of-the-land-2024"
+  },
+  {
+    "name": "Beast of the Sea",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 plus your Wisdom modifier"
+      }
+    ],
+    "speed": {
+      "walk": "5 ft.",
+      "swim": "60 ft."
+    },
+    "strength": 14,
+    "dexterity": 14,
+    "constitution": 15,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "90 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 plus five times your Ranger level (the beast has a number of Hit Dice [d8s] equal to your Ranger level)",
+    "special_abilities": [
+      {
+        "name": "Amphibious",
+        "desc": "The beast can breathe air and water."
+      },
+      {
+        "name": "Primal Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the beast makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beast's Strike",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d6 + 2 plus your Wisdom modifier Bludgeoning or Piercing damage (your choice when you summon the beast), and the target has the Grappled condition (escape DC equals your spell save DC)."
+      }
+    ],
+    "index": "beast-of-the-sea-2024"
+  },
+  {
+    "name": "Beast of the Sky",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 plus your Wisdom modifier"
+      }
+    ],
+    "speed": {
+      "walk": "10 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 6,
+    "dexterity": 16,
+    "constitution": 13,
+    "intelligence": 8,
+    "wisdom": 14,
+    "charisma": 11,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "4 plus four times your Ranger level (the beast has a number of Hit Dice [d6s] equal to your Ranger level)",
+    "special_abilities": [
+      {
+        "name": "Flyby",
+        "desc": "The beast doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+      },
+      {
+        "name": "Primal Bond",
+        "desc": "Add your Proficiency Bonus to any ability check or saving throw the beast makes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beast's Strike",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d4 + 3 plus your Wisdom modifier Slashing damage."
+      }
+    ],
+    "index": "beast-of-the-sky-2024"
+  },
+  {
+    "name": "Bestial Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft.",
+      "climb": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 (Air only) or 30 (Land and Water only) + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Flyby (Air Only)",
+        "desc": "The spirit doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+      },
+      {
+        "name": "Pack Tactics (Land and Water Only)",
+        "desc": "The spirit has Advantage on an attack roll against a creature if at least one of the spirit's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition."
+      },
+      {
+        "name": "Water Breathing (Water Only)",
+        "desc": "The spirit can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-2024"
+  },
+  {
+    "name": "Bestial Spirit (Air)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Flyby",
+        "desc": "The spirit doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-air-2024"
+  },
+  {
+    "name": "Bestial Spirit (Land)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "climb": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Pack Tactics",
+        "desc": "The spirit has Advantage on an attack roll against a creature if at least one of the spirit's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-land-2024"
+  },
+  {
+    "name": "Bestial Spirit (Water)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "beast",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 11,
+    "constitution": 16,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 5 for each spell level above 2",
+    "special_abilities": [
+      {
+        "name": "Pack Tactics",
+        "desc": "The spirit has Advantage on an attack roll against a creature if at least one of the spirit's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition."
+      },
+      {
+        "name": "Water Breathing (Water Only)",
+        "desc": "The spirit can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Rend",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Piercing damage."
+      }
+    ],
+    "index": "bestial-spirit-water-2024"
+  },
+  {
+    "name": "Celestial Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level + 2 (Defender only)"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 5",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Radiant Bow (Avenger Only)",
+        "desc": "r Bonus equals your spell attack modifier, range 600 ft. Hit: 2d6 + 2 + summonSpellLevel Radiant damage."
+      },
+      {
+        "name": "Radiant Mace (Defender Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Radiant damage, and the spirit can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains 1d10 Temporary Hit Points."
+      },
+      {
+        "name": "Healing Touch (1/Day)",
+        "desc": "The spirit touches another creature. The target regains Hit Points equal to 2d8 + summonSpellLevel."
+      }
+    ],
+    "index": "celestial-spirit-2024"
+  },
+  {
+    "name": "Celestial Spirit (Avenger)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 5",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Radiant Bow",
+        "desc": "r Bonus equals your spell attack modifier, range 600 ft. Hit: 2d6 + 2 + summonSpellLevel Radiant damage."
+      },
+      {
+        "name": "Healing Touch (1/Day)",
+        "desc": "The spirit touches another creature. The target regains Hit Points equal to 2d8 + summonSpellLevel."
+      }
+    ],
+    "index": "celestial-spirit-avenger-2024"
+  },
+  {
+    "name": "Celestial Spirit (Defender)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft."
+    },
+    "strength": 16,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Celestial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 10 for each spell level above 5",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Radiant Mace",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 3 + summonSpellLevel Radiant damage, and the spirit can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains 1d10 Temporary Hit Points."
+      },
+      {
+        "name": "Healing Touch (1/Day)",
+        "desc": "The spirit touches another creature. The target regains Hit Points equal to 2d8 + summonSpellLevel."
+      }
+    ],
+    "index": "celestial-spirit-defender-2024"
+  },
+  {
+    "name": "Construct Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Heated Body (Metal Only)",
+        "desc": "A creature that hits the spirit with a melee attack or that starts its turn in a grapple with the spirit takes 1d10 Fire damage."
+      },
+      {
+        "name": "Stony Lethargy (Stone Only)",
+        "desc": "When a creature starts its turn within 10 feet of the spirit, the spirit can target it with magical energy if the spirit can see it. wis DC equals your spell save DC, the target.  Until the start of its next turn, the target can't make Opportunity Attacks, and its Speed is halved."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Berserk Lashing (Clay Only)",
+        "desc": " The spirit takes damage from a creature.  The spirit makes a Slam attack against that creature if possible, or the spirit moves up to half its Speed toward that creature without provoking Opportunity Attacks."
+      }
+    ],
+    "index": "construct-spirit-2024"
+  },
+  {
+    "name": "Construct Spirit (Clay)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Berserk Lashing",
+        "desc": " The spirit takes damage from a creature.  The spirit makes a Slam attack against that creature if possible, or the spirit moves up to half its Speed toward that creature without provoking Opportunity Attacks."
+      }
+    ],
+    "index": "construct-spirit-clay-2024"
+  },
+  {
+    "name": "Construct Spirit (Metal)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Heated Body",
+        "desc": "A creature that hits the spirit with a melee attack or that starts its turn in a grapple with the spirit takes 1d10 Fire damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "construct-spirit-metal-2024"
+  },
+  {
+    "name": "Construct Spirit (Stone)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "construct",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "13 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 18,
+    "dexterity": 10,
+    "constitution": 18,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 5,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Stony Lethargy",
+        "desc": "When a creature starts its turn within 10 feet of the spirit, the spirit can target it with magical energy if the spirit can see it. wis DC equals your spell save DC, the target.  Until the start of its next turn, the target can't make Opportunity Attacks, and its Speed is halved."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "construct-spirit-stone-2024"
+  },
+  {
+    "name": "Draconic Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "14 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 14,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Draconic, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Shared Resistances",
+        "desc": "When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + summonSpellLevel Piercing damage."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "dex DC equals your spell save DC, each creature in a 30-foot Cone.  2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell).  Half damage."
+      }
+    ],
+    "index": "draconic-spirit-2024"
+  },
+  {
+    "name": "Draconic Spirit (Acid)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "14 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 14,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Draconic, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Shared Resistances",
+        "desc": "You have Resistance to Acid damage until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + summonSpellLevel Piercing damage."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "dex DC equals your spell save DC, each creature in a 30-foot Cone.  2d6 Acid damage.  Half damage."
+      }
+    ],
+    "index": "draconic-spirit-acid-2024"
+  },
+  {
+    "name": "Draconic Spirit (Cold)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "14 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 14,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Draconic, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Shared Resistances",
+        "desc": "You have Resistance to Cold damage until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + summonSpellLevel Piercing damage."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "dex DC equals your spell save DC, each creature in a 30-foot Cone.  2d6 Cold damage.  Half damage."
+      }
+    ],
+    "index": "draconic-spirit-cold-2024"
+  },
+  {
+    "name": "Draconic Spirit (Fire)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "14 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 14,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Draconic, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Shared Resistances",
+        "desc": "You have Resistance to Fire damage until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + summonSpellLevel Piercing damage."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "dex DC equals your spell save DC, each creature in a 30-foot Cone.  2d6 Fire damage.  Half damage."
+      }
+    ],
+    "index": "draconic-spirit-fire-2024"
+  },
+  {
+    "name": "Draconic Spirit (Lightning)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "14 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 14,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Draconic, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Shared Resistances",
+        "desc": "You have Resistance to Lightning damage until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + summonSpellLevel Piercing damage."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "dex DC equals your spell save DC, each creature in a 30-foot Cone.  2d6 Lightning damage.  Half damage."
+      }
+    ],
+    "index": "draconic-spirit-lightning-2024"
+  },
+  {
+    "name": "Draconic Spirit (Poison)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "dragon",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "14 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft.",
+      "swim": "30 ft."
+    },
+    "strength": 19,
+    "dexterity": 14,
+    "constitution": 17,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 14,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "blindsight": "30 ft.",
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "Draconic, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 5",
+    "special_abilities": [
+      {
+        "name": "Shared Resistances",
+        "desc": "You have Resistance to Poison damage until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Rend attacks equal to half the spell's level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + summonSpellLevel Piercing damage."
+      },
+      {
+        "name": "Breath Weapon",
+        "desc": "dex DC equals your spell save DC, each creature in a 30-foot Cone.  2d6 Poison damage.  Half damage."
+      }
+    ],
+    "index": "draconic-spirit-poison-2024"
+  },
+  {
+    "name": "Elemental Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft.",
+      "swim": "40 ft.",
+      "burrow": "40 ft.",
+      "hover": true
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning, thunder (Air only)",
+      "piercing, slashing (Earth only)",
+      "acid (Water only)"
+    ],
+    "damage_immunities": [
+      "poison",
+      "fire (Fire only)"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form (Air, Fire, and Water Only)",
+        "desc": "The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d10 + 4 + summonSpellLevel Bludgeoning (Earth only), Cold (Water only), Lightning (Air only), or Fire (Fire only) damage."
+      }
+    ],
+    "index": "elemental-spirit-2024"
+  },
+  {
+    "name": "Elemental Spirit (Air)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft.",
+      "hover": true
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning",
+      "thunder"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form",
+        "desc": "The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft.. Hit: 1d10 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "elemental-spirit-air-2024"
+  },
+  {
+    "name": "Elemental Spirit (Earth)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "burrow": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "piercing",
+      "slashing"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft.. Hit: 1d10 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "elemental-spirit-earth-2024"
+  },
+  {
+    "name": "Elemental Spirit (Fire)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "lightning, thunder (Air only)",
+      "piercing, slashing (Earth only)",
+      "acid (Water only)"
+    ],
+    "damage_immunities": [
+      "poison",
+      "fire"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form",
+        "desc": "The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft.. Hit: 1d10 + 4 + summonSpellLevel Fire damage."
+      }
+    ],
+    "index": "elemental-spirit-fire-2024"
+  },
+  {
+    "name": "Elemental Spirit (Water)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "elemental",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "swim": "40 ft."
+    },
+    "strength": 18,
+    "dexterity": 15,
+    "constitution": 17,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "acid"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Primordial, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Amorphous Form",
+        "desc": "The spirit can move through a space as narrow as 1 inch wide without it counting as Difficult Terrain."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Slam attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Slam",
+        "desc": "Melee Attack Roll: Bonus equals your spell attack modifier, reach 5 ft.. Hit: 1d10 + 4 + summonSpellLevel Bludgeoning damage."
+      }
+    ],
+    "index": "elemental-spirit-water-2024"
+  },
+  {
+    "name": "Fey Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Fey Blade attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Fey Blade",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 2d6 + 3 + summonSpellLevel Force damage."
+      }
+    ],
+    "index": "fey-spirit-2024"
+  },
+  {
+    "name": "Fey Spirit (Fuming)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Fey Blade attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Fey Blade",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 2d6 + 3 + summonSpellLevel Force damage."
+      }
+    ],
+    "index": "fey-spirit-fuming-2024"
+  },
+  {
+    "name": "Fey Spirit (Mirthful)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Fey Blade attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Fey Blade",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 2d6 + 3 + summonSpellLevel Force damage."
+      }
+    ],
+    "index": "fey-spirit-mirthful-2024"
+  },
+  {
+    "name": "Fey Spirit (Tricksy)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Small",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "30 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 14,
+    "intelligence": 14,
+    "wisdom": 11,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Sylvan, understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of Fey Blade attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Fey Blade",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 2d6 + 3 + summonSpellLevel Force damage."
+      }
+    ],
+    "index": "fey-spirit-tricksy-2024"
+  },
+  {
+    "name": "Fiendish Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "60 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, Telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 (Demon only) or 40 (Devil only) or 60 (Yugoloth only) + 15 for each spell level above 6",
+    "special_abilities": [
+      {
+        "name": "Death Throes (Demon Only)",
+        "desc": "When the spirit drops to 0 Hit Points or the spell ends, the spirit explodes. dex DC equals your spell save DC, each creature in a 10-foot Emanation originating from the spirit.  2d10 plus this spell's level Fire damage.  Half damage."
+      },
+      {
+        "name": "Devil's Sight (Devil Only)",
+        "desc": "Magical Darkness doesn't impede the spirit's Darkvision."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The spirit has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Bite (Demon Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d12 + 3 + summonSpellLevel Necrotic damage."
+      },
+      {
+        "name": "Claws (Yugoloth Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Slashing damage. Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see."
+      },
+      {
+        "name": "Fiery Strike (Devil Only)",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 150 ft. Hit: 2d6 + 3 + summonSpellLevel Fire damage."
+      }
+    ],
+    "index": "fiendish-spirit-2024"
+  },
+  {
+    "name": "Fiendish Spirit (Demon)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, Telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "50 + 15 for each spell level above 6",
+    "special_abilities": [
+      {
+        "name": "Death Throes",
+        "desc": "When the spirit drops to 0 Hit Points or the spell ends, the spirit explodes. dex DC equals your spell save DC, each creature in a 10-foot Emanation originating from the spirit.  2d10 plus this spell's level Fire damage.  Half damage."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The spirit has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Bite",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d12 + 3 + summonSpellLevel Necrotic damage."
+      }
+    ],
+    "index": "fiendish-spirit-demon-2024"
+  },
+  {
+    "name": "Fiendish Spirit (Devil)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, Telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "40 + 15 for each spell level above 6",
+    "special_abilities": [
+      {
+        "name": "Devil's Sight",
+        "desc": "Magical Darkness doesn't impede the spirit's Darkvision."
+      },
+      {
+        "name": "Magic Resistance",
+        "desc": "The spirit has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Fiery Strike",
+        "desc": "m,r Bonus equals your spell attack modifier, reach 5 ft. or range 150 ft. Hit: 2d6 + 3 + summonSpellLevel Fire damage."
+      }
+    ],
+    "index": "fiendish-spirit-devil-2024"
+  },
+  {
+    "name": "Fiendish Spirit (Yugoloth)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "12 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft."
+    },
+    "strength": 13,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "Abyssal, Infernal, Telepathy 60 ft.",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "60 + 15 for each spell level above 6",
+    "special_abilities": [
+      {
+        "name": "Magic Resistance",
+        "desc": "The spirit has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Claws",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Slashing damage. Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see."
+      }
+    ],
+    "index": "fiendish-spirit-yugoloth-2024"
+  },
+  {
+    "name": "Giant Insect",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 3,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Spider Climb",
+        "desc": "The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The insect makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Poison Jab",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d6 + 3 + summonSpellLevel Piercing damage plus 1d4 Poison damage."
+      },
+      {
+        "name": "Web Bolt (Spider Only)",
+        "desc": "r Bonus equals your spell attack modifier, range 60 ft. Hit: 1d10 + 3 + summonSpellLevel Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn."
+      }
+    ],
+    "index": "giant-insect-2024"
+  },
+  {
+    "name": "Giant Insect (Centipede)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 3,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Spider Climb",
+        "desc": "The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The insect makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Poison Jab",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d6 + 3 + summonSpellLevel Piercing damage plus 1d4 Poison damage."
+      }
+    ],
+    "index": "giant-insect-centipede-2024"
+  },
+  {
+    "name": "Giant Insect (Spider)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 3,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Spider Climb",
+        "desc": "The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The insect makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Poison Jab",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d6 + 3 + summonSpellLevel Piercing damage plus 1d4 Poison damage."
+      },
+      {
+        "name": "Web Bolt",
+        "desc": "r Bonus equals your spell attack modifier, range 60 ft. Hit: 1d10 + 3 + summonSpellLevel Bludgeoning damage, and the target's Speed is reduced to 0 until the start of the insect's next turn."
+      }
+    ],
+    "index": "giant-insect-spider-2024"
+  },
+  {
+    "name": "Giant Insect (Wasp)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "40 ft.",
+      "fly": "40 ft.",
+      "climb": "40 ft."
+    },
+    "strength": 17,
+    "dexterity": 13,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 14,
+    "charisma": 3,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 12
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 4",
+    "special_abilities": [
+      {
+        "name": "Spider Climb",
+        "desc": "The insect can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The insect makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Poison Jab",
+        "desc": "m Bonus equals your spell attack modifier, reach 10 ft. Hit: 1d6 + 3 + summonSpellLevel Piercing damage plus 1d4 Poison damage."
+      }
+    ],
+    "index": "giant-insect-wasp-2024"
+  },
+  {
+    "name": "Otherworldly Steed",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "10 + 1 per spell level"
+      }
+    ],
+    "speed": {
+      "walk": "60 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 6,
+    "wisdom": 12,
+    "charisma": 8,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "telepathy 1 mile (works only with you)",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell's level)",
+    "special_abilities": [
+      {
+        "name": "Life Bond",
+        "desc": "When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Otherworldly Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + summonSpellLevel of Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) damage."
+      }
+    ],
+    "desc": [
+      "Type: {'choose': ['celestial', 'fey', 'fiend']}."
+    ],
+    "index": "otherworldly-steed-2024"
+  },
+  {
+    "name": "Otherworldly Steed (Celestial)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "10 + 1 per spell level"
+      }
+    ],
+    "speed": {
+      "walk": "60 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 6,
+    "wisdom": 12,
+    "charisma": 8,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "telepathy 1 mile (works only with you)",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell's level)",
+    "special_abilities": [
+      {
+        "name": "Life Bond",
+        "desc": "When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Otherworldly Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + summonSpellLevel Radiant damage."
+      }
+    ],
+    "index": "otherworldly-steed-celestial-2024"
+  },
+  {
+    "name": "Otherworldly Steed (Fey)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "fey",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "10 + 1 per spell level"
+      }
+    ],
+    "speed": {
+      "walk": "60 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 6,
+    "wisdom": 12,
+    "charisma": 8,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "telepathy 1 mile (works only with you)",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell's level)",
+    "special_abilities": [
+      {
+        "name": "Life Bond",
+        "desc": "When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Otherworldly Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + summonSpellLevel Psychic damage."
+      }
+    ],
+    "index": "otherworldly-steed-fey-2024"
+  },
+  {
+    "name": "Otherworldly Steed (Fiend)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "10 + 1 per spell level"
+      }
+    ],
+    "speed": {
+      "walk": "60 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 18,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 6,
+    "wisdom": 12,
+    "charisma": 8,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "passive_perception": 11
+    },
+    "languages": "telepathy 1 mile (works only with you)",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell's level)",
+    "special_abilities": [
+      {
+        "name": "Life Bond",
+        "desc": "When you regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if you're within 5 feet of it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Otherworldly Slam",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + summonSpellLevel Necrotic damage."
+      }
+    ],
+    "index": "otherworldly-steed-fiend-2024"
+  },
+  {
+    "name": "Undead Spirit",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft.",
+      "hover": true
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3",
+    "special_abilities": [
+      {
+        "name": "Festering Aura (Putrid Only)",
+        "desc": "con DC equals your spell save DC, any creature (other than you) that starts its turn within a 5-foot Emanation originating from the spirit.  The creature has the Poisoned condition until the start of its next turn."
+      },
+      {
+        "name": "Incorporeal Passage (Ghostly Only)",
+        "desc": "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Deathly Touch (Ghostly Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Necrotic damage, and the target has the Frightened condition until the end of its next turn."
+      },
+      {
+        "name": "Grave Bolt (Skeletal Only)",
+        "desc": "r Bonus equals your spell attack modifier, range 150 ft. Hit: 2d4 + 3 + summonSpellLevel Necrotic damage."
+      },
+      {
+        "name": "Rotting Claw (Putrid Only)",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d6 + 3 + summonSpellLevel Slashing damage. If the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn."
+      }
+    ],
+    "index": "undead-spirit-2024"
+  },
+  {
+    "name": "Undead Spirit (Ghostly)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "40 ft.",
+      "hover": true
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3",
+    "special_abilities": [
+      {
+        "name": "Incorporeal Passage",
+        "desc": "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Deathly Touch",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 3 + summonSpellLevel Necrotic damage, and the target has the Frightened condition until the end of its next turn."
+      }
+    ],
+    "index": "undead-spirit-ghostly-2024"
+  },
+  {
+    "name": "Undead Spirit (Putrid)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "30 + 10 for each spell level above 3",
+    "special_abilities": [
+      {
+        "name": "Festering Aura",
+        "desc": "con DC equals your spell save DC, any creature (other than you) that starts its turn within a 5-foot Emanation originating from the spirit.  The creature has the Poisoned condition until the start of its next turn."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Rotting Claw",
+        "desc": "m Bonus equals your spell attack modifier, reach 5 ft. Hit: 1d6 + 3 + summonSpellLevel Slashing damage. If the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn."
+      }
+    ],
+    "index": "undead-spirit-putrid-2024"
+  },
+  {
+    "name": "Undead Spirit (Skeletal)",
+    "edition": "2024",
+    "source": "XPHB",
+    "sources": [
+      "XPHB"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral",
+    "armor_class": [
+      {
+        "type": "condition",
+        "value": 0,
+        "desc": "11 + the spell's level"
+      }
+    ],
+    "speed": {
+      "walk": "30 ft."
+    },
+    "strength": 12,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 4,
+    "wisdom": 10,
+    "charisma": 9,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "understands the languages you know",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "20 + 10 for each spell level above 3",
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The spirit makes a number of attacks equal to half this spell's level (round down)."
+      },
+      {
+        "name": "Grave Bolt",
+        "desc": "r Bonus equals your spell attack modifier, range 150 ft. Hit: 2d4 + 3 + summonSpellLevel Necrotic damage."
+      }
+    ],
+    "index": "undead-spirit-skeletal-2024"
+  }
+]

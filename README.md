@@ -1,4 +1,4 @@
-# NexusForge
+# dnd character system
 
 A single-page, fully responsive React/TypeScript application for creating, managing, and viewing D&D 5e character sheets with **100% client-side storage** using IndexedDB. No backend, no servers, no accounts needed - your data stays on your device!
 
@@ -16,7 +16,7 @@ A single-page, fully responsive React/TypeScript application for creating, manag
 
 ## Overview
 
-The NexusForge allows users to:
+The dnd character system allows users to:
 - Create D&D 5e characters using a step-by-step wizard
 - Store unlimited characters locally in your browser
 - View interactive character sheets with dice rolling
@@ -38,16 +38,11 @@ The NexusForge allows users to:
 - **2024 PHB Complete**: All 12 Origin backgrounds, 10 core species with lineages, and comprehensive Origin Feat system
 - **Persistent Storage (F1)**: Save, load, and delete multiple characters locally
 - **Character Dashboard (F2)**: View all saved characters with key details
-- **Creation Wizard (F3)**: Step-by-step guided character creation
-  1. Character Details (name, background, alignment)
-  2. Race Selection (with automatic racial bonuses)
-  3. Class Selection (with hit die and proficiencies)
-  4. Ability Scores (Standard Array: 15, 14, 13, 12, 10, 8)
-  5. Personality & Traits
+- **Creation Wizard (F3)**: Level and edition, background, species, class, abilities, spells, feats, languages, and equipment. See [docs/character-creation.md](docs/character-creation.md)
 - **Rule-Based Calculations (F4)**: Automatic derivation of:
   - Ability modifiers
   - Skill bonuses with proficiency
-  - Hit points (class + CON modifier + racial bonuses)
+  - Hit points (class + CON modifier + species bonuses)
   - Armor Class (10 + DEX modifier)
   - Initiative and proficiency bonus
 - **Interactive Sheet (F5)**: Click any ability or skill to roll d20 + modifiers
@@ -90,8 +85,8 @@ Works on all modern browsers with IndexedDB support:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/joelmale/NexusForge.git
-cd NexusForge
+git clone https://github.com/joelmale/NexusForge.git dnd-character-system
+cd dnd-character-system
 ```
 
 2. Install dependencies:
@@ -118,10 +113,10 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete Docker Swarm deployment instru
 **Quick Start with Docker:**
 ```bash
 # Build the image
-docker build -t nexus-forge .
+docker build -t dnd-character-system .
 
 # Run locally
-docker run -p 8080:80 nexus-forge
+docker run -p 8080:80 dnd-character-system
 
 # Deploy to Swarm
 docker stack deploy -c docker-compose.yml character-forge
@@ -183,7 +178,7 @@ See [DOCKER_OPTIMIZATIONS.md](./DOCKER_OPTIMIZATIONS.md) for technical details.
 ## Project Structure
 
 ```
-NexusForge/
+dnd-character-system/
 ├── src/
 │   ├── App.tsx                         # Main React application
 │   ├── main.tsx                        # Application entry point
@@ -241,35 +236,21 @@ interface Character {
 }
 ```
 
-## Current Content
+## Rules content
 
-### Races
-- **Human**: +1 to all abilities, Speed 30ft
-- **Dwarf (Hill)**: +2 CON, +1 WIS, +1 HP per level, Speed 25ft
-- **Elf (High)**: +2 DEX, +1 INT, Darkvision, Fey Ancestry, Speed 30ft
+Characters, spells, feats, backgrounds, subclasses, optional class features, gear, magic items, and monsters for the 2014 and 2024 books in the content inventory are stored in the app. Nothing is loaded from an external rules API. Spell text, magic items, and monster stat blocks are separate files and load the first time you open that book.
 
-### Classes
-- **Fighter**: d10 hit die, STR/CON saves, Athletics & Acrobatics proficiency
-- **Wizard**: d6 hit die, INT/WIS saves, Arcana & History proficiency
-- **Rogue**: d8 hit die, DEX/INT saves, Multiple skill proficiencies
+Still left out: 12 older species names that are already playable under another record, the 2024 Ability Score Improvement feat (the wizard treats that as an ability-score step), and the three sidekick classes from Tasha's Cauldron of Everything. The eight DMG monstrous species are included and can be hidden with `SHOW_MONSTROUS_PLAYER_SPECIES` in `src/data/contentFlags.ts` (on by default). The full table is `sourcebooks/gap_report.md`.
 
 ## Future Enhancements
 
-- [ ] Integration with dnd5eapi.co for full SRD content
-- [ ] Additional races and classes
-- [ ] Spell tracking for spellcasters
-- [ ] Equipment and inventory management
-- [ ] Character advancement/leveling system
-- [ ] Combat tracker
-- [ ] Custom race/class creator
 - [ ] PDF export
-- [ ] Dark/light theme toggle
 - [ ] Character portraits
 - [ ] Campaign/party management
 
 ## Privacy & Data
 
-**Your data never leaves your device.** The NexusForge:
+**Your data never leaves your device.** The dnd character system:
 - ❌ Does NOT send data to any server
 - ❌ Does NOT require internet after loading
 - ❌ Does NOT track users

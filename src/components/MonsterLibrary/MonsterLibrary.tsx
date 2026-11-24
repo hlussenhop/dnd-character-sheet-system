@@ -6,6 +6,7 @@ import { MonsterFilters } from './MonsterFilters';
 import { CreateMonsterModal } from './CreateMonsterModal';
 import { SavedEncountersList } from './SavedEncountersList';
 import { Monster, UserMonster } from '../../types/dnd';
+import { monsterFiltersAreActive } from '../../utils/monsterLibraryFilters';
 
 interface MonsterLibraryProps {
   onSelectMonster: (monster: Monster | UserMonster) => void;
@@ -23,12 +24,35 @@ export const MonsterLibrary: React.FC<MonsterLibraryProps> = ({ onSelectMonster,
     setMonsterQuantity,
     clearSelection,
     encounters,
+    filters,
+    resolveMonster,
   } = useMonsterContext();
+
+  const PAGE = 60;
+  const filterKey = [
+    filters.search,
+    filters.edition,
+    filters.source,
+    filters.types.join(','),
+    filters.sizes.join(','),
+    filters.crMin,
+    filters.crMax,
+    filters.movement.join(','),
+    filters.sort,
+    filters.hasLegendaryActions,
+    filters.showFavoritesOnly,
+    filters.showCustomOnly,
+    filters.showSRDOnly,
+  ].join('|');
+  const [page, setPage] = useState({ key: '', extra: 0 });
+  const extra = page.key === filterKey ? page.extra : 0;
+  const visibleMonsters = filteredMonsters.slice(0, PAGE + extra);
 
   const [selectionMode, setSelectionMode] = useState(false);
   const [showCreateMonster, setShowCreateMonster] = useState(false);
   const [editingMonster, setEditingMonster] = useState<UserMonster | null>(null);
   const [showSavedEncounters, setShowSavedEncounters] = useState(false);
+  const [openError, setOpenError] = useState<string | null>(null);
 
   // Calculate total monsters selected (considering quantities)
   const totalMonstersSelected = Object.values(selectedEncounterMonsters).reduce(
@@ -74,7 +98,8 @@ export const MonsterLibrary: React.FC<MonsterLibraryProps> = ({ onSelectMonster,
           <div>
             <h1 className="text-4xl font-bold text-theme-primary">Monster Library</h1>
             <p className="text-gray-600 mt-2">
-              {filteredMonsters.length} monster{filteredMonsters.length !== 1 ? 's' : ''} available
+              {filteredMonsters.length} monster{filteredMonsters.length !== 1 ? 's' : ''}{' '}
+              {monsterFiltersAreActive(filters) ? 'match' : 'in the library'}
             </p>
           </div>
 
@@ -159,10 +184,19 @@ export const MonsterLibrary: React.FC<MonsterLibraryProps> = ({ onSelectMonster,
         <MonsterFilters />
       </div>
 
+      {openError && (
+        <p className="mb-4 rounded-lg bg-theme-secondary px-4 py-3 text-sm text-accent-red-light">{openError}</p>
+      )}
+
       {/* Monster List */}
       <MonsterList
-        monsters={filteredMonsters}
-        onSelectMonster={onSelectMonster}
+        monsters={visibleMonsters}
+        onSelectMonster={monster => {
+          setOpenError(null);
+          void resolveMonster(monster).then(onSelectMonster).catch(() => {
+            setOpenError(`Couldn't load ${monster.name}. Open it again in a moment.`);
+          });
+        }}
         selectionMode={selectionMode}
         selectedMonsters={selectedEncounterMonsters}
         onToggleSelection={toggleMonsterSelection}
@@ -172,6 +206,18 @@ export const MonsterLibrary: React.FC<MonsterLibraryProps> = ({ onSelectMonster,
           setShowCreateMonster(true);
         }}
       />
+
+      {visibleMonsters.length < filteredMonsters.length && (
+        <div className="mt-6 text-center">
+          <button
+            onClick={() => setPage({ key: filterKey, extra: extra + PAGE })}
+            className="px-4 py-2 bg-theme-tertiary text-white rounded-lg hover:bg-theme-quaternary transition-colors"
+          >
+            Show {Math.min(PAGE, filteredMonsters.length - visibleMonsters.length)} more
+            <span className="text-theme-muted"> ({filteredMonsters.length - visibleMonsters.length} left)</span>
+          </button>
+        </div>
+      )}
 
       {/* Create/Edit Monster Modal */}
       <CreateMonsterModal

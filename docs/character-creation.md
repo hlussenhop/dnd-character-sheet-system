@@ -1,53 +1,59 @@
 # Character Creation Wizard Guide
 
-The Character Creation Wizard guides you through the process of creating a new D&D 5e character step-by-step.
+The wizard walks through a new D&D character. Choose 2014 or 2024 rules on the first step. That choice selects the species, backgrounds, classes, subclasses, spells, and feats for the rest of the wizard. Steps that do not apply to the class or level are skipped.
 
-## Step 1: Character Details
+## Character Level
 
-- **Name:** Enter your character's name.
-- **Alignment:** Choose your character's alignment from the dropdown.
-- **Background:** Select a background for your character. This will grant you skill proficiencies and starting equipment.
+Pick a level from 1 to 20 and an edition. Subclass, ability score improvements, and extra feats appear when the level unlocks them.
 
-## Step 2: Choose Race
+## Basic Identity
 
-- Select your character's race from the available options. Your racial ability score bonuses will be applied automatically.
+Name, alignment, and background. A background grants skills, tools, and sometimes an origin feat or ability bonuses. 2024 backgrounds are chosen here, before species.
 
-## Step 3: Choose Class & Subclass
+## Choose Species
 
-- **Class:** Choose your character's class. This determines your hit die, proficiencies, and class features.
-- **Skills:** Select your skill proficiencies from the list of options provided by your class.
-- **Subclass:** If your class chooses a subclass at level 1, you will be prompted to select it here. Otherwise, subclass selection will happen when you level up.
+Species traits, lineage, and ancestry. 2024 species do not add ability score bonuses. Those bonuses come from the background and from feats.
 
-## Step 4: Choose Fighting Style (Conditional)
+## Choose Class and Subclass
 
-- If you have chosen a class that gets a Fighting Style at level 1 (like Fighter), you will be prompted to select one.
+Class, skills, and tools. A subclass is required once the class grants it (usually level 3; a 2014 cleric chooses a domain at level 1). A 2024 cleric chooses Divine Order at level 1 and a domain at level 3.
 
-## Step 5: Select Spells (Conditional)
+## Determine Abilities
 
-- If your chosen class is a spellcaster, this step allows you to select your cantrips and 1st-level spells.
+Standard array, point buy, roll, or manual scores. Background bonuses are applied on top of the method you pick.
 
-## Step 6: Determine Abilities
+## High-Level Setup
 
-- **Method:** Choose your preferred method for determining ability scores:
-    - **Standard Array:** Assign the scores 15, 14, 13, 12, 10, 8 to your abilities.
-    - **Roll:** Roll for your ability scores using various dice rolling methods.
-    - **Point Buy:** Distribute 27 points to purchase your ability scores.
-    - **Custom:** Manually enter your ability scores (for homebrew rules or with DM permission).
+Shown for characters created above level 1. Choose the subclass and other features the class would have gained on the way up.
 
-## Step 7: Choose Feats (Optional)
+## Ability Score Improvements
 
-- If your character is level 4 or higher (or if your DM allows it at level 1), you can select feats instead of an Ability Score Improvement.
+One pass for each ASI level the character has already reached (4, 8, 12, 16, 19).
 
-## Step 8: Select Equipment
+## Class Options
 
-- Choose your starting equipment from the options provided by your class.
+Fighting styles and other optional class features the class grants by this level (maneuvers, invocations, metamagic, and the rest of that list).
 
-## Step 9: Customize Equipment (Optional)
+## Select Spells
 
-- Browse the full equipment database and add any additional items to your starting inventory.
+Cantrips and spells for a spellcasting class. The list is the class list for the chosen edition.
 
-## Step 10: Finalize Background
+## Choose Feats
 
-- **Personality, Ideals, Bonds, Flaws:** Fill in the details of your character's personality.
-- **HP Calculation:** Choose to either take the maximum possible HP for your class or roll for it.
-- **Create Character:** Click the "Create Character" button to finalize your character and add them to your hero list.
+Origin feats and any other feats the character has earned. A human who takes Versatile picks a second origin feat.
+
+## Select Languages
+
+Language slots from the species and the background, for both editions. A 2024 Player's Handbook background does not add a language slot.
+
+## Select Equipment
+
+Starting gear from the class and the background.
+
+## Customize Equipment
+
+Add more items from the equipment list, including mundane gear from the sourcebooks.
+
+## Final Details and Personality
+
+Personality, and the name generator. Creating the character saves it in this browser.

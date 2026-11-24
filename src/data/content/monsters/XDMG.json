@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Avatar of Death",
+    "edition": "2024",
+    "source": "XDMG",
+    "sources": [
+      "XDMG"
+    ],
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral evil",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 20
+      }
+    ],
+    "speed": {
+      "walk": "60 ft.",
+      "fly": "60 ft.",
+      "hover": true
+    },
+    "strength": 16,
+    "dexterity": 16,
+    "constitution": 16,
+    "intelligence": 16,
+    "wisdom": 16,
+    "charisma": 16,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "condition_immunities": [
+      {
+        "index": "charmed",
+        "name": "charmed",
+        "url": ""
+      },
+      {
+        "index": "exhaustion",
+        "name": "exhaustion",
+        "url": ""
+      },
+      {
+        "index": "frightened",
+        "name": "frightened",
+        "url": ""
+      },
+      {
+        "index": "paralyzed",
+        "name": "paralyzed",
+        "url": ""
+      },
+      {
+        "index": "petrified",
+        "name": "petrified",
+        "url": ""
+      },
+      {
+        "index": "poisoned",
+        "name": "poisoned",
+        "url": ""
+      },
+      {
+        "index": "unconscious",
+        "name": "unconscious",
+        "url": ""
+      }
+    ],
+    "senses": {
+      "truesight": "60 ft.",
+      "passive_perception": 13
+    },
+    "languages": "all languages known to its summoner",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 0,
+    "hit_dice": "",
+    "hit_points_roll": "Half the HP maximum of its summoner",
+    "special_abilities": [
+      {
+        "name": "Incorporeal Movement",
+        "desc": "The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "desc": "The avatar makes a number of Reaping Scythe attacks equal to half the summoner's Proficiency Bonus (rounded up)."
+      },
+      {
+        "name": "Reaping Scythe",
+        "desc": "m Automatic hit, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage."
+      }
+    ],
+    "index": "avatar-of-death-2024"
+  },
+  {
+    "name": "Giant Fly",
+    "edition": "2024",
+    "source": "XDMG",
+    "sources": [
+      "XDMG"
+    ],
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "armor_class": [
+      {
+        "type": "dex",
+        "value": 11
+      }
+    ],
+    "speed": {
+      "walk": "30 ft.",
+      "fly": "60 ft."
+    },
+    "strength": 14,
+    "dexterity": 13,
+    "constitution": 13,
+    "intelligence": 2,
+    "wisdom": 10,
+    "charisma": 3,
+    "proficiencies": [],
+    "damage_vulnerabilities": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "condition_immunities": [],
+    "senses": {
+      "darkvision": "60 ft.",
+      "passive_perception": 10
+    },
+    "languages": "",
+    "challenge_rating": 0,
+    "proficiency_bonus": 2,
+    "xp": 0,
+    "hit_points": 19,
+    "hit_dice": "3d10",
+    "hit_points_roll": "3d10 + 3",
+    "index": "giant-fly-2024"
+  }
+]

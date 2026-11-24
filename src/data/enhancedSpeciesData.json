@@ -9,7 +9,13 @@
     "baseSpeed": 30,
     "mechanicalBonuses": {},
     "speciesFeat": "versatile",
-    "typicalRoles": ["Fighter", "Wizard", "Rogue", "Cleric", "Any"],
+    "typicalRoles": [
+      "Fighter",
+      "Wizard",
+      "Rogue",
+      "Cleric",
+      "Any"
+    ],
     "roleplayingTips": [
       "Embrace your ambition and drive to achieve great things",
       "Use your adaptability to fit into any social situation",
@@ -28,20 +34,64 @@
     "mechanicalBonuses": {},
     "lineages": {
       "High Elf": {
-        "traits": ["Prestidigitation cantrip (can swap daily)"],
-        "spells": ["Detect Magic", "Misty Step"]
+        "traits": [
+          "Prestidigitation cantrip (can swap daily)"
+        ],
+        "spells": [
+          "Detect Magic",
+          "Misty Step"
+        ]
       },
       "Wood Elf": {
         "baseSpeed": 35,
-        "traits": ["Speed (35 ft)"],
-        "spells": ["Druidcraft", "Longstrider", "Pass Without Trace"]
+        "traits": [
+          "Speed (35 ft)"
+        ],
+        "spells": [
+          "Druidcraft",
+          "Longstrider",
+          "Pass Without Trace"
+        ]
       },
       "Drow": {
-        "traits": ["Superior Darkvision (120 ft)"],
-        "spells": ["Dancing Lights", "Faerie Fire", "Darkness"]
+        "traits": [
+          "Superior Darkvision (120 ft)"
+        ],
+        "spells": [
+          "Dancing Lights",
+          "Faerie Fire",
+          "Darkness"
+        ]
+      },
+      "Lorwyn": {
+        "traits": [
+          "Thorn Whip cantrip (swap on a Long Rest for a Druid cantrip)"
+        ],
+        "spells": [
+          "Thorn Whip",
+          "Command",
+          "Silence"
+        ]
+      },
+      "Shadowmoor": {
+        "traits": [
+          "Darkvision (120 ft)",
+          "Starry Wisp cantrip"
+        ],
+        "spells": [
+          "Starry Wisp",
+          "Heroism",
+          "Gentle Repose"
+        ]
       }
     },
-    "typicalRoles": ["Wizard", "Ranger", "Druid", "Bard", "Rogue"],
+    "typicalRoles": [
+      "Wizard",
+      "Ranger",
+      "Druid",
+      "Bard",
+      "Rogue"
+    ],
     "roleplayingTips": [
       "Embrace your long lifespan and patient perspective",
       "Show reverence for nature and ancient traditions",
@@ -81,7 +131,12 @@
       }
     },
     "speciesFeat": null,
-    "typicalRoles": ["Fighter", "Cleric", "Barbarian", "Paladin"],
+    "typicalRoles": [
+      "Fighter",
+      "Cleric",
+      "Barbarian",
+      "Paladin"
+    ],
     "roleplayingTips": [
       "Show pride in your craftsmanship and heritage",
       "Demonstrate courage and stubborn determination",
@@ -100,14 +155,29 @@
     "mechanicalBonuses": {},
     "lineages": {
       "Lightfoot (Legacy)": {
-        "traits": ["Lucky", "Brave", "Halfling Nimbleness", "Naturally Stealthy"]
+        "traits": [
+          "Lucky",
+          "Brave",
+          "Halfling Nimbleness",
+          "Naturally Stealthy"
+        ]
       },
       "Stout (Legacy)": {
-        "traits": ["Lucky", "Brave", "Halfling Nimbleness", "Stout Resilience (poison advantage)"]
+        "traits": [
+          "Lucky",
+          "Brave",
+          "Halfling Nimbleness",
+          "Stout Resilience (poison advantage)"
+        ]
       }
     },
     "speciesFeat": null,
-    "typicalRoles": ["Rogue", "Bard", "Druid", "Ranger"],
+    "typicalRoles": [
+      "Rogue",
+      "Bard",
+      "Druid",
+      "Ranger"
+    ],
     "roleplayingTips": [
       "Use your small size and unassuming nature to your advantage",
       "Show cheerfulness and optimism even in difficult times",
@@ -124,14 +194,27 @@
     "mechanicalBonuses": {},
     "lineages": {
       "Forest Gnome": {
-        "spells": ["Minor Illusion", "Speak with Animals"]
+        "spells": [
+          "Minor Illusion",
+          "Speak with Animals"
+        ]
       },
       "Rock Gnome": {
-        "spells": ["Mending", "Prestidigitation"],
-        "traits": ["Clockwork Devices (create tiny mechanical items)"]
+        "spells": [
+          "Mending",
+          "Prestidigitation"
+        ],
+        "traits": [
+          "Clockwork Devices (create tiny mechanical items)"
+        ]
       }
     },
-    "typicalRoles": ["Wizard", "Artificer", "Bard", "Rogue"],
+    "typicalRoles": [
+      "Wizard",
+      "Artificer",
+      "Bard",
+      "Rogue"
+    ],
     "roleplayingTips": [
       "Embrace your curiosity and love of invention",
       "Show enthusiasm for learning and experimentation",
@@ -146,7 +229,13 @@
     "baseSpeed": 30,
     "mechanicalBonuses": {},
     "speciesFeat": "prodigy",
-    "typicalRoles": ["Bard", "Paladin", "Ranger", "Rogue", "Any"],
+    "typicalRoles": [
+      "Bard",
+      "Paladin",
+      "Ranger",
+      "Rogue",
+      "Any"
+    ],
     "roleplayingTips": [
       "Navigate the balance between elven grace and human ambition",
       "Use your diplomatic skills to bridge different cultures",
@@ -162,8 +251,12 @@
     ],
     "baseSpeed": 30,
     "mechanicalBonuses": {},
-    "speciesFeatOptions": ["orcish-fury", "relentless-endurance"],
-    "typicalRoles": ["Barbarian", "Fighter", "Paladin", "Ranger"],
+    "typicalRoles": [
+      "Barbarian",
+      "Fighter",
+      "Paladin",
+      "Ranger"
+    ],
     "roleplayingTips": [
       "Embrace your physical strength and combat prowess",
       "Show honor and courage in battle",
@@ -181,18 +274,35 @@
     "fiendishLegacies": {
       "Abyssal": {
         "resistance": "Poison",
-        "spells": ["Poison Spray", "Ray of Sickness", "Hold Person"]
+        "spells": [
+          "Poison Spray",
+          "Ray of Sickness",
+          "Hold Person"
+        ]
       },
       "Chthonic": {
         "resistance": "Necrotic",
-        "spells": ["Chill Touch", "False Life", "Ray of Enfeeblement"]
+        "spells": [
+          "Chill Touch",
+          "False Life",
+          "Ray of Enfeeblement"
+        ]
       },
       "Infernal": {
         "resistance": "Fire",
-        "spells": ["Fire Bolt", "Hellish Rebuke", "Darkness"]
+        "spells": [
+          "Fire Bolt",
+          "Hellish Rebuke",
+          "Darkness"
+        ]
       }
     },
-    "typicalRoles": ["Warlock", "Sorcerer", "Rogue", "Bard"],
+    "typicalRoles": [
+      "Warlock",
+      "Sorcerer",
+      "Rogue",
+      "Bard"
+    ],
     "roleplayingTips": [
       "Embrace your infernal heritage with confidence",
       "Use your charisma to overcome prejudice",
@@ -221,8 +331,12 @@
       "Silver": "Cold",
       "White": "Cold"
     },
-    "speciesFeatOptions": ["draconic-resistance", "draconic-senses"],
-    "typicalRoles": ["Fighter", "Paladin", "Sorcerer", "Barbarian"],
+    "typicalRoles": [
+      "Fighter",
+      "Paladin",
+      "Sorcerer",
+      "Barbarian"
+    ],
     "roleplayingTips": [
       "Embrace your draconic heritage with pride",
       "Show honor and courage in all your dealings",
@@ -246,7 +360,12 @@
       "Necrotic Shroud (enemies must save or be frightened)"
     ],
     "speciesFeat": null,
-    "typicalRoles": ["Paladin", "Cleric", "Bard", "Fighter"],
+    "typicalRoles": [
+      "Paladin",
+      "Cleric",
+      "Bard",
+      "Fighter"
+    ],
     "roleplayingTips": [
       "Embrace your celestial heritage with grace",
       "Use your healing abilities to help others",
@@ -268,11 +387,11 @@
       "Fire": "Fire",
       "Water": "Cold"
     },
-    "typicalRoles": ["Sorcerer", "Fighter", "Barbarian", "Wizard"],
-    "roleplayingTips": [
-      "Lean into your elemental origin when describing appearance and quirks",
-      "Show how your element shapes your temperament",
-      "Use your resistance and utility to solve problems creatively"
+    "typicalRoles": [
+      "Sorcerer",
+      "Fighter",
+      "Barbarian",
+      "Wizard"
     ]
   },
   "goliath": {
@@ -293,7 +412,12 @@
       "Storm": "Deal 1d8 Thunder damage to attacker as Reaction"
     },
     "speciesFeat": null,
-    "typicalRoles": ["Barbarian", "Fighter", "Ranger", "Druid"],
+    "typicalRoles": [
+      "Barbarian",
+      "Fighter",
+      "Ranger",
+      "Druid"
+    ],
     "roleplayingTips": [
       "Show reverence for nature and ancestral spirits",
       "Embrace your physical strength and endurance",
@@ -310,7 +434,12 @@
     "baseSpeed": 30,
     "mechanicalBonuses": {},
     "speciesFeat": null,
-    "typicalRoles": ["Barbarian", "Fighter", "Shaman", "Warrior"],
+    "typicalRoles": [
+      "Barbarian",
+      "Fighter",
+      "Shaman",
+      "Warrior"
+    ],
     "roleplayingTips": [
       "Embrace your competitive spirit and warrior culture",
       "Show honor and courage in battle",
@@ -327,114 +456,234 @@
     ],
     "baseSpeed": 30,
     "mechanicalBonuses": {},
-    "typicalRoles": ["Druid", "Cleric", "Ranger", "Barbarian"]
+    "typicalRoles": [
+      "Druid",
+      "Cleric",
+      "Ranger",
+      "Barbarian"
+    ]
   },
   "kenku": {
     "detailedDescription": "Kenku are crow-like humanoids who were transformed by powerful magic. They are cunning and resourceful, but they cannot speak except by mimicking sounds they have heard.",
-    "traits": ["Expert Forgery", "Kenku Training", "Mimicry"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Bard", "Ranger"]
-  },
-  "tabaxi": {
-    "detailedDescription": "Tabaxi are cat-like humanoids who hail from distant jungles. They are curious, agile, and often follow their whims.",
-    "traits": ["Darkvision", "Feline Agility", "Cat's Claws", "Cat's Talent"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Monk", "Ranger", "Bard"]
-  },
-  "triton": {
-    "detailedDescription": "Tritons are fish-like humanoids who dwell in the depths of the ocean. They are guardians of the sea and often serve powerful aquatic beings.",
-    "traits": ["Amphibious", "Control Air and Water", "Emissary of the Sea", "Guardians of the Depths"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Paladin", "Cleric", "Fighter"]
-  },
-  "bugbear": {
-    "detailedDescription": "Bugbears are hulking, furry goblinoids that tower over their goblin and hobgoblin kin. They are stealthy predators who strike from the shadows.",
-    "traits": ["Darkvision", "Long-Limbed", "Powerful Build", "Sneaky", "Surprise Attack"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Barbarian", "Fighter"]
-  },
-  "goblin": {
-    "detailedDescription": "Goblins are small, green-skinned creatures that dwell in dark, cramped places. They are cunning and vicious, but they are often cowardly.",
-    "traits": ["Darkvision", "Fury of the Small", "Nimble Escape"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Ranger", "Bard"]
-  },
-  "hobgoblin": {
-    "detailedDescription": "Hobgoblins are large, militaristic goblinoids that organize themselves into legions. They are disciplined warriors who value honor and tradition.",
-    "traits": ["Darkvision", "Martial Training", "Saving Face"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Fighter", "Paladin", "Warlock"]
-  },
-  "kobold": {
-    "detailedDescription": "Kobolds are small, reptilian humanoids that dwell in dark places. They are cowardly and subservient, but they can be surprisingly cunning.",
-    "traits": ["Darkvision", "Grovel, Cower, and Beg", "Pack Tactics", "Sunlight Sensitivity"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Sorcerer", "Artificer"]
-  },
-  "yuan-ti-pureblood": {
-    "detailedDescription": "Yuan-ti purebloods are snake-like humanoids who appear mostly human. They are cunning and manipulative, with a natural affinity for magic.",
-    "traits": ["Darkvision", "Innate Spellcasting", "Magic Resistance", "Poison Immunity"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Warlock", "Sorcerer", "Rogue"]
-  },
-  "fairy": {
-    "detailedDescription": "Fairies are tiny, magical beings from the Feywild. They are playful and mischievous, with a natural affinity for illusion magic.",
-    "traits": ["Fairy Magic", "Flight"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Bard", "Sorcerer", "Druid"]
-  },
-  "harengon": {
-    "detailedDescription": "Harengons are rabbit-like humanoids who hail from the Feywild. They are quick and lucky, with enhanced senses and agility.",
-    "traits": ["Hare-Trigger", "Leporine Senses", "Lucky Footwork", "Rabbit Hop"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Ranger", "Monk"]
-  },
-  "loxodon": {
-    "detailedDescription": "Loxodons are elephant-like humanoids known for their wisdom and calm demeanor. They are peaceful and introspective.",
-    "traits": ["Powerful Build", "Loxodon Serenity", "Natural Armor", "Trunk"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Cleric", "Druid", "Paladin"]
-  },
-  "owlin": {
-    "detailedDescription": "Owlin are owl-like humanoids who can fly silently through the night. They are wise and observant.",
-    "traits": ["Darkvision", "Flight", "Silent Feathers"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Rogue", "Wizard", "Ranger"]
-  },
-  "githyanki": {
-    "detailedDescription": "Githyanki are humanoid warriors from the Astral Plane. They are fierce fighters with psionic abilities.",
-    "traits": ["Decadent Mastery", "Githyanki Psionics", "Martial Prodigy"],
-    "baseSpeed": 30,
-    "mechanicalBonuses": {},
-    "typicalRoles": ["Fighter", "Warlock", "Wizard"]
-  },
-  "genasi": {
-    "detailedDescription": "Genasi are beings touched by the elemental planes. Each carries the influence of air, earth, fire, or water, shaping their appearance and innate talents.",
     "traits": [
-      "Darkvision (60 ft)",
-      "Elemental Resistance (based on ancestry)",
-      "Reach to the Element (element-themed utility)"
+      "Expert Forgery",
+      "Kenku Training",
+      "Mimicry"
     ],
     "baseSpeed": 30,
     "mechanicalBonuses": {},
-    "ancestries": {
-      "Air": "Lightning",
-      "Earth": "Acid",
-      "Fire": "Fire",
-      "Water": "Cold"
-    },
-    "typicalRoles": ["Sorcerer", "Fighter", "Barbarian", "Wizard"]
+    "typicalRoles": [
+      "Rogue",
+      "Bard",
+      "Ranger"
+    ]
+  },
+  "tabaxi": {
+    "detailedDescription": "Tabaxi are cat-like humanoids who hail from distant jungles. They are curious, agile, and often follow their whims.",
+    "traits": [
+      "Darkvision",
+      "Feline Agility",
+      "Cat's Claws",
+      "Cat's Talent"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Rogue",
+      "Monk",
+      "Ranger",
+      "Bard"
+    ]
+  },
+  "triton": {
+    "detailedDescription": "Tritons are fish-like humanoids who dwell in the depths of the ocean. They are guardians of the sea and often serve powerful aquatic beings.",
+    "traits": [
+      "Amphibious",
+      "Control Air and Water",
+      "Emissary of the Sea",
+      "Guardians of the Depths"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Paladin",
+      "Cleric",
+      "Fighter"
+    ]
+  },
+  "bugbear": {
+    "detailedDescription": "Bugbears are hulking, furry goblinoids that tower over their goblin and hobgoblin kin. They are stealthy predators who strike from the shadows.",
+    "traits": [
+      "Darkvision",
+      "Long-Limbed",
+      "Powerful Build",
+      "Sneaky",
+      "Surprise Attack"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Rogue",
+      "Barbarian",
+      "Fighter"
+    ]
+  },
+  "goblin": {
+    "detailedDescription": "Goblins are small, green-skinned creatures that dwell in dark, cramped places. They are cunning and vicious, but they are often cowardly.",
+    "traits": [
+      "Darkvision",
+      "Fury of the Small",
+      "Nimble Escape"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Rogue",
+      "Ranger",
+      "Bard"
+    ]
+  },
+  "hobgoblin": {
+    "detailedDescription": "Hobgoblins are large, militaristic goblinoids that organize themselves into legions. They are disciplined warriors who value honor and tradition.",
+    "traits": [
+      "Darkvision",
+      "Martial Training",
+      "Saving Face"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Fighter",
+      "Paladin",
+      "Warlock"
+    ]
+  },
+  "kobold": {
+    "detailedDescription": "Kobolds are small, reptilian humanoids that dwell in dark places. They are cowardly and subservient, but they can be surprisingly cunning.",
+    "traits": [
+      "Darkvision",
+      "Grovel, Cower, and Beg",
+      "Pack Tactics",
+      "Sunlight Sensitivity"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Rogue",
+      "Sorcerer",
+      "Artificer"
+    ]
+  },
+  "fairy": {
+    "detailedDescription": "Fairies are tiny, magical beings from the Feywild. They are playful and mischievous, with a natural affinity for illusion magic.",
+    "traits": [
+      "Fairy Magic",
+      "Flight"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Bard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  "harengon": {
+    "detailedDescription": "Harengons are rabbit-like humanoids who hail from the Feywild. They are quick and lucky, with enhanced senses and agility.",
+    "traits": [
+      "Hare-Trigger",
+      "Leporine Senses",
+      "Lucky Footwork",
+      "Rabbit Hop"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Rogue",
+      "Ranger",
+      "Monk"
+    ]
+  },
+  "loxodon": {
+    "detailedDescription": "Loxodons are elephant-like humanoids known for their wisdom and calm demeanor. They are peaceful and introspective.",
+    "traits": [
+      "Powerful Build",
+      "Loxodon Serenity",
+      "Natural Armor",
+      "Trunk"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Cleric",
+      "Druid",
+      "Paladin"
+    ]
+  },
+  "owlin": {
+    "detailedDescription": "Owlin are owl-like humanoids who can fly silently through the night. They are wise and observant.",
+    "traits": [
+      "Darkvision",
+      "Flight",
+      "Silent Feathers"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Rogue",
+      "Wizard",
+      "Ranger"
+    ]
+  },
+  "githyanki": {
+    "detailedDescription": "Githyanki are humanoid warriors from the Astral Plane. They are fierce fighters with psionic abilities.",
+    "traits": [
+      "Decadent Mastery",
+      "Githyanki Psionics",
+      "Martial Prodigy"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Fighter",
+      "Warlock",
+      "Wizard"
+    ]
+  },
+  "yuan-ti": {
+    "detailedDescription": "Yuan-ti purebloods are snake-like humanoids who appear mostly human. They are cunning and manipulative, with a natural affinity for magic.",
+    "traits": [
+      "Darkvision",
+      "Magic Resistance",
+      "Poison Resilience",
+      "Serpentine Spellcasting"
+    ],
+    "baseSpeed": 30,
+    "mechanicalBonuses": {},
+    "typicalRoles": [
+      "Warlock",
+      "Sorcerer",
+      "Rogue"
+    ]
+  },
+  "faerie": {
+    "lineages": {
+      "Lorwyn": {},
+      "Shadowmoor": {
+        "traits": [
+          "Darkvision (120 ft)"
+        ]
+      }
+    }
+  },
+  "kithkin": {
+    "lineages": {
+      "Lorwyn": {},
+      "Shadowmoor": {
+        "traits": [
+          "Darkvision (120 ft)"
+        ]
+      }
+    }
   }
 }

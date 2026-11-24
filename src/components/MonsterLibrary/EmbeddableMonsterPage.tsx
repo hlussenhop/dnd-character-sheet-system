@@ -2,18 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MonsterStatBlock } from './MonsterStatBlock';
 import { Monster, UserMonster } from '../../types/dnd';
-import { useMonsterManagement } from '../../hooks/useMonsterManagement';
-import { generateMonsterSlug, isCustomMonsterId, getCustomMonsterDbId } from '../../utils/monsterUtils';
+import { getAllCustomMonsters } from '../../services/dbService';
+import { getMonster, loadMonsterIndex } from '../../services/monsters';
+import { isCustomMonsterId, getCustomMonsterDbId, pickCatalogSlug } from '../../utils/monsterUtils';
 
 const EmbeddableMonsterPage: React.FC = () => {
   const { monsterId } = useParams<{ monsterId: string }>();
-  const { srdMonsters, customMonsters } = useMonsterManagement();
   const [monster, setMonster] = useState<Monster | UserMonster | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let live = true;
+
     const loadMonster = async () => {
+      await Promise.resolve();
+      if (!live) return;
       if (!monsterId) {
         setError('No monster ID provided');
         setLoading(false);
@@ -21,34 +25,33 @@ const EmbeddableMonsterPage: React.FC = () => {
       }
 
       try {
-        let foundMonster: Monster | UserMonster | undefined;
+        let found: Monster | UserMonster | undefined;
 
         if (isCustomMonsterId(monsterId)) {
-          // Custom monster
+          const custom = await getAllCustomMonsters().catch(() => []);
           const dbId = getCustomMonsterDbId(monsterId);
-          foundMonster = customMonsters.find((m: UserMonster) => m.id === dbId);
+          found = custom.find(entry => entry.id === dbId || entry.index === dbId);
         } else {
-          // SRD monster - try slug match first, then exact name match
-          foundMonster = srdMonsters.find((m: Monster) => generateMonsterSlug(m.name) === monsterId);
-          if (!foundMonster) {
-            foundMonster = srdMonsters.find((m: Monster) => m.name.toLowerCase() === monsterId.replace(/-/g, ' '));
-          }
+          const index = await loadMonsterIndex();
+          const slug = pickCatalogSlug(index, monsterId);
+          if (slug) found = await getMonster(slug);
         }
 
-        if (foundMonster) {
-          setMonster(foundMonster);
-        } else {
-          setError('Monster not found');
-        }
+        if (!live) return;
+        if (found) setMonster(found);
+        else setError('Monster not found');
       } catch {
-        setError('Failed to load monster data');
+        if (live) setError('Failed to load monster data');
       } finally {
-        setLoading(false);
+        if (live) setLoading(false);
       }
     };
 
-    loadMonster();
-  }, [monsterId, srdMonsters, customMonsters]);
+    void loadMonster();
+    return () => {
+      live = false;
+    };
+  }, [monsterId]);
 
   if (loading) {
     return (
@@ -76,8 +79,8 @@ const EmbeddableMonsterPage: React.FC = () => {
     <div className="iframe-embeddable min-h-screen bg-theme-primary text-white">
       <MonsterStatBlock
         monster={monster}
-        onClose={() => window.close()} // Close window if opened in popup, or go back in history
-        onEdit={undefined} // No edit functionality in embeddable view
+        onClose={() => window.close()}
+        onEdit={undefined}
       />
     </div>
   );

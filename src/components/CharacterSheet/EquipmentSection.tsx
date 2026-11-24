@@ -1,10 +1,21 @@
 import React from 'react';
-import { Box, Plus } from 'lucide-react';
+import { Box, Plus, Sparkles } from 'lucide-react';
 import { Character, Equipment } from '../../types/dnd';
 import { loadEquipment } from '../../services/dataService';
 import { EquipmentModal } from './EquipmentModal';
 import { EquipmentManagerModal } from './EquipmentManagerModal';
+import { MagicItemDetailModal } from './MagicItemDetailModal';
+import { MagicItemPickerModal } from './MagicItemPickerModal';
 import { canEquipItem } from '../../utils/equipmentValidation';
+import { useMagicItemIndex } from '../../hooks/useMagicItemIndex';
+import {
+  addMagicItem,
+  attunedItemCount,
+  attunementSlotCount,
+  removeMagicItem,
+  setMagicAttunement,
+  sumMagicBonus,
+} from '../../utils/magicItemInventory';
 
 interface EquipmentSectionProps {
   character: Character;
@@ -20,7 +31,7 @@ interface EquipmentSectionProps {
 
 export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
   character,
-  onUpdateCharacter: _onUpdateCharacter,
+  onUpdateCharacter,
   onEquipArmor,
   onEquipWeapon,
   onUnequipItem,
@@ -30,11 +41,35 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
   layoutMode = 'modern',
 }) => {
   const equipmentData = React.useMemo(() => loadEquipment(), []);
+  const magicIndex = useMagicItemIndex();
+  const magicBySlug = React.useMemo(
+    () => new Map((magicIndex ?? []).map(item => [item.slug, item])),
+    [magicIndex],
+  );
   const [selectedEquipment, setSelectedEquipment] = React.useState<Equipment | null>(null);
   const [equipError, setEquipError] = React.useState<string>('');
   const [equipmentManagerOpen, setEquipmentManagerOpen] = React.useState(false);
-  const [filter, setFilter] = React.useState<'all' | 'weapons' | 'armor' | 'gear' | 'equipped'>('all');
+  const [magicPickerOpen, setMagicPickerOpen] = React.useState(false);
+  const [magicDetailSlug, setMagicDetailSlug] = React.useState<string | null>(null);
+  const [attuneError, setAttuneError] = React.useState('');
+  const [filter, setFilter] = React.useState<'all' | 'weapons' | 'armor' | 'gear' | 'equipped' | 'magic'>('all');
   const [searchTerm, setSearchTerm] = React.useState('');
+
+  const saveInventory = (next: Character) => {
+    const before = sumMagicBonus(character, magicIndex, 'bonusAc');
+    const after = sumMagicBonus(next, magicIndex, 'bonusAc');
+    onUpdateCharacter({ ...next, armorClass: character.armorClass + (after - before) });
+  };
+
+  const changeAttunement = (slug: string, attuned: boolean, requiresAttunement: boolean) => {
+    const result = setMagicAttunement(character, slug, attuned, requiresAttunement);
+    if (result.error) {
+      setAttuneError(result.error);
+      return;
+    }
+    setAttuneError('');
+    saveInventory(result.character);
+  };
 
   const handleEquipmentClick = (equipment: Equipment) => {
     setSelectedEquipment(equipment);
@@ -72,14 +107,16 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
   const filteredInventory = (character.inventory || [])
     .filter(item => {
       const equipment = equipmentData.find(eq => eq.slug === item.equipmentSlug);
-      if (!equipment) return false;
+      if (!equipment && !item.magicItemSlug) return false;
       switch (filter) {
         case 'weapons':
-          return equipment.equipment_category === 'Weapon';
+          return equipment?.equipment_category === 'Weapon';
         case 'armor':
-          return equipment.equipment_category === 'Armor';
+          return equipment?.equipment_category === 'Armor';
         case 'gear':
-          return equipment.equipment_category === 'Adventuring Gear' || equipment.equipment_category === 'Tools';
+          return equipment?.equipment_category === 'Adventuring Gear' || equipment?.equipment_category === 'Tools';
+        case 'magic':
+          return Boolean(item.magicItemSlug);
         case 'equipped':
           return (
             item.equipped ||
@@ -93,7 +130,8 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
     .filter(item => {
       if (!searchTerm.trim()) return true;
       const equipment = equipmentData.find(eq => eq.slug === item.equipmentSlug);
-      const haystack = `${equipment?.name || item.equipmentSlug} ${equipment?.equipment_category || ''}`.toLowerCase();
+      const magicName = item.magicItemSlug ? magicBySlug.get(item.magicItemSlug)?.name : undefined;
+      const haystack = `${magicName || equipment?.name || item.equipmentSlug} ${equipment?.equipment_category || ''}`.toLowerCase();
       return haystack.includes(searchTerm.toLowerCase());
     });
 
@@ -109,7 +147,8 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
   const totalWeight =
     (character.inventory || []).reduce((sum, item) => {
       const eq = equipmentData.find(eq => eq.slug === item.equipmentSlug);
-      const wt = eq?.weight || 0;
+      const magicWeight = item.magicItemSlug ? magicBySlug.get(item.magicItemSlug)?.weight : undefined;
+      const wt = eq?.weight || magicWeight || 0;
       return sum + wt * (item.quantity || 0);
     }, 0);
 
@@ -149,8 +188,17 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               <Plus className="w-4 h-4" />
               Add Items
             </button>
+            <button
+              onClick={() => setMagicPickerOpen(true)}
+              className="px-3 py-2 bg-accent-yellow text-cyan-950 rounded-lg flex items-center gap-2 transition-colors"
+              title="Add a magic item"
+            >
+              <Sparkles className="w-4 h-4" />
+              Magic Item
+            </button>
           </div>
         </div>
+        {attuneError && <p className="text-sm text-accent-red mb-2">{attuneError}</p>}
 
         <div className="flex flex-wrap gap-2 mb-4">
           {([
@@ -171,7 +219,8 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             { key: 'gear' as const, label: 'Gear/Tools', count: character.inventory?.filter(item => {
               const equipment = equipmentData.find(eq => eq.slug === item.equipmentSlug);
               return equipment?.equipment_category === 'Adventuring Gear' || equipment?.equipment_category === 'Tools';
-            }).length || 0 }
+            }).length || 0 },
+            { key: 'magic' as const, label: 'Magic', count: character.inventory?.filter(item => item.magicItemSlug).length || 0 }
           ] as const).map(({ key, label, count }) => (
             <button
               key={key}
@@ -201,10 +250,12 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-[420px] overflow-y-auto pr-1">
             {filteredInventory.map((item, idx) => {
               const equipment = equipmentData.find(eq => eq.slug === item.equipmentSlug);
+              const magic = item.magicItemSlug ? magicBySlug.get(item.magicItemSlug) : undefined;
               const isWeapon = equipment?.weapon_category !== undefined;
               const isMastered = character.weaponMastery?.includes(item.equipmentSlug);
               const masteryProperty = equipment?.mastery;
-              const itemWeight = (equipment?.weight || 0) * (item.quantity || 0);
+              const itemWeight = (equipment?.weight || magic?.weight || 0) * (item.quantity || 0);
+              const slotsLeft = attunementSlotCount(character) - attunedItemCount(character);
 
               return (
                 <div
@@ -214,7 +265,14 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex-grow min-w-0 space-y-1">
                       <div className="flex items-center gap-2 flex-wrap">
-                        {equipment ? (
+                        {item.magicItemSlug ? (
+                          <button
+                            onClick={() => setMagicDetailSlug(item.magicItemSlug || null)}
+                            className={`font-semibold ${textPrimaryClass} hover:text-orange-300 transition-colors text-left`}
+                          >
+                            {magic?.name || item.magicItemSlug}
+                          </button>
+                        ) : equipment ? (
                           <button
                             onClick={() => handleEquipmentClick(equipment)}
                             className={`font-semibold ${textPrimaryClass} hover:text-orange-300 transition-colors text-left`}
@@ -227,6 +285,12 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
                           </span>
                         )}
                         {item.equipped && <span className="text-[11px] bg-accent-green/20 border border-accent-green/40 text-accent-green px-2 py-0.5 rounded">Equipped</span>}
+                        {magic && (
+                          <span className="text-[11px] bg-accent-yellow/20 border border-accent-yellow/40 text-accent-yellow-light px-2 py-0.5 rounded capitalize">
+                            {magic.rarity}
+                          </span>
+                        )}
+                        {item.attuned && <span className="text-[11px] bg-accent-yellow/30 border border-accent-yellow/50 text-accent-yellow-light px-2 py-0.5 rounded">Attuned</span>}
                         {item.trinket && <span className="text-[11px] bg-purple-600/20 border border-purple-500/40 text-purple-100 px-2 py-0.5 rounded">Trinket</span>}
                         {isWeapon && isMastered && masteryProperty && (
                           <span
@@ -241,7 +305,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
                         </span>
                       </div>
                       <div className={`text-xs ${textMutedClass} flex items-center gap-3 flex-wrap`}>
-                        <span>{equipment?.equipment_category || 'Item'}</span>
+                        <span>{magic ? `${magic.itemType}${magic.attunement ? ' · Attunement' : ''}` : (equipment?.equipment_category || 'Item')}</span>
                         <span>Weight: {itemWeight} lb</span>
                         {equipment?.weapon_range && <span>{equipment.weapon_range}</span>}
                         {equipment?.armor_category && <span>{equipment.armor_category}</span>}
@@ -250,6 +314,19 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
                     <div className="flex items-center gap-2 flex-shrink-0">
                       <div className="flex gap-1">
                         {/* Equip/Unequip buttons */}
+                        {magic?.attunement && item.magicItemSlug && (
+                          <button
+                            onClick={() => changeAttunement(item.magicItemSlug as string, !item.attuned, true)}
+                            disabled={!item.attuned && slotsLeft <= 0}
+                            className={`px-2 py-0.5 rounded text-xs transition-colors disabled:opacity-40 ${
+                              item.attuned
+                                ? 'bg-accent-red hover:bg-accent-red-light text-white'
+                                : 'bg-accent-yellow text-cyan-950'
+                            }`}
+                          >
+                            {item.attuned ? 'End' : 'Attune'}
+                          </button>
+                        )}
                         {equipment && equipment.equipable && (
                           <>
                             {equipment.equipment_category === 'Armor' && equipment.armor_category !== 'Shield' && (
@@ -316,14 +393,20 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
                       <div className="flex flex-col gap-1">
                         <div className="flex items-center gap-1">
                           <button
-                            onClick={() => onAddItem(character.id, item.equipmentSlug, 1)}
+                            onClick={() => {
+                              if (item.magicItemSlug) saveInventory(addMagicItem(character, item.magicItemSlug));
+                              else onAddItem(character.id, item.equipmentSlug, 1);
+                            }}
                             className="w-5 h-5 bg-green-600 hover:bg-green-700 text-white rounded flex items-center justify-center text-xs font-bold"
                             title="Add 1 to inventory"
                           >
                             +
                           </button>
                           <button
-                            onClick={() => onRemoveItem(character.id, item.equipmentSlug, 1)}
+                            onClick={() => {
+                              if (item.magicItemSlug) saveInventory(removeMagicItem(character, item.magicItemSlug, 1));
+                              else onRemoveItem(character.id, item.equipmentSlug, 1);
+                            }}
                             className="w-5 h-5 bg-red-600 hover:bg-red-700 text-white rounded flex items-center justify-center text-xs font-bold"
                             title={item.quantity > 1 ? 'Use/consume 1 (reduce quantity)' : 'Remove from inventory'}
                           >
@@ -374,6 +457,22 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
           });
           setEquipmentManagerOpen(false);
         }}
+      />
+
+      <MagicItemPickerModal
+        isOpen={magicPickerOpen}
+        character={character}
+        onClose={() => setMagicPickerOpen(false)}
+        onAdd={item => saveInventory(addMagicItem(character, item.slug))}
+      />
+
+      <MagicItemDetailModal
+        slug={magicDetailSlug}
+        attuned={character.inventory?.some(item => item.magicItemSlug === magicDetailSlug && item.attuned)}
+        canAttune={attunementSlotCount(character) > attunedItemCount(character)}
+        onClose={() => setMagicDetailSlug(null)}
+        onAttune={magicDetailSlug ? () => changeAttunement(magicDetailSlug, true, true) : undefined}
+        onEndAttunement={magicDetailSlug ? () => changeAttunement(magicDetailSlug, false, true) : undefined}
       />
     </div>
   );
