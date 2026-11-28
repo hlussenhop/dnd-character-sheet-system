@@ -4,7 +4,7 @@ import { log } from './logger';
 
 /**
  * Migration helper to check if standalone spellbook-forge (SpellbookDB) exists
- * and port its spellbooks into dnd character system's IndexedDB storage.
+ * and port its spellbooks into DnD Character Sheet System's IndexedDB storage.
  */
 export async function migrateLegacySpellbooks(): Promise<number> {
   if (typeof indexedDB === 'undefined') return 0;

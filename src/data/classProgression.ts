@@ -80,6 +80,9 @@ export interface ClassProgression {
  */
 export interface LevelUpRecord {
   level: number;                   // Level reached
+  classSlug?: string;              // Class that gained the level
+  classLevel?: number;             // Level reached in that class
+  newClass?: boolean;              // True when this level added the class
   timestamp: string;               // ISO timestamp of level-up
   hpRolled?: number;               // HP roll (if rolled, otherwise average)
   hpGained: number;                // Total HP gained (roll + CON modifier)
@@ -101,6 +104,11 @@ export interface LevelUpRecord {
 export interface LevelUpData {
   fromLevel: number;               // Current level
   toLevel: number;                 // New level
+  classSlug?: string;              // Class gaining the level
+  className?: string;              // Display name of that class
+  fromClassLevel?: number;         // Levels in that class before (0 for a new class)
+  toClassLevel?: number;           // Levels in that class after
+  isNewClass?: boolean;            // True when multiclassing into this class
   newProficiencyBonus: number;     // New proficiency bonus (if changed)
   hitDie: string;                  // Class hit die
   conModifier: number;             // CON modifier for HP calculation

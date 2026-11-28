@@ -1,15 +1,15 @@
 [
   {
-    "name": "📖 Core Species",
-    "icon": "📖",
+    "name": "Core Species",
+    "icon": "",
     "description": "The fundamental species from the Player's Handbook, perfect for traditional D&D campaigns.",
     "filterCriteria": {
       "core": true
     }
   },
   {
-    "name": "✨ Expanded Species",
-    "icon": "✨",
+    "name": "Expanded Species",
+    "icon": "",
     "description": "Additional playable species beyond the 2024 PHB core, including legacy options.",
     "filterCriteria": {
       "expanded": true

@@ -1,6 +1,6 @@
 services:
-  dnd-character-system:
-    image: ghcr.io/joelmale/dnd-character-system:latest
+  dnd-character-sheet-system:
+    image: ghcr.io/joelmale/dnd-character-sheet-system:latest
     networks:
       - homelab-net
     deploy:
@@ -26,7 +26,7 @@ services:
           cpus: '0.5'
           memory: 256M
       labels:
-        - "com.docker.swarm.service.name=dnd-character-system"
+        - "com.docker.swarm.service.name=dnd-character-sheet-system"
 
 
 networks:

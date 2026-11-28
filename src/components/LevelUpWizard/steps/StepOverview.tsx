@@ -31,6 +31,13 @@ export const StepOverview: React.FC<StepOverviewProps> = ({
           {character.name} is about to advance from level {fromLevel} to level {toLevel}.
           Here's what you'll gain:
         </p>
+        {levelUpData.className && (
+          <p className="text-theme-primary mt-2 font-semibold">
+            {levelUpData.isNewClass
+              ? `Multiclassing into ${levelUpData.className} (${levelUpData.className} level 1)`
+              : `${levelUpData.className} level ${levelUpData.toClassLevel}`}
+          </p>
+        )}
       </div>
 
       {/* HP Increase */}

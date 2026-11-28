@@ -21,15 +21,6 @@ const RandomizeButton: React.FC<RandomizeButtonProps> = ({ onClick, title }) => 
 export const Step0Level: React.FC<StepProps> = ({ data, updateData, nextStep, getNextStepLabel }) => {
   const milestoneLevels = [2, 3, 4, 5, 6, 8, 11, 12, 14, 16, 17, 19, 20];
 
-  const getMilestoneIcon = (level: number) => {
-    const icons = {
-      2: '🎯', 3: '🛡️', 4: '💪', 5: '⚔️', 6: '🛡️',
-      8: '💪', 11: '💪', 12: '🛡️', 14: '💪', 16: '💪',
-      17: '🛡️', 19: '💪', 20: '👑'
-    };
-    return icons[level as keyof typeof icons] || '⚡';
-  };
-
   const getLevelDescription = (level: number) => {
     const descriptions = {
       1: "Fresh adventurer, just starting your journey",
@@ -88,9 +79,6 @@ export const Step0Level: React.FC<StepProps> = ({ data, updateData, nextStep, ge
             >
               <div className={`text-center ${isSelected ? 'text-white' : isMilestone ? 'text-accent-yellow-light' : 'text-theme-tertiary'}`}>
                 <div className='font-bold text-lg'>{level}</div>
-                {isMilestone && (
-                  <div className='text-xs mt-1 opacity-75'>{getMilestoneIcon(level)}</div>
-                )}
               </div>
             </button>
           );
@@ -104,7 +92,7 @@ export const Step0Level: React.FC<StepProps> = ({ data, updateData, nextStep, ge
             <p className='text-theme-tertiary'>{getLevelDescription(data.level)}</p>
             {milestoneLevels.includes(data.level) && (
               <div className='mt-3 p-2 bg-accent-yellow-dark/20 border border-yellow-500 rounded'>
-                <p className='text-accent-yellow-light text-sm font-semibold'>🎯 Milestone Level</p>
+                <p className='text-accent-yellow-light text-sm font-semibold'>Milestone Level</p>
                 <p className='text-yellow-200 text-xs mt-1'>
                   {data.level === 2 && "Gain your class's signature feature (Fighting Style, Spellcasting, etc.)"}
                   {data.level === 3 && "Choose your subclass to specialize your abilities"}

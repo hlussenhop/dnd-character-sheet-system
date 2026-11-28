@@ -46,16 +46,14 @@ export const AutomaticWidget: React.FC<AutomaticWidgetProps> = ({
             <ul className="space-y-1">
               {/* Automatic Grants */}
               {config.grants?.map((grant, index) => (
-                <li key={index} className="text-sm text-gray-300 flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                <li key={index} className="text-sm text-gray-300">
                   <span>{formatGrant(grant)}</span>
                 </li>
               ))}
 
               {/* Bonus Language Choices */}
               {config.bonus_language_choices && (
-                <li className="text-sm text-gray-300 flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                <li className="text-sm text-gray-300">
                   <span>
                     Choice of {config.bonus_language_choices} additional{' '}
                     {config.bonus_language_choices === 1 ? 'language' : 'languages'}
@@ -65,8 +63,7 @@ export const AutomaticWidget: React.FC<AutomaticWidgetProps> = ({
 
               {/* Effect */}
               {config.effect && (
-                <li className="text-sm text-gray-300 flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                <li className="text-sm text-gray-300">
                   <span>{formatEffect(config.effect)}</span>
                 </li>
               )}

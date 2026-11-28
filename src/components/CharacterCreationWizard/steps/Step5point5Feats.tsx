@@ -119,7 +119,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
             </div>
           </div>
           <div className="text-xs text-theme-muted mt-1">
-            ℹ️ Feats are optional. You can also choose Ability Score Improvements at these levels.
+            Feats are optional. You can also choose Ability Score Improvements at these levels.
           </div>
         </div>
         <RandomizeButton
@@ -216,7 +216,7 @@ export const Step5point5Feats: React.FC<StepProps> = ({ data, updateData, nextSt
                   className="absolute top-2 right-2 text-xs text-accent-blue-light hover:text-blue-300"
                   title="View details"
                 >
-                  {showFeatDetails === feat.slug ? '✕' : 'ℹ️'}
+                  {showFeatDetails === feat.slug ? 'Hide' : 'Details'}
                 </button>
                 {showFeatDetails === feat.slug && (
                   <div className="absolute z-10 mt-2 p-3 bg-theme-primary border border-theme-primary rounded-lg shadow-xl w-80 left-0">

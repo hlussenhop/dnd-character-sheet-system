@@ -72,7 +72,7 @@ export function TabletView({
               className="save-combat-btn"
               title="Save current combat state"
             >
-              💾 Save
+              Save
             </button>
             {onBack && (
               <button
@@ -172,14 +172,14 @@ export function TabletView({
           disabled={!isCombatActive}
           className="combat-btn prev-turn"
         >
-          ⬅️ Prev
+          Prev
         </button>
         <button
           onClick={onNextTurn}
           disabled={!isCombatActive}
           className="combat-btn next-turn"
         >
-          Next ➡️
+          Next
         </button>
         <button
           onClick={onNewRound}

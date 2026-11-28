@@ -114,6 +114,15 @@ export interface Skill {
 
 export type Edition = '2014' | '2024';
 
+/** One class a character has levels in. */
+export interface CharacterClassEntry {
+  class: string;          // Display name, e.g. "Fighter"
+  classSlug: string;      // e.g. "fighter"
+  level: number;          // Levels in this class
+  subclass?: string | null;
+  hitDie: number;         // 6, 8, 10 or 12
+}
+
 export interface Character {
   id: string;
   name: string;
@@ -121,9 +130,16 @@ export interface Character {
   /** @deprecated Legacy field retained for migrations. */
   race?: string;
   selectedSpeciesVariant?: string; // For human variants
+  /** Starting class. Multiclass characters list every class in `classes`. */
   class: string;
   classSlug?: string;
+  /** Total character level (sum of all class levels). */
   level: number;
+  /**
+   * Every class the character has levels in, starting class first. Absent on single-class
+   * characters; read it through getClassEntries().
+   */
+  classes?: CharacterClassEntry[];
   alignment: string;
   background: string;
   edition: Edition; // D&D edition (2014 or 2024 rules)
@@ -154,6 +170,8 @@ export interface Character {
     current: number;
     max: number;
     dieType: number; // d6, d8, d10, d12, etc.
+    /** Multiclass only: dice by size, keyed "d6", "d8", ... Totals stay in current/max. */
+    pools?: Record<string, { current: number; max: number }>;
   };
   speed: number;
   /** Extra movement modes from species traits, in feet (e.g. { fly: 30, swim: 30 }). Walking speed is `speed`. */
@@ -232,6 +250,14 @@ export interface Character {
     spellcastingType: 'known' | 'prepared' | 'wizard';
     cantripChoicesByLevel: Record<number, string>;
     spellChoicesByLevel?: Record<number, string>; // For tracking spell learning
+
+    /** Multiclass casters: each spellcasting class keeps its own ability and casting style. */
+    classCasting?: Array<{
+      classSlug: string;
+      className: string;
+      ability: 'INT' | 'WIS' | 'CHA';
+      spellcastingType: 'known' | 'prepared' | 'wizard';
+    }>;
   };
 
   // Sprint 3: Character advancement
@@ -1268,6 +1294,15 @@ export interface Encounter {
  * Tracks all player decisions during character leveling.
  */
 export interface LevelUpChoices {
+  /** Class gaining the level (existing or new). Defaults to the starting class. */
+  classSlug?: string;
+
+  /** Skills picked from a new class's multiclass proficiencies (Bard, Ranger, Rogue) */
+  multiclassSkills?: SkillName[];
+
+  /** Instrument picked when multiclassing into Bard */
+  multiclassInstrument?: string;
+
   /** Hit points rolled (if not using average) */
   hpRoll?: number;
 

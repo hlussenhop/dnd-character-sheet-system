@@ -2,6 +2,7 @@ import React from 'react';
 import { CharacterSheetProps } from '../../types/components';
 import { useLayout, useIsMobile } from '../../hooks';
 import { ModernStackedLayout, ClassicDndLayout, MobileLayout, PaperSheetLayout } from './layouts';
+import { SheetPageProvider } from './sheetPage';
 
 /**
  * CharacterSheet Wrapper
@@ -14,24 +15,30 @@ export const CharacterSheet: React.FC<CharacterSheetProps> = (props) => {
   const { layoutMode } = useLayout();
   const isMobile = useIsMobile();
 
-  // Mobile always uses ModernStackedLayout
+  let layout: React.ReactNode;
   if (isMobile) {
-    return <ModernStackedLayout {...props} />;
+    layout = <ModernStackedLayout {...props} />;
+  } else {
+    switch (layoutMode) {
+      case 'classic-dnd':
+        layout = <ClassicDndLayout {...props} />;
+        break;
+      case 'paper-sheet':
+        layout = <PaperSheetLayout {...props} />;
+        break;
+      case 'mobile':
+        layout = <MobileLayout {...props} />;
+        break;
+      case 'modern-stacked':
+      default:
+        layout = <ModernStackedLayout {...props} />;
+        break;
+    }
   }
 
-  // Desktop uses selected layout
-  switch (layoutMode) {
-    case 'classic-dnd':
-      return <ClassicDndLayout {...props} />;
-
-    case 'paper-sheet':
-      return <PaperSheetLayout {...props} />;
-
-    case 'mobile':
-      return <MobileLayout {...props} />;
-
-    case 'modern-stacked':
-    default:
-      return <ModernStackedLayout {...props} />;
-  }
+  return (
+    <SheetPageProvider key={props.character.id} character={props.character}>
+      {layout}
+    </SheetPageProvider>
+  );
 };

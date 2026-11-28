@@ -1,4 +1,4 @@
-# dnd character system
+# DnD Character Sheet System
 
 ## Project Overview
 

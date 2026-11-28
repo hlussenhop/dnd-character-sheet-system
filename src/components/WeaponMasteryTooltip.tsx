@@ -110,7 +110,7 @@ const WeaponMasteryTooltip: React.FC<WeaponMasteryTooltipProps> = ({ weapon, chi
           {/* Mastery Section */}
           <div className="bg-theme-secondary rounded p-3 border-l-4 border-accent-purple">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm font-bold text-accent-purple">🎯 Weapon Mastery:</span>
+              <span className="text-sm font-bold text-accent-purple">Weapon Mastery:</span>
               <span className="text-sm font-semibold text-purple-300">{masteryData.name}</span>
             </div>
             <p className="text-sm text-purple-200 leading-relaxed">

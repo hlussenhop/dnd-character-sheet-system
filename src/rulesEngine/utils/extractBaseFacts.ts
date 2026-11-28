@@ -3,7 +3,8 @@
  * Used for migration and testing
  */
 
-import type { Character } from '../../types/dnd';
+import type { Character, CharacterClassEntry } from '../../types/dnd';
+import { asList } from '../../utils/normalizeCharacter';
 import type { BaseFacts } from '../types/baseFacts';
 
 /**
@@ -25,9 +26,10 @@ export function extractBaseFacts(character: Character): BaseFacts {
   };
 
   // Build class level map (for multiclass support)
-  const classLevel: Record<string, number> = {
-    [character.class]: character.level,
-  };
+  const entries = asList<CharacterClassEntry>(character.classes);
+  const classLevel: Record<string, number> = entries.length > 1
+    ? Object.fromEntries(entries.map(entry => [entry.classSlug, entry.level]))
+    : { [character.class]: character.level };
 
   // Extract choices made during character creation
   const choices: Record<string, string | string[] | number> = {};

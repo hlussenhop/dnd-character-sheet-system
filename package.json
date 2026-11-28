@@ -1,5 +1,5 @@
 {
-  "name": "dnd-character-system",
+  "name": "dnd-character-sheet-system",
   "version": "1.5.3",
   "description": "A client-side D&D 5e character generator and sheet manager",
   "type": "module",
@@ -14,10 +14,10 @@
     "size-limit": "size-limit",
     "docker:build": "bash ./scripts/fast-build.sh",
     "docker:build-push": "bash ./scripts/docker-build-push.sh",
-    "docker:run": "docker stop dnd-character-system 2>/dev/null || true && docker rm dnd-character-system 2>/dev/null || true && docker run -d --name dnd-character-system -p 8080:8080 joelmale/dnd-character-system:latest && echo '✅ Container started at http://localhost:8080'",
-    "docker:stop": "docker stop dnd-character-system && docker rm dnd-character-system && echo '✅ Container stopped and removed'",
-    "docker:logs": "docker logs -f dnd-character-system",
-    "docker:restart": "docker restart dnd-character-system && echo '✅ Container restarted'"
+    "docker:run": "docker stop dnd-character-sheet-system 2>/dev/null || true && docker rm dnd-character-sheet-system 2>/dev/null || true && docker run -d --name dnd-character-sheet-system -p 8080:8080 joelmale/dnd-character-sheet-system:latest && echo '✅ Container started at http://localhost:8080'",
+    "docker:stop": "docker stop dnd-character-sheet-system && docker rm dnd-character-sheet-system && echo '✅ Container stopped and removed'",
+    "docker:logs": "docker logs -f dnd-character-sheet-system",
+    "docker:restart": "docker restart dnd-character-sheet-system && echo '✅ Container restarted'"
   },
   "dependencies": {
     "@3d-dice/dice-box": "^1.1.4",

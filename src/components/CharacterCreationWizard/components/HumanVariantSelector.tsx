@@ -81,7 +81,7 @@ export const HumanVariantSelector: React.FC<HumanVariantSelectorProps> = ({
             className="mt-1"
           />
           <div className="flex-1">
-            <div className="font-semibold text-accent-orange">Variant Human ⭐</div>
+            <div className="font-semibold text-accent-orange">Variant Human</div>
             <div className="text-sm text-theme-muted mb-2">
               The specialist human - +1 to two abilities, one skill proficiency, and one feat for focused power.
             </div>

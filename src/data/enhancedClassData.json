@@ -21,7 +21,7 @@
       "Reckless Attack",
       "Extra Attack"
     ],
-    "icon": "⚔️",
+    "icon": "",
     "themeColor": "#8B4513"
   },
   "bard": {
@@ -46,7 +46,7 @@
       "Jack of All Trades",
       "Song of Rest"
     ],
-    "icon": "🎭",
+    "icon": "",
     "themeColor": "#9370DB"
   },
   "cleric": {
@@ -71,7 +71,7 @@
       "Divine Intervention",
       "Turn Undead"
     ],
-    "icon": "✨",
+    "icon": "",
     "themeColor": "#FFD700"
   },
   "druid": {
@@ -96,7 +96,7 @@
       "Spellcasting",
       "Circle Spells"
     ],
-    "icon": "🌿",
+    "icon": "",
     "themeColor": "#228B22"
   },
   "fighter": {
@@ -121,7 +121,7 @@
       "Action Surge",
       "Extra Attack"
     ],
-    "icon": "⚔️",
+    "icon": "",
     "themeColor": "#B22222"
   },
   "monk": {
@@ -146,7 +146,7 @@
       "Ki",
       "Flurry of Blows"
     ],
-    "icon": "🥋",
+    "icon": "",
     "themeColor": "#FF6347"
   },
   "paladin": {
@@ -171,7 +171,7 @@
       "Divine Smite",
       "Aura of Protection"
     ],
-    "icon": "🛡️",
+    "icon": "",
     "themeColor": "#FFD700"
   },
   "ranger": {
@@ -196,7 +196,7 @@
       "Primeval Awareness",
       "Hunter's Mark"
     ],
-    "icon": "🏹",
+    "icon": "",
     "themeColor": "#8B4513"
   },
   "rogue": {
@@ -221,7 +221,7 @@
       "Uncanny Dodge",
       "Evasion"
     ],
-    "icon": "🗡️",
+    "icon": "",
     "themeColor": "#2F4F4F"
   },
   "sorcerer": {
@@ -246,7 +246,7 @@
       "Flexible Casting",
       "Metamagic"
     ],
-    "icon": "🔮",
+    "icon": "",
     "themeColor": "#8A2BE2"
   },
   "warlock": {
@@ -271,7 +271,7 @@
       "Eldritch Invocations",
       "Pact Boon"
     ],
-    "icon": "🌑",
+    "icon": "",
     "themeColor": "#4B0082"
   },
   "wizard": {
@@ -296,7 +296,7 @@
       "Spellbook",
       "Arcane Tradition"
     ],
-    "icon": "🧙",
+    "icon": "",
     "themeColor": "#4169E1"
   },
   "artificer": {
@@ -321,7 +321,7 @@
       "Infuse Item",
       "Artificer Specialist"
     ],
-    "icon": "⚙️",
+    "icon": "",
     "themeColor": "#708090"
   },
   "rogue-phantom": {

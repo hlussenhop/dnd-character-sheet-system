@@ -30,7 +30,6 @@ export const NPCLibrary: React.FC<NPCLibraryProps> = ({ onSelectNPC }) => {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="text-6xl mb-4">🧙‍♂️</div>
           <div className="text-xl">Loading NPC Library...</div>
         </div>
       </div>
@@ -41,7 +40,6 @@ export const NPCLibrary: React.FC<NPCLibraryProps> = ({ onSelectNPC }) => {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="text-6xl mb-4">⚠️</div>
           <div className="text-xl text-red-500">Error: {error}</div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 services:
-  dnd-character-system:
+  dnd-character-sheet-system:
     build:
       context: .
       dockerfile: Dockerfile
@@ -7,7 +7,7 @@ services:
       args:
         BUILDKIT_INLINE_CACHE: 1
       cache_from:
-        - joelmale/dnd-character-system:latest
+        - joelmale/dnd-character-sheet-system:latest
     environment:
       - DOCKER_BUILDKIT=1
     command: ["npm", "run", "preview"]  # Serve built files instead of nginx

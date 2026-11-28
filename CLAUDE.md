@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-dnd character system is a **100% client-side** D&D 5e character creation and management application built with React 18, TypeScript, and Vite. All character data is stored in IndexedDB with no backend or server required.
+DnD Character Sheet System is a **100% client-side** D&D 5e character creation and management application built with React 18, TypeScript, and Vite. All character data is stored in IndexedDB with no backend or server required.
 
 **Key Constraints:**
 - All data must remain client-side - no external API calls for character data
@@ -500,8 +500,8 @@ The application features an intelligent fantasy name generator with race-specifi
 ### Docker Deployment
 
 ```bash
-docker build -t dnd-character-system .
-docker run -p 8080:80 dnd-character-system
+docker build -t dnd-character-sheet-system .
+docker run -p 8080:80 dnd-character-sheet-system
 ```
 
 Multi-stage Dockerfile uses nginx to serve static build. Configuration in `nginx.conf` includes SPA fallback to `index.html`.
@@ -544,7 +544,7 @@ This is a local reference for SRD-shaped rows. Sourcebook catalogs are generated
 
 ## IndexedDB Schema
 
-**Database:** `dnd character system`
+**Database:** `DnD Character Sheet System`
 **Database Version:** 3
 **Object Stores:**
 - `characters` - Player characters (key: `id`)

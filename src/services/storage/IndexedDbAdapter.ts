@@ -4,8 +4,8 @@ import { log } from '../../utils/logger';
 import { initializeCharacterResources } from '../../utils/resourceUtils';
 
 // --- IndexedDB Configuration ---
-const DB_NAME = 'dnd character system';
-const PREVIOUS_DB_NAME = 'NexusForge';
+const DB_NAME = 'DnD Character Sheet System';
+const PREVIOUS_DB_NAMES = ['NexusForge', 'dnd character system'];
 const DB_VERSION = 13;
 const STORE_NAME = 'characters';
 const CUSTOM_MONSTERS_STORE = 'customMonsters';
@@ -45,36 +45,40 @@ const writeStore = (db: IDBDatabase, store: string, rows: unknown[]): Promise<vo
   transaction.onerror = () => reject(transaction.error);
 });
 
-/** The previous database name still holds monsters, encounters, NPCs, and spellbooks saved before the rename. */
-const copyPreviousDatabase = async (db: IDBDatabase): Promise<void> => {
-  const listed = indexedDB.databases ? await indexedDB.databases() : [];
-  if (listed.length > 0 && !listed.some(entry => entry.name === PREVIOUS_DB_NAME)) return;
-  const previous = await new Promise<IDBDatabase | null>(resolve => {
-    const request = indexedDB.open(PREVIOUS_DB_NAME);
-    let created = false;
-    request.onupgradeneeded = () => {
-      created = true;
-      request.transaction?.abort();
-    };
-    request.onsuccess = () => {
-      const opened = request.result;
-      if (created) {
-        opened.close();
-        indexedDB.deleteDatabase(PREVIOUS_DB_NAME);
-        resolve(null);
-        return;
-      }
-      resolve(opened);
-    };
-    request.onerror = () => resolve(null);
-  });
-  if (!previous) return;
-  try {
-    for (const store of STORES) {
-      await writeStore(db, store, await readStore(previous, store));
+const openExistingDatabase = (name: string): Promise<IDBDatabase | null> => new Promise(resolve => {
+  const request = indexedDB.open(name);
+  let created = false;
+  request.onupgradeneeded = () => {
+    created = true;
+    request.transaction?.abort();
+  };
+  request.onsuccess = () => {
+    const opened = request.result;
+    if (created) {
+      opened.close();
+      indexedDB.deleteDatabase(name);
+      resolve(null);
+      return;
     }
-  } finally {
-    previous.close();
+    resolve(opened);
+  };
+  request.onerror = () => resolve(null);
+});
+
+/** Older database names still hold monsters, encounters, NPCs, and spellbooks saved before the rename. */
+const copyPreviousDatabase = async (db: IDBDatabase): Promise<void> => {
+  const listed = indexedDB.databases ? await indexedDB.databases() : null;
+  for (const name of PREVIOUS_DB_NAMES) {
+    if (listed && listed.length > 0 && !listed.some(entry => entry.name === name)) continue;
+    const previous = await openExistingDatabase(name);
+    if (!previous) continue;
+    try {
+      for (const store of STORES) {
+        await writeStore(db, store, await readStore(previous, store));
+      }
+    } finally {
+      previous.close();
+    }
   }
 };
 

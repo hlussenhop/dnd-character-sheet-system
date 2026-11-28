@@ -42,7 +42,7 @@ export const ListSelectionWidget: React.FC<ListSelectionWidgetProps> = ({
         </p>
         {!selectedOption && (
           <div className="text-amber-400 text-sm">
-            ⚠️ Please choose one option
+            Please choose one option
           </div>
         )}
       </div>
@@ -72,7 +72,6 @@ export const ListSelectionWidget: React.FC<ListSelectionWidgetProps> = ({
                 <div className="flex-1">
                   <h4 className="text-lg font-bold text-white mb-1">
                     {option.name}
-                    {isSelected && <span className="ml-2 text-amber-400">✓</span>}
                   </h4>
                   {option.shortDesc && (
                     <p className="text-xs text-amber-300 font-semibold">
@@ -100,7 +99,7 @@ export const ListSelectionWidget: React.FC<ListSelectionWidgetProps> = ({
               {isSelected && (
                 <div className="mt-3 pt-3 border-t border-amber-400/30">
                   <div className="text-xs font-semibold text-amber-400 text-center">
-                    ✓ SELECTED
+                    SELECTED
                   </div>
                 </div>
               )}
@@ -113,7 +112,7 @@ export const ListSelectionWidget: React.FC<ListSelectionWidgetProps> = ({
       {selectedOption && (
         <div className="mt-4 p-4 bg-green-900/30 border border-green-500/50 rounded-lg">
           <div className="text-green-300 text-sm">
-            ✓ Selected: <strong className="text-green-400">
+            Selected: <strong className="text-green-400">
               {options.find(o => o.id === selectedOption)?.name}
             </strong>
           </div>

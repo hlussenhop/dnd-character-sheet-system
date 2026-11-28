@@ -1,4 +1,4 @@
-# dnd character system
+# DnD Character Sheet System
 
 A single-page, fully responsive React/TypeScript application for creating, managing, and viewing D&D 5e character sheets with **100% client-side storage** using IndexedDB. No backend, no servers, no accounts needed - your data stays on your device!
 
@@ -16,7 +16,7 @@ A single-page, fully responsive React/TypeScript application for creating, manag
 
 ## Overview
 
-The dnd character system allows users to:
+The DnD Character Sheet System allows users to:
 - Create D&D 5e characters using a step-by-step wizard
 - Store unlimited characters locally in your browser
 - View interactive character sheets with dice rolling
@@ -85,8 +85,8 @@ Works on all modern browsers with IndexedDB support:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/joelmale/NexusForge.git dnd-character-system
-cd dnd-character-system
+git clone https://github.com/joelmale/NexusForge.git dnd-character-sheet-system
+cd dnd-character-sheet-system
 ```
 
 2. Install dependencies:
@@ -113,10 +113,10 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete Docker Swarm deployment instru
 **Quick Start with Docker:**
 ```bash
 # Build the image
-docker build -t dnd-character-system .
+docker build -t dnd-character-sheet-system .
 
 # Run locally
-docker run -p 8080:80 dnd-character-system
+docker run -p 8080:80 dnd-character-sheet-system
 
 # Deploy to Swarm
 docker stack deploy -c docker-compose.yml character-forge
@@ -178,7 +178,7 @@ See [DOCKER_OPTIMIZATIONS.md](./DOCKER_OPTIMIZATIONS.md) for technical details.
 ## Project Structure
 
 ```
-dnd-character-system/
+dnd-character-sheet-system/
 ├── src/
 │   ├── App.tsx                         # Main React application
 │   ├── main.tsx                        # Application entry point
@@ -250,7 +250,7 @@ Still left out: 12 older species names that are already playable under another r
 
 ## Privacy & Data
 
-**Your data never leaves your device.** The dnd character system:
+**Your data never leaves your device.** The DnD Character Sheet System:
 - ❌ Does NOT send data to any server
 - ❌ Does NOT require internet after loading
 - ❌ Does NOT track users

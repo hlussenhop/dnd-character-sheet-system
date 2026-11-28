@@ -905,7 +905,7 @@ export const CharacterEditForm: React.FC<CharacterEditFormProps> = ({
                 </div>
                 {formData.selectedMusicalInstruments.length < (formData.num_instrument_choices || 0) && (
                   <div className="text-xs text-accent-yellow-light mt-2">
-                    ⚠️ Please select {((formData.num_instrument_choices || 0) - formData.selectedMusicalInstruments.length)} more musical instrument{((formData.num_instrument_choices || 0) - formData.selectedMusicalInstruments.length) !== 1 ? 's' : ''}
+                    Please select {((formData.num_instrument_choices || 0) - formData.selectedMusicalInstruments.length)} more musical instrument{((formData.num_instrument_choices || 0) - formData.selectedMusicalInstruments.length) !== 1 ? 's' : ''}
                   </div>
                 )}
               </>

@@ -42,7 +42,7 @@ const report = (payload: { ok: boolean; message?: string }) => {
 
 say(mode === 'link'
   ? 'Connect Google to the account you are already using.'
-  : 'Sign in to dnd character system with Google.');
+  : 'Sign in to the DnD Character Sheet System with Google.');
 
 window.addEventListener('pagehide', () => {
   if (!finished) report({ ok: false, message: 'Google sign-in was cancelled.' });

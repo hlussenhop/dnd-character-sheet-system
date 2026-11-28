@@ -36,7 +36,7 @@ export const BranchChoiceWidget: React.FC<BranchChoiceWidgetProps> = ({
         </p>
         {!currentChoice && (
           <div className="text-amber-400 text-sm">
-            ⚠️ Please choose one option
+            Please choose one option
           </div>
         )}
       </div>
@@ -97,7 +97,6 @@ const BranchCard: React.FC<BranchCardProps> = ({ option, selected, onClick }) =>
           <div>
             <h4 className="text-lg font-bold text-white">
               {option.label}
-              {selected && <span className="ml-2 text-amber-400">✓</span>}
             </h4>
           </div>
         </div>
@@ -129,7 +128,7 @@ const BranchCard: React.FC<BranchCardProps> = ({ option, selected, onClick }) =>
       {selected && (
         <div className="mt-4 pt-4 border-t border-amber-400/30">
           <div className="text-xs font-semibold text-amber-400 text-center">
-            ✓ SELECTED
+            SELECTED
           </div>
         </div>
       )}

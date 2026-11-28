@@ -11,13 +11,14 @@
  * - Feature summary
  */
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { Character, LevelUpChoices } from '../../types/dnd';
 import { LevelUpData } from '../../data/classProgression';
 import { calculateLevelUpData, getLevelUpSteps, applyLevelUp } from '../../utils/levelUpUtils';
+import { getClassEntries, projectCharacterForClass } from '../../utils/multiclass';
 
-// Step components (to be implemented)
+import { StepClass } from './steps/StepClass';
 import { StepOverview } from './steps/StepOverview';
 import { StepHP } from './steps/StepHP';
 import { StepASIFeat } from './steps/StepASIFeat';
@@ -41,36 +42,40 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
   onClose,
   onComplete
 }) => {
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  const [levelUpData, setLevelUpData] = useState<LevelUpData | null>(null);
-  const [steps, setSteps] = useState<string[]>([]);
-  const [choices, setChoices] = useState<LevelUpChoices>({
-    hpGained: 0
+  // The class that gained the last level is the likeliest one to advance again.
+  const [classSlug, setClassSlug] = useState<string>(() => {
+    const entries = getClassEntries(character);
+    const last = character.levelHistory?.[character.levelHistory.length - 1]?.classSlug;
+    return entries.find(entry => entry.classSlug === last && entry.level < 20)?.classSlug ?? entries[0].classSlug;
   });
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [choices, setChoices] = useState<LevelUpChoices>(() => ({
+    classSlug,
+    hpGained: calculateLevelUpData(character, classSlug)?.averageHpGain ?? 0,
+  }));
 
-  // Calculate level-up data when wizard opens
-  const calculatedData = useMemo(() => {
-    if (isOpen) {
-      return calculateLevelUpData(character);
-    }
-    return null;
-  }, [isOpen, character]);
+  const levelUpData = useMemo<LevelUpData | null>(
+    () => (isOpen ? calculateLevelUpData(character, classSlug) : null),
+    [isOpen, character, classSlug],
+  );
+  const steps = useMemo(() => (levelUpData ? ['class', ...getLevelUpSteps(levelUpData)] : []), [levelUpData]);
 
-  // Initialize state when calculatedData changes
-  const wizardSteps = useMemo(() => calculatedData ? getLevelUpSteps(calculatedData) : [], [calculatedData]);
-  const initialChoices = useMemo(() => calculatedData ? { hpGained: calculatedData.averageHpGain } : { hpGained: 0 }, [calculatedData]);
+  // Class steps (subclass, spells, class options, features) see the class level and that class's subclass.
+  const classView = useMemo(() => projectCharacterForClass(character, classSlug), [character, classSlug]);
+  const classLevelUpData = useMemo<LevelUpData | null>(
+    () => (levelUpData
+      ? { ...levelUpData, fromLevel: levelUpData.fromClassLevel ?? levelUpData.fromLevel, toLevel: levelUpData.toClassLevel ?? levelUpData.toLevel }
+      : null),
+    [levelUpData],
+  );
 
-  useEffect(() => {
-    if (calculatedData) {
-      setLevelUpData(calculatedData);
-      setSteps(wizardSteps);
-      setCurrentStepIndex(0);
-      setChoices(initialChoices);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [calculatedData]);
+  if (!isOpen || !levelUpData || !classLevelUpData) return null;
 
-  if (!isOpen || !levelUpData) return null;
+  const handleSelectClass = (slug: string) => {
+    if (slug === classSlug) return;
+    setClassSlug(slug);
+    setChoices({ classSlug: slug, hpGained: calculateLevelUpData(character, slug)?.averageHpGain ?? 0 });
+  };
 
   const currentStep = steps[currentStepIndex];
 
@@ -105,8 +110,17 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
       onNext: handleNext,
       onPrev: handlePrev
     };
+    const classStepProps = { ...stepProps, character: classView, levelUpData: classLevelUpData };
 
     switch (currentStep) {
+      case 'class':
+        return (
+          <StepClass
+            {...stepProps}
+            selectedClassSlug={classSlug}
+            onSelectClass={handleSelectClass}
+          />
+        );
       case 'overview':
         return <StepOverview {...stepProps} />;
       case 'hp':
@@ -114,23 +128,23 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
       case 'asi-feat':
         return <StepASIFeat {...stepProps} />;
       case 'subclass':
-        return <StepSubclass {...stepProps} />;
+        return <StepSubclass {...classStepProps} />;
       case 'spells':
-        return <StepSpells {...stepProps} />;
+        return <StepSpells {...classStepProps} />;
       default:
         // Handle dynamic spell steps (spells-0, spells-1, etc.)
         if (currentStep.startsWith('spells-')) {
           const spellChoiceIndex = parseInt(currentStep.split('-')[1]);
-          return <StepSpells {...stepProps} spellChoiceIndex={spellChoiceIndex} />;
+          return <StepSpells key={currentStep} {...classStepProps} spellChoiceIndex={spellChoiceIndex} />;
         }
         if (currentStep === 'fighting-style') {
-          return <StepFightingStyle {...stepProps} />;
+          return <StepFightingStyle {...classStepProps} />;
         }
         if (currentStep === 'optional-features') {
-          return <StepOptionalFeatures {...stepProps} />;
+          return <StepOptionalFeatures {...classStepProps} />;
         }
         if (currentStep === 'features') {
-          return <StepFeatures {...stepProps} />;
+          return <StepFeatures {...classStepProps} />;
         }
         if (currentStep === 'confirm') {
           return <StepConfirm {...stepProps} onComplete={handleComplete} />;
@@ -156,6 +170,13 @@ export const LevelUpWizard: React.FC<LevelUpWizardProps> = ({
               <p className="text-theme-secondary mt-1">
                 {character.name} - Level {levelUpData.fromLevel} → {levelUpData.toLevel}
               </p>
+              {levelUpData.className && (
+                <p className="text-sm text-theme-muted">
+                  {levelUpData.isNewClass
+                    ? `New class: ${levelUpData.className} 1`
+                    : `${levelUpData.className} ${levelUpData.fromClassLevel} → ${levelUpData.toClassLevel}`}
+                </p>
+              )}
             </div>
             <button
               onClick={onClose}

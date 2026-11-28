@@ -4,6 +4,7 @@ import { loadEquipment, COMBAT_ACTIONS } from '../../services/dataService';
 import { DiceRoll } from '../../services/diceService';
 import { consumeResource, getResourceUses } from '../../utils/resourceUtils';
 import { TacticalSection } from './TacticalSection';
+import { classLevelOf, getClassEntries } from '../../utils/multiclass';
 
 type CustomRoll = DiceRoll & {
   description: string;
@@ -88,6 +89,7 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
   layoutMode = 'modern',
 }) => {
   const allEquipment = loadEquipment();
+  const fighterLevel = classLevelOf(character, 'fighter');
 
   // Get equipped weapons
   const equippedWeapons = character.equippedWeapons?.map(slug =>
@@ -302,7 +304,7 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       handleSkillCheck(action.skill, action.ability);
     } else if (action.rollType === 'healing' && action.notation) {
       const healingRoll = action.notation;
-      const levelBonus = action.slug === 'second-wind' && character.class.toLowerCase() === 'fighter' ? character.level : 0;
+      const levelBonus = action.slug === 'second-wind' ? fighterLevel : 0;
       const totalNotation = levelBonus > 0 ? `${healingRoll}+${levelBonus}` : healingRoll;
 
       const roll: CustomRoll = {
@@ -322,15 +324,14 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
   };
 
   // Get class-specific combat actions
-  const getClassActions = () => {
-    const classSlug = character.class.toLowerCase();
-    return COMBAT_ACTIONS.classFeatureActions.filter(action => {
-      if (action.class !== classSlug) return false;
-      if (action.minLevel && character.level < action.minLevel) return false;
-      if (action.subclass && character.subclass?.toLowerCase() !== action.subclass) return false;
+  const getClassActions = () => getClassEntries(character).flatMap(entry =>
+    COMBAT_ACTIONS.classFeatureActions.filter(action => {
+      if (action.class !== entry.classSlug) return false;
+      if (action.minLevel && entry.level < action.minLevel) return false;
+      if (action.subclass && entry.subclass?.toLowerCase() !== action.subclass) return false;
       return true;
-    });
-  };
+    }),
+  );
 
   const classActions = getClassActions();
 
@@ -426,7 +427,7 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       id: secondWind.slug,
       name: secondWind.name,
       type: 'healing',
-      description: `Regain 1d10 + ${character.level} HP`,
+      description: `Regain 1d10 + ${fighterLevel} HP`,
       actionCost: 'Bonus Action',
       hasButton: true,
       buttonText: 'Heal',
@@ -545,7 +546,7 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       handleUnarmedStrike();
     } else if (actionId === 'second-wind') {
       // Handle Second Wind healing
-      const healingRoll = `1d10+${character.level}`;
+      const healingRoll = `1d10+${fighterLevel}`;
       // Create the roll object for the dice system
       const roll: CustomRoll = {
         id: `second-wind-${crypto.randomUUID()}`,
@@ -554,8 +555,8 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
         description: 'Second Wind Healing',
         label: 'Second Wind',
         diceResults: [],
-        modifier: character.level,
-        total: character.level,
+        modifier: fighterLevel,
+        total: fighterLevel,
         timestamp: Date.now()
       };
       onDiceRoll(roll);
@@ -574,7 +575,6 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
           : 'border-theme-border text-theme-primary'
       }`}>
         <div className="flex items-center gap-2">
-          <span className="text-xl">⚔️</span>
           <h2 className="text-2xl font-bold tracking-tight">Combat Options</h2>
         </div>
         <span className={`text-xs uppercase tracking-[0.2em] font-semibold ${
@@ -587,7 +587,6 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       {/* Spell Attacks Section (if applicable) */}
       {character.spellcasting && (
         <TacticalSection
-          icon="🔮"
           title="Spellcasting"
           theme="purple"
           actions={[
@@ -620,7 +619,6 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
 
       {/* Main Tactical Sections */}
       <TacticalSection
-        icon="⚔️"
         title="Offense & Control"
         theme="red"
         actions={organizedActions.offense}
@@ -629,7 +627,6 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       />
 
       <TacticalSection
-        icon="🛡️"
         title="Survival & Defense"
         theme="blue"
         actions={organizedActions.defense}
@@ -638,7 +635,6 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       />
 
       <TacticalSection
-        icon="🏃"
         title="Mobility & Support"
         theme="green"
         actions={organizedActions.mobility}
@@ -647,7 +643,6 @@ export const AttacksAndActions: React.FC<AttacksAndActionsProps> = ({
       />
 
       <TacticalSection
-        icon="⚡"
         title="Burst / Special"
         theme="orange"
         actions={organizedActions.burst}

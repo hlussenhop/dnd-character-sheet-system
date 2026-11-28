@@ -48,6 +48,8 @@ import { Ability, Character, CharacterCreationData, Equipment, EquippedItem, Fea
 import { useDiceContext, useLayout } from './hooks';
 import { TabNavigation, TabId } from './components/TabNavigation';
 import { CHARACTERS_CHANGED } from './services/firebase/events';
+import { normalizeCharacter, asList, asNumberList } from './utils/normalizeCharacter';
+import { formatClassSummary, removeMulticlassLevel, restoreHitDice, spendHitDice } from './utils/multiclass';
 
 const AccountPanel = lazy(() => import('./components/AccountPanel').then(module => ({ default: module.AccountPanel })));
 const CloudGate = lazy(() => import('./components/CloudGate').then(module => ({ default: module.CloudGate })));
@@ -314,7 +316,7 @@ const App: React.FC = () => {
     try {
       const chars = await getAllCharacters();
       // Synchronize equipped items for each character
-      const syncedChars = chars.map(syncEquippedItems);
+      const syncedChars = chars.map(character => syncEquippedItems(normalizeCharacter(character)));
       setCharacters(syncedChars);
     } catch {
       // Error loading characters
@@ -471,74 +473,59 @@ const App: React.FC = () => {
 
   // Calculate specific rest changes for display
   const calculateRestChanges = (character: Character) => {
+    const hitDice = character.hitDice ?? { current: 0, max: 0, dieType: 8 };
     const changes = {
-      hpRestored: character.maxHitPoints - character.hitPoints,
-      hitDiceRestored: character.hitDice.max - character.hitDice.current,
+      hpRestored: Math.max(0, (character.maxHitPoints || 0) - (character.hitPoints || 0)),
+      hitDiceRestored: Math.max(0, (hitDice.max || 0) - (hitDice.current || 0)),
       spellSlotsRestored: 0,
       resourcesReset: [] as string[]
     };
 
-    // Calculate spell slots restored
-    if (character.spellcasting?.usedSpellSlots) {
-      changes.spellSlotsRestored = character.spellcasting.usedSpellSlots.reduce((sum, used) => sum + used, 0);
-    }
+    const usedSpellSlots = asNumberList(character.spellcasting?.usedSpellSlots);
+    changes.spellSlotsRestored = usedSpellSlots.reduce((sum, used) => sum + used, 0);
 
-    // Calculate resources reset
-    if (character.resources) {
-      character.resources.forEach(resource => {
-        if (resource.rechargeType === 'long-rest' || resource.rechargeType === 'short-rest') {
-          if ((resource.currentUses || 0) < resource.maxUses) {
-            changes.resourcesReset.push(resource.name);
-          }
-        }
-      });
-    }
+    const resources = asList<NonNullable<Character['resources']>[number]>(character.resources);
+    resources.forEach(resource => {
+      if (!resource || (resource.rechargeType !== 'long-rest' && resource.rechargeType !== 'short-rest')) return;
+      if ((resource.currentUses || 0) < resource.maxUses) {
+        changes.resourcesReset.push(resource.name);
+      }
+    });
 
     return changes;
   };
 
   const handleLongRest = useCallback(async (characterId: string) => {
     const character = characters.find(c => c.id === characterId);
-    if (!character) {
-      return;
-    }
+    if (!character) return;
 
-    // Calculate specific changes for display
-    const restChanges = calculateRestChanges(character);
-
-    // Execute rest logic FIRST
-    let updatedCharacter = { ...character };
-    updatedCharacter.hitPoints = character.maxHitPoints;
-    updatedCharacter.hitDice = {
-      ...updatedCharacter.hitDice,
-      current: updatedCharacter.hitDice.max,
-    };
-    // Reset Action Surge uses (legacy field)
-    updatedCharacter.actionSurgeUsed = 0;
-
-    // Reset all resources that recharge on long rest
-    updatedCharacter = resetResources(updatedCharacter, 'long-rest');
-
-    // Restore spell slots
-    if (updatedCharacter.spellcasting) {
-      updatedCharacter.spellcasting = {
-        ...updatedCharacter.spellcasting,
-        usedSpellSlots: Array(updatedCharacter.spellcasting.spellSlots.length).fill(0)
-      };
-    }
-
-    // Save the rested character
     try {
+      const rested = normalizeCharacter(character);
+      const restChanges = calculateRestChanges(rested);
+      let updatedCharacter: Character = {
+        ...rested,
+        hitPoints: rested.maxHitPoints,
+        hitDice: restoreHitDice(rested),
+        actionSurgeUsed: 0,
+      };
+      updatedCharacter = resetResources(updatedCharacter, 'long-rest');
+
+      if (updatedCharacter.spellcasting) {
+        const spellSlots = asNumberList(updatedCharacter.spellcasting.spellSlots);
+        updatedCharacter.spellcasting = {
+          ...updatedCharacter.spellcasting,
+          spellSlots,
+          usedSpellSlots: spellSlots.map(() => 0),
+        };
+      }
+
       await updateCharacter(updatedCharacter);
       setCharacters(prev => prev.map(c => c.id === characterId ? updatedCharacter : c));
+      setIsResting('long');
+      setRestChanges(restChanges);
     } catch {
-      return; // Don't show resting screen if save failed
+      setRollResult({ text: 'Long rest could not be saved.', value: null });
     }
-
-    // NOW show resting screen with specific changes
-    setIsResting('long');
-    setRestChanges(restChanges);
-    // RestingScreen will handle completion via onComplete callback
   }, [characters]);
 
   const handleShortRest = useCallback(async (characterId: string) => {
@@ -559,14 +546,11 @@ const App: React.FC = () => {
       return;
     }
 
-    const allClasses = loadClasses();
-    const classData = allClasses.find(c => c.name === character.class);
-    if (!classData) return;
-
-    const hitDie = classData.hit_die;
+    // Multiclass characters spend their largest dice first.
+    const { dice, hitDice } = spendHitDice(character, diceToSpend);
     const conModifier = character.abilities.CON.modifier;
     let hpRecovered = 0;
-    for (let i = 0; i < diceToSpend; i++) {
+    for (const hitDie of dice) {
       hpRecovered += Math.max(1, Math.floor(Math.random() * hitDie) + 1 + conModifier);
     }
 
@@ -574,10 +558,7 @@ const App: React.FC = () => {
     const updatedCharacter = {
       ...character,
       hitPoints: newHP,
-      hitDice: {
-        ...character.hitDice,
-        current: character.hitDice.current - diceToSpend,
-      },
+      hitDice,
     };
 
     try {
@@ -625,6 +606,27 @@ const App: React.FC = () => {
 
     const newLevel = character.level - 1;
     const newProficiencyBonus = PROFICIENCY_BONUSES[newLevel - 1] || character.proficiencyBonus;
+    const conModifier = character.abilities.CON.modifier;
+
+    // A multiclass character loses a level from the class that gained the latest one.
+    const multiclassDown = removeMulticlassLevel(character);
+    if (multiclassDown) {
+      const hpReduction = Math.max(1, Math.floor(multiclassDown.hitDie / 2) + 1 + conModifier);
+      const updatedCharacter: Character = {
+        ...multiclassDown.character,
+        proficiencyBonus: newProficiencyBonus,
+        maxHitPoints: Math.max(1, character.maxHitPoints - hpReduction),
+        hitPoints: Math.max(1, character.maxHitPoints - hpReduction),
+      };
+      try {
+        await updateCharacter(updatedCharacter);
+        setCharacters(prev => prev.map(c => c.id === characterId ? updatedCharacter : c));
+        setRollResult({ text: `${character.name} is now level ${newLevel} (${formatClassSummary(updatedCharacter)}).`, value: null });
+      } catch {
+        // Error leveling down character
+      }
+      return;
+    }
 
     const allClasses = loadClasses();
     const classData = allClasses.find(c => c.name === character.class);
@@ -633,7 +635,6 @@ const App: React.FC = () => {
     }
 
     const hitDie = classData.hit_die;
-    const conModifier = character.abilities.CON.modifier;
     const hpReduction = Math.max(1, Math.floor(hitDie / 2) + 1 + conModifier);
 
     const updatedCharacter = {
@@ -1079,6 +1080,16 @@ const App: React.FC = () => {
         />
         <FeatureModal feature={featureModal} onClose={() => setFeatureModal(null)} />
         <EquipmentDetailModal equipment={equipmentModal} onClose={() => setEquipmentModal(null)} />
+        {isResting && (
+          <RestingScreen
+            type={isResting}
+            changes={restChanges || undefined}
+            onComplete={() => {
+              setIsResting(null);
+              setRestChanges(null);
+            }}
+          />
+        )}
 
         {/* Dice Roller Modal - needs to be here when character sheet is open */}
         <DiceRollerModal
@@ -1216,7 +1227,7 @@ const App: React.FC = () => {
                   </span>
                   {detail.critical && (
                     <span className="text-accent-red-light font-bold">
-                      {detail.critical === 'success' ? '!' : '💀'}
+                      {detail.critical === 'success' ? '!' : 'Fail'}
                     </span>
                   )}
                 </div>

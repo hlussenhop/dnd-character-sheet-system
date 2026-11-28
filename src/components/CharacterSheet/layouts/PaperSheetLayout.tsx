@@ -1,5 +1,7 @@
 import React from 'react';
 import { CharacterSheetProps } from '../../../types/components';
+import { useSheetPage } from '../sheetPageState';
+import { formatClassAndLevel } from '../../../utils/multiclass';
 import {
   CharacterHeader,
   SavingThrows,
@@ -21,6 +23,7 @@ import {
  */
 export const PaperSheetLayout: React.FC<CharacterSheetProps> = (props) => {
   const { character } = props;
+  const { page } = useSheetPage();
 
 
 
@@ -38,7 +41,16 @@ export const PaperSheetLayout: React.FC<CharacterSheetProps> = (props) => {
         onOpenDiceTray={props.onOpenDiceTray}
       />
 
-      {/* Character Header Information */}
+      {page === 'spells' ? (
+        <div data-theme="paper">
+          <SpellcastingSection
+            character={character}
+            onUpdateCharacter={props.onUpdateCharacter}
+            onSpellPreparation={() => {}}
+          />
+        </div>
+      ) : (
+      <>
       <div className="character-info-banner bg-[#fcf6e3] border-2 border-[#1e140a] rounded-sm p-4 shadow-md">
         <div className="grid grid-cols-12 gap-3">
           {/* Character Name - Large */}
@@ -51,7 +63,7 @@ export const PaperSheetLayout: React.FC<CharacterSheetProps> = (props) => {
           <div className="col-span-2">
             <div className="text-xs font-cinzel font-bold text-[#3d2817] uppercase tracking-wide mb-1">Class & Level</div>
             <div className="text-lg font-eb-garamond font-semibold text-[#1e140a]">
-              {character.class} {character.level}
+              {formatClassAndLevel(character)}
             </div>
           </div>
 
@@ -183,17 +195,6 @@ export const PaperSheetLayout: React.FC<CharacterSheetProps> = (props) => {
             />
           </div>
 
-          {/* Spellcasting Section (if character is a spellcaster) */}
-          {character.spellcasting && (
-            <div className="bg-[#fcf6e3] border-2 border-[#1e140a] rounded-sm p-4 shadow-md">
-            <SpellcastingSection
-              character={character}
-              onUpdateCharacter={props.onUpdateCharacter}
-              onSpellPreparation={() => {}}
-            />
-            </div>
-          )}
-
           {/* Equipment */}
           <div className="bg-[#fcf6e3] border-2 border-[#1e140a] rounded-sm p-4 shadow-md">
             <div className="text-xs font-cinzel font-bold text-[#3d2817] uppercase tracking-wide mb-3 pb-2 border-b border-[#1e140a]/20">
@@ -296,6 +297,8 @@ export const PaperSheetLayout: React.FC<CharacterSheetProps> = (props) => {
           </div>
         </div>
       </div>
+      </>
+      )}
     </div>
   );
 };

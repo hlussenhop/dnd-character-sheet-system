@@ -116,7 +116,7 @@ export const SaveEncounterModal: React.FC<SaveEncounterModalProps> = ({ isOpen, 
                 onClose();
               }}
             >
-              <span className="text-accent-purple-light font-bold">⚔️ Start Combat</span>
+              <span className="text-accent-purple-light font-bold">Start Combat</span>
               <p className="text-theme-muted text-sm">Launch the new encounter combat system</p>
             </button>
           </div>

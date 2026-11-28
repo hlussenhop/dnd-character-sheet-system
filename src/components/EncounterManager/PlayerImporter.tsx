@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCharacterContext } from '../../hooks/useCharacterContext';
 import { Character } from '../../types/dnd';
 import { PlayerEntry } from '../../types/encounterCombat';
+import { formatClassSummary } from '../../utils/multiclass';
 
 interface PlayerImporterProps {
   onImportPlayers: (players: PlayerEntry[]) => void;
@@ -90,7 +91,7 @@ export function PlayerImporter({ onImportPlayers, existingPlayers }: PlayerImpor
             >
               <div className="card-top">
                 <div className="character-name">{character.name}</div>
-                <span className="level-chip">Lv {character.level} {character.class}</span>
+                <span className="level-chip">Lv {character.level} {formatClassSummary(character)}</span>
               </div>
               <div className="character-meta">
                 <span className="meta-chip">AC {character.armorClass}</span>

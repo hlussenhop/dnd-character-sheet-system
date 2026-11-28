@@ -1,4 +1,4 @@
-// Dice sound effects manager for dnd character system
+// Dice sound effects manager for DnD Character Sheet System
 
 import diceSoundsData from '../data/diceSounds.json';
 

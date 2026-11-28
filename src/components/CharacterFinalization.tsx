@@ -105,7 +105,7 @@ const CharacterFinalization: React.FC<CharacterFinalizationProps> = ({
             </div>
             <div>
               <span className="text-theme-muted">Species:</span>
-              <div className="text-white font-semibold">{selectedSpecies}</div>
+              <div className="text-white font-semibold">{selectedSpecies || 'Not selected'}</div>
             </div>
             <div>
               <span className="text-theme-muted">Class:</span>
@@ -278,7 +278,8 @@ const CharacterFinalization: React.FC<CharacterFinalizationProps> = ({
           </button>
           <button
             onClick={handleCreate}
-            className="px-8 py-3 bg-accent-purple hover:bg-accent-purple-light rounded-lg text-white font-semibold transition-colors flex items-center"
+            disabled={!selectedSpecies}
+            className="px-8 py-3 bg-accent-purple hover:bg-accent-purple-light rounded-lg text-white font-semibold transition-colors flex items-center disabled:cursor-not-allowed disabled:opacity-50"
           >
             Create Character
             <ArrowRight className="w-4 h-4 ml-2" />

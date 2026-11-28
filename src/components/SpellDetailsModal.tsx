@@ -98,7 +98,7 @@ const SpellDetailsModal: React.FC<SpellDetailsModalProps> = ({
                   ? 'bg-yellow-900 text-yellow-200'
                   : 'bg-theme-secondary text-theme-muted'
               }`}>
-                {spell.concentration ? '🧠 Concentration' : 'No Concentration'}
+                {spell.concentration ? 'Concentration' : 'No Concentration'}
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -107,7 +107,7 @@ const SpellDetailsModal: React.FC<SpellDetailsModalProps> = ({
                   ? 'bg-blue-900 text-blue-200'
                   : 'bg-theme-secondary text-theme-muted'
               }`}>
-                {spell.ritual ? '📖 Ritual' : 'No Ritual'}
+                {spell.ritual ? 'Ritual' : 'No Ritual'}
               </span>
             </div>
           </div>

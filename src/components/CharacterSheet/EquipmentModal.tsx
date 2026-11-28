@@ -148,7 +148,7 @@ export const EquipmentModal: React.FC<EquipmentModalProps> = ({
                   <div>
                     <div className="text-xs font-semibold text-theme-muted uppercase mb-1">Weapon Mastery</div>
                     <span className="px-2 py-1 bg-amber-900/50 border border-amber-500/50 text-amber-300 text-xs rounded">
-                      ⚔️ {equipment.mastery.name}
+                      {equipment.mastery.name}
                     </span>
                   </div>
                 )}

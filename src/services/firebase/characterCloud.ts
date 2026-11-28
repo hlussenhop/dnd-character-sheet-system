@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth';
 import { get, onValue, ref, remove, set, type DataSnapshot } from 'firebase/database';
 import type { Character } from '../../types/dnd';
+import { normalizeCharacter } from '../../utils/normalizeCharacter';
 import { IndexedDbAdapter } from '../storage/IndexedDbAdapter';
 import { getFirebase } from './client';
 import { CHARACTERS_CHANGED } from './events';
@@ -133,7 +134,9 @@ const signature = (characters: Character[]) =>
 
 const readList = (value: unknown): Character[] => {
   if (!value || typeof value !== 'object') return [];
-  return Object.values(value as Record<string, Character>).filter(character => Boolean(character?.id));
+  return Object.values(value as Record<string, Character>)
+    .filter(character => Boolean(character?.id))
+    .map(character => normalizeCharacter(character));
 };
 
 const publishCharacters = (next: Character[]) => {
@@ -337,7 +340,7 @@ const finishGoogleInWindow = (mode: 'link' | 'signin') => new Promise<void>((res
   const attempt = String(Date.now());
   const popup = window.open(
     `/auth.html?mode=${mode}&attempt=${attempt}`,
-    'dnd-character-system-google',
+    'dnd-character-sheet-system-google',
     'popup,width=420,height=640',
   );
   if (!popup) {

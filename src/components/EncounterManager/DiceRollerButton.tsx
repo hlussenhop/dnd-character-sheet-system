@@ -12,7 +12,6 @@ export function DiceRollerButton({ onOpenDiceModal, className = '' }: DiceRoller
       className={`dice-roller-button ${className}`}
       title="Open Dice Roller"
     >
-      <span className="dice-icon">🎲</span>
       <span className="dice-label">Roll Dice</span>
     </button>
   );

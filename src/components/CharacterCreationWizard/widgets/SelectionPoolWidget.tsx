@@ -233,7 +233,6 @@ export const SelectionPoolWidget: React.FC<SelectionPoolWidgetProps> = ({
         </p>
         <div className="text-amber-400 text-sm font-semibold">
           Selected: {currentSelection.length} / {config.count}
-          {currentSelection.length === config.count && ' ✓'}
         </div>
       </div>
 
@@ -257,7 +256,7 @@ export const SelectionPoolWidget: React.FC<SelectionPoolWidgetProps> = ({
 
       {currentSelection.length === 0 && (
         <div className="mt-4 text-amber-400 text-sm">
-          ⚠️ Please select {config.count} weapons
+          Please select {config.count} weapons
         </div>
       )}
     </div>
@@ -306,7 +305,6 @@ const WeaponGroupedUI: React.FC<WeaponGroupedUIProps> = ({
         </p>
         <div className="text-amber-400 text-sm font-semibold">
           Selected: {currentSelection.length} / {config.count}
-          {currentSelection.length === config.count && ' ✓'}
         </div>
       </div>
 
@@ -370,7 +368,7 @@ const WeaponGroupedUI: React.FC<WeaponGroupedUIProps> = ({
 
       {currentSelection.length === 0 && (
         <div className="mt-4 text-amber-400 text-sm">
-          ⚠️ Please select {config.count} weapons
+          Please select {config.count} weapons
         </div>
       )}
     </div>
@@ -414,7 +412,7 @@ const WeaponGroup: React.FC<WeaponGroupProps> = ({
           <span className="text-sm text-gray-400">({weapons.length} weapons)</span>
           {selectedCount > 0 && (
             <span className="text-sm text-amber-400 font-semibold">
-              ✓ {selectedCount} selected
+              {selectedCount} selected
             </span>
           )}
         </div>
@@ -479,7 +477,6 @@ const SkillCard: React.FC<SkillCardProps> = ({ option, selected, disabled, onCli
     >
       <div className="font-semibold text-white">
         {option.name}
-        {selected && <span className="ml-2 text-amber-400">✓</span>}
       </div>
       <div className="text-xs text-gray-400 capitalize mt-1">
         {option.type} • {option.source}
@@ -514,7 +511,6 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ option, selected, disabled, sho
       <div className="flex items-start justify-between">
         <div className="font-semibold text-white text-sm">
           {option.name}
-          {selected && <span className="ml-1 text-amber-400">✓</span>}
         </div>
         {option.isTwoHanded && (
           <div className="text-[10px] text-gray-400 bg-gray-700 px-1 rounded">2H</div>

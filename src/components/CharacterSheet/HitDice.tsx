@@ -2,6 +2,7 @@ import React from 'react';
 import { Dice6 } from 'lucide-react';
 import { Character } from '../../types/dnd';
 import { getModifier } from '../../services/dataService';
+import { hitDicePools, restoreHitDice, spendHitDieOfSize } from '../../utils/multiclass';
 
 interface HitDiceProps {
   character: Character;
@@ -28,22 +29,24 @@ export const HitDice: React.FC<HitDiceProps> = ({
   };
 
   const hitDiceInfo = getHitDiceInfo();
+  const pools = hitDicePools(character);
+  const multiclassPools = pools.length > 1;
 
-  const spendHitDie = () => {
-    if (hitDiceInfo.available <= 0) return;
+  const spendHitDie = (die = hitDiceInfo.dieType) => {
+    const hitDice = multiclassPools
+      ? spendHitDieOfSize(character, die)
+      : hitDiceInfo.available > 0 ? { ...character.hitDice, current: character.hitDice.current - 1 } : null;
+    if (!hitDice) return;
 
     // Calculate healing: (hit die / 2) + CON modifier, minimum 1
     const conMod = getModifier(character.abilities.CON.score);
-    const avgRoll = Math.floor(hitDiceInfo.dieType / 2);
+    const avgRoll = Math.floor(die / 2);
     const healing = Math.max(1, avgRoll + conMod);
 
     // Update character
     const updatedCharacter = {
       ...character,
-      hitDice: {
-        ...character.hitDice,
-        current: character.hitDice.current - 1
-      },
+      hitDice,
       hitPoints: Math.min(character.maxHitPoints, character.hitPoints + healing)
     };
 
@@ -54,10 +57,7 @@ export const HitDice: React.FC<HitDiceProps> = ({
     // Reset on long rest
     const updatedCharacter = {
       ...character,
-      hitDice: {
-        ...character.hitDice,
-        current: character.hitDice.max
-      }
+      hitDice: restoreHitDice(character),
     };
 
     onUpdateCharacter(updatedCharacter);
@@ -82,6 +82,39 @@ export const HitDice: React.FC<HitDiceProps> = ({
         </h3>
       </div>
 
+      {multiclassPools ? (
+        <div className="space-y-2">
+          {pools.map(pool => (
+            <div key={pool.die} className="flex items-center justify-between">
+              <div>
+                <div className={`text-lg font-cinzel font-bold ${textPrimaryClass}`}>
+                  {pool.current} / {pool.max} <span className={`text-xs font-normal ${textSecondaryClass}`}>d{pool.die}</span>
+                </div>
+                <div className={`text-xs font-cinzel ${textSecondaryClass}`}>
+                  Heals {Math.max(1, Math.floor(pool.die / 2) + getModifier(character.abilities.CON.score))} HP (avg + CON)
+                </div>
+              </div>
+              <button
+                onClick={() => spendHitDie(pool.die)}
+                disabled={pool.current <= 0}
+                className={`px-2 py-1 ${buttonBgClass} disabled:${disabledBgClass} disabled:${disabledTextClass} text-white rounded text-xs transition-colors`}
+                title={`Spend a d${pool.die} (short rest)`}
+              >
+                Spend
+              </button>
+            </div>
+          ))}
+          <div className={`flex justify-end pt-2 border-t ${borderClass}`}>
+            <button
+              onClick={resetHitDice}
+              className="px-2 py-1 bg-accent-green hover:bg-green-600 text-white rounded text-xs transition-colors"
+              title="Reset hit dice (long rest)"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      ) : (
       <div className="space-y-2">
         {/* Current Hit Dice Display */}
         <div className="flex items-center justify-between">
@@ -95,7 +128,7 @@ export const HitDice: React.FC<HitDiceProps> = ({
 
           <div className="flex gap-1">
             <button
-              onClick={spendHitDie}
+              onClick={() => spendHitDie()}
               disabled={hitDiceInfo.available <= 0}
               className={`px-2 py-1 ${buttonBgClass} disabled:${disabledBgClass} disabled:${disabledTextClass} text-white rounded text-xs transition-colors`}
               title="Spend hit die (short rest)"
@@ -125,6 +158,7 @@ export const HitDice: React.FC<HitDiceProps> = ({
           </div>
         )}
       </div>
+      )}
     </div>
   );
 };

@@ -6,7 +6,7 @@
 # - Optimized caching strategy for faster rebuilds
 set -euo pipefail
 
-DOCKER_IMAGE="joelmale/dnd-character-system:latest"
+DOCKER_IMAGE="joelmale/dnd-character-sheet-system:latest"
 DOCKER_IMAGE_BUILDER="${DOCKER_IMAGE}-builder"
 
 # Logging function

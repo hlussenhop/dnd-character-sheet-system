@@ -65,7 +65,6 @@ export const SavedEncountersList: React.FC<SavedEncountersListProps> = ({ onStar
   if (encounters.length === 0) {
     return (
       <div className="text-center p-8 bg-theme-secondary rounded-xl border-2 border-dashed border-theme-secondary">
-        <div className="text-4xl mb-3">📖</div>
         <p className="text-theme-muted">No saved encounters yet</p>
         <p className="text-sm text-theme-disabled mt-2">
           Create an encounter by selecting monsters and clicking "Save Encounter"

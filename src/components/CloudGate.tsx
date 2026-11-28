@@ -43,7 +43,7 @@ export const CloudGate: React.FC<{ children: React.ReactNode }> = ({ children })
   return (
     <div className="min-h-screen bg-theme-primary text-white flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-theme-secondary border border-theme-primary rounded-xl p-6 shadow-xl space-y-4">
-        <h1 className="text-2xl font-bold">dnd character system</h1>
+        <h1 className="text-2xl font-bold">DnD Character Sheet System</h1>
         {!status.configured && (
           <p className="text-sm text-theme-tertiary">Cloud save is not configured in this build.</p>
         )}

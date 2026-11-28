@@ -20,9 +20,10 @@ import {
   EquipmentSection,
   FeaturesSection
 } from '../index';
-import { getSpellsForClass } from '../../../services/dataService';
 import { attunedItemCount, attunementSlotCount } from '../../../utils/magicItemInventory';
 import { SpellPreparationModal } from '../../SpellPreparationModal';
+import { hasPreparedCasting, preparableSpells } from '../../../utils/multiclass';
+import { useSheetPage } from '../sheetPageState';
 
 export const MobileLayout: React.FC<CharacterSheetProps> = ({
   character, onClose, onDelete, setRollResult, onDiceRoll, onToggleInspiration, onFeatureClick,
@@ -30,6 +31,7 @@ export const MobileLayout: React.FC<CharacterSheetProps> = ({
   onAddItem, onRemoveItem, setEquipmentModal, onOpenDiceTray
 }) => {
   const [showSpellPreparationModal, setShowSpellPreparationModal] = useState(false);
+  const { page } = useSheetPage();
   const [adjustMode, setAdjustMode] = useState(false);
   const [panelOrder, setPanelOrder] = useState<string[]>([
     'coreStats', 'abilityScores', 'skills', 'savingThrows',
@@ -339,6 +341,14 @@ export const MobileLayout: React.FC<CharacterSheetProps> = ({
           onOpenDiceTray={onOpenDiceTray}
         />
 
+        {page === 'spells' ? (
+          <SpellcastingSection
+            character={character}
+            onUpdateCharacter={onUpdateCharacter}
+            onSpellPreparation={() => setShowSpellPreparationModal(true)}
+          />
+        ) : (
+        <>
         {/* Global Section Controls */}
         <div className="flex gap-2 mb-4 p-3 bg-theme-secondary/50 rounded-lg">
           <button
@@ -374,6 +384,7 @@ export const MobileLayout: React.FC<CharacterSheetProps> = ({
 
         {/* Dynamic panel rendering based on custom order */}
         {panelOrder.map(panelId => {
+          if (panelId === 'spellcasting') return null;
           const config = getPanelConfig(panelId);
           if (!config) return null;
 
@@ -397,11 +408,13 @@ export const MobileLayout: React.FC<CharacterSheetProps> = ({
             </CollapsibleSection>
           );
         })}
+        </>
+        )}
 
-        {character.spellcasting?.spellcastingType === 'prepared' && (
+        {hasPreparedCasting(character) && (
           <SpellPreparationModal
             character={character}
-            availableSpells={getSpellsForClass(character.class, character.edition, character.background, character.subclass || undefined)}
+            availableSpells={preparableSpells(character)}
             isOpen={showSpellPreparationModal}
             onClose={() => setShowSpellPreparationModal(false)}
             onSave={handleSpellPreparationSave}

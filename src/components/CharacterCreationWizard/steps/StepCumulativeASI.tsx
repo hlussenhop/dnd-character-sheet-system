@@ -329,7 +329,7 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
 
           {remainingPoints > 0 && (
             <div className="mt-4 p-3 bg-amber-400/20 border border-amber-400 rounded-lg text-amber-200 text-sm">
-              ⚠️ You must allocate all {maxPoints} points before proceeding.
+              You must allocate all {maxPoints} points before proceeding.
             </div>
           )}
         </div>
@@ -384,7 +384,7 @@ export const StepCumulativeASI: React.FC<StepProps> = ({
 
           {!currentChoice.featSlug && availableFeats.length > 0 && (
             <div className="mt-4 p-3 bg-amber-400/20 border border-amber-400 rounded-lg text-amber-200 text-sm">
-              ⚠️ You must select a feat before proceeding.
+              You must select a feat before proceeding.
             </div>
           )}
         </div>

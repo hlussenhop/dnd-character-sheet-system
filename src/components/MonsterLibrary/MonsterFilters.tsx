@@ -270,7 +270,6 @@ export const MonsterFilters: React.FC = () => {
               title={category.description}
               className={`${chipClass(filters.types.includes(category.type))} inline-flex items-center gap-1`}
             >
-              <span>{category.icon}</span>
               <span>{category.name}</span>
             </button>
           ))}

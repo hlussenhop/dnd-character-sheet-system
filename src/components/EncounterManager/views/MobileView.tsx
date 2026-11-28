@@ -90,7 +90,7 @@ export function MobileView({
             onClick={() => setShowMenu(!showMenu)}
             className="menu-btn"
           >
-            ☰
+            Menu
           </button>
         </div>
       </div>
@@ -120,7 +120,7 @@ export function MobileView({
               onClick={onSaveCombat}
               className="menu-item"
             >
-              💾 Save Combat
+              Save Combat
             </button>
             <button
               onClick={() => setShowMenu(false)}
@@ -161,7 +161,7 @@ export function MobileView({
           disabled={!isCombatActive}
           className="control-btn prev"
         >
-          ⬅️
+          Prev
         </button>
         <div className="current-turn-display">
           {currentEntry ? (
@@ -180,7 +180,7 @@ export function MobileView({
           disabled={!isCombatActive}
           className="control-btn next"
         >
-          ➡️
+          Next
         </button>
       </div>
 

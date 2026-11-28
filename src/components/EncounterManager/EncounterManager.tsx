@@ -88,7 +88,6 @@ export function EncounterManager({ encounterId, onBack }: EncounterManagerProps)
     return (
       <div className="encounter-manager-loading">
         <div className="loading-content">
-          <div className="loading-spinner">⚔️</div>
           <h2>Loading Encounter...</h2>
           <p>Preparing your combat session</p>
         </div>

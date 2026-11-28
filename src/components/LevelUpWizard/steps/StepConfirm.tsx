@@ -7,6 +7,8 @@
 import React from 'react';
 import { Character, LevelUpChoices } from '../../../types/dnd';
 import { LevelUpData } from '../../../data/classProgression';
+import { formatClassSummary } from '../../../utils/multiclass';
+import { nextClassEntries } from '../../../utils/levelUpUtils';
 
 interface StepConfirmProps {
   character: Character;
@@ -41,7 +43,13 @@ export const StepConfirm: React.FC<StepConfirmProps> = ({
         <div className="flex items-center justify-between mb-4">
           <div>
             <h4 className="text-xl font-bold text-theme-primary">{character.name}</h4>
-            <p className="text-theme-secondary">{character.species} {character.class}</p>
+            <p className="text-theme-secondary">
+              {character.species} {formatClassSummary({
+                ...character,
+                level: toLevel,
+                classes: levelUpData.classSlug ? nextClassEntries(character, levelUpData.classSlug) : character.classes,
+              })}
+            </p>
           </div>
           <div className="text-right">
             <p className="text-sm text-theme-secondary">Level</p>

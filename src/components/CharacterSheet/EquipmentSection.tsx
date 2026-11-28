@@ -7,6 +7,7 @@ import { EquipmentManagerModal } from './EquipmentManagerModal';
 import { MagicItemDetailModal } from './MagicItemDetailModal';
 import { MagicItemPickerModal } from './MagicItemPickerModal';
 import { canEquipItem } from '../../utils/equipmentValidation';
+import { asList } from '../../utils/normalizeCharacter';
 import { useMagicItemIndex } from '../../hooks/useMagicItemIndex';
 import {
   addMagicItem,
@@ -252,7 +253,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               const equipment = equipmentData.find(eq => eq.slug === item.equipmentSlug);
               const magic = item.magicItemSlug ? magicBySlug.get(item.magicItemSlug) : undefined;
               const isWeapon = equipment?.weapon_category !== undefined;
-              const isMastered = character.weaponMastery?.includes(item.equipmentSlug);
+              const isMastered = asList<string>(character.weaponMastery).includes(item.equipmentSlug);
               const masteryProperty = equipment?.mastery;
               const itemWeight = (equipment?.weight || magic?.weight || 0) * (item.quantity || 0);
               const slotsLeft = attunementSlotCount(character) - attunedItemCount(character);
@@ -297,7 +298,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
                             className="text-[11px] bg-amber-900/30 border border-amber-500/50 text-amber-200 px-2 py-0.5 rounded flex items-center gap-1"
                             title={`Mastery: ${masteryProperty.name}`}
                           >
-                            ⚔️ {masteryProperty.name}
+                            {masteryProperty.name}
                           </span>
                         )}
                         <span className={`text-[11px] px-2 py-0.5 rounded-full border border-theme-border/60 ${textMutedClass}`}>

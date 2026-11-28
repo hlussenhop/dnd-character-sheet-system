@@ -112,7 +112,7 @@ export const SkillEntry: React.FC<SkillEntryProps> = ({
              <div className={`w-3 h-3 rounded-full border ${skill.proficient ? 'bg-accent-yellow border-yellow-500' : 'border-gray-500'}`} />
              {/* Expertise indicator */}
              {skill.expertise && (
-               <span className="text-amber-400 text-xs" title="Expertise: Proficiency bonus doubled">⭐</span>
+               <span className="text-amber-400 text-[10px] uppercase tracking-wide" title="Expertise: Proficiency bonus doubled">Exp</span>
              )}
              {/* Roll indicator */}
              {getRollIcon() && (
@@ -195,7 +195,7 @@ export const SkillEntry: React.FC<SkillEntryProps> = ({
            )}
            {/* Expertise indicator */}
            {skill.expertise && (
-             <span className="text-amber-400" title="Expertise: Proficiency bonus doubled">⭐</span>
+             <span className="text-amber-400 text-[10px] uppercase tracking-wide" title="Expertise: Proficiency bonus doubled">Exp</span>
            )}
          </div>
         <span className="font-mono font-bold text-accent-yellow-light ml-1">{formatModifier(skill.value)}</span>

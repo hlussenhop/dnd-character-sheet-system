@@ -51,7 +51,6 @@ export function RulesEngineDebugPanel({
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex items-center gap-2">
-          <span className="text-lg">🎲</span>
           <h3 className="font-semibold">Rules Engine Debug</h3>
         </div>
         <button

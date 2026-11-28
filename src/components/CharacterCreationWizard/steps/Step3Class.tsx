@@ -90,7 +90,6 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
               className='w-full p-4 bg-theme-tertiary hover:bg-gray-650 flex items-center justify-between transition-colors'
             >
               <div className='flex items-center gap-3'>
-                <span className='text-2xl'>{category.icon}</span>
                 <div className='text-left'>
                   <div className='font-bold text-accent-yellow-light text-lg'>{category.name}</div>
                   <div className='text-xs text-theme-muted'>{category.description}</div>
@@ -295,7 +294,6 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
                 >
                   {skill}
                   {isBackgroundSkill && data.edition === '2014' && <span className="ml-1 text-xs">(BG)</span>}
-                  {isBackgroundSkill && data.edition === '2024' && <span className="ml-1 text-xs">⚠️</span>}
                 </button>
               );
             })}
@@ -303,7 +301,7 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
 
           {data.selectedSkills.length < (selectedClass.num_skill_choices || 0) && (
             <div className="text-xs text-accent-yellow-light mt-2">
-              ⚠️ Please select {(totalSkillChoices - data.selectedSkills.length)} more skill{(totalSkillChoices - data.selectedSkills.length) !== 1 ? 's' : ''}
+              Please select {(totalSkillChoices - data.selectedSkills.length)} more skill{(totalSkillChoices - data.selectedSkills.length) !== 1 ? 's' : ''}
             </div>
           )}
         </div>
@@ -358,7 +356,7 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
 
           {data.selectedMusicalInstruments.length < (selectedClass.num_instrument_choices || 0) && (
             <div className="text-xs text-accent-yellow-light mt-2">
-              ⚠️ Please select {((selectedClass.num_instrument_choices || 0) - data.selectedMusicalInstruments.length)} more musical instrument{((selectedClass.num_instrument_choices || 0) - data.selectedMusicalInstruments.length) !== 1 ? 's' : ''}
+              Please select {((selectedClass.num_instrument_choices || 0) - data.selectedMusicalInstruments.length)} more musical instrument{((selectedClass.num_instrument_choices || 0) - data.selectedMusicalInstruments.length) !== 1 ? 's' : ''}
             </div>
           )}
         </div>
@@ -510,14 +508,13 @@ export const Step3Class: React.FC<StepProps> = ({ data, updateData, nextStep, pr
 
                  {!data.subclassSlug && (
                    <div className="text-xs text-accent-yellow-light mt-2">
-                     ⚠️ Please select a subclass
+                     Please select a subclass
                    </div>
                  )}
                </>
              ) : (
                <div className="text-sm text-theme-muted p-4 bg-theme-secondary/50 rounded-lg border border-theme-primary">
                  <div className="flex items-center gap-2 mb-2">
-                   <span className="text-accent-yellow-light">🔒</span>
                    <p className="font-semibold text-accent-yellow-light">Subclass Selection Unlocked at Level {subclassLevel}</p>
                  </div>
                  <p className="mb-3">Characters choose their subclass specialization at level {subclassLevel}. This character will need to select a subclass when they reach level {subclassLevel}.</p>

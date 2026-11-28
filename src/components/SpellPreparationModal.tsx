@@ -4,6 +4,7 @@ import { X, Check, BookOpen } from 'lucide-react';
 import { Character } from '../types/dnd';
 import { AppSpell } from '../services/dataService';
 import { SpellBlurb } from './SpellBlurb';
+import { isMulticlassed, preparedCasterClass } from '../utils/multiclass';
 
 interface SpellPreparationModalProps {
   character: Character;
@@ -24,9 +25,10 @@ export const SpellPreparationModal: React.FC<SpellPreparationModalProps> = ({
     character.spellcasting?.preparedSpells || []
   );
 
-  // Calculate max prepared spells
-  const maxPrepared = character.spellcasting ?
-    Math.max(1, Math.floor((character.abilities[character.spellcasting.ability].score - 10) / 2) + character.level) : 0;
+  // Calculate max prepared spells (a multiclass character uses the preparing class's level)
+  const preparer = preparedCasterClass(character);
+  const maxPrepared = preparer ?
+    Math.max(1, Math.floor((character.abilities[preparer.ability].score - 10) / 2) + preparer.classLevel) : 0;
 
   const handleSpellToggle = (spellSlug: string) => {
     setSelectedSpells(prev => {
@@ -57,7 +59,7 @@ export const SpellPreparationModal: React.FC<SpellPreparationModalProps> = ({
             <div>
               <h2 className="text-xl font-bold text-white">Prepare Spells</h2>
               <p className="text-sm text-theme-muted">
-                {character.name} - {character.class} Level {character.level}
+                {character.name} - {preparer && isMulticlassed(character) ? `${preparer.className} Level ${preparer.classLevel}` : `${character.class} Level ${character.level}`}
               </p>
             </div>
           </div>

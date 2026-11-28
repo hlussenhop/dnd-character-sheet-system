@@ -9,7 +9,7 @@ import { resolveSpeciesGrants, speciesMovement } from './speciesGrantUtils';
 import { subclassFeaturesUpToLevel } from './subclassCatalog';
 import { applyOptionalFeatureGrants, getOptionalFeature, levelUpNeedsOptionalFeatures, resolveOptionalFeatureSlug } from './optionalFeatures';
 import { applyFeatAbilityIncreases, resolveFeatGrants } from './featGrantUtils';
-import { AbilityName, Character, LevelUpChoices, SkillName } from '../types/dnd';
+import { AbilityName, Character, CharacterClassEntry, LevelUpChoices, SkillName } from '../types/dnd';
 import {
   ClassProgression,
   LevelUpData,
@@ -30,10 +30,24 @@ import { cleric2024Progression } from '../data/progressions/cleric2024';
 import { druid2024Progression } from '../data/progressions/druid2024';
 import { warlock2024Progression } from '../data/progressions/warlock2024';
 import { artificer2024Progression } from '../data/progressions/artificer2024';
-import { PROFICIENCY_BONUSES, CANTRIPS_KNOWN_BY_CLASS, findSpeciesByName, loadSpells, getFeatBySlug, resolveFeatSlug, type AppSpell } from '../services/dataService';
+import { PROFICIENCY_BONUSES, CANTRIPS_KNOWN_BY_CLASS, findSpeciesByName, loadSpells, getFeatBySlug, getHitDieForClass, resolveFeatSlug, type AppSpell } from '../services/dataService';
 import { SPELL_LEARNING_RULES } from '../data/spellLearning';
 import { SPELL_SLOTS_BY_CLASS } from '../data/spellSlots';
 import { normalizeSpellSlots } from './spellSlotUtils';
+import {
+  classCastingAbility,
+  classCastingType,
+  classCastsAtLevel,
+  findClassData,
+  getClassEntries,
+  hitDicePools,
+  multiclassProficiencies,
+  multiclassSpellSlots,
+  primaryClassSlug,
+  projectCharacterForClass,
+  withHitDicePools,
+} from './multiclass';
+import { asList, asNumberList } from './normalizeCharacter';
 
 /**
  * Get the class progression data for a given class
@@ -98,10 +112,18 @@ function finishLevelUpData(character: Character, toLevel: number, data: LevelUpD
   return { ...data, optionalFeaturePicks: true, requiresChoices: true }
 }
 
+/** Class level at which a 2014 class picks its subclass (2024 progressions carry their own). */
+const SUBCLASS_LEVEL_2014: Record<string, number> = {
+  cleric: 1, sorcerer: 1, warlock: 1, wizard: 2, druid: 2,
+};
+
 /**
- * Calculate all data needed for a level-up
+ * Calculate all data needed for a level-up.
+ *
+ * `targetClassSlug` is the class gaining the level: one the character already has, or a new class
+ * when multiclassing. It defaults to the starting class.
  */
-export function calculateLevelUpData(character: Character): LevelUpData | null {
+export function calculateLevelUpData(character: Character, targetClassSlug?: string): LevelUpData | null {
   const fromLevel = character.level;
   const toLevel = fromLevel + 1;
 
@@ -109,11 +131,122 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
     return null; // Max level reached
   }
 
+  const entries = getClassEntries(character);
+  const classSlug = (targetClassSlug || entries[0].classSlug).toLowerCase();
+  const entry = entries.find(item => item.classSlug === classSlug);
+  const isNewClass = !entry;
+  const fromClassLevel = entry?.level ?? 0;
+  const toClassLevel = fromClassLevel + 1;
+  const multiclass = entries.length > 1 || isNewClass;
+
+  const view = projectCharacterForClass(character, classSlug);
+  const data = classLevelUpData(view, fromClassLevel, toClassLevel, multiclass);
+
+  if (multiclass) {
+    addMulticlassSpellChoices(view, fromClassLevel, toClassLevel, data);
+    const before = multiclassSpellSlots(character) ?? asNumberList(character.spellcasting?.spellSlots);
+    const after = multiclassSpellSlots({ ...character, level: toLevel, classes: nextClassEntries(character, classSlug) }) ?? [];
+    const gained: Record<string, number> = {};
+    after.forEach((count, level) => {
+      if (level > 0 && count > (before[level] || 0)) gained[`level${level}`] = count;
+    });
+    data.newSpellSlots = Object.keys(gained).length > 0 ? gained : undefined;
+  }
+
+  const withSubclass = addFallbackSubclassChoice(view, toClassLevel, data);
+
+  return finishLevelUpData(view, toClassLevel, {
+    ...withSubclass,
+    fromLevel,
+    toLevel,
+    classSlug,
+    className: view.class,
+    fromClassLevel,
+    toClassLevel,
+    isNewClass,
+    newProficiencyBonus: PROFICIENCY_BONUSES[toLevel - 1],
+    requiresChoices: withSubclass.choices.length > 0 || isNewClass,
+  });
+}
+
+/** Class entries after `classSlug` gains a level. */
+export function nextClassEntries(character: Character, classSlug: string): CharacterClassEntry[] {
+  const slug = classSlug.toLowerCase();
+  const entries = getClassEntries(character);
+  if (entries.some(entry => entry.classSlug === slug)) {
+    return entries.map(entry => (entry.classSlug === slug ? { ...entry, level: entry.level + 1 } : entry));
+  }
+  const view = projectCharacterForClass(character, slug);
+  const classData = findClassData(slug, character.edition);
+  return [...entries, {
+    class: view.class,
+    classSlug: slug,
+    level: 1,
+    subclass: null,
+    hitDie: classData?.hit_die ?? getHitDieForClass(slug),
+  }];
+}
+
+/** 2014 classes have no progression file, so their subclass pick comes from the subclass level table. */
+function addFallbackSubclassChoice(view: Character, toClassLevel: number, data: LevelUpData): LevelUpData {
+  if (data.choices.some(choice => choice.type === 'subclass') || view.subclass) return data;
+  if (getClassProgression(view.classSlug ?? '', view.edition)) return data;
+  const subclassLevel = SUBCLASS_LEVEL_2014[view.classSlug ?? ''] ?? 3;
+  if (toClassLevel !== subclassLevel) return data;
+  return {
+    ...data,
+    choices: [...data.choices, { type: 'subclass', description: `Choose a ${view.class} subclass` }],
+    requiresChoices: true,
+  };
+}
+
+/**
+ * Multiclass spell picks follow each class's own table at its class level. Counting is by the
+ * table's change from the previous class level because every class shares one spell list.
+ */
+function addMulticlassSpellChoices(view: Character, fromClassLevel: number, toClassLevel: number, data: LevelUpData): void {
+  const classSlug = view.classSlug ?? '';
+  data.choices = data.choices.filter(choice => choice.type !== 'spells');
+  data.newCantripsKnown = undefined;
+  data.newSpellsKnown = undefined;
+  if (!classCastsAtLevel(classSlug, toClassLevel, view.edition, view.subclass)) return;
+
+  const cantripTable = (CANTRIPS_KNOWN_BY_CLASS as Record<string, Record<string, number>>)[classSlug];
+  const cantripsAt = (level: number) => (level > 0 ? cantripTable?.[String(level)] ?? 0 : 0);
+  const newCantrips = Math.max(0, cantripsAt(toClassLevel) - cantripsAt(fromClassLevel));
+
+  const rules = SPELL_LEARNING_RULES[classSlug];
+  const casting = classCastsAtLevel(classSlug, fromClassLevel, view.edition, view.subclass);
+  let newSpells = 0;
+  if (rules?.spellbookCapacity) {
+    newSpells = casting && fromClassLevel > 0 ? 2 : rules.spellbookCapacity[0];
+  } else {
+    const table = rules?.spellsKnown ?? rules?.spellsPrepared;
+    const at = (level: number) => (level > 0 ? table?.[level - 1] ?? 0 : 0);
+    newSpells = Math.max(0, at(toClassLevel) - at(fromClassLevel));
+  }
+
+  const name = view.class;
+  if (newCantrips > 0) {
+    data.newCantripsKnown = newCantrips;
+    data.choices.push({ type: 'spells', description: `Learn ${newCantrips} ${name} cantrip${newCantrips === 1 ? '' : 's'}`, count: newCantrips });
+  }
+  if (newSpells > 0) {
+    data.newSpellsKnown = newSpells;
+    data.choices.push({ type: 'spells', description: `Learn ${newSpells} ${name} spell${newSpells === 1 ? '' : 's'}`, count: newSpells });
+  }
+}
+
+/**
+ * Level-up data for one class going from `fromLevel` to `toLevel` in that class. `character` is
+ * the class view (see projectCharacterForClass): its level is the class level.
+ */
+function classLevelUpData(character: Character, fromLevel: number, toLevel: number, multiclass: boolean): LevelUpData {
   // Get class progression data
-  const progression = getClassProgression(character.class.toLowerCase(), character.edition);
+  const progression = getClassProgression((character.classSlug || character.class).toLowerCase(), character.edition);
   if (!progression) {
     // Fallback for classes without progression data yet
-    return finishLevelUpData(character, toLevel, createFallbackLevelUpData(character, fromLevel, toLevel));
+    return createFallbackLevelUpData(character, fromLevel, toLevel);
   }
 
   // Get features for the new level
@@ -140,7 +273,7 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
   let newCantripsKnown: number | undefined;
   let newSpellsKnown: number | undefined;
 
-  if (character.spellcasting) {
+  if (character.spellcasting && !multiclass) {
     const classSlug = character.class.toLowerCase();
     const currentSlots = normalizeSpellSlots(classSlug, SPELL_SLOTS_BY_CLASS[classSlug]?.[fromLevel]);
     const nextLevelSlots = normalizeSpellSlots(classSlug, SPELL_SLOTS_BY_CLASS[classSlug]?.[toLevel]);
@@ -194,7 +327,7 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
     }
   }
 
-  return finishLevelUpData(character, toLevel, {
+  return {
     fromLevel,
     toLevel,
     newProficiencyBonus,
@@ -207,7 +340,7 @@ export function calculateLevelUpData(character: Character): LevelUpData | null {
     features: featuresAtLevel,
     requiresChoices: choices.length > 0,
     choices
-  });
+  };
 }
 
 /**
@@ -322,6 +455,16 @@ export function applyLevelUp(
   // Apply level increase
   updatedCharacter.level = levelUpData.toLevel;
 
+  const classSlug = (levelUpData.classSlug || choices.classSlug || primaryClassSlug(character)).toLowerCase();
+  const isPrimaryClass = classSlug === primaryClassSlug(character);
+  const multiclass = getClassEntries(character).length > 1 || levelUpData.isNewClass === true;
+  const classEntries = nextClassEntries(character, classSlug).map(entry =>
+    entry.classSlug === classSlug && choices.subclassChosen ? { ...entry, subclass: choices.subclassChosen } : entry,
+  );
+  if (multiclass) {
+    updatedCharacter.classes = classEntries;
+  }
+
   // Apply HP increase
   let hpGain = choices.hpGained || 0;
 
@@ -352,11 +495,28 @@ export function applyLevelUp(
   }
 
   // Apply hit dice
-  updatedCharacter.hitDice.max += 1;
-  updatedCharacter.hitDice.current += 1;
+  if (multiclass) {
+    const die = classEntries.find(entry => entry.classSlug === classSlug)?.hitDie ?? getHitDieForClass(classSlug);
+    const pools = hitDicePools(character);
+    const pool = pools.find(item => item.die === die);
+    const nextPools = pool
+      ? pools.map(item => (item === pool ? { ...item, max: item.max + 1, current: item.current + 1 } : item))
+      : [...pools, { die, max: 1, current: 1 }].sort((left, right) => right.die - left.die);
+    updatedCharacter.hitDice = withHitDicePools(updatedCharacter, nextPools);
+  } else {
+    updatedCharacter.hitDice = {
+      ...updatedCharacter.hitDice,
+      max: updatedCharacter.hitDice.max + 1,
+      current: updatedCharacter.hitDice.current + 1,
+    };
+  }
 
   // Apply proficiency bonus
   updatedCharacter.proficiencyBonus = levelUpData.newProficiencyBonus;
+
+  if (levelUpData.isNewClass) {
+    applyMulticlassProficiencies(updatedCharacter, classSlug, choices);
+  }
 
   // Apply ASI choices
   if (choices.asiChoices) {
@@ -382,13 +542,15 @@ export function applyLevelUp(
     applyFeatEffects(updatedCharacter, featSlug, updatedCharacter.featChoices);
   }
 
-  // Apply subclass
-  if (choices.subclassChosen) {
+  // Apply subclass (a later class keeps its subclass on its class entry)
+  if (choices.subclassChosen && isPrimaryClass) {
     updatedCharacter.subclass = choices.subclassChosen;
   }
   updatedCharacter.srdFeatures = {
     classFeatures: updatedCharacter.srdFeatures?.classFeatures ?? [],
-    subclassFeatures: subclassFeaturesUpToLevel(updatedCharacter.classSlug, updatedCharacter.subclass, updatedCharacter.level),
+    subclassFeatures: multiclass
+      ? classEntries.flatMap(entry => subclassFeaturesUpToLevel(entry.classSlug, entry.subclass, entry.level))
+      : subclassFeaturesUpToLevel(updatedCharacter.classSlug, updatedCharacter.subclass, updatedCharacter.level),
   };
 
   // Apply fighting style
@@ -411,8 +573,12 @@ export function applyLevelUp(
     applyOptionalFeatureGrants(updatedCharacter, optionalPicks);
   }
 
+  if (multiclass) {
+    applyMulticlassSpellcasting(updatedCharacter, character, classSlug, classEntries);
+  }
+
   // Apply spell slot increases
-  if (levelUpData.newSpellSlots && updatedCharacter.spellcasting) {
+  if (!multiclass && levelUpData.newSpellSlots && updatedCharacter.spellcasting) {
     const classSlug = character.class.toLowerCase();
     const newSlots = normalizeSpellSlots(classSlug, SPELL_SLOTS_BY_CLASS[classSlug]?.[levelUpData.toLevel]);
     updatedCharacter.spellcasting.spellSlots = newSlots;
@@ -440,18 +606,25 @@ export function applyLevelUp(
       updatedCharacter.spellcasting.cantripsKnown.push(...cantrips);
     }
 
-    // Add leveled spells based on casting type
+    // Add leveled spells based on the casting type of the class that gained the level
     if (leveledSpells.length > 0) {
-      if (updatedCharacter.spellcasting.spellcastingType === 'known') {
+      const castingType = multiclass
+        ? classCastingType(classSlug, updatedCharacter.edition)
+        : updatedCharacter.spellcasting.spellcastingType;
+      if (castingType === 'known') {
         if (!updatedCharacter.spellcasting.spellsKnown) {
           updatedCharacter.spellcasting.spellsKnown = [];
         }
         updatedCharacter.spellcasting.spellsKnown.push(...leveledSpells);
-      } else if (updatedCharacter.spellcasting.spellcastingType === 'wizard') {
+      } else if (castingType === 'wizard') {
         if (!updatedCharacter.spellcasting.spellbook) {
           updatedCharacter.spellcasting.spellbook = [];
         }
         updatedCharacter.spellcasting.spellbook.push(...leveledSpells);
+      } else {
+        updatedCharacter.spellcasting.preparedSpells = [
+          ...new Set([...(updatedCharacter.spellcasting.preparedSpells ?? []), ...leveledSpells]),
+        ];
       }
     }
   }
@@ -499,6 +672,9 @@ export function applyLevelUp(
   // Record level-up in history
   const levelUpRecord: LevelUpRecord = {
     level: levelUpData.toLevel,
+    classSlug,
+    classLevel: classEntries.find(entry => entry.classSlug === classSlug)?.level,
+    newClass: levelUpData.isNewClass || undefined,
     timestamp: new Date().toISOString(),
     hpRolled: choices.hpRoll,
     hpGained: choices.hpGained || 0,
@@ -541,6 +717,107 @@ export function getAverageHPGain(hitDie: string, conModifier: number): number {
 
 const unionInto = <T,>(current: T[] | undefined, added: T[]): T[] | undefined =>
   added.length ? Array.from(new Set([...(current ?? []), ...added])) : current;
+
+/** The reduced proficiency list a character gets from the first level of a new class. */
+function applyMulticlassProficiencies(character: Character, classSlug: string, choices: LevelUpChoices): void {
+  const gained = multiclassProficiencies(classSlug, character.edition);
+  character.proficiencies = {
+    ...character.proficiencies,
+    armor: unionInto(character.proficiencies?.armor, gained.armor) ?? [],
+    weapons: unionInto(character.proficiencies?.weapons, gained.weapons) ?? [],
+    tools: unionInto(character.proficiencies?.tools, gained.tools) ?? [],
+  };
+
+  const pb = character.proficiencyBonus;
+  const skills = { ...character.skills };
+  (choices.multiclassSkills ?? []).slice(0, gained.skills).forEach(skill => {
+    if (skills[skill] && !skills[skill].proficient) {
+      skills[skill] = { ...skills[skill], proficient: true, value: skills[skill].value + pb };
+    }
+  });
+  character.skills = skills;
+
+  if (gained.instruments > 0 && choices.multiclassInstrument) {
+    character.featuresAndTraits = {
+      ...character.featuresAndTraits,
+      musicalInstrumentProficiencies: unionInto(
+        asList<string>(character.featuresAndTraits?.musicalInstrumentProficiencies),
+        [choices.multiclassInstrument],
+      ) ?? [],
+    };
+  }
+}
+
+/**
+ * Multiclass spellcasting: start spellcasting when the first casting class arrives, track each
+ * casting class's ability, and recompute the shared slot table.
+ */
+function applyMulticlassSpellcasting(
+  updated: Character,
+  before: Character,
+  classSlug: string,
+  entries: CharacterClassEntry[],
+): void {
+  const edition = updated.edition;
+  const casts = (entry: CharacterClassEntry) => classCastsAtLevel(entry.classSlug, entry.level, edition, entry.subclass);
+  const target = entries.find(entry => entry.classSlug === classSlug);
+  const castingBefore = getClassEntries(before).filter(casts);
+  const targetCasts = target ? casts(target) : false;
+
+  if (!updated.spellcasting && !targetCasts) return;
+
+  const ability = classCastingAbility(classSlug, edition);
+  const modifier = updated.abilities[ability]?.modifier ?? 0;
+
+  if (!updated.spellcasting) {
+    updated.spellcasting = {
+      ability,
+      spellSaveDC: 8 + updated.proficiencyBonus + modifier,
+      spellAttackBonus: updated.proficiencyBonus + modifier,
+      cantripsKnown: [],
+      spellcastingType: classCastingType(classSlug, edition),
+      cantripChoicesByLevel: {},
+      spellSlots: new Array(10).fill(0),
+      usedSpellSlots: new Array(10).fill(0),
+    };
+  } else if (targetCasts && castingBefore.length === 0) {
+    // Feat-only spellcasting so far: the new class becomes the main casting class.
+    updated.spellcasting = {
+      ...updated.spellcasting,
+      ability,
+      spellSaveDC: 8 + updated.proficiencyBonus + modifier,
+      spellAttackBonus: updated.proficiencyBonus + modifier,
+      spellcastingType: classCastingType(classSlug, edition),
+    };
+  } else {
+    updated.spellcasting = { ...updated.spellcasting };
+  }
+
+  const casting = updated.spellcasting;
+  const listed = asList<NonNullable<typeof casting.classCasting>[number]>(casting.classCasting);
+  const classCasting = listed.length > 0
+    ? [...listed]
+    : castingBefore.map(entry => ({
+        classSlug: entry.classSlug,
+        className: entry.class,
+        ability: entry.classSlug === primaryClassSlug(before) ? casting.ability : classCastingAbility(entry.classSlug, edition),
+        spellcastingType: entry.classSlug === primaryClassSlug(before) ? casting.spellcastingType : classCastingType(entry.classSlug, edition),
+      }));
+  if (target && targetCasts && !classCasting.some(item => item.classSlug === classSlug)) {
+    classCasting.push({
+      classSlug,
+      className: target.class,
+      ability,
+      spellcastingType: classCastingType(classSlug, edition),
+    });
+  }
+  if (classCasting.length > 0) casting.classCasting = classCasting;
+
+  const slots = multiclassSpellSlots(updated) ?? asNumberList(casting.spellSlots);
+  const used = asNumberList(casting.usedSpellSlots);
+  casting.spellSlots = slots;
+  casting.usedSpellSlots = slots.map((max, level) => Math.min(used[level] ?? 0, max));
+}
 
 /**
  * Apply the mechanical grants of a newly gained feat (see Feat.grants and the feat's picks):

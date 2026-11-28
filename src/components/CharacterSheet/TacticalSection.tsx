@@ -17,7 +17,7 @@ interface TacticalAction {
 }
 
 interface TacticalSectionProps {
-  icon: string;
+  icon?: string;
   title: string;
   theme: 'red' | 'blue' | 'green' | 'orange' | 'purple';
   actions: TacticalAction[];
@@ -87,7 +87,7 @@ export const TacticalSection: React.FC<TacticalSectionProps> = ({
         onClick={() => setExpanded(prev => !prev)}
       >
         <h3 className={`text-lg font-bold flex items-center gap-2 ${headerTextClass}`}>
-          <span className="text-xl">{icon}</span>
+          {icon ? <span className="text-xl">{icon}</span> : null}
           {title}
         </h3>
         <div className={`text-[11px] uppercase tracking-[0.18em] font-semibold ${headerSubtleClass}`}>

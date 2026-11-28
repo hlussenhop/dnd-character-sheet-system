@@ -2,6 +2,7 @@ import React from 'react';
 import { Shield, Sword, Package } from 'lucide-react';
 import { Character } from '../../types/dnd';
 import { loadEquipment } from '../../services/dataService';
+import { asList } from '../../utils/normalizeCharacter';
 
 interface ActiveEquipmentPanelProps {
   character: Character;
@@ -119,9 +120,9 @@ export const ActiveEquipmentPanel: React.FC<ActiveEquipmentPanelProps> = ({
                           Weight: {weapon.weight} lbs
                         </div>
                       )}
-                      {character.weaponMastery?.includes(weapon.slug) && (
+                      {asList<string>(character.weaponMastery).includes(weapon.slug) && (
                         <div className="text-xs text-amber-400 mt-1">
-                          ⚔️ Mastered
+                          Mastered
                         </div>
                       )}
                     </div>

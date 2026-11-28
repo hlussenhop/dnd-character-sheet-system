@@ -89,14 +89,14 @@ export const Step9Languages: React.FC<StepProps> = ({ data, updateData, nextStep
 
   const languageCategories = data.edition === '2024'
     ? [
-        { name: 'Standard' as const, icon: '🏛️', description: 'PHB 2024 standard languages' },
-        { name: 'Rare' as const, icon: '✨', description: 'PHB 2024 rare languages' }
+        { name: 'Standard' as const, description: 'PHB 2024 standard languages' },
+        { name: 'Rare' as const, description: 'PHB 2024 rare languages' }
       ]
     : [
-        { name: 'Standard' as const, icon: '🏛️', description: 'Common languages of major civilizations' },
-        { name: 'Exotic' as const, icon: '✨', description: 'Rare and mystical languages' },
-        { name: 'Secret' as const, icon: '🔒', description: 'Hidden languages of specific groups' },
-        { name: 'Dialect' as const, icon: '💬', description: 'Specialized dialects and elemental tongues' }
+        { name: 'Standard' as const, description: 'Common languages of major civilizations' },
+        { name: 'Exotic' as const, description: 'Rare and mystical languages' },
+        { name: 'Secret' as const, description: 'Hidden languages of specific groups' },
+        { name: 'Dialect' as const, description: 'Specialized dialects and elemental tongues' }
       ];
 
   return (
@@ -195,7 +195,6 @@ export const Step9Languages: React.FC<StepProps> = ({ data, updateData, nextStep
                 className='w-full p-4 bg-theme-tertiary hover:bg-gray-650 flex items-center justify-between transition-colors'
               >
                 <div className='flex items-center gap-3'>
-                  <span className='text-2xl'>{category.icon}</span>
                   <div className='text-left'>
                     <div className='font-bold text-accent-yellow-light text-lg'>{category.name} Languages</div>
                     <div className='text-xs text-theme-muted'>{category.description}</div>

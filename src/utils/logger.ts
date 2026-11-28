@@ -21,7 +21,7 @@ const envLevel = import.meta.env.VITE_LOG_LEVEL as LogLevel | undefined; // Vite
 const defaultLevel: LogLevel = import.meta.env.DEV ? 'debug' : 'warn';
 const level: LogLevel = isEnabled() ? coerceLevel(envLevel, defaultLevel) : 'silent';
 
-const baseLogger = loglevel.getLogger('dnd-character-system');
+const baseLogger = loglevel.getLogger('dnd-character-sheet-system');
 baseLogger.setLevel(level, false); // Do not persist to localStorage; controlled via env
 
 const formatMeta = (meta?: Record<string, unknown>) => {
@@ -58,7 +58,7 @@ const createLogger = (baseMeta: Record<string, unknown> = {}) => {
 
 // Thin wrapper for consistent imports
 export const log = createLogger({
-  app: 'dnd-character-system',
+  app: 'dnd-character-sheet-system',
   env: import.meta.env.MODE,
 });
 

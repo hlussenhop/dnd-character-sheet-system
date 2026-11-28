@@ -229,7 +229,7 @@ export const SpellbookManager: React.FC<SpellbookManagerProps> = ({ selectedChar
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `dnd-character-system-spellbooks-${Date.now()}.json`;
+    a.download = `dnd-character-sheet-system-spellbooks-${Date.now()}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };

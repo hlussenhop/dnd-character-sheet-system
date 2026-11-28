@@ -596,7 +596,7 @@ export function transformClass(srdClass: SRDClass, year: number = 2014): Class {
     detailedDescription: `${srdClass.name} is a versatile class with unique abilities.`,
     roleplayingTips: ['Play to your character\'s strengths and background'],
     keyFeatures: [],
-    icon: '⚔️',
+    icon: '',
     themeColor: '#666666',
     proficiencies: {
       armor: Array.from(new Set(armorProficiencies)),
@@ -1903,20 +1903,20 @@ export interface MonsterTypeCategory {
 }
 
 export const MONSTER_TYPE_CATEGORIES: MonsterTypeCategory[] = [
-  { type: 'aberration', name: 'Aberrations', icon: '👁️', description: 'Utterly alien beings' },
-  { type: 'beast', name: 'Beasts', icon: '🐻', description: 'Natural animals' },
-  { type: 'celestial', name: 'Celestials', icon: '✨', description: 'Divine beings from the Upper Planes' },
-  { type: 'construct', name: 'Constructs', icon: '🗿', description: 'Animated objects and golems' },
-  { type: 'dragon', name: 'Dragons', icon: '🐉', description: 'Ancient reptilian creatures' },
-  { type: 'elemental', name: 'Elementals', icon: '🔥', description: 'Beings of pure elemental energy' },
-  { type: 'fey', name: 'Fey', icon: '🧚', description: 'Magical creatures from the Feywild' },
-  { type: 'fiend', name: 'Fiends', icon: '😈', description: 'Evil beings from the Lower Planes' },
-  { type: 'giant', name: 'Giants', icon: '⛰️', description: 'Towering humanoid creatures' },
-  { type: 'humanoid', name: 'Humanoids', icon: '🧑', description: 'People and human-like creatures' },
-  { type: 'monstrosity', name: 'Monstrosities', icon: '🦎', description: 'Unnatural creatures and hybrids' },
-  { type: 'ooze', name: 'Oozes', icon: '💧', description: 'Amorphous blobs' },
-  { type: 'plant', name: 'Plants', icon: '🌿', description: 'Vegetation creatures' },
-  { type: 'undead', name: 'Undead', icon: '💀', description: 'Once-living creatures' },
+  { type: 'aberration', name: 'Aberrations', icon: '', description: 'Utterly alien beings' },
+  { type: 'beast', name: 'Beasts', icon: '', description: 'Natural animals' },
+  { type: 'celestial', name: 'Celestials', icon: '', description: 'Divine beings from the Upper Planes' },
+  { type: 'construct', name: 'Constructs', icon: '', description: 'Animated objects and golems' },
+  { type: 'dragon', name: 'Dragons', icon: '', description: 'Ancient reptilian creatures' },
+  { type: 'elemental', name: 'Elementals', icon: '', description: 'Beings of pure elemental energy' },
+  { type: 'fey', name: 'Fey', icon: '', description: 'Magical creatures from the Feywild' },
+  { type: 'fiend', name: 'Fiends', icon: '', description: 'Evil beings from the Lower Planes' },
+  { type: 'giant', name: 'Giants', icon: '', description: 'Towering humanoid creatures' },
+  { type: 'humanoid', name: 'Humanoids', icon: '', description: 'People and human-like creatures' },
+  { type: 'monstrosity', name: 'Monstrosities', icon: '', description: 'Unnatural creatures and hybrids' },
+  { type: 'ooze', name: 'Oozes', icon: '', description: 'Amorphous blobs' },
+  { type: 'plant', name: 'Plants', icon: '', description: 'Vegetation creatures' },
+  { type: 'undead', name: 'Undead', icon: '', description: 'Once-living creatures' },
 ];
 
 /**

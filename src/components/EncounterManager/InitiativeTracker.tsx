@@ -86,7 +86,7 @@ export function InitiativeTracker({
             >
               <div className="drag-handle" aria-hidden="true">⋮⋮</div>
               <div className="initiative-controls">
-                {isActive && <span className="active-indicator" aria-label="Active combatant">★</span>}
+                {isActive && <span className="active-indicator" aria-label="Active combatant">Active</span>}
                 <input
                   type="number"
                   value={entry.initiative}

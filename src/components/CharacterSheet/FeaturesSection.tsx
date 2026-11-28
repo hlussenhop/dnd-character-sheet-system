@@ -3,12 +3,13 @@ import { Character } from '../../types/dnd';
 import { getFeatBySlug } from '../../services/dataService';
 import { FeatModal } from '../FeatModal';
 import { getOptionalFeature, resolveOptionalFeatureSlug } from '../../utils/optionalFeatures';
+import { asList } from '../../utils/normalizeCharacter';
 
 const OptionalFeatureList: React.FC<{ character: Character; onFeatureClick: (feature: string) => void }> = ({ character, onFeatureClick }) => {
   const slugs = [...new Set([
-    ...(character.optionalFeatures ?? []),
+    ...asList<string>(character.optionalFeatures),
     ...(character.fightingStyle ? [character.fightingStyle] : []),
-    ...(character.eldritchInvocations ?? []),
+    ...asList<string>(character.eldritchInvocations),
   ])];
   if (slugs.length === 0) return null;
   return (
@@ -38,7 +39,7 @@ const OptionalFeatureList: React.FC<{ character: Character; onFeatureClick: (fea
 
 const FeatList: React.FC<{ character: Character }> = ({ character }) => {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
-  const feats = character.selectedFeats ?? [];
+  const feats = asList<string>(character.selectedFeats);
   if (feats.length === 0) return null;
   return (
     <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-cyan-500">
@@ -80,6 +81,7 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
   layoutMode = 'modern',
 }) => {
   const handwritingClass = layoutMode === 'paper-sheet' ? 'font-handwriting' : '';
+  const speciesTraits = asList<string>(character.featuresAndTraits?.speciesTraits);
 
   // Classic layout: All panes vertically stacked
   if (layoutMode === 'classic-dnd') {
@@ -91,10 +93,10 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
           <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-blue-500">
             <h3 className="text-lg font-bold text-accent-blue-light mb-2">Personality, Ideals, Bonds & Flaws</h3>
             <ul className="list-disc list-inside space-y-1 text-sm text-theme-tertiary">
-              <li><span className="font-semibold text-theme-primary">Personality:</span> <span className={handwritingClass}>{character.featuresAndTraits.personality}</span></li>
-              <li><span className="font-semibold text-theme-primary">Ideals:</span> <span className={handwritingClass}>{character.featuresAndTraits.ideals}</span></li>
-              <li><span className="font-semibold text-theme-primary">Bonds:</span> <span className={handwritingClass}>{character.featuresAndTraits.bonds}</span></li>
-              <li><span className="font-semibold text-theme-primary">Flaws:</span> <span className={handwritingClass}>{character.featuresAndTraits.flaws}</span></li>
+              <li><span className="font-semibold text-theme-primary">Personality:</span> <span className={handwritingClass}>{character.featuresAndTraits?.personality}</span></li>
+              <li><span className="font-semibold text-theme-primary">Ideals:</span> <span className={handwritingClass}>{character.featuresAndTraits?.ideals}</span></li>
+              <li><span className="font-semibold text-theme-primary">Bonds:</span> <span className={handwritingClass}>{character.featuresAndTraits?.bonds}</span></li>
+              <li><span className="font-semibold text-theme-primary">Flaws:</span> <span className={handwritingClass}>{character.featuresAndTraits?.flaws}</span></li>
             </ul>
           </div>
 
@@ -102,7 +104,7 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
            <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-green-500">
              <h3 className="text-lg font-bold text-accent-green-light mb-2">Species Traits</h3>
              <div className="flex flex-wrap gap-2">
-               {character.featuresAndTraits.speciesTraits.map((trait, index) => (
+               {speciesTraits.map((trait, index) => (
                  <button
                    key={`r-${index}`}
                    onClick={() => onFeatureClick(trait)}
@@ -238,10 +240,10 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
         <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-blue-500">
           <h3 className="text-lg font-bold text-accent-blue-light mb-2">Personality, Ideals, Bonds & Flaws</h3>
           <ul className="list-disc list-inside space-y-1 text-sm text-theme-tertiary">
-            <li><span className="font-semibold text-theme-primary">Personality:</span> <span className={handwritingClass}>{character.featuresAndTraits.personality}</span></li>
-            <li><span className="font-semibold text-theme-primary">Ideals:</span> <span className={handwritingClass}>{character.featuresAndTraits.ideals}</span></li>
-            <li><span className="font-semibold text-theme-primary">Bonds:</span> <span className={handwritingClass}>{character.featuresAndTraits.bonds}</span></li>
-            <li><span className="font-semibold text-theme-primary">Flaws:</span> <span className={handwritingClass}>{character.featuresAndTraits.flaws}</span></li>
+            <li><span className="font-semibold text-theme-primary">Personality:</span> <span className={handwritingClass}>{character.featuresAndTraits?.personality}</span></li>
+            <li><span className="font-semibold text-theme-primary">Ideals:</span> <span className={handwritingClass}>{character.featuresAndTraits?.ideals}</span></li>
+            <li><span className="font-semibold text-theme-primary">Bonds:</span> <span className={handwritingClass}>{character.featuresAndTraits?.bonds}</span></li>
+            <li><span className="font-semibold text-theme-primary">Flaws:</span> <span className={handwritingClass}>{character.featuresAndTraits?.flaws}</span></li>
           </ul>
         </div>
       </div>
@@ -251,7 +253,7 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
         <div className="p-4 bg-theme-secondary rounded-xl shadow-lg border-l-4 border-green-500">
           <h3 className="text-lg font-bold text-accent-green-light mb-2">Species Traits</h3>
           <div className="flex flex-wrap gap-2">
-            {character.featuresAndTraits.speciesTraits.map((trait, index) => (
+            {speciesTraits.map((trait, index) => (
               <button
                 key={`r-${index}`}
                 onClick={() => onFeatureClick(trait)}

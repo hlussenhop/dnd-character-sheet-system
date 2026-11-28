@@ -1,6 +1,6 @@
 # Using the Character Sheet
 
-The dnd character system character sheet is a comprehensive, interactive hub for managing all aspects of your D&D 5e character. It features multiple layout options, collapsible sections, and extensive functionality for character management, combat, and roleplaying.
+The DnD Character Sheet System sheet is a comprehensive, interactive hub for managing all aspects of your D&D 5e character. It features multiple layout options, collapsible sections, and extensive functionality for character management, combat, and roleplaying.
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ The dnd character system character sheet is a comprehensive, interactive hub for
 
 ## Edition Selection (2014 vs 2024 Rules)
 
-The dnd character system now supports both the 2014 (original 5th Edition) and 2024 (revised 5th Edition) D&D rules. Your choice of edition affects class features, subclass timing, proficiencies, and special abilities.
+The DnD Character Sheet System now supports both the 2014 (original 5th Edition) and 2024 (revised 5th Edition) D&D rules. Your choice of edition affects class features, subclass timing, proficiencies, and special abilities.
 
 ### Choosing Your Edition
 

@@ -214,7 +214,7 @@ export const CreateMonsterModal: React.FC<CreateMonsterModalProps> = ({
                 >
                   {MONSTER_TYPE_CATEGORIES.map(cat => (
                     <option key={cat.type} value={cat.type}>
-                      {cat.icon} {cat.name}
+                      {cat.name}
                     </option>
                   ))}
                 </select>

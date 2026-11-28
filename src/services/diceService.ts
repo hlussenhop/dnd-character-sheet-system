@@ -1,5 +1,5 @@
  
-// Dice roll types and utilities for dnd character system
+// Dice roll types and utilities for DnD Character Sheet System
 
 export interface DiceRoll {
   id: string;

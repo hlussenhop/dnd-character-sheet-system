@@ -93,7 +93,7 @@ export const AnySkillPickerModal: React.FC<AnySkillPickerModalProps> = ({
           <div className="flex items-start justify-between mb-3">
             <div>
               <h2 className="text-2xl font-bold text-amber-400 mb-2">
-                ⚠️ Duplicate Skill Proficiency
+                Duplicate Skill Proficiency
               </h2>
               <div className="text-gray-300 text-sm">
                 <strong className="text-amber-400">{formatSkillName(duplicateSkill)}</strong> is already granted by your Background
@@ -143,7 +143,6 @@ export const AnySkillPickerModal: React.FC<AnySkillPickerModalProps> = ({
                     <div>
                       <div className="font-semibold text-white">
                         {formatSkillName(skill.name)}
-                        {isSelected && <span className="ml-2 text-amber-400">✓</span>}
                       </div>
                       <div className="text-xs text-gray-400 mt-1">
                         {skill.ability} based
@@ -158,7 +157,7 @@ export const AnySkillPickerModal: React.FC<AnySkillPickerModalProps> = ({
           {selectedSkill && (
             <div className="mt-4 p-4 bg-green-900/30 border border-green-500/50 rounded-lg">
               <div className="text-green-300 text-sm">
-                ✓ You will gain <strong className="text-green-400">{formatSkillName(selectedSkill)}</strong> proficiency
+                You will gain <strong className="text-green-400">{formatSkillName(selectedSkill)}</strong> proficiency
                 instead of the duplicate <strong>{formatSkillName(duplicateSkill)}</strong>
               </div>
             </div>

@@ -563,7 +563,7 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
 
        {!allChoicesMade && (
          <div className="text-xs text-accent-yellow-light">
-           ⚠️ Please make all equipment choices before continuing
+           Please make all equipment choices before continuing
          </div>
        )}
 
@@ -627,7 +627,7 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
 
             {/* Build 4: Gold Option - Info only */}
             <div className="border border-accent-yellow rounded-lg p-3 bg-yellow-900/10">
-              <h5 className="font-semibold text-accent-yellow-light text-sm">💡 Pro-Tip: The Gold Option</h5>
+              <h5 className="font-semibold text-accent-yellow-light text-sm">The Gold Option</h5>
               <p className="text-xs text-theme-tertiary mt-1">Take starting gold instead of equipment for maximum flexibility.</p>
               <div className="text-xs text-theme-muted mt-2 space-y-1">
                 <p><strong>Average Gold:</strong> 175 gp (5d4 × 10)</p>
@@ -639,7 +639,7 @@ export const Step6Equipment: React.FC<StepProps & { skipToStep?: (step: number) 
 
             {selectedFighterBuild && (
               <div className="text-xs text-accent-green-light text-center">
-                ✅ {fighterBuilds[selectedFighterBuild as keyof typeof fighterBuilds].name} build selected - equipment choices have been automatically set above
+                {fighterBuilds[selectedFighterBuild as keyof typeof fighterBuilds].name} build selected. Equipment choices have been set above.
               </div>
             )}
           </div>

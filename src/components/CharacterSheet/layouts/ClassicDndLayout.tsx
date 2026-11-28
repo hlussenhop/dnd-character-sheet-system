@@ -19,7 +19,8 @@ import {
   ActiveEquipmentPanel
 } from '../index';
 import { SpellPreparationModal } from '../../SpellPreparationModal';
-import { getSpellsForClass } from '../../../services/dataService';
+import { hasPreparedCasting, preparableSpells } from '../../../utils/multiclass';
+import { useSheetPage } from '../sheetPageState';
 
 /**
  * ClassicDndLayout
@@ -35,6 +36,7 @@ export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
   onAddItem, onRemoveItem, setEquipmentModal, onOpenDiceTray
 }) => {
   const [showSpellPreparationModal, setShowSpellPreparationModal] = useState(false);
+  const { page } = useSheetPage();
 
 
 
@@ -62,7 +64,13 @@ export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
           onOpenDiceTray={onOpenDiceTray}
         />
 
-        {/* 3-Column Traditional Layout */}
+        {page === 'spells' ? (
+          <SpellcastingSection
+            character={character}
+            onUpdateCharacter={onUpdateCharacter}
+            onSpellPreparation={() => setShowSpellPreparationModal(true)}
+          />
+        ) : (
         <div className="grid grid-cols-12 gap-4">
           {/* LEFT COLUMN - Core Stats + Progression */}
           <div className="col-span-3">
@@ -208,20 +216,6 @@ export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
                 />
              </div>
 
-             {/* Spellcasting (if applicable) */}
-             {character.spellcasting && (
-               <div className="bg-theme-secondary border border-theme-secondary rounded-lg p-4 shadow-lg">
-                 <h2 className="text-sm font-bold mb-3 text-theme-muted uppercase tracking-wider font-cinzel">
-                   Spellcasting
-                 </h2>
-                <SpellcastingSection
-                  character={character}
-                  onUpdateCharacter={onUpdateCharacter}
-                  onSpellPreparation={() => setShowSpellPreparationModal(true)}
-                />
-              </div>
-             )}
-
               {/* Inventory */}
              <div className="bg-theme-secondary border border-theme-secondary rounded-lg p-4 shadow-lg">
                 <h2 className="text-sm font-bold mb-3 text-theme-muted uppercase tracking-wider font-cinzel">
@@ -284,12 +278,13 @@ export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
              </div>
            </div>
         </div>
+        )}
 
         {/* Spell Preparation Modal */}
-        {character.spellcasting?.spellcastingType === 'prepared' && (
+        {hasPreparedCasting(character) && (
           <SpellPreparationModal
             character={character}
-            availableSpells={getSpellsForClass(character.class, character.edition, character.background, character.subclass || undefined)}
+            availableSpells={preparableSpells(character)}
             isOpen={showSpellPreparationModal}
             onClose={() => setShowSpellPreparationModal(false)}
             onSave={handleSpellPreparationSave}

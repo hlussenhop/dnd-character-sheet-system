@@ -27,7 +27,7 @@ interface StepSpellsProps {
 export const StepSpells: React.FC<StepSpellsProps> = ({
   character,
   levelUpData,
-  choices: _choices,
+  choices,
   updateChoices,
   onNext,
   onPrev,
@@ -207,7 +207,12 @@ export const StepSpells: React.FC<StepSpellsProps> = ({
   };
 
   const handleNext = () => {
-    updateChoices({ spellsLearned: selectedSpells });
+    // A cantrip step and a spell step can share one level-up; keep the other step's picks.
+    const otherStepPicks = (choices.spellsLearned ?? []).filter(slug => {
+      const level = SPELL_DATABASE.find(spell => spell.slug === slug)?.level ?? 1;
+      return isCantripChoice ? level > 0 : level === 0;
+    });
+    updateChoices({ spellsLearned: [...otherStepPicks, ...selectedSpells] });
     onNext();
   };
 

@@ -72,7 +72,6 @@ export const EncounterView: React.FC<EncounterViewProps> = ({ onBack, onStartCom
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <div className="text-6xl mb-4">🐉</div>
           <h2 className="text-2xl font-bold mb-2">No Monsters Selected</h2>
           <p className="text-theme-muted mb-6">Select monsters from the library to create an encounter</p>
           <button

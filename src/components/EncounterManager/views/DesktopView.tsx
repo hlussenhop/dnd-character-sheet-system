@@ -80,7 +80,7 @@ export function DesktopView({
               className="save-combat-btn"
               title="Save current combat state"
             >
-              💾 Save Combat
+              Save Combat
             </button>
             <button
               onClick={onNewRound}
@@ -163,21 +163,21 @@ export function DesktopView({
                 disabled={!isCombatActive}
                 className="combat-btn prev-turn"
               >
-                ⬅️ Previous Turn
+                Previous Turn
               </button>
               <button
                 onClick={onNextTurn}
                 disabled={!isCombatActive}
                 className="combat-btn next-turn"
               >
-                Next Turn ➡️
+                Next Turn
               </button>
               <button
                 onClick={onNewRound}
                 disabled={!isCombatActive}
                 className="combat-btn new-round"
               >
-                New Round 🔄
+                New Round
               </button>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Pencil, Trash2 } from 'lucide-react';
 import { NPC } from '../../types/dnd';
 
 interface NPCListProps {
@@ -12,7 +13,6 @@ export const NPCList: React.FC<NPCListProps> = ({ npcs, onSelectNPC, onEditNPC, 
   if (npcs.length === 0) {
     return (
       <div className="text-center p-12 bg-theme-secondary rounded-xl border-2 border-dashed border-theme-secondary">
-        <div className="text-6xl mb-4">🧙‍♂️</div>
         <p className="text-xl font-semibold text-theme-muted">No NPCs found</p>
         <p className="text-theme-disabled">Create your first NPC to get started!</p>
       </div>
@@ -48,7 +48,7 @@ export const NPCList: React.FC<NPCListProps> = ({ npcs, onSelectNPC, onEditNPC, 
                     className="p-2 bg-theme-quaternary hover:bg-accent-purple-dark rounded-lg transition-colors"
                     title="Edit NPC"
                   >
-                    ✏️
+                    <Pencil className="w-4 h-4" />
                   </button>
                 )}
                 {onDeleteNPC && (
@@ -61,7 +61,7 @@ export const NPCList: React.FC<NPCListProps> = ({ npcs, onSelectNPC, onEditNPC, 
                     className="p-2 bg-theme-quaternary hover:bg-accent-red-dark rounded-lg transition-colors"
                     title="Delete NPC"
                   >
-                    🗑️
+                    <Trash2 className="w-4 h-4" />
                   </button>
                 )}
               </div>

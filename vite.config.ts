@@ -70,7 +70,7 @@ export default defineConfig({
     authDocumentPlugin(),
     react(),
     federation({
-      name: 'dnd_character_system',
+      name: 'dnd_character_sheet_system',
       filename: 'remoteEntry.js',
       exposes: {
         './CharacterSheet': './src/components/CharacterSheet/CharacterSheet.tsx',

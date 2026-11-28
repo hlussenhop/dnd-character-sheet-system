@@ -25,7 +25,7 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         scan-type: 'image'
-        image-ref: 'ghcr.io/${{ github.repository_owner }}/dnd-character-system:latest'
+        image-ref: 'ghcr.io/${{ github.repository_owner }}/dnd-character-sheet-system:latest'
         format: 'sarif'
         output: 'trivy-results.sarif'
 
@@ -63,7 +63,7 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: |
-          ghcr.io/${{ github.repository_owner }}/dnd-character-system
+          ghcr.io/${{ github.repository_owner }}/dnd-character-sheet-system
         tags: |
           type=ref,event=tag
           type=raw,value=latest,enable=true
@@ -89,7 +89,7 @@ jobs:
       uses: actions/attest-build-provenance@v1
       with:
         subject-digest: ${{ steps.build.outputs.digest }}
-        subject-name: ghcr.io/${{ github.repository_owner }}/dnd-character-system
+        subject-name: ghcr.io/${{ github.repository_owner }}/dnd-character-sheet-system
 
   release:
     name: Create Release
@@ -130,8 +130,8 @@ jobs:
 
           ### 🐳 Deployment
           **Multi-platform Docker images available:**
-          - `ghcr.io/${{ github.repository_owner }}/dnd-character-system:${{ github.ref_name }}` (linux/amd64, linux/arm64)
-          - `ghcr.io/${{ github.repository_owner }}/dnd-character-system:latest`
+          - `ghcr.io/${{ github.repository_owner }}/dnd-character-sheet-system:${{ github.ref_name }}` (linux/amd64, linux/arm64)
+          - `ghcr.io/${{ github.repository_owner }}/dnd-character-sheet-system:latest`
 
           ### 🔒 Security
           - Vulnerability scan completed

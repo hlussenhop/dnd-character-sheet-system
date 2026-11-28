@@ -2,6 +2,7 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { ArrowLeft, ArrowRight, Edit3, Sparkles, Heart, Shield, Zap, HelpCircle, Pencil } from 'lucide-react';
 import { CharacterProfile } from '../data/characterProfiles';
 import { loadClasses, getAllSpecies, getBackground, getModifier, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
+import { personalitySpeciesOptions, resolvePersonalitySpecies } from '../utils/personalitySpecies';
 import { SpellSelectionData, Edition } from '../types/dnd';
 import { getSpellcastingType } from '../utils/spellUtils';
 import { assignAbilityScoresByClass } from '../utils/abilityScoreUtils';
@@ -23,6 +24,7 @@ interface PersonalitySummaryProps {
   onAbilitiesChange?: (abilities: Record<string, number>) => void;
   onContinue: () => void;
   onBack: () => void;
+  onSpeciesChange?: (species: string) => void;
   edition: Edition; // Added edition
 }
 
@@ -39,6 +41,7 @@ const PersonalitySummary: React.FC<PersonalitySummaryProps> = ({
   onAbilitiesChange,
   onContinue,
   onBack,
+  onSpeciesChange,
   edition // Added edition
 }) => {
 
@@ -53,7 +56,11 @@ const PersonalitySummary: React.FC<PersonalitySummaryProps> = ({
   const [showAbilityModal, setShowAbilityModal] = useState(false);
 
   const [currentClass, setCurrentClass] = useState(selectedClass || profile.recommendedClasses[0]?.class || '');
-  const [currentSpecies, setCurrentSpecies] = useState(selectedSpecies || profile.recommendedRaces[0]?.race || ''); // Renamed from currentRace
+  const [currentSpecies, setCurrentSpecies] = useState(
+    () => resolvePersonalitySpecies(selectedSpecies || '', edition)?.name
+      ?? personalitySpeciesOptions(profile.recommendedRaces, edition)[0]?.name
+      ?? ''
+  );
   const [currentBackground, setCurrentBackground] = useState(selectedBackground || profile.recommendedBackgrounds[0]?.background || '');
 
   // Extract base class name (remove subclass in parentheses)
@@ -180,9 +187,17 @@ const PersonalitySummary: React.FC<PersonalitySummaryProps> = ({
   const availableSpecies = getAllSpecies(edition).map(species => species.name).sort(); // Renamed from availableRaces
   const availableBackgrounds = ['Acolyte', 'Criminal', 'Entertainer', 'Folk Hero', 'Guild Artisan', 'Hermit', 'Noble', 'Outlander', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
 
+  const chooseSpecies = (name: string) => {
+    const species = resolvePersonalitySpecies(name, edition)?.name ?? name;
+    setCurrentSpecies(species);
+    onSpeciesChange?.(species);
+  };
+
   const handleContinue = useCallback(() => {
+    const species = resolvePersonalitySpecies(currentSpecies, edition)?.name ?? currentSpecies;
+    if (species) onSpeciesChange?.(species);
     onContinue();
-  }, [onContinue]);
+  }, [currentSpecies, edition, onContinue, onSpeciesChange]);
 
   const getProfileIcon = () => {
     switch (profile.name.toLowerCase()) {
@@ -271,7 +286,7 @@ const PersonalitySummary: React.FC<PersonalitySummaryProps> = ({
             {editingSpecies ? (
               <select
                 value={currentSpecies}
-                onChange={(e) => setCurrentSpecies(e.target.value)}
+                onChange={(e) => chooseSpecies(e.target.value)}
                 className="w-full p-2 bg-theme-tertiary border border-theme-primary rounded text-white"
               >
                 {availableSpecies.map(species => (

@@ -3,7 +3,7 @@
     "index": "lawful-good",
     "name": "Lawful Good",
     "abbreviation": "LG",
-    "category": "🌟 The Good Alignments",
+    "category": "The Good Alignments",
     "examples": [
       "A paladin who adheres strictly to their religious and knightly oath to protect the innocent and uphold justice.",
       "A just king or judge who follows the letter of the law to maintain peace and order, even when it is difficult."
@@ -15,7 +15,7 @@
     "index": "neutral-good",
     "name": "Neutral Good",
     "abbreviation": "NG",
-    "category": "🌟 The Good Alignments",
+    "category": "The Good Alignments",
     "examples": [
       "A cleric who travels the land helping the poor and sick, ignoring political boundaries and refusing to join any standing military or order.",
       "A kind-hearted adventurer who fights monsters and protects villagers simply because it's the right thing to do, without following a specific code or relying on complicated schemes."
@@ -27,7 +27,7 @@
     "index": "chaotic-good",
     "name": "Chaotic Good",
     "abbreviation": "CG",
-    "category": "🌟 The Good Alignments",
+    "category": "The Good Alignments",
     "examples": [
       "A swashbuckling rogue who steals from corrupt nobles and gives the money to the poor, actively flouting the local laws for a noble cause (a \"Robin Hood\" figure).",
       "A rebel wizard who forms a secret resistance to overthrow an unjust tyrant, prioritizing personal liberty over the established—but evil—order."
@@ -39,7 +39,7 @@
     "index": "lawful-neutral",
     "name": "Lawful Neutral",
     "abbreviation": "LN",
-    "category": "⚖️ The Neutral Alignments",
+    "category": "The Neutral Alignments",
     "examples": [
       "A soldier who always follows the orders of their commanding officer, regardless of whether they agree with the specific mission.",
       "A monk dedicated to a specific, strict spiritual tradition whose rules dictate their every action and purpose."
@@ -51,7 +51,7 @@
     "index": "neutral",
     "name": "True Neutral",
     "abbreviation": "N",
-    "category": "⚖️ The Neutral Alignments",
+    "category": "The Neutral Alignments",
     "examples": [
       "A druid who strives to protect the balance of nature, seeing civilization and destructive monsters as equally harmful extremes that must be kept in check.",
       "A mercenary who works only for the highest bidder, acting solely out of self-interest and not caring about the justice or wickedness of their client."
@@ -63,7 +63,7 @@
     "index": "chaotic-neutral",
     "name": "Chaotic Neutral",
     "abbreviation": "CN",
-    "category": "⚖️ The Neutral Alignments",
+    "category": "The Neutral Alignments",
     "examples": [
       "A jester or trickster who pulls pranks and causes chaos for fun, sometimes helping people and sometimes hindering them, based only on what amuses them.",
       "A wild barbarian who lives outside of society, constantly seeking new experiences and thrills, and caring little for the consequences of their actions on others."
@@ -75,7 +75,7 @@
     "index": "lawful-evil",
     "name": "Lawful Evil",
     "abbreviation": "LE",
-    "category": "😈 The Evil Alignments",
+    "category": "The Evil Alignments",
     "examples": [
       "A tyrant who uses oppressive laws and fear to control their kingdom and enrich themselves, upholding the letter of the law while violating its spirit.",
       "A devil who follows a strict hierarchy and honors all contracts, knowing that every deal is a path to the corruption and eventual damnation of souls."
@@ -87,7 +87,7 @@
     "index": "neutral-evil",
     "name": "Neutral Evil",
     "abbreviation": "NE",
-    "category": "😈 The Evil Alignments",
+    "category": "The Evil Alignments",
     "examples": [
       "A crime boss who runs an organization for personal gain, forming temporary alliances when useful and breaking them when they are no longer beneficial.",
       "A power-hungry wizard who pursues forbidden knowledge and dark magic, seeing others as tools or obstacles to be eliminated in their quest for magical supremacy."
@@ -99,7 +99,7 @@
     "index": "chaotic-evil",
     "name": "Chaotic Evil",
     "abbreviation": "CE",
-    "category": "😈 The Evil Alignments",
+    "category": "The Evil Alignments",
     "examples": [
       "A demon whose sole purpose is to destroy and corrupt, delighting in senseless violence and suffering.",
       "A crazed cultist or homicidal maniac who seeks only to burn down society and murder as many people as possible, without any coherent plan or goal beyond destruction."

@@ -14,15 +14,11 @@ interface TabNavigationProps {
 }
 
 const TABS: TabItem[] = [
-  {
-    id: 'characters',
-    label: 'Characters',
-    icon: <span className="w-4 h-4 mr-2">🛡️</span>,
-  },
-  { id: 'monsters', label: 'Monster Library', icon: '🐉' },
-  { id: 'items', label: 'Item Library', icon: '🎒' },
-  { id: 'npcs', label: 'NPC Library', icon: '🧙‍♂️' },
-  { id: 'spellbook', label: 'Spellbook', icon: '📖' },
+  { id: 'characters', label: 'Characters' },
+  { id: 'monsters', label: 'Monster Library' },
+  { id: 'items', label: 'Item Library' },
+  { id: 'npcs', label: 'NPC Library' },
+  { id: 'spellbook', label: 'Spellbook' },
 ];
 
 const ACTIVE_TAB_CLASSES: Record<TabId, string> = {
@@ -47,7 +43,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabCh
       <div className={`absolute left-0 right-0 bottom-0 h-[2px] z-20 ${ACTIVE_LINE_CLASSES[activeTab]}`} />
 
       <h1 className="text-4xl font-extrabold text-red-500 mb-4 md:mb-0">
-        dnd character system
+        DnD Character Sheet System
       </h1>
 
       <div className="flex gap-1 mb-[-1px] relative">

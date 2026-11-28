@@ -104,7 +104,7 @@ export const ExperiencePoints: React.FC<ExperiencePointsProps> = ({
             onClick={levelUp}
             className="w-full py-3 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 rounded-lg text-theme-primary font-bold transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
-            🎉 LEVEL UP AVAILABLE! 🎉
+            Level up available
           </button>
         )}
 

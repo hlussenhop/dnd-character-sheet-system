@@ -3,7 +3,8 @@ import { ArrowLeft, ArrowRight, Heart, Shield, Zap, Sparkles } from 'lucide-reac
 import { generateCharacterProfile, CharacterProfile } from '../data/characterProfiles';
 import PersonalitySummary from './PersonalitySummary';
 import CharacterFinalization from './CharacterFinalization';
-import { loadClasses, getAllSpecies, getBackground, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
+import { loadClasses, getBackground, getCantripsByClass, getLeveledSpellsByClass } from '../services/dataService';
+import { personalitySpeciesOptions, resolvePersonalitySpecies } from '../utils/personalitySpecies';
 import { CharacterCreationData, SpellSelectionData, SkillName, Edition } from '../types/dnd';
 import { getSpellcastingType } from '../utils/spellUtils';
 import { SPELL_LEARNING_RULES } from '../data/spellLearning';
@@ -75,6 +76,9 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
         world: null,
       };
       setCompletedProfile(null);
+      setSelectedClass(null);
+      setSelectedSpecies(null);
+      setSelectedBackground(null);
       setSpellSelection({
         selectedCantrips: [],
         knownSpells: [],
@@ -208,9 +212,13 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
     choicesRef.current.world = choice;
     // Generate profile based on all choices
     const profile = generateProfile(choice);
+    const species = personalitySpeciesOptions(profile.recommendedRaces, edition)[0]?.name ?? null;
     setCompletedProfile(profile);
+    setSelectedClass(profile.recommendedClasses[0]?.class ?? null);
+    setSelectedSpecies(species);
+    setSelectedBackground(profile.recommendedBackgrounds[0]?.background ?? null);
     setCurrentStep(5); // Go to profile display
-  }, []);
+  }, [edition]);
 
   const handleFinalizeCharacter = useCallback((finalizationData: {
     name: string;
@@ -226,14 +234,12 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
       return parenIndex > 0 ? fullName.substring(0, parenIndex) : fullName;
     };
 
-    const allClasses = loadClasses();
-    const allSpecies = getAllSpecies();
+    const allClasses = loadClasses(edition);
 
     const baseClassName = extractBaseName(selectedClass || '');
-    const baseSpeciesName = extractBaseName(selectedSpecies || '');
 
     const selectedClassData = allClasses.find(c => c.name === baseClassName);
-    const selectedSpeciesData = allSpecies.find(s => s.name === baseSpeciesName);
+    const selectedSpeciesData = resolvePersonalitySpecies(selectedSpecies || '', edition);
 
     if (!selectedClassData || !selectedSpeciesData) {
       log.error('PersonalityWizard missing class/species data', { selectedClass, selectedSpecies });
@@ -277,7 +283,7 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
       abilityScoreMethod: 'standard-array' as const,
       background: selectedBackground || '',
       alignment: finalizationData.alignment,
-      edition: '2024',
+      edition,
 
        selectedSkills: selectedSkills as SkillName[],
        selectedMusicalInstruments: [],
@@ -307,7 +313,7 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
     };
 
     onComplete(characterData);
-   }, [selectedClass, selectedSpecies, selectedBackground, onComplete, customSkills, customAbilities, spellSelection]);
+   }, [edition, selectedClass, selectedSpecies, selectedBackground, onComplete, customSkills, customAbilities, spellSelection]);
 
 
 
@@ -398,6 +404,7 @@ const PersonalityWizard: React.FC<PersonalityWizardProps> = ({ isOpen, onClose: 
                   customAbilities={customAbilities}
                   onAbilitiesChange={setCustomAbilities}
                   edition={edition}
+                  onSpeciesChange={setSelectedSpecies}
                   onContinue={() => setCurrentStep(7)}
                   onBack={() => setCurrentStep(5)}
                 />
@@ -705,18 +712,18 @@ const ProfileDisplay: React.FC<{
         <div>
           <h3 className="text-xl font-semibold text-accent-blue-light mb-3">Recommended Species</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {profile.recommendedRaces.filter(rec => getAllSpecies(edition).some(s => s.name === rec.race)).map((rec, idx) => ( // Filter by edition
+            {personalitySpeciesOptions(profile.recommendedRaces, edition).map(choice => (
               <button
-                key={idx}
-                onClick={() => handleSpeciesSelect(rec.race)}
+                key={choice.name}
+                onClick={() => handleSpeciesSelect(choice.name)}
                 className={`p-4 rounded-lg border-2 transition-all text-left ${
-                  selectedSpecies === rec.race
+                  selectedSpecies === choice.name
                     ? 'bg-accent-blue-darker border-blue-500 shadow-md'
                     : 'bg-theme-tertiary border-theme-primary hover:bg-theme-quaternary'
                 }`}
               >
-                <h4 className="font-semibold text-blue-300 mb-2">{rec.race}</h4>
-                <p className="text-sm text-theme-tertiary">{rec.reason}</p>
+                <h4 className="font-semibold text-blue-300 mb-2">{choice.name}</h4>
+                <p className="text-sm text-theme-tertiary">{choice.reason}</p>
               </button>
             ))}
           </div>

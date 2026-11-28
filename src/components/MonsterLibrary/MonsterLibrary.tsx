@@ -72,7 +72,6 @@ export const MonsterLibrary: React.FC<MonsterLibraryProps> = ({ onSelectMonster,
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="text-6xl mb-4">🐉</div>
           <div className="text-xl">Loading Monster Library...</div>
         </div>
       </div>
@@ -83,7 +82,6 @@ export const MonsterLibrary: React.FC<MonsterLibraryProps> = ({ onSelectMonster,
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="text-6xl mb-4">⚠️</div>
           <div className="text-xl text-red-500">Error: {error}</div>
         </div>
       </div>

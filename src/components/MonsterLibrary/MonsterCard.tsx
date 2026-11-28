@@ -207,16 +207,10 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({
         {/* Additional Info */}
         <div className="text-xs text-theme-muted space-y-1">
           {monster.legendary_actions && monster.legendary_actions.length > 0 && (
-            <div className="flex items-center gap-1">
-              <span className="text-accent-yellow">⚡</span>
-              <span>Legendary Actions</span>
-            </div>
+            <div>Legendary Actions</div>
           )}
           {monster.special_abilities && monster.special_abilities.length > 0 && (
-            <div className="flex items-center gap-1">
-              <span className="text-purple-500">✨</span>
-              <span>{monster.special_abilities.length} Special Abilities</span>
-            </div>
+            <div>{monster.special_abilities.length} Special Abilities</div>
           )}
         </div>
 

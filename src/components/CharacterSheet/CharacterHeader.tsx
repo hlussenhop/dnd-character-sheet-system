@@ -3,6 +3,8 @@ import { Trash2, Tent, TrendingUp, TrendingDown, Dice6, Edit3 } from 'lucide-rea
 import { Character } from '../../types/dnd';
 import { LayoutSelector } from './LayoutSelector';
 import { findSpeciesByName } from '../../services/dataService';
+import { useSheetPage } from './sheetPageState';
+import { formatClassSummary } from '../../utils/multiclass';
 
 interface CharacterHeaderProps {
   character: Character;
@@ -28,6 +30,7 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
   onOpenDiceTray
 }) => {
   const [rollOnSheet, setRollOnSheet] = useState(false);
+  const { page, setPage, showSpellsTab } = useSheetPage();
   const variantLabel = character.selectedSpeciesVariant
     ? findSpeciesByName(character.species, character.edition)
         ?.variants?.find(v => v.slug === character.selectedSpeciesVariant)?.name ?? character.selectedSpeciesVariant
@@ -42,7 +45,7 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
             {character.name}
           </h1>
           <div className="text-sm text-theme-tertiary">
-            {character.species} {character.class} • Level {character.level}
+            {character.species} {formatClassSummary(character)} • Level {character.level}
             {variantLabel && (
               <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-accent-blue-darker text-xs font-semibold text-blue-100 border border-accent-blue-dark">
                 {variantLabel}
@@ -101,7 +104,7 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
                  onClick={() => {
                    onLongRest(character.id);
                  }}
-                 className="px-2 py-2 bg-accent-green hover:bg-accent-green rounded-lg transition-colors flex items-center justify-center"
+                 className="px-2 py-2 bg-accent-green hover:bg-accent-green-light rounded-lg transition-colors flex items-center justify-center"
                  title="Take a Long Rest (recover all HP and spell slots)"
                >
                 <Tent className="w-5 h-5 text-white" />
@@ -129,6 +132,26 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
           </div>
         </div>
       </div>
+      {showSpellsTab && (
+        <div className="flex gap-1 pt-3" role="tablist" aria-label="Character pages">
+          {(['sheet', 'spells'] as const).map(id => (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              aria-selected={page === id}
+              onClick={() => setPage(id)}
+              className={`px-4 py-1.5 rounded-lg text-sm font-medium font-cinzel tracking-wide transition-colors ${
+                page === id
+                  ? 'bg-accent-blue text-white'
+                  : 'bg-theme-secondary text-theme-muted hover:text-theme-primary hover:bg-theme-tertiary'
+              }`}
+            >
+              {id === 'sheet' ? 'Sheet' : 'Spells'}
+            </button>
+          ))}
+        </div>
+      )}
     </>
   );
 };
