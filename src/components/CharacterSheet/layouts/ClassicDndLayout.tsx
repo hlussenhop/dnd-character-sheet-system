@@ -31,7 +31,7 @@ import { useSheetPage } from '../sheetPageState';
  * - Right: Features, proficiencies, personality traits
  */
 export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
-  character, onClose, onDelete, setRollResult, onDiceRoll, onToggleInspiration, onFeatureClick,
+  character, onClose, setRollResult, onDiceRoll, onToggleInspiration, onFeatureClick,
   onLongRest, onShortRest, onLevelUp, onLevelDown, onUpdateCharacter, onEquipArmor, onEquipWeapon, onUnequipItem,
   onAddItem, onRemoveItem, setEquipmentModal, onOpenDiceTray
 }) => {
@@ -56,7 +56,6 @@ export const ClassicDndLayout: React.FC<CharacterSheetProps> = ({
         <CharacterHeader
           character={character}
           onClose={onClose}
-          onDelete={onDelete}
           onShortRest={onShortRest}
           onLongRest={onLongRest}
           onLevelUp={onLevelUp}

@@ -26,7 +26,7 @@ import { hasPreparedCasting, preparableSpells } from '../../../utils/multiclass'
 import { useSheetPage } from '../sheetPageState';
 
 export const ModernStackedLayout: React.FC<CharacterSheetProps> = ({
-  character, onClose, onDelete, setRollResult, onDiceRoll, onToggleInspiration, onFeatureClick,
+  character, onClose, setRollResult, onDiceRoll, onToggleInspiration, onFeatureClick,
   onLongRest, onShortRest, onLevelUp, onLevelDown, onUpdateCharacter, onEquipArmor, onEquipWeapon, onUnequipItem,
   onAddItem, onRemoveItem, setEquipmentModal, onOpenDiceTray
 }) => {
@@ -333,7 +333,6 @@ export const ModernStackedLayout: React.FC<CharacterSheetProps> = ({
         <CharacterHeader
           character={character}
           onClose={onClose}
-          onDelete={onDelete}
           onShortRest={onShortRest}
           onLongRest={onLongRest}
           onLevelUp={onLevelUp}

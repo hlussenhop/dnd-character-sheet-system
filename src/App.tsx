@@ -1039,7 +1039,6 @@ const App: React.FC = () => {
            <CharacterSheet
               character={selectedCharacter}
               onClose={() => setSelectedCharacterId(null)}
-              onDelete={handleDeleteCharacter}
               onEdit={() => setEditingCharacter(selectedCharacter)}
              setRollResult={setRollResult}
              onDiceRoll={handleDiceRoll}

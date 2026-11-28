@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trash2, Tent, TrendingUp, TrendingDown, Dice6, Edit3 } from 'lucide-react';
+import { Tent, TrendingUp, TrendingDown, Dice6, Edit3 } from 'lucide-react';
 import { Character } from '../../types/dnd';
 import { LayoutSelector } from './LayoutSelector';
 import { findSpeciesByName } from '../../services/dataService';
@@ -9,7 +9,6 @@ import { formatClassSummary } from '../../utils/multiclass';
 interface CharacterHeaderProps {
   character: Character;
   onClose: () => void;
-  onDelete: (id: string) => void;
   onEdit?: () => void;
   onShortRest: (id: string) => void;
   onLongRest: (id: string) => void;
@@ -21,7 +20,6 @@ interface CharacterHeaderProps {
 export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
   character,
   onClose,
-  onDelete,
   onEdit,
   onShortRest,
   onLongRest,
@@ -128,7 +126,6 @@ export const CharacterHeader: React.FC<CharacterHeaderProps> = ({
           </div>
           <div className="flex space-x-3 ml-4">
             <button onClick={onClose} className="px-4 py-2 text-sm bg-theme-tertiary hover:bg-theme-quaternary rounded-lg transition-colors font-medium">Back to List</button>
-            <button onClick={() => onDelete(character.id)} className="px-2 py-2 bg-accent-red-darker hover:bg-accent-red-dark rounded-lg transition-colors" title="Delete Character"><Trash2 className="w-5 h-5 text-white" /></button>
           </div>
         </div>
       </div>

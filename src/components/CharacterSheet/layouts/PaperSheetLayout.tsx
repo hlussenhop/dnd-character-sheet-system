@@ -33,7 +33,6 @@ export const PaperSheetLayout: React.FC<CharacterSheetProps> = (props) => {
       <CharacterHeader
         character={character}
         onClose={props.onClose}
-        onDelete={props.onDelete}
         onShortRest={props.onShortRest}
         onLongRest={props.onLongRest}
         onLevelUp={props.onLevelUp}
